@@ -1,0 +1,18 @@
+<sounds root="sfx/">
+    <sound name="AcmeDeath">
+		<sample weight="1" path="acmeDeath.wav" />
+		<sample weight="0.000001" path="acmeDeathFunny.wav" />
+	</sound>
+	<sound name="DesirerAttack">
+		<sample weight="1" path="desirerAttack1.wav" />
+		<sample weight="1" path="desirerAttack2.wav" />
+		<sample weight="1" path="desirerAttack3.wav" />
+		<sample weight="1" path="desirerAttack4.wav" />
+	</sound>
+	<sound name="Wheeze">
+		<sample weight="1" path="wheeze1.wav" />
+		<sample weight="1" path="wheeze2.wav" />
+		<sample weight="1" path="wheeze3.wav" />
+		<sample weight="1" path="wheeze4.wav" />
+	</sound>
+</sounds>
