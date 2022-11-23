@@ -1,3 +1,10 @@
+-- to do
+
+-- remove magic numbers
+-- enums file
+-- each enemy to their own file so main isnt 38000 lines
+
+
 local mod = RegisterMod("MMMM", 1)
 local ff = FiendFolio --:pleading_face:
 local sfx = SFXManager()
