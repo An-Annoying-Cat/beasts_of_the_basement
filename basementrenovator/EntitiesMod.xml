@@ -7,8 +7,8 @@
 
     <entity Group="Ch -1.2 - Dross" Image="icons/other/culo.png" Kind="Hoarder" Name="Culo" Subtype="0"  ID="305" Variant="853983151" />
 
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/desirer.png" Kind="Hoarder" Name="Desirer" ID="86" Subtype="0" Variant="853983" />
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/desirer.png" Kind="Hoarder" Name="Humbled" ID="884" Subtype="0" Variant="853983">
+    <entity Group="Ch 3.1 - Depths" Image="icons/other/desirer.png" Kind="Hoarder" Name="Desirer" ID="86" Subtype="0" Variant="853983151" />
+    <entity Group="Ch 3.1 - Depths" Image="icons/other/desirer.png" Kind="Hoarder" Name="Humbled" ID="884" Subtype="0" Variant="853983151">
         <bitfield Key="Subtype">
                 <spinner Length="3" Offset="7" Name="Amount to spawn">
                     <tooltip>It's how many Humbled spawn at once</tooltip>
