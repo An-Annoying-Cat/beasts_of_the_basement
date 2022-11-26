@@ -31,7 +31,7 @@
     
     <!--Keepers     id="86"-->
     <entity name="Desirer" 
-        id="86" variant="10" anm2path="desirer.anm2" baseHP="65" stageHP="0"
+        id="86" variant="10" anm2path="desirer.anm2" baseHP="45" stageHP="0"
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" boss="0" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
 	</entity>
