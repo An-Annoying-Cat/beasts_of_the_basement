@@ -6,69 +6,69 @@ Enums.Entities = {
 
     --Gaper Variants
     ACME = {
-        Type = Isaac.GetEntityTypeByName("Acme"),
-        Variant = Isaac.GetEntityVariantByName("Acme"),
+        TYPE = Isaac.GetEntityTypeByName("Acme"),
+        VARIANT = Isaac.GetEntityVariantByName("Acme"),
     },
 
     --Hive Variants
     SLEAZEBAG = {
-        Type = Isaac.GetEntityTypeByName("Sleazebag"),
-        Variant = Isaac.GetEntityVariantByName("Sleazebag"),
+        TYPE = Isaac.GetEntityTypeByName("Sleazebag"),
+        VARIANT = Isaac.GetEntityVariantByName("Sleazebag"),
     },
 
     --Keeper Variants
     DESIRER = {
-        Type = Isaac.GetEntityTypeByName("Desirer"),
-        Variant = Isaac.GetEntityVariantByName("Desirer"),
+        TYPE = Isaac.GetEntityTypeByName("Desirer"),
+        VARIANT = Isaac.GetEntityVariantByName("Desirer"),
     },
     SEDUCER = {
-        Type = Isaac.GetEntityTypeByName("Seducer"),
-        Variant = Isaac.GetEntityVariantByName("Seducer"),
+        TYPE = Isaac.GetEntityTypeByName("Seducer"),
+        VARIANT = Isaac.GetEntityVariantByName("Seducer"),
     },
 
     --INSECTS
 
     --Swarm Spider Variants
     HUMBLED = {
-        Type = Isaac.GetEntityTypeByName("Humbled"),
-        Variant = Isaac.GetEntityVariantByName("Humbled"),
+        TYPE = Isaac.GetEntityTypeByName("Humbled"),
+        VARIANT = Isaac.GetEntityVariantByName("Humbled"),
     },
 
     --Skuzz Variants
     SKUZZ = {
-        Type = Isaac.GetEntityTypeByName("Skuzz"),
-        Variant = Isaac.GetEntityVariantByName("Skuzz"),
+        TYPE = Isaac.GetEntityTypeByName("Skuzz"),
+        VARIANT = Isaac.GetEntityVariantByName("Skuzz"),
     },
     SKOOTER = {
-        Type = Isaac.GetEntityTypeByName("Skooter"),
-        Variant = Isaac.GetEntityVariantByName("Skooter"),
-        Subtype = 10
+        TYPE = Isaac.GetEntityTypeByName("Skooter"),
+        VARIANT = Isaac.GetEntityVariantByName("Skooter"),
+        SUBTYPE = 10
     },
     SUPER_SKOOTER = {
-        Type = Isaac.GetEntityTypeByName("Super Skooter"),
-        Variant = Isaac.GetEntityVariantByName("Super Skooter"),
-        Subtype = 11
+        TYPE = Isaac.GetEntityTypeByName("Super Skooter"),
+        VARIANT = Isaac.GetEntityVariantByName("Super Skooter"),
+        SUBTYPE = 11
     },
 
     --ANIMATES
 
     --Ministro Variants
     CULO = {
-        Type = Isaac.GetEntityTypeByName("Culo"),
-        Variant = Isaac.GetEntityVariantByName("Culo")
+        TYPE = Isaac.GetEntityTypeByName("Culo"),
+        VARIANT = Isaac.GetEntityVariantByName("Culo")
     },
 
     --Dip Variants
     PING = {
-        Type = Isaac.GetEntityTypeByName("Ping"),
-        Variant = Isaac.GetEntityVariantByName("Ping")
+        TYPE = Isaac.GetEntityTypeByName("Ping"),
+        VARIANT = Isaac.GetEntityVariantByName("Ping")
     },
 
 
     --Effects
     ACMES_ANVIL = {
-        Type = Isaac.GetEntityTypeByName("Acme's Anvil"),
-        Variant = Isaac.GetEntityVariantByName("Acme's Anvil")
+        TYPE = Isaac.GetEntityTypeByName("Acme's Anvil"),
+        VARIANT = Isaac.GetEntityVariantByName("Acme's Anvil")
     }
 }
 

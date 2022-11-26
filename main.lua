@@ -5,25 +5,25 @@
 
 
 BotB = RegisterMod("Beasts of the Basement", 1)
-local mod = BotB
+local Mod = BotB
 
 --globals
-BotB.config = Isaac.GetItemConfig()
-BotB.sfx = SFXManager()
-BotB.music = MusicManager()
-BotB.json = require('json')
+BotB.Config = Isaac.GetItemConfig()
+BotB.SFX = SFXManager()
+BotB.Music = MusicManager()
+BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 
 --rng shit, not really needed now
 BotB.GENERIC_RNG = RNG()
 BotB.RECOMMENDED_SHIFT_IDX = 35
-mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function ()
-	Mod.GENERIC_RNG:SetSeed(Game():GetSeeds():GetStartSeed(), mod.RECOMMENDED_SHIFT_IDX)
+Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function ()
+	Mod.GENERIC_RNG:SetSeed(Game():GetSeeds():GetStartSeed(), Mod.RECOMMENDED_SHIFT_IDX)
 end)
 
 
-local ff = FiendFolio --:pleading_face:
-if not ff then 
+local FF = FiendFolio --:pleading_face:
+if not FF then 
     Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")    
 return end
 
@@ -61,7 +61,7 @@ function BotB:MinistroNPCUpdate(Ministro)
     --[[
     if MinistroSprite:IsEventTriggered("Shoot") then
 		if Ministro.Variant == MinistroVariant.CULO then
-			Ministro:PlaySound(ff.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+			Ministro:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
             for farts = 0,2,1 do
 			    local projectile = Isaac.Spawn(9, 0, 0, Ministro.Position, Vector(math.random(-8,8),math.random(-8,8)), Ministro):ToProjectile();
 			    projectile.FallingSpeed = -20
@@ -96,7 +96,7 @@ function BotB:MinistroOverrideTest(npc)
             if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
             if sprite:IsEventTriggered("Shoot") then
                 local randomvalue = math.random(-100,100)/100
-                npc:PlaySound(ff.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+                npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
             for farts = 0,2,1 do
 			    local projectile = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.random(-8,8),math.random(-8,8)), npc):ToProjectile();
 			    projectile.FallingSpeed = -15 + 5*randomvalue
@@ -134,7 +134,7 @@ function BotB:MinistroOverrideTest(npc)
 		        projectile.Height = -10
                 end
             end
-            --npc:PlaySound(ff.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+            --npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
         end
     end
 
@@ -260,7 +260,7 @@ function BotB:SkuzzOverrideTest(npc)
     local player = npc:GetPlayerTarget()
     if npc.Type == 666 and npc.Variant == 660 and npc.SubType == 1 then 
         if sprite:IsEventTriggered("Shoot") then
-            npc:PlaySound(ff.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+            npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
         end
     end
 end
@@ -303,26 +303,26 @@ function BotB:NPCDeathCheck(npc)
     if npc.Type == 10 and Isaac.GetEntityVariantByName("Acme") then 
         --sprite:Play("Death")
         --npc:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
-        --npc:PlaySound(ff.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+        --npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
         anvil = Isaac.GetEntityVariantByName("Acme's Anvil")
         AcmeDeathAnvil = Isaac.Spawn(EntityType.ENTITY_EFFECT,anvil,0,npc.Position,Vector(0,0),npc)
-        --mod.AcmeDeathEffect(npc)
+        --Mod.AcmeDeathEffect(npc)
     end
 end
 
 --Test for Acme death. Using code from Tagbag
-function mod.AcmeDeathEffect(npc)
+function Mod.AcmeDeathEffect(npc)
     anvil = Isaac.GetEntityVariantByName("Acme's Anvil")
     Isaac.Spawn(EntityType.ENTITY_EFFECT,anvil,0,npc.Position,Vector(0,0),npc)
 end
 acmeAnvil = Isaac.GetEntityVariantByName("Acme's Anvil")
 --Tutorial shit
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.MinistroOverrideTest)
---mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.SkuzzOverrideTest)
-mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,BotB.anvilEffect, Isaac.GetEntityVariantByName("Acme's Anvil"))
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, BotB.MinistroNPCUpdate, EntityType.ENTITY_MINISTRO)
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.MinistroOverrideTest)
+--Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.SkuzzOverrideTest)
+Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,BotB.anvilEffect, Isaac.GetEntityVariantByName("Acme's Anvil"))
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, BotB.MinistroNPCUpdate, EntityType.ENTITY_MINISTRO)
 --Culo poop spawn
-mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, function(_, v)
+Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, function(_, v)
     local d = v:GetData()
     if d.fartTearPoopEdition == true then
         if Game():GetRoom():IsPositionInRoom(v.Position,0) then Isaac.GridSpawn(GridEntityType.GRID_POOP,0,v.Position,true) end
@@ -335,16 +335,16 @@ end, EntityType.ENTITY_PROJECTILE)
 
 --Thank you Danial for this 
 --[[
-function mod:NPCAIChecker(npc,offset)
+function Mod:NPCAIChecker(npc,offset)
     local data = npc:GetData()
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
         Isaac.RenderText(npc.State .. "          " .. npc.StateFrame, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-30,1,1,1,1)
         Isaac.RenderText(npc.I1 .. "          " .. npc.I2, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-20,1,1,1,1)
 end
-mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,mod.NPCAIChecker)
+Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
 --]]
 --Death checker
-mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
+Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 
 --Projectile checker
-mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, BotB.BulletCheck)
+Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, BotB.BulletCheck)
