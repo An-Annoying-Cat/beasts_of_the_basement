@@ -185,8 +185,7 @@ function MMMM:MinistroOverrideTest(npc)
             if npc.State == 9 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
                 if sprite:IsEventTriggered("Shoot") then
-                    sfx:Play(SoundEffect.SOUND_CHILD_HAPPY_ROAR_SHORT,1,0,false,math.random(110,130)/100)
-                    sfx:Play(SoundEffect.SOUND_CHILD_HAPPY_ROAR_SHORT,1,0,false,math.random(90,110)/100)
+                    sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(110,130)/100)
                     --Creep spawning
                     local creep = Isaac.Spawn(1000, 22, 0, npc.Position, Vector(0,0), npc)
 				    creep.SpriteScale = creep.SpriteScale * 3

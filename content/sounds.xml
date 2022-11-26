@@ -9,6 +9,11 @@
 		<sample weight="1" path="desirerAttack3.wav" />
 		<sample weight="1" path="desirerAttack4.wav" />
 	</sound>
+	<sound name="SeducerAttack">
+		<sample weight="1" path="seducerAttack1.wav" />
+		<sample weight="1" path="seducerAttack2.wav" />
+		<sample weight="1" path="seducerAttack3.wav" />
+	</sound>
 	<sound name="Wheeze">
 		<sample weight="1" path="wheeze1.wav" />
 		<sample weight="1" path="wheeze2.wav" />
