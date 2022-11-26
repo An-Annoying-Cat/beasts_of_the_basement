@@ -9,8 +9,18 @@ local mod = RegisterMod("MMMM", 1)
 local ff = FiendFolio --:pleading_face:
 local sfx = SFXManager()
 local game = Game()
+local nilvector = Vector(0,0)
 
-if not ff then return end
+local function LoadScripts(scripts)
+	--load scripts
+	for i,v in ipairs(scripts) do
+		include(v)
+	end
+end
+
+if not ff then 
+    Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")    
+return end
 
 local MinistroVariant = {
     CULO = Isaac.GetEntityVariantByName("Culo")
@@ -24,8 +34,8 @@ local SkuzzVariant = {
     SUPER_SKOOTER = Isaac.GetEntityVariantByName("Super Skooter")
 }
 local KeeperVariant = {
-    DESIRER = Isaac.GetEntityVariantByName("Desirer")--,
-    --SEDUCER = Isaac.GetEntityVariantByName("Seducer"),
+    DESIRER = Isaac.GetEntityVariantByName("Desirer"),
+    SEDUCER = Isaac.GetEntityVariantByName("Seducer")
     --SLACKER = Isaac.GetEntityVariantByName("Slacker"),
     --BOOMER = Isaac.GetEntityVariantByName("Boomer")
 }
@@ -33,8 +43,8 @@ local ProjectileVariant = {
     HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")--,
 }
 local SpiderVariant = {
-    HUMBLED = Isaac.GetEntityVariantByName("Humbled")--,
-    --SEDUCER = Isaac.GetEntityVariantByName("Seducer"),
+    HUMBLED = Isaac.GetEntityVariantByName("Humbled"),
+    SEDUCER = Isaac.GetEntityVariantByName("Seducer")
     --SLACKER = Isaac.GetEntityVariantByName("Slacker"),
     --BOOMER = Isaac.GetEntityVariantByName("Boomer")
 }
@@ -117,6 +127,7 @@ function MMMM:MinistroOverrideTest(npc)
             end
         end
     end
+
     --skooter, super skooter
     if (npc.Variant == SkuzzVariant.SKOOTER or SkuzzVariant.SUPER_SKOOTER) and npc.SubType ~= nil then 
         if sprite:IsPlaying("hopstart") then
@@ -166,7 +177,40 @@ function MMMM:MinistroOverrideTest(npc)
                 end
             end
         end
-    
+
+
+    --Seducer
+    if npc.Type == 86 and npc.Variant == KeeperVariant.SEDUCER then 
+        if npc.State == 8 then npc.State = 9 sprite:Play("ShootDown") end 
+            if npc.State == 9 then
+                if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
+                if sprite:IsEventTriggered("Shoot") then
+                    sfx:Play(SoundEffect.SOUND_CHILD_HAPPY_ROAR_SHORT,1,0,false,math.random(110,130)/100)
+                    sfx:Play(SoundEffect.SOUND_CHILD_HAPPY_ROAR_SHORT,1,0,false,math.random(90,110)/100)
+                    --Creep spawning
+                    local creep = Isaac.Spawn(1000, 22, 0, npc.Position, Vector(0,0), npc)
+				    creep.SpriteScale = creep.SpriteScale * 3
+				    for i = 1, 3 do
+				    	local creep = Isaac.Spawn(1000, 22, 0, npc.Position + 2*(Vector.FromAngle(i * (360 / 3)) * 22), Vector(0,0), npc)
+				    end
+                    --Fire a projectile
+                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle), npc):ToProjectile()
+                    bullet.FallingSpeed = -30;
+		            bullet.FallingAccel = 2
+		            bullet.Height = -10
+                    bullet.Parent = npc
+				    	
+				    
+                end
+            end
+
+            if sprite:IsEventTriggered("Land") then
+                local creep = Isaac.Spawn(1000, 22, 0, npc.Position, nilvector, npc)
+				creep.SpriteScale = creep.SpriteScale * 2
+            end
+        end
+
+
 
     --Sleazebag (This just plays the wheeze sound)
     if npc.Type == 22 and npc.Variant == HiveVariant.SLEAZEBAG and npc.SubType ~= nil then 
@@ -210,6 +254,19 @@ function MMMM:BulletCheck(bullet)
         idiot:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
       end
     end
+
+    --Seducer projectiles spawn red creep when they splat
+    if bullet.Parent ~= nil and bullet.Parent.Variant == KeeperVariant.SEDUCER then
+        
+        
+        if bullet:IsDead() then
+            sfx:Play(SoundEffect.SOUND_ANIMAL_SQUISH,1,0,false,math.random(120,150)/100)
+            local creep = Isaac.Spawn(1000, 22, 0, bullet.Position, Vector(0,0), bullet)
+            creep.SpriteScale = creep.SpriteScale * 1.5
+        end
+      end
+    
+
 end
 
 
@@ -294,7 +351,7 @@ end, EntityType.ENTITY_PROJECTILE)
 
 
 --Thank you Danial for this 
---[[
+--
 function mod:NPCAIChecker(npc,offset)
     local data = npc:GetData()
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
@@ -302,7 +359,7 @@ function mod:NPCAIChecker(npc,offset)
         Isaac.RenderText(npc.I1 .. "          " .. npc.I2, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-20,1,1,1,1)
 end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,mod.NPCAIChecker)
---]]
+--
 --Death checker
 mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, MMMM.NPCDeathCheck)
 

@@ -15,7 +15,7 @@
                 </spinner>
             </bitfield>
     </entity>
-
+    <entity Group="Ch 3.1 - Depths" Image="icons/other/seducer.png" Kind="Hoarder" Name="Seducer" ID="86" Subtype="0" Variant="11" />
 
 
 
