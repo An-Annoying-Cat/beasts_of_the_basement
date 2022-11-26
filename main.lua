@@ -1,6 +1,5 @@
 -- to do
 
--- remove magic numbers
 -- enums file
 -- each enemy to their own file so main isnt 38000 lines
 -- global variables
@@ -96,8 +95,8 @@ function MMMM:MinistroOverrideTest(npc)
 	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
 	local targetdistance = (targetpos - npc.Position):Length()
 
-
-    if npc.Type == 305 and npc.Variant == 853983151 then 
+    --Culo
+    if npc.Type == 305 and MinistroVariant.CULO then 
     if npc.State == 8 then npc.State = 9 sprite:Play("Attack") end 
         if npc.State == 9 then
             if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -145,7 +144,7 @@ function MMMM:MinistroOverrideTest(npc)
     end
 
     --Desirer
-    if npc.Type == 86 and npc.Variant == 853983151 then 
+    if npc.Type == 86 and npc.Variant == KeeperVariant.DESIRER then 
         if npc.State == 8 then npc.State = 9 sprite:Play("ShootDown") end 
             if npc.State == 9 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -170,7 +169,7 @@ function MMMM:MinistroOverrideTest(npc)
     
 
     --Sleazebag (This just plays the wheeze sound)
-    if npc.Type == 22 and npc.Variant == 853983 and npc.SubType ~= nil then 
+    if npc.Type == 22 and npc.Variant == HiveVariant.SLEAZEBAG and npc.SubType ~= nil then 
         if npc.State == 8 then npc.State = 99 sprite:Play("HeadAttack") end 
             if npc.State == 99 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -184,7 +183,7 @@ function MMMM:MinistroOverrideTest(npc)
     end
     --Convert flies spawned by Sleazebags into Skuzzes
     if npc.Type == 13 or npc.Type == 18 or npc.Type == 14 then 
-        if npc.SpawnerVariant == 853983 then
+        if npc.SpawnerVariant == HiveVariant.SLEAZEBAG then
             if npc.Type == 14 then
                 --Convert Pooters into Skooters
                 npc:Morph(Isaac.GetEntityTypeByName("Skooter"), Isaac.GetEntityVariantByName("Skooter"), 1, 0)
@@ -261,7 +260,7 @@ function MMMM:NPCDeathCheck(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     --Is it an Acme?
-    if npc.Type == 10 and npc.Variant == 853983151 then 
+    if npc.Type == 10 and Isaac.GetEntityVariantByName("Acme") then 
         --sprite:Play("Death")
         --npc:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
         --npc:PlaySound(ff.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
