@@ -1,15 +1,18 @@
 -- to do
 
--- enums file
 -- each enemy to their own file so main isnt 38000 lines
 -- global variables
 
 
-local mod = RegisterMod("MMMM", 1)
+local mod = RegisterMod("Beasts of the Basement", 1)
+
+BotB = mod
+
 local ff = FiendFolio --:pleading_face:
 local sfx = SFXManager()
 local game = Game()
-local nilvector = Vector(0,0)
+
+include("scripts/core/enums")
 
 local function LoadScripts(scripts)
 	--load scripts
@@ -22,42 +25,14 @@ if not ff then
     Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")    
 return end
 
-local MinistroVariant = {
-    CULO = Isaac.GetEntityVariantByName("Culo")
-}
-local DipVariant = {
-    PING = Isaac.GetEntityVariantByName("Ping")
-}
-local SkuzzVariant = {
-    SKUZZ = Isaac.GetEntityVariantByName("Skuzz"),
-    SKOOTER = Isaac.GetEntityVariantByName("Skooter"),
-    SUPER_SKOOTER = Isaac.GetEntityVariantByName("Super Skooter")
-}
-local KeeperVariant = {
-    DESIRER = Isaac.GetEntityVariantByName("Desirer"),
-    SEDUCER = Isaac.GetEntityVariantByName("Seducer")
-    --SLACKER = Isaac.GetEntityVariantByName("Slacker"),
-    --BOOMER = Isaac.GetEntityVariantByName("Boomer")
-}
-local ProjectileVariant = {
-    HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")--,
-}
-local SpiderVariant = {
-    HUMBLED = Isaac.GetEntityVariantByName("Humbled"),
-    SEDUCER = Isaac.GetEntityVariantByName("Seducer")
-    --SLACKER = Isaac.GetEntityVariantByName("Slacker"),
-    --BOOMER = Isaac.GetEntityVariantByName("Boomer")
-}
-local HiveVariant = {
-    SLEAZEBAG = Isaac.GetEntityVariantByName("Sleazebag")--,
-}
-local MMMM = {}
+
+local BotB = {}
 
 
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, MinistroVariant.CULO, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
 
-function MMMM:MinistroNPCUpdate(Ministro)
+function BotB:MinistroNPCUpdate(Ministro)
     local MinistroData = Ministro:GetData()
     local MinistroSprite = Ministro:GetSprite()
 
@@ -96,7 +71,7 @@ function MMMM:MinistroNPCUpdate(Ministro)
 end
 
 --General enemy override. Guess we Ministro now
-function MMMM:MinistroOverrideTest(npc)
+function BotB:MinistroOverrideTest(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
 
@@ -204,7 +179,7 @@ function MMMM:MinistroOverrideTest(npc)
             end
 
             if sprite:IsEventTriggered("Land") then
-                local creep = Isaac.Spawn(1000, 22, 0, npc.Position, nilvector, npc)
+                local creep = Isaac.Spawn(1000, 22, 0, npc.Position, Vector.Zero, npc)
 				creep.SpriteScale = creep.SpriteScale * 2
             end
         end
@@ -241,7 +216,7 @@ function MMMM:MinistroOverrideTest(npc)
 
 end
 
-function MMMM:BulletCheck(bullet)
+function BotB:BulletCheck(bullet)
     --Humbled projectile spawnstuff
     if bullet.Parent ~= nil and bullet.Parent.Variant == KeeperVariant.DESIRER then
         
@@ -271,7 +246,7 @@ end
 
 
 --[[Skooter and Super Skooter test
-function MMMM:SkuzzOverrideTest(npc)
+function BotB:SkuzzOverrideTest(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     if npc.Type == 666 and npc.Variant == 660 and npc.SubType == 1 then 
@@ -282,7 +257,7 @@ function MMMM:SkuzzOverrideTest(npc)
 end
 --]]
 --[[Anvil shit
-function MMMM:AnvilEffectTest(npc)
+function BotB:AnvilEffectTest(npc)
     local sprite = npc:GetSprite()
     --Anvil...
     if npc.Type == 1000 and npc.Variant == 853983151 then 
@@ -295,7 +270,7 @@ end
 ]]--
 
 
-function MMMM:anvilEffect(effect)
+function BotB:anvilEffect(effect)
     
     if effect:GetSprite():IsEventTriggered("Anvil") then
       --effect:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
@@ -312,7 +287,7 @@ end
 
 
 --Generalized death checker
-function MMMM:NPCDeathCheck(npc)
+function BotB:NPCDeathCheck(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     --Is it an Acme?
@@ -333,10 +308,10 @@ function mod.AcmeDeathEffect(npc)
 end
 acmeAnvil = Isaac.GetEntityVariantByName("Acme's Anvil")
 --Tutorial shit
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,MMMM.MinistroOverrideTest)
---mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,MMMM.SkuzzOverrideTest)
-mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,MMMM.anvilEffect, Isaac.GetEntityVariantByName("Acme's Anvil"))
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, MMMM.MinistroNPCUpdate, EntityType.ENTITY_MINISTRO)
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.MinistroOverrideTest)
+--mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.SkuzzOverrideTest)
+mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,BotB.anvilEffect, Isaac.GetEntityVariantByName("Acme's Anvil"))
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, BotB.MinistroNPCUpdate, EntityType.ENTITY_MINISTRO)
 --Culo poop spawn
 mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, function(_, v)
     local d = v:GetData()
@@ -360,7 +335,7 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,mod.NPCAIChecker)
 --]]
 --Death checker
-mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, MMMM.NPCDeathCheck)
+mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 
 --Projectile checker
-mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, MMMM.BulletCheck)
+mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, BotB.BulletCheck)
