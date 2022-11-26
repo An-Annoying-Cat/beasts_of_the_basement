@@ -72,6 +72,11 @@ Enums.Entities = {
     }
 }
 
+Enums.SFX = {
+    DESIRER_ATTACK = Isaac.GetSoundIdByName("DesirerAttack")
+    --add the rest of them
+}
+
 Enums.Projectiles = {
     HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")
 }

@@ -1,33 +1,42 @@
 -- to do
 
 -- each enemy to their own file so main isnt 38000 lines
--- global variables
+-- get rid of magic numbers
 
 
-local mod = RegisterMod("Beasts of the Basement", 1)
+BotB = RegisterMod("Beasts of the Basement", 1)
+local mod = BotB
 
-BotB = mod
+--globals
+BotB.config = Isaac.GetItemConfig()
+BotB.sfx = SFXManager()
+BotB.music = MusicManager()
+BotB.json = require('json')
+BotB.HUD = Game():GetHUD()
+
+--rng shit, not really needed now
+BotB.GENERIC_RNG = RNG()
+BotB.RECOMMENDED_SHIFT_IDX = 35
+mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function ()
+	Mod.GENERIC_RNG:SetSeed(Game():GetSeeds():GetStartSeed(), mod.RECOMMENDED_SHIFT_IDX)
+end)
+
 
 local ff = FiendFolio --:pleading_face:
-local sfx = SFXManager()
-local game = Game()
+if not ff then 
+    Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")    
+return end
 
 include("scripts/core/enums")
 
+--[[ set this up later
 local function LoadScripts(scripts)
 	--load scripts
 	for i,v in ipairs(scripts) do
 		include(v)
 	end
 end
-
-if not ff then 
-    Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")    
-return end
-
-
-local BotB = {}
-
+]]
 
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, MinistroVariant.CULO, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
