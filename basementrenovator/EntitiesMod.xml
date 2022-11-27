@@ -1,21 +1,23 @@
 <data>
 
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/acme.png" Kind="Hoarder" Name="Acme" ID="10" Subtype="0" Variant="40" />
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/sleazebag.png" Kind="Hoarder" Name="Sleazebag" ID="22" Subtype="0" Variant="50" />
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/skooter.png" Kind="Hoarder" Name="Skooter" ID="666" Subtype="1" Variant="60" />
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/superskooter.png" Kind="Hoarder" Name="Super Skooter" ID="666" Subtype="2" Variant="60" />
+    <entity Group="Ch 1" Image="icons/other/chaff.png" Kind="BoTB" Name="Chaff" Subtype="0"  ID="26" Variant="31" />
 
-    <entity Group="Ch -1.2 - Dross" Image="icons/other/culo.png" Kind="Hoarder" Name="Culo" Subtype="0"  ID="305" Variant="30" />
+    <entity Group="Ch -1.2 - Dross" Image="icons/other/culo.png" Kind="BoTB" Name="Culo" Subtype="0"  ID="305" Variant="30" />
 
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/desirer.png" Kind="Hoarder" Name="Desirer" ID="86" Subtype="0" Variant="10" />
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/humbled.png" Kind="Hoarder" Name="Humbled" ID="884" Subtype="0" Variant="10">
+    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/acme.png" Kind="BoTB" Name="Acme" ID="10" Subtype="0" Variant="40" />
+    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/sleazebag.png" Kind="BoTB" Name="Sleazebag" ID="22" Subtype="0" Variant="50" />
+    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/skooter.png" Kind="BoTB" Name="Skooter" ID="666" Subtype="1" Variant="60" />
+    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/superskooter.png" Kind="BoTB" Name="Super Skooter" ID="666" Subtype="2" Variant="60" />
+
+    <entity Group="Ch 3.1 - Depths" Image="icons/other/desirer.png" Kind="BoTB" Name="Desirer" ID="86" Subtype="0" Variant="10" />
+    <entity Group="Ch 3.1 - Depths" Image="icons/other/humbled.png" Kind="BoTB" Name="Humbled" ID="884" Subtype="0" Variant="10">
         <bitfield Key="Subtype">
                 <spinner Length="3" Offset="7" Name="Amount to spawn">
                     <tooltip>It's how many Humbled spawn at once</tooltip>
                 </spinner>
             </bitfield>
     </entity>
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/seducer.png" Kind="Hoarder" Name="Seducer" ID="86" Subtype="0" Variant="11" />
+    <entity Group="Ch 3.1 - Depths" Image="icons/other/seducer.png" Kind="BoTB" Name="Seducer" ID="86" Subtype="0" Variant="11" />
 
 
 

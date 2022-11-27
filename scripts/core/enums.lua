@@ -26,6 +26,12 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Seducer"),
     },
 
+    --Maw variants
+    CHAFF = {
+        TYPE = Isaac.GetEntityTypeByName("Chaff"),
+        VARIANT = Isaac.GetEntityVariantByName("Chaff"),
+    },
+
     --INSECTS
 
     --Swarm Spider Variants

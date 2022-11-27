@@ -9,6 +9,13 @@
             <preload-snd id="485" /> <!-- SOUND_CLAP -->
     </entity>
 
+    <!--Maws  id="26"-->
+    <entity name="Chaff"
+        id="26" variant="31" anm2path="chaff.anm2" baseHP="10" stageHP="2" portrait="1"
+        collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"   friction="1" reroll="true" boss="0" champion="0">
+            <gibs amount="6" blood="1" bone="0" eye="1" gut="0" large="0" poop="0"/>
+    </entity>
+
 
 <!--HOARD ENEMIES-->
 

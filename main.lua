@@ -77,7 +77,7 @@ function BotB:MinistroNPCUpdate(Ministro)
     ]]--
 
 
-end
+--end
 
 --General enemy override. Guess we Ministro now
 function BotB:MinistroOverrideTest(npc)
@@ -90,7 +90,7 @@ function BotB:MinistroOverrideTest(npc)
 	local targetdistance = (targetpos - npc.Position):Length()
 
     --Culo
-    if npc.Type == 305 and BotB.Enums.Entities.CULO.VARIANT then 
+    if npc.Type == 305 and npc.Variant == BotB.Enums.Entities.CULO.VARIANT then 
     if npc.State == 8 then npc.State = 9 sprite:Play("Attack") end 
         if npc.State == 9 then
             if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -144,20 +144,24 @@ function BotB:MinistroOverrideTest(npc)
             if npc.State == 9 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
                 if sprite:IsEventTriggered("Shoot") then
-                    sfx:Play(Isaac.GetSoundIdByName("DesirerAttack"),1,0,false,math.random(90,110)/100)
+                    
                     --npc:PlaySound(SoundEffect.SOUND_BOIL_HATCH, 1, 0, false, math.random(75,85)/100)
-
-                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle), npc):ToProjectile()
-                    bullet:AddProjectileFlags(ProjectileFlags.NO_WALL_COLLIDE)
-                    bullet.FallingSpeed = -30;
-		            bullet.FallingAccel = 2
-		            bullet.Height = -10
-                    bullet.Parent = npc
-                    local bsprite = bullet:GetSprite()
-                    bsprite:Load("gfx/humbled_projectile.anm2", true)
-                    bsprite:Play("Move", true)
-                    --bullet:AddEntityFlags(EntityFlag.FLAG_NO_BLOOD_SPLASH)
-                    bullet:Update()
+                    if Isaac.CountEntities(npc, BotB.Enums.Entities.HUMBLED.TYPE, BotB.Enums.Entities.HUMBLED.VARIANT) < 4 then
+                        sfx:Play(Isaac.GetSoundIdByName("DesirerAttack"),1,0,false,math.random(90,110)/100)
+                        local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle), npc):ToProjectile()
+                        bullet:AddProjectileFlags(ProjectileFlags.NO_WALL_COLLIDE)
+                        bullet.FallingSpeed = -30;
+		                bullet.FallingAccel = 2
+		                bullet.Height = -10
+                        bullet.Parent = npc
+                        local bsprite = bullet:GetSprite()
+                        bsprite:Load("gfx/humbled_projectile.anm2", true)
+                        bsprite:Play("Move", true)
+                        --bullet:AddEntityFlags(EntityFlag.FLAG_NO_BLOOD_SPLASH)
+                        bullet:Update()
+                    else
+                        sfx:Play(Isaac.GetSoundIdByName("Wheeze"),0.5,0,false,math.random(100, 125)/100)
+                    end
                 end
             end
         end
@@ -173,8 +177,10 @@ function BotB:MinistroOverrideTest(npc)
                     --Creep spawning
                     local creep = Isaac.Spawn(1000, 22, 0, npc.Position, Vector(0,0), npc)
 				    creep.SpriteScale = creep.SpriteScale * 3
+                    creep:Update()
 				    for i = 1, 3 do
 				    	local creep = Isaac.Spawn(1000, 22, 0, npc.Position + 2*(Vector.FromAngle(i * (360 / 3)) * 22), Vector(0,0), npc)
+                        creep:Update()
 				    end
                     --Fire a projectile
                     local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle), npc):ToProjectile()
@@ -193,6 +199,31 @@ function BotB:MinistroOverrideTest(npc)
             end
         end
 
+
+
+    --Chaff (Plays the wheeze sound, shoots an attack fly, checks for limit)
+    if npc.Type == 26 and npc.Variant == BotB.Enums.Entities.CHAFF.VARIANT then 
+        if npc.State == 8 then npc.State = 9 sprite:Play("Shoot") end 
+            if npc.State == 9 then
+                if sprite:IsEventTriggered("Shoot") then
+                    
+                    --3 flies per chaff max, so player doesn't get overwhelmed
+                    if Isaac.CountEntities(npc, 18, 0) < 3 then
+                        sfx:Play(Isaac.GetSoundIdByName("Wheeze"),1,0,false,math.random(75, 85)/100)
+                        local spawnedFly = Isaac.Spawn(18, 0, 0, npc.Position + Vector(5,0):Rotated(targetangle), Vector(0,0), npc)
+                        spawnedFly:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+                        spawnedFly.Velocity = Vector(6,0):Rotated(targetangle)
+                    else
+                        sfx:Play(Isaac.GetSoundIdByName("Wheeze"),0.5,0,false,math.random(100, 125)/100)
+                    end
+                end
+
+                if sprite:IsEventTriggered("Back") then
+                    npc.State = 4
+                    npc.StateFrame = 0
+                end
+            end
+    end
 
 
     --Sleazebag (This just plays the wheeze sound)
@@ -308,6 +339,21 @@ function BotB:NPCDeathCheck(npc)
         AcmeDeathAnvil = Isaac.Spawn(EntityType.ENTITY_EFFECT,anvil,0,npc.Position,Vector(0,0),npc)
         --Mod.AcmeDeathEffect(npc)
     end
+    --Is it a Chaff?
+    if npc.Type == 26 and npc.Variant == BotB.Enums.Entities.CHAFF.VARIANT then 
+        local spawnedFly = Isaac.Spawn(13, 0, 0, npc.Position, Vector(0,0), npc)
+        spawnedFly:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        spawnedFly.Velocity = Vector(5,0):Rotated(math.random(0,360))
+        local spawnedFly2 = Isaac.Spawn(13, 0, 0, npc.Position, Vector(0,0), npc)
+        spawnedFly2:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        spawnedFly2.Velocity = Vector(5,0):Rotated(math.random(0,360))
+        local spawnedFly3 = Isaac.Spawn(13, 0, 0, npc.Position, Vector(0,0), npc)
+        spawnedFly3:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        spawnedFly3.Velocity = Vector(5,0):Rotated(math.random(0,360))
+
+    end
+
+
 end
 
 --Test for Acme death. Using code from Tagbag
@@ -334,7 +380,7 @@ end, EntityType.ENTITY_PROJECTILE)
 
 
 --Thank you Danial for this 
---[[
+--
 function Mod:NPCAIChecker(npc,offset)
     local data = npc:GetData()
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
@@ -342,7 +388,7 @@ function Mod:NPCAIChecker(npc,offset)
         Isaac.RenderText(npc.I1 .. "          " .. npc.I2, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-20,1,1,1,1)
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
---]]
+--
 --Death checker
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 
