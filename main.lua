@@ -38,9 +38,9 @@ local function LoadScripts(scripts)
 end
 ]]
 
---Isaac.Spawn(EntityType.ENTITY_MINISTRO, MinistroVariant.CULO, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
+--Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
-
+--[[
 function BotB:MinistroNPCUpdate(Ministro)
     local MinistroData = Ministro:GetData()
     local MinistroSprite = Ministro:GetSprite()
@@ -48,19 +48,19 @@ function BotB:MinistroNPCUpdate(Ministro)
     if type(MinistroData) == "table" and MinistroData.MinistroInit == nil and Ministro:IsActiveEnemy() then
         MinistroData.MinistroInit = true
         if Ministro.Variant == 0 and math.random(100) <= DOT_CHANCE then
-            NewMinistro = Isaac.Spawn(EntityType.ENTITY_MINISTRO, MinistroVariant.CULO, 0, Ministro.Position, Vector(0,0), nil)
+            NewMinistro = Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, Ministro.Position, Vector(0,0), nil)
             NewMinistro:GetData().MinistroInit = true
             Ministro:Remove()
         end
     end
-
-    --if Ministro.Variant == MinistroVariant.CULO and Ministro.GetPlayerTarget() ~= nil then
+--]]
+    --if Ministro.Variant == BotB.Enums.Entities.CULO.Variant and Ministro.GetPlayerTarget() ~= nil then
     --    Ministro.Velocity = (Ministro:GetPlayerTarget().Position - Ministro.Position):Normalized() * Ministro.Velocity:Length()
     --end
     --shamelessly stolen from fiend folio because i am a brainlet who can't code with shit
     --[[
     if MinistroSprite:IsEventTriggered("Shoot") then
-		if Ministro.Variant == MinistroVariant.CULO then
+		if Ministro.Variant == BotB.Enums.Entities.CULO.Variant then
 			Ministro:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
             for farts = 0,2,1 do
 			    local projectile = Isaac.Spawn(9, 0, 0, Ministro.Position, Vector(math.random(-8,8),math.random(-8,8)), Ministro):ToProjectile();
@@ -90,7 +90,7 @@ function BotB:MinistroOverrideTest(npc)
 	local targetdistance = (targetpos - npc.Position):Length()
 
     --Culo
-    if npc.Type == 305 and MinistroVariant.CULO then 
+    if npc.Type == 305 and BotB.Enums.Entities.CULO.VARIANT then 
     if npc.State == 8 then npc.State = 9 sprite:Play("Attack") end 
         if npc.State == 9 then
             if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -113,7 +113,7 @@ function BotB:MinistroOverrideTest(npc)
     end
 
     --skooter, super skooter
-    if (npc.Variant == SkuzzVariant.SKOOTER or SkuzzVariant.SUPER_SKOOTER) and npc.SubType ~= nil then 
+    if (npc.Variant == BotB.Enums.Entities.SKOOTER.VARIANT or npc.Variant == BotB.Enums.Entities.SUPER_SKOOTER.VARIANT) and npc.SubType ~= nil then 
         if sprite:IsPlaying("hopstart") then
             if sprite:GetFrame() == 1 then
                 if npc.SubType == 2 then
@@ -139,7 +139,7 @@ function BotB:MinistroOverrideTest(npc)
     end
 
     --Desirer
-    if npc.Type == 86 and npc.Variant == KeeperVariant.DESIRER then 
+    if npc.Type == 86 and npc.Variant == BotB.Enums.Entities.DESIRER.VARIANT then 
         if npc.State == 8 then npc.State = 9 sprite:Play("ShootDown") end 
             if npc.State == 9 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -164,7 +164,7 @@ function BotB:MinistroOverrideTest(npc)
 
 
     --Seducer
-    if npc.Type == 86 and npc.Variant == KeeperVariant.SEDUCER then 
+    if npc.Type == 86 and npc.Variant == BotB.Enums.Entities.SEDUCER.VARIANT then 
         if npc.State == 8 then npc.State = 9 sprite:Play("ShootDown") end 
             if npc.State == 9 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -196,7 +196,7 @@ function BotB:MinistroOverrideTest(npc)
 
 
     --Sleazebag (This just plays the wheeze sound)
-    if npc.Type == 22 and npc.Variant == HiveVariant.SLEAZEBAG and npc.SubType ~= nil then 
+    if npc.Type == 22 and npc.Variant == BotB.Enums.Entities.SLEAZEBAG.VARIANT and npc.SubType ~= nil then 
         if npc.State == 8 then npc.State = 99 sprite:Play("HeadAttack") end 
             if npc.State == 99 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
@@ -210,7 +210,7 @@ function BotB:MinistroOverrideTest(npc)
     end
     --Convert flies spawned by Sleazebags into Skuzzes
     if npc.Type == 13 or npc.Type == 18 or npc.Type == 14 then 
-        if npc.SpawnerVariant == HiveVariant.SLEAZEBAG then
+        if npc.SpawnerVariant == BotB.Enums.Entities.SLEAZEBAG.VARIANT then
             if npc.Type == 14 then
                 --Convert Pooters into Skooters
                 npc:Morph(Isaac.GetEntityTypeByName("Skooter"), Isaac.GetEntityVariantByName("Skooter"), 1, 0)
@@ -227,7 +227,7 @@ end
 
 function BotB:BulletCheck(bullet)
     --Humbled projectile spawnstuff
-    if bullet.Parent ~= nil and bullet.Parent.Variant == KeeperVariant.DESIRER then
+    if bullet.Parent ~= nil and bullet.Parent.Variant == BotB.Enums.Entities.DESIRER.VARIANT then
         
       --effect:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
       if bullet:IsDead() then
@@ -239,7 +239,7 @@ function BotB:BulletCheck(bullet)
     end
 
     --Seducer projectiles spawn red creep when they splat
-    if bullet.Parent ~= nil and bullet.Parent.Variant == KeeperVariant.SEDUCER then
+    if bullet.Parent ~= nil and bullet.Parent.Variant == BotB.Enums.Entities.SEDUCER.VARIANT then
         
         
         if bullet:IsDead() then
@@ -300,7 +300,7 @@ function BotB:NPCDeathCheck(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     --Is it an Acme?
-    if npc.Type == 10 and Isaac.GetEntityVariantByName("Acme") then 
+    if npc.Type == 10 and npc.Variant == BotB.Enums.Entities.ACME.VARIANT then 
         --sprite:Play("Death")
         --npc:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
         --npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
@@ -320,7 +320,7 @@ acmeAnvil = Isaac.GetEntityVariantByName("Acme's Anvil")
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.MinistroOverrideTest)
 --Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.SkuzzOverrideTest)
 Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,BotB.anvilEffect, Isaac.GetEntityVariantByName("Acme's Anvil"))
-Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, BotB.MinistroNPCUpdate, EntityType.ENTITY_MINISTRO)
+--Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, BotB.MinistroNPCUpdate, EntityType.ENTITY_MINISTRO)
 --Culo poop spawn
 Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, function(_, v)
     local d = v:GetData()
