@@ -1,6 +1,6 @@
 <data>
   <!-- Chapter 1 (Main Path) Enemies -->
-  <entity Image="icons/other/chaff.png" Name="Chaff" ID="26" Variant="30" Subtype="0" />
+  <entity Image="icons/other/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
 
   <!-- Hoard Enemies -->
   <entity Image="icons/hoarder/acme.png" Name="Acme" ID="10" Variant="40" Subtype="0" />
