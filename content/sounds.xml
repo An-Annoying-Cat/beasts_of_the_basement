@@ -20,4 +20,10 @@
 		<sample weight="1" path="wheeze3.wav" />
 		<sample weight="1" path="wheeze4.wav" />
 	</sound>
+	<sound name="CartoonRicochet">
+		<sample weight="1" path="cartoonRicochet1.wav" />
+		<sample weight="1" path="cartoonRicochet2.wav" />
+		<sample weight="1" path="cartoonRicochet3.wav" />
+		<sample weight="1" path="cartoonRicochet4.wav" />
+	</sound>
 </sounds>

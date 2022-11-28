@@ -15,6 +15,12 @@
         collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"   friction="1" reroll="true" champion="0">
             <gibs amount="6" blood="1" bone="0" eye="1" gut="0" large="0" poop="0"/>
     </entity>
+    <!--Sniffles id="153"-->
+    <entity name="Pale Sniffle" 
+        id="153" variant="20" subtype="0" anm2path="pale_sniffle.anm2" baseHP="12" stageHP="3" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="16"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="WalkVert" bestiaryOverlay="Head">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
 
 
 <!--HOARD ENEMIES-->
@@ -76,6 +82,11 @@
     <entity name="Acme's Anvil"
         id="1000" variant="800" anm2path="effect_Anvil.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="14" friction="1">
+            <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+    </entity>
+    <entity name="Warning Target"
+        id="1000" variant="801" anm2path="effect_warning.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
             <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
     </entity>
 

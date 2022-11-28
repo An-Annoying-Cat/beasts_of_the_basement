@@ -32,6 +32,12 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Chaff"),
     },
 
+    --Sniffle Variants
+    PALE_SNIFFLE = {
+        TYPE = Isaac.GetEntityTypeByName("Pale Sniffle"),
+        VARIANT = Isaac.GetEntityVariantByName("Pale Sniffle"),
+    },
+
     --INSECTS
 
     --Swarm Spider Variants
@@ -75,6 +81,11 @@ Enums.Entities = {
     ACMES_ANVIL = {
         TYPE = Isaac.GetEntityTypeByName("Acme's Anvil"),
         VARIANT = Isaac.GetEntityVariantByName("Acme's Anvil")
+    },
+
+    WARNING_TARGET = {
+        TYPE = Isaac.GetEntityTypeByName("Warning Target"),
+        VARIANT = Isaac.GetEntityVariantByName("Warning Target")
     }
 }
 

@@ -28,6 +28,7 @@ if not FF then
 return end
 
 include("scripts/core/enums")
+include("scripts.millie.palesniffle")
 
 --[[ set this up later
 local function LoadScripts(scripts)
@@ -325,7 +326,11 @@ function BotB:anvilEffect(effect)
     end
 end
 
-
+function BotB:killTargetEffect(effect)
+    if effect:GetSprite():IsFinished("Effect") then
+      effect:Remove()
+    end
+end
 
 --Generalized death checker
 function BotB:NPCDeathCheck(npc)
@@ -367,6 +372,7 @@ acmeAnvil = Isaac.GetEntityVariantByName("Acme's Anvil")
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.MinistroOverrideTest)
 --Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE,BotB.SkuzzOverrideTest)
 Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,BotB.anvilEffect, Isaac.GetEntityVariantByName("Acme's Anvil"))
+Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,BotB.killTargetEffect, Isaac.GetEntityVariantByName("Warning Target"))
 --Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, BotB.MinistroNPCUpdate, EntityType.ENTITY_MINISTRO)
 --Culo poop spawn
 Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, function(_, v)
