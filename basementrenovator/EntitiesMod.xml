@@ -1,24 +1,26 @@
 <data>
+  <!-- Chapter 1 (Main Path) Enemies -->
+  <entity Image="icons/other/chaff.png" Name="Chaff" ID="26" Variant="30" Subtype="0" />
 
-    <entity Group="Ch 1" Image="icons/other/chaff.png" Kind="BoTB" Name="Chaff" Subtype="0"  ID="26" Variant="31" />
+  <!-- Hoard Enemies -->
+  <entity Image="icons/hoarder/acme.png" Name="Acme" ID="10" Variant="40" Subtype="0" />
+  <entity Image="icons/hoarder/sleazebag.png" Name="Sleazebag" ID="22" Variant="50" Subtype="0" />
+  <entity Image="icons/hoarder/skooter.png" Name="Skooter" ID="666" Variant="60" Subtype="10" />
+  <entity Image="icons/hoarder/superskooter.png" Name="Super Skooter" ID="666" Variant="60" Subtype="11" />
+  
+  <!-- Dross Enemies -->
+  <entity Image="icons/other/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
 
-    <entity Group="Ch -1.2 - Dross" Image="icons/other/culo.png" Kind="BoTB" Name="Culo" Subtype="0"  ID="305" Variant="30" />
-
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/acme.png" Kind="BoTB" Name="Acme" ID="10" Subtype="0" Variant="40" />
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/sleazebag.png" Kind="BoTB" Name="Sleazebag" ID="22" Subtype="0" Variant="50" />
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/skooter.png" Kind="BoTB" Name="Skooter" ID="666" Subtype="1" Variant="60" />
-    <entity Group="Ch -1.3 - Hoard" Image="icons/hoarder/superskooter.png" Kind="BoTB" Name="Super Skooter" ID="666" Subtype="2" Variant="60" />
-
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/desirer.png" Kind="BoTB" Name="Desirer" ID="86" Subtype="0" Variant="10" />
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/humbled.png" Kind="BoTB" Name="Humbled" ID="884" Subtype="0" Variant="10">
-        <bitfield Key="Subtype">
-                <spinner Length="3" Offset="7" Name="Amount to spawn">
-                    <tooltip>It's how many Humbled spawn at once</tooltip>
-                </spinner>
-            </bitfield>
-    </entity>
-    <entity Group="Ch 3.1 - Depths" Image="icons/other/seducer.png" Kind="BoTB" Name="Seducer" ID="86" Subtype="0" Variant="11" />
-
+  <!-- Depths Enemies -->
+  <entity Image="icons/other/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />
+  <entity Image="icons/other/seducer.png" Name="Seducer" ID="86" Variant="11" Subtype="0" />
+  <entity Image="icons/other/humbled.png" Name="Humbled" ID="884" Variant="10" Subtype="0">
+    <bitfield Key="Subtype">
+      <spinner Length="5" ValueOffset="1" Name="Amount to spawn">
+        <tooltip>It's how many Humbled spawn at once</tooltip>
+      </spinner>
+    </bitfield>
+  </entity>
 
 
 </data>

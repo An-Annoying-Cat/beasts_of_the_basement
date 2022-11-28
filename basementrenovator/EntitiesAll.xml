@@ -1,0 +1,269 @@
+<data>
+  <!--——— Floors ———-->
+  <group Name="Basement">
+    <group Name="Hoarder Basement Events" Label="Hoard Events" />
+    <group Name="Hoarder Basement Obstacles" Label="Hoard Obstacles" />
+    <group Name="Hoarder Basement Enemies" Label="Hoard Enemies" />
+  </group>
+
+  <group Name="Chapter 1 (Main Path) Enemies" >  
+    <entity Name="Chaff" />
+  </group>
+
+  <group Name="Hoarder Basement Enemies" >
+    <entity Name="Acme" />
+    <entity Name="Sleazebag" />
+    <entity Name="Skooter" />
+    <entity Name="Super Skooter" />
+  </group>
+  
+  <group Name="Dross Enemies" >
+    <entity Name="Culo" />
+  </group>
+
+  <group Name="Depths Enemies" >
+    <entity Name="Desirer" />
+    <entity Name="Humbled" />
+    <entity Name="Seducer" />
+  </group>
+
+
+  <!--——— BotB Tab ———-->
+  <tab Name="BotB"/>
+    
+  <group Name="BotB">
+    <group Name="BotB Chapter 1">
+      <group Label="BotB Chapter 1 (Main Path)">
+        <group Name="BotB Chapter 1 (Main Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 1 (Main Path) Events" Label="Events" />
+          <group Name="BotB Chapter 1 (Main Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 1 (Main Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Basement" Label="1.1 - Basement">
+          <group Name="BotB Basement Events" Label="Events" />
+          <group Name="BotB Basement Obstacles" Label="Obstacles" />
+          <group Name="BotB Basement Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Hoard" Label="1.1A - Hoard">
+          <group Name="BotB Hoard Events" Label="Events" />
+          <group Name="BotB Hoard Obstacles" Label="Obstacles" />
+          <group Name="BotB Hoard Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Cellar" Label="1.2 - Cellar">
+          <group Name="BotB Cellar Events" Label="Events" />
+          <group Name="BotB Cellar Obstacles" Label="Obstacles" />
+          <group Name="BotB Cellar Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Burning Basement" Label="1.3 - Burning Basement">
+          <group Name="BotB Burning Basement Events" Label="Events" />
+          <group Name="BotB Burning Basement Obstacles" Label="Obstacles" />
+          <group Name="BotB Burning Basement Enemies" Label="Enemies" />
+        </group>
+      </group>
+      
+      <group Label="BotB Chapter 1 (Alt Path)">
+        <group Name="BotB Chapter 1 (Alt Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 1 (Alt Path) Events" Label="Events" />
+          <group Name="BotB Chapter 1 (Alt Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 1 (Alt Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Downpour" Label="1A.1 - Downpour">
+          <group Name="BotB Downpour Events" Label="Events" />
+          <group Name="BotB Downpour Obstacles" Label="Obstacles" />
+          <group Name="BotB Downpour Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Dross" Label="1A.2 - Dross">
+          <group Name="BotB Dross Events" Label="Events" />
+          <group Name="BotB Dross Obstacles" Label="Obstacles" />
+          <group Name="BotB Dross Enemies" Label="Enemies" />
+        </group>
+      </group>
+    </group>
+    <group Name="BotB Chapter 2">
+      <group Label="BotB Chapter 2 (Main Path)">
+        <group Name="BotB Chapter 2 (Main Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 2 (Main Path) Events" Label="Events" />
+          <group Name="BotB Chapter 2 (Main Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 2 (Main Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Caves" Label="2.1 - Caves">
+          <group Name="BotB Caves Events" Label="Events" />
+          <group Name="BotB Caves Obstacles" Label="Obstacles" />
+          <group Name="BotB Caves Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Catacombs" Label="2.2 - Catacombs -">
+          <group Name="BotB Catacombs Events" Label="Events" />
+          <group Name="BotB Catacombs Obstacles" Label="Obstacles" />
+          <group Name="BotB Catacombs Enemies" Label="Enemies" />
+        </group>
+         <group Name="BotB Flooded Caves" Label="2.3 - Flooded Caves">
+          <group Name="BotB Flooded Caves Events" Label="Events" />
+          <group Name="BotB Flooded Caves Obstacles" Label="Obstacles" />
+          <group Name="BotB Flooded Caves Enemies" Label="Enemies" />
+        </group>
+      </group>
+
+      <group Label="BotB Chapter 2 (Alt Path)">
+        <group Name="BotB Chapter 2 (Alt Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 2 (Alt Path) Events" Label="Events" />
+          <group Name="BotB Chapter 2 (Alt Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 2 (Alt Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Mines" Label="2A.1 - Mines">
+          <group Name="BotB Mines Events" Label="Events" />
+          <group Name="BotB Mines Obstacles" Label="Obstacles" />
+          <group Name="BotB Mines Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Ashpit" Label="2A.2 - Ashpit">
+          <group Name="BotB Ashpit Events" Label="Events" />
+          <group Name="BotB Ashpit Obstacles" Label="Obstacles" />
+          <group Name="BotB Ashpit Enemies" Label="Enemies" />
+        </group>
+      </group>
+    </group>
+    <group Name="BotB Chapter 3">
+      <group Label="BotB Chapter 3 (Main Path)">
+        <group Name="BotB Chapter 3 (Main Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 3 (Main Path) Events" Label="Events" />
+          <group Name="BotB Chapter 3 (Main Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 3 (Main Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Depths" Label="3.1 - Depths">
+          <group Name="BotB Depths Events" Label="Events" />
+          <group Name="BotB Depths Obstacles" Label="Obstacles" />
+          <group Name="BotB Depths Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Necropolis" Label="3.2 - Necropolis">
+          <group Name="BotB Necropolis Events" Label="Events" />
+          <group Name="BotB Necropolis Obstacles" Label="Obstacles" />
+          <group Name="BotB Necropolis Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Dank Depths" Label="3.3 - Dank Depths">
+          <group Name="BotB Dank Depths Events" Label="Events" />
+          <group Name="BotB Dank Depths Obstacles" Label="Obstacles" />
+          <group Name="BotB Dank Depths Enemies" Label="Enemies" />
+        </group>
+      </group>
+
+      <group Label="BotB Chapter 3 (Alt Path)">
+        <group Name="BotB Chapter 3 (Alt Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 3 (Alt Path) Events" Label="Events" />
+          <group Name="BotB Chapter 3 (Alt Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 3 (Alt Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Mausoleum" Label="3A.1 - Mausoleum">
+          <group Name="BotB Mausoleum Events" Label="Events" />
+          <group Name="BotB Mausoleum Obstacles" Label="Obstacles" />
+          <group Name="BotB Mausoleum Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Gehenna" Label="3A.2 - Gehenna">
+          <group Name="BotB Gehenna Events" Label="Events" />
+          <group Name="BotB Gehenna Obstacles" Label="Obstacles" />
+          <group Name="BotB Gehenna Enemies" Label="Enemies" />
+        </group>
+      </group>
+    </group>
+    <group Name="BotB Chapter 4">
+      <group Label="BotB Chapter 4 (Main Path)">
+        <group Name="BotB Chapter 4 (Main Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 4 (Main Path) Events" Label="Events" />
+          <group Name="BotB Chapter 4 (Main Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 4 (Main Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Womb" Label="4.1 - Womb">
+          <group Name="BotB Womb Events" Label="Events" />
+          <group Name="BotB Womb Obstacles" Label="Obstacles" />
+          <group Name="BotB Womb Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Utero" Label="4.2 - Utero">
+          <group Name="BotB Utero Events" Label="Events" />
+          <group Name="BotB Utero Obstacles" Label="Obstacles" />
+          <group Name="BotB Utero Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Scarred Womb" Label="4.3 - Scarred Womb">
+          <group Name="BotB Scarred Womb Events" Label="Events" />
+          <group Name="BotB Scarred Womb Obstacles" Label="Obstacles" />
+          <group Name="BotB Scarrd Womb Enemies" Label="Enemies" />
+        </group>
+      </group>
+            <group Label="BotB Chapter 4 (Alt Path)">
+        <group Name="BotB Chapter 4 (Alt Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 4 (Alt Path) Events" Label="Events" />
+          <group Name="BotB Chapter 4 (Alt Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 4 (Alt Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Corpse" Label="4A.1 - Corpse">
+          <group Name="BotB Corpse Events" Label="Events" />
+          <group Name="BotB Corpse Obstacles" Label="Obstacles" />
+          <group Name="BotB Corpse Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Morbus" Label="4A.1A - Morbus">
+          <group Name="BotB Morbus Events" Label="Events" />
+          <group Name="BotB Morbus Obstacles" Label="Obstacles" />
+          <group Name="BotB Morbus Enemies" Label="Enemies" />
+        </group>
+      </group>
+    </group>
+    <group Name="BotB Chapter 5">
+      <group Label="BotB Chapter 5 (Main Path)">
+        <group Name="BotB Chapter 5 (Main Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 5 (Main Path) Events" Label="Events" />
+          <group Name="BotB Chapter 5 (Main Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 5 (Main Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Sheol" Label="5.1 - Sheol">
+          <group Name="BotB Sheol Events" Label="Events" />
+          <group Name="BotB Sheol Obstacles" Label="Obstacles" />
+          <group Name="BotB Sheol Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Cathedral" Label="5.2 - Cathedral">
+          <group Name="BotB Cathedral Events" Label="Events" />
+          <group Name="BotB Cathedral Obstacles" Label="Obstacles" />
+          <group Name="BotB Cathedral Enemies" Label="Enemies" />
+        </group>
+      </group>
+    </group>
+    <group Name="BotB Chapter 6">
+      <group Label="BotB Chapter 6 (Main Path)">
+        <group Name="BotB Chapter 6 (Main Path) Shared" Label="- Shared -">
+          <group Name="BotB Chapter 6 (Main Path) Events" Label="Events" />
+          <group Name="BotB Chapter 6 (Main Path) Obstacles" Label="Obstacles" />
+          <group Name="BotB Chapter 6 (Main Path) Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Dark Room" Label="6.1 - Dark Room">
+          <group Name="BotB Dark Room Events" Label="Events" />
+          <group Name="BotB Dark Room Obstacles" Label="Obstacles" />
+          <group Name="BotB Dark Room Enemies" Label="Enemies" />
+        </group>
+        <group Name="BotB Chest" Label="6.2 - Chest">
+          <group Name="BotB Chest Events" Label="Events" />
+          <group Name="BotB Chest Obstacles" Label="Obstacles" />
+          <group Name="BotB Chest Enemies" Label="Enemies" />
+        </group>
+      </group>
+    </group>
+  </group>
+
+
+  <group Name="BotB Chapter 1 (Main Path) Enemies" >  
+    <entity Name="Chaff" />
+  </group>
+
+  <group Name="BotB Hoard Enemies" >
+    <entity Name="Acme" />
+    <entity Name="Sleazebag" />
+    <entity Name="Skooter" />
+    <entity Name="Super Skooter" />
+  </group>
+  
+  <group Name="BotB Dross Enemies" >
+    <entity Name="Culo" />
+  </group>
+
+  <group Name="BotB Depths Enemies" >
+    <entity Name="Desirer" />
+    <entity Name="Humbled" />
+    <entity Name="Seducer" />
+  </group>
+
+</data>
