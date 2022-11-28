@@ -213,6 +213,7 @@ function BotB:MinistroOverrideTest(npc)
                         local spawnedFly = Isaac.Spawn(18, 0, 0, npc.Position + Vector(5,0):Rotated(targetangle), Vector(0,0), npc)
                         spawnedFly:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
                         spawnedFly.Velocity = Vector(6,0):Rotated(targetangle)
+                        spawnedFly.HitPoints = 1
                     else
                         sfx:Play(Isaac.GetSoundIdByName("Wheeze"),0.5,0,false,math.random(100, 125)/100)
                     end
