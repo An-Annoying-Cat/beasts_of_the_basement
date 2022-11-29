@@ -40,16 +40,23 @@ function PALESNIFFLE:NPCUpdate(npc)
             warningTarget = Isaac.Spawn(EntityType.ENTITY_EFFECT,Entities.WARNING_TARGET.VARIANT,0,aimTarget,Vector(0,0),npc)
         elseif npc.StateFrame == 15 then
             --FIRE!!
+            local room = Game():GetRoom()
             npc:PlaySound(FF.Sounds.ShotgunBlast,3,0,false,math.random(8,12)/10)
             npc:PlaySound(Isaac.GetSoundIdByName("CartoonRicochet"),0.5,0,false,math.random(120, 150)/100)
             local techAngleVector = -(npc.Position - warningTarget.Position)
 			local laser = EntityLaser.ShootAngle(2, npc.Position, techAngleVector:GetAngleDegrees(), 4, Vector(0,0), npc)
             laser.GridHit = true
-            local laserEndPoint = laser:GetEndPoint()
+            local _, laserEndPoint = room:CheckLine(npc.Position, npc.Position+(90*techAngleVector), 2, 0, false, true)
             --print(laserEndPoint:Normalized())
             --Position is so goddamned wonky idek what to do here
-            local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.FART,0,laserEndPoint,Vector(0,0),npc)
-			laser.Color = Color(0, 0, 0, 1)
+            --I GOT IT FUCKIN WORKING
+            local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.DARK_BALL_SMOKE_PARTICLE,0,room:GetLaserTarget(npc.Position, techAngleVector),Vector(0,0),npc)
+            local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.ROCK_POOF,0,room:GetLaserTarget(npc.Position, techAngleVector),Vector((0.1*math.random(-20,20)),(0.1*math.random(-20,20))),npc)
+            for i=0,5,1 do
+                local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.NAIL_PARTICLE,0,room:GetLaserTarget(npc.Position, techAngleVector),Vector((0.1*math.random(-20,20)),(0.1*math.random(-20,20))),npc)
+            end
+            
+			laser.Color = Color(0, 0, 0, 0)
 			laser.Parent = npc
 			laser:GetData().offSetSpawn = Vector(0, -30)
             --None of these three work...

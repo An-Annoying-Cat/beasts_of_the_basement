@@ -25,6 +25,7 @@
     <entity Name="Desirer" />
     <entity Name="Humbled" />
     <entity Name="Seducer" />
+    <entity Name="Pale Sniffle" />
   </group>
 
 
@@ -264,6 +265,7 @@
     <entity Name="Desirer" />
     <entity Name="Humbled" />
     <entity Name="Seducer" />
+    <entity Name="Pale Sniffle" />
   </group>
 
 </data>

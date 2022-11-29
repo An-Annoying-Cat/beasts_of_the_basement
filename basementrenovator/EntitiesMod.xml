@@ -12,6 +12,7 @@
   <entity Image="icons/other/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
 
   <!-- Depths Enemies -->
+  <entity Image="icons/other/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
   <entity Image="icons/other/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />
   <entity Image="icons/other/seducer.png" Name="Seducer" ID="86" Variant="11" Subtype="0" />
   <entity Image="icons/other/humbled.png" Name="Humbled" ID="884" Variant="10" Subtype="0">
@@ -21,6 +22,6 @@
       </spinner>
     </bitfield>
   </entity>
-
+  
 
 </data>
