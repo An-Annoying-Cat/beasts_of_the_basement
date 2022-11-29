@@ -24,6 +24,7 @@ end)
 
 if not BotB.FF then 
     Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")
+    print("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")
 return end
 
 
@@ -33,7 +34,9 @@ function LoadScripts(scripts)
 		include(v)
 	end
 end
-
+--Until that's sorted out...
+include("scripts.core.enums")
+include("scripts.entities.enemies.palesniffle")
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
 --[[

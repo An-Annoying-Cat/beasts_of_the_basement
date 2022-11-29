@@ -7,7 +7,8 @@ function PALESNIFFLE:NPCUpdate(npc)
     local sprite = npc:GetSprite()
     local target = npc:GetPlayerTarget()
     local targetpos = target.Position
-    local warningTarget
+    --This breaks the code if you define it beforehand, idk why but it does
+    --local warningTarget
     --[[
   if npc.Type == Entities.PALESNIFFLE.TYPE and npc.Variant == Entities.PALESNIFFLE.VARIANT then
     

@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+    <passive id="1" quality="4" name="Alpha Armor" description="Protective helm" gfx="collectibles/alpha_armor.png"/>
+</items>

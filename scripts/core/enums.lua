@@ -98,5 +98,10 @@ Enums.Projectiles = {
     HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")
 }
 
+Enums.Entities = {
+
+    --Alpha Armor goes here
+
+}
 
 BotB.Enums = Enums

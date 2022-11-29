@@ -1,0 +1,8 @@
+<ItemPools>
+    <Pool Name="treasure">
+        <Item Name="Alpha Armor" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+    <Pool Name="secret">
+        <Item Name="Alpha Armor" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+</ItemPools>
