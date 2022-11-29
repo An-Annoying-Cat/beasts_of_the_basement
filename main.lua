@@ -13,6 +13,7 @@ BotB.SFX = SFXManager()
 BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
+BotB.FF = FiendFolio --:pleading_face:
 
 --rng shit, not really needed now
 BotB.GENERIC_RNG = RNG()
@@ -21,23 +22,17 @@ Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function ()
 	Mod.GENERIC_RNG:SetSeed(Game():GetSeeds():GetStartSeed(), Mod.RECOMMENDED_SHIFT_IDX)
 end)
 
-
-local FF = FiendFolio --:pleading_face:
-if not FF then 
-    Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")    
+if not BotB.FF then 
+    Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")
 return end
 
-include("scripts/core/enums")
-include("scripts.millie.palesniffle")
 
---[[ set this up later
-local function LoadScripts(scripts)
+function LoadScripts(scripts)
 	--load scripts
 	for i,v in ipairs(scripts) do
 		include(v)
 	end
 end
-]]
 
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
@@ -62,7 +57,7 @@ function BotB:MinistroNPCUpdate(Ministro)
     --[[
     if MinistroSprite:IsEventTriggered("Shoot") then
 		if Ministro.Variant == BotB.Enums.Entities.CULO.Variant then
-			Ministro:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+			Ministro:PlaySound(BotB.FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
             for farts = 0,2,1 do
 			    local projectile = Isaac.Spawn(9, 0, 0, Ministro.Position, Vector(math.random(-8,8),math.random(-8,8)), Ministro):ToProjectile();
 			    projectile.FallingSpeed = -20
@@ -97,7 +92,7 @@ function BotB:MinistroOverrideTest(npc)
             if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
             if sprite:IsEventTriggered("Shoot") then
                 local randomvalue = math.random(-100,100)/100
-                npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+                npc:PlaySound(BotB.FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
             for farts = 0,2,1 do
 			    local projectile = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.random(-8,8),math.random(-8,8)), npc):ToProjectile();
 			    projectile.FallingSpeed = -15 + 5*randomvalue
@@ -114,7 +109,7 @@ function BotB:MinistroOverrideTest(npc)
     end
 
     --skooter, super skooter
-    if (npc.Variant == BotB.Enums.Entities.SKOOTER.VARIANT or npc.Variant == BotB.Enums.Entities.SUPER_SKOOTER.VARIANT) and npc.SubType ~= nil then 
+    if (npc.Variant == BotB.Enums.Entities.SKOOTER.VARIANT or npc.Variant == BotB.Enums.Entities.SUPER_SKOOTER.VARIANT) and npc.SubType ~= nil then
         if sprite:IsPlaying("hopstart") then
             if sprite:GetFrame() == 1 then
                 if npc.SubType == 2 then
@@ -135,7 +130,7 @@ function BotB:MinistroOverrideTest(npc)
 		        projectile.Height = -10
                 end
             end
-            --npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+            --npc:PlaySound(BotB.FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
         end
     end
 
@@ -293,7 +288,7 @@ function BotB:SkuzzOverrideTest(npc)
     local player = npc:GetPlayerTarget()
     if npc.Type == 666 and npc.Variant == 660 and npc.SubType == 1 then 
         if sprite:IsEventTriggered("Shoot") then
-            npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+            npc:PlaySound(BotB.FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
         end
     end
 end
@@ -340,7 +335,7 @@ function BotB:NPCDeathCheck(npc)
     if npc.Type == 10 and npc.Variant == BotB.Enums.Entities.ACME.VARIANT then 
         --sprite:Play("Death")
         --npc:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
-        --npc:PlaySound(FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
+        --npc:PlaySound(BotB.FF.Sounds.FunnyFart,1,0,false,math.random(120,150)/100)
         anvil = Isaac.GetEntityVariantByName("Acme's Anvil")
         AcmeDeathAnvil = Isaac.Spawn(EntityType.ENTITY_EFFECT,anvil,0,npc.Position,Vector(0,0),npc)
         --Mod.AcmeDeathEffect(npc)

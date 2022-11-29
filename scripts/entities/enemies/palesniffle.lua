@@ -1,13 +1,13 @@
 local Mod = BotB
 local PALESNIFFLE = {}
 local Entities = BotB.Enums.Entities
-local FF = FiendFolio --:pleading_face:
 
 function PALESNIFFLE:NPCUpdate(npc)
 
     local sprite = npc:GetSprite()
     local target = npc:GetPlayerTarget()
     local targetpos = target.Position
+    local warningTarget
     --[[
   if npc.Type == Entities.PALESNIFFLE.TYPE and npc.Variant == Entities.PALESNIFFLE.VARIANT then
     
@@ -41,7 +41,7 @@ function PALESNIFFLE:NPCUpdate(npc)
         elseif npc.StateFrame == 15 then
             --FIRE!!
             local room = Game():GetRoom()
-            npc:PlaySound(FF.Sounds.ShotgunBlast,3,0,false,math.random(8,12)/10)
+            npc:PlaySound(BotB.FF.Sounds.ShotgunBlast,3,0,false,math.random(8,12)/10)
             npc:PlaySound(Isaac.GetSoundIdByName("CartoonRicochet"),0.5,0,false,math.random(120, 150)/100)
             local techAngleVector = -(npc.Position - warningTarget.Position)
 			local laser = EntityLaser.ShootAngle(2, npc.Position, techAngleVector:GetAngleDegrees(), 4, Vector(0,0), npc)
@@ -66,16 +66,10 @@ function PALESNIFFLE:NPCUpdate(npc)
 			laser:Update()
 
         else
-            FF:spriteOverlayPlay(sprite, "Shoot")
+            BotB.FF:spriteOverlayPlay(sprite, "Shoot")
         end
     end
 end
 end
 
-function PALESNIFFLE.EffectInit(impact)
-    --print("balls")
-    --Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.ROCK_PARTICLE,0,impact.Position,Vector(0,0),impact.Spawner)
-end
-
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, PALESNIFFLE.NPCUpdate, Entities.PALE_SNIFFLE.TYPE)
-Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_INIT, PALESNIFFLE.EffectInit, EffectVariant.LASER_IMPACT)
