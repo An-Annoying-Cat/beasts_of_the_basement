@@ -10,6 +10,7 @@ local Mod = BotB
 --globals
 BotB.Config = Isaac.GetItemConfig()
 BotB.SFX = SFXManager()
+sfx = SFXManager()
 BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
@@ -27,16 +28,21 @@ if not BotB.FF then
     print("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")
 return end
 
-
+--[[
 function LoadScripts(scripts)
 	--load scripts
 	for i,v in ipairs(scripts) do
 		include(v)
 	end
-end
+end --]]
+
 --Until that's sorted out...
+--CORE
 include("scripts.core.enums")
+--ENTITIES
 include("scripts.entities.enemies.palesniffle")
+--ITEMS
+include("scripts.items.alphaarmor")
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
 --[[
@@ -112,7 +118,7 @@ function BotB:MinistroOverrideTest(npc)
     end
 
     --skooter, super skooter
-    if (npc.Variant == BotB.Enums.Entities.SKOOTER.VARIANT or npc.Variant == BotB.Enums.Entities.SUPER_SKOOTER.VARIANT) and npc.SubType ~= nil then
+    if npc.Variant == Isaac.GetEntityVariantByName("Skuzz") and npc.SubType ~= nil then
         if sprite:IsPlaying("hopstart") then
             if sprite:GetFrame() == 1 then
                 if npc.SubType == 2 then
@@ -228,7 +234,7 @@ function BotB:MinistroOverrideTest(npc)
 
     --Sleazebag (This just plays the wheeze sound)
     if npc.Type == 22 and npc.Variant == BotB.Enums.Entities.SLEAZEBAG.VARIANT and npc.SubType ~= nil then 
-        if npc.State == 8 then npc.State = 99 sprite:Play("HeadAttack") end 
+        if npc.State == 8 then npc.State = 99 sprite:PlayOverlay("HeadAttack") end 
             if npc.State == 99 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
                 if sprite:IsEventTriggered("Shoot") then
@@ -240,12 +246,12 @@ function BotB:MinistroOverrideTest(npc)
             end
     end
     --Convert flies spawned by Sleazebags into Skuzzes
-    if npc.Type == 13 or npc.Type == 18 or npc.Type == 14 then 
+    if npc.Type == Isaac.GetEntityTypeByName("Fly") or Isaac.GetEntityTypeByName("Attack Fly") or npc.Type == Isaac.GetEntityTypeByName("Pooter") then 
         if npc.SpawnerVariant == BotB.Enums.Entities.SLEAZEBAG.VARIANT then
-            if npc.Type == 14 then
+            if npc.Type == Isaac.GetEntityTypeByName("Pooter") then
                 --Convert Pooters into Skooters
                 npc:Morph(Isaac.GetEntityTypeByName("Skooter"), Isaac.GetEntityVariantByName("Skooter"), 1, 0)
-            elseif npc.Type == 13 or npc.Type == 18 then
+            elseif npc.Type == Isaac.GetEntityTypeByName("Fly") or Isaac.GetEntityTypeByName("Attack Fly") then
                 
                 --Convert Flies and Attack Flies into normal Skuzzes
                 npc:Morph(Isaac.GetEntityTypeByName("Skuzz"), Isaac.GetEntityVariantByName("Skuzz"), 0, 0)

@@ -73,4 +73,4 @@ function PALESNIFFLE:NPCUpdate(npc)
 end
 end
 
-Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, PALESNIFFLE.NPCUpdate, Entities.PALE_SNIFFLE.TYPE)
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, PALESNIFFLE.NPCUpdate, Isaac.GetEntityTypeByName("Pale Sniffle"))
