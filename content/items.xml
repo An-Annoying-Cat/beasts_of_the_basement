@@ -1,3 +1,8 @@
 <items gfxroot="gfx/items/" version="1">
     <passive id="1" quality="4" name="Alpha Armor" description="Protective helm" gfx="alpha_armor.png"/>
+    <passive id="2" quality="2" name="Treeman Syndrome" description="I can't feel my hands..." gfx="treeman_syndrome.png"/>
+    <!--
+    <passive id="3" quality="3" name="Popped Balloon" description="Rid the world of its kin" gfx="popped_balloon.png"/>
+    <passive id="4" quality="2" name="Needles Piano" description="Play Music For Baby" gfx="needles_piano.png"/>
+    -->
 </items>

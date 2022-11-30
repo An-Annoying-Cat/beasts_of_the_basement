@@ -29,4 +29,9 @@
 		<sample weight="1" path="cartoonRicochet3.wav" />
 		<sample weight="1" path="cartoonRicochet4.wav" />
 	</sound>
+	<sound name="BloonsPop">
+		<sample weight="1" path="bloonsPop1.wav" />
+		<sample weight="1" path="bloonsPop2.wav" />
+		<sample weight="1" path="bloonsPop3.wav" />
+	</sound>
 </sounds>

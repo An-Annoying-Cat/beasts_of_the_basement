@@ -43,6 +43,7 @@ include("scripts.core.enums")
 include("scripts.entities.enemies.palesniffle")
 --ITEMS
 include("scripts.items.alphaarmor")
+include("scripts.items.treemansyndrome")
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
 --[[

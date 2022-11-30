@@ -5,4 +5,21 @@
     <Pool Name="secret">
         <Item Name="Alpha Armor" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
+    <Pool Name="curse">
+        <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+    <Pool Name="devil">
+        <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+    <Pool Name="rottenBeggar">
+        <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+    <!--
+    <Pool Name="treasure">
+        <Item Name="Popped Balloon" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+    <Pool Name="secret">
+        <Item Name="Popped Balloon" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+    -->
 </ItemPools>
