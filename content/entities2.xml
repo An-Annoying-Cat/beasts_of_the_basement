@@ -90,4 +90,44 @@
             <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
     </entity>
 
+    <!--Card Types-->
+    <entity anm2path="items/cards/ygo_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Yu-Gi-Oh Card" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="800">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/skb_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Black Shotgun King Card" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="801">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/skw_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="White Shotgun King Card" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="802">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/oj_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="100% Orange Juice Card" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="803">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/ac_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Amiibo Card" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="804">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/sts_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Slay The Spire Card" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="805">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/mis_tarot_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Misprinted Tarot Card" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="806">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/tvruhh_green_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Quicklove" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="807">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/tvruhh_yellow_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Starlight" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="808">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/tvruhh_blue_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Lucky Flower" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="809">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/tvruhh_gray_card.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Pale Box" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="810">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+    <entity anm2path="items/cards/mahjong_tile.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Mahjong Tile" numGridCollisionPoints="24" shadowSize="16" stageHP="0" variant="300" subtype="811">
+	    <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
+    </entity>
+
+
+
 </entities>

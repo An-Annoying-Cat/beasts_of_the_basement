@@ -98,10 +98,52 @@ Enums.Projectiles = {
     HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")
 }
 --[[
-Enums.Entities = {
+Enums.Items = {
 
     --Alpha Armor goes here
 
 }
 --]]
+Enums.Consumables = {
+
+    CARDS = {
+    CORNERED_DESPOT = Isaac.GetCardIDByName("Cornered Despot"),
+    AUGUST_PRESENCE = Isaac.GetCardIDByName("August Presence"),
+    HOMECOMING = Isaac.GetCardIDByName("Homecoming"),
+    AMMUNITION_DEPOT = Isaac.GetCardIDByName("Ammunition Depot"),
+
+    OH_MY_FRIEND = Isaac.GetCardIDByName("Oh My Friend"),
+    MIMYUUS_HAMMER = Isaac.GetCardIDByName("Mimyuu's Hammer"),
+    FLIP_OUT = Isaac.GetCardIDByName("Flip Out"),
+    FLAMETHROWER = Isaac.GetCardIDByName("Flamethrower"),
+
+    TIME_WIZARD = Isaac.GetCardIDByName("Oh My Friend"),
+    TOON_WORLD = Isaac.GetCardIDByName("Mimyuu's Hammer"),
+    SEAL_OF_ORICHALCOS = Isaac.GetCardIDByName("Seal of Orichalcos"),
+    POLYMERIZATION = Isaac.GetCardIDByName("Polymerization"),
+
+    ANKHA = Isaac.GetCardIDByName("Ankha"),
+    COCO = Isaac.GetCardIDByName("Coco"),
+    RAYMOND = Isaac.GetCardIDByName("Raymond"),
+    STITCHES = Isaac.GetCardIDByName("Stitches"),
+
+    QUICKLOVE = Isaac.GetCardIDByName("Quicklove"),
+    STARLIGHT = Isaac.GetCardIDByName("Starlight"),
+    LUCKY_FLOWER = Isaac.GetCardIDByName("Lucky Flower"),
+    PALE_BOX = Isaac.GetCardIDByName("Pale Box"),
+
+    ZAP = Isaac.GetCardIDByName("Zap"),
+    BLADE_DANCE = Isaac.GetCardIDByName("Blade Dance"),
+
+    MISPRINTED_JUSTICE = Isaac.GetCardIDByName("Misprinted Justice"),
+    BANK_ERROR_IN_YOUR_FAVOR = Isaac.GetCardIDByName("Bank Error In Your Favor")--,
+    --REVERSED_BANK_ERROR = Isaac.GetCardIDByName("Floating Point Error In Your Favor")
+
+
+    }
+    
+
+}
+
+
 BotB.Enums = Enums
