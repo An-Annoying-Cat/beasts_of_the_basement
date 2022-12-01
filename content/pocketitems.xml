@@ -1,0 +1,23 @@
+<pocketitems>
+<!--Shotgun King Cards-->
+	<card name="Cornered Despot" description="Hug the edges" hud="Cornered Despot" mimiccharge="3" pickup="8"/>
+	<card name="August Presence" description="None shall approach" hud="August Presence" mimiccharge="3" pickup="8"/>
+	<card name="Homecoming" description="You just can't seem to escape her" hud="Homecoming" mimiccharge="4" pickup="8"/>
+	<card name="Ammunition Depot" description="Treasure within fortification" hud="Ammunition Depot" mimiccharge="6" pickup="8"/>
+<!--100% Orange Juice cards-->
+	<card name="Mimyuu's Hammer" description="Bonk!" hud="Mimyuu's Hammer" mimiccharge="3" pickup="8"/>
+	<card name="Flip Out" description="Equalized loss" hud="August Presence" mimiccharge="3" pickup="8"/>
+	<card name="Oh My Friend" description="Here it comes...!" hud="Oh My Friend" mimiccharge="4" pickup="8"/>
+	<card name="Flamethrower" description="Kill and steal" hud="Flamethrower" mimiccharge="6" pickup="8"/>
+<!--Yu-Gi-Oh cards-->
+	<card name="Time Wizard" description="GO TIME ROULETTE!" hud="Mimyuu's Hammer" mimiccharge="3" pickup="8"/>
+	<card name="Toon World" description="Welcome to Toon World!" hud="August Presence" mimiccharge="3" pickup="8"/>
+	<card name="Seal of Orichalcos" description="Raise the stakes" hud="Homecoming" mimiccharge="4" pickup="8"/>
+	<card name="Polymerization" description="Do the monster mash!" hud="Polymerization" mimiccharge="6" pickup="8"/>
+<!--Slay The Spire cards-->
+	<card name="Zap" description="It seems defective..." hud="Zap" mimiccharge="4" pickup="8"/>
+	<card name="Blade Dance" description="Endless blades..." hud="Blade Dance" mimiccharge="6" pickup="8"/>
+	<card name="Misprinted Justice" description="nd move onMay your future beco" hud="Misprinted Justice" mimiccharge="4" pickup="8"/>
+	<card name="Bank Error In Your Favor" description="Huh, they withdrew a little extra!" hud="Bank Error In Your Favor" mimiccharge="6" pickup="8"/>
+
+</pocketitems>
