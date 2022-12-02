@@ -139,9 +139,25 @@ Enums.Consumables = {
     BANK_ERROR_IN_YOUR_FAVOR = Isaac.GetCardIdByName("Bank Error In Your Favor")--,
     --REVERSED_BANK_ERROR = Isaac.GetCardIdByName("Floating Point Error In Your Favor")
 
+        
+    },
+    FILLER_TILE = Isaac.GetCardIDByName("filler tile"),
 
+    OBJECTS = {
+        MAHJONG = {
+            WHITE_DRAGON = Isaac.GetCardIDByName("White Dragon"),
+            RED_DRAGON = Isaac.GetCardIDByName("Red Dragon"),
+            GREEN_DRAGON = Isaac.GetCardIDByName("Green Dragon"),
+
+            ONE_DOT = Isaac.GetCardIDByName("1 Dot"),
+            ONE_BAM = Isaac.GetCardIDByName("1 Bam"),
+            ONE_CRAK = Isaac.GetCardIDByName("1 Crak"),
+
+            NINE_DOT = Isaac.GetCardIDByName("9 Dot"),
+            NINE_BAM = Isaac.GetCardIDByName("9 Bam"),
+            NINE_CRAK = Isaac.GetCardIDByName("9 Crak"),
+        }
     }
-    
 
 }
 
