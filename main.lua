@@ -50,7 +50,7 @@ include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
 
 --CONSUMABLES
-
+include("scripts.entities.items.consumables.shotgunkingcards")
 
 
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)

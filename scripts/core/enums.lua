@@ -93,7 +93,6 @@ Enums.SFX = {
     DESIRER_ATTACK = Isaac.GetSoundIdByName("DesirerAttack")
     --add the rest of them
 }
-
 Enums.Projectiles = {
     HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")
 }
@@ -141,21 +140,21 @@ Enums.Consumables = {
 
         
     },
-    FILLER_TILE = Isaac.GetCardIDByName("filler tile"),
+    --FILLER_TILE = Isaac.GetCardIdByName("filler tile"),
 
     OBJECTS = {
         MAHJONG = {
-            WHITE_DRAGON = Isaac.GetCardIDByName("White Dragon"),
-            RED_DRAGON = Isaac.GetCardIDByName("Red Dragon"),
-            GREEN_DRAGON = Isaac.GetCardIDByName("Green Dragon"),
+            WHITE_DRAGON = Isaac.GetCardIdByName("White Dragon"),
+            RED_DRAGON = Isaac.GetCardIdByName("Red Dragon"),
+            GREEN_DRAGON = Isaac.GetCardIdByName("Green Dragon"),
 
-            ONE_DOT = Isaac.GetCardIDByName("1 Dot"),
-            ONE_BAM = Isaac.GetCardIDByName("1 Bam"),
-            ONE_CRAK = Isaac.GetCardIDByName("1 Crak"),
+            ONE_DOT = Isaac.GetCardIdByName("1 Dot"),
+            ONE_BAM = Isaac.GetCardIdByName("1 Bam"),
+            ONE_CRAK = Isaac.GetCardIdByName("1 Crak"),
 
-            NINE_DOT = Isaac.GetCardIDByName("9 Dot"),
-            NINE_BAM = Isaac.GetCardIDByName("9 Bam"),
-            NINE_CRAK = Isaac.GetCardIDByName("9 Crak"),
+            NINE_DOT = Isaac.GetCardIdByName("9 Dot"),
+            NINE_BAM = Isaac.GetCardIdByName("9 Bam"),
+            NINE_CRAK = Isaac.GetCardIdByName("9 Crak"),
         }
     }
 
