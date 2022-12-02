@@ -8,6 +8,7 @@ BotB = RegisterMod("Beasts of the Basement", 1)
 local Mod = BotB
 
 --globals
+BotB.Game = Game()
 BotB.Config = Isaac.GetItemConfig()
 BotB.SFX = SFXManager()
 sfx = SFXManager()
@@ -37,13 +38,21 @@ function LoadScripts(scripts)
 end --]]
 
 --Until that's sorted out...
+
 --CORE
 include("scripts.core.enums")
+
 --ENTITIES
 include("scripts.entities.enemies.palesniffle")
+
 --ITEMS
-include("scripts.items.alphaarmor")
-include("scripts.items.treemansyndrome")
+include("scripts.entities.items.alphaarmor")
+include("scripts.entities.items.treemansyndrome")
+
+--CONSUMABLES
+
+
+
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
 
 --[[
