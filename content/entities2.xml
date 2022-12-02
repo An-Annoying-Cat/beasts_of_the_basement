@@ -98,7 +98,7 @@
         collisionDamage="0" collisionMass="3" collisionRadius="12" numGridCollisionPoints="24" shadowSize="16" friction="1">
             <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->
     </entity>
-    <entity name="Yu-Gi-Oh Card"
+    <entity name="Black Shotgun King Card"
         id="5" variant="300" subtype="801" anm2path="items/pick ups/cards/skb_card.anm2"
         collisionDamage="0" collisionMass="3" collisionRadius="12" numGridCollisionPoints="24" shadowSize="16" friction="1">
             <preload-snd id="8" /> <!-- BOOK_PAGE_TURN_12 -->

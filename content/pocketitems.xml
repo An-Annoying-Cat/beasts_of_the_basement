@@ -22,7 +22,7 @@
 	<card type="special" name="Ammunition Depot" description="Treasure within fortification" hud="Ammunition Depot" mimiccharge="6" pickup="802"/>
 <!--100% Orange Juice cards-->
 	<card type="special" name="Mimyuu's Hammer" description="Bonk!" hud="Mimyuu's Hammer" mimiccharge="3" pickup="803"/>
-	<card type="special" name="Flip Out" description="Equalized loss" hud="August Presence" mimiccharge="3" pickup="803"/>
+	<card type="special" name="Flip Out" description="Equalized loss" hud="Flip Out" mimiccharge="3" pickup="803"/>
 	<card type="special" name="Oh My Friend" description="Here it comes...!" hud="Oh My Friend" mimiccharge="4" pickup="803"/>
 	<card type="special" name="Flamethrower" description="Kill and steal" hud="Flamethrower" mimiccharge="6" pickup="803"/>
 <!--Yu-Gi-Oh cards-->

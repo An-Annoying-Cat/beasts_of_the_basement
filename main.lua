@@ -16,6 +16,7 @@ BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
+BotB.StageAPI = StageAPI
 
 --rng shit, not really needed now
 BotB.GENERIC_RNG = RNG()
@@ -50,7 +51,10 @@ include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
 
 --CONSUMABLES
-include("scripts.entities.items.consumables.shotgunkingcards")
+include("scripts.entities.consumables.basic")
+include("scripts.entities.consumables.shotgunkingcards")
+
+--include("scripts.entities.consumables.mahjongtiles")
 
 
 --Isaac.Spawn(EntityType.ENTITY_MINISTRO, BotB.Enums.Entities.CULO.Variant, 0, vector(270 + 50*x, 200 + 50*y), Vector(0,0), nil)
