@@ -29,9 +29,32 @@
 		<sample weight="1" path="cartoonRicochet3.wav" />
 		<sample weight="1" path="cartoonRicochet4.wav" />
 	</sound>
+	<!--Items-->
+	<!--Plays when the Deflated Balloon bloons are popped.-->
 	<sound name="BloonsPop">
-		<sample weight="1" path="bloonsPop1.wav" />
-		<sample weight="1" path="bloonsPop2.wav" />
-		<sample weight="1" path="bloonsPop3.wav" />
+		<sample weight="1" path="items/bloonsPop1.wav" />
+		<sample weight="1" path="items/bloonsPop2.wav" />
+		<sample weight="1" path="items/bloonsPop3.wav" />
+	</sound>
+	<!--Familiars-->
+	<!--A loop of Camel By Camel that I slowed, then put through some Post-Awareness type bullshit. Should play really quietly and at a very low pitch, as a looping sound, when near the Ankha familiar.-->
+	<sound name="AnkhaLoop">
+		<sample weight="1" path="items/ankhaLoop.wav" />
+	</sound>
+	<!--Consumables-->
+	<sound name="AmiiboCard">
+		<sample weight="1" path="cards/amiiboCard.wav" />
+	</sound>
+	<sound name="OJCard">
+		<sample weight="1" path="cards/orangeJuiceCard.wav" />
+	</sound>
+	<sound name="ShotgunKingCard">
+		<sample weight="1" path="cards/shotgunKingCard.wav" />
+	</sound>
+	<sound name="VoidRainCard">
+		<sample weight="1" path="cards/voidRainCard.wav" />
+	</sound>
+	<sound name="YugiohCard">
+		<sample weight="1" path="cards/yugiohCard.wav" />
 	</sound>
 </sounds>
