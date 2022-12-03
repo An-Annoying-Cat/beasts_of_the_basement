@@ -1,4 +1,5 @@
 local Mod = BotB
 local MAHJONG_TILES = {}
-local Entities = BotB.Enums.Consumables.OBJECTS.MAHJONG
+local FillerTile = BotB.Enums.Consumables.Cards.FILLER_TILE
+local Tiles = BotB.Enums.Consumables.OBJECTS.MAHJONG
 

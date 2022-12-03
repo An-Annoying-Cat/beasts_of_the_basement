@@ -96,51 +96,51 @@ Enums.SFX = {
 Enums.Projectiles = {
     HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")
 }
---[[
+
 Enums.Items = {
 
     --Alpha Armor goes here
 
 }
---]]
+
 Enums.Consumables = {
 
     CARDS = {
-    CORNERED_DESPOT = Isaac.GetCardIdByName("Cornered Despot"),
-    AUGUST_PRESENCE = Isaac.GetCardIdByName("August Presence"),
-    HOMECOMING = Isaac.GetCardIdByName("Homecoming"),
-    AMMUNITION_DEPOT = Isaac.GetCardIdByName("Ammunition Depot"),
+        CORNERED_DESPOT = Isaac.GetCardIdByName("Cornered Despot"),
+        AUGUST_PRESENCE = Isaac.GetCardIdByName("August Presence"),
+        HOMECOMING = Isaac.GetCardIdByName("Homecoming"),
+        AMMUNITION_DEPOT = Isaac.GetCardIdByName("Ammunition Depot"),
 
-    OH_MY_FRIEND = Isaac.GetCardIdByName("Oh My Friend"),
-    MIMYUUS_HAMMER = Isaac.GetCardIdByName("Mimyuu's Hammer"),
-    FLIP_OUT = Isaac.GetCardIdByName("Flip Out"),
-    FLAMETHROWER = Isaac.GetCardIdByName("Flamethrower"),
+        OH_MY_FRIEND = Isaac.GetCardIdByName("Oh My Friend"),
+        MIMYUUS_HAMMER = Isaac.GetCardIdByName("Mimyuu's Hammer"),
+        FLIP_OUT = Isaac.GetCardIdByName("Flip Out"),
+        FLAMETHROWER = Isaac.GetCardIdByName("Flamethrower"),
 
-    TIME_WIZARD = Isaac.GetCardIdByName("Oh My Friend"),
-    TOON_WORLD = Isaac.GetCardIdByName("Mimyuu's Hammer"),
-    SEAL_OF_ORICHALCOS = Isaac.GetCardIdByName("Seal of Orichalcos"),
-    POLYMERIZATION = Isaac.GetCardIdByName("Polymerization"),
+        TIME_WIZARD = Isaac.GetCardIdByName("Oh My Friend"),
+        TOON_WORLD = Isaac.GetCardIdByName("Mimyuu's Hammer"),
+        SEAL_OF_ORICHALCOS = Isaac.GetCardIdByName("Seal of Orichalcos"),
+        POLYMERIZATION = Isaac.GetCardIdByName("Polymerization"),
 
-    ANKHA = Isaac.GetCardIdByName("Ankha"),
-    COCO = Isaac.GetCardIdByName("Coco"),
-    RAYMOND = Isaac.GetCardIdByName("Raymond"),
-    STITCHES = Isaac.GetCardIdByName("Stitches"),
+        ANKHA = Isaac.GetCardIdByName("Ankha"),
+        COCO = Isaac.GetCardIdByName("Coco"),
+        RAYMOND = Isaac.GetCardIdByName("Raymond"),
+        STITCHES = Isaac.GetCardIdByName("Stitches"),
 
-    QUICKLOVE = Isaac.GetCardIdByName("Quicklove"),
-    STARLIGHT = Isaac.GetCardIdByName("Starlight"),
-    LUCKY_FLOWER = Isaac.GetCardIdByName("Lucky Flower"),
-    PALE_BOX = Isaac.GetCardIdByName("Pale Box"),
+        QUICKLOVE = Isaac.GetCardIdByName("Quicklove"),
+        STARLIGHT = Isaac.GetCardIdByName("Starlight"),
+        LUCKY_FLOWER = Isaac.GetCardIdByName("Lucky Flower"),
+        PALE_BOX = Isaac.GetCardIdByName("Pale Box"),
 
-    ZAP = Isaac.GetCardIdByName("Zap"),
-    BLADE_DANCE = Isaac.GetCardIdByName("Blade Dance"),
+        ZAP = Isaac.GetCardIdByName("Zap"),
+        BLADE_DANCE = Isaac.GetCardIdByName("Blade Dance"),
 
-    MISPRINTED_JUSTICE = Isaac.GetCardIdByName("Misprinted Justice"),
-    BANK_ERROR_IN_YOUR_FAVOR = Isaac.GetCardIdByName("Bank Error In Your Favor")--,
-    --REVERSED_BANK_ERROR = Isaac.GetCardIdByName("Floating Point Error In Your Favor")
+        MISPRINTED_JUSTICE = Isaac.GetCardIdByName("Misprinted Justice"),
+        BANK_ERROR_IN_YOUR_FAVOR = Isaac.GetCardIdByName("Bank Error In Your Favor"),
+        --REVERSED_BANK_ERROR = Isaac.GetCardIdByName("Floating Point Error In Your Favor"),
 
         
+        FILLER_TILE = Isaac.GetCardIdByName("filler tile"),
     },
-    --FILLER_TILE = Isaac.GetCardIdByName("filler tile"),
 
     OBJECTS = {
         MAHJONG = {
@@ -155,8 +155,8 @@ Enums.Consumables = {
             NINE_DOT = Isaac.GetCardIdByName("9 Dot"),
             NINE_BAM = Isaac.GetCardIdByName("9 Bam"),
             NINE_CRAK = Isaac.GetCardIdByName("9 Crak"),
-        }
-    }
+        },
+    },
 
 }
 

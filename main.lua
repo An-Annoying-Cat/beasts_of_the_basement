@@ -11,7 +11,6 @@ local Mod = BotB
 BotB.Game = Game()
 BotB.Config = Isaac.GetItemConfig()
 BotB.SFX = SFXManager()
-sfx = SFXManager()
 BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
