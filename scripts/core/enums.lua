@@ -122,6 +122,17 @@ Enums.Projectiles = {
 Enums.Items = {
 
     --Alpha Armor goes here
+    ALPHA_ARMOR = Isaac.GetItemIdByName("Alpha Armor"),
+    TREEMAN_SYNDROME = Isaac.GetItemIdByName("Treeman Syndrome")
+
+}
+
+Enums.Trinkets = {
+
+    --Alpha Armor goes here
+    DEMON_CORE = Isaac.GetTrinketIdByName("Demon Core"),
+    --CANKER_SORE = Isaac.GetItemIdByName("Canker Sore"),
+    --BOOTLEG_CARTRIDGE = Isaac.GetItemIdByName("Bootleg Cartridge")
 
 }
 

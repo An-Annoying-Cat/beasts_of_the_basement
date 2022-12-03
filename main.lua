@@ -48,6 +48,8 @@ include("scripts.entities.enemies.palesniffle")
 --ITEMS
 include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
+--TRINKETS
+include("scripts.entities.items.trinkets.demoncore")
 
 --CONSUMABLES
 include("scripts.entities.consumables.basic")

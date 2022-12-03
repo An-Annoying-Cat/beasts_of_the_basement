@@ -5,6 +5,8 @@
     <passive id="3" quality="3" name="Popped Balloon" description="Rid the world of its kin" gfx="popped_balloon.png"/>
     <passive id="4" quality="2" name="Needles Piano" description="Play Music For Baby" gfx="needles_piano.png"/>
     -->
+    <!--
     <trinket name="Canker Sore" description="Owwww...!" gfx="canker_sore.png" />
+    -->
     <trinket name="Demon Core" description="The sleeping dragon..." gfx="demon_core.png" />
 </items>
