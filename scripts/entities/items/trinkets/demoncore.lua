@@ -5,16 +5,18 @@ if EID then
 end
 
 
-	function Mod:demonCoreBlast(_, damageAmount, _, _, _)
+	function Mod:demonCoreBlast(player, _, _, source, _)
 		--https://cdn.discordapp.com/attachments/933137074461241364/1048692744748535838/SPOILER_FNluorjVgAMBh6c.png
-		local player = Isaac.GetPlayer()
-			if player:HasTrinket(Mod.Enums.Trinkets.DEMON_CORE) then
+	    local player = Isaac.GetPlayer()
+			if player:HasTrinket(Mod.Enums.Trinkets.DEMON_CORE) and source ~= EntityRef(player) then
 				sfx:Play(Mod.Enums.SFX.DEMON_CORE_EFFECT,1,0,false,1)
 				sfx:Play(BotB.FF.Sounds.Nuke,1,0,false,math.random(8,12)/10)
 				player:UseActiveItem(Isaac.GetItemIdByName("Mama Mega!"))
-				damageAmount = math.random(1,10)
+				local damageAmount = math.random(1,5)
 				print(damageAmount)
-				--player:TryRemoveTrinket(Mod.Enums.Trinkets.DEMON_CORE)
+				--Has flages for Fire and Explosive damage because, you know, nuclear fire
+				player:TryRemoveTrinket(Mod.Enums.Trinkets.DEMON_CORE)
+				player:TakeDamage(damageAmount, 6, EntityRef(player), 40)
 				return true
 			end
 
