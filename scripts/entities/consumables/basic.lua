@@ -6,7 +6,7 @@ local Mod = BotB
 --Cards that are permanent should just give you a passive item with the icon being the cardfront of the card in question.
 player:GetData().activeRoomCards = {}
 player:GetData().activeFloorCards = {}
-
+--[[
 function Mod:activeCardTableInit(isContinue)
     if not isContinue then
         print("[BASEMENTS AND BEASTIES] Card table initialized.")
@@ -14,7 +14,7 @@ function Mod:activeCardTableInit(isContinue)
         player:GetData().activeFloorCards = {}
     end
 end
-
+--]]
 function Mod:flushRoomCards()
     --print("Clearing room cards...")
     player:GetData().activeRoomCards = {}
@@ -30,7 +30,7 @@ function Mod:playerSTAPIDebugTest(player)
     
 end
 --]]
-Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, Mod.activeCardTableInit)
+--Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, Mod.activeCardTableInit)
 Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, Mod.flushRoomCards)
 Mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, Mod.flushFloorCards)
 

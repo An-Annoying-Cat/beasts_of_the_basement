@@ -14,13 +14,13 @@ end
 
 	function Mod:corneredDespotInit(cardID, player)
 		print("CornDes = " .. Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
-		table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
+		--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
 		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
 	end
 
 	function Mod:augustPresenceInit(cardID, player)
 		print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
-		table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+		--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
 		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
 	end
 
@@ -33,7 +33,7 @@ end
 	function Mod:ammoDepotTransform(cardID, player)
 		print("AmmDep = " .. Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
 		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
-		table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
+		--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
 		--The above line is only here to keep a callback so enemies can drop pickups when killed
 	end
 
