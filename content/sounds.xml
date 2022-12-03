@@ -1,10 +1,7 @@
 <sounds root="sfx/">
     <sound name="AcmeDeath">
 		<sample weight="1" path="acmeDeath.wav" />
-		<sample weight="0.000001" path="acmeDeathFunny.wav" />
-	</sound>
-	<sound name="ArmorBlock">
-		<sample weight="1" path="armorBreak.wav" />
+		<sample weight="0.01" path="acmeDeathFunny.wav" />
 	</sound>
 	<sound name="DesirerAttack">
 		<sample weight="1" path="desirerAttack1.wav" />
@@ -30,6 +27,13 @@
 		<sample weight="1" path="cartoonRicochet4.wav" />
 	</sound>
 	<!--Items-->
+	<sound name="ArmorBlock">
+		<sample weight="1" path="items/armorBreak.wav" />
+	</sound>
+	<!--Trinkets-->
+	<sound name="DemonCoreEffect">
+		<sample weight="1" path="items/demonCoreEffect.wav" />
+	</sound>
 	<!--Plays when the Deflated Balloon bloons are popped.-->
 	<sound name="BloonsPop">
 		<sample weight="1" path="items/bloonsPop1.wav" />
@@ -56,5 +60,18 @@
 	</sound>
 	<sound name="YugiohCard">
 		<sample weight="1" path="cards/yugiohCard.wav" />
+	</sound>
+
+	<sound name="MahjongIllegal">
+		<sample weight="1" path="cards/mahjongIllegal.wav" />
+	</sound>
+	<sound name="MahjongMatch">
+		<sample weight="1" path="cards/mahjongMatch.wav" />
+	</sound>
+	<sound name="MahjongLayout">
+		<sample weight="1" path="cards/mahjongLayout.wav" />
+	</sound>
+	<sound name="MahjongSelect">
+		<sample weight="1" path="cards/mahjongSelect.wav" />
 	</sound>
 </sounds>

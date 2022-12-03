@@ -90,8 +90,30 @@ Enums.Entities = {
 }
 
 Enums.SFX = {
-    DESIRER_ATTACK = Isaac.GetSoundIdByName("DesirerAttack")
-    --add the rest of them
+    DESIRER_ATTACK = Isaac.GetSoundIdByName("DesirerAttack"),
+    ACME_DEATH = Isaac.GetSoundIdByName("AcmeDeath"),
+    SEDUCER_ATTACK = Isaac.GetSoundIdByName("SeducerAttack"),
+    WHEEZE = Isaac.GetSoundIdByName("Wheeze"),
+    CARTOON_RICOCHET = Isaac.GetSoundIdByName("CartoonRicochet"),
+
+    ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
+    BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
+
+    ANKHA_LOOP = Isaac.GetSoundIdByName("AnkhaLoop"),
+
+    SHOTGUNKING_CARD = Isaac.GetSoundIdByName("ShotgunKingCard"),
+    OJ_CARD = Isaac.GetSoundIdByName("OJCard"),
+    YUGIOH_CARD = Isaac.GetSoundIdByName("YugiohCard"),
+    AMIIBO_CARD = Isaac.GetSoundIdByName("AmiiboCard"),
+    VOIDRAIN_CARD = Isaac.GetSoundIdByName("VoidRainCard"),
+
+    MAHJONG_ILLEGAL = Isaac.GetSoundIdByName("MahjongIllegal"),
+    MAHJONG_MATCH = Isaac.GetSoundIdByName("MahjongMatch"),
+    MAHJONG_SELECT = Isaac.GetSoundIdByName("MahjongSelect"),
+    MAHJONG_LAYOUT = Isaac.GetSoundIdByName("MahjongLayout"),
+
+    DEMON_CORE_EFFECT = Isaac.GetSoundIdByName("DemonCoreEffect")
+    --Rest added :)
 }
 Enums.Projectiles = {
     HUMBLED_PROJECTILE = Isaac.GetEntityVariantByName("Humbled Projectile")
