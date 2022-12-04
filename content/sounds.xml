@@ -26,6 +26,9 @@
 		<sample weight="1" path="cartoonRicochet3.wav" />
 		<sample weight="1" path="cartoonRicochet4.wav" />
 	</sound>
+	<sound name="TippyTapLoop">
+		<sample weight="1" path="tippyTapLoop.wav" />
+	</sound>
 	<!--Items-->
 	<sound name="ArmorBlock">
 		<sample weight="1" path="items/armorBreak.wav" />

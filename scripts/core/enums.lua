@@ -76,6 +76,12 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Ping")
     },
 
+    --Host Variants
+    TIPPYTAP = {
+        TYPE = Isaac.GetEntityTypeByName("Tippytap"),
+        VARIANT = Isaac.GetEntityVariantByName("Tippytap")
+    },
+
 
     --Effects
     ACMES_ANVIL = {
@@ -95,6 +101,7 @@ Enums.SFX = {
     SEDUCER_ATTACK = Isaac.GetSoundIdByName("SeducerAttack"),
     WHEEZE = Isaac.GetSoundIdByName("Wheeze"),
     CARTOON_RICOCHET = Isaac.GetSoundIdByName("CartoonRicochet"),
+    TIPPYTAPLOOP = Isaac.GetSoundIdByName("TippyTapLoop"),
 
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),

@@ -9,4 +9,5 @@
     <trinket name="Canker Sore" description="Owwww...!" gfx="canker_sore.png" />
     -->
     <trinket name="Demon Core" description="The sleeping dragon..." gfx="demon_core.png" />
+    <trinket name="A Single Raisin" description="Just a bit fiendish" gfx="raisin.png" />
 </items>
