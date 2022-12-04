@@ -2,7 +2,7 @@
 	<Info CreatedBy="robot" CreatedOn="11/21/2022 1:18:03 PM" Version="112" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\monster_bodies_hoarder.png" Id="0"/>
+			<Spritesheet Path="monsters\monster_bodies_hoarder_2.png" Id="0"/>
 			<Spritesheet Path="monsters\acme.png" Id="1"/>
 		</Spritesheets>
 		<Layers>

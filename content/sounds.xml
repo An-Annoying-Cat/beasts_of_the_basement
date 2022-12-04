@@ -1,7 +1,7 @@
 <sounds root="sfx/">
     <sound name="AcmeDeath">
-		<sample weight="1" path="acmeDeath.wav" />
-		<sample weight="0.01" path="acmeDeathFunny.wav" />
+		<sample weight="1" path="acme/acmeDeath.wav" />
+		<sample weight="0.01" path="acme/acmeDeathFunny.wav" />
 	</sound>
 	<sound name="DesirerAttack">
 		<sample weight="1" path="desirerAttack1.wav" />
