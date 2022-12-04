@@ -1,7 +1,7 @@
 local Mod = BotB
 
 if EID then
-	EID:addTrinket(Mod.Enums.Trinkets.DEMON_CORE, "The next hit you take causes the {{Collectible483}}Mama Mega! effect and then consume this trinket. #{{Warning}} This hit will cause a random amount of damage anywhere between a half heart and five full heart's worth!")
+	EID:addTrinket(Mod.Enums.Trinkets.DEMON_CORE, "The next hit you take causes the {{Collectible483}} Mama Mega! effect and consumes this trinket afterward. #{{Warning}} This hit will cause a random amount of damage which can be anything from a single half-heart to five full hearts!")
 end
 
 
