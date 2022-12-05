@@ -26,7 +26,7 @@
     
     <!--Keepers     id="86" variants start at 10-->
     <entity name="Desirer" 
-        id="86" variant="10" anm2path="desirer.anm2" baseHP="45" stageHP="0"
+        id="86" variant="10" anm2path="desirer.anm2" baseHP="25" stageHP="0"
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
 	</entity>
@@ -40,7 +40,7 @@
 
     <!--Swarm Spiders     id="884"  variants start at 10-->
     <entity name="Humbled"
-        id="884" variant="10" anm2path="humbled.anm2" baseHP="6" stageHP="0.2" shieldStrength="3" portrait="318"
+        id="884" variant="10" anm2path="humbled.anm2" baseHP="4" stageHP="0.2" shieldStrength="0.1" portrait="318"
         collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="11"   friction="1"  reroll="true" champion="0">
             <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
 	</entity>
@@ -86,7 +86,7 @@
 
     <!--Hosts id="27"   variants start at 40-->
     <entity name="Tippytap" 
-        id="27" variant="40" subtype="0" anm2path="tippytap.anm2" baseHP="60" stageHP="0" portrait="548"
+        id="27" variant="40" subtype="0" anm2path="tippytap.anm2" baseHP="25" stageHP="0" portrait="548"
         boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="16"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="WalkVert">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
