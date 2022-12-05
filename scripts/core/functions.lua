@@ -3,6 +3,8 @@ local Functions = {}
 local Mod = BotB
 local game = Mod.Game
 
+Functions.RNG = include("scripts.core.rngman")
+
 ---- GET PLAYERS
 function Functions:GetPlayers()
 	local players = {}

@@ -18,11 +18,7 @@ BotB.FF = FiendFolio --:pleading_face:
 BotB.StageAPI = StageAPI
 
 --rng shit, not really needed now
-BotB.GENERIC_RNG = RNG()
-BotB.RECOMMENDED_SHIFT_IDX = 35
-Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function ()
-	Mod.GENERIC_RNG:SetSeed(Game():GetSeeds():GetStartSeed(), Mod.RECOMMENDED_SHIFT_IDX)
-end)
+
 
 if not BotB.FF then 
     Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")
@@ -41,6 +37,7 @@ end --]]
 
 --CORE
 include("scripts.core.enums")
+include("scripts.core.functions")
 
 --ENTITIES
 include("scripts.entities.enemies.palesniffle")
