@@ -2,6 +2,12 @@ local Enums = {}
     
 Enums.Entities = {
 
+    --Not really a variant of anything in particular, using a shopkeeper as a test at this point
+    DRIFTER = {
+        TYPE = Isaac.GetEntityTypeByName("Drifter"),
+        VARIANT = Isaac.GetEntityVariantByName("Drifter"),
+    },
+
     --GAPERS
 
     --Gaper Variants

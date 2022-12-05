@@ -40,6 +40,8 @@ include("scripts.core.enums")
 include("scripts.core.functions")
 
 --ENTITIES
+include("scripts.entities.drifter")
+
 include("scripts.entities.enemies.palesniffle")
 include("scripts.entities.enemies.tippytap")
 

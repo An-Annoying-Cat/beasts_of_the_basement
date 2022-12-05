@@ -1,5 +1,12 @@
 <entities anm2root="gfx/" version="5">
 
+    <entity name="Drifter"
+        id="964" variant="10" anm2path="drifter_test.anm2" baseHP="10" stageHP="0" portrait="1"
+        collisionDamage="0" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6" mass="999"  friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
+    </entity>
+
+
     <!--GAPERS-->
 
     <!--Gapers  id="10" variants start at 40-->

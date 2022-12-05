@@ -65,7 +65,7 @@ end
 function TIPPYTAP:WalkTimerDecrement()
     for i, entity in pairs(Isaac.GetRoomEntities()) do
         local data = entity:GetData()
-        if entity.Variant == Entities.TIPPYTAP.VARIANT and data.walkTimer ~= 0 then
+        if entity.Variant == Entities.TIPPYTAP.VARIANT and data.walkTimer ~= 0 and data.walkTimer ~= nil then
             data.walkTimer = data.walkTimer - 1
             if data.walkTimer % 2 == 0 then
                 sfx:Play(BotB.Enums.SFX.TIPPYTAPSTEP, 0.5, 0, false, 1)
