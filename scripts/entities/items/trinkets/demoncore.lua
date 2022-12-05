@@ -7,7 +7,7 @@ end
 
 	function Mod:demonCoreBlast(player, _, _, source, _)
 		--https://cdn.discordapp.com/attachments/933137074461241364/1048692744748535838/SPOILER_FNluorjVgAMBh6c.png
-	    local player = Isaac.GetPlayer()
+	    --local player = Isaac.GetPlayer()
 			if player:HasTrinket(Mod.Enums.Trinkets.DEMON_CORE) and source ~= EntityRef(player) then
 				sfx:Play(Mod.Enums.SFX.DEMON_CORE_EFFECT,1,0,false,1)
 				sfx:Play(BotB.FF.Sounds.Nuke,1,0,false,math.random(8,12)/10)

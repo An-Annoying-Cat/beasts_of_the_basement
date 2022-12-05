@@ -29,6 +29,9 @@
 	<sound name="TippyTapLoop">
 		<sample weight="1" path="tippyTapLoop.wav" />
 	</sound>
+	<sound name="TippyTapStep">
+		<sample weight="1" path="tippyTapStep.wav" />
+	</sound>
 	<!--Items-->
 	<sound name="ArmorBlock">
 		<sample weight="1" path="items/armorBreak.wav" />

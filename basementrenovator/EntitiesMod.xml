@@ -11,6 +11,9 @@
   <!-- Dross Enemies -->
   <entity Image="icons/other/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
 
+  <!-- Caves Enemies -->
+  <entity Image="icons/other/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
+
   <!-- Depths Enemies -->
   <entity Image="icons/other/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
   <entity Image="icons/other/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />

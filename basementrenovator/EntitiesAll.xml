@@ -250,6 +250,10 @@
     <entity Name="Chaff" />
   </group>
 
+  <group Name="BotB Chapter 2 (Main Path) Enemies" >  
+    <entity Name="Tippytap" />
+  </group>
+
   <group Name="BotB Hoard Enemies" >
     <entity Name="Acme" />
     <entity Name="Sleazebag" />

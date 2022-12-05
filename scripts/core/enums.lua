@@ -102,6 +102,7 @@ Enums.SFX = {
     WHEEZE = Isaac.GetSoundIdByName("Wheeze"),
     CARTOON_RICOCHET = Isaac.GetSoundIdByName("CartoonRicochet"),
     TIPPYTAPLOOP = Isaac.GetSoundIdByName("TippyTapLoop"),
+    TIPPYTAPSTEP = Isaac.GetSoundIdByName("TippyTapStep"),
 
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
