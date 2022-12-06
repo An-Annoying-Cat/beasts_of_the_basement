@@ -8,6 +8,7 @@
 
   <group Name="Chapter 1 (Main Path) Enemies" >  
     <entity Name="Chaff" />
+    <entity Name="Batso" />
   </group>
 
   <group Name="Hoarder Basement Enemies" >
@@ -21,12 +22,6 @@
     <entity Name="Culo" />
   </group>
 
-  <group Name="Depths Enemies" >
-    <entity Name="Desirer" />
-    <entity Name="Humbled" />
-    <entity Name="Seducer" />
-    <entity Name="Pale Sniffle" />
-  </group>
 
 
   <!--——— BotB Tab ———-->
@@ -248,6 +243,7 @@
 
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
     <entity Name="Chaff" />
+    <entity Name="Batso" />
   </group>
 
   <group Name="BotB Chapter 2 (Main Path) Enemies" >  

@@ -93,6 +93,13 @@ Enums.Entities = {
     },
 
 
+    --FAUNA
+    --Fat Bat variants
+    BATSO = {
+        TYPE = Isaac.GetEntityTypeByName("Batso"),
+        VARIANT = Isaac.GetEntityVariantByName("Batso")
+    },
+
     --Effects
     ACMES_ANVIL = {
         TYPE = Isaac.GetEntityTypeByName("Acme's Anvil"),

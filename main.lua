@@ -44,6 +44,7 @@ include("scripts.entities.drifter")
 
 include("scripts.entities.enemies.palesniffle")
 include("scripts.entities.enemies.tippytap")
+include("scripts.entities.enemies.batso")
 
 --ITEMS
 include("scripts.entities.items.alphaarmor")
