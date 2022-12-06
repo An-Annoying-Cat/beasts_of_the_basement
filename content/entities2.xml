@@ -90,6 +90,11 @@
         boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="16"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="WalkVert">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
+    <entity name="Croast" 
+        id="27" variant="41" subtype="0" anm2path="croast.anm2" baseHP="25" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="16"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="WalkVert">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
     
 
 

@@ -87,6 +87,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Tippytap"),
         VARIANT = Isaac.GetEntityVariantByName("Tippytap")
     },
+    CROAST = {
+        TYPE = Isaac.GetEntityTypeByName("Croast"),
+        VARIANT = Isaac.GetEntityVariantByName("Croast")
+    },
 
 
     --Effects
