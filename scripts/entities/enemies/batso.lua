@@ -2,6 +2,7 @@ local Mod = BotB
 local BATSO = {}
 local Entities = BotB.Enums.Entities
 local gameFunc = Game()
+local sfx = SFXManager()
 
 function BATSO:NPCUpdate(npc)
 
