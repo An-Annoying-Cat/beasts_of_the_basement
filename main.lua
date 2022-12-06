@@ -45,12 +45,14 @@ include("scripts.entities.drifter")
 include("scripts.entities.enemies.palesniffle")
 include("scripts.entities.enemies.tippytap")
 include("scripts.entities.enemies.batso")
+include("scripts.entities.enemies.croast")
 
 --ITEMS
 include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
 --TRINKETS
 include("scripts.entities.items.trinkets.demoncore")
+include("scripts.entities.items.trinkets.asingleraisin")
 
 --CONSUMABLES
 --include("scripts.entities.consumables.basic")
@@ -227,7 +229,6 @@ function BotB:MinistroOverrideTest(npc)
         if npc.State == 8 then npc.State = 9 sprite:Play("Shoot") end 
             if npc.State == 9 then
                 if sprite:IsEventTriggered("Shoot") then
-                    
                     --3 flies per chaff max, so player doesn't get overwhelmed
                     if Isaac.CountEntities(npc, 18, 0) < 3 then
                         sfx:Play(Isaac.GetSoundIdByName("Wheeze"),1,0,false,math.random(75, 85)/100)
@@ -407,7 +408,7 @@ end, EntityType.ENTITY_PROJECTILE)
 
 
 --Thank you Danial for this 
---[[
+--
 function Mod:NPCAIChecker(npc,offset)
     local data = npc:GetData()
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
@@ -415,7 +416,7 @@ function Mod:NPCAIChecker(npc,offset)
         Isaac.RenderText(npc.I1 .. "          " .. npc.I2, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-20,1,1,1,1)
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
---]]
+--
 --Death checker
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 

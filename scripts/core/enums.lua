@@ -154,8 +154,8 @@ Enums.Items = {
 
 Enums.Trinkets = {
 
-    --Alpha Armor goes here
     DEMON_CORE = Isaac.GetTrinketIdByName("Demon Core"),
+    A_SINGLE_RAISIN = Isaac.GetTrinketIdByName("A Single Raisin")
     --CANKER_SORE = Isaac.GetItemIdByName("Canker Sore"),
     --BOOTLEG_CARTRIDGE = Isaac.GetItemIdByName("Bootleg Cartridge")
 
