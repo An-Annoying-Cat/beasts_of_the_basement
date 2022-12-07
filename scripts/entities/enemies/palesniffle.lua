@@ -7,6 +7,7 @@ function PALESNIFFLE:NPCUpdate(npc)
     local sprite = npc:GetSprite()
     local target = npc:GetPlayerTarget()
     local targetpos = target.Position
+    data = npc:GetData()
     --This breaks the code if you define it beforehand, idk why but it does
     --local warningTarget
     --[[
@@ -40,10 +41,10 @@ function PALESNIFFLE:NPCUpdate(npc)
             local aimTarget = target.Position
             warningTarget = Isaac.Spawn(EntityType.ENTITY_EFFECT,Entities.WARNING_TARGET.VARIANT,0,aimTarget,Vector(0,0),npc)
             --Spawn the kineti line
-            warningLine = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.KINETI_BEAM,0,Vector(0,0),Vector(0,0),nil):ToEffect()
-            warningLine.Parent = npc
-            warningLine.Target = warningTarget
-            warningLine.Color = Color(0.5,0,0)
+            data.warningLine = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.KINETI_BEAM,0,Vector(0,0),Vector(0,0),nil):ToEffect()
+            data.warningLine.Parent = npc
+            data.warningLine.Target = warningTarget
+            data.warningLine.Color = Color(0.75,0,0)
         elseif npc.StateFrame == 15 then
             --FIRE!!
             local room = Game():GetRoom()
@@ -56,7 +57,7 @@ function PALESNIFFLE:NPCUpdate(npc)
             --print(laserEndPoint:Normalized())
             --Position is so goddamned wonky idek what to do here
             --I GOT IT FUCKIN WORKING
-            warningLine:Remove()
+            --data.warningLine:Remove()
             local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.DARK_BALL_SMOKE_PARTICLE,0,room:GetLaserTarget(npc.Position, techAngleVector),Vector(0,0),npc)
             local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.ROCK_POOF,0,room:GetLaserTarget(npc.Position, techAngleVector),Vector((0.1*math.random(-20,20)),(0.1*math.random(-20,20))),npc)
             for i=0,5,1 do
@@ -71,6 +72,7 @@ function PALESNIFFLE:NPCUpdate(npc)
             Mod.SFX:Stop(SoundEffect.SOUND_REDLIGHTNING_ZAP)
             Mod.SFX:Stop(SoundEffect.SOUND_REDLIGHTNING_ZAP_WEAK)
             Mod.SFX:Stop(SoundEffect.SOUND_REDLIGHTNING_ZAP_STRONG)
+            data.warningLine:Remove()
 			laser:Update()
 
         else

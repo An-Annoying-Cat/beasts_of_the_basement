@@ -11,6 +11,11 @@
     <entity Name="Batso" />
   </group>
 
+  <group Name="Chapter 2 (Main Path) Enemies" >  
+    <entity Name="Tippytap" />
+    <entity Name="Croast" />
+  </group>
+
   <group Name="Hoarder Basement Enemies" >
     <entity Name="Acme" />
     <entity Name="Sleazebag" />
@@ -248,6 +253,7 @@
 
   <group Name="BotB Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
+    <entity Name="Croast" />
   </group>
 
   <group Name="BotB Hoard Enemies" >

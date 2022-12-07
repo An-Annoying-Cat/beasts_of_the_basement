@@ -14,6 +14,7 @@
 
   <!-- Caves Enemies -->
   <entity Image="icons/other/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
+  <entity Image="icons/other/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
 
   <!-- Depths Enemies -->
   <entity Image="icons/other/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
