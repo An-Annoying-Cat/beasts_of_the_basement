@@ -143,6 +143,7 @@ if npc.State == 11 then
             if sprite:IsEventTriggered("Back") then 
                 npc.State = 12
                 npc.StateFrame = 0 
+                npc:PlaySound(Isaac.GetSoundIdByName("CroastLand"),2,0,false,1)
                 sprite:Play("DiveBombStart") 
                 croastPathfinder:Reset() 
             end
