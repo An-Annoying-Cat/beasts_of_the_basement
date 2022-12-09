@@ -28,6 +28,9 @@
     </bitfield>
   </entity>
 
+  <!-- Womb Enemies -->
+  <entity Image="icons/other/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" />
+
   <!-- Ascent Enemies -->
   
   

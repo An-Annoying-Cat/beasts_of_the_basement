@@ -27,8 +27,10 @@
     <entity Name="Culo" />
   </group>
 
-
-
+  <group Name="Womb Enemies" >
+    <entity Name="Giblet" />
+  </group>
+  
   <!--——— BotB Tab ———-->
   <tab Name="BotB"/>
     
@@ -272,6 +274,10 @@
     <entity Name="Humbled" />
     <entity Name="Seducer" />
     <entity Name="Pale Sniffle" />
+  </group>
+
+  <group Name="BotB Womb Enemies" >
+    <entity Name="Giblet" />
   </group>
 
 </data>

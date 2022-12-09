@@ -28,6 +28,7 @@ end
 		print("HomeCom = " .. Mod.Enums.Consumables.CARDS.HOMECOMING)
 		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
 		--Do the conversion shit here. It's just one enemy and it already drops all the stuff, so it doesn't need a table entry
+		
 	end
 
 	function Mod:ammoDepotTransform(cardID, player)
