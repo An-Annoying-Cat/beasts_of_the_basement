@@ -39,6 +39,9 @@ end --]]
 include("scripts.core.enums")
 include("scripts.core.functions")
 
+local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
+LOCAL_TSIL.Init("scripts/core/loi")
+
 --ENTITIES
 include("scripts.entities.drifter")
 
