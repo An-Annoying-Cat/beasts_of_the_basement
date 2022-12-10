@@ -37,6 +37,7 @@ function DRIFTER.drifterUpdate(npc)
             data.binted = true
             sfx:Play(BotB.Enums.SFX.TIPPYTAPSTEP, 3, 0, false, 0.5)
         end
+        --print(data.SkinIndex)
     end
 end
 
