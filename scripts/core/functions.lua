@@ -4,6 +4,7 @@ local Mod = BotB
 local game = Mod.Game
 
 Functions.RNG = include("scripts.core.rngman")
+Functions.Tables = include("scripts.core.table_functions")
 
 ---- GET PLAYERS
 function Functions:GetPlayers()

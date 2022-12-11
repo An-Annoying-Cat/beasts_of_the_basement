@@ -67,7 +67,7 @@ include("scripts.entities.items.trinkets.asingleraisin")
 --include("scripts.entities.consumables.basic")
 include("scripts.entities.consumables.shotgunkingcards")
 
---include("scripts.entities.consumables.mahjongtiles")
+include("scripts.entities.consumables.mahjongtiles")
 
 --General enemy override. Guess we Ministro now
 function BotB:MinistroOverrideTest(npc)

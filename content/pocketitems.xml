@@ -1,7 +1,5 @@
 <pocketitems>
 <!--Mahjong Tiles-->
-	<card type="special" name="filler tile" description="If you find this report it" hud="Blank" mimiccharge="1" pickup="811"/> <!--this is to boost the encounter rate-->
-
 	<card type="object" name="White Dragon" description="Soap" hud="White Dragon" mimiccharge="12" pickup="811"/>
 	<card type="object" name="Red Dragon" description="" hud="Red Dragon" mimiccharge="" pickup="811"/>
 	<card type="object" name="Green Dragon" description="" hud="Green Dragon" mimiccharge="" pickup="811"/>

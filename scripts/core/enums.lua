@@ -196,25 +196,20 @@ Enums.Consumables = {
         MISPRINTED_JUSTICE = Isaac.GetCardIdByName("Misprinted Justice"),
         BANK_ERROR_IN_YOUR_FAVOR = Isaac.GetCardIdByName("Bank Error In Your Favor"),
         --REVERSED_BANK_ERROR = Isaac.GetCardIdByName("Floating Point Error In Your Favor"),
-
-        
-        FILLER_TILE = Isaac.GetCardIdByName("filler tile"),
     },
 
     OBJECTS = {
-        MAHJONG = {
-            WHITE_DRAGON = Isaac.GetCardIdByName("White Dragon"),
-            RED_DRAGON = Isaac.GetCardIdByName("Red Dragon"),
-            GREEN_DRAGON = Isaac.GetCardIdByName("Green Dragon"),
+        WHITE_DRAGON = Isaac.GetCardIdByName("White Dragon"),
+        RED_DRAGON = Isaac.GetCardIdByName("Red Dragon"),
+        GREEN_DRAGON = Isaac.GetCardIdByName("Green Dragon"),
 
-            ONE_DOT = Isaac.GetCardIdByName("1 Dot"),
-            ONE_BAM = Isaac.GetCardIdByName("1 Bam"),
-            ONE_CRAK = Isaac.GetCardIdByName("1 Crak"),
+        ONE_DOT = Isaac.GetCardIdByName("1 Dot"),
+        ONE_BAM = Isaac.GetCardIdByName("1 Bam"),
+        ONE_CRAK = Isaac.GetCardIdByName("1 Crak"),
 
-            NINE_DOT = Isaac.GetCardIdByName("9 Dot"),
-            NINE_BAM = Isaac.GetCardIdByName("9 Bam"),
-            NINE_CRAK = Isaac.GetCardIdByName("9 Crak"),
-        },
+        NINE_DOT = Isaac.GetCardIdByName("9 Dot"),
+        NINE_BAM = Isaac.GetCardIdByName("9 Bam"),
+        NINE_CRAK = Isaac.GetCardIdByName("9 Crak"),
     },
 
 }
