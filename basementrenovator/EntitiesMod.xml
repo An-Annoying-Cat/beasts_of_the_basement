@@ -1,26 +1,31 @@
 <data>
   <!-- Chapter 1 (Main Path) Enemies -->
-  <entity Image="icons/other/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
-  <entity Image="icons/other/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
+  <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
+  <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
+
+  <!-- Hoard Events -->
+  <!-- <entity Image="icons/hoardbasement_backdrop.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
+    <Gfx RoomGfx="Hoarder Basement Backdrop" />
+  </entity> -->
 
   <!-- Hoard Enemies -->
-  <entity Image="icons/hoarder/acme.png" Name="Acme" ID="10" Variant="40" Subtype="0" />
-  <entity Image="icons/hoarder/sleazebag.png" Name="Sleazebag" ID="22" Variant="50" Subtype="0" />
-  <entity Image="icons/hoarder/skooter.png" Name="Skooter" ID="666" Variant="60" Subtype="10" />
-  <entity Image="icons/hoarder/superskooter.png" Name="Super Skooter" ID="666" Variant="60" Subtype="11" />
+  <entity Image="icons/acme.png" Name="Acme" ID="10" Variant="40" Subtype="0" />
+  <entity Image="icons/sleazebag.png" Name="Sleazebag" ID="22" Variant="50" Subtype="0" />
+  <entity Image="icons/skooter.png" Name="Skooter" ID="666" Variant="60" Subtype="10" />
+  <entity Image="icons/superskooter.png" Name="Super Skooter" ID="666" Variant="60" Subtype="11" />
   
   <!-- Dross Enemies -->
-  <entity Image="icons/other/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
+  <entity Image="icons/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
 
   <!-- Caves Enemies -->
-  <entity Image="icons/other/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
-  <entity Image="icons/other/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
+  <entity Image="icons/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
+  <entity Image="icons/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
 
   <!-- Depths Enemies -->
-  <entity Image="icons/other/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
-  <entity Image="icons/other/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />
-  <entity Image="icons/other/seducer.png" Name="Seducer" ID="86" Variant="11" Subtype="0" />
-  <entity Image="icons/other/humbled.png" Name="Humbled" ID="884" Variant="10" Subtype="0">
+  <entity Image="icons/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
+  <entity Image="icons/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />
+  <entity Image="icons/seducer.png" Name="Seducer" ID="86" Variant="11" Subtype="0" />
+  <entity Image="icons/humbled.png" Name="Humbled" ID="884" Variant="10" Subtype="0">
     <bitfield Key="Subtype">
       <spinner Length="5" ValueOffset="1" Name="Amount to spawn">
         <tooltip>It's how many Humbled spawn at once</tooltip>
@@ -29,7 +34,7 @@
   </entity>
 
   <!-- Womb Enemies -->
-  <entity Image="icons/other/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" />
+  <entity Image="icons/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" />
 
   <!-- Ascent Enemies -->
   

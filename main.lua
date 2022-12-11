@@ -17,13 +17,22 @@ BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
 BotB.StageAPI = StageAPI
 
---rng shit, not really needed now
 
-
-if not BotB.FF then 
+if not BotB.FF then
     Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")
     print("[BASEMENTS N BEASTIES] hey buddy you kinda need Fiend Folio for this")
 return end
+
+
+if not BotB.StageAPI then
+    Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need StageAPI for this")
+    print("[BASEMENTS N BEASTIES] hey buddy you kinda need StageAPI for this")
+end
+
+--[[
+local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
+LOCAL_TSIL.Init("scripts/core/loi")
+]]
 
 --[[
 function LoadScripts(scripts)
@@ -38,10 +47,10 @@ end --]]
 --CORE
 include("scripts.core.enums")
 include("scripts.core.functions")
---[[
-local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
-LOCAL_TSIL.Init("scripts/core/loi")
---]]
+
+include("scripts.core.stageapi")
+include("scripts.core.ff_additions")
+
 --ENTITIES
 include("scripts.entities.drifter")
 

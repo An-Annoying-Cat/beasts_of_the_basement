@@ -16,6 +16,10 @@
     <entity Name="Croast" />
   </group>
 
+  <!-- <group Name="Hoarder Basement Events" >
+    <entity Name="Hoarder Basement Backdrop" />
+  </group> -->
+
   <group Name="Hoarder Basement Enemies" >
     <entity Name="Acme" />
     <entity Name="Sleazebag" />
@@ -257,6 +261,10 @@
     <entity Name="Tippytap" />
     <entity Name="Croast" />
   </group>
+
+  <!-- <group Name="Hoarder Basement Events" >
+    <entity Name="Hoarder Basement Backdrop" />
+  </group> -->
 
   <group Name="BotB Hoard Enemies" >
     <entity Name="Acme" />
