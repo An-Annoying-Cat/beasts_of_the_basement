@@ -48,6 +48,7 @@ end --]]
 --CORE
 include("scripts.core.enums")
 include("scripts.core.functions")
+include("scripts.core.table_functions")
 
 --include("scripts.core.stageapi")
 --include("scripts.core.ff_additions")

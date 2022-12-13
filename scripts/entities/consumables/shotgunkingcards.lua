@@ -13,8 +13,9 @@ end
 --Todo: Literally everything lmao
 
 	function Mod:corneredDespotInit(cardID, player)
+		data = player:GetData()
 		print("CornDes = " .. Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
-		--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
+		--table.insert(data.activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
 		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
 	end
 
@@ -84,17 +85,38 @@ end
 
 	function BotB:ammoNPCDeathCheck(npc)
 		local data = npc:GetData()
-		print("DIE")
+		--print("DIE")
 		if data.ammoDepotEffect == true then
-			print("DIE 2")
+			--print("DIE 2")
 			sfx:Play(SoundEffect.SOUND_SLOTSPAWN,1,0,false,math.random(120, 150)/100)
 			Isaac.Spawn(EntityType.ENTITY_PICKUP, 0, 0, npc.Position, Vector(math.random(-4,4),math.random(-4,4)), npc)
 		end
-	
-	
 	end
+	--[[
+	function Mod:corneredCache(player, cacheFlags)
+		local data = player:GetData()
+		if Mod.Tables:ContainsValue(data.activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT) then
+			if cacheFlags & CacheFlag.CACHE_FIREDELAY == CacheFlag.CACHE_FIREDELAY then
+				local fireDelayBoost = 0.5
+				player.MaxFireDelay = player.MaxFireDelay*fireDelayBoost
+			end
+		end
+	end
+
+	function Mod:corneredPlayerUpdate(player)
+		local data = player:GetData()
+		if Mod.Tables:ContainsValue(data.activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT) then
+			player:AddCacheFlags(CacheFlag.CACHE_FIREDELAY)
+  			player:EvaluateItems()
+			sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
+		end
+	end
+	--]]
+
 	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.corneredDespotInit, Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
 	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.augustPresenceInit, Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
 	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.homecomingTransform, Mod.Enums.Consumables.CARDS.HOMECOMING)
 	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.ammoDepotTransform, Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
 	Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_KILL, BotB.ammoNPCDeathCheck)
+	--Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, Mod.corneredCache, CacheFlag.CACHE_FIREDELAY)
+	--Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, Mod.corneredPlayerUpdate, 0)
