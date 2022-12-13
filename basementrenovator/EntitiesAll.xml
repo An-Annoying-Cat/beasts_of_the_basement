@@ -1,4 +1,18 @@
 <data>
+
+  <group Name="Pickups">
+    <entity Name="Kick Cube" />
+  </group>
+
+  <group Name="Chapter 1 (Main Path) Enemies" >  
+    <entity Name="Chaff" />
+    <entity Name="Batso" />
+  </group>
+
+  <group Name="Chapter 2 (Main Path) Enemies" >  
+    <entity Name="Tippytap" />
+    <entity Name="Croast" />
+  </group>
   <!--——— Floors ———-->
   <group Name="Basement">
     <group Name="Hoarder Basement Events" Label="Hoard Events" />
@@ -251,6 +265,9 @@
     </group>
   </group>
 
+  <group Name="BotB Pickups">
+    <entity Name="Kick Cube" />
+  </group>
 
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
     <entity Name="Chaff" />

@@ -1,5 +1,6 @@
 local Mod = BotB
-
+sfx = SFXManager()
+game = Game()
 local KICKCUBE = {}
 
 --Yoinking this from Fiend Folio--unbiased pickup spawns

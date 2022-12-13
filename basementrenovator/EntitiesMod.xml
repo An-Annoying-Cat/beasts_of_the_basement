@@ -1,4 +1,6 @@
 <data>
+  <!-- Pickups -->
+    <entity Image="icons/kickcube.png" Name="Kick Cube" ID="5" Variant="69" Subtype="30" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
@@ -26,7 +28,7 @@
   <entity Image="icons/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />
   <entity Image="icons/seducer.png" Name="Seducer" ID="86" Variant="11" Subtype="0" />
   <entity Image="icons/humbled.png" Name="Humbled" ID="884" Variant="10" Subtype="0">
-    <bitfield Key="Subtype">
+    <bitfield Key="SubType">
       <spinner Length="5" ValueOffset="1" Name="Amount to spawn">
         <tooltip>It's how many Humbled spawn at once</tooltip>
       </spinner>
