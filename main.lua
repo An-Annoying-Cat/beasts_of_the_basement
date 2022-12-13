@@ -15,6 +15,7 @@ BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
+mod = BotB.FF
 BotB.StageAPI = StageAPI
 
 
@@ -48,8 +49,8 @@ end --]]
 include("scripts.core.enums")
 include("scripts.core.functions")
 
-include("scripts.core.stageapi")
-include("scripts.core.ff_additions")
+--include("scripts.core.stageapi")
+--include("scripts.core.ff_additions")
 
 --ENTITIES
 include("scripts.entities.drifter")
@@ -71,6 +72,8 @@ include("scripts.entities.items.treemansyndrome")
 --TRINKETS
 include("scripts.entities.items.trinkets.demoncore")
 include("scripts.entities.items.trinkets.asingleraisin")
+--PICKUPS
+include("scripts.entities.items.pickups.kickcube")
 
 --CONSUMABLES
 --include("scripts.entities.consumables.basic")
@@ -168,10 +171,20 @@ Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, function(_, v)
 end, EntityType.ENTITY_PROJECTILE)
 
 
-
+function Mod.unbiasedFromSuit(suitName)
+    if mod.UnbiasedPickups[suitName] then
+        local dynamicPool = {}
+        for _, data in pairs(mod.UnbiasedPickups[suitName]) do
+            if data.Unlocked() then
+                table.insert(dynamicPool, data.ID)
+            end
+        end
+        return dynamicPool[math.random(0,#dynamicPool)+1]
+    end
+end
 
 --Thank you Danial for this 
---[[
+--
 function Mod:NPCAIChecker(npc,offset)
     local data = npc:GetData()
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
@@ -179,6 +192,6 @@ function Mod:NPCAIChecker(npc,offset)
         Isaac.RenderText(npc.I1 .. "          " .. npc.I2, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-20,1,1,1,1)
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
---]]
+--
 --Death checker
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)

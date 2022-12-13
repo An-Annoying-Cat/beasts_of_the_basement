@@ -138,6 +138,10 @@ Enums.SFX = {
     MAHJONG_SELECT = Isaac.GetSoundIdByName("MahjongSelect"),
     MAHJONG_LAYOUT = Isaac.GetSoundIdByName("MahjongLayout"),
 
+    KICKCUBE1 = Isaac.GetSoundIdByName("KickCube1"),
+    KICKCUBE2 = Isaac.GetSoundIdByName("KickCube2"),
+    KICKCUBE3 = Isaac.GetSoundIdByName("KickCube3"),
+
     DEMON_CORE_EFFECT = Isaac.GetSoundIdByName("DemonCoreEffect")
     --Rest added :)
 }
@@ -159,6 +163,16 @@ Enums.Trinkets = {
     A_SINGLE_RAISIN = Isaac.GetTrinketIdByName("A Single Raisin")
     --CANKER_SORE = Isaac.GetItemIdByName("Canker Sore"),
     --BOOTLEG_CARTRIDGE = Isaac.GetItemIdByName("Bootleg Cartridge")
+
+}
+
+Enums.Pickups = {
+
+    KICKCUBE = {
+        TYPE = Isaac.GetEntityTypeByName("Kick Cube"),
+        VARIANT = Isaac.GetEntityVariantByName("Kick Cube"),
+        SUBTYPE = 30
+    },
 
 }
 

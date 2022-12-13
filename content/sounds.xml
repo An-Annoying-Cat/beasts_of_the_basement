@@ -48,6 +48,16 @@
 	<sound name="DemonCoreEffect">
 		<sample weight="1" path="items/demonCoreEffect.wav" />
 	</sound>
+	<!--Pickups-->
+	<sound name="KickCube1">
+		<sample weight="1" path="pickups/kickCubeSpinTier1.wav" />
+	</sound>
+	<sound name="KickCube2">
+		<sample weight="1" path="pickups/kickCubeSpinTier2.wav" />
+	</sound>
+	<sound name="KickCube3">
+		<sample weight="1" path="pickups/kickCubeSpinTier3.wav" />
+	</sound>
 	<!--Plays when the Deflated Balloon bloons are popped.-->
 	<sound name="BloonsPop">
 		<sample weight="1" path="items/bloonsPop1.wav" />
