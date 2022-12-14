@@ -23,7 +23,7 @@ function DESIRER:NPCUpdate(npc)
                     --npc:PlaySound(SoundEffect.SOUND_BOIL_HATCH, 1, 0, false, math.random(75,85)/100)
                     if Isaac.CountEntities(npc, BotB.Enums.Entities.HUMBLED.TYPE, BotB.Enums.Entities.HUMBLED.VARIANT) < 4 then
                         sfx:Play(Isaac.GetSoundIdByName("DesirerAttack"),1,0,false,math.random(90,110)/100)
-                        local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle), npc):ToProjectile()
+                        local bullet = Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle), npc):ToProjectile()
                         bullet:AddProjectileFlags(ProjectileFlags.NO_WALL_COLLIDE)
                         bullet.FallingSpeed = -30;
 		                bullet.FallingAccel = 2
