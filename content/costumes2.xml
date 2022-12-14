@@ -1,4 +1,7 @@
 <costumes anm2root="gfx/characters/">
-    <costume id="1" anm2path="alphaArmor.anm2" type="passive" priority="10" hasSkinAlt="true"/>
-    <costume id="2" anm2path="treemanSyndrome.anm2" type="passive" priority="10" hasSkinAlt="false"/>
+    <!-- Characters extra. Don't add base costume here!-->
+    <costume anm2path="character_jez_extra.anm2"        type="none"     priority="99" />
+    <!-- Item costumes-->
+    <costume anm2path="alphaArmor.anm2"                 type="passive"  priority="99" hasSkinAlt="true"/>
+    <costume anm2path="treemanSyndrome.anm2"            type="passive"  priority="10" hasSkinAlt="false"/>
 </costumes>

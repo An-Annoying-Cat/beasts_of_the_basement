@@ -1,12 +1,12 @@
 <AnimatedActor>
-	<Info CreatedBy="trtv" CreatedOn="12/14/2022 11:04:36 AM" Version="10" Fps="30"/>
+	<Info CreatedBy="trtv" CreatedOn="12/14/2022 11:50:53 AM" Version="15" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="jez_hair.png" Id="0"/>
+			<Spritesheet Path="costumes\jezs_luscious_auburn_mane.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
-			<Layer Name="head" Id="0" SpritesheetId="0"/>
-			<Layer Name="glow" Id="1" SpritesheetId="0"/>
+			<Layer Name="head0" Id="0" SpritesheetId="0"/>
+			<Layer Name="back" Id="1" SpritesheetId="0"/>
 		</Layers>
 		<Nulls/>
 		<Events/>
