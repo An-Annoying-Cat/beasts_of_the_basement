@@ -9,7 +9,7 @@
           bigportrait="PlayerPortraitBig_Solomon.png" skinColor="-1" 
 		  birthright="Natural insight" />
 
-      <player name="Jezebel" skin="character_jezebel.png" hp="2" trinket="48"
+      <player name="Jezebel" skin="character_jezebel.png" hp="2" trinket="46"
           nameimage="PlayerName_Jezebel.png" costumeSuffix="jezebel"
           portrait="PlayerPortrait_Jezebel.png" 
           bigportrait="PlayerPortraitBig_Jezebel.png" skinColor="-1" 
