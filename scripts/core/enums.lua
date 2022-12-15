@@ -44,6 +44,13 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Pale Sniffle"),
     },
 
+    --Hive Variants
+    KEHEHAN = {
+        TYPE = Isaac.GetEntityTypeByName("Kehehan"),
+        VARIANT = Isaac.GetEntityVariantByName("Kehehan"),
+        SUBTYPE = 10
+    },
+
     --INSECTS
 
     --Swarm Spider Variants

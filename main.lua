@@ -66,6 +66,7 @@ include("scripts.entities.enemies.skooter")
 include("scripts.entities.enemies.chaff")
 include("scripts.entities.enemies.sleazebag")
 include("scripts.entities.enemies.culo")
+include("scripts.entities.enemies.kehehan")
 
 --ITEMS
 include("scripts.entities.items.alphaarmor")
