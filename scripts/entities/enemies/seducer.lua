@@ -28,7 +28,7 @@ function SEDUCER:NPCUpdate(npc)
                         creep:Update()
 				    end
                     --Fire a projectile
-                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle), npc):ToProjectile()
+                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle):Resized(15), npc):ToProjectile()
                     bullet.FallingSpeed = -30;
 		            bullet.FallingAccel = 2
 		            bullet.Height = -10

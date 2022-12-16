@@ -50,6 +50,11 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Kehehan"),
         SUBTYPE = 10
     },
+    THAUMATURGE = {
+        TYPE = Isaac.GetEntityTypeByName("Thaumaturge"),
+        VARIANT = Isaac.GetEntityVariantByName("Thaumaturge"),
+        SUBTYPE = 11
+    },
 
     --INSECTS
 

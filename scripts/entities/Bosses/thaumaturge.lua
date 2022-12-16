@@ -1,10 +1,10 @@
 local Mod = BotB
-local KEHEHAN = {}
+local THAUMATURGE = {}
 local Entities = BotB.Enums.Entities
 local game = Game()
 local mod = BotB.FF
 
-function KEHEHAN:NPCUpdate(npc)
+function THAUMATURGE:NPCUpdate(npc)
 
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
@@ -22,7 +22,7 @@ function KEHEHAN:NPCUpdate(npc)
     local kehehanPathfinder = npc.Pathfinder
 
 
-    if npc.Type == BotB.Enums.Entities.KEHEHAN.TYPE and npc.Variant == BotB.Enums.Entities.KEHEHAN.VARIANT and BotB.Enums.Entities.KEHEHAN.SUBTYPE then 
+    if npc.Type == BotB.Enums.Entities.THAUMATURGE.TYPE and npc.Variant == BotB.Enums.Entities.THAUMATURGE.VARIANT and BotB.Enums.Entities.THAUMATURGE.SUBTYPE then 
 
 
         if targetdistance <= 100 then
@@ -122,8 +122,8 @@ function KEHEHAN:NPCUpdate(npc)
     end
 end
 
-function KEHEHAN.DamageCheck(npc, _, _, _, _)
-    if npc.Type == BotB.Enums.Entities.KEHEHAN.TYPE and npc.Variant == BotB.Enums.Entities.KEHEHAN.VARIANT and BotB.Enums.Entities.KEHEHAN.SUBTYPE then 
+function THAUMATURGE.DamageCheck(npc, _, _, _, _)
+    if npc.Type == BotB.Enums.Entities.THAUMATURGE.TYPE and npc.Variant == BotB.Enums.Entities.THAUMATURGE.VARIANT and BotB.Enums.Entities.THAUMATURGE.SUBTYPE then 
         local data = npc:GetData()
         if data.cantBeHurt then
             sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(110,130)/100)
@@ -135,5 +135,5 @@ function KEHEHAN.DamageCheck(npc, _, _, _, _)
 end
 
 
-Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, KEHEHAN.NPCUpdate, Isaac.GetEntityTypeByName("Kehehan"))
-Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, KEHEHAN.DamageCheck, Isaac.GetEntityTypeByName("Kehehan"))
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, THAUMATURGE.NPCUpdate, Isaac.GetEntityTypeByName("Thaumaturge"))
+Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, THAUMATURGE.DamageCheck, Isaac.GetEntityTypeByName("Thaumaturge"))

@@ -44,6 +44,12 @@
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
 	</entity>
 
+    <entity name="Thaumaturge"
+        id="885" variant="1" subtype="11" anm2path="kehehan.anm2" baseHP="24" stageHP="0" portrait="2"
+        collisionDamage="0" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
+	</entity>
+
     <!--INSECTS-->
 
     <!--Swarm Spiders     id="884"  variants start at 10-->
