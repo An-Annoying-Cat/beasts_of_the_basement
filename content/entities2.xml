@@ -114,7 +114,7 @@
     <!--Globins id="24"   variants start at 40-->
     <entity name="Giblet" 
         id="24" variant="40" subtype="0" anm2path="giblet.anm2" baseHP="11" stageHP="0" portrait="548"
-        boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1"  numGridCollisionPoints="12" shadowSize="16"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Bestiary">
+        boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1"  numGridCollisionPoints="12" shadowSize="16"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Beastiary">
         <gibs amount="3" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
     
@@ -133,9 +133,16 @@
     <!--KNIGHTS id="41"   variants start at 50-->
     <entity name="Hydro Knight" 
         id="41" variant="50" subtype="0" anm2path="hydro_knight.anm2" baseHP="18" stageHP="0" portrait="548"
-        boss="0" champion="1" collisionDamage="1" collisionMass="20" collisionRadius="20" friction="1"  numGridCollisionPoints="12" shadowSize="30"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Shooting">
+        boss="0" champion="1" collisionDamage="1" collisionMass="20" collisionRadius="20" friction="1"  numGridCollisionPoints="12" shadowSize="30"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Hori">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
+    <!--Unique enemies id="501" variants start at 0-->
+    <entity name="Kettle" 
+        id="501" variant="1" subtype="0" anm2path="kettle.anm2" baseHP="25" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="20" collisionRadius="20" friction="0.01"  numGridCollisionPoints="12" shadowSize="30"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Opened">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
 
 
 

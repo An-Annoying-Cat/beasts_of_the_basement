@@ -124,6 +124,11 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Hydro Knight"),
         VARIANT = Isaac.GetEntityVariantByName("Hydro Knight")
     },
+    --Uniques
+    KETTLE = {
+        TYPE = Isaac.GetEntityTypeByName("Kettle"),
+        VARIANT = Isaac.GetEntityVariantByName("Kettle")
+    },
 
     --Effects
     ACMES_ANVIL = {

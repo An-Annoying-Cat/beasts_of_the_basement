@@ -69,6 +69,7 @@ include("scripts.entities.enemies.culo")
 include("scripts.entities.enemies.kehehan")
 include("scripts.entities.enemies.hydroknight")
 include("scripts.entities.enemies.giblet")
+include("scripts.entities.enemies.kettle")
 
 include("scripts.entities.bosses.thaumaturge")
 
@@ -206,9 +207,9 @@ Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 local PLAYER_JEZEBEL = Isaac.GetPlayerTypeByName("Jezebel")
 BotB.JEZ_EXTRA = Isaac.GetCostumeIdByPath("gfx/characters/character_jez_extra.anm2")
 function BotB:playerGetCostume(player)
-    print("weebis")
+    --print("weebis")
     if player:GetPlayerType() == PLAYER_JEZEBEL then
-        print("whongus")
+        --print("whongus")
         player:AddNullCostume(BotB.JEZ_EXTRA)
     end
 end

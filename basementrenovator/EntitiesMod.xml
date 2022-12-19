@@ -26,6 +26,9 @@
   <entity Image="icons/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
   <entity Image="icons/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
 
+  <!-- Mines Enemies-->
+  <entity Image="icons/kettle.png" Name="Kettle" ID="501" Variant="1" Subtype="0" />
+
   <!-- Depths Enemies -->
   <entity Image="icons/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
   <entity Image="icons/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />

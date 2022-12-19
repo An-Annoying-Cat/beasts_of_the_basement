@@ -54,6 +54,10 @@
     <entity Name="Hydro Knight" />
   </group>
 
+  <group Name="Mines Enemies" >
+    <entity Name="Kettle" />
+  </group>
+
   <group Name="Womb Enemies" >
     <entity Name="Giblet" />
   </group>
@@ -309,6 +313,10 @@
 
   <group Name="BotB Flooded Caves Enemies" >
     <entity Name="Hydro Knight" />
+  </group>
+
+  <group Name="BotB Mines Enemies" >
+    <entity Name="Kettle" />
   </group>
 
   <group Name="BotB Depths Enemies" >
