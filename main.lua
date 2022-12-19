@@ -67,6 +67,8 @@ include("scripts.entities.enemies.chaff")
 include("scripts.entities.enemies.sleazebag")
 include("scripts.entities.enemies.culo")
 include("scripts.entities.enemies.kehehan")
+include("scripts.entities.enemies.hydroknight")
+include("scripts.entities.enemies.giblet")
 
 include("scripts.entities.bosses.thaumaturge")
 
@@ -199,3 +201,16 @@ Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
 --]]
 --Death checker
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
+
+
+local PLAYER_JEZEBEL = Isaac.GetPlayerTypeByName("Jezebel")
+BotB.JEZ_EXTRA = Isaac.GetCostumeIdByPath("gfx/characters/character_jez_extra.anm2")
+function BotB:playerGetCostume(player)
+    print("weebis")
+    if player:GetPlayerType() == PLAYER_JEZEBEL then
+        print("whongus")
+        player:AddNullCostume(BotB.JEZ_EXTRA)
+    end
+end
+
+Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BotB.playerGetCostume, 0)

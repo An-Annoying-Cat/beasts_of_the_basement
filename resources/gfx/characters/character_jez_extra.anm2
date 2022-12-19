@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="trtv" CreatedOn="12/14/2022 11:50:53 AM" Version="15" Fps="30"/>
+	<Info CreatedBy="trtv" CreatedOn="12/19/2022 12:22:00 PM" Version="17" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="costumes\jezs_luscious_auburn_mane.png" Id="0"/>

@@ -12,6 +12,7 @@
   <group Name="Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
     <entity Name="Croast" />
+    <entity Name="Hydro Knight" />
   </group>
   <!--——— Floors ———-->
   <group Name="Basement">
@@ -40,9 +41,17 @@
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
   </group>
+
+  <group Name="Downpour Enemies" >
+    <entity Name="Hydro Knight" />
+  </group>
   
   <group Name="Dross Enemies" >
     <entity Name="Culo" />
+  </group>
+
+  <group Name="Flooded Caves Enemies" >
+    <entity Name="Hydro Knight" />
   </group>
 
   <group Name="Womb Enemies" >
@@ -289,9 +298,17 @@
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
   </group>
+
+  <group Name="BotB Downpour Enemies" >
+    <entity Name="Hydro Knight" />
+  </group>
   
   <group Name="BotB Dross Enemies" >
     <entity Name="Culo" />
+  </group>
+
+  <group Name="BotB Flooded Caves Enemies" >
+    <entity Name="Hydro Knight" />
   </group>
 
   <group Name="BotB Depths Enemies" >

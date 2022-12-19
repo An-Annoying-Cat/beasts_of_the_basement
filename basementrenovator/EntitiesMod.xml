@@ -15,6 +15,9 @@
   <entity Image="icons/sleazebag.png" Name="Sleazebag" ID="22" Variant="50" Subtype="0" />
   <entity Image="icons/skooter.png" Name="Skooter" ID="666" Variant="60" Subtype="10" />
   <entity Image="icons/superskooter.png" Name="Super Skooter" ID="666" Variant="60" Subtype="11" />
+
+  <!-- Downpour Enemies -->
+  <entity Image="icons/hydro_knight.png" Name="Hydro Knight" ID="41" Variant="50" Subtype="0" />
   
   <!-- Dross Enemies -->
   <entity Image="icons/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
@@ -36,7 +39,13 @@
   </entity>
 
   <!-- Womb Enemies -->
-  <entity Image="icons/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" />
+  <entity Image="icons/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" >
+    <bitfield Key="SubType">
+      <spinner Length="5" ValueOffset="1" Name="Amount to spawn">
+        <tooltip>Amount to spawn</tooltip>
+      </spinner>
+    </bitfield>
+  </entity>
 
   <!-- Ascent Enemies -->
   

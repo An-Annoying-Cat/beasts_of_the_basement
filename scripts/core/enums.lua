@@ -104,12 +104,25 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Croast")
     },
 
+    --Globin Variants
+    GIBLET = {
+        TYPE = Isaac.GetEntityTypeByName("Giblet"),
+        VARIANT = Isaac.GetEntityVariantByName("Giblet")
+    },
+
 
     --FAUNA
     --Fat Bat variants
     BATSO = {
         TYPE = Isaac.GetEntityTypeByName("Batso"),
         VARIANT = Isaac.GetEntityVariantByName("Batso")
+    },
+
+    --Constructs
+    --Knight variants
+    HYDROKNIGHT = {
+        TYPE = Isaac.GetEntityTypeByName("Hydro Knight"),
+        VARIANT = Isaac.GetEntityVariantByName("Hydro Knight")
     },
 
     --Effects
