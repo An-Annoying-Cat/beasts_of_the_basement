@@ -10,7 +10,7 @@ function KICKCUBE:KickStart(pickup,collider,_)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
     --print(pickup.Type .. "," .. pickup.Variant .. "," .. pickup.SubType)
-    if pickup.SubType == Mod.Enums.Pickups.KICKCUBE.SUBTYPE and collider.Type == Isaac.GetEntityTypeByName("Player") and data.canBeKicked == true then
+    if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.KICKCUBE.SUBTYPE and collider.Type == Isaac.GetEntityTypeByName("Player") and data.canBeKicked == true then
         sfx:Play(SoundEffect.SOUND_THREAD_SNAP,2,0,false,math.random(80, 120)/100)
         sprite:Play("Fly")
         if data.beenKicked == false then
@@ -23,15 +23,13 @@ function KICKCUBE:KickStart(pickup,collider,_)
         data.kickTimer = data.kickTimerMax
         pickup.Friction = 15
         return false
-    else
-        return false
     end
 end
 
 function KICKCUBE:KickCubeUpdate(pickup)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
-    if pickup.SubType == Mod.Enums.Pickups.KICKCUBE.SUBTYPE then
+    if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.KICKCUBE.SUBTYPE then
         if data.beenKicked == nil then
             data.beenKicked = false
             data.kickTimer = 0

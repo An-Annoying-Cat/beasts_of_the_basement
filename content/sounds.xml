@@ -40,6 +40,25 @@
 	<sound name="CroastLand">
 		<sample weight="1" path="croastHorridSplortch.wav" />
 	</sound>
+	<!--Bosses-->
+		<!--Thaumaturge-->
+		<sound name="ThaumLaugh">
+			<sample weight="1" path="bosses/thaumaturge/laugh01.wav" />
+			<sample weight="1" path="bosses/thaumaturge/laugh02.wav" />
+		</sound>
+		<sound name="ThaumShoot">
+			<sample weight="1" path="bosses/thaumaturge/shoot01.wav" />
+			<sample weight="1" path="bosses/thaumaturge/shoot02.wav" />
+		</sound>
+		<sound name="ThaumTaunt">
+			<sample weight="1" path="bosses/thaumaturge/taunt01.wav" />
+			<sample weight="1" path="bosses/thaumaturge/taunt02.wav" />
+		</sound>
+		<sound name="ThaumDeath">
+			<sample weight="1" path="bosses/thaumaturge/death01.wav" />
+			<sample weight="1" path="bosses/thaumaturge/death02.wav" />
+		</sound>
+
 	<!--Items-->
 	<sound name="ArmorBlock">
 		<sample weight="1" path="items/armorBreak.wav" />

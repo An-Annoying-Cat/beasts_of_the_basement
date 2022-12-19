@@ -19,7 +19,7 @@ function KEHEHAN:NPCUpdate(npc)
     local kehehanPathfinder = npc.Pathfinder
 
 
-    if npc.Type == BotB.Enums.Entities.KEHEHAN.TYPE and npc.Variant == BotB.Enums.Entities.KEHEHAN.VARIANT and BotB.Enums.Entities.KEHEHAN.SUBTYPE then 
+    if npc.Type == BotB.Enums.Entities.KEHEHAN.TYPE and npc.Variant == BotB.Enums.Entities.KEHEHAN.VARIANT and npc.SubType == BotB.Enums.Entities.KEHEHAN.SUBTYPE then 
 
         --[[
         if targetdistance <= 100 and data.teleTimer <= 0 then
@@ -127,7 +127,7 @@ function KEHEHAN:NPCUpdate(npc)
 end
 
 function KEHEHAN.DamageCheck(npc, _, _, _, _)
-    if npc.Type == BotB.Enums.Entities.KEHEHAN.TYPE and npc.Variant == BotB.Enums.Entities.KEHEHAN.VARIANT and BotB.Enums.Entities.KEHEHAN.SUBTYPE then 
+    if npc.Type == BotB.Enums.Entities.KEHEHAN.TYPE and npc.Variant == BotB.Enums.Entities.KEHEHAN.VARIANT and npc.SubType == BotB.Enums.Entities.KEHEHAN.SUBTYPE then 
         local data = npc:GetData()
         if data.cantBeHurt then
             sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(110,130)/100)

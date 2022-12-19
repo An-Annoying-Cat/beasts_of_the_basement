@@ -68,7 +68,7 @@ include("scripts.entities.enemies.sleazebag")
 include("scripts.entities.enemies.culo")
 include("scripts.entities.enemies.kehehan")
 
---include("scripts.entities.bosses.thaumaturge")
+include("scripts.entities.bosses.thaumaturge")
 
 --ITEMS
 include("scripts.entities.items.alphaarmor")

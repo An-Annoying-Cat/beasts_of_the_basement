@@ -134,6 +134,11 @@ Enums.SFX = {
     TIPPYTAPSTEP = Isaac.GetSoundIdByName("TippyTapStep"),
     CROASTLAND = Isaac.GetSoundIdByName("CroastLand"),
 
+    THAUMATURGE_LAUGH = Isaac.GetSoundIdByName("ThaumLaugh"),
+    THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),
+    THAUMATURGE_TAUNT = Isaac.GetSoundIdByName("ThaumTaunt"),
+    THAUMATURGE_DEATH = Isaac.GetSoundIdByName("ThaumDeath"),
+
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
 
