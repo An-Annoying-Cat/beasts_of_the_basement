@@ -43,7 +43,7 @@ function KETTLE:NPCUpdate(npc)
         --Lerp targeting positions
         --data.targetPosOld = data.targetPosOld
         data.targetPosNew = targetpos
-        data.targetPosLerped = (0.025 * data.targetPosNew) + (0.975 * data.targetPosLerped)
+        data.targetPosLerped = (0.05 * data.targetPosNew) + (0.95 * data.targetPosLerped)
         data.laserTargetAngle = (data.targetPosLerped - npc.Position):GetAngleDegrees()
         
 
@@ -65,6 +65,12 @@ function KETTLE:NPCUpdate(npc)
                 data.littleDot = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.TECH_DOT,0,npc.Position + Vector(0,-14),Vector(0,0),npc):ToEffect()
                 data.littleDot.DepthOffset = 256
                 data.littleDot:SetTimeout(1)
+            end
+            if targetdistance >= data.triggerDistance then
+                --npc:PlaySound(Mod.Enums.SFX.THAUMATURGE_SHOOT, 4, 0, false, mod:RandomInt(120,130)/100)
+                --print("pingas")
+                npc.State = 6
+                sprite:Play("Close")
             end
         end
 
