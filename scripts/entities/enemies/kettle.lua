@@ -79,7 +79,7 @@ function KETTLE:NPCUpdate(npc)
                 data.KettleBeam:SetTimeout(data.KettleBeam.Timeout + 1)
                 data.littleDot:SetTimeout(data.littleDot.Timeout + 1)
                 data.KettleBeam.Angle = data.laserTargetAngle
-                data.KettleBeam.MaxDistance = data.triggerDistance
+                data.KettleBeam.MaxDistance = (data.targetPosLerped - npc.Position):Length()
                 
             end
 
