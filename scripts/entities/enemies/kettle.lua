@@ -1,12 +1,17 @@
 local Mod = BotB
 local KETTLE = {}
 local Entities = BotB.Enums.Entities
+local sfx = SFXManager()
+local mod = FiendFolio
+--local kettlesFiring = 0
+--local isDoingKettleSound = false
 
 function KETTLE:NPCUpdate(npc)
 
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     local data = npc:GetData()
+    
     
 
     local target = npc:GetPlayerTarget()
@@ -49,17 +54,23 @@ function KETTLE:NPCUpdate(npc)
 
         if npc.State == 3 then
             if targetdistance <= data.triggerDistance then
-                --npc:PlaySound(Mod.Enums.SFX.THAUMATURGE_SHOOT, 4, 0, false, mod:RandomInt(120,130)/100)
-                --print("pingas")
+                npc:PlaySound(SoundEffect.SOUND_URN_OPEN, 4, 0, false, mod:RandomInt(120,130)/100)
                 npc.State = 4
                 sprite:Play("Open")
             end
         end
 
         if npc.State == 4 then
+            if npc.FrameCount < 2 then
+                npc.State = 3
+                sprite:Play("Idle")
+            end
             if sprite:IsEventTriggered("Back") then
                 npc.State = 5
+                --kettlesFiring = kettlesFiring + 1
                 sprite:Play("Opened")
+                
+                
                 data.KettleBeam = EntityLaser.ShootAngle(2, npc.Position, data.laserTargetAngle, 1, Vector(0,-12), npc)
                 data.KettleBeam.DepthOffset = 128
                 data.littleDot = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.TECH_DOT,0,npc.Position + Vector(0,-14),Vector(0,0),npc):ToEffect()
@@ -67,23 +78,23 @@ function KETTLE:NPCUpdate(npc)
                 data.littleDot:SetTimeout(1)
             end
             if targetdistance >= data.triggerDistance then
-                --npc:PlaySound(Mod.Enums.SFX.THAUMATURGE_SHOOT, 4, 0, false, mod:RandomInt(120,130)/100)
-                --print("pingas")
                 npc.State = 6
+                npc:PlaySound(SoundEffect.SOUND_URN_CLOSE, 4, 0, false, mod:RandomInt(120,130)/100)
                 sprite:Play("Close")
             end
         end
 
         if npc.State == 5 then
             if targetdistance >= data.triggerDistance then
-                --npc:PlaySound(Mod.Enums.SFX.THAUMATURGE_SHOOT, 4, 0, false, mod:RandomInt(120,130)/100)
-                --print("pingas")
                 npc.State = 6
+                --kettlesFiring = kettlesFiring - 1
+                npc:PlaySound(SoundEffect.SOUND_URN_CLOSE, 4, 0, false, mod:RandomInt(120,130)/100)
                 sprite:Play("Close")
             else
                 --LASER TIME
                 data.KettleBeam:SetTimeout(data.KettleBeam.Timeout + 1)
                 data.littleDot:SetTimeout(data.littleDot.Timeout + 1)
+                data.littleDot.Position = npc.Position + Vector(0,-14)
                 data.KettleBeam.Angle = data.laserTargetAngle
                 data.KettleBeam.MaxDistance = (data.targetPosLerped - npc.Position):Length()
                 
@@ -102,6 +113,7 @@ function KETTLE:NPCUpdate(npc)
 
 
     end
+
 end
 
 
