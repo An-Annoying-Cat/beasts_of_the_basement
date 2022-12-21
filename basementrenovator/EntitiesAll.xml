@@ -40,6 +40,7 @@
     <entity Name="Sleazebag" />
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
+    <entity Name="Plane Creep" />
   </group>
 
   <group Name="Downpour Enemies" >
@@ -56,6 +57,7 @@
 
   <group Name="Mines Enemies" >
     <entity Name="Kettle" />
+    <entity Name="Crockpot" />
   </group>
 
   <group Name="Womb Enemies" >
@@ -301,6 +303,7 @@
     <entity Name="Sleazebag" />
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
+    <entity Name="Plane Creep" />
   </group>
 
   <group Name="BotB Downpour Enemies" >
@@ -317,6 +320,7 @@
 
   <group Name="BotB Mines Enemies" >
     <entity Name="Kettle" />
+    <entity Name="Crockpot" />
   </group>
 
   <group Name="BotB Depths Enemies" >

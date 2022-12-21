@@ -150,8 +150,8 @@ function KEHEHAN:BulletCheck(bullet)
                 local grid = room:GetGridEntityFromPos(bullet.Position)
                 if grid.Desc.Type == GridEntityType.GRID_ROCK or grid.Desc.Type == GridEntityType.GRID_ROCKT or grid.Desc.Type == GridEntityType.GRID_ROCK_BOMB or grid.Desc.Type == GridEntityType.GRID_ROCKSS or grid.Desc.Type == GridEntityType.GRID_ROCK_SPIKED or grid.Desc.Type == GridEntityType.GRID_ROCK_GOLD then
                     local index = room:GetGridIndex(bullet.Position)
-                    Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,grid.Position,Vector(0,0),bullet)
-                    Isaac.Spawn(EntityType.ENTITY_SUCKER,0,0,grid.Position,Vector(0,0),bullet)
+                    Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF02,0,grid.Position,Vector(0,0),bullet)
+                    Isaac.Spawn(BotB.Enums.Entities.SHARD.TYPE,BotB.Enums.Entities.SHARD.VARIANT,3,grid.Position,Vector(0,0),bullet)
                     room:DestroyGrid(index, true)
                     sfx:Play(SoundEffect.SOUND_BLACK_POOF,1,0,false,math.random(80,90)/100)
                     

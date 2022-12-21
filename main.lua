@@ -70,6 +70,9 @@ include("scripts.entities.enemies.kehehan")
 include("scripts.entities.enemies.hydroknight")
 include("scripts.entities.enemies.giblet")
 include("scripts.entities.enemies.kettle")
+include("scripts.entities.enemies.planecreep")
+include("scripts.entities.enemies.shard")
+include("scripts.entities.enemies.crockpot")
 
 include("scripts.entities.bosses.thaumaturge")
 

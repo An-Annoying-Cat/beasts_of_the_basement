@@ -14,9 +14,10 @@ function THAUMATURGE:NPCUpdate(npc)
 	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
 	local targetdistance = (targetpos - npc.Position):Length()
     local thaumaturgePathfinder = npc.Pathfinder
+    local room = game:GetRoom()
 
 
-    if npc.Type == BotB.Enums.Entities.THAUMATURGE.TYPE and npc.Variant == BotB.Enums.Entities.THAUMATURGE.VARIANT and BotB.Enums.Entities.THAUMATURGE.SUBTYPE then 
+    if npc.Type == BotB.Enums.Entities.THAUMATURGE.TYPE and npc.Variant == BotB.Enums.Entities.THAUMATURGE.VARIANT and npc.SubType == BotB.Enums.Entities.THAUMATURGE.SUBTYPE then 
 
         --States:
         -- 3: Basic idle
@@ -28,9 +29,10 @@ function THAUMATURGE:NPCUpdate(npc)
         -- 102: Multi-teleport idle
         -- 103, 104: Multi-teleport with homing shots
 
-        -- 105: Teleport out for other attack
-        -- 106: Invincible idle while other attack goes on
-        -- 107: Teleport in when attack is done
+        -- 105: Summon up some rocks (if has not made them), destroy them and make Shards (if has made them)
+        -- 106: Wait a bit (idle clone, give it a bit to summon all the rocks)
+        -- 107: Kaboom, shards everywhere (Hagalaz)
+
         -- 
 
         if data.CastTimer == nil then
@@ -44,8 +46,13 @@ function THAUMATURGE:NPCUpdate(npc)
             data.modeSwitchTimerMax = 60
             data.multiTeleCounter = 0
             data.multiTeleCounterMax = 3
+            data.rockTimerMax = 240
+            data.rockTimer = 240
+            data.rocksToSpawn = 7
+            data.hasMadeRocks = false
+            data.herGrids = {}
         end
-
+        local rockLimit = data.rocksToSpawn
 
 
         if targetdistance <= 100 and npc.State == 3 then
@@ -134,22 +141,34 @@ function THAUMATURGE:NPCUpdate(npc)
             end
         end
 
+        --Actual idle
         if npc.State == 3 then
+            --print(#data.herGrids)
             thaumaturgePathfinder:MoveRandomly()
             npc.Target = npc:GetPlayerTarget()
             if npc.Color ~= Color(1, 0, 0) then
                 npc.Color = Color(1, 0, 0)
             end
             data.modeSwitchTimer = data.modeSwitchTimer - 1
-            print(data.modeSwitchTimer)
+            --print(data.modeSwitchTimer)
+            --print(data.rockTimer)
             if data.modeSwitchTimer == 0 then
-                data.nextAttack = math.random(0,1)
+                data.nextAttack = math.random(0,2)
                 if data.nextAttack == 0 then
                     npc.State = 3
                     data.modeSwitchTimer = data.modeSwitchTimerMax
                 elseif data.nextAttack == 1 then
                     npc.State = 102
                     data.modeSwitchTimer = data.modeSwitchTimerMax
+                elseif data.nextAttack == 2 then
+                    if data.rockTimer == 0 then
+                        npc.State = 105
+                        data.modeSwitchTimer = data.modeSwitchTimerMax
+                        sprite:Play("Attack")
+                    else
+                        npc.State = 3
+                        data.modeSwitchTimer = data.modeSwitchTimerMax
+                    end
                 end
             end
         end
@@ -222,7 +241,57 @@ function THAUMATURGE:NPCUpdate(npc)
             end
         end
 
-        --Projectile drop
+        --Reverse tower attack
+        if npc.State == 105 then
+            thaumaturgePathfinder:MoveRandomly()
+            npc.Target = npc:GetPlayerTarget()
+            if npc.Color ~= Color(1, 0, 0) then
+                npc.Color = Color(1, 0, 0)
+            end
+            
+            if sprite:IsEventTriggered("Shoot") then 
+                if data.hasMadeRocks == true then
+                    --local useTheDamnCard = player:ToPlayer()
+                    --useTheDamnCard:UseCard(Card.RUNE_HAGALAZ, UseFlag.USE_NOANIM | UseFlag.USE_NOHUD | UseFlag.USE_NOCOSTUME)
+                    for i=1,9,1 do
+                        local spawnPosition = data.herGrids[i].Position
+                        Isaac.Spawn(BotB.Enums.Entities.SHARD.TYPE,BotB.Enums.Entities.SHARD.VARIANT,0,spawnPosition,Vector(0,0),npc)
+                        for i=0,5,1 do
+                            Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.DUST_CLOUD,0,spawnPosition,Vector(math.random(-5,5),math.random(-5,5)),npc)
+                        end
+                        data.herGrids[i]:Destroy(true)
+                        data.herGrids[i] = nil
+                    end
+                else
+                    npc:PlaySound(Mod.Enums.SFX.THAUMATURGE_LAUGH, 4, 0, false, mod:RandomInt(120,130)/100)
+                    --local useTheDamnCard = player:ToPlayer()
+                    --useTheDamnCard:UseCard(Card.CARD_REVERSE_TOWER, UseFlag.USE_NOANIM | UseFlag.USE_NOHUD | UseFlag.USE_NOCOSTUME)
+                    
+                    for i=1,9,1 do
+                        --print("rock " .. i)
+                        local herRockPosition = room:GetRandomPosition(50)
+                        data.herGrids[i] = Isaac.GridSpawn(GridEntityType.GRID_ROCK, 0, herRockPosition, true)
+                        Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF01,0,herRockPosition,Vector(0,0),npc)
+                        
+                        --print(data.herGrids[i])
+                    end
+                    --data.hasMadeRocks = true
+                    data.rockTimer = data.rockTimerMax
+                end
+                
+            end
+
+            if sprite:IsEventTriggered("Back") then 
+                if data.hasMadeRocks == true then
+                    data.hasMadeRocks = false
+                else
+                    data.hasMadeRocks = true
+                end
+                npc.State = 3
+                sprite:Play("Idle")
+                --npc.StateFrame = 0
+            end
+        end
 
 
 
@@ -238,6 +307,11 @@ function THAUMATURGE:NPCUpdate(npc)
             data.teleTimer = data.teleTimer - 1
         end
 
+        if data.rockTimer ~= 0 then
+            --print(data.teleTimer)
+            data.rockTimer = data.rockTimer - 1
+        end
+
 
 
 
@@ -245,7 +319,7 @@ function THAUMATURGE:NPCUpdate(npc)
 end
 
 function THAUMATURGE.DamageCheck(npc, _, _, _, _)
-    if npc.Type == BotB.Enums.Entities.THAUMATURGE.TYPE and npc.Variant == BotB.Enums.Entities.THAUMATURGE.VARIANT and BotB.Enums.Entities.THAUMATURGE.SUBTYPE then 
+    if npc.Type == BotB.Enums.Entities.THAUMATURGE.TYPE and npc.Variant == BotB.Enums.Entities.THAUMATURGE.VARIANT and npc.SubType == BotB.Enums.Entities.THAUMATURGE.SUBTYPE then 
         local data = npc:GetData()
         if data.cantBeHurt then
             --sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(110,130)/100)
