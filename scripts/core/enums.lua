@@ -1,13 +1,6 @@
 local Enums = {}
     
 Enums.Entities = {
-
-    --Not really a variant of anything in particular, using a shopkeeper as a test at this point
-    DRIFTER = {
-        TYPE = Isaac.GetEntityTypeByName("Drifter"),
-        VARIANT = Isaac.GetEntityVariantByName("Drifter"),
-    },
-
     --GAPERS
 
     --Gaper Variants
@@ -62,6 +55,12 @@ Enums.Entities = {
     HUMBLED = {
         TYPE = Isaac.GetEntityTypeByName("Humbled"),
         VARIANT = Isaac.GetEntityVariantByName("Humbled"),
+    },
+
+    --Wall Creep Variants
+    PLANECREEP = {
+        TYPE = Isaac.GetEntityTypeByName("Plane Creep"),
+        VARIANT = Isaac.GetEntityVariantByName("Plane Creep"),
     },
 
     --Skuzz Variants
@@ -124,11 +123,31 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Hydro Knight"),
         VARIANT = Isaac.GetEntityVariantByName("Hydro Knight")
     },
+
+
+
+
     --Uniques
     KETTLE = {
         TYPE = Isaac.GetEntityTypeByName("Kettle"),
         VARIANT = Isaac.GetEntityVariantByName("Kettle")
     },
+    --Yes, I know Crockpot comes after Shard in terms of variant number, but it's literally a stone version of crockpot so cut me some slack
+    CROCKPOT = {
+        TYPE = Isaac.GetEntityTypeByName("Crockpot"),
+        VARIANT = Isaac.GetEntityVariantByName("Crockpot"),
+    },
+    SHARD = {
+        TYPE = Isaac.GetEntityTypeByName("Shard"),
+        VARIANT = Isaac.GetEntityVariantByName("Shard")
+    },
+    --Back on that Drifter grind...
+    DRIFTER = {
+        TYPE = Isaac.GetEntityTypeByName("Drifter"),
+        VARIANT = Isaac.GetEntityVariantByName("Drifter"),
+    },
+
+
 
     --Effects
     ACMES_ANVIL = {

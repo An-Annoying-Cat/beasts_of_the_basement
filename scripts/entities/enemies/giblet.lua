@@ -7,22 +7,19 @@ function GIBLET:NPCUpdate(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     local data = npc:GetData()
-    if data.hasSpawnedFriends == nil then
-        data.hasSpawnedFriends = false
-        data.faceChanged = false
-        data.whichFace = math.random(7)
-        print(data.whichFace)
+    if npc.Type == BotB.Enums.Entities.GIBLET.TYPE and npc.Variant == BotB.Enums.Entities.GIBLET.VARIANT then
+        if data.hasSpawnedFriends == nil then
+            data.hasSpawnedFriends = false
+            data.faceChanged = false
+            data.whichFace = math.random(7)
+            --print(data.whichFace)
+        end
     end
-    
-
     local target = npc:GetPlayerTarget()
 	local targetpos = target.Position
 	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
 	local targetdistance = (targetpos - npc.Position):Length()
-
-
     if npc.Type == BotB.Enums.Entities.GIBLET.TYPE and npc.Variant == BotB.Enums.Entities.GIBLET.VARIANT and data.hasSpawnedFriends == false then 
-        
         --Spawn friends
         if npc.SubType ~= 0 then
             local friendsToSpawn = npc.SubType
