@@ -55,7 +55,9 @@ include("scripts.core.table_functions")
 
 --ENTITIES
 include("scripts.entities.drifter")
+include("scripts.entities.golfball")
 
+--ENEMIES
 include("scripts.entities.enemies.palesniffle")
 include("scripts.entities.enemies.tippytap")
 include("scripts.entities.enemies.batso")
@@ -73,6 +75,8 @@ include("scripts.entities.enemies.kettle")
 include("scripts.entities.enemies.planecreep")
 include("scripts.entities.enemies.shard")
 include("scripts.entities.enemies.crockpot")
+include("scripts.entities.enemies.innie")
+include("scripts.entities.enemies.inniereverse")
 
 include("scripts.entities.bosses.thaumaturge")
 

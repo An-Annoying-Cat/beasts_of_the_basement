@@ -146,6 +146,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Drifter"),
         VARIANT = Isaac.GetEntityVariantByName("Drifter"),
     },
+    GOLFBALL = {
+        TYPE = Isaac.GetEntityTypeByName("Golf Ball"),
+        VARIANT = Isaac.GetEntityVariantByName("Golf Ball"),
+    },
 
 
 
@@ -158,7 +162,16 @@ Enums.Entities = {
     WARNING_TARGET = {
         TYPE = Isaac.GetEntityTypeByName("Warning Target"),
         VARIANT = Isaac.GetEntityVariantByName("Warning Target")
-    }
+    },
+
+    INNIE_CW = {
+        TYPE = Isaac.GetEntityTypeByName("Innie (CW)"),
+        VARIANT = Isaac.GetEntityVariantByName("Innie (CW)"),
+    },
+    INNIE_CCW = {
+        TYPE = Isaac.GetEntityTypeByName("Innie (CCW)"),
+        VARIANT = Isaac.GetEntityVariantByName("Innie (CCW)"),
+    },
 }
 
 Enums.SFX = {
