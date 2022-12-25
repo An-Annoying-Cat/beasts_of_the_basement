@@ -9,6 +9,14 @@
             <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
     </entity>
 
+    <!--Skinnies  id="226" variants start at 30-->
+    <entity name="Gibby"
+        id="226" variant="30" anm2path="gibby.anm2" baseHP="5" stageHP="0" portrait="1"
+        collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"   friction="1" reroll="true" champion="0">
+            <bestiary bestiaryAnim="Head" bestiaryTransform="0,0,1"/>
+            <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" poop="0"/>
+    </entity>
+
     <!--Hives   id="22" variants start at 50-->
     <entity name="Sleazebag"
         id="22" variant="50" anm2path="sleazebag.anm2" baseHP="20" stageHP="0" portrait="2"
@@ -71,6 +79,12 @@
             <bestiary bestiaryAnim="idle" bestiaryTransform="0,0,1"/>
             <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0" worm="0"/>
 	</entity> 
+    <!--Larries id=:19" variants start at 10-->
+    <entity anm2path="Cadre.anm2" baseHP="18" champion="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="10" name="Cadre" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0" variant="0">
+        <bestiary anim="WalkHeadHori" transform="0,0,1"/>
+        <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0"/>
+        <preload-snd id="115"/>
+    </entity>
 
     <!--ANIMATES-->
 

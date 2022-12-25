@@ -16,6 +16,28 @@
   <entity Image="icons/skooter.png" Name="Skooter" ID="666" Variant="60" Subtype="10" />
   <entity Image="icons/superskooter.png" Name="Super Skooter" ID="666" Variant="60" Subtype="11" />
   <entity Image="icons/plane_creep.png" Name="Plane Creep" ID="240" Variant="40" PlaceVisual="WallSnap" />
+  <entity Image="icons/innie_cw.png" Name="Innie (Turn right)" ID="501" Variant="6" Subtype="0" >
+    <bitfield Key="Subtype">
+            <dropdown Length="2">
+                <choice>Random</choice>
+                <choice>Up</choice>
+                <choice>Right</choice>
+                <choice>Down</choice>
+                <choice>Left</choice>
+            </dropdown>
+        </bitfield>
+  </entity>
+  <entity Image="icons/innie_ccw.png" Name="Innie (Turn left)" ID="501" Variant="7" Subtype="0" >
+    <bitfield Key="Subtype">
+            <dropdown Length="2">
+                <choice>Random</choice>
+                <choice>Up</choice>
+                <choice>Right</choice>
+                <choice>Down</choice>
+                <choice>Left</choice>
+            </dropdown>
+        </bitfield>
+  </entity>
 
   <!-- Downpour Enemies -->
   <entity Image="icons/hydro_knight.png" Name="Hydro Knight" ID="41" Variant="50" Subtype="0" />
@@ -53,6 +75,13 @@
     <bitfield Key="Subtype">
       <spinner Length="5" ValueOffset="1" Name="Amount to spawn">
         <tooltip>Amount to spawn</tooltip>
+      </spinner>
+    </bitfield>
+  </entity>
+  <entity Image="icons/gibby.png" Name="Gibby" ID="226" Variant="30" Subtype="0" >
+    <bitfield Key="Subtype">
+      <spinner Length="5" Name="Amount of Giblets contained">
+        <tooltip>Amount to spawn (Adds 5 max health per Giblet within)</tooltip>
       </spinner>
     </bitfield>
   </entity>

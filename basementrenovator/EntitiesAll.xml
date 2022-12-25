@@ -41,6 +41,8 @@
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
     <entity Name="Plane Creep" />
+    <entity Name="Innie (Turn right)" />
+    <entity Name="Innie (Turn left)" />
   </group>
 
   <group Name="Downpour Enemies" >
@@ -62,6 +64,7 @@
 
   <group Name="Womb Enemies" >
     <entity Name="Giblet" />
+    <entity Name="Gibby" />
   </group>
   
   <!--——— BotB Tab ———-->
@@ -304,6 +307,8 @@
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
     <entity Name="Plane Creep" />
+    <entity Name="Innie (Turn right)" />
+    <entity Name="Innie (Turn left)" />
   </group>
 
   <group Name="BotB Downpour Enemies" >
@@ -332,6 +337,7 @@
 
   <group Name="BotB Womb Enemies" >
     <entity Name="Giblet" />
+    <entity Name="Gibby" />
   </group>
 
 </data>

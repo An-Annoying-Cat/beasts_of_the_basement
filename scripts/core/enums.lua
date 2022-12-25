@@ -9,6 +9,12 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Acme"),
     },
 
+    --Skinny variants
+    GIBBY = {
+        TYPE = Isaac.GetEntityTypeByName("Gibby"),
+        VARIANT = Isaac.GetEntityVariantByName("Gibby"),
+    },
+
     --Hive Variants
     SLEAZEBAG = {
         TYPE = Isaac.GetEntityTypeByName("Sleazebag"),
@@ -76,6 +82,12 @@ Enums.Entities = {
     SUPER_SKOOTER = {
         TYPE = Isaac.GetEntityTypeByName("Super Skooter"),
         VARIANT = Isaac.GetEntityVariantByName("Super Skooter"),
+        SUBTYPE = 11
+    },
+    --Larry Variants (Larriants, if you will)
+    CADRE = {
+        TYPE = Isaac.GetEntityTypeByName("Cadre"),
+        VARIANT = Isaac.GetEntityVariantByName("Cadre"),
         SUBTYPE = 11
     },
 

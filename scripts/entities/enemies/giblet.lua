@@ -37,7 +37,14 @@ function GIBLET:NPCUpdate(npc)
             sprite:LoadGraphics()
             data.faceChanged = true
         end
-        
+        --[[
+        if npc.Parent ~= nil and npc.Parent.Type == BotB.Enums.Entities.GIBBY.TYPE and npc.Parent.Variant == BotB.Enums.Entities.GIBBY.VARIANT and npc.FrameCount <= 5 then
+            npc.Friction = 1.5
+        else
+            npc.Friction = 1
+        end
+        --]]
+
     end
 end
 
