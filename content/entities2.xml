@@ -79,8 +79,29 @@
             <bestiary bestiaryAnim="idle" bestiaryTransform="0,0,1"/>
             <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0" worm="0"/>
 	</entity> 
-    <!--Larries id=:19" variants start at 10-->
-    <entity anm2path="Cadre.anm2" baseHP="18" champion="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="10" name="Cadre" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0" variant="0">
+
+    <!--Larries id="19" variant="0"   subtypes start at 30-->
+    <entity anm2path="cadre.anm2" name="Cadre" baseHP="30" champion="0" boss="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="0" subtype="30" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0">
+        <bestiary anim="WalkHeadHori" transform="0,0,1"/>
+        <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0"/>
+        <preload-snd id="115"/>
+    </entity>
+    <entity anm2path="cadre.anm2" name="Cadre (Globin)" baseHP="30" champion="0" boss="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="0" subtype="31" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0">
+        <bestiary anim="WalkHeadHori" transform="0,0,1"/>
+        <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0"/>
+        <preload-snd id="115"/>
+    </entity>
+    <entity anm2path="cadre.anm2" name="Cadre (Gazing Globin)" baseHP="30" champion="0" boss="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="0" subtype="32" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0">
+        <bestiary anim="WalkHeadHori" transform="0,0,1"/>
+        <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0"/>
+        <preload-snd id="115"/>
+    </entity>
+    <entity anm2path="cadre.anm2" name="Cadre (Globlet)" baseHP="30" champion="0" boss="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="0" subtype="33" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0">
+        <bestiary anim="WalkHeadHori" transform="0,0,1"/>
+        <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0"/>
+        <preload-snd id="115"/>
+    </entity>
+    <entity anm2path="cadre.anm2" name="Cadre (Giblet)" baseHP="30" champion="0" boss="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="0" subtype="34" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0">
         <bestiary anim="WalkHeadHori" transform="0,0,1"/>
         <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0"/>
         <preload-snd id="115"/>

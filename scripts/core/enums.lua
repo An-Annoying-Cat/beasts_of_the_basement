@@ -88,7 +88,7 @@ Enums.Entities = {
     CADRE = {
         TYPE = Isaac.GetEntityTypeByName("Cadre"),
         VARIANT = Isaac.GetEntityVariantByName("Cadre"),
-        SUBTYPE = 11
+        SUBTYPE = 30
     },
 
     --ANIMATES

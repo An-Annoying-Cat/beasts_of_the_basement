@@ -29,7 +29,7 @@ function GIBBY:NPCUpdate(npc)
             data.damageThreshold = data.damageThresholdMax
             data.scaleCoeff = (data.amountLeft/data.amountContained)
         end
-        npc.Scale = (npc.HitPoints/npc.MaxHitPoints)*0.4 + 0.6
+        npc.Scale = (npc.HitPoints/npc.MaxHitPoints)*0.5 + 0.5
     end
 end
 

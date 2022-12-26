@@ -78,6 +78,7 @@ include("scripts.entities.enemies.crockpot")
 include("scripts.entities.enemies.innie")
 include("scripts.entities.enemies.inniereverse")
 include("scripts.entities.enemies.gibby")
+include("scripts.entities.enemies.cadre")
 
 include("scripts.entities.bosses.thaumaturge")
 
