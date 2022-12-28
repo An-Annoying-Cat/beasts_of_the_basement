@@ -21,3 +21,22 @@ function MAHJONG_TILES:OneDotUse(cardID, player)
     end
 end
 Mod:AddCallback(ModCallbacks.MC_USE_CARD, MAHJONG_TILES.OneDotUse, Tiles.ONE_DOT)
+
+function MAHJONG_TILES:OneCrakUse(cardID, player)
+    for _, e in pairs(Isaac.GetRoomEntities()) do
+        if (e.Type == EntityType.ENTITY_PICKUP
+        and e.Variant ~= (PickupVariant.PICKUP_COLLECTIBLE
+        or PickupVariant.PICKUP_SHOPITEM
+        or PickupVariant.PICKUP_TROPHY
+        or PickupVariant.PICKUP_BED
+        or PickupVariant.PICKUP_MOMSCHEST)) or (e:IsEnemy()
+        and e:ToNPC()
+		and e:IsActiveEnemy(false)
+        and not e:HasMortalDamage()
+        and not e:IsBoss()) then
+            local c = Isaac.Spawn(EntityType.ENTITY_FAMILIAR, FamiliarVariant.WISP, 0, e.Position, Vector.Zero, player)
+            e:Remove()
+        end
+    end
+end
+Mod:AddCallback(ModCallbacks.MC_USE_CARD, MAHJONG_TILES.OneCrakUse, Tiles.ONE_CRAK)
