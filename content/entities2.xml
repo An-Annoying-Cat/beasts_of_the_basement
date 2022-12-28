@@ -209,15 +209,28 @@
 
     <entity name="Innie (CW)"
         id="501" variant="6" subtype="0" anm2path="innie_clockwise.anm2" baseHP="16" stageHP="0" portrait="548"
-        boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="false" bestiaryTransform="0,0,1" shutdoors="false" bestiaryAnim="Idle">
+        boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="false" bestiaryTransform="0,0,1" shutdoors="true" bestiaryAnim="Idle">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
     <entity name="Innie (CCW)"
         id="501" variant="7" subtype="0" anm2path="innie_counterclockwise.anm2" baseHP="16" stageHP="0" portrait="548"
-        boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="false" bestiaryTransform="0,0,1" shutdoors="false" bestiaryAnim="Idle">
+        boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="false" bestiaryTransform="0,0,1" shutdoors="true" bestiaryAnim="Idle">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
+
+    <entity name="Ping"
+        id="501" variant="8" subtype="0" anm2path="ping.anm2" baseHP="2" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="true" bestiaryTransform="0,0,1" shutdoors="false" bestiaryAnim="Idle">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
+    <entity name="Pong"
+        id="501" variant="9" subtype="0" anm2path="ping.anm2" baseHP="2" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="true" bestiaryTransform="0,0,1" shutdoors="false" bestiaryAnim="Idle">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
 
 
 

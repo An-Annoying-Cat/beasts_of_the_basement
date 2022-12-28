@@ -15,7 +15,13 @@ local drifterSkins = {
     --TEST
     {"test",SoundEffect.SOUND_ANIMAL_SQUISH,1.5},
     --ALT
-    {"alt",SoundEffect.SOUND_ISAACDIES,2.0}
+    {"alt",SoundEffect.SOUND_ISAACDIES,2.0},
+    --Care NLM
+    {"nlm",SoundEffect.SOUND_CLAP,1.0},
+    --Malrat
+    {"malrat",SoundEffect.SOUND_THE_FORSAKEN_LAUGH,0.8},
+    --Richard
+    {"richard",SoundEffect.SOUND_MONSTER_GRUNT_0,0.8},
 }
 local multiLineTest = {
     "but what if i",
@@ -404,12 +410,12 @@ local roomDialogueList = {
     --10: Curse
     {
         {
-            "Test",
-            "Null placeholder here."
+            "Did you obliterate your toes coming in here too?",
+            "I swear these places are never worth the bleeding feet."
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "Man I feel like shit.",
+            "You can take whatever's in here, I don't care."
         }
     },
     --11: Challenge
@@ -426,19 +432,23 @@ local roomDialogueList = {
     --12: Library
     {
         {
-            "Test",
-            "Null placeholder here."
+            "...",
+            "Do you mind?",
+            "I'm trying to read."
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "No matter how much time we all have,",
+            "I could never ready every single one of these books.",
+            "It's kind of impressive."
         }
     },
     --13: Sacrifice
     {
         {
-            "Test",
-            "Null placeholder here."
+            "It hurts.",
+            "It hurts so fucking much.",
+            "But that doesn't matter.",
+            "This is my penance."
         },
         {
             "Test2",
@@ -448,23 +458,55 @@ local roomDialogueList = {
     --14: Devil room
     {
         {
-            "Test",
-            "Null placeholder here."
+            "Man.",
+            "Satan's pretty chill.",
+            "He's got like,",
+            "Skittles.",
+            "And weed.",
+            "...",
+            "All for the price of your soul, or something.",
+            "But who cares?",
+            "It's Skittles and weed."
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "Hail Satin!",
+            "Hail Satin!",
+            "Hail Satin!",
+            "Hail Satin!",
+            "...",
+            "I hope I'm doing this right."
+        },
+        {
+            "Jos joku tekee käännöksen tälle modille,",
+            "laittakaa tämä dialogi toiselle kielelle!",
+            "Muuten vitsi on pilalla!"
         }
+        
     },
     --15: Angel room
     {
         {
-            "Test",
-            "Null placeholder here."
+            "Rest now,",
+            "for you may not be able to later.",
+            "Bask in His light,",
+            "at least,",
+            "while you can."
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "He maketh me to lie down in green pastures:",
+            "he leadeth me beside the still waters.",
+            "He restoreth my soul:",
+            "he leadeth me in the paths of righteousness,",
+            "for his name's sake.",
+            "Yea, though I walk through the valley of the shadow of death,",
+            "I will fear no evil: for thou art with me;",
+            "thy rod and thy staff they comfort me.",
+            "Thou preparest a table before me in the presence of mine enemies:",
+            "thou anointest my head with oil;",
+            "my cup runneth over.",
+            "Surely goodness and mercy shall follow me all the days of my life",
+            "and I will dwell in the house of the Lord for ever.",
+            "Amen."
         }
     },
     --16: Crawlspace
@@ -613,12 +655,102 @@ local roomDialogueList = {
     --29: Ultra secret room
     {
         {
-            "Test",
-            "Null placeholder here."
+            "If I could reach out and kill someone right now...",
+            "...I would.",
+            "If I could grab everything you hold dear...",
+            "...and slowly strangle it to death in front of your eyes...",
+            "...I would.",
+            "If I could shatter your whole fuckking world with the sheer force of my hatred...",
+            "...I would.",
+            "If I could destroy the world in one fell swoop,",
+            "send all the bats and bugs",
+            "and Christians and Satanists",
+            "and gimps and cultists",
+            "and abusive mothers and absent fathers",
+            "and suffering children and moonlit nights",
+            "and swing voters and croissants",
+            "and station wagons and smog and perfume and rainbows",
+            "and love and torment...",
+            "...I would.",
+            "If I could undo everything,",
+            "I would.",
+            "And I would replace it with nothing.",
+            "Forever.",
+            "...",
+            "Go away.",
+            "This is all your fault."
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "I hate the Bible!",
+            "I hate that she insists I still trust in God!",
+            "I hate that I wasted my life for so many years",
+            "on the fairy tale of a guy who got nailed to a plank!",
+            "But look at me now!",
+            "Are you proud of me, Mom?",
+            "ARE YOU PROUD!?",
+            "This is what you did to me!",
+            "I'm here because of what you drove me to suffer through!",
+            "This is all your fault!",
+            "And all this torment was nobody's doing but yours!",
+            "...",
+            "Who the hell are you?",
+            "Get away from me.",
+            "I don't need another person to laugh at me,",
+            "or call me a sissy,",
+            "or spineless,",
+            "or a crybaby.",
+            "I give up.",
+            "Call me emo,",
+            "or edgy,",
+            "or melodramatic...",
+            "...you know what?",
+            "Leave me alone.",
+            "I never asked for company.",
+            "...",
+            "...",
+            "...",
+            "Go fuck yourself."
+        },
+        {
+            "That girl.",
+            "The one with the peach-colored hair.",
+            "She died because of you.",
+            "Not your mom.",
+            "You.",
+            "Bastard."
+        },
+        {
+            "God is dead.",
+            "...",
+            "Even if he isn't,",
+            "He still hates me",
+            "with all of His boundless soul."
+        },
+        {
+            "This world is a dying dream.",
+            "...",
+            "Would it be better to wake up and die,",
+            "Or to suffer,",
+            "Just for those precious extra minutes?"
+        },
+        {
+            "My baby boy...",
+            "Where did I go so wrong?",
+            "All I wanted was to share the light of god,",
+            "To purify you of your father's sin,",
+            "I...",
+            "...I...",
+            "...Isaac...",
+            "My baby boy...",
+            "...why would He let this happen to me...?",
+            "Why, God, why!? I didn't want it to end like this!",
+            "There has to have been some unseen sin I have committed...!",
+            "Something, anything, I will repent, my Lord...!",
+        },
+        {
+            "You really are like your father.",
+            "But I can change that.",
+            "Listen to His teachings with me, Isaac."
         }
     },
     --30: Unused. Probably will use this for special conditional dialogues
