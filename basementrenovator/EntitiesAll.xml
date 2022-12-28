@@ -31,9 +31,9 @@
     <entity Name="Croast" />
   </group>
 
-  <!-- <group Name="Hoarder Basement Events" >
+  <group Name="Hoarder Basement Events" >
     <entity Name="Hoarder Basement Backdrop" />
-  </group> -->
+  </group>
 
   <group Name="Hoarder Basement Enemies" >
     <entity Name="Acme" />

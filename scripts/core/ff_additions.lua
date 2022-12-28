@@ -21,15 +21,16 @@ Mod.Functions.Tables:AddToDictionary(Mod.FF.PocketObjects,
 
 --adds it to the end of the ff roomBackdropTable, which replaces grids based on the subtype of the
 --background replacer, entity 150.1000. we start at subtype 13 (subtype is needed to add to basement renovator)
-Mod.Functions.Tables:AddToDictionary(Mod.FF.roomBackdropTable
+Mod.Functions.Tables:AddToDictionary(Mod.FF.roomBackdropTable,
 {
-    Mod.HoarderBasementBackdrop,
+    [13] = Mod.HoarderBasementBackdrop,
 })
 
 --this is so they get added to void
-Mod.Functions.Tables:AddToDictionary(Mod.FF.FloorGrids
+--we start at 30
+Mod.Functions.Tables:AddToDictionary(Mod.FF.FloorGrids,
 {
-    Mod.HoarderBasementGrid,
+    [30] = Mod.HoarderBasementGrid,
 })
 
 --#endregion

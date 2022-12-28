@@ -2,6 +2,7 @@
 	<version Name="Beasts of the Basement">
 		<entities File="EntitiesMod.xml"/>
 		<entities File="EntitiesAll.xml"/>
+		<roomtypes File="RoomTypesMod.xml"/>
 	</version>
 	<version Name="Repentance">
 		<version Name="Beasts of the Basement"/>

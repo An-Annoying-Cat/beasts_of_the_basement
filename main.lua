@@ -15,7 +15,7 @@ BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
-mod = BotB.FF
+local mod = BotB.FF
 BotB.StageAPI = StageAPI
 
 
@@ -48,10 +48,9 @@ end --]]
 --CORE
 include("scripts.core.enums")
 include("scripts.core.functions")
-include("scripts.core.table_functions")
 
---include("scripts.core.stageapi")
---include("scripts.core.ff_additions")
+include("scripts.core.stageapi")
+include("scripts.core.ff_additions")
 
 --ENTITIES
 include("scripts.entities.drifter")
