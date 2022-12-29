@@ -1,14 +1,14 @@
 <data>
   <!-- Pickups -->
-    <entity Image="icons/kickcube.png" Name="Kick Cube" ID="5" Variant="69" Subtype="30" />
+    <entity Image="icons/pickups/kickcube.png" Name="Kick Cube" ID="5" Variant="69" Subtype="30" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
 
   <!-- Hoard Events -->
-  <!-- <entity Image="icons/hoardbasement_backdrop.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
+  <entity Image="icons/grids/hoarderbasement.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
     <Gfx RoomGfx="Hoarder Basement Backdrop" />
-  </entity> -->
+  </entity>
 
   <!-- Hoard Enemies -->
   <entity Image="icons/acme.png" Name="Acme" ID="10" Variant="40" Subtype="0" />
