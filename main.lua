@@ -91,7 +91,7 @@ include("scripts.entities.items.trinkets.demoncore")
 include("scripts.entities.items.trinkets.asingleraisin")
 --PICKUPS
 include("scripts.entities.items.pickups.kickcube")
-
+include("scripts.entities.items.pickups.jumpcrystal")
 --CONSUMABLES
 --include("scripts.entities.consumables.basic")
 include("scripts.entities.consumables.shotgunkingcards")

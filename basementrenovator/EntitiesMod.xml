@@ -1,6 +1,7 @@
 <data>
   <!-- Pickups -->
     <entity Image="icons/pickups/kickcube.png" Name="Kick Cube" ID="5" Variant="69" Subtype="30" />
+    <entity Image="icons/pickups/jump_crystal.png" Name="Jump Crystal" ID="501" Variant="12" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
@@ -69,6 +70,8 @@
       </spinner>
     </bitfield>
   </entity>
+  <!--Gehenna Enemies-->
+  <entity Image="icons/mabel.png" Name="Mabel" ID="501" Variant="11" Subtype="0" />
 
   <!-- Womb Enemies -->
   <entity Image="icons/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" >

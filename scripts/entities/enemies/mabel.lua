@@ -51,7 +51,7 @@ function MABEL:NPCUpdate(npc)
             --npc.Position = room:GetCenterPos()+Vector(500,0):Rotated(45*data.mabelApproachDir)
             sprite:Play("Idle")
             npc:PlaySound(Sounds.MABELALERT,1,0,false,1)
-            npc.Position = room:GetCenterPos()+Vector(500,0):Rotated(45*data.mabelApproachDir)
+            --npc.Position = room:GetCenterPos()+Vector(500,0):Rotated(45*data.mabelApproachDir)
             npc.State = 98
         end
 

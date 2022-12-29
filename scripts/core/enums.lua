@@ -270,6 +270,10 @@ Enums.Pickups = {
         VARIANT = Isaac.GetEntityVariantByName("Kick Cube"),
         SUBTYPE = 30
     },
+    JUMPCRYSTAL = {
+        TYPE = Isaac.GetEntityTypeByName("Jump Crystal"),
+        VARIANT = Isaac.GetEntityVariantByName("Jump Crystal"),
+    },
 
 }
 

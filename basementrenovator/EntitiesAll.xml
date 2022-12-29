@@ -2,6 +2,7 @@
 
   <group Name="Pickups">
     <entity Name="Kick Cube" />
+    <entity Name="Jump Crystal" />
   </group>
 
   <group Name="Chapter 1 (Main Path) Enemies" >  
@@ -60,6 +61,10 @@
   <group Name="Mines Enemies" >
     <entity Name="Kettle" />
     <entity Name="Crockpot" />
+  </group>
+
+  <group Name="Gehenna Enemies" >
+    <entity Name="Mabel" />
   </group>
 
   <group Name="Womb Enemies" >
@@ -285,6 +290,7 @@
 
   <group Name="BotB Pickups">
     <entity Name="Kick Cube" />
+    <entity Name="Jump Crystal" />
   </group>
 
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
@@ -333,6 +339,10 @@
     <entity Name="Humbled" />
     <entity Name="Seducer" />
     <entity Name="Pale Sniffle" />
+  </group>
+
+  <group Name="BotB Gehenna Enemies" >
+    <entity Name="Mabel" />
   </group>
 
   <group Name="BotB Womb Enemies" >
