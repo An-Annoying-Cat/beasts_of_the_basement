@@ -104,6 +104,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Ping"),
         VARIANT = Isaac.GetEntityVariantByName("Ping")
     },
+    PONG = {
+        TYPE = Isaac.GetEntityTypeByName("Pong"),
+        VARIANT = Isaac.GetEntityVariantByName("Pong")
+    },
 
     --Host Variants
     TIPPYTAP = {
@@ -127,6 +131,10 @@ Enums.Entities = {
     BATSO = {
         TYPE = Isaac.GetEntityTypeByName("Batso"),
         VARIANT = Isaac.GetEntityVariantByName("Batso")
+    },
+    FUN_GUY = {
+        TYPE = Isaac.GetEntityTypeByName("Fun Guy"),
+        VARIANT = Isaac.GetEntityVariantByName("Fun Guy")
     },
 
     --Constructs
@@ -162,7 +170,18 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Golf Ball"),
         VARIANT = Isaac.GetEntityVariantByName("Golf Ball"),
     },
-
+    INNIE_CW = {
+        TYPE = Isaac.GetEntityTypeByName("Innie (CW)"),
+        VARIANT = Isaac.GetEntityVariantByName("Innie (CW)"),
+    },
+    INNIE_CCW = {
+        TYPE = Isaac.GetEntityTypeByName("Innie (CCW)"),
+        VARIANT = Isaac.GetEntityVariantByName("Innie (CCW)"),
+    },
+    MABEL = {
+        TYPE = Isaac.GetEntityTypeByName("Mabel"),
+        VARIANT = Isaac.GetEntityVariantByName("Mabel"),
+    },
 
 
     --Effects
@@ -176,14 +195,7 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Warning Target")
     },
 
-    INNIE_CW = {
-        TYPE = Isaac.GetEntityTypeByName("Innie (CW)"),
-        VARIANT = Isaac.GetEntityVariantByName("Innie (CW)"),
-    },
-    INNIE_CCW = {
-        TYPE = Isaac.GetEntityTypeByName("Innie (CCW)"),
-        VARIANT = Isaac.GetEntityVariantByName("Innie (CCW)"),
-    },
+    
 }
 
 Enums.SFX = {
@@ -200,6 +212,12 @@ Enums.SFX = {
     THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),
     THAUMATURGE_TAUNT = Isaac.GetSoundIdByName("ThaumTaunt"),
     THAUMATURGE_DEATH = Isaac.GetSoundIdByName("ThaumDeath"),
+
+    MABELALERT = Isaac.GetSoundIdByName("MabelAlert"),
+    MABELLOOP = Isaac.GetSoundIdByName("MabelLoop"),
+    MABELREV = Isaac.GetSoundIdByName("MabelRev"),
+    MABELSTOP = Isaac.GetSoundIdByName("MabelStop"),
+    MABELVROOM = Isaac.GetSoundIdByName("MabelVroom"),
 
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),

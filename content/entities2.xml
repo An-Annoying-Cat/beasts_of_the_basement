@@ -161,6 +161,8 @@
         boss="0" champion="1" collisionDamage="1" collisionMass="20" collisionRadius="20" friction="1"  numGridCollisionPoints="12" shadowSize="30"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Shooting">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
+    <!--MUSHROOMS id="300" variants start at 10-->
+    
 
     <!-- Constructs -->
 
@@ -171,8 +173,7 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
-
-
+    
 
 
 
@@ -221,15 +222,27 @@
 
     <entity name="Ping"
         id="501" variant="8" subtype="0" anm2path="ping.anm2" baseHP="2" stageHP="0" portrait="548"
-        boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="true" bestiaryTransform="0,0,1" shutdoors="false" bestiaryAnim="Idle">
+        boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="true" bestiaryTransform="0,0,1" shutdoors="true" bestiaryAnim="Idle">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
     <entity name="Pong"
         id="501" variant="9" subtype="0" anm2path="ping.anm2" baseHP="2" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="true" bestiaryTransform="0,0,1" shutdoors="true" bestiaryAnim="Idle">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
+    <entity name="Mabel"
+        id="501" variant="10" subtype="0" anm2path="mabel_new.anm2" baseHP="20" stageHP="0" portrait="548"
         boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24"   bestiary="true" bestiaryTransform="0,0,1" shutdoors="false" bestiaryAnim="Idle">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
+
+    <entity name="Fun Guy"
+        anm2path="funguy.anm2" baseHP="11" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="8" friction="1" id="501" numGridCollisionPoints="12" shadowSize="10" stageHP="0" variant="11" portrait="156">
+		<bestiary transform="0,0,1" anim="Bestiary" />
+		<gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+	</entity>
 
 
 

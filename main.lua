@@ -79,6 +79,8 @@ include("scripts.entities.enemies.innie")
 include("scripts.entities.enemies.inniereverse")
 include("scripts.entities.enemies.gibby")
 include("scripts.entities.enemies.cadre")
+include("scripts.entities.enemies.funguy")
+include("scripts.entities.enemies.mabel")
 
 include("scripts.entities.bosses.thaumaturge")
 

@@ -216,7 +216,7 @@ local roomDialogueList = {
             "I did everything they asked!",
             "I took the meds they wanted me to!",
             "I...",
-            "...I-I'm sorry, I sound like a pussy..."
+            "...I-I'm sorry..."
         },
         {
             "I am error.",
