@@ -3,10 +3,10 @@ local STRING = {}
 
 function STRING:RunInit(continued)
     if continued == false then
-        TSIL.SaveManager:AddPersistentVariable(Mod, StringCount, 0, VariablePersistentMode.REMOVE_RUN)
+        TSIL.SaveManager:AddPersistentVariable(Mod, "StringCount", 0, TSIL.Enums.VariablePersistenceMode.REMOVE_RUN)
     end
 end
-Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, STRING.StringUpdate)
+Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, STRING.RunInit)
 
 function STRING:StringTouch(pickup,collider,_)
     local data = pickup:GetData()
@@ -18,14 +18,15 @@ function STRING:StringTouch(pickup,collider,_)
 
             --sfx:Play(SoundEffect.SOUND_THREAD_SNAP,2,0,false,math.random(80, 120)/100)
             sprite:Play("Collect")
-            TSIL.SaveManager:SetPersistentVariable(Mod, StringCount, TSIL.SaveManager.GetPersistentVariable(Mod, StringCount) + 1)
+            local stringCount = TSIL.SaveManager:GetPersistentVariable(Mod, "StringCount")
+            --TSIL.SaveManager:SetPersistentVariable(Mod, "StringCount", stringCount + 1)
 
             pickup.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
             pickup.Velocity = Vector.Zero
 
             Game():SetStateFlag(GameStateFlag.STATE_HEART_BOMB_COIN_PICKED, true)
 
-            print(TSIL.SaveManager.GetPersistentVariable(Mod, StringCount))
+            print(stringCount)
             
             pickup:Die()
         end
