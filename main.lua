@@ -30,10 +30,10 @@ if not BotB.StageAPI then
     print("[BASEMENTS N BEASTIES] hey buddy you kinda need StageAPI for this")
 end
 
-
+--[[
 local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
 LOCAL_TSIL.Init("scripts/core/loi")
-
+]]
 
 --[[
 function LoadScripts(scripts)
@@ -92,13 +92,11 @@ include("scripts.entities.items.trinkets.asingleraisin")
 --PICKUPS
 include("scripts.entities.items.pickups.kickcube")
 include("scripts.entities.items.pickups.jumpcrystal")
-include("scripts.entities.items.pickups.string")
-
 --CONSUMABLES
---include("scripts.entities.items.consumables.basic")
-include("scripts.entities.items.consumables.shotgunkingcards")
+--include("scripts.entities.consumables.basic")
+include("scripts.entities.consumables.shotgunkingcards")
 
-include("scripts.entities.items.consumables.mahjongtiles")
+include("scripts.entities.consumables.mahjongtiles")
 
 --General enemy override. Guess we Ministro now
 function BotB:MinistroOverrideTest(npc)
