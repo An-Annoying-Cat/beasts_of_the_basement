@@ -9,6 +9,12 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Acme"),
     },
 
+    --Skinny variants
+    GIBBY = {
+        TYPE = Isaac.GetEntityTypeByName("Gibby"),
+        VARIANT = Isaac.GetEntityVariantByName("Gibby"),
+    },
+
     --Hive Variants
     SLEAZEBAG = {
         TYPE = Isaac.GetEntityTypeByName("Sleazebag"),
@@ -78,6 +84,12 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Super Skooter"),
         SUBTYPE = 11
     },
+    --Larry Variants (Larriants, if you will)
+    CADRE = {
+        TYPE = Isaac.GetEntityTypeByName("Cadre"),
+        VARIANT = Isaac.GetEntityVariantByName("Cadre"),
+        SUBTYPE = 30
+    },
 
     --ANIMATES
 
@@ -91,6 +103,10 @@ Enums.Entities = {
     PING = {
         TYPE = Isaac.GetEntityTypeByName("Ping"),
         VARIANT = Isaac.GetEntityVariantByName("Ping")
+    },
+    PONG = {
+        TYPE = Isaac.GetEntityTypeByName("Pong"),
+        VARIANT = Isaac.GetEntityVariantByName("Pong")
     },
 
     --Host Variants
@@ -115,6 +131,10 @@ Enums.Entities = {
     BATSO = {
         TYPE = Isaac.GetEntityTypeByName("Batso"),
         VARIANT = Isaac.GetEntityVariantByName("Batso")
+    },
+    FUN_GUY = {
+        TYPE = Isaac.GetEntityTypeByName("Fun Guy"),
+        VARIANT = Isaac.GetEntityVariantByName("Fun Guy")
     },
 
     --Constructs
@@ -146,7 +166,22 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Drifter"),
         VARIANT = Isaac.GetEntityVariantByName("Drifter"),
     },
-
+    GOLFBALL = {
+        TYPE = Isaac.GetEntityTypeByName("Golf Ball"),
+        VARIANT = Isaac.GetEntityVariantByName("Golf Ball"),
+    },
+    INNIE_CW = {
+        TYPE = Isaac.GetEntityTypeByName("Innie (CW)"),
+        VARIANT = Isaac.GetEntityVariantByName("Innie (CW)"),
+    },
+    INNIE_CCW = {
+        TYPE = Isaac.GetEntityTypeByName("Innie (CCW)"),
+        VARIANT = Isaac.GetEntityVariantByName("Innie (CCW)"),
+    },
+    MABEL = {
+        TYPE = Isaac.GetEntityTypeByName("Mabel"),
+        VARIANT = Isaac.GetEntityVariantByName("Mabel"),
+    },
 
 
     --Effects
@@ -158,7 +193,9 @@ Enums.Entities = {
     WARNING_TARGET = {
         TYPE = Isaac.GetEntityTypeByName("Warning Target"),
         VARIANT = Isaac.GetEntityVariantByName("Warning Target")
-    }
+    },
+
+    
 }
 
 Enums.SFX = {
@@ -175,6 +212,12 @@ Enums.SFX = {
     THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),
     THAUMATURGE_TAUNT = Isaac.GetSoundIdByName("ThaumTaunt"),
     THAUMATURGE_DEATH = Isaac.GetSoundIdByName("ThaumDeath"),
+
+    MABELALERT = Isaac.GetSoundIdByName("MabelAlert"),
+    MABELLOOP = Isaac.GetSoundIdByName("MabelLoop"),
+    MABELREV = Isaac.GetSoundIdByName("MabelRev"),
+    MABELSTOP = Isaac.GetSoundIdByName("MabelStop"),
+    MABELVROOM = Isaac.GetSoundIdByName("MabelVroom"),
 
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
@@ -226,6 +269,10 @@ Enums.Pickups = {
         TYPE = Isaac.GetEntityTypeByName("Kick Cube"),
         VARIANT = Isaac.GetEntityVariantByName("Kick Cube"),
         SUBTYPE = 30
+    },
+    JUMPCRYSTAL = {
+        TYPE = Isaac.GetEntityTypeByName("Jump Crystal"),
+        VARIANT = Isaac.GetEntityVariantByName("Jump Crystal"),
     },
 
 }

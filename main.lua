@@ -15,7 +15,7 @@ BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
-mod = BotB.FF
+local mod = BotB.FF
 BotB.StageAPI = StageAPI
 
 
@@ -48,14 +48,15 @@ end --]]
 --CORE
 include("scripts.core.enums")
 include("scripts.core.functions")
-include("scripts.core.table_functions")
 
---include("scripts.core.stageapi")
---include("scripts.core.ff_additions")
+include("scripts.core.stageapi")
+include("scripts.core.ff_additions")
 
 --ENTITIES
 include("scripts.entities.drifter")
+include("scripts.entities.golfball")
 
+--ENEMIES
 include("scripts.entities.enemies.palesniffle")
 include("scripts.entities.enemies.tippytap")
 include("scripts.entities.enemies.batso")
@@ -73,6 +74,12 @@ include("scripts.entities.enemies.kettle")
 include("scripts.entities.enemies.planecreep")
 include("scripts.entities.enemies.shard")
 include("scripts.entities.enemies.crockpot")
+include("scripts.entities.enemies.innie")
+include("scripts.entities.enemies.inniereverse")
+include("scripts.entities.enemies.gibby")
+include("scripts.entities.enemies.cadre")
+include("scripts.entities.enemies.funguy")
+include("scripts.entities.enemies.mabel")
 
 include("scripts.entities.bosses.thaumaturge")
 
@@ -84,7 +91,7 @@ include("scripts.entities.items.trinkets.demoncore")
 include("scripts.entities.items.trinkets.asingleraisin")
 --PICKUPS
 include("scripts.entities.items.pickups.kickcube")
-
+include("scripts.entities.items.pickups.jumpcrystal")
 --CONSUMABLES
 --include("scripts.entities.consumables.basic")
 include("scripts.entities.consumables.shotgunkingcards")

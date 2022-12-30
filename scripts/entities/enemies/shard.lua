@@ -92,10 +92,10 @@ function SHARD:NPCUpdate(npc)
     end
 end
 
-function SHARD.DamageNull(npc, _, _, _, _)
-    print("sharb")
+function SHARD:DamageNull(npc, _, _, _, _)
+    --print("sharb")
     if npc.Type == BotB.Enums.Entities.SHARD.TYPE and npc.Variant == BotB.Enums.Entities.SHARD.VARIANT then 
-        print("nope!")
+        --print("nope!")
         return false
     end
 end

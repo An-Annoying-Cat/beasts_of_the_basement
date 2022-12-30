@@ -6,7 +6,7 @@ function SEDUCER:NPCUpdate(npc)
 
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
-
+    local data = npc:GetData()
     local target = npc:GetPlayerTarget()
 	local targetpos = target.Position
 	local targetangle = (targetpos - npc.Position):GetAngleDegrees()

@@ -40,6 +40,22 @@
 	<sound name="CroastLand">
 		<sample weight="1" path="croastHorridSplortch.wav" />
 	</sound>
+
+	<sound name="MabelAlert">
+		<sample weight="1" path="mabelAlert.wav" />
+	</sound>
+	<sound name="MabelLoop">
+		<sample weight="1" path="mabelLoop.wav" />
+	</sound>
+	<sound name="MabelRev">
+		<sample weight="1" path="mabelRev.wav" />
+	</sound>
+	<sound name="MabelStop">
+		<sample weight="1" path="mabelStop.wav" />
+	</sound>
+	<sound name="MabelVroom">
+		<sample weight="1" path="mabelVroom.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">

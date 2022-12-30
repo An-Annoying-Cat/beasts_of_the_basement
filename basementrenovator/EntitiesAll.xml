@@ -2,6 +2,7 @@
 
   <group Name="Pickups">
     <entity Name="Kick Cube" />
+    <entity Name="Jump Crystal" />
   </group>
 
   <group Name="Chapter 1 (Main Path) Enemies" >  
@@ -31,9 +32,9 @@
     <entity Name="Croast" />
   </group>
 
-  <!-- <group Name="Hoarder Basement Events" >
+  <group Name="Hoarder Basement Events" >
     <entity Name="Hoarder Basement Backdrop" />
-  </group> -->
+  </group>
 
   <group Name="Hoarder Basement Enemies" >
     <entity Name="Acme" />
@@ -41,6 +42,8 @@
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
     <entity Name="Plane Creep" />
+    <entity Name="Innie (Turn right)" />
+    <entity Name="Innie (Turn left)" />
   </group>
 
   <group Name="Downpour Enemies" >
@@ -60,8 +63,13 @@
     <entity Name="Crockpot" />
   </group>
 
+  <group Name="Gehenna Enemies" >
+    <entity Name="Mabel" />
+  </group>
+
   <group Name="Womb Enemies" >
     <entity Name="Giblet" />
+    <entity Name="Gibby" />
   </group>
   
   <!--——— BotB Tab ———-->
@@ -282,6 +290,7 @@
 
   <group Name="BotB Pickups">
     <entity Name="Kick Cube" />
+    <entity Name="Jump Crystal" />
   </group>
 
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
@@ -304,6 +313,8 @@
     <entity Name="Skooter" />
     <entity Name="Super Skooter" />
     <entity Name="Plane Creep" />
+    <entity Name="Innie (Turn right)" />
+    <entity Name="Innie (Turn left)" />
   </group>
 
   <group Name="BotB Downpour Enemies" >
@@ -330,8 +341,13 @@
     <entity Name="Pale Sniffle" />
   </group>
 
+  <group Name="BotB Gehenna Enemies" >
+    <entity Name="Mabel" />
+  </group>
+
   <group Name="BotB Womb Enemies" >
     <entity Name="Giblet" />
+    <entity Name="Gibby" />
   </group>
 
 </data>

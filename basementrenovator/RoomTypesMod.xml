@@ -1,0 +1,13 @@
+<data>
+    <room Name="Hoarder Basement Backdrop">
+        <Gfx StageGfx="Basement" BGPrefix="backdrops/hoarderbasement">
+            <!-- <Entity ID="3000" Image="../resources/gfx/grid/rocks_hoarderbasement.png" /> -->
+            <Entity ID="1000" Image="../resources/gfx/grid/rocks_hoarderbasement.png" />
+            <Entity ID="1001" Image="icons/grids/1001.0.0 - Bomb Rock HBase.png" />
+            <Entity ID="1900" Image="icons/grids/1900.0.0 - Block HBase.png" />
+			<Entity ID="1901" Image="icons/grids/1901.0.0 - Tall Block HBase.png" />
+			<Entity ID="1010" Image="icons/grids/1010.0.0 - Spike Rock HBase.png" />
+			<Entity ID="1002" Image="icons/grids/1002.0.0 - Pot HBase.png" />
+        </Gfx>
+    </room>
+</data>
