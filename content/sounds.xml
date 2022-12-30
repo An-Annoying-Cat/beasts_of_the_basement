@@ -56,6 +56,10 @@
 	<sound name="MabelVroom">
 		<sample weight="1" path="mabelVroom.wav" />
 	</sound>
+	<sound name="PongPop">
+		<sample weight="1" path="pongPop1.wav" />
+		<sample weight="1" path="pongPop2.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">

@@ -219,6 +219,8 @@ Enums.SFX = {
     MABELSTOP = Isaac.GetSoundIdByName("MabelStop"),
     MABELVROOM = Isaac.GetSoundIdByName("MabelVroom"),
 
+    PONGPOP = Isaac.GetSoundIdByName("PongPop"),
+
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
 

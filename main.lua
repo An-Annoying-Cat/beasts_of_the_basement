@@ -81,6 +81,11 @@ include("scripts.entities.enemies.cadre")
 include("scripts.entities.enemies.funguy")
 include("scripts.entities.enemies.mabel")
 
+include("scripts.entities.enemies.ping")
+include("scripts.entities.enemies.pong")
+
+
+
 include("scripts.entities.bosses.thaumaturge")
 
 --ITEMS
@@ -201,7 +206,7 @@ function Mod.unbiasedFromSuit(suitName)
 end
 
 --Thank you Danial for this 
---[[
+--
 function Mod:NPCAIChecker(npc,offset)
     local data = npc:GetData()
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
@@ -209,7 +214,7 @@ function Mod:NPCAIChecker(npc,offset)
         Isaac.RenderText(npc.I1 .. "          " .. npc.I2, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-20,1,1,1,1)
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
---]]
+--
 --Death checker
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 
