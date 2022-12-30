@@ -34,7 +34,7 @@ function MAHJONG_TILES:OneCrakUse(cardID, player)
 		and e:IsActiveEnemy(false)
         and not e:HasMortalDamage()
         and not e:IsBoss()) then
-            local c = Isaac.Spawn(EntityType.ENTITY_FAMILIAR, FamiliarVariant.WISP, 0, e.Position, Vector.Zero, player)
+            Isaac.Spawn(EntityType.ENTITY_FAMILIAR, FamiliarVariant.WISP, 0, e.Position, Vector.Zero, player)
             e:Remove()
         end
     end
