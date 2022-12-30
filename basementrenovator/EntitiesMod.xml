@@ -71,7 +71,7 @@
     </bitfield>
   </entity>
   <!--Gehenna Enemies-->
-  <entity Image="icons/mabel.png" Name="Mabel" ID="501" Variant="11" Subtype="0" />
+  <entity Image="icons/mabel.png" Name="Mabel" ID="501" Variant="10" Subtype="0" />
 
   <!-- Womb Enemies -->
   <entity Image="icons/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" >
