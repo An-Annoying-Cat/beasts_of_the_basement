@@ -78,7 +78,7 @@ function FUN_GUY:NPCUpdate(npc)
         end
 
         --Timer shit
-        print(data.openTimer)
+        --print(data.openTimer)
         if data.openTimer >= 0 then
             data.openTimer = data.openTimer - 1
         end

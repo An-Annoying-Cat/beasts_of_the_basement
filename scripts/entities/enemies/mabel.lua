@@ -68,7 +68,7 @@ function MABEL:NPCUpdate(npc)
             npc.Velocity = (0.9975 * npc.Velocity) + (0.0025 * (target.Position - npc.Position))
             data.mabelSoundPitch = (1 * 0.05) + (data.mabelSoundPitch * 0.95)
             sfx:AdjustPitch(Sounds.MABELLOOP,data.mabelSoundPitch)
-            if data.chargeCooldown == 0 and room:IsPositionInRoom(npc.Position, 100)then
+            if data.chargeCooldown == 0 then
                 npc:PlaySound(Sounds.MABELREV,10,0,false,math.random(60,80)/100)
                 npc.State = 100
                 sprite:Play("Telegraph")

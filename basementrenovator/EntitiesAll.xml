@@ -13,6 +13,7 @@
   <group Name="Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
     <entity Name="Croast" />
+    <entity Name="Fun Guy" />
     <entity Name="Hydro Knight" />
   </group>
   <!--——— Floors ———-->
@@ -30,6 +31,8 @@
   <group Name="Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
     <entity Name="Croast" />
+    <entity Name="Fun Guy" />
+    <entity Name="Hydro Knight" />
   </group>
 
   <group Name="Hoarder Basement Events" >
@@ -44,6 +47,8 @@
     <entity Name="Plane Creep" />
     <entity Name="Innie (Turn right)" />
     <entity Name="Innie (Turn left)" />
+    <entity Name="Ping" />
+    <entity Name="Pong" />
   </group>
 
   <group Name="Downpour Enemies" >
@@ -70,6 +75,7 @@
   <group Name="Womb Enemies" >
     <entity Name="Giblet" />
     <entity Name="Gibby" />
+    <entity Name="Cadre" />
   </group>
   
   <!--——— BotB Tab ———-->
@@ -325,6 +331,12 @@
     <entity Name="Culo" />
   </group>
 
+  <group Name="BotB Caves Enemies" >
+    <entity Name="Fun Guy" />
+    <entity Name="Tippytap" />
+    <entity Name="Croast" />
+  </group>
+
   <group Name="BotB Flooded Caves Enemies" >
     <entity Name="Hydro Knight" />
   </group>
@@ -348,6 +360,7 @@
   <group Name="BotB Womb Enemies" >
     <entity Name="Giblet" />
     <entity Name="Gibby" />
+    <entity Name="Cadre" />
   </group>
 
 </data>
