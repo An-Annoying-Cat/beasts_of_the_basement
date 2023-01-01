@@ -1,3 +1,4 @@
+local Mod = BotB
 local Enums = {}
     
 Enums.Entities = {
@@ -84,6 +85,11 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Super Skooter"),
         SUBTYPE = 11
     },
+    ETERNAL_FLY_DUMMY = {
+        TYPE = Isaac.GetEntityTypeByName("Eternal Fly Dummy"),
+        VARIANT = Isaac.GetEntityVariantByName("Eternal Fly Dummy"),
+    },
+
     --Larry Variants (Larriants, if you will)
     CADRE = {
         TYPE = Isaac.GetEntityTypeByName("Cadre"),
@@ -127,6 +133,7 @@ Enums.Entities = {
 
 
     --FAUNA
+
     --Fat Bat variants
     BATSO = {
         TYPE = Isaac.GetEntityTypeByName("Batso"),
@@ -137,7 +144,8 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Fun Guy")
     },
 
-    --Constructs
+    --CONSTRUCTS
+
     --Knight variants
     HYDROKNIGHT = {
         TYPE = Isaac.GetEntityTypeByName("Hydro Knight"),

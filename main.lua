@@ -80,6 +80,7 @@ include("scripts.entities.enemies.gibby")
 include("scripts.entities.enemies.cadre")
 include("scripts.entities.enemies.funguy")
 include("scripts.entities.enemies.mabel")
+include("scripts.entities.enemies.eternalfly")
 
 include("scripts.entities.enemies.ping")
 include("scripts.entities.enemies.pong")
@@ -104,6 +105,7 @@ include("scripts.entities.consumables.shotgunkingcards")
 include("scripts.entities.consumables.mahjongtiles")
 
 --General enemy override. Guess we Ministro now
+
 function BotB:MinistroOverrideTest(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
