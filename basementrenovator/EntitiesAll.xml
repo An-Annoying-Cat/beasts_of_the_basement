@@ -5,17 +5,6 @@
     <entity Name="Jump Crystal" />
   </group>
 
-  <group Name="Chapter 1 (Main Path) Enemies" >  
-    <entity Name="Chaff" />
-    <entity Name="Batso" />
-  </group>
-
-  <group Name="Chapter 2 (Main Path) Enemies" >  
-    <entity Name="Tippytap" />
-    <entity Name="Croast" />
-    <entity Name="Fun Guy" />
-    <entity Name="Hydro Knight" />
-  </group>
   <!--——— Floors ———-->
   <group Name="Basement">
     <group Name="Hoarder Basement Events" Label="Hoard Events" />
@@ -26,6 +15,7 @@
   <group Name="Chapter 1 (Main Path) Enemies" >  
     <entity Name="Chaff" />
     <entity Name="Batso" />
+    <entity Name="Eternal Fly" />
   </group>
 
   <group Name="Chapter 2 (Main Path) Enemies" >  
@@ -33,6 +23,7 @@
     <entity Name="Croast" />
     <entity Name="Fun Guy" />
     <entity Name="Hydro Knight" />
+    <entity Name="Eternal Fly" />
   </group>
 
   <group Name="Hoarder Basement Events" >
@@ -302,16 +293,19 @@
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
     <entity Name="Chaff" />
     <entity Name="Batso" />
+    <entity Name="Eternal Fly" />
   </group>
 
   <group Name="BotB Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
     <entity Name="Croast" />
+    <entity Name="Fun Guy" />
+    <entity Name="Hydro Knight" />
   </group>
 
-  <!-- <group Name="Hoarder Basement Events" >
+  <group Name="Hoarder Basement Events" >
     <entity Name="Hoarder Basement Backdrop" />
-  </group> -->
+  </group>
 
   <group Name="BotB Hoard Enemies" >
     <entity Name="Acme" />

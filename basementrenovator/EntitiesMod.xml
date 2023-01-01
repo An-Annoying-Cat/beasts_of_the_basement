@@ -5,6 +5,7 @@
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
+  <entity Image="icons/eternalfly.png" Name="Eternal Fly" ID="501" Variant="461" Subtype="0" />
 
   <!-- Hoard Events -->
   <entity Image="icons/grids/hoarderbasement.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
