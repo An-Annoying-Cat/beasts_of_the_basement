@@ -1,6 +1,13 @@
 <items gfxroot="gfx/items/" version="1">
     <passive id="1" quality="4" name="Alpha Armor" description="Protective helm" gfx="alpha_armor.png"/>
     <passive id="2" quality="2" name="Treeman Syndrome" description="I can't feel my hands..." gfx="treeman_syndrome.png"/>
+    <passive id="3" quality="3" name="Item" description="PLACEHOLDER_ITEM" gfx="placeholder_item.png" cache="all"/>
+
+    <passive id="4" quality="0" name="Quicklove" description="Damage up!" gfx="card_passives/quicklove.png" cache="all"/>
+    <passive id="5" quality="0" name="Starlight" description="Health up!" gfx="card_passives/starlight.png" cache="all"/>
+    <passive id="6" quality="0" name="Lucky Flower" description="Luck up!" gfx="card_passives/lucky_flower.png" cache="all"/>
+    <passive id="7" quality="0" name="Pale Box" description="Hold up!" gfx="card_passives/pale_box.png" cache="all"/>
+
     <!--
     <passive id="3" quality="3" name="Popped Balloon" description="Rid the world of its kin" gfx="popped_balloon.png"/>
     <passive id="4" quality="2" name="Needles Piano" description="Play Music For Baby" gfx="needles_piano.png"/>
@@ -10,4 +17,5 @@
     -->
     <trinket name="Demon Core" description="The sleeping dragon..." gfx="demon_core.png" />
     <trinket name="A Single Raisin" description="Just a bit fiendish" gfx="raisin.png" />
+    <trinket name="Trinket" description="PLACEHOLDER_TRINKET" gfx="placeholder_trinket.png" />
 </items>

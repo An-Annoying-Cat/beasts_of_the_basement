@@ -93,7 +93,7 @@
   </entity>
   <entity Image="icons/Cadre.png" Name="Cadre" ID="19" Variant="0" Subtype="30" >
     <bitfield Key="Subtype">
-            <dropdown Length="2">
+            <dropdown Length="2" ValueOffset="30">
                 <choice>Random</choice>
                 <choice>Globin</choice>
                 <choice>Gazing</choice>

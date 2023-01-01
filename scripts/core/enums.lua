@@ -252,14 +252,21 @@ Enums.Items = {
 
     --Alpha Armor goes here
     ALPHA_ARMOR = Isaac.GetItemIdByName("Alpha Armor"),
-    TREEMAN_SYNDROME = Isaac.GetItemIdByName("Treeman Syndrome")
+    TREEMAN_SYNDROME = Isaac.GetItemIdByName("Treeman Syndrome"),
+    PLACEHOLDER_ITEM = Isaac.GetItemIdByName("Item"),
+
+    QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
+    STARLIGHT = Isaac.GetItemIdByName("Starlight"),
+    LUCKY_FLOWER = Isaac.GetItemIdByName("Lucky Flower"),
+    PALE_BOX = Isaac.GetItemIdByName("Pale Box"),
 
 }
 
 Enums.Trinkets = {
 
     DEMON_CORE = Isaac.GetTrinketIdByName("Demon Core"),
-    A_SINGLE_RAISIN = Isaac.GetTrinketIdByName("A Single Raisin")
+    A_SINGLE_RAISIN = Isaac.GetTrinketIdByName("A Single Raisin"),
+    PLACEHOLDER_TRINKET = Isaac.GetTrinketIdByName("Trinket")
     --CANKER_SORE = Isaac.GetItemIdByName("Canker Sore"),
     --BOOTLEG_CARTRIDGE = Isaac.GetItemIdByName("Bootleg Cartridge")
 

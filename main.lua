@@ -91,9 +91,11 @@ include("scripts.entities.bosses.thaumaturge")
 --ITEMS
 include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
+include("scripts.entities.items.placeholder_item")
 --TRINKETS
 include("scripts.entities.items.trinkets.demoncore")
 include("scripts.entities.items.trinkets.asingleraisin")
+include("scripts.entities.items.trinkets.placeholder_trinket")
 --PICKUPS
 include("scripts.entities.items.pickups.kickcube")
 include("scripts.entities.items.pickups.jumpcrystal")
