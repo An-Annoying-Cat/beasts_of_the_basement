@@ -251,6 +251,18 @@
 
 
 
+    <!--Familiars id="3" variants start at 2450-->
+    <entity anm2path="familiar/robobabyzero.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Robo-Baby Zero" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2450">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="familiar/needlespiano.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Needles Piano" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2451">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="familiar/onyxmarble.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Onyx Marble" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2451">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+
     <!-- Technical (basement renovator gets angy if this isnt here) -->
     <entity name="Eternal Fly Dummy"
         id="501" variant="461" anm2path="096.000_Eternal Fly.anm2"

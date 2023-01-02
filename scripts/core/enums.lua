@@ -206,6 +206,21 @@ Enums.Entities = {
     
 }
 
+Enums.Familiars = {
+    ROBOBABYZERO = {
+        TYPE = Isaac.GetEntityTypeByName("Robo-Baby Zero"),
+        VARIANT = Isaac.GetEntityVariantByName("Robo-Baby Zero"),
+    },
+    NEEDLESPIANO = {
+        TYPE = Isaac.GetEntityTypeByName("Needles Piano"),
+        VARIANT = Isaac.GetEntityVariantByName("Needles Piano"),
+    },
+    ONYXMARBLE = {
+        TYPE = Isaac.GetEntityTypeByName("Onyx Marble"),
+        VARIANT = Isaac.GetEntityVariantByName("Onyx Marble"),
+    },
+}
+
 Enums.SFX = {
     DESIRER_ATTACK = Isaac.GetSoundIdByName("DesirerAttack"),
     ACME_DEATH = Isaac.GetSoundIdByName("AcmeDeath"),
@@ -262,6 +277,8 @@ Enums.Items = {
     ALPHA_ARMOR = Isaac.GetItemIdByName("Alpha Armor"),
     TREEMAN_SYNDROME = Isaac.GetItemIdByName("Treeman Syndrome"),
     PLACEHOLDER_ITEM = Isaac.GetItemIdByName("Item"),
+    ROBOBABYZERO = Isaac.GetItemIdByName("Robo-Baby Zero"),
+    ONYXMARBLE = Isaac.GetItemIdByName("Onyx Marble"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),

@@ -8,12 +8,17 @@
     <passive id="6" quality="0" name="Lucky Flower" description="Luck up!" gfx="card_passives/lucky_flower.png" cache="all"/>
     <passive id="7" quality="0" name="Pale Box" description="Hold up!" gfx="card_passives/pale_box.png" cache="all"/>
 
+    <passive id="8" quality="3" name="Robo-Baby Zero" description="I'm telling you, the older ones are better!" gfx="item_robobabyzero.png" cache="familiars"/>
+    <passive id="9" quality="1" name="Onyx Marble" description="What an enigma..." gfx="onyx_marble.png" cache="familiars"/>
+
     <!--
+    <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
+    <passive id="9" quality="1" name="B.H.F." description="Big Hesitant Fly" gfx="item_bhf.png" cache="familiars"/>
     <passive id="3" quality="3" name="Popped Balloon" description="Rid the world of its kin" gfx="popped_balloon.png"/>
     <passive id="4" quality="2" name="Needles Piano" description="Play Music For Baby" gfx="needles_piano.png"/>
     -->
     <!--
-    <trinket name="Canker Sore" description="Owwww...!" gfx="canker_sore.png" />
+    <trinket name="Canker Sore" description="Owwww...!" gfx="canker_sore.png" cache="damage" />
     -->
     <trinket name="Demon Core" description="The sleeping dragon..." gfx="demon_core.png" />
     <trinket name="A Single Raisin" description="Just a bit fiendish" gfx="raisin.png" />
