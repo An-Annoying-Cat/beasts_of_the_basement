@@ -87,6 +87,15 @@
 	<sound name="DemonCoreEffect">
 		<sample weight="1" path="items/demonCoreEffect.wav" />
 	</sound>
+	<sound name="CharlesCue">
+		<sample weight="1" path="items/charlesCue.wav" />
+	</sound>
+	<sound name="CharlesCueFunny">
+		<sample weight="1" path="items/charlesCueFunny.wav" />
+	</sound>
+	<sound name="ToyHeli">
+		<sample weight="1" path="items/toyHelicopterAttack.wav" />
+	</sound>
 	<!--Pickups-->
 	<sound name="KickCube1">
 		<sample weight="1" path="pickups/kickCubeSpinTier1.wav" />

@@ -203,6 +203,15 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Warning Target")
     },
 
+    CHARLESHELI = {
+        TYPE = Isaac.GetEntityTypeByName("Charles Heli"),
+        VARIANT = Isaac.GetEntityVariantByName("Charles Heli")
+    },
+    CHARLESHELIFUNNY = {
+        TYPE = Isaac.GetEntityTypeByName("Charles Heli (Funny)"),
+        VARIANT = Isaac.GetEntityVariantByName("Charles Heli (Funny)")
+    },
+
     
 }
 
@@ -264,7 +273,11 @@ Enums.SFX = {
     KICKCUBE2 = Isaac.GetSoundIdByName("KickCube2"),
     KICKCUBE3 = Isaac.GetSoundIdByName("KickCube3"),
 
-    DEMON_CORE_EFFECT = Isaac.GetSoundIdByName("DemonCoreEffect")
+    DEMON_CORE_EFFECT = Isaac.GetSoundIdByName("DemonCoreEffect"),
+
+    CHARLES_CUE = Isaac.GetSoundIdByName("CharlesCue"),
+    CHARLES_CUE_FUNNY = Isaac.GetSoundIdByName("CharlesCueFunny"),
+    TOY_HELICOPTER_ATTACK = Isaac.GetSoundIdByName("ToyHeli"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -279,6 +292,7 @@ Enums.Items = {
     PLACEHOLDER_ITEM = Isaac.GetItemIdByName("Item"),
     ROBOBABYZERO = Isaac.GetItemIdByName("Robo-Baby Zero"),
     ONYXMARBLE = Isaac.GetItemIdByName("Onyx Marble"),
+    TOY_HELICOPTER = Isaac.GetItemIdByName("Toy Helicopter"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),

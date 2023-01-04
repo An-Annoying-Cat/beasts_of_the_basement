@@ -10,6 +10,7 @@
 
     <passive id="8" quality="3" name="Robo-Baby Zero" description="I'm telling you, the older ones are better!" gfx="item_robobabyzero.png" cache="familiars"/>
     <passive id="9" quality="1" name="Onyx Marble" description="What an enigma..." gfx="onyx_marble.png" cache="familiars"/>
+    <passive id="10" quality="4" name="Toy Helicopter" description="The greatest plan!" gfx="toy_helicopter.png" />
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

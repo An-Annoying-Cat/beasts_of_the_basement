@@ -278,6 +278,14 @@
         id="1000" variant="801" anm2path="effect_warning.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
     </entity>
+    <entity name="Charles Heli"
+        id="1000" variant="802" anm2path="effects/charles_heli.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
+    <entity name="Charles Heli (Funny)"
+        id="1000" variant="802" anm2path="effects/charles_heli_funny.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
 
 
     <!--Sacks id="5" variant="69" (nice) subtypes start at 30-->

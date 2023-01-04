@@ -96,6 +96,7 @@ include("scripts.entities.familiars.onyxmarble")
 include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
 include("scripts.entities.items.placeholder_item")
+include("scripts.entities.items.toy_helicopter")
 --TRINKETS
 include("scripts.entities.items.trinkets.demoncore")
 include("scripts.entities.items.trinkets.asingleraisin")
