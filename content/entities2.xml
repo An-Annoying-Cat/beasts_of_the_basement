@@ -1,10 +1,25 @@
 <entities anm2root="gfx/" version="5">
+
     <!--GAPERS-->
 
     <!--Gapers  id="10" variants start at 40-->
     <entity name="Acme"
         id="10" variant="40" anm2path="acme.anm2" baseHP="10" stageHP="2" portrait="1"
         collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"   friction="1" reroll="true" champion="0">
+            <bestiary bestiaryAnim="Head" bestiaryTransform="0,0,1"/>
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
+    </entity>
+
+    <!--Horfs   id="12" variants start at 10-->
+    <entity name="Horf (girl)"
+        id="12" variant="10" anm2path="monsters/mshorf/012.010_horf_(girl).anm2" baseHP="10" stageHP="0" portrait="2"
+        collisionDamage="1" collisionMass="3" collisionRadius="13" numGridCollisionPoints="12" shadowSize="13"   friction="1" reroll="true" champion="0">
+            <bestiary bestiaryAnim="Head" bestiaryTransform="0,0,1"/>
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
+    </entity>
+    <entity name="Lady Horf"
+        id="12" variant="11" anm2path="monsters/mshorf/012.011_lady_horf.anm2" baseHP="10" stageHP="0" portrait="3"
+        collisionDamage="1" collisionMass="3" collisionRadius="13" numGridCollisionPoints="12" shadowSize="13"   friction="1" reroll="true" champion="0">
             <bestiary bestiaryAnim="Head" bestiaryTransform="0,0,1"/>
             <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
     </entity>
@@ -36,6 +51,19 @@
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
 	</entity>
 
+    <!--Mr Horfs    id="160" variant="770" subtypes start at 10-->
+    <entity name="Ms. Horf" 
+        id="770" variant="10" anm2path="monsters/mshorf/monster_mshorf.anm2" baseHP="25" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
+	</entity>
+
+    <!--Thrown Horf id="160" variant="771" subtypes start at 10-->
+    <entity name="Thrown Horf (girl)" 
+        id="771" variant="10" anm2path="monsters/mshorf/monster_mshorfhead.anm2" baseHP="65" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
+	</entity>
 
     <!--Blood Cultists  id="885" variant="1" variants start at 10-->
     <entity name="Kehehan"
