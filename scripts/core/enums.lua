@@ -190,6 +190,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Mabel"),
         VARIANT = Isaac.GetEntityVariantByName("Mabel"),
     },
+    INCH_WORM = {
+        TYPE = Isaac.GetEntityTypeByName("Inch Worm"),
+        VARIANT = Isaac.GetEntityVariantByName("Inch Worm"),
+    },
 
 
     --Effects

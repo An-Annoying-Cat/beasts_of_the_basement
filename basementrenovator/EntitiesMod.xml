@@ -6,6 +6,8 @@
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
   <entity Image="icons/eternalfly.png" Name="Eternal Fly" ID="501" Variant="461" Subtype="0" />
+  <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
+  <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
 
   <!-- Hoard Events -->
   <entity Image="icons/grids/hoarderbasement.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
@@ -42,6 +44,8 @@
   </entity>
   <entity Image="icons/ping.png" Name="Ping" ID="501" Variant="8" Subtype="0" />
   <entity Image="icons/pong.png" Name="Pong" ID="501" Variant="9" Subtype="0" />
+  <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
+  <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
 
   <!-- Downpour Enemies -->
   <entity Image="icons/hydro_knight.png" Name="Hydro Knight" ID="41" Variant="50" Subtype="0" />

@@ -276,6 +276,12 @@
         id="501" variant="12" anm2path="items/pick ups/jumpcrystal.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="100" collisionRadius="8" friction="1" numGridCollisionPoints="12" shadowSize="10" stageHP="0"  portrait="156" bestiary="false">
 	</entity>
 
+    <entity name="Inch Worm"
+        id="501" variant="13" anm2path="inch_worm.anm2" baseHP="5" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="8" friction="0" numGridCollisionPoints="12" shadowSize="0" stageHP="0"  portrait="156" bestiary="false">
+	</entity>
+    <entity name="Chode"
+        id="501" variant="13" subtype="1" anm2path="chode.anm2" baseHP="5" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="8" friction="0" numGridCollisionPoints="12" shadowSize="0" stageHP="0"  portrait="156" bestiary="false">
+	</entity>
 
 
 

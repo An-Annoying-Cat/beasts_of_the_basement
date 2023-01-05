@@ -82,9 +82,9 @@ include("scripts.entities.enemies.cadre")
 include("scripts.entities.enemies.funguy")
 include("scripts.entities.enemies.mabel")
 include("scripts.entities.enemies.eternalfly")
-
 include("scripts.entities.enemies.ping")
 include("scripts.entities.enemies.pong")
+include("scripts.entities.enemies.inchworm")
 
 
 
