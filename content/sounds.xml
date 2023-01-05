@@ -117,6 +117,15 @@
 	<sound name="AnkhaLoop">
 		<sample weight="1" path="items/ankhaLoop.wav" />
 	</sound>
+	<sound name="BHFExplodePrepare">
+		<sample weight="1" path="items/bhfExplodePrepare.wav" />
+	</sound>
+	<sound name="BHFExplode">
+		<sample weight="1" path="items/bhfExplode.wav" />
+	</sound>
+	<sound name="BHFRespawn">
+		<sample weight="1" path="items/bhfRespawn.wav" />
+	</sound>
 	<!--Consumables-->
 	<sound name="AmiiboCard">
 		<sample weight="1" path="cards/amiiboCard.wav" />

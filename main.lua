@@ -15,6 +15,7 @@ BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
+BotB.TT = TaintedTreasure
 local mod = BotB.FF
 BotB.StageAPI = StageAPI
 
@@ -92,6 +93,8 @@ include("scripts.entities.bosses.thaumaturge")
 --FAMILIARS
 include("scripts.entities.familiars.robobabyzero")
 include("scripts.entities.familiars.onyxmarble")
+include("scripts.entities.familiars.atombombbaby")
+include("scripts.entities.familiars.bhf")
 --ITEMS
 include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
@@ -238,3 +241,18 @@ function BotB:playerGetCostume(player)
 end
 
 Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BotB.playerGetCostume, 0)
+
+local botbTaintedItems = {
+    {CollectibleType.COLLECTIBLE_BBF, BotB.Enums.Items.BHF},
+}
+
+function BotB.TaintedCompat()
+    if BotB.TT then
+        --BotB.TT:MergeTaintedTreasures(botbTaintedItems)
+        BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_BBF,BotB.Enums.Items.BHF)
+    else
+        print("[BotB] You're missing out on some pretty dope Tainted Treasures compatability, my dude")
+    end
+end
+
+Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, BotB.TaintedCompat)

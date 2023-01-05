@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="1/2/2023 12:32:35 PM" Version="156" Fps="45"/>
+	<Info CreatedBy="robot" CreatedOn="1/4/2023 3:58:31 PM" Version="164" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="familiar_bhf.png" Id="0"/>
@@ -14,6 +14,7 @@
 		</Nulls>
 		<Events>
 			<Event Name="Explode" Id="0"/>
+			<Event Name="Back" Id="1"/>
 		</Events>
 	</Content>
 	<Animations DefaultAnimation="Fly">
@@ -59,7 +60,7 @@
 					<Frame XPosition="0" YPosition="-8" XPivot="14" YPivot="28" XCrop="0" YCrop="30" Width="30" Height="30" XScale="101" YScale="99" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 					<Frame XPosition="0" YPosition="-8" XPivot="14" YPivot="28" XCrop="30" YCrop="30" Width="30" Height="30" XScale="103" YScale="98" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 					<Frame XPosition="0" YPosition="-8" XPivot="14" YPivot="28" XCrop="0" YCrop="30" Width="30" Height="30" XScale="104" YScale="96" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
-					<Frame XPosition="0" YPosition="-8" XPivot="14" YPivot="28" XCrop="90" YCrop="0" Width="30" Height="30" XScale="105" YScale="95" Delay="3" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="true"/>
+					<Frame XPosition="0" YPosition="-8" XPivot="14" YPivot="28" XCrop="90" YCrop="0" Width="30" Height="30" XScale="105" YScale="95" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="true"/>
 				</LayerAnimation>
 			</LayerAnimations>
 			<NullAnimations>
@@ -97,7 +98,9 @@
 					<Frame XPosition="0" YPosition="-35" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 				</NullAnimation>
 			</NullAnimations>
-			<Triggers/>
+			<Triggers>
+				<Trigger EventId="1" AtFrame="20"/>
+			</Triggers>
 		</Animation>
 		<Animation Name="Explode" FrameNum="41" Loop="false">
 			<RootAnimation>
@@ -154,7 +157,23 @@
 			</NullAnimations>
 			<Triggers>
 				<Trigger EventId="0" AtFrame="15"/>
+				<Trigger EventId="1" AtFrame="40"/>
 			</Triggers>
+		</Animation>
+		<Animation Name="Invis" FrameNum="1" Loop="true">
+			<RootAnimation>
+				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+			</RootAnimation>
+			<LayerAnimations>
+				<LayerAnimation LayerId="0" Visible="true">
+					<Frame XPosition="0" YPosition="-7" XPivot="14" YPivot="28" XCrop="60" YCrop="0" Width="30" Height="30" XScale="105" YScale="95" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="0" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="true"/>
+				</LayerAnimation>
+				<LayerAnimation LayerId="1" Visible="true"/>
+			</LayerAnimations>
+			<NullAnimations>
+				<NullAnimation NullId="0" Visible="true"/>
+			</NullAnimations>
+			<Triggers/>
 		</Animation>
 	</Animations>
 </AnimatedActor>

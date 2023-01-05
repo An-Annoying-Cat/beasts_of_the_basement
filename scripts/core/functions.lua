@@ -52,4 +52,8 @@ function Functions:GetFirstPlayerWithTrinket(trinket)
 	return selectedPlayer
 end
 
+function Functions.GetExpectedFamiliarNum(player, item)
+	return player:GetCollectibleNum(item) + player:GetEffects():GetCollectibleEffectNum(item)
+end
+
 BotB.Functions = Functions

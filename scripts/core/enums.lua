@@ -211,6 +211,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Charles Heli (Funny)"),
         VARIANT = Isaac.GetEntityVariantByName("Charles Heli (Funny)")
     },
+    ABB_AURA = {
+        TYPE = Isaac.GetEntityTypeByName("Atom Bomb Baby Aura"),
+        VARIANT = Isaac.GetEntityVariantByName("Atom Bomb Baby Aura")
+    },
 
     
 }
@@ -220,13 +224,23 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("Robo-Baby Zero"),
         VARIANT = Isaac.GetEntityVariantByName("Robo-Baby Zero"),
     },
+    --[[
     NEEDLESPIANO = {
         TYPE = Isaac.GetEntityTypeByName("Needles Piano"),
         VARIANT = Isaac.GetEntityVariantByName("Needles Piano"),
     },
+    --]]
     ONYXMARBLE = {
         TYPE = Isaac.GetEntityTypeByName("Onyx Marble"),
         VARIANT = Isaac.GetEntityVariantByName("Onyx Marble"),
+    },
+    ATOMBOMBBABY = {
+        TYPE = Isaac.GetEntityTypeByName("Atom Bomb Baby"),
+        VARIANT = Isaac.GetEntityVariantByName("Atom Bomb Baby"),
+    },
+    BHF = {
+        TYPE = Isaac.GetEntityTypeByName("B.H.F."),
+        VARIANT = Isaac.GetEntityVariantByName("B.H.F."),
     },
 }
 
@@ -278,6 +292,10 @@ Enums.SFX = {
     CHARLES_CUE = Isaac.GetSoundIdByName("CharlesCue"),
     CHARLES_CUE_FUNNY = Isaac.GetSoundIdByName("CharlesCueFunny"),
     TOY_HELICOPTER_ATTACK = Isaac.GetSoundIdByName("ToyHeli"),
+
+    BHF_EXPLODE_PREPARE = Isaac.GetSoundIdByName("BHFExplodePrepare"),
+    BHF_EXPLODE = Isaac.GetSoundIdByName("BHFExplode"),
+    BHF_RESPAWN = Isaac.GetSoundIdByName("BHFRespawn"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -293,6 +311,8 @@ Enums.Items = {
     ROBOBABYZERO = Isaac.GetItemIdByName("Robo-Baby Zero"),
     ONYXMARBLE = Isaac.GetItemIdByName("Onyx Marble"),
     TOY_HELICOPTER = Isaac.GetItemIdByName("Toy Helicopter"),
+    ATOMBOMBBABY = Isaac.GetItemIdByName("Atom Bomb Baby"),
+    BHF = Isaac.GetItemIdByName("B.H.F."),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),

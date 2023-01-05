@@ -107,12 +107,9 @@ end
 --Egocentrism moment
 
 --Stats
-function ONYXMARBLE:onCache(player, cacheFlag)
-	if not player:HasCollectible(Items.ONYXMARBLE) then return end
-	if (cacheFlag&CacheFlag.CACHE_FAMILIARS)==CacheFlag.CACHE_FAMILIARS then
-        local collectibleRNG = player:GetCollectibleRNG(Isaac.GetItemIdByName("Onyx Marble"))
-        local itemConfig = Isaac.GetItemConfig():GetCollectible(Isaac.GetItemIdByName("Onyx Marble"))
-        player:CheckFamiliar(Isaac.GetEntityVariantByName("Onyx Marble"), player:GetCollectibleNum(Items.ONYXMARBLE, false), collectibleRNG, itemConfig)
-	end
+function ONYXMARBLE:onCache(player, _)
+    --local collectibleRNG = player:GetCollectibleRNG(Isaac.GetItemIdByName("Onyx Marble"))
+    --local itemConfig = Isaac.GetItemConfig():GetCollectible(Isaac.GetItemIdByName("Onyx Marble"))
+    player:CheckFamiliar(Isaac.GetEntityVariantByName("Onyx Marble"), BotB.Functions.GetExpectedFamiliarNum(player,Items.ONYXMARBLE), player:GetCollectibleRNG(Isaac.GetItemIdByName("Onyx Marble")), Isaac.GetItemConfig():GetCollectible(Isaac.GetItemIdByName("Onyx Marble")))
 end
-Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, ONYXMARBLE.onCache)
+Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, ONYXMARBLE.onCache, CacheFlag.CACHE_FAMILIARS)

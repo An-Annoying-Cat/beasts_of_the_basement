@@ -123,12 +123,9 @@ end
 --Egocentrism moment
 
 --Stats
-function ROBOBABYZERO:onCache(player, cacheFlag)
-	if not player:HasCollectible(Items.ROBOBABYZERO) then return end
-	if (cacheFlag&CacheFlag.CACHE_FAMILIARS)==CacheFlag.CACHE_FAMILIARS then
-        local collectibleRNG = player:GetCollectibleRNG(Isaac.GetItemIdByName("Robo-Baby Zero"))
-        local itemConfig = Isaac.GetItemConfig():GetCollectible(Isaac.GetItemIdByName("Robo-Baby Zero"))
-        player:CheckFamiliar(Isaac.GetEntityVariantByName("Robo-Baby Zero"), player:GetCollectibleNum(Items.ROBOBABYZERO, false), collectibleRNG, itemConfig)
-	end
+function ROBOBABYZERO:onCache(player, _)
+    --local collectibleRNG = player:GetCollectibleRNG(Isaac.GetItemIdByName("Robo-Baby Zero"))
+    --local itemConfig = Isaac.GetItemConfig():GetCollectible(Isaac.GetItemIdByName("Robo-Baby Zero"))
+    player:CheckFamiliar(Isaac.GetEntityVariantByName("Robo-Baby Zero"), BotB.Functions.GetExpectedFamiliarNum(player,Items.ROBOBABYZERO), player:GetCollectibleRNG(Isaac.GetItemIdByName("Robo-Baby Zero")), Isaac.GetItemConfig():GetCollectible(Isaac.GetItemIdByName("Robo-Baby Zero")))
 end
-Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, ROBOBABYZERO.onCache)
+Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, ROBOBABYZERO.onCache,CacheFlag.CACHE_FAMILIARS)
