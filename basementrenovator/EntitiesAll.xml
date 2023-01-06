@@ -16,6 +16,8 @@
     <entity Name="Chaff" />
     <entity Name="Batso" />
     <entity Name="Eternal Fly" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="Chapter 2 (Main Path) Enemies" >  
@@ -40,6 +42,8 @@
     <entity Name="Innie (Turn left)" />
     <entity Name="Ping" />
     <entity Name="Pong" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="Downpour Enemies" >
@@ -294,6 +298,8 @@
     <entity Name="Chaff" />
     <entity Name="Batso" />
     <entity Name="Eternal Fly" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="BotB Chapter 2 (Main Path) Enemies" >  
@@ -315,6 +321,8 @@
     <entity Name="Plane Creep" />
     <entity Name="Innie (Turn right)" />
     <entity Name="Innie (Turn left)" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="BotB Downpour Enemies" >
