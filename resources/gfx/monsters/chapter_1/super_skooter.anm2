@@ -1,8 +1,8 @@
 <AnimatedActor>
-	<Info CreatedBy="Unknown" CreatedOn="11/21/2022 7:54:19 PM" Version="20" Fps="45"/>
+	<Info CreatedBy="Unknown" CreatedOn="1/6/2023 11:36:02 PM" Version="21" Fps="45"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\superskooter.png" Id="0"/>
+			<Spritesheet Path="superskooter.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="skuzz" Id="0" SpritesheetId="0"/>

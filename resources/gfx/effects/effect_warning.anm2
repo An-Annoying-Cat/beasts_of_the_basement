@@ -1,8 +1,8 @@
 <AnimatedActor>
-	<Info CreatedBy="Unknown" CreatedOn="11/28/2022 11:54:29 AM" Version="3" Fps="30"/>
+	<Info CreatedBy="Unknown" CreatedOn="1/7/2023 12:25:34 AM" Version="4" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="effects\warning.png" Id="0"/>
+			<Spritesheet Path="warning.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="reticle" Id="0" SpritesheetId="0"/>

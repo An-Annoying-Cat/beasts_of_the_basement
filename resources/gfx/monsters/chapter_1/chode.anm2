@@ -1,8 +1,8 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="1/5/2023 12:15:28 PM" Version="113" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="1/6/2023 10:40:34 PM" Version="119" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\inch_worm.png" Id="0"/>
+			<Spritesheet Path="chode.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>

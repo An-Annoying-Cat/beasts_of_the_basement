@@ -1,10 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="12/24/2022 3:33:24 PM" Version="118" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="1/6/2023 11:48:29 PM" Version="119" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\innie_head.png" Id="0"/>
-			<Spritesheet Path="monsters\innie_body.png" Id="1"/>
-			<Spritesheet Path="monsters\innie_head.png" Id="2"/>
+			<Spritesheet Path="innie_head.png" Id="0"/>
+			<Spritesheet Path="innie_body.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="1"/>

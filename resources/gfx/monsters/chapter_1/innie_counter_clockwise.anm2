@@ -1,10 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="12/16/2022 9:04:58 PM" Version="112" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="1/6/2023 11:49:55 PM" Version="114" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="..\Documents\GitHub\beasts_of_the_basement\resources\gfx\monsters\innie_head.png" Id="0"/>
-			<Spritesheet Path="..\Documents\GitHub\beasts_of_the_basement\resources\gfx\monsters\innie_body.png" Id="1"/>
-			<Spritesheet Path="..\Documents\GitHub\beasts_of_the_basement\resources\gfx\monsters\innie_head.png" Id="2"/>
+			<Spritesheet Path="innie_head.png" Id="0"/>
+			<Spritesheet Path="innie_body.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="1"/>
