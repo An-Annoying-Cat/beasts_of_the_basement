@@ -317,6 +317,7 @@ Enums.Items = {
     TOY_HELICOPTER = Isaac.GetItemIdByName("Toy Helicopter"),
     ATOMBOMBBABY = Isaac.GetItemIdByName("Atom Bomb Baby"),
     BHF = Isaac.GetItemIdByName("B.H.F."),
+    THE_HUNGER = Isaac.GetItemIdByName("The Hunger"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
@@ -345,6 +346,21 @@ Enums.Pickups = {
     JUMPCRYSTAL = {
         TYPE = Isaac.GetEntityTypeByName("Jump Crystal"),
         VARIANT = Isaac.GetEntityVariantByName("Jump Crystal"),
+    },
+    ENEMY_CORPSE_SMALL = {
+        TYPE = Isaac.GetEntityTypeByName("Enemy Corpse (Small)"),
+        VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Small)"),
+        SUBTYPE = 0
+    },
+    ENEMY_CORPSE_MEDIUM = {
+        TYPE = Isaac.GetEntityTypeByName("Enemy Corpse (Medium)"),
+        VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Medium)"),
+        SUBTYPE = 1
+    },
+    ENEMY_CORPSE_LARGE = {
+        TYPE = Isaac.GetEntityTypeByName("Enemy Corpse (Large)"),
+        VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Large)"),
+        SUBTYPE = 2
     },
 
 }

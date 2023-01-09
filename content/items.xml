@@ -8,11 +8,12 @@
     <passive id="6" quality="0" name="Lucky Flower" description="Luck up!" gfx="card_passives/lucky_flower.png" cache="all"/>
     <passive id="7" quality="0" name="Pale Box" description="Hold up!" gfx="card_passives/pale_box.png" cache="all"/>
 
-    <familiar id="8" quality="3" name="Robo-Baby Zero" description="I'm telling you, the older ones are better!" gfx="item_robobabyzero.png" cache="familiars" tags="monstermanual baby"/>
-    <familiar id="9" quality="1" name="Onyx Marble" description="What an enigma..." gfx="onyx_marble.png" cache="familiars" tags="monstermanual"/>
+    <familiar id="8" quality="3" name="Robo-Baby Zero" description="I'm telling you, the older ones are better!" gfx="item_robobabyzero.png" tags="monstermanual baby"/>
+    <familiar id="9" quality="1" name="Onyx Marble" description="What an enigma..." gfx="onyx_marble.png" tags="monstermanual"/>
     <passive id="10" quality="4" name="Toy Helicopter" description="The greatest plan!" gfx="toy_helicopter.png" />
-    <familiar id="11" quality="2" name="Atom Bomb Baby" description="Radioactive friend!" gfx="item_atombombbaby.png" cache="familiars" tags="monstermanual"/>
-    <familiar id="12" quality="3" name="B.H.F." description="Big hesitant fren..." gfx="item_bhf.png" cache="familiars" tags="monstermanual fly"/>
+    <familiar id="11" quality="2" name="Atom Bomb Baby" description="Radioactive friend!" gfx="item_atombombbaby.png" tags="monstermanual"/>
+    <familiar id="12" quality="3" name="B.H.F." description="Big hesitant fren..." gfx="item_bhf.png" tags="monstermanual fly"/>
+    <active id="13" quality="4" name="The Hunger" description="Sanguine spoils" gfx="the_hunger.png" chargetype="normal" maxcharges="3" />
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

@@ -41,7 +41,7 @@ function CADRE:NPCUpdate(npc)
 end
 
 function CADRE:NPCDeathCheck(entity)
-    npc = entity:ToNPC()
+    local npc = entity:ToNPC()
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     local data = npc:GetData()

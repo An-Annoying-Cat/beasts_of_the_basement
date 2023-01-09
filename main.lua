@@ -100,6 +100,7 @@ include("scripts.entities.items.alphaarmor")
 include("scripts.entities.items.treemansyndrome")
 include("scripts.entities.items.placeholder_item")
 include("scripts.entities.items.toy_helicopter")
+include("scripts.entities.items.thehunger")
 --TRINKETS
 include("scripts.entities.items.trinkets.demoncore")
 include("scripts.entities.items.trinkets.asingleraisin")
@@ -112,6 +113,9 @@ include("scripts.entities.items.pickups.jumpcrystal")
 include("scripts.entities.consumables.shotgunkingcards")
 
 include("scripts.entities.consumables.mahjongtiles")
+
+--PLAYERS
+include("scripts.players.jezebel")
 
 --General enemy override. Guess we Ministro now
 
@@ -230,26 +234,16 @@ Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 
 
-local PLAYER_JEZEBEL = Isaac.GetPlayerTypeByName("Jezebel")
-BotB.JEZ_EXTRA = Isaac.GetCostumeIdByPath("gfx/characters/character_jez_extra.anm2")
-function BotB:playerGetCostume(player)
-    --print("weebis")
-    if player:GetPlayerType() == PLAYER_JEZEBEL then
-        --print("whongus")
-        player:AddNullCostume(BotB.JEZ_EXTRA)
-    end
-end
 
-Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BotB.playerGetCostume, 0)
 
 local botbTaintedItems = {
-    {CollectibleType.COLLECTIBLE_BBF, BotB.Enums.Items.BHF},
+    {CollectibleType.COLLECTIBLE_BBF, Isaac.GetItemIdByName("B.H.F.")},
 }
 
 function BotB.TaintedCompat()
     if BotB.TT then
         --BotB.TT:MergeTaintedTreasures(botbTaintedItems)
-        BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_BBF,BotB.Enums.Items.BHF)
+        BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_BBF,Isaac.GetItemIdByName("B.H.F."))
     else
         print("[BotB] You're missing out on some pretty dope Tainted Treasures compatability, my dude")
     end
