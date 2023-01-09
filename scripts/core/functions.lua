@@ -155,4 +155,64 @@ function Functions:Offset(entity, red, green, blue, fadeout, duration)
 	end
 end
 
+function Functions:CreateEnemiesCache()
+	BotBRoomEntitiesCache = Isaac.GetRoomEntities()
+	return BotBRoomEntitiesCache
+end
+
+function Functions:GetClosestEnemy(pos, excludeFiresAndTNT)
+	local ents = BotBRoomEntitiesCache or Functions:CreateEnemiesCache()
+
+	local closest
+	local dist = 99999
+
+	for _, ent in pairs(ents) do
+		if ent:IsEnemy() and not (ent:HasEntityFlags(EntityFlag.FLAG_PERSISTENT) or ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+			if not excludeFiresAndTNT or (ent.Type ~= 33 and ent.Type ~= 292) then
+				local d = pos:Distance(ent.Position)
+
+				if d < dist then
+					closest = ent
+					dist = d
+				end
+			end
+		end
+	end
+
+	return closest
+end
+
+function Functions:GetEntityNameString(entity)
+	local e = entity:ToNPC()
+	if e.Type > 9 and e.Type < 1000 and e.FrameCount >= 1 then
+		local data = e:GetData()
+		if not data.BotBNameTag then
+			local config = StageAPI.GetEntityConfig(e.Type, e.Variant, e.SubType)
+			if config and config.Name then
+				local name = config.Name
+				if string.sub(name, 1, 1) == "#" then
+					name = string.sub(name, 2, -1)
+					name = string.gsub(name, "_", " ")
+					name = string.lower(name)
+					name = string.gsub(" "..name, "%W%l", string.upper):sub(2)
+				end
+
+				data.BotBNameTag = name
+				return data.BotBNameTag
+			else
+				data.BotBNameTag = "Bruh"
+			end
+		elseif data.BotBNameTag ~= "Bruh" then
+			if e.Visible and e.Color.A ~= 0 then
+				local str = data.BotBNameTag
+
+				if str == "Inch Worm" or str == "Chode" and data.IsUnder ~= true then str = nil end
+
+				return str
+			end
+		end
+	end
+end
+
+
 BotB.Functions = Functions

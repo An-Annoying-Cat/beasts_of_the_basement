@@ -82,35 +82,35 @@ end
 				if doTheyActuallyHaveThem then
 					--print("fucking")
 					local maxHealthCorpseQueue = npc.MaxHitPoints
-					print(maxHealthCorpseQueue)
+					--print(maxHealthCorpseQueue)
 					local corpseSelectQueue = 0
 					local corpseIterand = 0
 					repeat
 						corpseSelectQueue = math.random(0,2)
-						print("skluntt " .. corpseSelectQueue)
+						--print("skluntt " .. corpseSelectQueue)
 						--Small
 						if corpseSelectQueue == 0 then
 							if maxHealthCorpseQueue - corpseIterand > 5 then
 								local smallCorpse = Isaac.Spawn(pickups.ENEMY_CORPSE_SMALL.TYPE, pickups.ENEMY_CORPSE_SMALL.VARIANT, pickups.ENEMY_CORPSE_SMALL.SUBTYPE, npc.Position,Vector((0.1*math.random(-40,40)),(0.1*math.random(-40,40))),npc)
-								print("small")
+								--print("small")
 								corpseIterand = corpseIterand + 5
 							end
 						end
 						if corpseSelectQueue == 1 then
 							if maxHealthCorpseQueue - corpseIterand > 25 then
 								local medCorpse = Isaac.Spawn(pickups.ENEMY_CORPSE_MEDIUM.TYPE, pickups.ENEMY_CORPSE_MEDIUM.VARIANT, pickups.ENEMY_CORPSE_MEDIUM.SUBTYPE, npc.Position,Vector((0.1*math.random(-40,40)),(0.1*math.random(-40,40))),npc)
-								print("med")
+								--print("med")
 								corpseIterand = corpseIterand + 25
 							end
 						end
 						if corpseSelectQueue == 2 then
 							if maxHealthCorpseQueue - corpseIterand > 100 then
 								local largeCorpse = Isaac.Spawn(pickups.ENEMY_CORPSE_LARGE.TYPE, pickups.ENEMY_CORPSE_LARGE.VARIANT, pickups.ENEMY_CORPSE_LARGE.SUBTYPE, npc.Position,Vector((0.1*math.random(-40,40)),(0.1*math.random(-40,40))),npc)
-								print("large")
+								--print("large")
 								corpseIterand = corpseIterand + 100
 							end
 						end
-						print(corpseIterand)
+						--print(corpseIterand)
 					until corpseIterand >= corpseSelectQueue
 				end
 				
@@ -163,4 +163,9 @@ end
 
 
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, THE_HUNGER.meatUpdate, Isaac.GetEntityTypeByName("Enemy Corpse (Small)"))
+--[[
+THE_HUNGER.enemyTable = {}
+function THE_HUNGER:populateHungerEnemyTable()
 
+end
+--]]
