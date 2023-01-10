@@ -64,10 +64,9 @@ function Jezebel:nullHearts(pickup,player,_)
         Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.BLOOD_EXPLOSION,0,pickup.Position,Vector(0,0),player)
 		Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.BLOOD_SPLAT,0,pickup.Position,Vector(0,0),player)
 		sfx:Play(SoundEffect.SOUND_MEAT_JUMPS,1,0,false,0.75)
-		sfx:Play(SoundEffect.SOUND_VAMP_DOUBLE,0.25,0,false,1.5)
+		sfx:Play(SoundEffect.SOUND_VAMP_GULP,0.125,0,false,1.5)
 		local heartType = pickup.SubType
-		local AbacusFont = Font()
-		AbacusFont:Load("font/pftempestasevencondensed.fnt")
+		--local heartQueueValue
 		--240 is the base amount of blood time that a heart gives.
 
 		--Full heart
@@ -78,7 +77,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
-
+			pickup:Remove()
+			return true
 		end
 		--Half
 		if heartType == 2 then
@@ -89,7 +89,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			--]]
 
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 1,ActiveSlot.SLOT_POCKET)
-
+			pickup:Remove()
+			return true
 
 		end
 		--Soul
@@ -100,7 +101,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezBloodColor = nil
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
-
+			pickup:Remove()
+			return true
 		end
 		--Eternal
 		if heartType == 3 then
@@ -110,7 +112,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezBloodColor = Color(1,1,1)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
-
+			pickup:Remove()
+			return true
 		end
 		--Double
 		if heartType == 5 then
@@ -120,7 +123,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 4,ActiveSlot.SLOT_POCKET)
-
+			pickup:Remove()
+			return true
 		end
 		--Black
 		if heartType == 6 then
@@ -130,22 +134,70 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezBloodColor = nil
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
-
+			pickup:Remove()
+			return true
 		end
 		--Gold
-
+		if heartType == 6 then
+			return nil
+		end
 		--HSoul
+		if heartType == 7 then
+			--[[
+			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
+			data.jezBloodTimer = data.jezBloodTimer + 120
+			data.jezBloodColor = Color(1,0,0)
+			--]]
 
+			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 1,ActiveSlot.SLOT_POCKET)
+			pickup:Remove()
+			return true
+
+		end
 		--Scared
-
+		if heartType == 8 then
+			--[[
+			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
+			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezBloodColor = Color(1,0,0)
+			--]]
+			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			pickup:Remove()
+			return true
+		end
 		--Blended
-
+		if heartType == 9 then
+			--[[
+			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
+			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezBloodColor = Color(1,0,0)
+			--]]
+			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			pickup:Remove()
+			return true
+		end
 		--Bone
-
+		if heartType == 10 then
+			--[[
+			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
+			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezBloodColor = Color(1,0,0)
+			--]]
+			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			pickup:Remove()
+			return true
+		end
 		--Rotten
-
-		pickup:Remove()
-		return true
+		if heartType == 11 then
+			--[[
+			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
+			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezBloodColor = Color(1,0,0)
+			--]]
+			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			pickup:Remove()
+			return true
+		end
     end
 end
 Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, Jezebel.nullHearts, PickupVariant.PICKUP_HEART)
