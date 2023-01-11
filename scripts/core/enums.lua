@@ -10,6 +10,18 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Acme"),
     },
 
+    --Mr Horf Variants
+    HORF_GIRL = {
+        TYPE = Isaac.GetEntityTypeByName("Horf (girl)"),
+        VARIANT = Isaac.GetEntityVariantByName("Horf (girl)"),
+        SUBTYPE = 10
+    },
+    LADY_HORF = {
+        TYPE = Isaac.GetEntityTypeByName("Lady Horf"),
+        VARIANT = Isaac.GetEntityVariantByName("Lady Horf"),
+        SUBTYPE = 10
+    },
+
     --Skinny variants
     GIBBY = {
         TYPE = Isaac.GetEntityTypeByName("Gibby"),
@@ -32,6 +44,18 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Seducer"),
     },
 
+    --Mr Horf Variants
+    MS_HORF = {
+        TYPE = Isaac.GetEntityTypeByName("Ms. Horf"),
+        VARIANT = Isaac.GetEntityVariantByName("Ms. Horf"),
+        SUBTYPE = 10
+    },
+    MS_HORF_HEAD = {
+        TYPE = Isaac.GetEntityTypeByName("Thrown Horf (girl)"),
+        VARIANT = Isaac.GetEntityVariantByName("Thrown Horf (girl)"),
+        SUBTYPE = 10
+    },
+
     --Maw variants
     CHAFF = {
         TYPE = Isaac.GetEntityTypeByName("Chaff"),
@@ -44,7 +68,7 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Pale Sniffle"),
     },
 
-    --Hive Variants
+    --Blood Cultist Variants
     KEHEHAN = {
         TYPE = Isaac.GetEntityTypeByName("Kehehan"),
         VARIANT = Isaac.GetEntityVariantByName("Kehehan"),
@@ -220,7 +244,7 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Atom Bomb Baby Aura")
     },
 
-    
+
 }
 
 Enums.Familiars = {
