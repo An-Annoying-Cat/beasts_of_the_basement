@@ -83,7 +83,7 @@ function SHARD:NPCUpdate(npc)
         --Face sprite change stuff
         if data.faceChanged == false then
             if data.whichFace ~= 1 then
-                sprite:ReplaceSpritesheet(1, "gfx/monsters/shard/shard" .. data.whichFace .. ".png")
+                sprite:ReplaceSpritesheet(1, "gfx/monsters/chapter_3.5/shard/shard" .. data.whichFace .. ".png")
             end
             sprite:LoadGraphics()
             data.faceChanged = true
