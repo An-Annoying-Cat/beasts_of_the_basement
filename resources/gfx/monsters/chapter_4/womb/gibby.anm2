@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="12/24/2022 7:36:32 PM" Version="105" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="1/10/2023 9:05:22 PM" Version="106" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\gibby_body.png" Id="0"/>
-			<Spritesheet Path="monsters\gibby.png" Id="1"/>
+			<Spritesheet Path="gibby_body.png" Id="0"/>
+			<Spritesheet Path="gibby.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>

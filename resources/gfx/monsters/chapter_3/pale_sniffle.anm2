@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="11/28/2022 11:53:32 AM" Version="124" Fps="45"/>
+	<Info CreatedBy="robot" CreatedOn="1/10/2023 8:57:28 PM" Version="126" Fps="45"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\pale_sniffle_body.png" Id="0"/>
-			<Spritesheet Path="monsters\pale_sniffle_head.png" Id="1"/>
+			<Spritesheet Path="pale_sniffle_body.png" Id="0"/>
+			<Spritesheet Path="pale_sniffle_head.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>
