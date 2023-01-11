@@ -220,7 +220,7 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Atom Bomb Baby Aura")
     },
 
-    
+
 }
 
 Enums.Familiars = {

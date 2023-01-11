@@ -16,7 +16,6 @@ BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
 BotB.TT = TaintedTreasure
-local mod = BotB.FF
 BotB.StageAPI = StageAPI
 
 
@@ -36,86 +35,26 @@ local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
 LOCAL_TSIL.Init("scripts/core/loi")
 ]]
 
---[[
-function LoadScripts(scripts)
+local function LoadScripts(scripts)
 	--load scripts
 	for i,v in ipairs(scripts) do
 		include(v)
 	end
-end --]]
+end
 
---Until that's sorted out...
+BotB.LoadScripts = LoadScripts
 
---CORE
-include("scripts.core.enums")
-include("scripts.core.functions")
+Mod.CoreScripts = {
+    "scripts.core.enums",
+    "scripts.core.functions",
+    "scripts.core.stageapi",
+    "scripts.core.ff_additions",
 
-include("scripts.core.stageapi")
-include("scripts.core.ff_additions")
-
---ENTITIES
-include("scripts.entities.drifter")
-include("scripts.entities.golfball")
-
---ENEMIES
-include("scripts.entities.enemies.palesniffle")
-include("scripts.entities.enemies.tippytap")
-include("scripts.entities.enemies.batso")
-include("scripts.entities.enemies.croast")
-include("scripts.entities.enemies.seducer")
-include("scripts.entities.enemies.desirer")
-include("scripts.entities.enemies.skooter")
-include("scripts.entities.enemies.chaff")
-include("scripts.entities.enemies.sleazebag")
-include("scripts.entities.enemies.culo")
-include("scripts.entities.enemies.kehehan")
-include("scripts.entities.enemies.hydroknight")
-include("scripts.entities.enemies.giblet")
-include("scripts.entities.enemies.kettle")
-include("scripts.entities.enemies.planecreep")
-include("scripts.entities.enemies.shard")
-include("scripts.entities.enemies.crockpot")
-include("scripts.entities.enemies.innie")
-include("scripts.entities.enemies.inniereverse")
-include("scripts.entities.enemies.gibby")
-include("scripts.entities.enemies.cadre")
-include("scripts.entities.enemies.funguy")
-include("scripts.entities.enemies.mabel")
-include("scripts.entities.enemies.eternalfly")
-include("scripts.entities.enemies.ping")
-include("scripts.entities.enemies.pong")
-include("scripts.entities.enemies.inchworm")
+    "scripts.loader",
+}
+LoadScripts(Mod.CoreScripts)
 
 
-
-include("scripts.entities.bosses.thaumaturge")
-
---FAMILIARS
-include("scripts.entities.familiars.robobabyzero")
-include("scripts.entities.familiars.onyxmarble")
-include("scripts.entities.familiars.atombombbaby")
-include("scripts.entities.familiars.bhf")
---ITEMS
-include("scripts.entities.items.alphaarmor")
-include("scripts.entities.items.treemansyndrome")
-include("scripts.entities.items.placeholder_item")
-include("scripts.entities.items.toy_helicopter")
-include("scripts.entities.items.thehunger")
---TRINKETS
-include("scripts.entities.items.trinkets.demoncore")
-include("scripts.entities.items.trinkets.asingleraisin")
-include("scripts.entities.items.trinkets.placeholder_trinket")
---PICKUPS
-include("scripts.entities.items.pickups.kickcube")
-include("scripts.entities.items.pickups.jumpcrystal")
---CONSUMABLES
---include("scripts.entities.consumables.basic")
-include("scripts.entities.consumables.shotgunkingcards")
-
-include("scripts.entities.consumables.mahjongtiles")
-
---PLAYERS
-include("scripts.players.jezebel")
 
 --General enemy override. Guess we Ministro now
 
