@@ -2,6 +2,7 @@ local Mod = BotB
 local THE_HUNGER = {}
 local pickups = BotB.Enums.Pickups
 local sfx = SFXManager()
+local PLAYER_JEZEBEL = Isaac.GetPlayerTypeByName("Jezebel")
 
 if EID then
 	EID:addCollectible(Isaac.GetItemIdByName("The Hunger"), "Active item charged by collecting hearts. #Enemies and bosses passively drop corpses on death. #These corpses come in three sizes: Small, Medium, and Large. #Using this active consumes all the corpses in the room. #Eating corpses heals you depending on how many exist when this active item is used. #Some corpses, dropped by specific demographics of enemy (i.e. ghost, demon, etc.) have special effects when consumed by this item.")
@@ -51,15 +52,37 @@ end
 		
 
 		--Just evening it to make sure
+		local technicalHealInt = corpseEatQueueInt
 		if corpseEatQueueInt % 2 == 1 then
 			corpseEatQueueInt = corpseEatQueueInt - 1
 		end
-		if isSuccessful and corpseEatQueueInt ~= 0 then
-			sfx:Play(SoundEffect.SOUND_VAMP_DOUBLE,1,0,false,1)
-			playerConv:AddHearts(corpseEatQueueInt/2)
+		--corpseEatQueueInt is the amount you actually heal
+		if playerConv:GetPlayerType() == PLAYER_JEZEBEL then
+			if isSuccessful and technicalHealInt ~= 0 then
+				player:AnimateCollectible(Isaac.GetItemIdByName("The Hunger"))
+				sfx:Play(SoundEffect.SOUND_VAMP_DOUBLE,1,0,false,1)
+				--print("choo choo motherfucker")
+				local data = player:GetData()
+				--Heal amount minus amount of empty heart containers
+				local overheal = (technicalHealInt/2) - (playerConv:GetEffectiveMaxHearts() - playerConv:GetHearts())
+				if overheal > 0 then
+					--print("overheal time, bitch! you get " .. data.jezOverhealTimer + (120 * technicalHealInt) .. "frames")
+					data.jezOverhealTimer = data.jezOverhealTimer + (120 * (technicalHealInt/2))
+				end
+				playerConv:AddHearts(corpseEatQueueInt/2)
+			else
+				player:AnimateSad()
+				sfx:Play(SoundEffect.SOUND_THUMBS_DOWN,1,0,false,1)
+			end
 		else
-			player:AnimateSad()
-			sfx:Play(SoundEffect.SOUND_THUMBS_DOWN,1,0,false,1)
+			if isSuccessful and corpseEatQueueInt ~= 0 then
+				player:AnimateCollectible(Isaac.GetItemIdByName("The Hunger"))
+				sfx:Play(SoundEffect.SOUND_VAMP_DOUBLE,1,0,false,1)
+				playerConv:AddHearts(corpseEatQueueInt/2)
+			else
+				player:AnimateSad()
+				sfx:Play(SoundEffect.SOUND_THUMBS_DOWN,1,0,false,1)
+			end
 		end
 	end
 	Mod:AddCallback(ModCallbacks.MC_USE_ITEM,THE_HUNGER.hungerActiveItem,Isaac.GetItemIdByName("The Hunger"))
@@ -169,3 +192,10 @@ function THE_HUNGER:populateHungerEnemyTable()
 
 end
 --]]
+
+
+
+
+
+--Egocentrism moment
+

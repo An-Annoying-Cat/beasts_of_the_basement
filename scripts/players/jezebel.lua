@@ -13,21 +13,43 @@ function Jezebel:playerGetCostume(player)
 end
 Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, Jezebel.playerGetCostume, 0)
 
-
+local myPlayerID = Isaac.GetPlayerTypeByName("Jezebel")
+EID:addBirthright(myPlayerID, "Overheal stat bonus takes twice as long to completely deplete. #In cleared rooms, the rate of depletion is halved once more, totaling at a quarter of the normal drain speed.")
 
 function Jezebel:playerUpdate(player)
 	local data = player:GetData()
+	local level = Game():GetLevel()
     if player:GetPlayerType() == PLAYER_JEZEBEL then
-        if data.jezBloodTimer == nil then
-			data.jezBloodTimer = 0
+        if data.jezOverhealTimer == nil then
+			data.jezOverhealTimer = 0
+			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
 			data.jezBloodColor = Color(1,0,0)
 			data.jezBloodDamage = player.Damage/2
 			data.jezDoBlood = false
+			--]]
 
 		end
-
-		if data.jezBloodTimer ~= 0 then
+		--JOKES ON YOU THE BLOOD 
+		if data.jezOverhealTimer ~= 0 then
+			if player:HasCollectible(CollectibleType.COLLECTIBLE_BIRTHRIGHT) then
+				if level:GetCurrentRoomDesc().Clear then
+					if player.FrameCount % 4 == 0 then
+						data.jezOverhealTimer = data.jezOverhealTimer - 1
+					end
+				else
+					if player.FrameCount % 2 == 0 then
+						data.jezOverhealTimer = data.jezOverhealTimer - 1
+					end
+				end
+			else
+				data.jezOverhealTimer = data.jezOverhealTimer - 1
+			end
+			--print("overheal: " .. data.jezOverhealTimer)
+			--print("cache your shit dawg")
+			player:AddCacheFlags(CacheFlag.CACHE_DAMAGE | CacheFlag.CACHE_FIREDELAY | CacheFlag.CACHE_RANGE | CacheFlag.CACHE_SPEED | CacheFlag.CACHE_LUCK )
+			player:EvaluateItems()
+			--[[
 			if player.FrameCount % 4 == 0 then
 				local jezCreep = Isaac.Spawn(EntityType.ENTITY_EFFECT,data.jezBloodVariant,0,player.Position,Vector(0,0),player)
 				if data.jezBloodColor ~= nil then
@@ -43,16 +65,13 @@ function Jezebel:playerUpdate(player)
 					jezCreep.IsFollowing = false
 				end
 				--]]
-			end
-			
-		else
-			if data.jezDoBlood then
-				data.jezBloodTimer = data.jezBloodTimer - 1
-			end
+			--]]
 		end
     end
 end
 Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, Jezebel.playerUpdate, 0)
+
+
 
 
 
@@ -73,7 +92,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 1 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -84,7 +103,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 2 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 120
+			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 
@@ -97,7 +116,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 3 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_HOLYWATER_TRAIL
-			data.jezBloodTimer = data.jezBloodTimer + 120
+			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = nil
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -108,7 +127,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 3 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_HOLYWATER_TRAIL
-			data.jezBloodTimer = data.jezBloodTimer + 120
+			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = Color(1,1,1)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -119,7 +138,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 5 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 480
+			data.jezOverhealTimer = data.jezOverhealTimer + 480
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 4,ActiveSlot.SLOT_POCKET)
@@ -130,7 +149,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 6 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_BLACKPOWDER
-			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = nil
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -145,7 +164,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 7 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 120
+			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 
@@ -158,7 +177,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 8 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -169,7 +188,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 9 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -180,7 +199,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 10 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -191,7 +210,7 @@ function Jezebel:nullHearts(pickup,player,_)
 		if heartType == 11 then
 			--[[
 			data.jezBloodVariant = EffectVariant.PLAYER_CREEP_RED
-			data.jezBloodTimer = data.jezBloodTimer + 240
+			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
 			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
@@ -201,3 +220,45 @@ function Jezebel:nullHearts(pickup,player,_)
     end
 end
 Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, Jezebel.nullHearts, PickupVariant.PICKUP_HEART)
+
+
+--Jezebel-specific overheal mechanic
+
+local jezOverhealBonus={
+	TEAR=0.2,
+	SPEED=0.05,
+	LUCK=0.5,
+	RANGE=5,
+	DAMAGE=1
+}
+
+--Stats
+--240 is baseline amt of decay frames for stat boost
+function Jezebel:onJezCache(player, cacheFlag)
+	if player:GetPlayerType() == PLAYER_JEZEBEL then
+		local data = player:GetData()
+		if data.jezOverhealTimer ~= 0 then
+			local Multiplier = data.jezOverhealTimer / 240
+			if (cacheFlag&CacheFlag.CACHE_DAMAGE)==CacheFlag.CACHE_DAMAGE then
+			  player.Damage=player.Damage+Multiplier*jezOverhealBonus.DAMAGE
+			end
+			if (cacheFlag&CacheFlag.CACHE_FIREDELAY)==CacheFlag.CACHE_FIREDELAY then
+			  local tps=30.0/(player.MaxFireDelay+1.0)
+			  player.MaxFireDelay=30.0/(math.max(0.1,tps+Multiplier*jezOverhealBonus.TEAR))-1
+			end
+			if (cacheFlag&CacheFlag.CACHE_RANGE)==CacheFlag.CACHE_RANGE then
+			  player.TearRange=player.TearRange+Multiplier*jezOverhealBonus.RANGE
+			end
+			if (cacheFlag&CacheFlag.CACHE_SPEED)==CacheFlag.CACHE_SPEED then
+			  player.MoveSpeed=player.MoveSpeed+Multiplier*jezOverhealBonus.SPEED
+			end
+			if (cacheFlag&CacheFlag.CACHE_LUCK)==CacheFlag.CACHE_LUCK then
+			  player.Luck=player.Luck+Multiplier*jezOverhealBonus.LUCK
+			end
+		elseif data.jezOverhealTimer == 0 or data.jezOverhealTimer == nil then
+			return
+		end
+    end
+	
+end
+Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, Jezebel.onJezCache)

@@ -18,9 +18,11 @@
     </Pool>
     <Pool Name="curse">
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="50 Shades Of Grey" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="devil">
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="50 Shades Of Grey" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="rottenBeggar">
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -30,6 +32,10 @@
         <Item Name="Onyx Marble" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Atom Bomb Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="B.H.F." Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+
+    <Pool Name="library">
+        <Item Name="50 Shades Of Grey" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <!--
     <Pool Name="treasure">

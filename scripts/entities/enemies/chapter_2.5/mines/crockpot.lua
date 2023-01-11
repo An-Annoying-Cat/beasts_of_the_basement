@@ -3,7 +3,7 @@ local CROCKPOT = {}
 local Entities = BotB.Enums.Entities
 local sfx = SFXManager()
 local mod = FiendFolio
-local level = Game():GetLevel()
+
 --local kettlesFiring = 0
 --local isDoingKettleSound = false
 
@@ -14,6 +14,7 @@ function CROCKPOT:NPCUpdate(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
     local data = npc:GetData()
+    local level = Game():GetLevel()
     
     
 

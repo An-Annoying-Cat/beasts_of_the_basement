@@ -342,6 +342,7 @@ Enums.Items = {
     ATOMBOMBBABY = Isaac.GetItemIdByName("Atom Bomb Baby"),
     BHF = Isaac.GetItemIdByName("B.H.F."),
     THE_HUNGER = Isaac.GetItemIdByName("The Hunger"),
+    FIFTY_SHADES = Isaac.GetItemIdByName("50 Shades Of Grey"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),

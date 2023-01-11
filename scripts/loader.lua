@@ -61,6 +61,7 @@ Mod.LoadScripts({
     "scripts.entities.items.placeholder_item",
     "scripts.entities.items.toy_helicopter",
     "scripts.entities.items.thehunger",
+    "scripts.entities.items.50shades",
 
 
     --TRINKETS
