@@ -1,8 +1,8 @@
 <AnimatedActor>
-	<Info CreatedBy="Unknown" CreatedOn="12/30/2022 4:28:33 PM" Version="16" Fps="30"/>
+	<Info CreatedBy="Unknown" CreatedOn="1/10/2023 9:13:00 PM" Version="17" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\monster_funguy.png" Id="0"/>
+			<Spritesheet Path="monster_funguy.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="Main" Id="0" SpritesheetId="0"/>

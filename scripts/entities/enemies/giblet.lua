@@ -32,7 +32,7 @@ function GIBLET:NPCUpdate(npc)
         --Face sprite change stuff
         if data.faceChanged == false then
             if data.whichFace ~= 1 then
-                sprite:ReplaceSpritesheet(1, "gfx/monsters/giblet/giblet" .. data.whichFace .. ".png")
+                sprite:ReplaceSpritesheet(1, "gfx/monsters/chapter_4/womb/giblet/giblet" .. data.whichFace .. ".png")
             end
             sprite:LoadGraphics()
             data.faceChanged = true

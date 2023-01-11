@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="12/19/2022 12:08:16 PM" Version="104" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="1/10/2023 9:14:47 PM" Version="105" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\monster_bodies_hydro.png" Id="0"/>
-			<Spritesheet Path="monsters\hydro_knight.png" Id="1"/>
+			<Spritesheet Path="monster_bodies_hydro.png" Id="0"/>
+			<Spritesheet Path="hydro_knight.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>

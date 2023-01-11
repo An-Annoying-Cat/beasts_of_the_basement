@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="hapehheads" CreatedOn="12/19/2022 2:40:50 PM" Version="128" Fps="45"/>
+	<Info CreatedBy="hapehheads" CreatedOn="1/10/2023 9:04:42 PM" Version="129" Fps="45"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\giblet.png" Id="0"/>
-			<Spritesheet Path="monsters\giblet frames.png" Id="1"/>
+			<Spritesheet Path="giblet.png" Id="0"/>
+			<Spritesheet Path="giblet frames.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>

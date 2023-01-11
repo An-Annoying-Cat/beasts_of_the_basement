@@ -22,17 +22,17 @@ function CADRE:NPCUpdate(npc)
             end
             if data.containedEnemy == 1 then
                 --Globin
-                sprite:ReplaceSpritesheet(0,"gfx/monsters/cadre/cadre_basic.png")
+                sprite:ReplaceSpritesheet(0,"gfx/monsters/chapter_4/womb/cadre/cadre_basic.png")
                 
             elseif data.containedEnemy == 2 then
                 --Gazing Globin
-                sprite:ReplaceSpritesheet(0,"gfx/monsters/cadre/cadre_gazing.png")
+                sprite:ReplaceSpritesheet(0,"gfx/monsters/chapter_4/womb/cadre/cadre_gazing.png")
             elseif data.containedEnemy == 3 then
                 --Globlet
-                sprite:ReplaceSpritesheet(0,"gfx/monsters/cadre/cadre_globlet.png")
+                sprite:ReplaceSpritesheet(0,"gfx/monsters/chapter_4/womb/cadre/cadre_globlet.png")
             elseif data.containedEnemy == 4 then
                 --Giblet
-                sprite:ReplaceSpritesheet(0,"gfx/monsters/cadre/cadre_giblet.png")
+                sprite:ReplaceSpritesheet(0,"gfx/monsters/chapter_4/womb/cadre/cadre_giblet.png")
             else
             end
             sprite:LoadGraphics()

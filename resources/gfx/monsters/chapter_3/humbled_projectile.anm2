@@ -1,8 +1,8 @@
 <AnimatedActor>
-	<Info CreatedBy="Unknown" CreatedOn="11/23/2022 11:51:54 AM" Version="18" Fps="30"/>
+	<Info CreatedBy="Unknown" CreatedOn="1/10/2023 8:49:28 PM" Version="19" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\humbled_projectile.png" Id="0"/>
+			<Spritesheet Path="humbled_projectile.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="Head" Id="0" SpritesheetId="0"/>

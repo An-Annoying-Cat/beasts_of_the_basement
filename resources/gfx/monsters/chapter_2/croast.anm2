@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="12/7/2022 2:40:39 PM" Version="133" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="1/10/2023 9:12:42 PM" Version="134" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\croast.png" Id="0"/>
-			<Spritesheet Path="monsters\croast_wings.png" Id="1"/>
+			<Spritesheet Path="croast.png" Id="0"/>
+			<Spritesheet Path="croast_wings.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>
