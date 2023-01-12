@@ -12,7 +12,8 @@
     <group Name="Hoarder Basement Enemies" Label="Hoard Enemies" />
   </group>
 
-  <group Name="Chapter 1 (Main Path) Enemies" >  
+  <group Name="Chapter 1 (Main Path) Enemies" >
+    <entity Name="Ms. Horf" />  
     <entity Name="Chaff" />
     <entity Name="Batso" />
     <entity Name="Eternal Fly" />
@@ -295,6 +296,7 @@
   </group>
 
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
+    <entity Name="Ms. Horf" />
     <entity Name="Chaff" />
     <entity Name="Batso" />
     <entity Name="Eternal Fly" />

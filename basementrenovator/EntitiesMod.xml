@@ -3,6 +3,7 @@
     <entity Image="icons/pickups/kickcube.png" Name="Kick Cube" ID="5" Variant="69" Subtype="30" />
     <entity Image="icons/pickups/jump_crystal.png" Name="Jump Crystal" ID="501" Variant="12" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
+  <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
   <entity Image="icons/eternalfly.png" Name="Eternal Fly" ID="501" Variant="461" Subtype="0" />

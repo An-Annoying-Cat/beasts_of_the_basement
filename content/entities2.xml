@@ -54,20 +54,6 @@
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
 	</entity>
 
-    <!--Mr Horfs    id="160" variant="770" subtypes start at 10-->
-    <entity name="Ms. Horf" 
-        id="160" variant="770" subtype="10" anm2path="monsters/chapter_1/mshorf/monster_mshorf.anm2" baseHP="25" stageHP="0"
-        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
-            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
-	</entity>
-
-    <!--Thrown Horf id="160" variant="771" subtypes start at 10-->
-    <entity name="Thrown Horf (girl)" 
-        id="160" variant="771" subtype="10" anm2path="monsters/chapter_1/mshorf/monster_mshorfhead.anm2" baseHP="65" stageHP="0"
-        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="false" champion="0">
-            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
-	</entity>
-
     <!--Blood Cultists  id="885" variant="1" variants start at 10-->
     <entity name="Kehehan"
         id="885" variant="1" subtype="10" anm2path="monsters/chapter_3.5/kehehan.anm2" baseHP="24" stageHP="0" portrait="2"
@@ -315,6 +301,18 @@
         collisionDamage="0" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="36"   friction="0" champion="0" shutdoors="false">
         <gibs amount="6" blood="1" bone="1" eye="0" gut="0" large="0" />
     </entity> 
+
+    <entity name="Ms. Horf" 
+        id="501" variant="15" anm2path="monsters/chapter_1/mshorf/monster_mshorf.anm2" baseHP="25" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+	</entity>
+
+    <entity name="Thrown Horf (girl)" 
+        id="501" variant="16" anm2path="monsters/chapter_1/mshorf/monster_mshorfhead.anm2" baseHP="65" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="false" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+	</entity>
 
 
 

@@ -44,16 +44,15 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Seducer"),
     },
 
-    --Mr Horf Variants
+    --Ms Horf
     MS_HORF = {
         TYPE = Isaac.GetEntityTypeByName("Ms. Horf"),
         VARIANT = Isaac.GetEntityVariantByName("Ms. Horf"),
-        SUBTYPE = 10
     },
     MS_HORF_HEAD = {
         TYPE = Isaac.GetEntityTypeByName("Thrown Horf (girl)"),
         VARIANT = Isaac.GetEntityVariantByName("Thrown Horf (girl)"),
-        SUBTYPE = 10
+        SUBTYPE = 0
     },
 
     --Maw variants

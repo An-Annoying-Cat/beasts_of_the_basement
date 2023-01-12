@@ -18,7 +18,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.innie",
     "scripts.entities.enemies.chapter_1.inniereverse",
     "scripts.entities.enemies.chapter_1.planecreep",
-    --"scripts.entities.enemies.chapter_1.ms_horf",
+    "scripts.entities.enemies.chapter_1.ms_horf",
 
     "scripts.entities.enemies.chapter_1.5.dross.culo",
 

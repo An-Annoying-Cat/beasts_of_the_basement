@@ -215,4 +215,27 @@ function Functions:GetEntityNameString(entity)
 end
 
 
+function Functions:ClampToCardinal(vec1, vec2)
+
+	if math.abs(vec1.X - vec2.X) < math.abs(vec1.Y - vec2.Y) then
+		if vec1.X - vec2.X < 0 then
+			
+			-- Left
+			return Vector(0, -vec1.Y)
+		else
+			-- Right
+			return Vector(0, vec1.Y)
+		end
+	else
+		if vec1.Y - vec2.Y < 0 then
+			-- Up
+			return Vector(vec1.X, 0)
+		else
+			-- Down
+			return -Vector(vec1.X, 0)
+		end
+	end
+end
+
+
 BotB.Functions = Functions
