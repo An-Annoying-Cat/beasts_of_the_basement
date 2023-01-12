@@ -47,7 +47,7 @@ function MS_HORF:MsHorfAI(npc)
 				path:FindGridPath(targetpos, speeds[2], 900, true)
 			end
 
-			if (not FF:isScareOrConfuse(npc)) and npc.StateFrame > 10 --+ d.BotB_randWait and r:RandomInt(10) == 1
+			if (not FF:isScareOrConfuse(npc)) and npc.StateFrame > 10 + d.BotB_randWait and r:RandomInt(10) == 1
 			and room:GetGridCollisionAtPos(npc.Position) == GridCollisionClass.COLLISION_NONE
 			and ((math.abs(target.Position.X - npc.Position.X) <= 30) or (math.abs(target.Position.Y - npc.Position.Y) <= 30)) then
 				d.BotB_state = "throw"
