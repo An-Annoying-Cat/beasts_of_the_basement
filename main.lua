@@ -90,7 +90,6 @@ end
 
 
 function BotB:anvilEffect(effect)
-    
     if effect:GetSprite():IsEventTriggered("Anvil") then
       --effect:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
       game:ShakeScreen(8)

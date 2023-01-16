@@ -60,6 +60,15 @@
 		<sample weight="1" path="pongPop1.wav" />
 		<sample weight="1" path="pongPop2.wav" />
 	</sound>
+	<sound name="PuerIdle">
+		<sample weight="1" path="puerIdle.wav" />
+	</sound>
+	<sound name="PuerTele">
+		<sample weight="1" path="puerTeleportv2.wav" />
+	</sound>
+	<sound name="PuerShoot">
+		<sample weight="1" path="puerShoot.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">

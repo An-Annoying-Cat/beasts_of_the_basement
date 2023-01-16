@@ -34,6 +34,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_3.seducer",
     "scripts.entities.enemies.chapter_3.desirer",
     "scripts.entities.enemies.chapter_3.palesniffle",
+    "scripts.entities.enemies.chapter_3.puer_puella",
 
     "scripts.entities.enemies.chapter_3.5.kehehan",
     "scripts.entities.enemies.chapter_3.5.shard",

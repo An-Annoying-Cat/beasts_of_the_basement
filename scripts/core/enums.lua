@@ -217,6 +217,14 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Inch Worm"),
         VARIANT = Isaac.GetEntityVariantByName("Inch Worm"),
     },
+    PUER = {
+        TYPE = Isaac.GetEntityTypeByName("Puer"),
+        VARIANT = Isaac.GetEntityVariantByName("Puer"),
+    },
+    PUELLA = {
+        TYPE = Isaac.GetEntityTypeByName("Puella"),
+        VARIANT = Isaac.GetEntityVariantByName("Puella"),
+    },
 
 
     --Effects
@@ -241,6 +249,14 @@ Enums.Entities = {
     ABB_AURA = {
         TYPE = Isaac.GetEntityTypeByName("Atom Bomb Baby Aura"),
         VARIANT = Isaac.GetEntityVariantByName("Atom Bomb Baby Aura")
+    },
+    PP_AFTERIMAGE = {
+        TYPE = Isaac.GetEntityTypeByName("PP Afterimage"),
+        VARIANT = Isaac.GetEntityVariantByName("PP Afterimage")
+    },
+    BOX_PARTICLE = {
+        TYPE = Isaac.GetEntityTypeByName("Box Particle"),
+        VARIANT = Isaac.GetEntityVariantByName("Box Particle")
     },
 
 
@@ -293,6 +309,10 @@ Enums.SFX = {
     MABELVROOM = Isaac.GetSoundIdByName("MabelVroom"),
 
     PONGPOP = Isaac.GetSoundIdByName("PongPop"),
+
+    PUER_IDLE = Isaac.GetSoundIdByName("PuerIdle"),
+    PUER_TELE = Isaac.GetSoundIdByName("PuerTele"),
+    PUER_SHOOT = Isaac.GetSoundIdByName("PuerShoot"),
 
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),

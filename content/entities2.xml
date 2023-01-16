@@ -314,6 +314,20 @@
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
 	</entity>
 
+    <entity name="Puer" 
+        id="501" variant="17" anm2path="monsters/chapter_3/puer.anm2" baseHP="35" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="false" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+	</entity>
+
+    <entity name="Puella" 
+        id="501" variant="17" subtype="1" anm2path="monsters/chapter_3/puella.anm2" baseHP="35" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="false" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+	</entity>
+
+    
+
 
     <!--Familiars id="3" variants start at 2450-->
     <entity anm2path="familiar/robobabyzero.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Robo-Baby Zero" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2450">
@@ -360,6 +374,14 @@
     </entity>
     <entity name="Atom Bomb Baby Aura"
         id="1000" variant="803" anm2path="effects/abb_aura.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
+    <entity name="PP Afterimage"
+        id="1000" variant="803" anm2path="monsters/chapter_3/pp_afterimage.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
+    <entity name="Box Particle"
+        id="1000" variant="804" anm2path="monsters/chapter_3/effect_box.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
     </entity>
 
