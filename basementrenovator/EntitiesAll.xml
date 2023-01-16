@@ -5,16 +5,6 @@
     <entity Name="Jump Crystal" />
   </group>
 
-  <group Name="Chapter 1 (Main Path) Enemies" >  
-    <entity Name="Chaff" />
-    <entity Name="Batso" />
-  </group>
-
-  <group Name="Chapter 2 (Main Path) Enemies" >  
-    <entity Name="Tippytap" />
-    <entity Name="Croast" />
-    <entity Name="Hydro Knight" />
-  </group>
   <!--——— Floors ———-->
   <group Name="Basement">
     <group Name="Hoarder Basement Events" Label="Hoard Events" />
@@ -22,14 +12,21 @@
     <group Name="Hoarder Basement Enemies" Label="Hoard Enemies" />
   </group>
 
-  <group Name="Chapter 1 (Main Path) Enemies" >  
+  <group Name="Chapter 1 (Main Path) Enemies" >
+    <entity Name="Ms. Horf" />  
     <entity Name="Chaff" />
     <entity Name="Batso" />
+    <entity Name="Eternal Fly" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
     <entity Name="Croast" />
+    <entity Name="Fun Guy" />
+    <entity Name="Hydro Knight" />
+    <entity Name="Eternal Fly" />
   </group>
 
   <group Name="Hoarder Basement Events" >
@@ -44,6 +41,10 @@
     <entity Name="Plane Creep" />
     <entity Name="Innie (Turn right)" />
     <entity Name="Innie (Turn left)" />
+    <entity Name="Ping" />
+    <entity Name="Pong" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="Downpour Enemies" >
@@ -70,6 +71,7 @@
   <group Name="Womb Enemies" >
     <entity Name="Giblet" />
     <entity Name="Gibby" />
+    <entity Name="Cadre" />
   </group>
   
   <!--——— BotB Tab ———-->
@@ -294,18 +296,24 @@
   </group>
 
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
+    <entity Name="Ms. Horf" />
     <entity Name="Chaff" />
     <entity Name="Batso" />
+    <entity Name="Eternal Fly" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="BotB Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
     <entity Name="Croast" />
+    <entity Name="Fun Guy" />
+    <entity Name="Hydro Knight" />
   </group>
 
-  <!-- <group Name="Hoarder Basement Events" >
+  <group Name="Hoarder Basement Events" >
     <entity Name="Hoarder Basement Backdrop" />
-  </group> -->
+  </group>
 
   <group Name="BotB Hoard Enemies" >
     <entity Name="Acme" />
@@ -315,6 +323,8 @@
     <entity Name="Plane Creep" />
     <entity Name="Innie (Turn right)" />
     <entity Name="Innie (Turn left)" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
   </group>
 
   <group Name="BotB Downpour Enemies" >
@@ -323,6 +333,12 @@
   
   <group Name="BotB Dross Enemies" >
     <entity Name="Culo" />
+  </group>
+
+  <group Name="BotB Caves Enemies" >
+    <entity Name="Fun Guy" />
+    <entity Name="Tippytap" />
+    <entity Name="Croast" />
   </group>
 
   <group Name="BotB Flooded Caves Enemies" >
@@ -348,6 +364,7 @@
   <group Name="BotB Womb Enemies" >
     <entity Name="Giblet" />
     <entity Name="Gibby" />
+    <entity Name="Cadre" />
   </group>
 
 </data>

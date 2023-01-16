@@ -1,13 +1,38 @@
 <items gfxroot="gfx/items/" version="1">
     <passive id="1" quality="4" name="Alpha Armor" description="Protective helm" gfx="alpha_armor.png"/>
     <passive id="2" quality="2" name="Treeman Syndrome" description="I can't feel my hands..." gfx="treeman_syndrome.png"/>
+    <passive id="3" quality="3" name="Item" description="PLACEHOLDER_ITEM" gfx="placeholder_item.png" cache="all"/>
+
+    <passive id="4" quality="0" name="Quicklove" description="Damage up!" gfx="card_passives/quicklove.png" cache="all"/>
+    <passive id="5" quality="0" name="Starlight" description="Health up!" gfx="card_passives/starlight.png" cache="all"/>
+    <passive id="6" quality="0" name="Lucky Flower" description="Luck up!" gfx="card_passives/lucky_flower.png" cache="all"/>
+    <passive id="7" quality="0" name="Pale Box" description="Hold up!" gfx="card_passives/pale_box.png" cache="all"/>
+
+    <familiar id="8" quality="3" name="Robo-Baby Zero" description="I'm telling you, the older ones are better!" gfx="item_robobabyzero.png" tags="monstermanual baby"/>
+    <familiar id="9" quality="1" name="Onyx Marble" description="What an enigma..." gfx="onyx_marble.png" tags="monstermanual"/>
+    <passive id="10" quality="4" name="Toy Helicopter" description="The greatest plan!" gfx="toy_helicopter.png" />
+    <familiar id="11" quality="2" name="Atom Bomb Baby" description="Radioactive friend!" gfx="item_atombombbaby.png" tags="monstermanual"/>
+    <familiar id="12" quality="3" name="B.H.F." description="Big hesitant fren..." gfx="item_bhf.png" tags="monstermanual fly"/>
+    <active id="13" quality="4" name="The Hunger" description="Sanguine spoils" gfx="the_hunger.png" chargetype="special" maxcharges="3" />
+    <active id="14" quality="2" name="50 Shades Of Grey" description="Reusable sadomasochism" gfx="50shades.png" chargetype="normal" maxcharges="4" tags="book"/>
+    <!-- I'm not finishing the code for these, sorry, I need a different coder to take over.
+    <passive id="15" quality="2" name="Grub" description="HP up...?" gfx="grub.png" maxhearts="1" tags="food"/>
+    <passive id="16" quality="2" name="Mud Pie" description="HP up + cleanliness down" gfx="mudpie.png" maxhearts="1" hearts="2" tags="food"/>
+    -->
+    <familiar id="17" quality="3" name="Faithful Fleet" description="Sentinel quartet" gfx="faithful_fleet.png" tags="angel"/>
     <!--
+    <passive id="18" quality="2" name="Houseplant" description="HP up + succulent inside" gfx="houseplant.png" maxhearts="1" hearts="2" tags="food"/>
+    -->
+
+    <!--
+    <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
+    <passive id="9" quality="1" name="B.H.F." description="Big Hesitant Fly" gfx="item_bhf.png" cache="familiars"/>
     <passive id="3" quality="3" name="Popped Balloon" description="Rid the world of its kin" gfx="popped_balloon.png"/>
     <passive id="4" quality="2" name="Needles Piano" description="Play Music For Baby" gfx="needles_piano.png"/>
     -->
-    <!--
-    <trinket name="Canker Sore" description="Owwww...!" gfx="canker_sore.png" />
-    -->
+    
+    <trinket name="Canker Sore" description="Owwww...!" gfx="canker_sore.png" cache="damage" />
     <trinket name="Demon Core" description="The sleeping dragon..." gfx="demon_core.png" />
     <trinket name="A Single Raisin" description="Just a bit fiendish" gfx="raisin.png" />
+    <trinket name="Trinket" description="PLACEHOLDER_TRINKET" gfx="placeholder_trinket.png" />
 </items>

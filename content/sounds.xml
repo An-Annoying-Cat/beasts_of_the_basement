@@ -56,6 +56,19 @@
 	<sound name="MabelVroom">
 		<sample weight="1" path="mabelVroom.wav" />
 	</sound>
+	<sound name="PongPop">
+		<sample weight="1" path="pongPop1.wav" />
+		<sample weight="1" path="pongPop2.wav" />
+	</sound>
+	<sound name="PuerIdle">
+		<sample weight="1" path="puerIdle.wav" />
+	</sound>
+	<sound name="PuerTele">
+		<sample weight="1" path="puerTeleportv2.wav" />
+	</sound>
+	<sound name="PuerShoot">
+		<sample weight="1" path="puerShoot.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">
@@ -83,6 +96,15 @@
 	<sound name="DemonCoreEffect">
 		<sample weight="1" path="items/demonCoreEffect.wav" />
 	</sound>
+	<sound name="CharlesCue">
+		<sample weight="1" path="items/charlesCue.wav" />
+	</sound>
+	<sound name="CharlesCueFunny">
+		<sample weight="1" path="items/charlesCueFunny.wav" />
+	</sound>
+	<sound name="ToyHeli">
+		<sample weight="1" path="items/toyHelicopterAttack.wav" />
+	</sound>
 	<!--Pickups-->
 	<sound name="KickCube1">
 		<sample weight="1" path="pickups/kickCubeSpinTier1.wav" />
@@ -103,6 +125,15 @@
 	<!--A loop of Camel By Camel that I slowed, then put through some Post-Awareness type bullshit. Should play really quietly and at a very low pitch, as a looping sound, when near the Ankha familiar.-->
 	<sound name="AnkhaLoop">
 		<sample weight="1" path="items/ankhaLoop.wav" />
+	</sound>
+	<sound name="BHFExplodePrepare">
+		<sample weight="1" path="items/bhfExplodePrepare.wav" />
+	</sound>
+	<sound name="BHFExplode">
+		<sample weight="1" path="items/bhfExplode.wav" />
+	</sound>
+	<sound name="BHFRespawn">
+		<sample weight="1" path="items/bhfRespawn.wav" />
 	</sound>
 	<!--Consumables-->
 	<sound name="AmiiboCard">

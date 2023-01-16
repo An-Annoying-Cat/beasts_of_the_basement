@@ -1,3 +1,4 @@
+local Mod = BotB
 local Enums = {}
     
 Enums.Entities = {
@@ -7,6 +8,18 @@ Enums.Entities = {
     ACME = {
         TYPE = Isaac.GetEntityTypeByName("Acme"),
         VARIANT = Isaac.GetEntityVariantByName("Acme"),
+    },
+
+    --Mr Horf Variants
+    HORF_GIRL = {
+        TYPE = Isaac.GetEntityTypeByName("Horf (girl)"),
+        VARIANT = Isaac.GetEntityVariantByName("Horf (girl)"),
+        SUBTYPE = 10
+    },
+    LADY_HORF = {
+        TYPE = Isaac.GetEntityTypeByName("Lady Horf"),
+        VARIANT = Isaac.GetEntityVariantByName("Lady Horf"),
+        SUBTYPE = 10
     },
 
     --Skinny variants
@@ -31,6 +44,17 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Seducer"),
     },
 
+    --Ms Horf
+    MS_HORF = {
+        TYPE = Isaac.GetEntityTypeByName("Ms. Horf"),
+        VARIANT = Isaac.GetEntityVariantByName("Ms. Horf"),
+    },
+    MS_HORF_HEAD = {
+        TYPE = Isaac.GetEntityTypeByName("Thrown Horf (girl)"),
+        VARIANT = Isaac.GetEntityVariantByName("Thrown Horf (girl)"),
+        SUBTYPE = 0
+    },
+
     --Maw variants
     CHAFF = {
         TYPE = Isaac.GetEntityTypeByName("Chaff"),
@@ -43,7 +67,7 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Pale Sniffle"),
     },
 
-    --Hive Variants
+    --Blood Cultist Variants
     KEHEHAN = {
         TYPE = Isaac.GetEntityTypeByName("Kehehan"),
         VARIANT = Isaac.GetEntityVariantByName("Kehehan"),
@@ -84,6 +108,11 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Super Skooter"),
         SUBTYPE = 11
     },
+    ETERNAL_FLY_DUMMY = {
+        TYPE = Isaac.GetEntityTypeByName("Eternal Fly Dummy"),
+        VARIANT = Isaac.GetEntityVariantByName("Eternal Fly Dummy"),
+    },
+
     --Larry Variants (Larriants, if you will)
     CADRE = {
         TYPE = Isaac.GetEntityTypeByName("Cadre"),
@@ -127,6 +156,7 @@ Enums.Entities = {
 
 
     --FAUNA
+
     --Fat Bat variants
     BATSO = {
         TYPE = Isaac.GetEntityTypeByName("Batso"),
@@ -137,7 +167,8 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Fun Guy")
     },
 
-    --Constructs
+    --CONSTRUCTS
+
     --Knight variants
     HYDROKNIGHT = {
         TYPE = Isaac.GetEntityTypeByName("Hydro Knight"),
@@ -182,6 +213,18 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Mabel"),
         VARIANT = Isaac.GetEntityVariantByName("Mabel"),
     },
+    INCH_WORM = {
+        TYPE = Isaac.GetEntityTypeByName("Inch Worm"),
+        VARIANT = Isaac.GetEntityVariantByName("Inch Worm"),
+    },
+    PUER = {
+        TYPE = Isaac.GetEntityTypeByName("Puer"),
+        VARIANT = Isaac.GetEntityVariantByName("Puer"),
+    },
+    PUELLA = {
+        TYPE = Isaac.GetEntityTypeByName("Puella"),
+        VARIANT = Isaac.GetEntityVariantByName("Puella"),
+    },
 
 
     --Effects
@@ -195,7 +238,57 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Warning Target")
     },
 
-    
+    CHARLESHELI = {
+        TYPE = Isaac.GetEntityTypeByName("Charles Heli"),
+        VARIANT = Isaac.GetEntityVariantByName("Charles Heli")
+    },
+    CHARLESHELIFUNNY = {
+        TYPE = Isaac.GetEntityTypeByName("Charles Heli (Funny)"),
+        VARIANT = Isaac.GetEntityVariantByName("Charles Heli (Funny)")
+    },
+    ABB_AURA = {
+        TYPE = Isaac.GetEntityTypeByName("Atom Bomb Baby Aura"),
+        VARIANT = Isaac.GetEntityVariantByName("Atom Bomb Baby Aura")
+    },
+    PP_AFTERIMAGE = {
+        TYPE = Isaac.GetEntityTypeByName("PP Afterimage"),
+        VARIANT = Isaac.GetEntityVariantByName("PP Afterimage")
+    },
+    BOX_PARTICLE = {
+        TYPE = Isaac.GetEntityTypeByName("Box Particle"),
+        VARIANT = Isaac.GetEntityVariantByName("Box Particle")
+    },
+
+
+}
+
+Enums.Familiars = {
+    ROBOBABYZERO = {
+        TYPE = Isaac.GetEntityTypeByName("Robo-Baby Zero"),
+        VARIANT = Isaac.GetEntityVariantByName("Robo-Baby Zero"),
+    },
+    --[[
+    NEEDLESPIANO = {
+        TYPE = Isaac.GetEntityTypeByName("Needles Piano"),
+        VARIANT = Isaac.GetEntityVariantByName("Needles Piano"),
+    },
+    --]]
+    ONYXMARBLE = {
+        TYPE = Isaac.GetEntityTypeByName("Onyx Marble"),
+        VARIANT = Isaac.GetEntityVariantByName("Onyx Marble"),
+    },
+    ATOMBOMBBABY = {
+        TYPE = Isaac.GetEntityTypeByName("Atom Bomb Baby"),
+        VARIANT = Isaac.GetEntityVariantByName("Atom Bomb Baby"),
+    },
+    BHF = {
+        TYPE = Isaac.GetEntityTypeByName("B.H.F."),
+        VARIANT = Isaac.GetEntityVariantByName("B.H.F."),
+    },
+    FAITHFUL_FLEET = {
+        TYPE = Isaac.GetEntityTypeByName("Faithful Fleet"),
+        VARIANT = Isaac.GetEntityVariantByName("Faithful Fleet"),
+    },
 }
 
 Enums.SFX = {
@@ -219,6 +312,12 @@ Enums.SFX = {
     MABELSTOP = Isaac.GetSoundIdByName("MabelStop"),
     MABELVROOM = Isaac.GetSoundIdByName("MabelVroom"),
 
+    PONGPOP = Isaac.GetSoundIdByName("PongPop"),
+
+    PUER_IDLE = Isaac.GetSoundIdByName("PuerIdle"),
+    PUER_TELE = Isaac.GetSoundIdByName("PuerTele"),
+    PUER_SHOOT = Isaac.GetSoundIdByName("PuerShoot"),
+
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
 
@@ -239,7 +338,15 @@ Enums.SFX = {
     KICKCUBE2 = Isaac.GetSoundIdByName("KickCube2"),
     KICKCUBE3 = Isaac.GetSoundIdByName("KickCube3"),
 
-    DEMON_CORE_EFFECT = Isaac.GetSoundIdByName("DemonCoreEffect")
+    DEMON_CORE_EFFECT = Isaac.GetSoundIdByName("DemonCoreEffect"),
+
+    CHARLES_CUE = Isaac.GetSoundIdByName("CharlesCue"),
+    CHARLES_CUE_FUNNY = Isaac.GetSoundIdByName("CharlesCueFunny"),
+    TOY_HELICOPTER_ATTACK = Isaac.GetSoundIdByName("ToyHeli"),
+
+    BHF_EXPLODE_PREPARE = Isaac.GetSoundIdByName("BHFExplodePrepare"),
+    BHF_EXPLODE = Isaac.GetSoundIdByName("BHFExplode"),
+    BHF_RESPAWN = Isaac.GetSoundIdByName("BHFRespawn"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -250,14 +357,32 @@ Enums.Items = {
 
     --Alpha Armor goes here
     ALPHA_ARMOR = Isaac.GetItemIdByName("Alpha Armor"),
-    TREEMAN_SYNDROME = Isaac.GetItemIdByName("Treeman Syndrome")
+    TREEMAN_SYNDROME = Isaac.GetItemIdByName("Treeman Syndrome"),
+    PLACEHOLDER_ITEM = Isaac.GetItemIdByName("Item"),
+    ROBOBABYZERO = Isaac.GetItemIdByName("Robo-Baby Zero"),
+    ONYXMARBLE = Isaac.GetItemIdByName("Onyx Marble"),
+    TOY_HELICOPTER = Isaac.GetItemIdByName("Toy Helicopter"),
+    ATOMBOMBBABY = Isaac.GetItemIdByName("Atom Bomb Baby"),
+    BHF = Isaac.GetItemIdByName("B.H.F."),
+    THE_HUNGER = Isaac.GetItemIdByName("The Hunger"),
+    FIFTY_SHADES = Isaac.GetItemIdByName("50 Shades Of Grey"),
+    FAITHFUL_FLEET = Isaac.GetItemIdByName("Faithful Fleet"),
+    GRUB = Isaac.GetItemIdByName("Grub"),
+    MUD_PIE = Isaac.GetItemIdByName("Mud Pie"),
+    HOUSEPLANT = Isaac.GetItemIdByName("Houseplant"),
+
+    QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
+    STARLIGHT = Isaac.GetItemIdByName("Starlight"),
+    LUCKY_FLOWER = Isaac.GetItemIdByName("Lucky Flower"),
+    PALE_BOX = Isaac.GetItemIdByName("Pale Box"),
 
 }
 
 Enums.Trinkets = {
 
     DEMON_CORE = Isaac.GetTrinketIdByName("Demon Core"),
-    A_SINGLE_RAISIN = Isaac.GetTrinketIdByName("A Single Raisin")
+    A_SINGLE_RAISIN = Isaac.GetTrinketIdByName("A Single Raisin"),
+    PLACEHOLDER_TRINKET = Isaac.GetTrinketIdByName("Trinket")
     --CANKER_SORE = Isaac.GetItemIdByName("Canker Sore"),
     --BOOTLEG_CARTRIDGE = Isaac.GetItemIdByName("Bootleg Cartridge")
 
@@ -274,9 +399,20 @@ Enums.Pickups = {
         TYPE = Isaac.GetEntityTypeByName("Jump Crystal"),
         VARIANT = Isaac.GetEntityVariantByName("Jump Crystal"),
     },
-    STRING = {
-        TYPE = Isaac.GetEntityTypeByName("String"),
-        VARIANT = Isaac.GetEntityVariantByName("String"),
+    ENEMY_CORPSE_SMALL = {
+        TYPE = Isaac.GetEntityTypeByName("Enemy Corpse (Small)"),
+        VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Small)"),
+        SUBTYPE = 0
+    },
+    ENEMY_CORPSE_MEDIUM = {
+        TYPE = Isaac.GetEntityTypeByName("Enemy Corpse (Medium)"),
+        VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Medium)"),
+        SUBTYPE = 1
+    },
+    ENEMY_CORPSE_LARGE = {
+        TYPE = Isaac.GetEntityTypeByName("Enemy Corpse (Large)"),
+        VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Large)"),
+        SUBTYPE = 2
     },
 
 }

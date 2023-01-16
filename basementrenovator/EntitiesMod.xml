@@ -3,8 +3,12 @@
     <entity Image="icons/pickups/kickcube.png" Name="Kick Cube" ID="5" Variant="69" Subtype="30" />
     <entity Image="icons/pickups/jump_crystal.png" Name="Jump Crystal" ID="501" Variant="12" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
+  <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
+  <entity Image="icons/eternalfly.png" Name="Eternal Fly" ID="501" Variant="461" Subtype="0" />
+  <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
+  <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
 
   <!-- Hoard Events -->
   <entity Image="icons/grids/hoarderbasement.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
@@ -39,6 +43,10 @@
             </dropdown>
         </bitfield>
   </entity>
+  <entity Image="icons/ping.png" Name="Ping" ID="501" Variant="8" Subtype="0" />
+  <entity Image="icons/pong.png" Name="Pong" ID="501" Variant="9" Subtype="0" />
+  <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
+  <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
 
   <!-- Downpour Enemies -->
   <entity Image="icons/hydro_knight.png" Name="Hydro Knight" ID="41" Variant="50" Subtype="0" />
@@ -49,6 +57,7 @@
   <!-- Caves Enemies -->
   <entity Image="icons/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
   <entity Image="icons/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
+  <entity Image="icons/funguy.png" Name="Fun Guy" ID="501" Variant="11" Subtype="0" />
 
   <!-- Mines Enemies-->
   <entity Image="icons/kettle.png" Name="Kettle" ID="501" Variant="1" Subtype="0" />
@@ -71,7 +80,7 @@
     </bitfield>
   </entity>
   <!--Gehenna Enemies-->
-  <entity Image="icons/mabel.png" Name="Mabel" ID="501" Variant="11" Subtype="0" />
+  <entity Image="icons/mabel.png" Name="Mabel" ID="501" Variant="10" Subtype="0" />
 
   <!-- Womb Enemies -->
   <entity Image="icons/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" >
@@ -88,6 +97,17 @@
       </spinner>
     </bitfield>
   </entity>
+  <entity Image="icons/Cadre.png" Name="Cadre" ID="19" Variant="0" Subtype="0" >
+    <bitfield Key="Subtype">
+            <dropdown Length="2" ValueOffset="30">
+                <choice>Random</choice>
+                <choice>Globin</choice>
+                <choice>Gazing</choice>
+                <choice>Globlet</choice>
+                <choice>Giblet</choice>
+            </dropdown>
+    </bitfield>
+  </entity>  
 
   <!-- Ascent Enemies -->
   

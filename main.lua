@@ -15,7 +15,7 @@ BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
-local mod = BotB.FF
+BotB.TT = TaintedTreasure
 BotB.StageAPI = StageAPI
 
 
@@ -30,77 +30,34 @@ if not BotB.StageAPI then
     print("[BASEMENTS N BEASTIES] hey buddy you kinda need StageAPI for this")
 end
 
-
+--[[
 local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
 LOCAL_TSIL.Init("scripts/core/loi")
+]]
 
-
---[[
-function LoadScripts(scripts)
+local function LoadScripts(scripts)
 	--load scripts
 	for i,v in ipairs(scripts) do
 		include(v)
 	end
-end --]]
+end
 
---Until that's sorted out...
+BotB.LoadScripts = LoadScripts
 
---CORE
-include("scripts.core.enums")
-include("scripts.core.functions")
+Mod.CoreScripts = {
+    "scripts.core.enums",
+    "scripts.core.functions",
+    "scripts.core.stageapi",
+    "scripts.core.ff_additions",
 
-include("scripts.core.stageapi")
-include("scripts.core.ff_additions")
+    "scripts.loader",
+}
+LoadScripts(Mod.CoreScripts)
 
---ENTITIES
-include("scripts.entities.drifter")
-include("scripts.entities.golfball")
 
---ENEMIES
-include("scripts.entities.enemies.palesniffle")
-include("scripts.entities.enemies.tippytap")
-include("scripts.entities.enemies.batso")
-include("scripts.entities.enemies.croast")
-include("scripts.entities.enemies.seducer")
-include("scripts.entities.enemies.desirer")
-include("scripts.entities.enemies.skooter")
-include("scripts.entities.enemies.chaff")
-include("scripts.entities.enemies.sleazebag")
-include("scripts.entities.enemies.culo")
-include("scripts.entities.enemies.kehehan")
-include("scripts.entities.enemies.hydroknight")
-include("scripts.entities.enemies.giblet")
-include("scripts.entities.enemies.kettle")
-include("scripts.entities.enemies.planecreep")
-include("scripts.entities.enemies.shard")
-include("scripts.entities.enemies.crockpot")
-include("scripts.entities.enemies.innie")
-include("scripts.entities.enemies.inniereverse")
-include("scripts.entities.enemies.gibby")
-include("scripts.entities.enemies.cadre")
-include("scripts.entities.enemies.funguy")
-include("scripts.entities.enemies.mabel")
-
-include("scripts.entities.bosses.thaumaturge")
-
---ITEMS
-include("scripts.entities.items.alphaarmor")
-include("scripts.entities.items.treemansyndrome")
---TRINKETS
-include("scripts.entities.items.trinkets.demoncore")
-include("scripts.entities.items.trinkets.asingleraisin")
---PICKUPS
-include("scripts.entities.items.pickups.kickcube")
-include("scripts.entities.items.pickups.jumpcrystal")
-include("scripts.entities.items.pickups.string")
-
---CONSUMABLES
---include("scripts.entities.items.consumables.basic")
-include("scripts.entities.items.consumables.shotgunkingcards")
-
-include("scripts.entities.items.consumables.mahjongtiles")
 
 --General enemy override. Guess we Ministro now
+
 function BotB:MinistroOverrideTest(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
@@ -133,7 +90,6 @@ end
 
 
 function BotB:anvilEffect(effect)
-    
     if effect:GetSprite():IsEventTriggered("Anvil") then
       --effect:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
       game:ShakeScreen(8)
@@ -206,9 +162,14 @@ end
 --[[
 function Mod:NPCAIChecker(npc,offset)
     local data = npc:GetData()
+    --local nameString = BotB.Functions:GetEntityNameString(npc)
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
         Isaac.RenderText(npc.State .. "          " .. npc.StateFrame, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-30,1,1,1,1)
         Isaac.RenderText(npc.I1 .. "          " .. npc.I2, Isaac.WorldToScreen(npc.Position).X - 35,Isaac.WorldToScreen(npc.Position).Y-20,1,1,1,1)
+        --if nameString ~= nil then
+        --    Isaac.RenderText(nameString, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-50,1,1,1,1)
+        --end
+       
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
 --]]
@@ -216,14 +177,19 @@ Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 
 
-local PLAYER_JEZEBEL = Isaac.GetPlayerTypeByName("Jezebel")
-BotB.JEZ_EXTRA = Isaac.GetCostumeIdByPath("gfx/characters/character_jez_extra.anm2")
-function BotB:playerGetCostume(player)
-    --print("weebis")
-    if player:GetPlayerType() == PLAYER_JEZEBEL then
-        --print("whongus")
-        player:AddNullCostume(BotB.JEZ_EXTRA)
+
+
+local botbTaintedItems = {
+    {CollectibleType.COLLECTIBLE_BBF, Isaac.GetItemIdByName("B.H.F.")},
+}
+
+function BotB.TaintedCompat()
+    if BotB.TT then
+        --BotB.TT:MergeTaintedTreasures(botbTaintedItems)
+        BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_BBF,Isaac.GetItemIdByName("B.H.F."))
+    else
+        print("[BotB] You're missing out on some pretty dope Tainted Treasures compatability, my dude")
     end
 end
 
-Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BotB.playerGetCostume, 0)
+Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, BotB.TaintedCompat)
