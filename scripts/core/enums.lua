@@ -390,6 +390,10 @@ Enums.Trinkets = {
 
 Enums.Pickups = {
 
+    STRING = {
+        TYPE = Isaac.GetEntityTypeByName("String"),
+        VARIANT = Isaac.GetEntityVariantByName("String"),
+    },
     KICKCUBE = {
         TYPE = Isaac.GetEntityTypeByName("Kick Cube"),
         VARIANT = Isaac.GetEntityVariantByName("Kick Cube"),

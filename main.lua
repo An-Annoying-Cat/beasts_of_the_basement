@@ -30,10 +30,10 @@ if not BotB.StageAPI then
     print("[BASEMENTS N BEASTIES] hey buddy you kinda need StageAPI for this")
 end
 
---[[
+
 local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
 LOCAL_TSIL.Init("scripts/core/loi")
-]]
+
 
 local function LoadScripts(scripts)
 	--load scripts

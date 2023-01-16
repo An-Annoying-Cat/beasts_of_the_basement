@@ -78,6 +78,7 @@ Mod.LoadScripts({
     --PICKUPS
     "scripts.entities.items.pickups.kickcube",
     "scripts.entities.items.pickups.jumpcrystal",
+    "scripts.entities.items.pickups.string",
 
 
     --CONSUMABLES
