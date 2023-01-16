@@ -54,6 +54,7 @@ Mod.LoadScripts({
     "scripts.entities.familiars.onyxmarble",
     "scripts.entities.familiars.atombombbaby",
     "scripts.entities.familiars.bhf",
+    "scripts.entities.familiars.faithfulfleet",
 
 
     --ITEMS
@@ -63,6 +64,9 @@ Mod.LoadScripts({
     "scripts.entities.items.toy_helicopter",
     "scripts.entities.items.thehunger",
     "scripts.entities.items.50shades",
+    --"scripts.entities.items.grub",
+    --"scripts.entities.items.mudpie",
+    --"scripts.entities.items.houseplant",
 
 
     --TRINKETS

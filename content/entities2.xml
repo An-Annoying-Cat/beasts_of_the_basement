@@ -347,6 +347,9 @@
     <entity anm2path="familiar/bhf.anm2" tags="cansacrifice" baseHP="20" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="B.H.F." numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2453">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <entity anm2path="familiar/faithfulfleet.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Faithful Fleet" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2454">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
 
 
     <!-- Technical -->

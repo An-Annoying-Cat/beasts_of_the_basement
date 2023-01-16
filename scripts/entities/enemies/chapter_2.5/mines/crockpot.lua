@@ -112,6 +112,7 @@ function CROCKPOT:NPCUpdate(npc)
                 data.CrockBeam.DepthOffset = 128
                 data.crockDot = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.TECH_DOT,0,npc.Position + Vector(0,-14),Vector(0,0),npc):ToEffect()
                 data.crockDot.DepthOffset = 256
+                data.crocDot.CollisionDamage = 0
                 data.crockDot:SetTimeout(1)
             end
             if targetdistance >= data.triggerDistance then

@@ -285,6 +285,10 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("B.H.F."),
         VARIANT = Isaac.GetEntityVariantByName("B.H.F."),
     },
+    FAITHFUL_FLEET = {
+        TYPE = Isaac.GetEntityTypeByName("Faithful Fleet"),
+        VARIANT = Isaac.GetEntityVariantByName("Faithful Fleet"),
+    },
 }
 
 Enums.SFX = {
@@ -362,6 +366,10 @@ Enums.Items = {
     BHF = Isaac.GetItemIdByName("B.H.F."),
     THE_HUNGER = Isaac.GetItemIdByName("The Hunger"),
     FIFTY_SHADES = Isaac.GetItemIdByName("50 Shades Of Grey"),
+    FAITHFUL_FLEET = Isaac.GetItemIdByName("Faithful Fleet"),
+    GRUB = Isaac.GetItemIdByName("Grub"),
+    MUD_PIE = Isaac.GetItemIdByName("Mud Pie"),
+    HOUSEPLANT = Isaac.GetItemIdByName("Houseplant"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),

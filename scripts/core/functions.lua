@@ -2,6 +2,7 @@ local Functions = {}
 
 local Mod = BotB
 local game = Mod.Game
+local mod = FiendFolio
 
 Functions.RNG = include("scripts.core.rngman")
 Functions.Tables = include("scripts.core.table_functions")
@@ -237,5 +238,69 @@ function Functions:ClampToCardinal(vec1, vec2)
 	end
 end
 
+--yoink
+
+
+
+function mod.makeTrinketGolden(trinket)
+	if mod.AchievementTrackers.GoldenTrinketsUnlocked then
+		if trinket > TrinketType.TRINKET_GOLDEN_FLAG then
+			return trinket
+		end
+		return trinket + TrinketType.TRINKET_GOLDEN_FLAG
+	else
+		return trinket
+	end
+end
+
+function Functions.tryMakeTrinketGolden(trinket)
+	local checkingForGolden = false
+	if mod.AchievementTrackers.GoldenTrinketsUnlocked then
+		if trinket > TrinketType.TRINKET_GOLDEN_FLAG then
+			return trinket
+		end
+		
+		checkingForGolden = true
+		local potentialGoldenTrinket = Game():GetItemPool():GetTrinket()
+		checkingForGolden = false
+
+		if potentialGoldenTrinket > TrinketType.TRINKET_GOLDEN_FLAG then
+			return trinket + TrinketType.TRINKET_GOLDEN_FLAG
+		end
+		
+		return trinket
+	else
+		return trinket
+	end
+end
+
+-- Extra item callbacks
+local TrackedItems = {
+	Players = {},
+	Callbacks = {
+		Collect = {},
+		Trinket = {}
+	}
+}
+
+function Mod.AddItemPickupCallback(onAdd, onRemove, item, forceAddOnRepickup)
+	local entry = TrackedItems.Callbacks.Collect[item]
+	local listing = { Add = onAdd, Remove = onRemove, ForceAddOnRepickup = forceAddOnRepickup }
+	if not entry then
+		TrackedItems.Callbacks.Collect[item] = { listing }
+	else
+		table.insert(entry, listing)
+	end
+end
+
+function Mod.AddTrinketPickupCallback(onAdd, onRemove, item, onGulp)
+	local entry = TrackedItems.Callbacks.Trinket[item]
+	local listing = { Add = onAdd, Remove = onRemove, Gulp = onGulp }
+	if not entry then
+		TrackedItems.Callbacks.Trinket[item] = { listing }
+	else
+		table.insert(entry, listing)
+	end
+end
 
 BotB.Functions = Functions
