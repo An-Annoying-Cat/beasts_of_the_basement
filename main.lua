@@ -51,6 +51,7 @@ BotB.LoadScripts = LoadScripts
 Mod.CoreScripts = {
     "scripts.core.enums",
     "scripts.core.functions",
+    "scripts.core.fadeout",
     "scripts.core.stageapi",
     "scripts.core.ff_additions",
 
