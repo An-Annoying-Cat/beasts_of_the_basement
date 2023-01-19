@@ -2,13 +2,16 @@ local Functions = {}
 
 local Mod = BotB
 local game = Mod.Game
-local mod = FiendFolio
+local ffmod = FiendFolio
 
 Functions.RNG = include("scripts.core.rngman")
 Functions.Tables = include("scripts.core.table_functions")
 Mod.Scheduler = include("scripts.core.schedule_data")
-local scheduler = Mod.Scheduler
 
+--- LINEAR INTERPOLATION
+function Functions:Lerp(first,second,percent)
+	return (first + (second - first)*percent)
+end
 ---- GET PLAYERS
 function Functions:GetPlayers()
 	local players = {}
@@ -57,103 +60,6 @@ end
 
 function Functions.GetExpectedFamiliarNum(player, item)
 	return player:GetCollectibleNum(item) + player:GetEffects():GetCollectibleEffectNum(item)
-end
-
---- LINEAR INTERPOLATION
-function Functions:Lerp(first,second,percent)
-	return (first + (second - first)*percent)
-end
-
----works for both entities and sprites
----@param entity Entity
----@param red number @default 0
----@param green number @default 0
----@param blue number @default 0
----@param amount number @default 1
----@param fadeout? boolean @default false
----@param duration? integer @default 0
-function Functions:Colorize(entity, red, green, blue, amount, fadeout, duration)
-	local color = entity.Color
-	local initColor = color
-
-	color:SetColorize(red, green, blue, amount)
-	entity.Color = color
-
-	if fadeout then
-		table.insert(scheduler.FadeoutData, {
-			Entity = entity, ---@type Entity
-			Modifier = "colorize", ---@type "tint"|"colorize"|"offset"
-			InitColor = initColor, ---@type Color
-			Duration = duration, ---@type integer
-			R = red, ---@type number
-			G = green, ---@type number
-			B = blue, ---@type number
-			A = amount, ---@type number
-			Time = 0, ---@type number
-		})
-		Mod:AddCallback(ModCallbacks.MC_POST_RENDER, scheduler.RenderFadeout)
-	end
-end
-
----works for both entities and sprites
----@param entity Entity
----@param red number @default 0
----@param green number @default 0
----@param blue number @default 0
----@param alpha number @default 1
----@param fadeout? boolean @default false
----@param duration? integer @default 0
-function Functions:Tint(entity, red, green, blue, alpha, fadeout, duration)
-	local color = entity.Color
-	local initColor = color
-
-	color:SetTint(red, green, blue, alpha)
-	entity.Color = color
-
-	if fadeout then
-		table.insert(scheduler.FadeoutData, {
-			Entity = entity, ---@type Entity
-			Modifier = "tint", ---@type "tint"|"colorize"|"offset"
-			InitColor = initColor, ---@type Color
-			Duration = duration, ---@type integer
-			R = red, ---@type number
-			G = green, ---@type number
-			B = blue, ---@type number
-			A = alpha, ---@type number
-			Time = 0, ---@type number
-		})
-		Mod:AddCallback(ModCallbacks.MC_POST_RENDER, scheduler.RenderFadeout)
-	end
-end
-
----works for both entities and sprites
----@param entity Entity
----@param red number @default 0
----@param green number @default 0
----@param blue number @default 0
----@param fadeout? boolean @default false
----@param duration? integer @default 0
-function Functions:Offset(entity, red, green, blue, fadeout, duration)
-	local color = entity.Color
-	local initColor = color
-
-	color:SetOffset(red, green, blue)
-	entity.Color = color
-
-	if fadeout then
-		table.insert(scheduler.FadeoutData, {
-			Entity = entity, ---@type Entity
-			Modifier = "offset", ---@type "tint"|"colorize"|"offset"
-			InitColor = initColor, ---@type Color
-			Duration = duration, ---@type integer
-			R = red, ---@type number
-			G = green, ---@type number
-			B = blue, ---@type number
-			A = 0, ---@type number
-			Time = 0, ---@type number
-		})
-		Mod:AddCallback(ModCallbacks.MC_POST_RENDER, scheduler.RenderFadeout)
-	end
 end
 
 function Functions:CreateEnemiesCache()
@@ -242,8 +148,8 @@ end
 
 
 
-function mod.makeTrinketGolden(trinket)
-	if mod.AchievementTrackers.GoldenTrinketsUnlocked then
+function Functions.MakeTrinketGolden(trinket)
+	if ffmod.AchievementTrackers.GoldenTrinketsUnlocked then
 		if trinket > TrinketType.TRINKET_GOLDEN_FLAG then
 			return trinket
 		end
@@ -253,9 +159,9 @@ function mod.makeTrinketGolden(trinket)
 	end
 end
 
-function Functions.tryMakeTrinketGolden(trinket)
+function Functions.TryMakeTrinketGolden(trinket)
 	local checkingForGolden = false
-	if mod.AchievementTrackers.GoldenTrinketsUnlocked then
+	if ffmod.AchievementTrackers.GoldenTrinketsUnlocked then
 		if trinket > TrinketType.TRINKET_GOLDEN_FLAG then
 			return trinket
 		end
