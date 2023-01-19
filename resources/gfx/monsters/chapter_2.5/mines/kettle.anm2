@@ -1,8 +1,8 @@
 <AnimatedActor>
-	<Info CreatedBy="Unknown" CreatedOn="12/19/2022 4:24:18 PM" Version="9" Fps="30"/>
+	<Info CreatedBy="Unknown" CreatedOn="1/18/2023 4:12:48 PM" Version="10" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="monsters\kettle.png" Id="0"/>
+			<Spritesheet Path="kettle.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="pot" Id="0" SpritesheetId="0"/>

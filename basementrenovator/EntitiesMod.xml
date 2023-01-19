@@ -68,6 +68,7 @@
       </checkbox>
     </bitfield>
   </entity>
+  <entity Image="icons/spicy_bony.png" Name="Spicy Bony" ID="227" Variant="20" Subtype="0" />
   <!-- Depths Enemies -->
   <entity Image="icons/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
   <entity Image="icons/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />

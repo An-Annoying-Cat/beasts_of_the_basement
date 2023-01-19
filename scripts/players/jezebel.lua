@@ -95,7 +95,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -106,8 +107,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 1,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,1,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 1,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 
@@ -119,7 +120,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = nil
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -130,7 +132,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = Color(1,1,1)
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -141,7 +144,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 480
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 4,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,4,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 4,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -152,7 +156,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = nil
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -167,8 +172,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 120
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 1,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,1,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 1,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 
@@ -180,7 +185,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -191,7 +197,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -202,7 +209,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end
@@ -213,7 +221,8 @@ function Jezebel:nullHearts(pickup,player,_)
 			data.jezOverhealTimer = data.jezOverhealTimer + 240
 			data.jezBloodColor = Color(1,0,0)
 			--]]
-			playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
+			TSIL.Charge.AddCharge(playerCast,ActiveSlot.SLOT_POCKET,2,true)
+			--playerCast:SetActiveCharge(playerCast:GetActiveCharge(ActiveSlot.SLOT_POCKET) + 2,ActiveSlot.SLOT_POCKET)
 			pickup:Remove()
 			return true
 		end

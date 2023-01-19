@@ -62,6 +62,11 @@
   <group Name="Mines Enemies" >
     <entity Name="Kettle" />
     <entity Name="Crockpot" />
+    <entity Name="Spicy Bony" />
+  </group>
+
+  <group Name="Ashpit Enemies" >
+    <entity Name="Spicy Bony" />
   </group>
 
   <group Name="Gehenna Enemies" >
@@ -348,6 +353,11 @@
   <group Name="BotB Mines Enemies" >
     <entity Name="Kettle" />
     <entity Name="Crockpot" />
+    <entity Name="Spicy Bony" />
+  </group>
+
+  <group Name="Ashpit Enemies" >
+    <entity Name="Spicy Bony" />
   </group>
 
   <group Name="BotB Depths Enemies" >

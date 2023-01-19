@@ -35,6 +35,10 @@ local LOCAL_TSIL = require("scripts/core/loi" .. ".TSIL")
 LOCAL_TSIL.Init("scripts/core/loi")
 ]]
 
+local myFolder = "scripts.core.LOI"
+local LOCAL_TSIL = require(myFolder .. ".TSIL")
+LOCAL_TSIL.Init(myFolder)
+
 local function LoadScripts(scripts)
 	--load scripts
 	for i,v in ipairs(scripts) do
@@ -147,7 +151,7 @@ end, EntityType.ENTITY_PROJECTILE)
 
 
 function Mod.unbiasedFromSuit(suitName)
-    if mod.UnbiasedPickups[suitName] then
+    if BotB.FF.UnbiasedPickups[suitName] then
         local dynamicPool = {}
         for _, data in pairs(mod.UnbiasedPickups[suitName]) do
             if data.Unlocked() then
@@ -182,14 +186,22 @@ Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 local botbTaintedItems = {
     {CollectibleType.COLLECTIBLE_BBF, Isaac.GetItemIdByName("B.H.F.")},
 }
-
-function BotB.TaintedCompat()
+local uhhidk = {}
+function BotB:TaintedCompat()
     if BotB.TT then
         --BotB.TT:MergeTaintedTreasures(botbTaintedItems)
+        print("[BotB] The PogChamp")
         BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_BBF,Isaac.GetItemIdByName("B.H.F."))
+        BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_TWISTED_PAIR,Isaac.GetItemIdByName("Faithful Fleet"))
     else
         print("[BotB] You're missing out on some pretty dope Tainted Treasures compatability, my dude")
     end
 end
-
+--TSIL.AddVanillaCallback(BotB, ModCallbacks.MC_POST_GAME_STARTED, BotB.TaintedCompat,CallbackPriority.LATE)
 Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, BotB.TaintedCompat)
+
+--
+if EID then
+    EID:setModIndicatorName("Beasts Of The Basement")
+end
+--

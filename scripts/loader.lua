@@ -20,7 +20,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.planecreep",
     "scripts.entities.enemies.chapter_1.ms_horf",
 
-    "scripts.entities.enemies.chapter_1.5.dross.culo",
+    "scripts.entities.enemies.chapter_1_5.dross.culo",
 
     "scripts.entities.enemies.chapter_2.tippytap",
     "scripts.entities.enemies.chapter_2.croast",
@@ -28,19 +28,20 @@ Mod.LoadScripts({
 
     "scripts.entities.enemies.chapter_2.flooded_caves.hydroknight",
 
-    "scripts.entities.enemies.chapter_2.5.mines.kettle",
-    "scripts.entities.enemies.chapter_2.5.mines.crockpot",
+    "scripts.entities.enemies.chapter_2_5.mines.kettle",
+    "scripts.entities.enemies.chapter_2_5.mines.crockpot",
+    "scripts.entities.enemies.chapter_2_5.mines.spicybony",
 
     "scripts.entities.enemies.chapter_3.seducer",
     "scripts.entities.enemies.chapter_3.desirer",
     "scripts.entities.enemies.chapter_3.palesniffle",
     "scripts.entities.enemies.chapter_3.puer_puella",
 
-    "scripts.entities.enemies.chapter_3.5.kehehan",
-    "scripts.entities.enemies.chapter_3.5.shard",
+    "scripts.entities.enemies.chapter_3_5.kehehan",
+    "scripts.entities.enemies.chapter_3_5.shard",
     "scripts.entities.bosses.thaumaturge",
 
-    "scripts.entities.enemies.chapter_3.5.gehenna.mabel",
+    "scripts.entities.enemies.chapter_3_5.gehenna.mabel",
 
     "scripts.entities.enemies.chapter_4.womb.giblet",
     "scripts.entities.enemies.chapter_4.womb.gibby",
@@ -64,9 +65,9 @@ Mod.LoadScripts({
     "scripts.entities.items.toy_helicopter",
     "scripts.entities.items.thehunger",
     "scripts.entities.items.50shades",
-    --"scripts.entities.items.grub",
-    --"scripts.entities.items.mudpie",
-    --"scripts.entities.items.houseplant",
+    "scripts.entities.items.grub",
+    "scripts.entities.items.mudpie",
+    "scripts.entities.items.houseplant",
 
 
     --TRINKETS
