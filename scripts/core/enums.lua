@@ -33,6 +33,12 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Sleazebag"),
         VARIANT = Isaac.GetEntityVariantByName("Sleazebag"),
     },
+    
+    --Bony variants
+    SPICY_BONY = {
+        TYPE = Isaac.GetEntityTypeByName("Spicy Bony"),
+        VARIANT = Isaac.GetEntityVariantByName("Spicy Bony"),
+    },
 
     --Keeper Variants
     DESIRER = {

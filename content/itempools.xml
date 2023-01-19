@@ -9,13 +9,13 @@
     <Pool Name="shop">
         <Item Name="Toy Helicopter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
-    <!--
+    
     <Pool Name="boss">
         <Item Name="Grub" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Mud Pie" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Houseplant" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
-    -->
+    
     <Pool Name="goldenChest">
         <Item Name="Toy Helicopter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>

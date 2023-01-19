@@ -30,7 +30,7 @@ function DESIRER:NPCUpdate(npc)
 		                bullet.Height = -10
                         bullet.Parent = npc
                         local bsprite = bullet:GetSprite()
-                        bsprite:Load("gfx/humbled_projectile.anm2", true)
+                        bsprite:Load("gfx/monsters/chapter_3/humbled_projectile.anm2", true)
                         bsprite:Play("Move", true)
                         --bullet:AddEntityFlags(EntityFlag.FLAG_NO_BLOOD_SPLASH)
                         bullet:Update()
@@ -45,14 +45,15 @@ end
 
 function DESIRER:BulletCheck(bullet)
     --Humbled projectile spawnstuff
-    if bullet.Parent ~= nil and bullet.Parent.Variant == BotB.Enums.Entities.DESIRER.VARIANT then
+    if bullet.Parent ~= nil and bullet.Parent.Type == BotB.Enums.Entities.DESIRER.TYPE and bullet.Parent.Variant == BotB.Enums.Entities.DESIRER.VARIANT then
         
       --effect:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
       if bullet:IsDead() then
-        dumbass = Isaac.GetEntityVariantByName("Humbled")
+        local dumbass = Isaac.GetEntityVariantByName("Humbled")
         sfx:Play(SoundEffect.SOUND_CLAP,1,0,false,math.random(120,150)/100)
-        idiot = Isaac.Spawn(EntityType.ENTITY_SWARM_SPIDER, dumbass, 0, bullet.Position, Vector.Zero, bullet.Parent)
+        local idiot = Isaac.Spawn(EntityType.ENTITY_SWARM_SPIDER, dumbass, 0, bullet.Position, Vector.Zero, bullet.Parent)
         idiot:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        bullet:Remove()
       end
     end
     

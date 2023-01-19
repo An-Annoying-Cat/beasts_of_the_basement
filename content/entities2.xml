@@ -41,6 +41,14 @@
             <bestiary anim="WalkVert" overlay="Walk" transform="0,0,1"/>
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
 	</entity>
+
+    <!--Bonies id="227" variants start at 20-->
+    <entity name="Spicy Bony"
+        id="227" variant="20" anm2path="monsters/chapter_2.5/mines/spicy_bony.anm2" baseHP="8" stageHP="2" portrait="1"
+        collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"   friction="1" reroll="true" champion="0">
+            <bestiary anim="WalkVert" overlay="Walk" transform="0,0,1"/>
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
+    </entity>
     
     <!--Keepers     id="86" variants start at 10-->
     <entity name="Desirer" 
