@@ -1,7 +1,8 @@
 local Mod = BotB
+local SKCARDS = {}
 
 if EID then
-	EID:addCard(Mod.Enums.Consumables.CARDS.CORNERED_DESPOT, "Grants a large fire rate boost (-2 fire rate) for the room when within 2 tiles of the room's edge.")
+	EID:addCard(Mod.Enums.Consumables.CARDS.CORNERED_DESPOT, "Grants a large fire rate boost (-2 fire rate) for the room when near the room's edge.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE, "Grants an aura that pushes away projectiles, and repels enemies while lightly damaging them.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.HOMECOMING, "Turns the non-boss enemy with the highest base HP into a rainbow champion.#{{Warning}} Only works on enemies capable of becoming champions in the first place.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT, "Doubles the max health of all enemies in the room.#All affected enemies drop pickups on death.")
@@ -12,22 +13,25 @@ end
 
 --Todo: Literally everything lmao
 
-	function Mod:corneredDespotInit(cardID, player)
-		data = player:GetData()
-		print("CornDes = " .. Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
+	function SKCARDS:corneredDespotInit(cardID, player)
+		local data = player:GetData()
+		--print("CornDes = " .. Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
 		--table.insert(data.activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
-		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
+		data.hasCorneredDespot = true
+		sfx:Play(BotB.Enums.SFX.SHOTGUNKING_CARD,1,0,false,1)
 	end
 
-	function Mod:augustPresenceInit(cardID, player)
-		print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	function SKCARDS:augustPresenceInit(cardID, player)
+		local data = player:GetData()
+		--print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
 		--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
-		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
+		data.hasAugustPresence = true
+		sfx:Play(BotB.Enums.SFX.SHOTGUNKING_CARD,1,0,false,1)
 	end
 
-	function Mod:homecomingTransform(cardID, player)
+	function SKCARDS:homecomingTransform(cardID, player)
 		--print("HomeCom = " .. Mod.Enums.Consumables.CARDS.HOMECOMING)
-		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
+		sfx:Play(BotB.Enums.SFX.SHOTGUNKING_CARD,1,0,false,1)
 		local didTheHomecoming = false
 		--Do the conversion shit here. It's just one enemy and it already drops all the stuff, so it doesn't need a table entry
 		--Iterate through all entities
@@ -53,9 +57,9 @@ end
 		
 	end
 
-	function Mod:ammoDepotTransform(cardID, player)
-		print("AmmDep = " .. Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
-		sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
+	function SKCARDS:ammoDepotTransform(cardID, player)
+		--print("AmmDep = " .. Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
+		sfx:Play(BotB.Enums.SFX.SHOTGUNKING_CARD,1,0,false,1)
 		--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
 		--The above line is only here to keep a callback so enemies can drop pickups when killed
 		--Iterate through all enemies
@@ -83,7 +87,7 @@ end
 		end
 	end
 
-	function BotB:ammoNPCDeathCheck(npc)
+	function SKCARDS:ammoNPCDeathCheck(npc)
 		local data = npc:GetData()
 		--print("DIE")
 		if data.ammoDepotEffect == true then
@@ -108,15 +112,131 @@ end
 		if Mod.Tables:ContainsValue(data.activeRoomCards,Mod.Enums.Consumables.CARDS.CORNERED_DESPOT) then
 			player:AddCacheFlags(CacheFlag.CACHE_FIREDELAY)
   			player:EvaluateItems()
-			sfx:Play(Isaac.GetSoundIdByName("ShotgunKingCard"),1,0,false,1)
+			sfx:Play(BotB.Enums.SFX.SHOTGUNKING_CARD,1,0,false,1)
 		end
 	end
 	--]]
 
-	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.corneredDespotInit, Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
-	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.augustPresenceInit, Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
-	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.homecomingTransform, Mod.Enums.Consumables.CARDS.HOMECOMING)
-	Mod:AddCallback(ModCallbacks.MC_USE_CARD, Mod.ammoDepotTransform, Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
-	Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_KILL, BotB.ammoNPCDeathCheck)
+	Mod:AddCallback(ModCallbacks.MC_USE_CARD, SKCARDS.corneredDespotInit, Mod.Enums.Consumables.CARDS.CORNERED_DESPOT)
+	Mod:AddCallback(ModCallbacks.MC_USE_CARD, SKCARDS.augustPresenceInit, Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	Mod:AddCallback(ModCallbacks.MC_USE_CARD, SKCARDS.homecomingTransform, Mod.Enums.Consumables.CARDS.HOMECOMING)
+	Mod:AddCallback(ModCallbacks.MC_USE_CARD, SKCARDS.ammoDepotTransform, Mod.Enums.Consumables.CARDS.AMMUNITION_DEPOT)
+	Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_KILL, SKCARDS.ammoNPCDeathCheck)
 	--Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, Mod.corneredCache, CacheFlag.CACHE_FIREDELAY)
 	--Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, Mod.corneredPlayerUpdate, 0)
+
+
+
+
+
+
+	function SKCARDS:newRoomCheck()
+		--print("stop the fucking presses")
+		local playerList = TSIL.Players.GetPlayers(true)
+		for i=1,#playerList,1 do
+			local player = playerList[i]:ToPlayer()
+			local data = player:GetData()
+			if data.hasCorneredDespot ~= false then
+				data.hasCorneredDespot = false
+			end
+			if data.hasAugustPresence ~= false then
+				data.hasAugustPresence = false
+			end
+		end
+	end
+	Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, SKCARDS.newRoomCheck)
+
+	function SKCARDS:playerUpdate(player)
+		local data = player:GetData()
+		local level = Game():GetLevel()
+		if data.hasCorneredDespot == nil then
+			data.hasCorneredDespot = false
+			data.CorneredDespotBaseStacks = 1
+			data.hasAugustPresence = false
+			data.AugustPresenceBaseStacks = 1
+		end
+		player:AddCacheFlags(CacheFlag.CACHE_FIREDELAY)
+		player:EvaluateItems()
+	end
+	Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, SKCARDS.playerUpdate, 0)
+
+	local corneredDespotBonus={
+		TEAR=0.8,
+	}
+
+	--Stats
+	--240 is baseline amt of decay frames for stat boost
+	function SKCARDS:corneredDespotCache(player, cacheFlag)
+		local data = player:GetData()
+		
+		--Multiplier is to be changed after measuring the player's position and shit
+		local Multiplier = 0
+		if data.hasCorneredDespot then
+			local room = Game():GetRoom()
+			local topLeft = room:GetTopLeftPos()
+			local bottomRight = room:GetBottomRightPos()
+			local sizeVec = bottomRight - topLeft
+			local xLowThreshold = (topLeft.X + 0.2*sizeVec.X)
+			local xHighThreshold = (topLeft.X + 0.8*sizeVec.X)
+			local yLowThreshold = (topLeft.Y + 0.2*sizeVec.Y)
+			local yHighThreshold = (topLeft.Y + 0.8*sizeVec.Y)
+			if player.Position.X <= xLowThreshold then
+				Multiplier = Multiplier + ((xLowThreshold - player.Position.X)/40)
+			elseif player.Position.X >= xHighThreshold then 
+				Multiplier = Multiplier + ((player.Position.X - xHighThreshold)/40)
+			end
+			if player.Position.Y <= yLowThreshold then
+				Multiplier = Multiplier + ((yLowThreshold - player.Position.Y)/20)
+				--print(player.Position.Y .. " and " .. yLowThreshold .. ", so " .. yLowThreshold - player.Position.Y)
+			elseif player.Position.Y >= yHighThreshold then 
+				Multiplier = Multiplier + ((player.Position.Y - yHighThreshold)/20)
+			end
+			if player:HasCollectible(CollectibleType.COLLECTIBLE_TAROT_CLOTH, false) then
+				Multiplier = Multiplier * 2
+			end
+			
+			--print(Multiplier)
+			if (cacheFlag&CacheFlag.CACHE_FIREDELAY)==CacheFlag.CACHE_FIREDELAY then
+			  local tps=30.0/(player.MaxFireDelay+1.0)
+			  player.MaxFireDelay=30.0/(math.max(0.1,tps+Multiplier*corneredDespotBonus.TEAR))-1
+			end
+		elseif data.hasCorneredDespot == false or data.hasCorneredDespot == nil then
+			return
+		end
+	end
+	Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, SKCARDS.corneredDespotCache)
+
+
+
+	function SKCARDS:augustPresenceRepelNPC(npc)
+		local playerList = TSIL.Players.GetPlayers(true)
+		for i=1,#playerList,1 do
+			local player = playerList[i]:ToPlayer()
+			local data = player:GetData()
+			if data.hasAugustPresence ~= false then
+				if npc:IsVulnerableEnemy() then
+					local npcDist = (player.Position - npc.Position):Length()
+					if npcDist <= 100 then
+						npc.Velocity = (0.99 * npc.Velocity) + (((0.01 * (player.Position - npc.Position)):Rotated(180)):Resized(5))
+					end
+				end
+			end
+		end
+	end
+	Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, SKCARDS.augustPresenceRepelNPC)
+
+
+	function SKCARDS:augustPresenceRepelProj(npc)
+		local playerList = TSIL.Players.GetPlayers(true)
+		for i=1,#playerList,1 do
+			local player = playerList[i]:ToPlayer()
+			local data = player:GetData()
+			if data.hasAugustPresence ~= false then
+				local npcDist = (player.Position - npc.Position):Length()
+				if npcDist <= 75 then
+					npc.Velocity = (0.99 * npc.Velocity) + (((0.01 * (player.Position - npc.Position)):Rotated(180)):Resized(2))
+				end
+			end
+		end
+	end
+	Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, SKCARDS.augustPresenceRepelProj)

@@ -84,7 +84,7 @@ Mod.LoadScripts({
     --CONSUMABLES
     --"scripts.entities.consumables.basic",
     "scripts.entities.consumables.shotgunkingcards",
-
+    "scripts.entities.consumables.ojcards",
     "scripts.entities.consumables.mahjongtiles",
 
 
