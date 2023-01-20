@@ -10,7 +10,7 @@ function MS_HORF:MsHorfAI(npc)
 		local target = npc:GetPlayerTarget()
 		local path = npc.Pathfinder
 		local r = npc:GetDropRNG()
-		local room = game:GetRoom()
+		local room = Mod.Game:GetRoom()
 
 		local headChoice = Entities.MS_HORF_HEAD
 		local speeds = {4, 0.6}
@@ -126,7 +126,7 @@ function MS_HORF:MsHorfHeadAI(npc)
 			if not d.BotB_thrown then
 				npc:Remove()
 			end
-			npc.Velocity = Mod.Functions:ClampToCardinal(npc.Position, Game():GetNearestPlayer(npc.Position).Position):Resized(20)
+			npc.Velocity = Mod.Functions:PositionToAxisDirection(npc.Position, Game():GetNearestPlayer(npc.Position).Position):Resized(20)
 			d.BotB_init = true
 		end
 

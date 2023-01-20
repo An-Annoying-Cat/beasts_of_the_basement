@@ -19,6 +19,7 @@
     <passive id="16" quality="2" name="Mud Pie" description="HP up + cleanliness down" gfx="mudpie.png" maxhearts="1" hearts="2" tags="food"/>
     <familiar id="17" quality="3" name="Faithful Fleet" description="Sentinel quartet" gfx="faithful_fleet.png" tags="angel"/>
     <passive id="18" quality="2" name="Houseplant" description="HP up + succulent inside" gfx="houseplant.png" maxhearts="1" hearts="2" tags="food"/>
+    <passive id="19" quality="3" name="Bib" description="Tears up + messy eater" gfx="placeholder.png" tags="tearsup"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
