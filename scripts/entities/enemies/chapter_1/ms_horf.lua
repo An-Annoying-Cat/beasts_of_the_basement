@@ -10,7 +10,7 @@ function MS_HORF:MsHorfAI(npc)
 		local target = npc:GetPlayerTarget()
 		local path = npc.Pathfinder
 		local r = npc:GetDropRNG()
-		local room = game:GetRoom()
+		local room = Mod.Game:GetRoom()
 
 		local headChoice = Entities.MS_HORF_HEAD
 		local speeds = {4, 0.6}

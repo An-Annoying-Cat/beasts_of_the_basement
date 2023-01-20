@@ -376,6 +376,7 @@ Enums.Items = {
     GRUB = Isaac.GetItemIdByName("Grub"),
     MUD_PIE = Isaac.GetItemIdByName("Mud Pie"),
     HOUSEPLANT = Isaac.GetItemIdByName("Houseplant"),
+    BIB = Isaac.GetItemIdByName("Bib"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),

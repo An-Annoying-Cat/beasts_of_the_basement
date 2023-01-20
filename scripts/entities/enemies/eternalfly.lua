@@ -18,8 +18,16 @@ function ETERNAL_FLY:NPCUpdate(npc)
  
                 d.init = true
                 return
+                -- Mod.Scheduler.Schedule(1, function(entity, NPC)
+                --     local fly = Isaac.Spawn(FiendFolio.FF.DeadFlyOrbital.ID, FiendFolio.FF.DeadFlyOrbital.Var, 0, NPC.Position, Vector.Zero, entity):ToNPC()
+                --     NPC:Remove()
+                --     fly.Parent = entity
+                --     fly:GetData().rotval = math.random(100)
+                --     fly:Update()
+                -- end, {ent, npc})
+                -- --d.init = true
             end
         end
     end
 end
-Isaac.AddPriorityCallback(Mod, ModCallbacks.MC_NPC_UPDATE, CallbackPriority.LATE, ETERNAL_FLY.NPCUpdate, Entities.ETERNAL_FLY_DUMMY.TYPE)
+Mod:AddPriorityCallback(ModCallbacks.MC_NPC_UPDATE, CallbackPriority.LATE, ETERNAL_FLY.NPCUpdate, Entities.ETERNAL_FLY_DUMMY.TYPE)
