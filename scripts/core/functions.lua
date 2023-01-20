@@ -122,24 +122,23 @@ function Functions:GetEntityNameString(entity)
 end
 
 
-function Functions:ClampToCardinal(vec1, vec2)
+function Functions:PositionToAxisDirection(vec1, vec2)
 
-	if math.abs(vec1.X - vec2.X) < math.abs(vec1.Y - vec2.Y) then
-		if vec1.X - vec2.X < 0 then
-			
+	if math.abs(vec2.X - vec1.X) > math.abs(vec2.Y - vec1.Y) then
+		if vec2.X - vec1.X < 0 then
 			-- Left
-			return Vector(0, -vec1.Y)
+			return Vector(vec2.X - vec1.X, 0)
 		else
 			-- Right
-			return Vector(0, vec1.Y)
+			return Vector(vec2.X - vec1.X, 0)
 		end
 	else
-		if vec1.Y - vec2.Y < 0 then
-			-- Up
-			return Vector(vec1.X, 0)
-		else
+		if vec2.Y - vec1.Y < 0 then
 			-- Down
-			return -Vector(vec1.X, 0)
+			return Vector(0, vec2.Y - vec1.Y)
+		else
+			-- Up
+			return Vector(0, vec2.Y - vec1.Y)
 		end
 	end
 end

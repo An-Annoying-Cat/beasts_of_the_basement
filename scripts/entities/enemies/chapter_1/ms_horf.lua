@@ -126,7 +126,7 @@ function MS_HORF:MsHorfHeadAI(npc)
 			if not d.BotB_thrown then
 				npc:Remove()
 			end
-			npc.Velocity = Mod.Functions:ClampToCardinal(npc.Position, Game():GetNearestPlayer(npc.Position).Position):Resized(20)
+			npc.Velocity = Mod.Functions:PositionToAxisDirection(npc.Position, Game():GetNearestPlayer(npc.Position).Position):Resized(20)
 			d.BotB_init = true
 		end
 
