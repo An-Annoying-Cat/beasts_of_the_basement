@@ -7,6 +7,10 @@
 BotB = RegisterMod("Beasts of the Basement", 1)
 local Mod = BotB
 
+local myFolder = "scripts.core.LOI"
+local LOCAL_TSIL = require(myFolder .. ".TSIL")
+LOCAL_TSIL.Init(myFolder)
+
 --globals
 BotB.Game = Game()
 BotB.Config = Isaac.GetItemConfig()
@@ -29,14 +33,13 @@ if not BotB.StageAPI then
     Isaac.DebugString("[BASEMENTS N BEASTIES] hey buddy you kinda need StageAPI for this")
     print("[BASEMENTS N BEASTIES] hey buddy you kinda need StageAPI for this")
 end
-
+--[[
 local myFolder = "scripts.core.LOI"
 local LOCAL_TSIL = require(myFolder .. ".TSIL")
 LOCAL_TSIL.Init(myFolder)
+]]
 
-local myFolder = "scripts.core.LOI"
-local LOCAL_TSIL = require(myFolder .. ".TSIL")
-LOCAL_TSIL.Init(myFolder)
+
 
 local function LoadScripts(scripts)
 	--load scripts
@@ -187,6 +190,7 @@ local botbTaintedItems = {
     {CollectibleType.COLLECTIBLE_BBF, Isaac.GetItemIdByName("B.H.F.")},
 }
 local uhhidk = {}
+
 function BotB:TaintedCompat()
     if BotB.TT then
         --BotB.TT:MergeTaintedTreasures(botbTaintedItems)

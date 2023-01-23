@@ -20,7 +20,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.planecreep",
     "scripts.entities.enemies.chapter_1.ms_horf",
 
-    "scripts.entities.enemies.chapter_1_5.dross.culo",
+    "scripts.entities.enemies.chapter_1_alt.dross.culo",
 
     "scripts.entities.enemies.chapter_2.tippytap",
     "scripts.entities.enemies.chapter_2.croast",
@@ -28,20 +28,20 @@ Mod.LoadScripts({
 
     "scripts.entities.enemies.chapter_2.flooded_caves.hydroknight",
 
-    "scripts.entities.enemies.chapter_2_5.mines.kettle",
-    "scripts.entities.enemies.chapter_2_5.mines.crockpot",
-    "scripts.entities.enemies.chapter_2_5.mines.spicybony",
+    "scripts.entities.enemies.chapter_2_alt.mines.kettle",
+    "scripts.entities.enemies.chapter_2_alt.mines.crockpot",
+    "scripts.entities.enemies.chapter_2_alt.mines.spicybony",
 
     "scripts.entities.enemies.chapter_3.seducer",
     "scripts.entities.enemies.chapter_3.desirer",
     "scripts.entities.enemies.chapter_3.palesniffle",
     "scripts.entities.enemies.chapter_3.puer_puella",
 
-    "scripts.entities.enemies.chapter_3_5.kehehan",
-    "scripts.entities.enemies.chapter_3_5.shard",
+    "scripts.entities.enemies.chapter_3_alt.kehehan",
+    "scripts.entities.enemies.chapter_3_alt.shard",
     "scripts.entities.bosses.thaumaturge",
 
-    "scripts.entities.enemies.chapter_3_5.gehenna.mabel",
+    "scripts.entities.enemies.chapter_3_alt.gehenna.mabel",
 
     "scripts.entities.enemies.chapter_4.womb.giblet",
     "scripts.entities.enemies.chapter_4.womb.gibby",
@@ -74,11 +74,13 @@ Mod.LoadScripts({
     "scripts.entities.items.trinkets.demoncore",
     "scripts.entities.items.trinkets.asingleraisin",
     "scripts.entities.items.trinkets.placeholder_trinket",
+    "scripts.entities.items.trinkets.cankersore",
 
 
     --PICKUPS
     "scripts.entities.items.pickups.kickcube",
     "scripts.entities.items.pickups.jumpcrystal",
+    "scripts.entities.items.pickups.gigapenny",
 
 
     --CONSUMABLES

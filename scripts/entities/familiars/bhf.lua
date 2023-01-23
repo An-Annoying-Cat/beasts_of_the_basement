@@ -60,7 +60,7 @@ function BHF:FamiliarUpdate(npc)
                 npc:MoveDiagonally(1)
             end
             for i, entity in ipairs(Isaac.GetRoomEntities()) do
-                if entity:IsActiveEnemy(false) and entity:IsVulnerableEnemy() then
+                if entity:IsActiveEnemy(false) and entity:IsVulnerableEnemy() and EntityRef(entity).IsFriendly ~= true then
                     if (entity.Position - npc.Position):Length() <= data.triggerDist then
                         sfx:Play(BotB.Enums.SFX.BHF_EXPLODE_PREPARE,0.5,0,false,1.2)
                         npc.Velocity = Vector.Zero

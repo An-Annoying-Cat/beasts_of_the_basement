@@ -231,6 +231,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Puella"),
         VARIANT = Isaac.GetEntityVariantByName("Puella"),
     },
+    OJ_TRAPCARD = {
+        TYPE = Isaac.GetEntityTypeByName("OJ Trap Card"),
+        VARIANT = Isaac.GetEntityVariantByName("OJ Trap Card"),
+    },
 
 
     --Effects
@@ -420,6 +424,11 @@ Enums.Pickups = {
         TYPE = Isaac.GetEntityTypeByName("Enemy Corpse (Large)"),
         VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Large)"),
         SUBTYPE = 2
+    },
+    GIGA_PENNY = {
+        TYPE = Isaac.GetEntityTypeByName("Giga Penny"),
+        VARIANT = Isaac.GetEntityVariantByName("Giga Penny"),
+        SUBTYPE = 31
     },
 
 }

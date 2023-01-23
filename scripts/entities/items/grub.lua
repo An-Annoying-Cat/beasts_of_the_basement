@@ -15,7 +15,7 @@ end, nil, BotB.Enums.Items.GRUB)
 --]]
 --
 function GRUB:onItemGet(player, type)
-	print("test")
+	--print("test")
 	local room = Game():GetRoom()
 	if type == Isaac.GetItemIdByName("Grub") then
 		Isaac.Spawn(5, 10, HeartSubType.HEART_ROTTEN, room:FindFreePickupSpawnPosition(player.Position, 20), Vector.Zero, nil)

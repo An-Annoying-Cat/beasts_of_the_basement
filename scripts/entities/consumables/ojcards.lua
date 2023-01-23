@@ -5,14 +5,14 @@ if EID then
 	EID:addCard(Mod.Enums.Consumables.CARDS.OH_MY_FRIEND, "Has a 50/50 chance of either effect: #{{ArrowUp}} Uses {{Collectible".. CollectibleType.COLLECTIBLE_DELIRIOUS .."}} Delirious. #{{ArrowDown}} Spawns a random boss from the floor you're on, and grants Betrayal. #{{Warning}} Should the latter occur, the boss will start with its health at 75% of its normal maximum. Killing this boss will also spawn a pedestal item.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.FLIP_OUT, "The next time the player gets hurt, negate the damage. All enemies and bosses in the room take 40 damage (ignoring boss armor!) and drop 3 pennies when this occurs.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.MIMYUUS_HAMMER, "When used, this card is placed on the ground where it idly spins. #The first enemy to step on this card takes 60 damage, and the card is consumed in the process.")
-	EID:addCard(Mod.Enums.Consumables.CARDS.FLAMETHROWER, "When used, this card is placed on the ground where it idly spins. #The first enemy to step on this card is instantly killed, and drops a number of cards proportional to its max health.")
+	EID:addCard(Mod.Enums.Consumables.CARDS.FLAMETHROWER, "When used, this card is placed on the ground where it idly spins. #The first enemy to step on this card is instantly killed, and drops a number of cards proportional to its max health. #{{Warning}} Bosses are not instantly killed. However, they still drop cards (although at a decreased rate), and their health is lowered to one quarter of its maximum.")
 end
 
 --Use player:GetData().activeRoomCards for cards whose effects last for one room
 --Use player:GetData().activeFloorCards for cards whose effects last for the floor
 
 
-
+--Flip Out
 function OJCARDS:flipOutInit(cardID, player)
 	local data = player:GetData()
 	--print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
@@ -26,6 +26,178 @@ function OJCARDS:flipOutInit(cardID, player)
 end
 Mod:AddCallback(ModCallbacks.MC_USE_CARD, OJCARDS.flipOutInit, Mod.Enums.Consumables.CARDS.FLIP_OUT)
 
+--Mimyuu's Hammer
+function OJCARDS:mimyuusHammerInit(cardID, player)
+	local data = player:GetData()
+	--print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	if player:HasCollectible(CollectibleType.COLLECTIBLE_TAROT_CLOTH, false) then
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+	else
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+	end
+	sfx:Play(BotB.Enums.SFX.OJ_CARD,1,0,false,1)
+end
+Mod:AddCallback(ModCallbacks.MC_USE_CARD, OJCARDS.mimyuusHammerInit, Mod.Enums.Consumables.CARDS.MIMYUUS_HAMMER)
+
+--Flamethrower
+function OJCARDS:flameThrowerInit(cardID, player)
+	local data = player:GetData()
+	--print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	if player:HasCollectible(CollectibleType.COLLECTIBLE_TAROT_CLOTH, false) then
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,1,player.Position,Vector.Zero,player)
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,1,player.Position,Vector.Zero,player)
+	else
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,1,player.Position,Vector.Zero,player)
+	end
+	sfx:Play(BotB.Enums.SFX.OJ_CARD,1,0,false,1)
+end
+Mod:AddCallback(ModCallbacks.MC_USE_CARD, OJCARDS.flameThrowerInit, Mod.Enums.Consumables.CARDS.FLAMETHROWER)
+
+
+
+
+
+
+
+--Stage --> StageType --> (Type, variant, subtype)
+local ohMyFriendBossTable = {
+	--Stage 1 (values 1 and 2)
+	{
+		--Basement
+		{
+
+		},
+		--Cellar
+		{
+
+		},
+		--Burning Basement
+		{
+
+		},
+		--Fuckin' deprecated value. thanks greed.
+		{},
+		--Downpour
+		{
+
+		},
+		--Dross
+		{
+
+		}
+	},
+	--Stage 2 (values 3 and 4)
+	{
+		--Caves
+		{
+
+		},
+		--Catacombs
+		{
+
+		},
+		--Flooded
+		{
+
+		},
+		--Fuckin' deprecated value. thanks greed.
+		{},
+		--Mines
+		{
+
+		},
+		--Ashpit
+		{
+
+		}
+	},
+	--Stage 3 (values 5 and 6)
+	{
+		--Depths
+		{
+
+		},
+		--Necropolis
+		{
+
+		},
+		--Dank
+		{
+
+		},
+		--Fuckin' deprecated value. thanks greed.
+		{},
+		--Maus
+		{
+
+		},
+		--Gehenna
+		{
+
+		}
+	},
+	--Stage 4 (values 7 and 8)
+	{
+		--Womb
+		{
+
+		},
+		--Utero
+		{
+
+		},
+		--Scarred
+		{
+
+		},
+		--Fuckin' deprecated value. thanks greed.
+		{},
+		--Corpse
+		{
+
+		},
+		--"""not done""" aka Mortis
+		{
+
+		}
+	},
+	--Random for all onward (sheol...home)
+
+}
+
+
+
+
+
+function OJCARDS:ohMyFriendInit(cardID, player)
+	local data = player:GetData()
+	--print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
+	if player:HasCollectible(CollectibleType.COLLECTIBLE_TAROT_CLOTH, false) then
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+	else
+		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+	end
+	sfx:Play(BotB.Enums.SFX.OJ_CARD,1,0,false,1)
+end
+Mod:AddCallback(ModCallbacks.MC_USE_CARD, OJCARDS.ohMyFriendInit, Mod.Enums.Consumables.CARDS.OH_MY_FRIEND)
+
+
+
+
+
+
+
+
+
+
+
+
+--init the flip out value
 function OJCARDS:playerUpdate(player)
 	local data = player:GetData()
 	local level = Game():GetLevel()
@@ -58,3 +230,72 @@ function OJCARDS:flipOutHurt(player)
 	end
 
 Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, OJCARDS.flipOutHurt, EntityType.ENTITY_PLAYER)
+
+
+--Trap card shit
+local Entities = BotB.Enums.Entities
+--Subtype 0: Mimyuu's Hammer
+--Subtype 1: Flamethrower
+function OJCARDS:NPCUpdate(npc)
+    local data = npc:GetData()
+	local sprite = npc:GetSprite()
+    if npc.Type == BotB.Enums.Entities.OJ_TRAPCARD.TYPE and npc.Variant == BotB.Enums.Entities.OJ_TRAPCARD.VARIANT then 
+        if data.cardMode == nil then
+			if npc.SubType ~= nil then
+				data.cardMode = npc.SubType
+			else
+				data.cardMode = 0
+			end
+			sprite:Play("Spin")
+		end
+    end
+end
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, OJCARDS.NPCUpdate, Isaac.GetEntityTypeByName("OJ Trap Card"))
+
+function OJCARDS:executeTrapCard(card, collider)
+	local data = card:GetData()
+	if card.Variant == BotB.Enums.Entities.OJ_TRAPCARD.VARIANT then
+		if collider:IsVulnerableEnemy() then
+			if data.cardMode == 0 then
+				--Mimyuu's Hammer
+				collider:AddConfusion(EntityRef(card), 120, false)
+				collider:TakeDamage(60, DamageFlag.DAMAGE_CRUSH | DamageFlag.DAMAGE_IGNORE_ARMOR, EntityRef(card), 0)
+				Game():ShakeScreen(30)
+				sfx:Play(BotB.FF.Sounds.FunnyBonk,1,0,false,1)
+			elseif data.cardMode == 1 then
+				--Flamethrower
+				local cardQueue = 1
+				if collider:IsBoss() then
+					collider.HitPoints = math.ceil(collider.MaxHitPoints / 4)
+					cardQueue = math.ceil((collider.MaxHitPoints / 10) * 0.75)
+				else
+					cardQueue = math.ceil(collider.MaxHitPoints / 10)
+					sfx:Play(BotB.FF.Sounds.SmashHitFatal,1,0,false,1)
+					Game():ShakeScreen(60)
+					collider:BloodExplode()
+					collider:BloodExplode()
+					collider:Kill()
+				end
+				--Failsafe
+				if cardQueue == 0 then
+					cardQueue = 1
+				end
+				--Flamethrower card spawning
+				for i=0,cardQueue,1 do
+					local toSpawn = 0
+					if toSpawn == 0 then
+						--basic card
+						Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TAROTCARD,0,card.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),card)
+					end
+				end
+			end
+			Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,card.Position,Vector.Zero,card)
+			card:Remove()
+		else
+			if collider.Type == EntityType.ENTITY_PLAYER or collider.Type == EntityType.ENTITY_PICKUP or collider.Type == EntityType.ENTITY_FAMILIAR then
+				return true
+			end
+		end
+	end
+end
+Mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, OJCARDS.executeTrapCard, Isaac.GetEntityTypeByName("OJ Trap Card"))

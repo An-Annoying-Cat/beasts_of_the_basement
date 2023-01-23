@@ -301,7 +301,7 @@ function KICKCUBE:KickCubeUpdate(pickup)
                             if toSpawn == 0 then
                                 --basic card
                                 Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TAROTCARD,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
-                            elseif tospawn == 1 then
+                            elseif toSpawn == 1 then
                                 local objectRNG = player:GetCollectibleRNG(mod.ITEM.COLLECTIBLE.DICE_GOBLIN)
                                 local pickupType = mod.GetRandomObject(objectRNG:Next())
                                 Isaac.Spawn(EntityType.ENTITY_PICKUP,300,pickupType,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
@@ -313,7 +313,7 @@ function KICKCUBE:KickCubeUpdate(pickup)
                             if toSpawn == 0 then
                                 --basic card
                                 Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TAROTCARD,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
-                            elseif tospawn == 1 then
+                            elseif toSpawn == 1 then
                                 local objectRNG = player:GetCollectibleRNG(mod.ITEM.COLLECTIBLE.DICE_GOBLIN)
                                 local pickupType = mod.GetRandomObject(objectRNG:Next())
                                 Isaac.Spawn(EntityType.ENTITY_PICKUP,300,pickupType,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
@@ -324,14 +324,14 @@ function KICKCUBE:KickCubeUpdate(pickup)
                 if data.rewardType == 7 then
                     --Batteries
                     if data.rewardTier == 1 then
-                        spawnedCard = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_LIL_BATTERY,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
+                        local spawnedCard = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_LIL_BATTERY,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
                     elseif data.rewardTier == 2 then
                         for i=0,3,1 do
-                            spawnedCard = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_LIL_BATTERY,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
+                            local spawnedCard = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_LIL_BATTERY,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
                         end
                     else
                         for i=0,6,1 do
-                            spawnedCard = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_LIL_BATTERY,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
+                            local spawnedCard = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_LIL_BATTERY,0,pickup.Position,Vector((0.1*math.random(-50,50)),(0.1*math.random(-50,50))),pickup)
                         end
                     end
                 end
@@ -342,7 +342,7 @@ function KICKCUBE:KickCubeUpdate(pickup)
                     elseif data.rewardTier == 2 then
                         for i=0,1,1 do
                             if math.random(0,1) == 1 then
-                                trinketToGold = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
+                                local trinketToGold = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
                                 trinketToGold:ToPickup():Morph(5, 350, trinketToGold.SubType + 32768, false)
                             else
                                 Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
@@ -351,12 +351,12 @@ function KICKCUBE:KickCubeUpdate(pickup)
                     else
                         for i=0,2,1 do
                             if math.random(0,1) == 1 then
-                                trinketToGold = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
+                                local trinketToGold = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
                                 trinketToGold:ToPickup():Morph(5, 350, trinketToGold.SubType + 32768, false)
                             else
-                                trinketToGold = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
+                                local trinketToGold = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
                             end
-                            trinketGolded = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
+                            local trinketGolded = Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_TRINKET,0,pickup.Position,Vector((0.1*math.random(-150,150)),(0.1*math.random(-150,150))),pickup)
                             trinketGolded:ToPickup():Morph(5, 350, trinketToGold.SubType + 32768, false)
                         end
 
