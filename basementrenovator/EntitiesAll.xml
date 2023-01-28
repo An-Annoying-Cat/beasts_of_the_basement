@@ -1,39 +1,40 @@
 <data>
 
-  <group Name="Pickups">
+  <group Name="BotB Chests">
     <entity Name="Kick Cube" />
+  </group>
+
+  <group Name="BotB Global Enemies">
+    <entity Name="Eternal Fly" />
+  </group>
+
+  <group Name="BotB Crawlspace Events">
     <entity Name="Jump Crystal" />
   </group>
 
-  <!--——— Floors ———-->
-  <group Name="Basement">
-    <group Name="Hoarder Basement Events" Label="Hoard Events" />
-    <group Name="Hoarder Basement Obstacles" Label="Hoard Obstacles" />
-    <group Name="Hoarder Basement Enemies" Label="Hoard Enemies" />
-  </group>
-
-  <group Name="Chapter 1 (Main Path) Enemies" >
-    <entity Name="Ms. Horf" />  
+  <group Name="BotB Chapter 1 (Main Path) Enemies" >  
+    <entity Name="Ms. Horf" />
     <entity Name="Chaff" />
     <entity Name="Batso" />
-    <entity Name="Eternal Fly" />
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
   </group>
 
-  <group Name="Chapter 2 (Main Path) Enemies" >  
+  <group Name="BotB Chapter 2 (Main Path) Enemies" >  
     <entity Name="Tippytap" />
     <entity Name="Croast" />
     <entity Name="Fun Guy" />
-    <entity Name="Hydro Knight" />
-    <entity Name="Eternal Fly" />
   </group>
 
-  <group Name="Hoarder Basement Events" >
+  <group Name="BotB Chapter 2 (Alt Path) Enemies" >  
+    <entity Name="Spicy Bony" />
+  </group>
+
+  <group Name="BotB Hoard Events" >
     <entity Name="Hoarder Basement Backdrop" />
   </group>
 
-  <group Name="Hoarder Basement Enemies" >
+  <group Name="BotB Hoard Enemies" >
     <entity Name="Acme" />
     <entity Name="Sleazebag" />
     <entity Name="Skooter" />
@@ -41,48 +42,76 @@
     <entity Name="Plane Creep" />
     <entity Name="Innie (Turn right)" />
     <entity Name="Innie (Turn left)" />
-    <entity Name="Ping" />
-    <entity Name="Pong" />
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
   </group>
-
-  <group Name="Downpour Enemies" >
-    <entity Name="Hydro Knight" />
-  </group>
   
-  <group Name="Dross Enemies" >
+  <group Name="BotB Dross Enemies" >
     <entity Name="Culo" />
   </group>
 
-  <group Name="Flooded Caves Enemies" >
+  <group Name="BotB Caves Enemies" >
+    <entity Name="Fun Guy" />
+    <entity Name="Tippytap" />
+    <entity Name="Croast" />
+  </group>
+
+  <group Name="BotB Flooded Caves Enemies" >
     <entity Name="Hydro Knight" />
   </group>
 
-  <group Name="Mines Enemies" >
+  <group Name="BotB Mines Enemies" >
     <entity Name="Kettle" />
     <entity Name="Crockpot" />
-    <entity Name="Spicy Bony" />
   </group>
 
-  <group Name="Ashpit Enemies" >
-    <entity Name="Spicy Bony" />
+  <group Name="BotB Depths Enemies" >
+    <entity Name="Desirer" />
+    <entity Name="Humbled" />
+    <entity Name="Seducer" />
+    <entity Name="Pale Sniffle" />
   </group>
 
-  <group Name="Gehenna Enemies" >
+  <group Name="BotB Gehenna Enemies" >
     <entity Name="Mabel" />
   </group>
 
-  <group Name="Womb Enemies" >
+  <group Name="BotB Womb Enemies" >
     <entity Name="Giblet" />
     <entity Name="Gibby" />
     <entity Name="Cadre" />
   </group>
-  
+
+
   <!--——— BotB Tab ———-->
   <tab Name="BotB"/>
-    
+      
   <group Name="BotB">
+    <group Name="BotB Pickups" Label="Pickups">
+      <group Name="BotB Hearts" />
+      <group Name="BotB Coins" />
+      <group Name="BotB Keys" />
+      <group Name="BotB Bombs" />
+      <!-- <group Name="BotB Strings" /> -->
+      <group Name="BotB Batteries" />
+      <group Name="BotB Chests" />
+      <group Name="BotB Pills" />
+      <group Name="BotB Cards" />
+      <group Name="BotB Objects" />
+    </group>
+
+    <group Name="BotB Global" Label="Global">
+      <group Name="BotB Global Events" Label="Events" />
+      <group Name="BotB Global Obstacles" Label="Obstacles" />
+      <group Name="BotB Global Enemies" Label="Enemies" />
+
+      <group Name="BotB Crawlspace" Label="Crawlspace">
+        <group Name="BotB Crawlspace Events" Label="Events" />
+        <group Name="BotB Crawlspace Obstacles" Label="Obstacles" />
+        <group Name="BotB Crawlspace Enemies" Label="Enemies" />
+      </group>
+    </group>
+  
     <group Name="BotB Chapter 1">
       <group Label="BotB Chapter 1 (Main Path)">
         <group Name="BotB Chapter 1 (Main Path) Shared" Label="- Shared -">
@@ -237,7 +266,8 @@
           <group Name="BotB Scarrd Womb Enemies" Label="Enemies" />
         </group>
       </group>
-            <group Label="BotB Chapter 4 (Alt Path)">
+
+      <group Label="BotB Chapter 4 (Alt Path)">
         <group Name="BotB Chapter 4 (Alt Path) Shared" Label="- Shared -">
           <group Name="BotB Chapter 4 (Alt Path) Events" Label="Events" />
           <group Name="BotB Chapter 4 (Alt Path) Obstacles" Label="Obstacles" />
@@ -295,86 +325,78 @@
     </group>
   </group>
 
-  <group Name="BotB Pickups">
-    <entity Name="Kick Cube" />
-    <entity Name="Jump Crystal" />
+
+<!--——— Pickups ———-->
+  <group Name="Chests">
+    <group Name="BotB Chests" />
   </group>
 
-  <group Name="BotB Chapter 1 (Main Path) Enemies" >  
-    <entity Name="Ms. Horf" />
-    <entity Name="Chaff" />
-    <entity Name="Batso" />
-    <entity Name="Eternal Fly" />
-    <entity Name="Inch Worm" />
-    <entity Name="Chode" />
+<!--——— Global ———-->
+  <group Name="Special Grids">
+    <group Name="BotB Crawlspace Events" />
   </group>
 
-  <group Name="BotB Chapter 2 (Main Path) Enemies" >  
-    <entity Name="Tippytap" />
-    <entity Name="Croast" />
-    <entity Name="Fun Guy" />
-    <entity Name="Hydro Knight" />
+  <group Name="Global Enemies">
+    <group Name="BotB Global Enemies" />
+  </group>
+
+<!--——— Floors ———-->
+  <group Name="Basement">
+    <group Name="Hoarder Basement Events" Label="Hoard Events" />
+    <group Name="Hoarder Basement Obstacles" Label="Hoard Obstacles" />
+    <group Name="Hoarder Basement Enemies" Label="Hoard Enemies" />
+  </group>
+
+  <group Name="Chapter 1 (Main Path) Enemies" >
+     <group Name="BotB Chapter 1 (Main Path) Enemies" />
+  </group>
+
+  <group Name="Chapter 2 (Main Path) Enemies" >  
+    <group Name="BotB Chapter 2 (Main Path) Enemies" />
+  </group>
+
+  <group Name="Chapter 2 (Alt Path) Enemies" >  
+    <group Name="BotB Chapter 2 (Main Path) Enemies" />
   </group>
 
   <group Name="Hoarder Basement Events" >
-    <entity Name="Hoarder Basement Backdrop" />
+    <group Name="BotB Hoard Events" />
   </group>
 
-  <group Name="BotB Hoard Enemies" >
-    <entity Name="Acme" />
-    <entity Name="Sleazebag" />
-    <entity Name="Skooter" />
-    <entity Name="Super Skooter" />
-    <entity Name="Plane Creep" />
-    <entity Name="Innie (Turn right)" />
-    <entity Name="Innie (Turn left)" />
-    <entity Name="Inch Worm" />
-    <entity Name="Chode" />
+  <group Name="Hoarder Basement Enemies" >
+    <group Name="BotB Hoard Enemies" />
   </group>
 
-  <group Name="BotB Downpour Enemies" >
-    <entity Name="Hydro Knight" />
+  <group Name="Downpour Enemies" >
+    <group Name="BotB Downpour Enemies" />
   </group>
   
-  <group Name="BotB Dross Enemies" >
-    <entity Name="Culo" />
+  <group Name="Dross Enemies" >
+    <group Name="BotB Dross Enemies" />
   </group>
 
-  <group Name="BotB Caves Enemies" >
-    <entity Name="Fun Guy" />
-    <entity Name="Tippytap" />
-    <entity Name="Croast" />
+  <group Name="Flooded Caves Enemies" >
+    <group Name="BotB Flooded Caves Enemies" />
   </group>
 
-  <group Name="BotB Flooded Caves Enemies" >
-    <entity Name="Hydro Knight" />
-  </group>
-
-  <group Name="BotB Mines Enemies" >
-    <entity Name="Kettle" />
-    <entity Name="Crockpot" />
-    <entity Name="Spicy Bony" />
+  <group Name="Mines Enemies" >
+    <group Name="BotB Mines Enemies" />
   </group>
 
   <group Name="Ashpit Enemies" >
-    <entity Name="Spicy Bony" />
+    <group Name="BotB Ashpit Enemies" />
   </group>
 
-  <group Name="BotB Depths Enemies" >
-    <entity Name="Desirer" />
-    <entity Name="Humbled" />
-    <entity Name="Seducer" />
-    <entity Name="Pale Sniffle" />
+  <group Name="Depths Enemies" >
+    <group Name="BotB Depths Enemies" />
   </group>
 
-  <group Name="BotB Gehenna Enemies" >
-    <entity Name="Mabel" />
+  <group Name="Gehenna Enemies" >
+    <group Name="BotB Gehenna Enemies" />
   </group>
 
-  <group Name="BotB Womb Enemies" >
-    <entity Name="Giblet" />
-    <entity Name="Gibby" />
-    <entity Name="Cadre" />
+  <group Name="Womb Enemies" >
+    <group Name="BotB Womb Enemies" />
   </group>
-
+  
 </data>

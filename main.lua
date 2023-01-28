@@ -176,7 +176,13 @@ function Mod:NPCAIChecker(npc,offset)
         --if nameString ~= nil then
         --    Isaac.RenderText(nameString, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-50,1,1,1,1)
         --end
-       
+        if npc.Target then
+            Isaac.RenderText("target", npc.Target.Position.X,  npc.Target.Position.Y,1,1,1,1)
+        end
+        if npc.TargetPosition then
+            Isaac.RenderText("movement target", npc.TargetPosition.X, npc.TargetPosition.Y,1,1,1,1)
+        end
+
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
 --]]
