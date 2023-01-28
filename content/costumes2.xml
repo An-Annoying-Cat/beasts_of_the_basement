@@ -6,4 +6,5 @@
     <costume id="2" anm2path="treemanSyndrome.anm2"            type="passive"  priority="10" hasSkinAlt="false"/>
     <costume id="10" anm2path="toyHelicopter.anm2"             type="passive"  priority="99" hasSkinAlt="false"/>
     <costume id="16" anm2path="mudPie.anm2"                    type="passive"  priority="99" hasSkinAlt="false"/>
+    <costume id="20" anm2path="champsMask.anm2"                    type="passive"  priority="99" hasSkinAlt="false"/>
 </costumes>

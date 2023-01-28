@@ -357,6 +357,8 @@ Enums.SFX = {
     BHF_EXPLODE_PREPARE = Isaac.GetSoundIdByName("BHFExplodePrepare"),
     BHF_EXPLODE = Isaac.GetSoundIdByName("BHFExplode"),
     BHF_RESPAWN = Isaac.GetSoundIdByName("BHFRespawn"),
+
+    FUNNY_PIPE = Isaac.GetSoundIdByName("FunnyPipe"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -381,6 +383,7 @@ Enums.Items = {
     MUD_PIE = Isaac.GetItemIdByName("Mud Pie"),
     HOUSEPLANT = Isaac.GetItemIdByName("Houseplant"),
     BIB = Isaac.GetItemIdByName("Bib"),
+    CHAMPS_MASK = Isaac.GetItemIdByName("Champ's Mask"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
@@ -393,8 +396,9 @@ Enums.Trinkets = {
 
     DEMON_CORE = Isaac.GetTrinketIdByName("Demon Core"),
     A_SINGLE_RAISIN = Isaac.GetTrinketIdByName("A Single Raisin"),
-    PLACEHOLDER_TRINKET = Isaac.GetTrinketIdByName("Trinket")
-    --CANKER_SORE = Isaac.GetItemIdByName("Canker Sore"),
+    PLACEHOLDER_TRINKET = Isaac.GetTrinketIdByName("Trinket"),
+    CANKER_SORE = Isaac.GetTrinketIdByName("Canker Sore"),
+    CRYPTIC_PENNY = Isaac.GetTrinketIdByName("Cryptic Penny"),
     --BOOTLEG_CARTRIDGE = Isaac.GetItemIdByName("Bootleg Cartridge")
 
 }
@@ -430,7 +434,16 @@ Enums.Pickups = {
         VARIANT = Isaac.GetEntityVariantByName("Giga Penny"),
         SUBTYPE = 31
     },
-
+    GIGA_KEY = {
+        TYPE = Isaac.GetEntityTypeByName("Giga Key"),
+        VARIANT = Isaac.GetEntityVariantByName("Giga Key"),
+        SUBTYPE = 32
+    },
+    SHITCOIN = {
+        TYPE = Isaac.GetEntityTypeByName("Shitcoin"),
+        VARIANT = Isaac.GetEntityVariantByName("Shitcoin"),
+        SUBTYPE = 33
+    },
 }
 
 Enums.Consumables = {

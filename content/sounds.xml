@@ -115,6 +115,9 @@
 	<sound name="KickCube3">
 		<sample weight="1" path="pickups/kickCubeSpinTier3.wav" />
 	</sound>
+	<sound name="FunnyPipe">
+		<sample weight="1" path="pickups/funnyPipeSound.wav" />
+	</sound>
 	<!--Plays when the Deflated Balloon bloons are popped.-->
 	<sound name="BloonsPop">
 		<sample weight="1" path="items/bloonsPop1.wav" />

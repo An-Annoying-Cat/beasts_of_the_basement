@@ -68,6 +68,7 @@ Mod.LoadScripts({
     "scripts.entities.items.grub",
     "scripts.entities.items.mudpie",
     "scripts.entities.items.houseplant",
+    "scripts.entities.items.champs_mask",
 
 
     --TRINKETS
@@ -81,6 +82,8 @@ Mod.LoadScripts({
     "scripts.entities.items.pickups.kickcube",
     "scripts.entities.items.pickups.jumpcrystal",
     "scripts.entities.items.pickups.gigapenny",
+    "scripts.entities.items.pickups.gigakey",
+    "scripts.entities.items.pickups.shitcoin",
 
 
     --CONSUMABLES

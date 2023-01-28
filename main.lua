@@ -197,6 +197,7 @@ function BotB:TaintedCompat()
         print("[BotB] The PogChamp")
         BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_BBF,Isaac.GetItemIdByName("B.H.F."))
         BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_TWISTED_PAIR,Isaac.GetItemIdByName("Faithful Fleet"))
+        BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_INFAMY,Isaac.GetItemIdByName("Champ's Mask"))
     else
         print("[BotB] You're missing out on some pretty dope Tainted Treasures compatability, my dude")
     end

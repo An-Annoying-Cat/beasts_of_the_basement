@@ -411,6 +411,14 @@
         id="5" variant="69" subtype="31" anm2path="items/pick ups/giga_penny.anm2"
         collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
     </entity>
+    <entity name="Giga Key"
+        id="5" variant="69" subtype="32" anm2path="items/pick ups/giga_key.anm2"
+        collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
+    </entity>
+    <entity name="Shitcoin"
+        id="5" variant="69" subtype="33" anm2path="items/pick ups/shitcoin.anm2"
+        collisionDamage="0" collisionMass="2" collisionRadius="12" numGridCollisionPoints="0" shadowSize="14" friction="1">
+    </entity>
 
     <!--Cards   id="5"  variant="300"   subtypes start at 800-->
     <entity name="Yu-Gi-Oh Card"

@@ -20,6 +20,7 @@
     <familiar id="17" quality="3" name="Faithful Fleet" description="Sentinel quartet" gfx="faithful_fleet.png" tags="angel"/>
     <passive id="18" quality="2" name="Houseplant" description="HP up + succulent inside" gfx="houseplant.png" maxhearts="1" hearts="2" tags="food"/>
     <passive id="19" quality="3" name="Bib" description="Tears up + messy eater" gfx="placeholder.png" tags="tearsup"/>
+    <passive id="20" quality="3" name="Champ's Mask" description="Ego up + overexertion" gfx="champ's_mask.png"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
@@ -32,4 +33,5 @@
     <trinket name="Demon Core" description="The sleeping dragon..." gfx="demon_core.png" />
     <trinket name="A Single Raisin" description="Just a bit fiendish" gfx="raisin.png" />
     <trinket name="Trinket" description="PLACEHOLDER_TRINKET" gfx="placeholder_trinket.png" />
+    <trinket name="Cryptic Penny" description="Wealth of stupidity" gfx="cryptic_penny.png" />
 </items>
