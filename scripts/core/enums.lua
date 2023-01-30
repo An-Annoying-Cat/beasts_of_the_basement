@@ -429,21 +429,22 @@ Enums.Pickups = {
         VARIANT = Isaac.GetEntityVariantByName("Enemy Corpse (Large)"),
         SUBTYPE = 2
     },
+    SHITCOIN = {
+        TYPE = Isaac.GetEntityTypeByName("Shitcoin"),
+        VARIANT = Isaac.GetEntityVariantByName("Shitcoin"),
+        SUBTYPE = 80
+    },
     GIGA_PENNY = {
         TYPE = Isaac.GetEntityTypeByName("Giga Penny"),
         VARIANT = Isaac.GetEntityVariantByName("Giga Penny"),
-        SUBTYPE = 31
+        SUBTYPE = 81
     },
     GIGA_KEY = {
         TYPE = Isaac.GetEntityTypeByName("Giga Key"),
         VARIANT = Isaac.GetEntityVariantByName("Giga Key"),
-        SUBTYPE = 32
+        SUBTYPE = 80
     },
-    SHITCOIN = {
-        TYPE = Isaac.GetEntityTypeByName("Shitcoin"),
-        VARIANT = Isaac.GetEntityVariantByName("Shitcoin"),
-        SUBTYPE = 33
-    },
+
 }
 
 Enums.Consumables = {

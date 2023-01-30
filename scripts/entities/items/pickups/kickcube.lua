@@ -74,7 +74,7 @@ function KICKCUBE:KickCubeUpdate(pickup)
         if data.kickTimer == 0 and data.beenKicked == true then
             data.canBeKicked = false
             sfx:Play(SoundEffect.SOUND_SCAMPER,2,0,false,math.random(80, 120)/100)
-            print("Number of kicks: " .. data.numKicks)
+            --print("Number of kicks: " .. data.numKicks)
             sprite:Play("Idle")
             pickup.Friction = 0.5
             pickup.SpriteOffset = Vector(0,0)
@@ -176,7 +176,7 @@ function KICKCUBE:KickCubeUpdate(pickup)
             --Spawn reward at appropriate time
             if sprite:IsEventTriggered("Reward") then
                 local pickupChoice
-                print(data.rewardType .. " at " .. data.rewardTier)
+                --print(data.rewardType .. " at " .. data.rewardTier)
                 if data.rewardType == 1 then
                     --Hearts
                     --Reward Tier conditionals...

@@ -27,7 +27,7 @@ function MABEL:NPCUpdate(npc)
             npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
             --data.mabelVelLerped = Vector.Zero
             npc.Target = target
-            print(npc.Target)
+            --print(npc.Target)
             data.mabelDashVelocity = Vector.Zero
             data.exitDelayFrame = 0
             data.mabelSoundPitch = 1

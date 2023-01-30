@@ -155,10 +155,10 @@ function KEHEHAN:BulletCheck(bullet)
                     room:DestroyGrid(index, true)
                     sfx:Play(SoundEffect.SOUND_BLACK_POOF,1,0,false,math.random(80,90)/100)
                     
-                    print("yeah")
+                    --print("yeah")
                 end
             else
-                print("nope")
+                --print("nope")
             end
             --sfx:Play(SoundEffect.SOUND_ANIMAL_SQUISH,1,0,false,math.random(120,150)/100)
             --local creep = Isaac.Spawn(1000, 22, 0, bullet.Position, Vector(0,0), bullet)

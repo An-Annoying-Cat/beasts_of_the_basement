@@ -39,5 +39,5 @@ function GIGA_KEY:gigaKeyUpdate(pickup)
 
 end
 
-Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,GIGA_KEY.getGigaKey,PickupVariant.PICKUP_GRAB_BAG)
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,GIGA_KEY.gigaKeyUpdate,PickupVariant.PICKUP_GRAB_BAG)
+Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,GIGA_KEY.getGigaKey,PickupVariant.PICKUP_KEY)
+Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,GIGA_KEY.gigaKeyUpdate,PickupVariant.PICKUP_KEY)

@@ -13,7 +13,7 @@ end
 				sfx:Play(BotB.FF.Sounds.Nuke,1,0,false,math.random(8,12)/10)
 				player:UseActiveItem(Isaac.GetItemIdByName("Mama Mega!"))
 				local damageAmount = math.random(1,5)
-				print(damageAmount)
+				--print(damageAmount)
 				--Has flages for Fire and Explosive damage because, you know, nuclear fire
 				player:TryRemoveTrinket(Mod.Enums.Trinkets.DEMON_CORE)
 				player:TakeDamage(damageAmount, 6, EntityRef(player), 40)
