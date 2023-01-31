@@ -19,15 +19,14 @@ local function getPlayers()
 	return players
 end
 
-function SHITCOIN:getGigaPenny(pickup,collider,_)
+function SHITCOIN:GetShitcoin(pickup,collider,_)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
     --print(pickup.Type .. "," .. pickup.Variant .. "," .. pickup.SubType)
-    if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.SHITCOIN.SUBTYPE and collider.Type == Isaac.GetEntityTypeByName("Player") then
+    if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.SHITCOIN.SUBTYPE and collider.Type == EntityType.ENTITY_PLAYER then
         sfx:Play(BotB.FF.Sounds.CursedPennyNegativeSuper,1,0,false,math.random(12000,14000)/10000)
         sfx:Play(BotB.FF.Sounds.FunnyFart,0.75,0,false,0.75)
-        pickup.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
-        sprite:Play("Collect")
+
         player = collider:ToPlayer()
         local dipSubTypesTable = {0,1,2,3,4,5,6,12,13,14,20,666,667,668,669,670,671,672}
         for i=0,2,1 do
@@ -45,13 +44,15 @@ function SHITCOIN:getGigaPenny(pickup,collider,_)
         }
         hud:ShowItemText("Shitcoin!", shitcoinSecondaryStrings[math.random(#shitcoinSecondaryStrings)], false)
         --data.Collector:AddCoins(15)
-        --TSIL.Players.AddSmeltedTrinket(collider:ToPlayer(),TrinketType.TRINKET_STORE_CREDIT)
+        --TSIL.Players.AddSmeltedTrinket(collider:ToPlayer(),TrinketType.TRINKET_STORE_CREDIT
+
+        pickup:Die()
 
         return false
     end
 end
 
-function SHITCOIN:gigaPennyUpdate(pickup)
+function SHITCOIN:ShitcoinUpdate(pickup)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
     if data.Collector == nil then
@@ -61,40 +62,29 @@ function SHITCOIN:gigaPennyUpdate(pickup)
     if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.SHITCOIN.SUBTYPE then
 
         if sprite:IsEventTriggered("DropSound") then
-            Game():ShakeScreen(15)
             sfx:Play(SoundEffect.SOUND_DIMEDROP,1,0,false,math.random(800, 900)/1000)
         end
-        if sprite:IsEventTriggered("Remove") then
-            pickup:Remove()
-        end
     end
 
 end
 
-Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,SHITCOIN.getGigaPenny,PickupVariant.PICKUP_GRAB_BAG)
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,SHITCOIN.gigaPennyUpdate,PickupVariant.PICKUP_GRAB_BAG)
+Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,SHITCOIN.GetShitcoin,PickupVariant.PICKUP_COIN)
+Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,SHITCOIN.ShitcoinUpdate,PickupVariant.PICKUP_COIN)
 
 
 
 
 
-function SHITCOIN:shitcoinReplace(entity)
-    if entity.SubType == CoinSubType.COIN_PENNY then
+function SHITCOIN:shitcoinReplace(id, var, subtype, pos, vel, spawner, seed)
+    if id == EntityType.ENTITY_PICKUP and var == PickupVariant.PICKUP_COIN and subtype == 0 then
         local basereplaceChance = 2
         local replaceChance = basereplaceChance
-        local playersWithCrypticPenny = getPlayers()
-        if #playersWithCrypticPenny ~= 0 then
-            for i=1,#playersWithCrypticPenny,1 do
-                replaceChance = replaceChance + (2*playersWithCrypticPenny[i]:GetTrinketMultiplier(Isaac.GetTrinketIdByName("Cryptic Penny")))
-            end
-        end
-        local chance = math.random(0,200)
+            replaceChance = replaceChance + (2*Mod.FF.getTrinketMultiplierAcrossAllPlayers(Mod.Enums.Trinkets.CRYPTIC_PENNY))
+        local chance = Mod.Functions.RNG:RandomInt(seed, 100)
         --print(chance .. " < " .. replaceChance)
         if chance < replaceChance then
-            Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE,entity.Position,entity.Velocity,entity)
-            entity:Remove()
-            --entity:Morph(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE)
+            return {EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COIN, BotB.Enums.Pickups.SHITCOIN.SUBTYPE, seed}
         end
     end
 end
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT,SHITCOIN.shitcoinReplace,PickupVariant.PICKUP_COIN)
+Mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, SHITCOIN.shitcoinReplace)

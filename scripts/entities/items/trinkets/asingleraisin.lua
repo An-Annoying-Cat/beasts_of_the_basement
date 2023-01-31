@@ -6,7 +6,6 @@ if EID then
 end
 
 function RAISIN:raisinTryReplace(pickup)
-    print("dongs")
     --[[
     local player = Isaac.GetPlayer()
 		if player:HasCollectible(Isaac.GetTrinketIdByName("A Single Raisin")) then

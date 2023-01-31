@@ -20,16 +20,16 @@ function GIGA_PENNY:getGigaPenny(pickup,collider,_)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
     --print(pickup.Type .. "," .. pickup.Variant .. "," .. pickup.SubType)
-    if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.GIGA_PENNY.SUBTYPE and collider.Type == Isaac.GetEntityTypeByName("Player") then
+    if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.GIGA_PENNY.SUBTYPE and collider.Type == EntityType.ENTITY_PLAYER then
         sfx:Play(SoundEffect.SOUND_DIMEPICKUP,2,0,false,0.5)
         pickup.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
-        sprite:Play("Collect")
         data.Collector = collider:ToPlayer()
         data.Collector:AddCoins(15)
         --TSIL.Players.AddSmeltedTrinket(collider:ToPlayer(),TrinketType.TRINKET_STORE_CREDIT)
         if data.Collector:GetData().queuedGigaPennyCoupons ~= nil then
            data.Collector:GetData().queuedGigaPennyCoupons = data.Collector:GetData().queuedGigaPennyCoupons + 1
         end
+        pickup:Die()
         return false
     end
 end
@@ -48,15 +48,12 @@ function GIGA_PENNY:gigaPennyUpdate(pickup)
             sfx:Play(SoundEffect.SOUND_DIMEDROP,2,0,false,math.random(50, 60)/100)
             sfx:Play(SoundEffect.SOUND_FORESTBOSS_STOMPS,1,0,false,math.random(80, 90)/100)
         end
-        if sprite:IsEventTriggered("Remove") then
-            pickup:Remove()
-        end
     end
 
 end
 
-Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,GIGA_PENNY.getGigaPenny,PickupVariant.PICKUP_GRAB_BAG)
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,GIGA_PENNY.gigaPennyUpdate,PickupVariant.PICKUP_GRAB_BAG)
+Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,GIGA_PENNY.getGigaPenny,PickupVariant.PICKUP_COIN)
+Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,GIGA_PENNY.gigaPennyUpdate,PickupVariant.PICKUP_COIN)
 
 
 --Player shit (queued coupon on entering a shop)
@@ -112,26 +109,12 @@ end
 Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM,GIGA_PENNY.newRoomCheck)
 
 
-function GIGA_PENNY:gigaPennyReplace(entity)
-    if entity.SubType == CoinSubType.COIN_PENNY then
-        local basereplaceChance = 2
-        local replaceChance = basereplaceChance
-        --[[
-        local playersWithCrypticPenny = getPlayers()
-        if #playersWithCrypticPenny ~= 0 then
-            for i=1,#playersWithCrypticPenny,1 do
-                replaceChance = replaceChance + (2*playersWithCrypticPenny[i]:GetTrinketMultiplier(Isaac.GetTrinketIdByName("Cryptic Penny")))
-            end
-        end
-        
-        --print(chance .. " < " .. replaceChance)
-        ]]
-        local chance = math.random(0,200)
-        if chance < replaceChance then
-            Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE,entity.Position,entity.Velocity,entity)
-            entity:Remove()
+function GIGA_PENNY:gigaPennyReplace(id, var, subtype, pos, vel, spawner, seed)
+    if id == EntityType.ENTITY_PICKUP and var == PickupVariant.PICKUP_COIN and subtype == 0 then
+        if Mod.Functions.RNG:RandomInt(seed, 500) == 0 then
+            return {EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COIN, BotB.Enums.Pickups.GIGA_PENNY.SUBTYPE, seed}
             --entity:Morph(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE)
         end
     end
 end
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT,GIGA_PENNY.gigaPennyReplace,PickupVariant.PICKUP_COIN)
+Mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN,GIGA_PENNY.gigaPennyReplace)
