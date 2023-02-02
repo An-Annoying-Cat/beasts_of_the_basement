@@ -114,7 +114,7 @@ Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM,GIGA_PENNY.newRoomCheck)
 
 function GIGA_PENNY:gigaPennyReplace(entity)
     if entity.SubType == CoinSubType.COIN_PENNY then
-        local basereplaceChance = 2
+        local basereplaceChance = 1
         local replaceChance = basereplaceChance
         --[[
         local playersWithCrypticPenny = getPlayers()
@@ -126,7 +126,7 @@ function GIGA_PENNY:gigaPennyReplace(entity)
         
         --print(chance .. " < " .. replaceChance)
         ]]
-        local chance = math.random(0,200)
+        local chance = Mod.Functions.RNG:RandomInt(Room:GetAwardSeed(), 400)
         if chance < replaceChance then
             Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE,entity.Position,entity.Velocity,entity)
             entity:Remove()

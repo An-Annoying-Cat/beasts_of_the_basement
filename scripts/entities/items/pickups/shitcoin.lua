@@ -80,7 +80,7 @@ Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,SHITCOIN.gigaPennyUpdate,Pick
 
 function SHITCOIN:shitcoinReplace(entity)
     if entity.SubType == CoinSubType.COIN_PENNY then
-        local basereplaceChance = 2
+        local basereplaceChance = 1
         local replaceChance = basereplaceChance
         local playersWithCrypticPenny = getPlayers()
         if #playersWithCrypticPenny ~= 0 then
@@ -88,7 +88,7 @@ function SHITCOIN:shitcoinReplace(entity)
                 replaceChance = replaceChance + (2*playersWithCrypticPenny[i]:GetTrinketMultiplier(Isaac.GetTrinketIdByName("Cryptic Penny")))
             end
         end
-        local chance = math.random(0,200)
+        local chance = Mod.Functions.RNG:RandomInt(Room:GetAwardSeed(), 200)
         --print(chance .. " < " .. replaceChance)
         if chance < replaceChance then
             Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE,entity.Position,entity.Velocity,entity)
