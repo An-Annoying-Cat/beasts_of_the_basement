@@ -35,8 +35,8 @@ end
 						sfx:Play(Isaac.GetSoundIdByName("ArmorBlock"),1,0,false,1)
 						--player.UseActiveItem(Isaac.GetItemIdByName("Dull Razor"))
 						player:SetMinDamageCooldown(40)
-						print("LMAO GET NEGATED IDIOT")
-						print(player:GetData().alphaArmorPercentage)
+						--print("LMAO GET NEGATED IDIOT")
+						--print(player:GetData().alphaArmorPercentage)
 						return false
 					end
 				end

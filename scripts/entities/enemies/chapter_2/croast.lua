@@ -86,7 +86,7 @@ if npc.State == 9 then
                 else
                     data.approachDirection = false
                 end
-                print(data.approachDirection)
+                --print(data.approachDirection)
                 if data.approachDirection == true then
                     data.flightTarget = Vector(targetpos.X-150, targetpos.Y)
                 else

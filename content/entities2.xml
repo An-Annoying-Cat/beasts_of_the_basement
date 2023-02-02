@@ -403,21 +403,27 @@
     </entity>
 
 
+    
+
+    <!--Coins id="5" variant="20"   subtypes start at 80-->
+    <entity name="Shitcoin"
+        id="5" variant="20" subtype="80" anm2path="items/pick ups/shitcoin.anm2"
+        collisionDamage="0" collisionMass="2" collisionRadius="12" numGridCollisionPoints="0" shadowSize="14" friction="1">
+    </entity>
+    <entity name="Giga Penny"
+        id="5" variant="20" subtype="81" anm2path="items/pick ups/giga_penny.anm2"
+        collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
+    </entity>
+
+    <!--Keys id="5" variant="30"    subtypes start at 80-->
+    <entity name="Giga Key"
+        id="5" variant="120" subtype="80" anm2path="items/pick ups/giga_key.anm2"
+        collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
+    </entity>
+    
     <!--Sacks id="5" variant="69" (nice) subtypes start at 30-->
     <entity anm2path="items/pick ups/kick_cube.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Kick Cube" numGridCollisionPoints="24" shadowSize="18" stageHP="0" subtype="30" variant="69">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
-    </entity>
-    <entity name="Giga Penny"
-        id="5" variant="69" subtype="31" anm2path="items/pick ups/giga_penny.anm2"
-        collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
-    </entity>
-    <entity name="Giga Key"
-        id="5" variant="69" subtype="32" anm2path="items/pick ups/giga_key.anm2"
-        collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
-    </entity>
-    <entity name="Shitcoin"
-        id="5" variant="69" subtype="33" anm2path="items/pick ups/shitcoin.anm2"
-        collisionDamage="0" collisionMass="2" collisionRadius="12" numGridCollisionPoints="0" shadowSize="14" friction="1">
     </entity>
 
     <!--Cards   id="5"  variant="300"   subtypes start at 800-->

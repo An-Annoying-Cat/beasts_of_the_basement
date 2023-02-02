@@ -33,7 +33,6 @@ end
 --print("your super special random worm is " .. wormNames[math.random(#wormNames)])
 
 function MUDPIE:onItemGet(player, type)
-	print("test")
 	local room = Game():GetRoom()
 	if type == Isaac.GetItemIdByName("Mud Pie") then
 		local room = game:GetRoom()
