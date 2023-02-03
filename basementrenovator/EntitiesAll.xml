@@ -24,6 +24,7 @@
     <entity Name="Tippytap" />
     <entity Name="Croast" />
     <entity Name="Fun Guy" />
+    <entity Name="Earth Worm" />
   </group>
 
   <group Name="BotB Chapter 2 (Alt Path) Enemies" >  
@@ -76,10 +77,19 @@
     <entity Name="Mabel" />
   </group>
 
+  <group Name="BotB Chapter 4 (Main Path) Enemies" >
+    <entity Name="Meal Worm" />
+    <entity Name="Frenulum" />
+  </group>
+
   <group Name="BotB Womb Enemies" >
     <entity Name="Giblet" />
     <entity Name="Gibby" />
     <entity Name="Cadre" />
+  </group>
+
+  <group Name="BotB Scarred Womb Enemies" >
+    <entity Name="Frenulum" />
   </group>
 
 
@@ -395,8 +405,16 @@
     <group Name="BotB Gehenna Enemies" />
   </group>
 
+  <group Name="Chapter 4 (Main Path) Enemies" >  
+    <group Name="BotB Chapter 4 (Main Path) Enemies" />
+  </group>
+
   <group Name="Womb Enemies" >
     <group Name="BotB Womb Enemies" />
+  </group>
+
+  <group Name="Scarred Womb Enemies" >
+    <group Name="BotB Scarred Womb Enemies" />
   </group>
   
 </data>

@@ -53,7 +53,9 @@
   
   <!-- Dross Enemies -->
   <entity Image="icons/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
-
+  <!--Chapter 2 (Main Path) Enemies-->
+  <!--Scarred Womb Enemies-->
+  <entity Image="icons/earth_worm.png" Name="Earth Worm" ID="501" Variant="13" Subtype="2" />
   <!-- Caves Enemies -->
   <entity Image="icons/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
   <entity Image="icons/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
@@ -82,7 +84,10 @@
   </entity>
   <!--Gehenna Enemies-->
   <entity Image="icons/mabel.png" Name="Mabel" ID="501" Variant="10" Subtype="0" />
-
+  <!--Chapter 4 (Main Path) Enemies-->
+  <entity Image="icons/meal_worm.png" Name="Meal Worm" ID="501" Variant="13" Subtype="3" />
+  <!--Scarred Womb Enemies-->
+  <entity Image="icons/frenulum.png" Name="Frenulum" ID="501" Variant="13" Subtype="4" />
   <!-- Womb Enemies -->
   <entity Image="icons/giblet.png" Name="Giblet" ID="24" Variant="40" Subtype="0" >
     <bitfield Key="Subtype">
@@ -109,6 +114,8 @@
             </dropdown>
     </bitfield>
   </entity>  
+  <!--Scarred Womb Enemies-->
+  <entity Image="icons/frenulum.png" Name="Frenulum" ID="501" Variant="13" Subtype="4" />
 
   <!-- Ascent Enemies -->
   
