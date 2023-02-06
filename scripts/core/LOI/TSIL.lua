@@ -1,9 +1,8 @@
----@diagnostic disable: duplicate-set-field
 local LOCAL_TSIL = {}
 local LOCAL_TSIL_VERSION = 0.1
 
 --- Initializes the TSIL library
---- @param FolderName string
+---@param FolderName string
 function LOCAL_TSIL.Init(FolderName)
 	if not TSIL then
 		--If TSIL hasnt been initialized yet, initialize it

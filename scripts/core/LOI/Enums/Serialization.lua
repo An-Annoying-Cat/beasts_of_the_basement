@@ -1,4 +1,4 @@
----@diagnostic disable: duplicate-set-field
+---@enum SerializationBrand
 TSIL.Enums.SerializationBrand = {
     BIT_SET_128 = "__BIT_SET_128",
     COLOR = "__COLOR",
@@ -7,6 +7,7 @@ TSIL.Enums.SerializationBrand = {
     VECTOR = "__VECTOR"
 }
 
+---@enum SerializationType
 TSIL.Enums.SerializationType = {
     NONE = 1,
     SERIALIZE = 2,
@@ -14,6 +15,7 @@ TSIL.Enums.SerializationType = {
 }
 
 
+---@enum CopyableIsaacAPIClassType
 TSIL.Enums.CopyableIsaacAPIClassType = {
     BIT_SET_128 = "BitSet128",
     COLOR = "Color",

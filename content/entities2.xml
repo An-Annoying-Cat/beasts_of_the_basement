@@ -301,14 +301,21 @@
 
     <entity name="Meal Worm"
         id="501" variant="13" subtype="3" anm2path="monsters/chapter_4/meal_worm.anm2" baseHP="17.5" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="5" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="10"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="10"   friction="1" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity>
 
     <entity name="Frenulum"
         id="501" variant="13" subtype="4" anm2path="monsters/chapter_4/scarred_womb/frenulum.anm2" baseHP="17.5" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="5" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="10"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="10"   friction="1" reroll="true" champion="1">
+        <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Tape Worm"
+        id="501" variant="14" subtype="0" anm2path="monsters/chapter_2/tape_worm.anm2" baseHP="10" stageHP="0" portrait="3"
+        collisionDamage="1" collisionMass="5" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 

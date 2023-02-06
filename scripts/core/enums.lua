@@ -235,6 +235,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("OJ Trap Card"),
         VARIANT = Isaac.GetEntityVariantByName("OJ Trap Card"),
     },
+    TAPE_WORM = {
+        TYPE = Isaac.GetEntityTypeByName("Tape Worm"),
+        VARIANT = Isaac.GetEntityVariantByName("Tape Worm"),
+    },
 
 
     --Effects

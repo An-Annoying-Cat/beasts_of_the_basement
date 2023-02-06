@@ -1,6 +1,7 @@
----@diagnostic disable: duplicate-set-field
 local DEFAULT_MOD_DATA = "{}"
 
+---@param oldSaveData PersistentVariable[]
+---@param newSaveData PersistentVariable[]
 local function mergeSaveData(oldSaveData, newSaveData)
     TSIL.Utils.Tables.IterateTableInOrder(newSaveData, function (_, persistentVariable)
         for i, oldPersistentVariable in ipairs(oldSaveData) do
@@ -40,17 +41,25 @@ end
 function TSIL.SaveManager.LoadFromDisk()
     local oldSavedata = TSIL.__VERSION_PERSISTENT_DATA.PersistentData
     if not TSIL.__MOD:HasData() then
+        -- There is no "save#.dat" file for this save slot.
         return
     end
 
+    -- First, read the "save#.dat" file into a Lua table.
     local jsonString = readSaveDatFile()
+    ---@type table<string, PersistentVariable[]>
     local newSaveData = TSIL.JSON.Decode(jsonString)
 
+    -- Second, iterate over all the fields of the new table.)
     TSIL.Utils.Tables.IterateTableInOrder(newSaveData, function(modName, persistentVariables)
+        -- All elements of loaded save data should have keys that are strings equal to the name of the
+        -- subscriber/feature. Ignore elements with other types of keys.
         if type(modName) ~= "string" then
             return
         end
 
+        -- All elements of loaded save data should be tables that contain fields corresponding to the
+        -- `SaveData` class. Ignore elements that are not tables.
         if type(oldSavedata) ~= "table" then
             return
         end
@@ -65,10 +74,15 @@ function TSIL.SaveManager.LoadFromDisk()
             return oldModPersistentData.mod == modName
         end)
 
+        -- Ignore elements that represent subscriptions that no longer exist in the current save data.
         if oldSaveDataForSubscriber == nil then
             return
         end
 
+        -- We do not want to blow away the child tables of the existing map, because save data could
+        --contain out-of-date fields. Instead, merge it one field at a time in a recursive way
+        --TSIL.Utils.Tables.Merge(oldSaveDataForSubscriber.variables, newModData)
+        --oldSaveDataForSubscriber.variables = TSIL.Utils.DeepCopy.DeepCopy(newModData, TSIL.Enums.SerializationType.NONE)
         mergeSaveData(oldSaveDataForSubscriber.variables, persistentVariables)
     end)
 end

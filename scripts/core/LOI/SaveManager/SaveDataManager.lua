@@ -1,4 +1,3 @@
----@diagnostic disable: duplicate-set-field
 local restoreGlowingHourGlassDataOnNextRoom = false
 local loadedDataOnThisRun = false
 

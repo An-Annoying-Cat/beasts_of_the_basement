@@ -1,4 +1,8 @@
----@diagnostic disable: duplicate-set-field
+--- Returns a safe copy of a table.
+--- 
+--- It copies the tables inside it recursively.
+---@param toCopy table
+---@return table
 function TSIL.Utils.Tables.Copy(toCopy)
 	local copy = {}
 	for index, value in pairs(toCopy) do

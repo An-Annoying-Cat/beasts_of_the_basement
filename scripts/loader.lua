@@ -25,6 +25,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_2.tippytap",
     "scripts.entities.enemies.chapter_2.croast",
     "scripts.entities.enemies.chapter_2.funguy",
+    "scripts.entities.enemies.chapter_2.tapeworm",
 
     "scripts.entities.enemies.chapter_2.flooded_caves.hydroknight",
 

@@ -1,4 +1,5 @@
----@diagnostic disable: duplicate-set-field
+-- The save data manager has a feature where certain variables are automatically 
+--restored to default values at certain times.
 local RESETTABLE_SAVE_DATA_KEYS = {
     "run",
     "level",
@@ -25,6 +26,7 @@ function TSIL.SaveManager.RestoreDefaultsForAllFeaturesAndKeys()
 end
 
 
+---@param saveKey "run"|"level"|"room"
 function TSIL.SaveManager.RestoreDefaultsForAllFeaturesKey(saveKey)
     TSIL.Utils.Tables.IterateTableInOrder(TSIL.__VERSION_PERSISTENT_DATA.PersistentData, function(_, modPersistentData)
         TSIL.SaveManager.RestoreDefaultForFeatureKey(modPersistentData, saveKey)
@@ -32,6 +34,8 @@ function TSIL.SaveManager.RestoreDefaultsForAllFeaturesKey(saveKey)
     end)
 end
 
+---@param modPersistentData ModPersistentData
+---@param saveDataKey "run"|"level"|"room"
 function TSIL.SaveManager.RestoreDefaultForFeatureKey(modPersistentData, saveDataKey)
     if RESET_PERSISTENCE_MODE_PER_RESET_TIME[saveDataKey] == nil then
         error("Failed to restore default values of save data key of " .. saveDataKey .. ", since it is not on the allowed list of resettable save data keys.")
@@ -49,6 +53,8 @@ function TSIL.SaveManager.RestoreDefaultForFeatureKey(modPersistentData, saveDat
 end
 
 
+---@param modPersistentData ModPersistentData
+---@param saveDataKey "run"|"level"|"room"
 function TSIL.SaveManager.RemoveVariablesForFeatureKey(modPersistentData, saveDataKey)
     if REMOVE_PERSISTENCE_MODE_PER_RESET_TIME[saveDataKey] == nil then
         error("Failed to restore default values of save data key of " .. saveDataKey .. ", since it is not on the allowed list of resettable save data keys.")

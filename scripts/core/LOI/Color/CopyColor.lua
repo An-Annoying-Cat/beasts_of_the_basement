@@ -1,4 +1,6 @@
----@diagnostic disable: duplicate-set-field
+---Copies a color.
+---@param color Color
+---@return Color
 function TSIL.Color.CopyColor(color)
     if not TSIL.IsaacAPIClass.IsColor(color) then
         error("Failed to copy a Color object since the provided object was not a userdata Color class.")
@@ -16,6 +18,9 @@ function TSIL.Color.CopyColor(color)
 end
 
 
+---Helper function to copy a `KColor` Isaac API class.
+---@param kColor KColor
+---@return KColor
 function TSIL.Color.CopyKColor(kColor)
     if not TSIL.IsaacAPIClass.IsKColor(kColor) then
         error("Failed to copy a KColor object since the provided object was not a userdata KColor class.")

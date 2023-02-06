@@ -1,7 +1,32 @@
----@diagnostic disable: duplicate-set-field
+--
+-- json.lua
+--
+-- Copyright (c) 2020 rxi
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy of
+-- this software and associated documentation files (the "Software"), to deal in
+-- the Software without restriction, including without limitation the rights to
+-- use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+-- of the Software, and to permit persons to whom the Software is furnished to do
+-- so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in all
+-- copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+--
 
 local json = { _version = "0.1.2" }
 
+-------------------------------------------------------------------------------
+-- Encode
+-------------------------------------------------------------------------------
 
 local encode
 
@@ -35,11 +60,13 @@ local function encode_table(val, stack)
   local res = {}
   stack = stack or {}
 
+  -- Circular reference?
   if stack[val] then error("circular reference") end
 
   stack[val] = true
 
   if rawget(val, 1) ~= nil or next(val) == nil then
+    -- Treat as array -- check keys are valid and it is not sparse
     local n = 0
     for k in pairs(val) do
       if type(k) ~= "number" then
@@ -50,6 +77,7 @@ local function encode_table(val, stack)
     if n ~= #val then
       error("invalid table: sparse array")
     end
+    -- Encode
     for i, v in ipairs(val) do
       table.insert(res, encode(v, stack))
     end
@@ -57,6 +85,7 @@ local function encode_table(val, stack)
     return "[" .. table.concat(res, ",") .. "]"
 
   else
+    -- Treat as an object
     for k, v in pairs(val) do
       if type(k) ~= "string" then
         error("invalid table: mixed or invalid key types")
@@ -75,6 +104,7 @@ end
 
 
 local function encode_number(val)
+  -- Check for NaN, -inf and inf
   if val ~= val or val <= -math.huge or val >= math.huge then
     error("unexpected number value '" .. tostring(val) .. "'")
   end
@@ -101,6 +131,9 @@ encode = function(val, stack)
 end
 
 
+-------------------------------------------------------------------------------
+-- Decode
+-------------------------------------------------------------------------------
 
 local parse
 
@@ -149,6 +182,7 @@ end
 
 
 local function codepoint_to_utf8(n)
+  -- http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=iws-appendixa
   local f = math.floor
   if n <= 0x7f then
     return string.char(n)
@@ -167,6 +201,7 @@ end
 local function parse_unicode_escape(s)
   local n1 = tonumber( s:sub(1, 4),  16 )
   local n2 = tonumber( s:sub(7, 10), 16 )
+   -- Surrogate pair?
   if n2 then
     return codepoint_to_utf8((n1 - 0xd800) * 0x400 + (n2 - 0xdc00) + 0x10000)
   else
@@ -244,13 +279,16 @@ local function parse_array(str, i)
   while 1 do
     local x
     i = next_char(str, i, space_chars, true)
+    -- Empty / end of array?
     if str:sub(i, i) == "]" then
       i = i + 1
       break
     end
+    -- Read token
     x, i = parse(str, i)
     res[n] = x
     n = n + 1
+    -- Next token
     i = next_char(str, i, space_chars, true)
     local chr = str:sub(i, i)
     i = i + 1
@@ -267,21 +305,27 @@ local function parse_object(str, i)
   while 1 do
     local key, val
     i = next_char(str, i, space_chars, true)
+    -- Empty / end of object?
     if str:sub(i, i) == "}" then
       i = i + 1
       break
     end
+    -- Read key
     if str:sub(i, i) ~= '"' then
       decode_error(str, i, "expected string for key")
     end
     key, i = parse(str, i)
+    -- Read ':' delimiter
     i = next_char(str, i, space_chars, true)
     if str:sub(i, i) ~= ":" then
       decode_error(str, i, "expected ':' after key")
     end
     i = next_char(str, i + 1, space_chars, true)
+    -- Read value
     val, i = parse(str, i)
+    -- Set
     res[key] = val
+    -- Next token
     i = next_char(str, i, space_chars, true)
     local chr = str:sub(i, i)
     i = i + 1
@@ -322,12 +366,34 @@ parse = function(str, idx)
   decode_error(str, idx, "unexpected character '" .. chr .. "'")
 end
 
+-------------------------------------------------------------------------------
+-- TSIL functions 
+-------------------------------------------------------------------------------
 
+---Converts a Lua table to a JSON string.
+---
+---In most cases, this function will be used for writing data to a "save#.dat" file. 
+---If encoding fails, it will throw an error to prevent writing a blank string or corrupted
+---data to a user's "save#.dat" file.
+---
+---Under the hood, this uses a custom JSON parser that was measured to be 11.8 times faster than the vanilla JSON parser.
+---@param val any
+---@return string
 function TSIL.JSON.Encode(val)
     return ( encode(val) )
 end
 
 
+---Converts a JSON string to a Lua table.
+---
+---In most cases, this function will be used for reading data from a "save#.dat" file.
+---If decoding fails, it will return a blank Lua table instead of throwing an error.
+---(This allows execution to continue in cases where users have no current save data or have
+---manually removed their existing save data.)
+---
+---Under the hood, this uses a custom JSON parser that was measured to be 11.8 times faster than the vanilla JSON parser.
+---@param str any
+---@return unknown
 function TSIL.JSON.Decode(str)
   if type(str) ~= "string" then
     error("expected argument of type string, got " .. type(str))

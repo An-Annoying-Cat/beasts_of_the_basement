@@ -1,5 +1,7 @@
----@diagnostic disable: duplicate-set-field
+-- The save data manager has a feature where certain variables will automatically be rolled back
+-- when the Glowing Hour Glass is used.
 
+-- When the Glowing Hour Glass is used, certain save data keys will automatically be restored to a backup.
 local GLOWING_HOUR_GLASS_BACKUP_KEYS = {
     [TSIL.Enums.VariablePersistenceMode.REMOVE_LEVEL] = true,
     [TSIL.Enums.VariablePersistenceMode.REMOVE_ROOM] = true,
@@ -88,5 +90,4 @@ function TSIL.SaveManager.RestoreGlowingHourGlassBackup()
         end)
     end)
 end
-
 

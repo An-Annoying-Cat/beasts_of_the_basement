@@ -1,4 +1,4 @@
----@diagnostic disable: duplicate-set-field
+---@enum CallbackOptionalArgType
 TSIL.Enums.CallbackOptionalArgType = {
     GENERIC = 0,
     NONE = 1,

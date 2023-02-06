@@ -1,5 +1,9 @@
----@diagnostic disable: duplicate-set-field
+--##use SaveManager/SaveDataManager.lua
 
+--- Gets a variable from the save manager.
+---@param mod table
+---@param variableName string
+---@return any
 function TSIL.SaveManager.GetPersistentVariable(mod, variableName)
 	local PersistentData = TSIL.__VERSION_PERSISTENT_DATA.PersistentData
 
@@ -10,6 +14,7 @@ function TSIL.SaveManager.GetPersistentVariable(mod, variableName)
 	end)
 
 	if modPersistentData == nil then
+		--The mod doesn't have any persistent data
 		return
 	end
 
@@ -20,6 +25,7 @@ function TSIL.SaveManager.GetPersistentVariable(mod, variableName)
 	end)
 
 	if foundVariable == nil then
+		--The variable doesn't exists
 		return
 	end
 

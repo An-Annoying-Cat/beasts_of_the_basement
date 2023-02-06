@@ -88,7 +88,8 @@ function SHITCOIN:shitcoinReplace(entity)
                 replaceChance = replaceChance + (2*playersWithCrypticPenny[i]:GetTrinketMultiplier(Isaac.GetTrinketIdByName("Cryptic Penny")))
             end
         end
-        local chance = Mod.Functions.RNG:RandomInt(Room:GetAwardSeed(), 200)
+        local room = Game():GetRoom()
+        local chance = Mod.Functions.RNG:RandomInt(room:GetAwardSeed(), 200)
         --print(chance .. " < " .. replaceChance)
         if chance < replaceChance then
             Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE,entity.Position,entity.Velocity,entity)

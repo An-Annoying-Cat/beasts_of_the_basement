@@ -1,4 +1,5 @@
----@diagnostic disable: duplicate-set-field
+---@param value unknown
+---@param serializationType SerializationType
 local function deepCopyUserdata(value, serializationType)
     local classType = TSIL.IsaacAPIClass.GetIsaacAPIClassName(value)
     
@@ -20,6 +21,28 @@ local function deepCopyUserdata(value, serializationType)
 end
 
 
+---A semi-generic deep cloner. It will recursively copy all of the values so that none
+---of the nested references remain.
+---
+---Supports the following object types:
+---
+---* Primitives (i.e, strings, numbers, and booleans)
+---* Tables
+---* Dictionaries
+---* BitSet128 objects
+---* Color objects
+---* KColor objects
+---* RNG objects
+---* Vector objects
+---
+---It does not support:
+---
+---* Dictionaries with values of nil
+---* Other Isaac API classes such as `EntityPtr`
+---@generic T
+---@param value T
+---@param serializationType SerializationType
+---@return T
 function TSIL.Utils.DeepCopy.DeepCopy(value, serializationType, copies)
     copies = copies or {}
     local orig_type = type(value)

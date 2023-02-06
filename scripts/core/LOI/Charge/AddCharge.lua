@@ -1,4 +1,5 @@
----@diagnostic disable: duplicate-set-field
+---@param player EntityPlayer
+---@param activeSlot ActiveSlot
 local function shouldPlayFullRechargeSound(player, activeSlot)
   local activeItem = player:GetActiveItem(activeSlot)
   local activeCharge = player:GetActiveCharge(activeSlot)
@@ -6,22 +7,33 @@ local function shouldPlayFullRechargeSound(player, activeSlot)
   local hasBattery = player:HasCollectible(CollectibleType.COLLECTIBLE_BATTERY)
   local maxCharges = TSIL.Collectibles.GetCollectibleMaxCharges(activeItem)
 
+  -- If we do not have The Battery, play the full recharge sound if we are now fully charged.
   if not hasBattery then
+    -- We cannot use the `EntityPlayer.NeedsCharge` method because it does not work properly for
+    -- items with `chargetype="special"`.
     return activeCharge == maxCharges
   end
 
+  -- If we do have The Battery, play the full recharge sound if we are exactly double charged or
+  -- exactly single charged.
   return (
     batteryCharge == maxCharges or
     (activeCharge == maxCharges and batteryCharge == 0)
   )
 end
 
+--- Helper function to play the appropriate sound effect for a player after getting one or more
+--- charges on their active item. (There is a different sound depending on whether the item is fully
+--- charged or not.)
+---@param player EntityPlayer
+---@param activeSlot ActiveSlot
 local function playChargeSoundEffect(player, activeSlot)
     SFXManager():Stop(SoundEffect.SOUND_BATTERYCHARGE)
     SFXManager():Stop(SoundEffect.SOUND_BEEP)
 
     local playFullRechargeSound = shouldPlayFullRechargeSound(player, activeSlot)
     
+    ---@type SoundEffect
     local chargeSoundEffect
 
     if playFullRechargeSound then
@@ -33,6 +45,11 @@ local function playChargeSoundEffect(player, activeSlot)
     SFXManager():Play(chargeSoundEffect)
 end
 
+--- The AAA battery should grant an extra charge when the active item is one away from being fully charged.
+---@param player EntityPlayer
+---@param activeSlot ActiveSlot
+---@param chargesToAdd number
+---@return number
 local function getChargesToAddWithAAAModifier(player, activeSlot, chargesToAdd)
     local hasAAABattery = player:HasTrinket(TrinketType.TRINKET_AAA_BATTERY)
     
@@ -50,6 +67,20 @@ local function getChargesToAddWithAAAModifier(player, activeSlot, chargesToAdd)
     end
 end
 
+--- Helper function to add a charge to the player's active item. Will flash the HUD and play the
+--- appropriate sound effect, depending on whether the charge is partially full or completely full.
+---
+--- If the player's active item is already fully charged, then this function will return 0 and not
+--- flash the hud.
+---
+--- This function will take the following things into account:
+--- - The Battery
+--- - AAA Battery
+---@param player EntityPlayer @The player to grant the charges to.
+---@param activeSlot ActiveSlot? @Default: `ActiveSlot.SLOT_PRIMARY` | The slot to grant the charges to.
+---@param numCharges integer? @Default: 1 | The amount of charges to grant.
+---@param playSoundEffect boolean? @Default: true | Whether to play a charge-related sound effect.
+---@return integer @The amount of charges that were actually granted. For example, if the active item was only one away from a full charge, but the `numCharges` provided to the function was 2, then this function would return 1.
 function TSIL.Charge.AddCharge(player, activeSlot, numCharges, playSoundEffect)
     activeSlot = activeSlot or ActiveSlot.SLOT_PRIMARY
     numCharges = numCharges or 1
@@ -67,6 +98,7 @@ function TSIL.Charge.AddCharge(player, activeSlot, numCharges, playSoundEffect)
     ]] 
     local chargesAwayFromMax = TSIL.Charge.GetChargesAwayFromMax(player, activeSlot)
     
+    ---@type number
     local chargesToAdd
 
     if numCharges > chargesAwayFromMax then
@@ -75,6 +107,7 @@ function TSIL.Charge.AddCharge(player, activeSlot, numCharges, playSoundEffect)
         chargesToAdd = numCharges
     end
 
+    -- // The AAA Battery trinket might grant an additional charge.
     local modifiedChargesToAdd = getChargesToAddWithAAAModifier(player, activeSlot, chargesToAdd)
     
     local totalCharge = TSIL.Charge.GetTotalCharge(player, activeSlot)
@@ -92,4 +125,3 @@ function TSIL.Charge.AddCharge(player, activeSlot, numCharges, playSoundEffect)
 
     return modifiedChargesToAdd
 end
-

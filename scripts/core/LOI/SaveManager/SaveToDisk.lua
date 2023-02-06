@@ -1,4 +1,3 @@
----@diagnostic disable: duplicate-set-field
 local function getAllSaveDataToWriteToDisk()
     local PersistentData = TSIL.__VERSION_PERSISTENT_DATA.PersistentData
     local allSaveData = {}
@@ -7,6 +6,8 @@ local function getAllSaveDataToWriteToDisk()
         local modSaveData = {}
 
         TSIL.Utils.Tables.IterateTableInOrder(modPersistentData.variables, function(_, variable)
+            -- Handle the feature of the save data manager where certain mod features can conditionally
+            -- write their data to disk.
             local conditionalFunc = variable.conditionalSave
 
             if conditionalFunc ~= nil then
@@ -16,6 +17,8 @@ local function getAllSaveDataToWriteToDisk()
                 end
             end
 
+            ---Strip out the room part of the save data (and any other arbitrary fields that they might
+            ---have added).
             if variable.persistenceMode == TSIL.Enums.VariablePersistenceMode.REMOVE_ROOM or
             variable.persistenceMode == TSIL.Enums.VariablePersistenceMode.RESET_ROOM then
                 return

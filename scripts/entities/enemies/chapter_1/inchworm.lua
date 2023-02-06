@@ -34,6 +34,7 @@ function INCH_WORM:NPCUpdate(npc)
                 data.fireAtPos = npc.Position
                 --Using this to better find a spot near the player to dig up at
                 data.digPos = nil
+                data.oldPos = npc.Position
                 data.gotValidDigPos = false
                 if npc.SubType == 2 then
                     data.fireDirAlt = false
@@ -89,6 +90,7 @@ function INCH_WORM:NPCUpdate(npc)
             end
             if sprite:IsEventTriggered("Back") then
                 data.isUnder = true
+                data.oldPos = npc.Position
                 npc.CollisionDamage = 0
                 npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
                 npc.State = 101
@@ -101,7 +103,11 @@ function INCH_WORM:NPCUpdate(npc)
         --Searching for valid position to surface from underground
         if npc.State == 101 then
             if data.underTimer == 0 then
-                npc.Position = data.digPos
+                if data.gotValidDigPos == true then
+                    npc.Position = data.digPos
+                else
+                    npc.Position = data.oldPos
+                end
                 data.isUnder = false
                 npc.CollisionDamage = 1
                 npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
@@ -110,14 +116,14 @@ function INCH_WORM:NPCUpdate(npc)
                 data.underTimer = data.underTimerMax
             else
                 --Get random position then check validity
-                if data.gotValidDigPos == false then
-                    data.digPos = targetpos + Vector(data.digDistance,0):Rotated(math.random(360))
-                end
-                if room:GetGridCollisionAtPos(data.digPos) ~= GridCollisionClass.COLLISION_NONE then
-                    data.gotValidDigPos = false
-                else
-                    data.gotValidDigPos = true
-                end
+                    if data.gotValidDigPos == false then
+                        data.digPos = targetpos + Vector(data.digDistance,0):Rotated(math.random(360))
+                    end
+                    if room:GetGridCollisionAtPos(data.digPos) ~= GridCollisionClass.COLLISION_NONE and not( room:IsPositionInRoom(data.digPos, 999)) then
+                        data.gotValidDigPos = false
+                    else
+                        data.gotValidDigPos = true
+                    end
                 data.underTimer = data.underTimer - 1
             end
         end

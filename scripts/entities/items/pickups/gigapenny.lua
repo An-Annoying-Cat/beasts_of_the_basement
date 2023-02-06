@@ -126,7 +126,8 @@ function GIGA_PENNY:gigaPennyReplace(entity)
         
         --print(chance .. " < " .. replaceChance)
         ]]
-        local chance = Mod.Functions.RNG:RandomInt(Room:GetAwardSeed(), 400)
+        local room = Game():GetRoom()
+        local chance = Mod.Functions.RNG:RandomInt(room:GetAwardSeed(), 400)
         if chance < replaceChance then
             Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_GRAB_BAG, BotB.Enums.Pickups.SHITCOIN.SUBTYPE,entity.Position,entity.Velocity,entity)
             entity:Remove()

@@ -1,4 +1,4 @@
----@diagnostic disable: duplicate-set-field
+--- Helper function to trigger a room update without affecting entity positions or velocities.
 function TSIL.Rooms.UpdateRoom()
     local room = Game():GetRoom()
     local entities = TSIL.Entities.GetEntities()
