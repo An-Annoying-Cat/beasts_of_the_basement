@@ -239,6 +239,14 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Tape Worm"),
         VARIANT = Isaac.GetEntityVariantByName("Tape Worm"),
     },
+    FERAL = {
+        TYPE = Isaac.GetEntityTypeByName("Feral"),
+        VARIANT = Isaac.GetEntityVariantByName("Feral"),
+    },
+    PAF = {
+        TYPE = Isaac.GetEntityTypeByName("Paf"),
+        VARIANT = Isaac.GetEntityVariantByName("Paf"),
+    },
 
 
     --Effects
@@ -388,6 +396,7 @@ Enums.Items = {
     HOUSEPLANT = Isaac.GetItemIdByName("Houseplant"),
     BIB = Isaac.GetItemIdByName("Bib"),
     CHAMPS_MASK = Isaac.GetItemIdByName("Champ's Mask"),
+    THE_HUMAN_SOUL = Isaac.GetItemIdByName("The Human Soul"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),

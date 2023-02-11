@@ -44,6 +44,31 @@ function TAPE_WORM:NPCUpdate(npc)
                 
                 --print (length)
                 data.MyPit = roomPits[math.random(length)]
+                data.stuffInMyPit = {}
+                roomPits = TSIL.GridSpecific.GetPits()
+                for i=1,#roomPits,1 do
+                    --print(roomPits[i])
+                    if roomPits[i] ~= nil then
+                        local currentPit = roomPits[i]
+                        local myPitPos = currentPit.Position
+                        local pitCheck = Isaac.FindInRadius(myPitPos, 25,0xFFFFFFFF)
+                        --print(pitCheck)
+                        --print(#pitCheck)
+                        if pitCheck ~= nil then
+                            data.stuffInMyPit = Isaac.FindInRadius(myPitPos, 25,0xFFFFFFFF)
+                            for i=1,#data.stuffInMyPit,1 do
+                                if data.stuffInMyPit[i].Type == BotB.Enums.Entities.TAPE_WORM.TYPE and data.stuffInMyPit[i].Variant == BotB.Enums.Entities.TAPE_WORM.VARIANT then
+                                    table.remove(roomPits,i)
+                                end
+                            end
+                        end
+                    end
+                end
+                --print(roomPits)
+                length = #roomPits
+                --print (length)
+                data.MyPit = roomPits[math.random(length)]
+                --data.MyPit:GetData().isTakenByTapeworm = true
             end
             npc.State = 99
             sprite:Play("Idle")
@@ -118,11 +143,34 @@ function TAPE_WORM:NPCUpdate(npc)
                 data.underTimer = data.underTimerMax
             else
                 --print(TSIL.GridSpecific.GetPits())
+                --data.MyPit:GetData().isTakenByTapeworm = false
                 roomPits = TSIL.GridSpecific.GetPits()
+                --print(#roomPits)
+                for i=1,#roomPits,1 do
+                    --print(roomPits[i])
+                    if roomPits[i] ~= nil then
+                        local currentPit = roomPits[i]
+                        local myPitPos = currentPit.Position
+                        local pitCheck = Isaac.FindInRadius(myPitPos, 25,0xFFFFFFFF)
+                        --print(pitCheck)
+                        --print(#pitCheck)
+                        if pitCheck ~= nil then
+                            --print("pipis")
+                            data.stuffInMyPit = Isaac.FindInRadius(myPitPos, 25,0xFFFFFFFF)
+                            for i=1,#data.stuffInMyPit,1 do
+                                if data.stuffInMyPit[i].Type == BotB.Enums.Entities.TAPE_WORM.TYPE and data.stuffInMyPit[i].Variant == BotB.Enums.Entities.TAPE_WORM.VARIANT then
+                                    --print("WEE WOO WEE WOO SECURITY BREACH SECURITY BREACH")
+                                    table.remove(roomPits,i)
+                                end
+                            end
+                        end
+                    end
+                end
                 --print(roomPits)
                 length = #roomPits
                 --print (length)
                 data.MyPit = roomPits[math.random(length)]
+                --data.MyPit:GetData().isTakenByTapeworm = true
 
                 --[[
                 if data.gotValidDigPos == false then

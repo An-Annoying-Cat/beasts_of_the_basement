@@ -18,6 +18,11 @@
     <entity Name="Batso" />
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
+    <entity Name="Paf" />
+  </group>
+
+  <group Name="BotB Chapter 1 (Alt Path) Enemies" >  
+    <entity Name="Sub Paf" />
   </group>
 
   <group Name="BotB Chapter 2 (Main Path) Enemies" >  
@@ -46,7 +51,7 @@
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
   </group>
-  
+
   <group Name="BotB Dross Enemies" >
     <entity Name="Culo" />
   </group>
