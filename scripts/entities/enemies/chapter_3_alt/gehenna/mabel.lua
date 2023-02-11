@@ -31,6 +31,7 @@ function MABEL:NPCUpdate(npc)
             data.mabelDashVelocity = Vector.Zero
             data.exitDelayFrame = 0
             data.mabelSoundPitch = 1
+            npc.CanShutDoors = false
         end
 
         --States: 
@@ -65,7 +66,11 @@ function MABEL:NPCUpdate(npc)
         end
 
         if npc.State == 99 then
-            npc.Velocity = (0.9975 * npc.Velocity) + (0.0025 * (target.Position - npc.Position))
+            if room:IsClear() then
+                npc.State = 104
+                sprite:Play("Idle")
+            end
+            npc.Velocity = ((0.9975 * npc.Velocity) + (0.0025 * (target.Position - npc.Position))):Clamped(-15,-15,15,15)
             data.mabelSoundPitch = (1 * 0.05) + (data.mabelSoundPitch * 0.95)
             sfx:AdjustPitch(Sounds.MABELLOOP,data.mabelSoundPitch)
             if data.chargeCooldown == 0 then
@@ -136,24 +141,29 @@ function MABEL:NPCUpdate(npc)
         end
 
         if npc.State == 104 then
-            npc.Velocity = -((0.995 * npc.Velocity) + (0.005 * (target.Position - npc.Position)))
+            --npc.Velocity = ((0.995 * npc.Velocity) + (0.005 * (target.Position - npc.Position))):Rotated(180)
             data.exitDelayFrame = 0
-            if room:IsPositionInRoom(npc.Position, 100) == false then
+            if room:IsPositionInRoom(npc.Position, 100) == false or true then
+                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+                npc.CollisionDamage = 0
                 npc.State = 105
             end
             
         end
 
-        
+        --print(npc.Color)
 
         if npc.State == 105 then
             data.exitDelayFrame = data.exitDelayFrame + 1
-            npc.Velocity = -((0.995 * npc.Velocity) + (0.005 * (target.Position - npc.Position)))
-            if data.exitDelayFrame >= 60 then
+            npc.Velocity = ((0.9975 * npc.Velocity) - (0.0025 * (target.Position - npc.Position)))
+            local exitAmount = ((60-data.exitDelayFrame)/60)
+            if data.exitDelayFrame >= 60 then 
                 sfx:Stop(Sounds.MABELLOOP)
                 npc:Remove()
             else
-                npc.Color = Color:Lerp(npc.Color, Color(0,0,0,0), (60-data.exitDelayFrame)/60)
+                sprite.Color = Color.Lerp(Color(0,0,0,0), Color(1,1,1,1,0,0,0), exitAmount)
+                sfx:AdjustVolume(Sounds.MABELLOOP,exitAmount)
+                npc.Scale = 1 + -(exitAmount-1)
             end
             npc.State = 105
         end

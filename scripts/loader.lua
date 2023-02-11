@@ -19,6 +19,8 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.inniereverse",
     "scripts.entities.enemies.chapter_1.planecreep",
     "scripts.entities.enemies.chapter_1.ms_horf",
+    "scripts.entities.enemies.chapter_1.feral",
+    "scripts.entities.enemies.chapter_1.paf",
 
     "scripts.entities.enemies.chapter_1_alt.dross.culo",
 
@@ -70,6 +72,7 @@ Mod.LoadScripts({
     "scripts.entities.items.mudpie",
     "scripts.entities.items.houseplant",
     "scripts.entities.items.champs_mask",
+    "scripts.entities.items.the_human_soul",
 
 
     --TRINKETS

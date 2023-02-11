@@ -280,42 +280,35 @@
 
     <entity name="Inch Worm"
         id="501" variant="13" anm2path="monsters/chapter_1/inch_worm.anm2" baseHP="5" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="10"   friction="0" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity>
 
     <entity name="Chode"
         id="501" variant="13" subtype="1" anm2path="monsters/chapter_1/chode.anm2" baseHP="5" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="10"   friction="0" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
 
     <entity name="Earth Worm"
         id="501" variant="13" subtype="2" anm2path="monsters/chapter_2/earth_worm.anm2" baseHP="5" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="10"   friction="0" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
 
     <entity name="Meal Worm"
         id="501" variant="13" subtype="3" anm2path="monsters/chapter_4/meal_worm.anm2" baseHP="17.5" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="10"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity>
 
     <entity name="Frenulum"
         id="501" variant="13" subtype="4" anm2path="monsters/chapter_4/scarred_womb/frenulum.anm2" baseHP="17.5" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="10"   friction="1" reroll="true" champion="1">
-        <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
-        <bestiary anim="Idle" transform="0,0,1"/>
-    </entity> 
-
-    <entity name="Tape Worm"
-        id="501" variant="14" subtype="0" anm2path="monsters/chapter_2/tape_worm.anm2" baseHP="10" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="5" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
@@ -367,6 +360,34 @@
         boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="16" friction="0"  numGridCollisionPoints="12" shadowSize="8"   bestiary="false" bestiaryTransform="0,0,1" bestiaryAnim="Beastiary">
         <gibs amount="0" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
+
+    <entity name="Tape Worm"
+        id="501" variant="19" subtype="0" anm2path="monsters/chapter_2/tape_worm.anm2" baseHP="10" stageHP="0" portrait="3"
+        collisionDamage="1" collisionMass="5" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
+        <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Feral"
+        id="501" variant="20" subtype="0" anm2path="monsters/chapter_1/feral.anm2" baseHP="10" stageHP="0" portrait="3"
+        collisionDamage="1" collisionMass="5" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Paf"
+        id="501" variant="21" subtype="0" anm2path="monsters/chapter_1/paf.anm2" baseHP="10" stageHP="0" portrait="3"
+        collisionDamage="1" collisionMass="2" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="12"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
+        <bestiary anim="Shake" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Sub Paf"
+        id="501" variant="21" subtype="1" anm2path="monsters/chapter_1.5/sub_paf.anm2" baseHP="10" stageHP="0" portrait="3" hasFloorAlts="true"
+        collisionDamage="1" collisionMass="2" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="12"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
+        <bestiary anim="Shake" transform="0,0,1"/>
+    </entity> 
 
     
 

@@ -9,6 +9,9 @@
   <entity Image="icons/eternalfly.png" Name="Eternal Fly" ID="501" Variant="461" Subtype="0" />
   <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
   <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
+  <entity Image="icons/paf.png" Name="Paf" ID="501" Variant="21" Subtype="0" />
+  <entity Image="icons/feral_awake.png" Name="Feral (awake)" ID="501" Variant="20" Subtype="0" />
+  <entity Image="icons/feral_asleep.png" Name="Feral (asleep)" ID="501" Variant="20" Subtype="128" />
 
   <!-- Hoard Events -->
   <entity Image="icons/grids/hoarderbasement.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
@@ -50,6 +53,7 @@
 
   <!-- Downpour Enemies -->
   <entity Image="icons/hydro_knight.png" Name="Hydro Knight" ID="41" Variant="50" Subtype="0" />
+  <entity Image="icons/sub_paf.png" Name="Sub Paf" ID="501" Variant="21" Subtype="1" />
   
   <!-- Dross Enemies -->
   <entity Image="icons/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />

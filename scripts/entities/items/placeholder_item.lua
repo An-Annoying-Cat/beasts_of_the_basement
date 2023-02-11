@@ -69,7 +69,7 @@ function PLACEHOLDER_ITEM:replacePedestal(pickup)
 		end
 
 		if doTheyActuallyHaveThem == true then
-			local chance = math.random(100)
+			local chance = Mod.Functions.RNG:RandomInt(room:GetSpawnSeed(), 100)
 			--print(chance .. "/" .. 80*(0.5^(0.5*(numPlaceholders-1))))
 			--print(numPlaceholders)
 			if chance >= 90*(0.5^(0.5*numPlaceholders)) then

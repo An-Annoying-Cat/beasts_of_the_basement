@@ -26,6 +26,8 @@ function KEHEHAN:NPCUpdate(npc)
             npc.State = 13
         end
         --]]
+        local roomRocks = TSIL.GridSpecific.GetRocks(0)
+        local length = #roomRocks
         if data.CastTimer == nil then
             data.CastTimer = 0
             data.CastTimerMax = 30
@@ -33,6 +35,9 @@ function KEHEHAN:NPCUpdate(npc)
             data.teleTimer = 120
             data.teleTimerMax = 120
             npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
+            data.MyRock = roomRocks[math.random(length)]
+            data.rockDist = (data.MyRock.Position - npc.Position):Length()
+            data.rockAngle = (data.MyRock.Position - npc.Position):GetAngleDegrees()
         end
 
         if npc.State == 8 then 
@@ -67,10 +72,15 @@ function KEHEHAN:NPCUpdate(npc)
                 --npc.StateFrame = 0
             end
             if sprite:IsEventTriggered("Shoot") then
-
+                roomRocks = TSIL.GridSpecific.GetRocks(0)
+                length = #roomRocks
+                local iterand = math.random(length)
+                data.MyRock = roomRocks[iterand]
+                data.rockDist = (data.MyRock.Position - npc.Position):Length()
+                data.rockAngle = (data.MyRock.Position - npc.Position):GetAngleDegrees()
                 local params = ProjectileParams()
                 params.HeightModifier = 15
-                local bullet = Isaac.Spawn(9, 0, 0, npc.Position, (Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle)):Resized(15), npc):ToProjectile()
+                local bullet = Isaac.Spawn(9, 0, 0, npc.Position, (Vector(math.floor(0.05 * data.rockDist * (math.random(8, 10) / 10), 6),0):Rotated(data.rockAngle)):Resized(15), npc):ToProjectile()
                 bullet.Parent = npc
 
                 sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),0.4,0,false,math.random(80,90)/100)
@@ -154,7 +164,6 @@ function KEHEHAN:BulletCheck(bullet)
                     Isaac.Spawn(BotB.Enums.Entities.SHARD.TYPE,BotB.Enums.Entities.SHARD.VARIANT,3,grid.Position,Vector(0,0),bullet)
                     room:DestroyGrid(index, true)
                     sfx:Play(SoundEffect.SOUND_BLACK_POOF,1,0,false,math.random(80,90)/100)
-                    
                     --print("yeah")
                 end
             else
