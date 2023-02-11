@@ -280,6 +280,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Box Particle"),
         VARIANT = Isaac.GetEntityVariantByName("Box Particle")
     },
+    REVERSED_CONTROLS = {
+        TYPE = Isaac.GetEntityTypeByName("Reversed Controls Icon"),
+        VARIANT = Isaac.GetEntityVariantByName("Reversed Controls Icon")
+    },
 
 
 }

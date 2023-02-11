@@ -96,6 +96,8 @@ Mod.LoadScripts({
     "scripts.entities.consumables.ojcards",
     "scripts.entities.consumables.mahjongtiles",
 
+    --Effects
+    "scripts.entities.effects.trippin",
 
     --PLAYERS
     "scripts.players.jezebel",

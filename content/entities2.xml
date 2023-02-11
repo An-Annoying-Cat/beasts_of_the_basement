@@ -450,6 +450,10 @@
         id="1000" variant="804" anm2path="monsters/chapter_3/effect_box.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
     </entity>
+    <entity name="Reversed Controls Icon"
+        id="1000" variant="805" anm2path="effects/player_trippin.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
 
 
     
