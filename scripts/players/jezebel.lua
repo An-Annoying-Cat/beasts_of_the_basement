@@ -32,18 +32,20 @@ function Jezebel:playerUpdate(player)
 		end
 		--JOKES ON YOU THE BLOOD 
 		if data.jezOverhealTimer ~= 0 then
-			if player:HasCollectible(CollectibleType.COLLECTIBLE_BIRTHRIGHT) then
-				if level:GetCurrentRoomDesc().Clear then
-					if player.FrameCount % 4 == 0 then
-						data.jezOverhealTimer = data.jezOverhealTimer - 1
+			if player:HasCollectible(CollectibleType.COLLECTIBLE_ROCK_BOTTOM) == false then
+				if player:HasCollectible(CollectibleType.COLLECTIBLE_BIRTHRIGHT) then
+					if level:GetCurrentRoomDesc().Clear then
+						if player.FrameCount % 4 == 0 then
+							data.jezOverhealTimer = data.jezOverhealTimer - 1
+						end
+					else
+						if player.FrameCount % 2 == 0 then
+							data.jezOverhealTimer = data.jezOverhealTimer - 1
+						end
 					end
 				else
-					if player.FrameCount % 2 == 0 then
-						data.jezOverhealTimer = data.jezOverhealTimer - 1
-					end
+					data.jezOverhealTimer = data.jezOverhealTimer - 1
 				end
-			else
-				data.jezOverhealTimer = data.jezOverhealTimer - 1
 			end
 			--print("overheal: " .. data.jezOverhealTimer)
 			--print("cache your shit dawg")

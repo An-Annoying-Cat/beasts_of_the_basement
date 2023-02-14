@@ -160,7 +160,9 @@ function THE_HUNGER:meatUpdate(npc)
 		local sprite = npc:GetSprite()
 		local player = npc:GetPlayerTarget()
 		local data = npc:GetData()
-
+		if npc.EntityCollisionClass ~= EntityCollisionClass.ENTCOLL_NONE then
+			npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+		end
 		if data.animInitialized == nil then
 			if npc.SubType == 0 or npc.SubType == nil then
 				--Small corpse
@@ -176,7 +178,6 @@ function THE_HUNGER:meatUpdate(npc)
 				sprite:Play("Small")
 				npc.Color = Color(1,1,1)
 			end
-			npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
 			data.animInitialized = true
 		end
 		
