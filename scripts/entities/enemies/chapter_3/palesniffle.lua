@@ -39,7 +39,7 @@ function PALESNIFFLE:NPCUpdate(npc)
             sfx:Play(SoundEffect.SOUND_LOW_INHALE,1,0,false,math.random(175, 185)/100)
             --Take aim...
             local aimTarget = target.Position
-            warningTarget = Isaac.Spawn(EntityType.ENTITY_EFFECT,Entities.WARNING_TARGET.VARIANT,0,aimTarget,Vector(0,0),npc)
+            local warningTarget = Isaac.Spawn(EntityType.ENTITY_EFFECT,Entities.WARNING_TARGET.VARIANT,0,aimTarget,Vector(0,0),npc)
             --Spawn the kineti line
             data.warningLine = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.KINETI_BEAM,0,Vector(0,0),Vector(0,0),nil):ToEffect()
             data.warningLine.Parent = npc

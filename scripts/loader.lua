@@ -73,6 +73,7 @@ Mod.LoadScripts({
     "scripts.entities.items.houseplant",
     "scripts.entities.items.champs_mask",
     "scripts.entities.items.the_human_soul",
+    "scripts.entities.items.thebestiary",
 
 
     --TRINKETS
@@ -101,5 +102,6 @@ Mod.LoadScripts({
 
     --PLAYERS
     "scripts.players.jezebel",
+    "scripts.players.solomon",
 
 })

@@ -401,6 +401,7 @@ Enums.Items = {
     BIB = Isaac.GetItemIdByName("Bib"),
     CHAMPS_MASK = Isaac.GetItemIdByName("Champ's Mask"),
     THE_HUMAN_SOUL = Isaac.GetItemIdByName("The Human Soul"),
+    THE_BESTIARY = Isaac.GetItemIdByName("The Bestiary"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
