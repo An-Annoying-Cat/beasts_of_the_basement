@@ -3,7 +3,7 @@
          nameimageroot="gfx/ui/boss/" 
          bigportraitroot="gfx/ui/stage/">
          
-	<player name="Solomon" skin="player_solomon.png" hp="2"
+	<player name="Solomon" skin="player_solomon.png" hp="4"
           nameimage="PlayerName_Solomon.png" costumeSuffix="solomon"
           portrait="PlayerPortrait_Solomon.png" 
           bigportrait="PlayerPortraitBig_Solomon.png" skinColor="-1" 
