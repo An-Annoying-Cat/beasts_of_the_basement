@@ -2,13 +2,15 @@ local Mod = BotB
 local Solomon = {}
 
 local PLAYER_SOLOMON = Isaac.GetPlayerTypeByName("Solomon")
---BotB.JEZ_EXTRA = Isaac.GetCostumeIdByPath("gfx/characters/character_jez_extra.anm2")
+BotB.SOLOMON_EXTRA1 = Isaac.GetCostumeIdByPath("gfx/characters/character_solomon_extra1.anm2")
+BotB.SOLOMON_EXTRA2 = Isaac.GetCostumeIdByPath("gfx/characters/character_solomon_extra2.anm2")
 function Solomon:playerGetCostume(player)
     --print("weebis")
     if player:GetPlayerType() == PLAYER_SOLOMON then
         --print("whongus")
-        --player:AddNullCostume(BotB.JEZ_EXTRA)
-		  player:SetPocketActiveItem(BotB.Enums.Items.THE_BESTIARY, ActiveSlot.SLOT_POCKET, false)
+        player:AddNullCostume(BotB.SOLOMON_EXTRA1)
+        player:AddNullCostume(BotB.SOLOMON_EXTRA2)
+		    player:SetPocketActiveItem(BotB.Enums.Items.THE_BESTIARY, ActiveSlot.SLOT_POCKET, false)
     end
 end
 Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, Solomon.playerGetCostume, 0)
@@ -57,6 +59,7 @@ function Solomon:npcUpdate(npc)
   --Is there a Solomon here?
   local players = Solomon:GetPlayers()
   local isSolomonHere = false
+  local level = Game():GetLevel()
   for i=1,#players,1 do
     if players[i]:GetPlayerType() == PLAYER_SOLOMON then
       isSolomonHere = true
@@ -66,6 +69,11 @@ function Solomon:npcUpdate(npc)
     if EntityRef(npc).IsFriendly == true then
       if npc:HasEntityFlags(EntityFlag.FLAG_NO_SPIKE_DAMAGE) ~= true then
         npc:AddEntityFlags(EntityFlag.FLAG_NO_SPIKE_DAMAGE)
+      end
+      if level:GetCurrentRoomDesc().Clear then
+        if npc.HitPoints ~= npc.MaxHitPoints then
+          npc.HitPoints = npc.HitPoints + 0.5
+        end
       end
     end
   end
@@ -83,8 +91,14 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
   end
   if isSolomonHere then
     if EntityRef(entity).IsFriendly == true then
-      local actualDamage = amt*0.2
-      return actualDamage
+      local actualDamage = amt
+      if flags & DamageFlag.DAMAGE_FIRE ~= 0 or flags & DamageFlag.DAMAGE_EXPLOSION ~= 0 then
+        actualDamage = amt*0.1
+        return actualDamage
+      else
+        actualDamage = amt*0.25
+        return actualDamage
+      end
     end
   end
 end
