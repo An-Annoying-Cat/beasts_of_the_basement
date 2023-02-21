@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="millieamp" CreatedOn="2/21/2023 5:53:00 PM" Version="85" Fps="30"/>
+	<Info CreatedBy="millieamp" CreatedOn="2/21/2023 5:56:38 PM" Version="86" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="controls text.png" Id="0"/>
@@ -63,7 +63,7 @@
 			</RootAnimation>
 			<LayerAnimations>
 				<LayerAnimation LayerId="0" Visible="true">
-					<Frame XPosition="0" YPosition="0" XPivot="162" YPivot="60" XCrop="0" YCrop="0" Width="325" Height="96" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+					<Frame XPosition="0" YPosition="0" XPivot="162" YPivot="60" XCrop="0" YCrop="0" Width="325" Height="98" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 				</LayerAnimation>
 			</LayerAnimations>
 			<NullAnimations>
