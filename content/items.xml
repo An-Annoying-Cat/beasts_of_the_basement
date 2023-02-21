@@ -22,7 +22,8 @@
     <passive id="19" quality="3" name="Bib" description="Tears up + messy eater" gfx="placeholder.png" tags="tearsup"/>
     <passive id="20" quality="3" name="Champ's Mask" description="Ego up + overexertion" gfx="champ's_mask.png"/>
     <passive id="21" quality="4" name="The Human Soul" description="All stats up + self-actualization" gfx="the_human_soul.png" cache="all" achievement="431"/>
-    <active id="22" quality="3" name="The Bestiary" description="Know thy enemy" gfx="the_bestiary.png" chargetype="normal" maxcharges="6" tags="book"/>
+    <!--Real Solomon bestiary-->
+    <active id="22" quality="3" name="The Bestiary" description="Know thy enemy" gfx="the_bestiary.png" chargetype="normal" maxcharges="0" tags="book"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

@@ -454,6 +454,14 @@
         id="1000" variant="805" anm2path="effects/player_trippin.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
     </entity>
+    <entity name="Solomon Bestiary UI"
+        id="1000" variant="805" anm2path="effects/solomon_bestiary_ui.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
+    <entity name="Solomon KP UI"
+        id="1000" variant="806" anm2path="effects/solomon_KP_ui.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
 
 
     
@@ -476,6 +484,12 @@
     
     <!--Sacks id="5" variant="69" (nice) subtypes start at 30-->
     <entity anm2path="items/pick ups/kick_cube.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Kick Cube" numGridCollisionPoints="24" shadowSize="18" stageHP="0" subtype="30" variant="69">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+    </entity>
+    <entity anm2path="items/pick ups/knowledge/knowledge_point.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Knowledge Point (small)" numGridCollisionPoints="24" shadowSize="18" stageHP="0" subtype="31" variant="69">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+    </entity>
+    <entity anm2path="items/pick ups/knowledge/knowledge_point.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Knowledge Point (large)" numGridCollisionPoints="24" shadowSize="18" stageHP="0" subtype="32" variant="69">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
     </entity>
 

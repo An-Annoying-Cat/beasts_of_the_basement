@@ -284,6 +284,14 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Reversed Controls Icon"),
         VARIANT = Isaac.GetEntityVariantByName("Reversed Controls Icon")
     },
+    SOLOMON_BESTIARY_UI = {
+        TYPE = Isaac.GetEntityTypeByName("Solomon Bestiary UI"),
+        VARIANT = Isaac.GetEntityVariantByName("Solomon Bestiary UI")
+    },
+    SOLOMON_KP_UI = {
+        TYPE = Isaac.GetEntityTypeByName("Solomon KP UI"),
+        VARIANT = Isaac.GetEntityVariantByName("Solomon KP UI")
+    },
 
 
 }
@@ -461,6 +469,16 @@ Enums.Pickups = {
         TYPE = Isaac.GetEntityTypeByName("Giga Key"),
         VARIANT = Isaac.GetEntityVariantByName("Giga Key"),
         SUBTYPE = 80
+    },
+    KP_SMALL = {
+        TYPE = Isaac.GetEntityTypeByName("Knowledge Point (small)"),
+        VARIANT = Isaac.GetEntityVariantByName("Knowledge Point (small)"),
+        SUBTYPE = 31
+    },
+    KP_LARGE = {
+        TYPE = Isaac.GetEntityTypeByName("Knowledge Point (large)"),
+        VARIANT = Isaac.GetEntityVariantByName("Knowledge Point (large)"),
+        SUBTYPE = 32
     },
 
 }

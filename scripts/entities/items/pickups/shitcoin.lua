@@ -20,6 +20,7 @@ local function getPlayers()
 end
 
 function SHITCOIN:getGigaPenny(pickup,collider,_)
+    --print("poopy")
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
     --print(pickup.Type .. "," .. pickup.Variant .. "," .. pickup.SubType)
@@ -28,7 +29,7 @@ function SHITCOIN:getGigaPenny(pickup,collider,_)
         sfx:Play(BotB.FF.Sounds.FunnyFart,0.75,0,false,0.75)
         pickup.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         sprite:Play("Collect")
-        player = collider:ToPlayer()
+        local player = collider:ToPlayer()
         local dipSubTypesTable = {0,1,2,3,4,5,6,12,13,14,20,666,667,668,669,670,671,672}
         for i=0,2,1 do
             Isaac.Spawn(EntityType.ENTITY_FAMILIAR,FamiliarVariant.DIP,dipSubTypesTable[math.random(#dipSubTypesTable)],data.Collector.Position,Vector(5,0):Rotated(math.random(360)),player)
@@ -71,8 +72,8 @@ function SHITCOIN:gigaPennyUpdate(pickup)
 
 end
 
-Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,SHITCOIN.getGigaPenny,PickupVariant.PICKUP_GRAB_BAG)
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,SHITCOIN.gigaPennyUpdate,PickupVariant.PICKUP_GRAB_BAG)
+Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,SHITCOIN.getGigaPenny,PickupVariant.PICKUP_COIN)
+Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,SHITCOIN.gigaPennyUpdate,PickupVariant.PICKUP_COIN)
 
 
 

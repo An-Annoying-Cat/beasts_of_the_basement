@@ -89,6 +89,7 @@ Mod.LoadScripts({
     "scripts.entities.items.pickups.gigapenny",
     "scripts.entities.items.pickups.gigakey",
     "scripts.entities.items.pickups.shitcoin",
+    "scripts.entities.items.pickups.knowledge_points",
 
 
     --CONSUMABLES
@@ -99,6 +100,7 @@ Mod.LoadScripts({
 
     --Effects
     "scripts.entities.effects.trippin",
+    "scripts.entities.effects.solomon_bestiary_ui",
 
     --PLAYERS
     "scripts.players.jezebel",

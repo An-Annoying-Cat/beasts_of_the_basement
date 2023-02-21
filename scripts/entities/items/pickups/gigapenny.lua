@@ -55,8 +55,8 @@ function GIGA_PENNY:gigaPennyUpdate(pickup)
 
 end
 
-Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,GIGA_PENNY.getGigaPenny,PickupVariant.PICKUP_GRAB_BAG)
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,GIGA_PENNY.gigaPennyUpdate,PickupVariant.PICKUP_GRAB_BAG)
+Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,GIGA_PENNY.getGigaPenny,PickupVariant.PICKUP_COIN)
+Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,GIGA_PENNY.gigaPennyUpdate,PickupVariant.PICKUP_COIN)
 
 
 --Player shit (queued coupon on entering a shop)

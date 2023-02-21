@@ -2,7 +2,7 @@ local Mod = BotB
 sfx = SFXManager()
 game = Game()
 local GIGA_KEY = {}
-
+print("wtf is going on")
 function GIGA_KEY:getGigaKey(pickup,collider,_)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
@@ -24,6 +24,7 @@ function GIGA_KEY:gigaKeyUpdate(pickup)
     if data.Collector == nil then
         data.Collector = pickup
     end
+    --print("cock2")
     --print(pickup:GetCoinValue())
     if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.GIGA_KEY.SUBTYPE then
 
