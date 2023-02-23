@@ -118,8 +118,7 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
     if EntityRef(entity).IsFriendly == true then
       local actualDamage = amt
       if flags & DamageFlag.DAMAGE_FIRE ~= 0 or flags & DamageFlag.DAMAGE_EXPLOSION ~= 0 or flags & DamageFlag.DAMAGE_SPIKES ~= 0 then
-        actualDamage = amt*0
-        return actualDamage
+        return false
       else
         actualDamage = amt*0.25
         return actualDamage
