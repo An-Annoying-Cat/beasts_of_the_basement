@@ -21,6 +21,11 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.ms_horf",
     "scripts.entities.enemies.chapter_1.feral",
     "scripts.entities.enemies.chapter_1.paf",
+    "scripts.entities.enemies.chapter_1.skipfly",
+    "scripts.entities.enemies.chapter_1.flapjack",
+    "scripts.entities.enemies.chapter_1.flapstack",
+    "scripts.entities.enemies.chapter_1.grilled_flapjack",
+    "scripts.entities.enemies.chapter_1.grilled_flapstack",
 
     "scripts.entities.enemies.chapter_1_alt.dross.culo",
 

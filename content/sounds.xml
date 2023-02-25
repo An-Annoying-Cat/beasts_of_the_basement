@@ -69,6 +69,11 @@
 	<sound name="PuerShoot">
 		<sample weight="1" path="puerShoot.wav" />
 	</sound>
+	<sound name="SkipFlyBounce">
+		<sample weight="1" path="skipFlyBounce1.wav" />
+		<sample weight="1" path="skipFlyBounce2.wav" />
+		<sample weight="1" path="skipFlyBounce3.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">

@@ -247,6 +247,26 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Paf"),
         VARIANT = Isaac.GetEntityVariantByName("Paf"),
     },
+    SKIP_FLY = {
+        TYPE = Isaac.GetEntityTypeByName("Skip Fly"),
+        VARIANT = Isaac.GetEntityVariantByName("Skip Fly"),
+    },
+    FLAPJACK = {
+        TYPE = Isaac.GetEntityTypeByName("Flapjack"),
+        VARIANT = Isaac.GetEntityVariantByName("Flapjack"),
+    },
+    FLAPSTACK = {
+        TYPE = Isaac.GetEntityTypeByName("Flapstack"),
+        VARIANT = Isaac.GetEntityVariantByName("Flapstack"),
+    },
+    GRILLED_FLAPJACK = {
+        TYPE = Isaac.GetEntityTypeByName("Grilled Flapjack"),
+        VARIANT = Isaac.GetEntityVariantByName("Grilled Flapjack"),
+    },
+    GRILLED_FLAPSTACK = {
+        TYPE = Isaac.GetEntityTypeByName("Grilled Flapstack"),
+        VARIANT = Isaac.GetEntityVariantByName("Grilled Flapstack"),
+    },
 
 
     --Effects
@@ -334,6 +354,7 @@ Enums.SFX = {
     TIPPYTAPLOOP = Isaac.GetSoundIdByName("TippyTapLoop"),
     TIPPYTAPSTEP = Isaac.GetSoundIdByName("TippyTapStep"),
     CROASTLAND = Isaac.GetSoundIdByName("CroastLand"),
+    SKIPFLY_BOUNCE = Isaac.GetSoundIdByName("SkipFlyBounce"),
 
     THAUMATURGE_LAUGH = Isaac.GetSoundIdByName("ThaumLaugh"),
     THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),

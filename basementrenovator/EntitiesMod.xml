@@ -12,6 +12,20 @@
   <entity Image="icons/paf.png" Name="Paf" ID="501" Variant="21" Subtype="0" />
   <entity Image="icons/feral_awake.png" Name="Feral (awake)" ID="501" Variant="20" Subtype="0" />
   <entity Image="icons/feral_asleep.png" Name="Feral (asleep)" ID="501" Variant="20" Subtype="128" />
+  <entity Image="icons/skipfly.png" Name="Skip Fly" ID="501" Variant="22" Subtype="0" />
+  
+  <entity Image="icons/flapjack.png" Name="Flapjack" ID="501" Variant="23" Subtype="0" />
+  <entity Image="icons/flapstack_2.png" Name="Flapstack (2)" ID="501" Variant="24" Subtype="1" />
+  <entity Image="icons/flapstack_3.png" Name="Flapstack (3)" ID="501" Variant="24" Subtype="2" />
+  <entity Image="icons/flapstack_4.png" Name="Flapstack (4)" ID="501" Variant="24" Subtype="3" />
+  <entity Image="icons/flapstack_5.png" Name="Flapstack (5)" ID="501" Variant="24" Subtype="4" />
+  <!-- Burning Basement Enemies -->
+  <entity Image="icons/grilled_flapjack.png" Name="Grilled Flapjack" ID="501" Variant="25" Subtype="0" />
+  <entity Image="icons/grilled_flapstack_2.png" Name="Grilled Flapstack (2)" ID="501" Variant="26" Subtype="1" />
+  <entity Image="icons/grilled_flapstack_3.png" Name="Grilled Flapstack (3)" ID="501" Variant="26" Subtype="2" />
+  <entity Image="icons/grilled_flapstack_4.png" Name="Grilled Flapstack (4)" ID="501" Variant="26" Subtype="3" />
+  <entity Image="icons/grilled_flapstack_5.png" Name="Grilled Flapstack (5)" ID="501" Variant="26" Subtype="4" />
+
 
   <!-- Hoard Events -->
   <entity Image="icons/grids/hoarderbasement.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">

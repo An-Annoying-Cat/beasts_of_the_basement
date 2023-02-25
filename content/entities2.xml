@@ -389,6 +389,41 @@
         <bestiary anim="Shake" transform="0,0,1"/>
     </entity> 
 
+    <entity name="Skip Fly"
+        id="501" variant="22" subtype="0" anm2path="monsters/chapter_1/skip_fly.anm2" baseHP="8" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="8" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="36"   friction="0" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
+        <bestiary anim="Hop" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Flapjack"
+        id="501" variant="23" subtype="0" anm2path="monsters/chapter_1/flapjack.anm2" baseHP="10" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="8" collisionRadius="16"  numGridCollisionPoints="12" shadowSize="24"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
+        <bestiary anim="Hop" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Flapstack"
+        id="501" variant="24" subtype="0" anm2path="monsters/chapter_1/flapstack.anm2" baseHP="10" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="8" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="32"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
+        <bestiary anim="Hop" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Grilled Flapjack"
+        id="501" variant="25" subtype="0" anm2path="monsters/chapter_1/grilled_flapjack.anm2" baseHP="10" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="8" collisionRadius="16"  numGridCollisionPoints="12" shadowSize="24"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
+        <bestiary anim="Hop" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Grilled Flapstack"
+        id="501" variant="26" subtype="0" anm2path="monsters/chapter_1/grilled_flapstack.anm2" baseHP="10" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="8" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="32"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
+        <bestiary anim="Hop" transform="0,0,1"/>
+    </entity> 
+
     
 
 
