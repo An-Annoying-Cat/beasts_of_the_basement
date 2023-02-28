@@ -26,8 +26,10 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.flapstack",
     "scripts.entities.enemies.chapter_1.grilled_flapjack",
     "scripts.entities.enemies.chapter_1.grilled_flapstack",
+    "scripts.entities.enemies.chapter_1.cherry",
 
     "scripts.entities.enemies.chapter_1_alt.dross.culo",
+    "scripts.entities.enemies.chapter_1_alt.dross.shithead",
 
     "scripts.entities.enemies.chapter_2.tippytap",
     "scripts.entities.enemies.chapter_2.croast",

@@ -424,6 +424,20 @@
         <bestiary anim="Hop" transform="0,0,1"/>
     </entity> 
 
+    <entity name="Shithead"
+        id="501" variant="27" subtype="0" anm2path="monsters/chapter_1.5/dross/shithead.anm2" baseHP="26" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
+        <bestiary anim="Hop" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Cherry"
+        id="501" variant="28" subtype="0" anm2path="monsters/chapter_1/cherry.anm2" baseHP="16" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <bestiary anim="Slam" transform="0,0,1"/>
+    </entity> 
+
     
 
 

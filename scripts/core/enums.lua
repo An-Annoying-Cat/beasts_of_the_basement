@@ -267,6 +267,14 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Grilled Flapstack"),
         VARIANT = Isaac.GetEntityVariantByName("Grilled Flapstack"),
     },
+    SHITHEAD = {
+        TYPE = Isaac.GetEntityTypeByName("Shithead"),
+        VARIANT = Isaac.GetEntityVariantByName("Shithead"),
+    },
+    CHERRY = {
+        TYPE = Isaac.GetEntityTypeByName("Cherry"),
+        VARIANT = Isaac.GetEntityVariantByName("Cherry"),
+    },
 
 
     --Effects

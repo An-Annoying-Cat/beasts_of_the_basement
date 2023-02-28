@@ -13,6 +13,7 @@
   <entity Image="icons/feral_awake.png" Name="Feral (awake)" ID="501" Variant="20" Subtype="0" />
   <entity Image="icons/feral_asleep.png" Name="Feral (asleep)" ID="501" Variant="20" Subtype="128" />
   <entity Image="icons/skipfly.png" Name="Skip Fly" ID="501" Variant="22" Subtype="0" />
+  <entity Image="icons/cherry.png" Name="Cherry" ID="501" Variant="28" Subtype="0" />
   
   <entity Image="icons/flapjack.png" Name="Flapjack" ID="501" Variant="23" Subtype="0" />
   <entity Image="icons/flapstack_2.png" Name="Flapstack (2)" ID="501" Variant="24" Subtype="1" />
@@ -71,6 +72,7 @@
   
   <!-- Dross Enemies -->
   <entity Image="icons/culo.png" Name="Culo" ID="305" Variant="30" Subtype="0" />
+  <entity Image="icons/shithead.png" Name="Shithead" ID="501" Variant="27" Subtype="0" />
   <!--Chapter 2 (Main Path) Enemies-->
   <!--Scarred Womb Enemies-->
   <entity Image="icons/earth_worm.png" Name="Earth Worm" ID="501" Variant="13" Subtype="2" />
@@ -78,7 +80,8 @@
   <entity Image="icons/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
   <entity Image="icons/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
   <entity Image="icons/funguy.png" Name="Fun Guy" ID="501" Variant="11" Subtype="0" />
-
+  <!-- Catacombs Enemies -->
+  
   <!-- Mines Enemies-->
   <entity Image="icons/kettle.png" Name="Kettle" ID="501" Variant="1" Subtype="0" />
   <entity Image="icons/crockpot.png" Name="Crockpot" ID="501" Variant="3" Subtype="0" >

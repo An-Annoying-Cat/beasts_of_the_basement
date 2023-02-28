@@ -25,6 +25,17 @@
     <entity Name="Flapstack (3)" />
     <entity Name="Flapstack (4)" />
     <entity Name="Flapstack (5)" />
+    <entity Name="Cherry" />
+  </group>
+
+  <group Name="BotB Basement Enemies" >  
+    <entity Name="Ms. Horf" />
+    <entity Name="Chaff" />
+    <entity Name="Inch Worm" />
+    <entity Name="Chode" />
+    <entity Name="Paf" />
+    <entity Name="Skip Fly" />
+    <entity Name="Cherry" />
   </group>
 
   <group Name="BotB Burning Basement Enemies" >  
@@ -44,6 +55,10 @@
     <entity Name="Croast" />
     <entity Name="Fun Guy" />
     <entity Name="Earth Worm" />
+  </group>
+
+  <group Name="BotB Catacombs Enemies" >  
+    <entity Name="Cherry" />
   </group>
 
   <group Name="BotB Chapter 2 (Alt Path) Enemies" >  
@@ -68,6 +83,7 @@
 
   <group Name="BotB Dross Enemies" >
     <entity Name="Culo" />
+    <entity Name="Shithead" />
   </group>
 
   <group Name="BotB Caves Enemies" >
@@ -384,12 +400,21 @@
   <group Name="Chapter 1 (Main Path) Enemies" >
      <group Name="BotB Chapter 1 (Main Path) Enemies" />
   </group>
+
+  <group Name="Basement Enemies" >
+     <group Name="BotB Basement Enemies" />
+  </group>
+
   <group Name="Burning Basement Enemies" >
      <group Name="BotB Burning Basement Enemies" />
   </group>
 
   <group Name="Chapter 2 (Main Path) Enemies" >  
     <group Name="BotB Chapter 2 (Main Path) Enemies" />
+  </group>
+
+  <group Name="Catacombs Enemies" >  
+    <group Name="BotB Catacombs Enemies" />
   </group>
 
   <group Name="Chapter 2 (Alt Path) Enemies" >  
