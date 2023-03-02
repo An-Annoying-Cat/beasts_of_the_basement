@@ -14,7 +14,6 @@
   <entity Image="icons/feral_asleep.png" Name="Feral (asleep)" ID="501" Variant="20" Subtype="128" />
   <entity Image="icons/skipfly.png" Name="Skip Fly" ID="501" Variant="22" Subtype="0" />
   <entity Image="icons/cherry.png" Name="Cherry" ID="501" Variant="28" Subtype="0" />
-  <entity Image="icons/drone.png" Name="Drone" ID="214" Variant="20" Subtype="0" />
   
   <entity Image="icons/flapjack.png" Name="Flapjack" ID="501" Variant="23" Subtype="0" />
   <entity Image="icons/flapstack_2.png" Name="Flapstack (2)" ID="501" Variant="24" Subtype="1" />
@@ -66,6 +65,8 @@
   <entity Image="icons/pong.png" Name="Pong" ID="501" Variant="9" Subtype="0" />
   <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
   <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
+  <entity Image="icons/drone.png" Name="Drone" ID="214" Variant="20" Subtype="0" />
+  <entity Image="icons/unboxer.png" Name="Drone" ID="215" Variant="20" Subtype="0" />
 
   <!-- Downpour Enemies -->
   <entity Image="icons/hydro_knight.png" Name="Hydro Knight" ID="41" Variant="50" Subtype="0" />

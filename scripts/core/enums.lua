@@ -125,6 +125,12 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Drone"),
     },
 
+    -- Level 2 Fly Variants
+    UNBOXER = {
+        TYPE = Isaac.GetEntityTypeByName("Unboxer"),
+        VARIANT = Isaac.GetEntityVariantByName("Unboxer"),
+    },
+
     --Larry Variants (Larriants, if you will)
     CADRE = {
         TYPE = Isaac.GetEntityTypeByName("Cadre"),
