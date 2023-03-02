@@ -105,6 +105,14 @@
             <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0" worm="0"/>
 	</entity> 
 
+    <!--Level 2 Flies   id="214"  variants start at 20-->
+    <entity name="Drone"
+        id="214" variant="20" anm2path="monsters/chapter_1/drone.anm2" baseHP="15" stageHP="0" portrait="1"
+        collisionDamage="1" collisionMass="6" collisionRadius="13" numGridCollisionPoints="8" shadowSize="14"   friction="1" reroll="true" champion="0">
+            <bestiary anim="WalkVert" overlay="Walk" transform="0,0,1"/>
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
+    </entity>
+
     <!--Larries id="19" variant="0"   subtypes start at 30-->
     <entity anm2path="monsters/chapter_4/womb/cadre.anm2" name="Cadre" baseHP="30" champion="0" boss="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" gridCollision="walls" id="19" variant="0" subtype="30" numGridCollisionPoints="8" portrait="0" shadowSize="25" stageHP="0">
         <bestiary anim="WalkHeadHori" transform="0,0,1"/>

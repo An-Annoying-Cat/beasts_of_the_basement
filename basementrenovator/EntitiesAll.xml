@@ -26,6 +26,7 @@
     <entity Name="Flapstack (4)" />
     <entity Name="Flapstack (5)" />
     <entity Name="Cherry" />
+    <entity Name="Drone" />
   </group>
 
   <group Name="BotB Basement Enemies" >  

@@ -14,6 +14,7 @@
   <entity Image="icons/feral_asleep.png" Name="Feral (asleep)" ID="501" Variant="20" Subtype="128" />
   <entity Image="icons/skipfly.png" Name="Skip Fly" ID="501" Variant="22" Subtype="0" />
   <entity Image="icons/cherry.png" Name="Cherry" ID="501" Variant="28" Subtype="0" />
+  <entity Image="icons/drone.png" Name="Drone" ID="214" Variant="20" Subtype="0" />
   
   <entity Image="icons/flapjack.png" Name="Flapjack" ID="501" Variant="23" Subtype="0" />
   <entity Image="icons/flapstack_2.png" Name="Flapstack (2)" ID="501" Variant="24" Subtype="1" />
