@@ -26,7 +26,6 @@
     <entity Name="Flapstack (4)" />
     <entity Name="Flapstack (5)" />
     <entity Name="Cherry" />
-    <entity Name="Drone" />
   </group>
 
   <group Name="BotB Basement Enemies" >  
@@ -80,6 +79,8 @@
     <entity Name="Innie (Turn left)" />
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
+    <entity Name="Drone" />
+    <entity Name="Unboxer" />
   </group>
 
   <group Name="BotB Dross Enemies" >

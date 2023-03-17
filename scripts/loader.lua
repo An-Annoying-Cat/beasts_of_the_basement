@@ -27,6 +27,8 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.grilled_flapjack",
     "scripts.entities.enemies.chapter_1.grilled_flapstack",
     "scripts.entities.enemies.chapter_1.cherry",
+    "scripts.entities.enemies.chapter_1.drone",
+    "scripts.entities.enemies.chapter_1.unboxer",
 
     "scripts.entities.minibosses.bamf",
     "scripts.entities.minibosses.spiderboi",

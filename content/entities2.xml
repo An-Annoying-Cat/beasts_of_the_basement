@@ -109,7 +109,15 @@
     <entity name="Drone"
         id="214" variant="20" anm2path="monsters/chapter_1/drone.anm2" baseHP="15" stageHP="0" portrait="1"
         collisionDamage="1" collisionMass="6" collisionRadius="13" numGridCollisionPoints="8" shadowSize="14"   friction="1" reroll="true" champion="0">
-            <bestiary anim="WalkVert" overlay="Walk" transform="0,0,1"/>
+            <bestiary anim="Idle" transform="0,0,1"/>
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
+    </entity>
+
+    <!--Level 2 Spiders   id="214"  variants start at 20-->
+    <entity name="Unboxer"
+        id="215" variant="20" anm2path="monsters/chapter_1/unboxer.anm2" baseHP="18" stageHP="0" portrait="1"
+        collisionDamage="1" collisionMass="6" collisionRadius="13" numGridCollisionPoints="8" shadowSize="14"   friction="1" reroll="true" champion="0">
+            <bestiary anim="Walk" transform="0,0,1"/>
             <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
     </entity>
 
