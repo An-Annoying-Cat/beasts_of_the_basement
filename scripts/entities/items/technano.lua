@@ -59,7 +59,7 @@ function TECH_NANO:techNanoTearUpdate(tear)
         if tear:GetData().hasTechNanoAdjustments ~= true then
             tear.FallingAcceleration = -0.05
             tear.Color = Color(1,0.25,0.25)
-            tear.HomingFriction = 0
+            --tear.HomingFriction = 0.5
             tear:GetData().hasTechNanoAdjustments = true
         end
         local correctPos = tear.Position
