@@ -18,6 +18,10 @@ function THE_BESTIARY:GetPlayers()
 	return players
 end
 
+
+--180 760 1 for Loafer
+
+
 function THE_BESTIARY:GetBestiaryTargets()
 	local bestiaryCompatibleRoomEntities = {}
 	--List of vulnerable non-boss enemies
@@ -279,6 +283,10 @@ function THE_BESTIARY:BestiaryTame(player)
 		sfx:Play(SoundEffect.SOUND_THUMBS_DOWN,1,0,false,1)
 	end
 end
+
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

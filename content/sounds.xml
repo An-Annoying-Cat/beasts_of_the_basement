@@ -92,7 +92,20 @@
 			<sample weight="1" path="bosses/thaumaturge/death01.wav" />
 			<sample weight="1" path="bosses/thaumaturge/death02.wav" />
 		</sound>
-
+		<!--Spiderboi-->
+		<sound name="SBoiAppear">
+			<sample weight="1" path="bosses/spiderboi/spiderBoiAppear.wav" />
+		</sound>
+		<sound name="SBoiSpit">
+			<sample weight="1" path="bosses/spiderboi/spiderBoiSpit1.wav" />
+			<sample weight="1" path="bosses/spiderboi/spiderBoiSpit2.wav" />
+			<sample weight="1" path="bosses/spiderboi/spiderBoiSpit3.wav" />
+		</sound>
+		<sound name="SBoiJump">
+			<sample weight="1" path="bosses/spiderboi/spiderBoiJump1.wav" />
+			<sample weight="1" path="bosses/spiderboi/spiderBoiJump2.wav" />
+			<sample weight="1" path="bosses/spiderboi/spiderBoiJump3.wav" />
+		</sound>
 	<!--Items-->
 	<sound name="ArmorBlock">
 		<sample weight="1" path="items/armorBreak.wav" />

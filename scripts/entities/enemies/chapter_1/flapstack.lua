@@ -72,7 +72,7 @@ function FLAPSTACK:DamageCheck(npc, amount, damageFlags, source, _)
     local npcConv = npc:ToNPC()
     local data = npc:GetData()
     local sprite = npc:GetSprite()
-    local targetpos = source.Entity.Position
+    local targetpos = source.Position
 	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
 	local targetdistance = (targetpos - npc.Position):Length()
     if ff:HasDamageFlag(DamageFlag.DAMAGE_FIRE, damageFlags) and not game:GetRoom():HasWater() then

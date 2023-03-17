@@ -71,7 +71,7 @@ function GRILLED_FLAPSTACK:DamageCheck(npc, amount, damageFlags, source, _)
     local npcConv = npc:ToNPC()
     local data = npc:GetData()
     local sprite = npc:GetSprite()
-    local targetpos = source.Entity.Position
+    local targetpos = source.Position
 	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
 	local targetdistance = (targetpos - npc.Position):Length()
     if npc.Type == BotB.Enums.Entities.GRILLED_FLAPSTACK.TYPE and npc.Variant == BotB.Enums.Entities.GRILLED_FLAPSTACK.VARIANT then 

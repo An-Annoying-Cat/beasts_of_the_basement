@@ -446,6 +446,24 @@
         <bestiary anim="Slam" transform="0,0,1"/>
     </entity> 
 
+    <entity name="Bamf"
+        id="501" variant="29" subtype="0" anm2path="monsters/miniboss/bamf.anm2" boss="1" baseHP="85" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="32"  numGridCollisionPoints="12" shadowSize="36"   friction="1" reroll="false" champion="0">
+        <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="1" />
+        <bestiary anim="Shit" transform="0,0,1"/>
+    </entity>
+    <entity name="Bamf Flyball"
+        id="501" variant="30" subtype="0" anm2path="monsters/miniboss/flyball_attack.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="999" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="36"   friction="1" reroll="false" champion="0">
+        <gibs amount="0" blood="0" bone="0" eye="1" gut="1" large="1" />
+    </entity>
+
+    <entity name="Spider Boi"
+        id="501" variant="31" subtype="0" anm2path="monsters/miniboss/spiderboi.anm2" baseHP="60" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="20" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="36"   friction="1" reroll="false" champion="0">
+        <gibs amount="0" blood="0" bone="0" eye="1" gut="1" large="1" />
+    </entity>
+
     
 
 

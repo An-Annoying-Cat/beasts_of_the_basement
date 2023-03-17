@@ -28,6 +28,9 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.grilled_flapstack",
     "scripts.entities.enemies.chapter_1.cherry",
 
+    "scripts.entities.minibosses.bamf",
+    "scripts.entities.minibosses.spiderboi",
+
     "scripts.entities.enemies.chapter_1_alt.dross.culo",
     "scripts.entities.enemies.chapter_1_alt.dross.shithead",
 
@@ -49,6 +52,7 @@ Mod.LoadScripts({
 
     "scripts.entities.enemies.chapter_3_alt.kehehan",
     "scripts.entities.enemies.chapter_3_alt.shard",
+
     "scripts.entities.bosses.thaumaturge",
 
     "scripts.entities.enemies.chapter_3_alt.gehenna.mabel",
@@ -81,6 +85,8 @@ Mod.LoadScripts({
     "scripts.entities.items.champs_mask",
     "scripts.entities.items.the_human_soul",
     "scripts.entities.items.thebestiary",
+    "scripts.entities.items.technano",
+    "scripts.entities.items.crowbar",
 
 
     --TRINKETS

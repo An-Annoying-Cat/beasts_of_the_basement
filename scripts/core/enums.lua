@@ -281,6 +281,19 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Cherry"),
         VARIANT = Isaac.GetEntityVariantByName("Cherry"),
     },
+    BAMF = {
+        TYPE = Isaac.GetEntityTypeByName("Bamf"),
+        VARIANT = Isaac.GetEntityVariantByName("Bamf"),
+    },
+    BAMF_FLYBALL = {
+        TYPE = Isaac.GetEntityTypeByName("Bamf Flyball"),
+        VARIANT = Isaac.GetEntityVariantByName("Bamf Flyball"),
+    },
+    SPIDERBOI = {
+        TYPE = Isaac.GetEntityTypeByName("Spider Boi"),
+        VARIANT = Isaac.GetEntityVariantByName("Spider Boi"),
+    },
+    
 
 
     --Effects
@@ -375,6 +388,10 @@ Enums.SFX = {
     THAUMATURGE_TAUNT = Isaac.GetSoundIdByName("ThaumTaunt"),
     THAUMATURGE_DEATH = Isaac.GetSoundIdByName("ThaumDeath"),
 
+    SPIDERBOI_APPEAR = Isaac.GetSoundIdByName("SBoiAppear"),
+    SPIDERBOI_SPIT = Isaac.GetSoundIdByName("SBoiSpit"),
+    SPIDERBOI_JUMP = Isaac.GetSoundIdByName("SBoiJump"),
+
     MABELALERT = Isaac.GetSoundIdByName("MabelAlert"),
     MABELLOOP = Isaac.GetSoundIdByName("MabelLoop"),
     MABELREV = Isaac.GetSoundIdByName("MabelRev"),
@@ -445,6 +462,8 @@ Enums.Items = {
     CHAMPS_MASK = Isaac.GetItemIdByName("Champ's Mask"),
     THE_HUMAN_SOUL = Isaac.GetItemIdByName("The Human Soul"),
     THE_BESTIARY = Isaac.GetItemIdByName("The Bestiary"),
+    TECH_NANO = Isaac.GetItemIdByName("Tech Nano"),
+    CROWBAR = Isaac.GetItemIdByName("Crowbar"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
@@ -572,3 +591,48 @@ Enums.Consumables = {
 
 
 BotB.Enums = Enums
+
+
+--Oh boy here we go
+-- BESTIARY MONSTER CONVERSION LIST
+
+Enums.BestiaryBlacklist = {
+    --Loafer, Bowler Ball --> Bowler
+	{
+		Type = 180,
+		Variant = 760,
+		SubType = 1,
+        CanConvert = true,
+		ToType = 180,
+		ToVariant = 760,
+		ToSubType = 0
+	},
+	{
+		Type = 180,
+		Variant = 760,
+		SubType = 2,
+        CanConvert = true,
+		ToType = 180,
+		ToVariant = 760,
+		ToSubType = 0
+	},
+    --Potluck, Poobottle --> Level 2 Fly
+    {
+		Type = 450,
+		Variant = 60,
+		SubType = 0,
+        CanConvert = true,
+		ToType = 214,
+		ToVariant = 0,
+		ToSubType = 0
+	},
+	{
+		Type = 160,
+		Variant = 560,
+		SubType = 0,
+        CanConvert = true,
+		ToType = 214,
+		ToVariant = 0,
+		ToSubType = 0
+	},
+}

@@ -1,5 +1,6 @@
 local Mod = BotB
 local Solomon = {}
+BotB.FF = FiendFolio
 
 local PLAYER_SOLOMON = Isaac.GetPlayerTypeByName("Solomon")
 BotB.SOLOMON_EXTRA1 = Isaac.GetCostumeIdByPath("gfx/characters/character_solomon_extra1.anm2")
@@ -127,6 +128,73 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
   end
 end
 Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, Solomon.friendlyEnemyDefenseBuff)
+
+function Solomon:friendlyEnemyBirthrightStuff(entity,amt,_,source,_)
+  --Is there a Solomon with Birthright here?
+  local players = Solomon:GetPlayers()
+  local isSolomonHere = false
+  for i=1,#players,1 do
+    if players[i]:GetPlayerType() == PLAYER_SOLOMON and players[i]:HasCollectible(CollectibleType.COLLECTIBLE_BIRTHRIGHT) then
+      isSolomonHere = true
+    end
+  end
+  if isSolomonHere then
+    --Damage block
+    if EntityRef(entity).IsFriendly == true then
+      local chance2 = math.random(0, 100)
+      if chance2 >= 75 then
+        sfx:Play(SoundEffect.SOUND_POT_BREAK,1,0,false,math.random(50,80)/100,0)
+
+        local str = "Blocked!"
+        local AbacusFont = Font()
+        AbacusFont:Load("font/pftempestasevencondensed.fnt")
+        for i = 1, 60 do
+            BotB.FF.scheduleForUpdate(function()
+                local pos = game:GetRoom():WorldToScreenPosition(entity.Position) + Vector(AbacusFont:GetStringWidth(str) * -0.5, -(entity.SpriteScale.Y * 35) - i/2)
+                local opacity
+                if i >= 30 then
+                    opacity = 1 - ((i-30)/30)
+                else
+                    opacity = i/15
+                end
+                AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,1,opacity), 0, false)
+            end, i, ModCallbacks.MC_POST_RENDER)
+        end
+
+        return false
+      end
+    end
+    --Did the damage come from a friendly enemy?
+    if source.IsFriendly == true and entity.Type ~= EntityType.ENTITY_PLAYER and EntityRef(entity).IsFriendly ~= true then
+      local actualDamage = amt
+      local chance = math.random(0, 100)
+      if chance >= 75 then
+        sfx:Play(SoundEffect.SOUND_PUNCH,1,0,false,math.random(125,150)/100,0)
+        sfx:Play(SoundEffect.SOUND_BABY_BRIM,0.5,0,false,math.random(60,80)/100,0)
+
+        local str = "Crit!"
+        local AbacusFont = Font()
+        AbacusFont:Load("font/pftempestasevencondensed.fnt")
+        for i = 1, 60 do
+            BotB.FF.scheduleForUpdate(function()
+                local pos = game:GetRoom():WorldToScreenPosition(source.Position) + Vector(AbacusFont:GetStringWidth(str) * -0.5, -(35) - i/2)
+                local opacity
+                if i >= 30 then
+                    opacity = 1 - ((i-30)/30)
+                else
+                    opacity = i/15
+                end
+                AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,1,opacity), 0, false)
+            end, i, ModCallbacks.MC_POST_RENDER)
+        end
+
+        actualDamage = amt*4
+      end
+      return actualDamage
+    end
+  end
+end
+Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, Solomon.friendlyEnemyBirthrightStuff)
 
 --Spawn knowledge points in completed rooms
 
