@@ -66,7 +66,9 @@ function TECH_NANO:techNanoTearUpdate(tear)
         if tear:IsDead() then
             --print("do the lasers")   
             for i=0,270,90 do
-                local techNanoLaser = EntityLaser.ShootAngle(LaserVariant.THIN_RED, correctPos, i, 45, Vector.Zero, nil)
+                local techNanoLaser = EntityLaser.ShootAngle(LaserVariant.THIN_RED, correctPos, i, 45, Vector.Zero, tear.SpawnerEntity)
+                techNanoLaser.DisableFollowParent = true
+                techNanoLaser.Parent = tear.SpawnerEntity
                 techNanoLaser:GetData().isATechNanoLaser = true
                 techNanoLaser:GetData().techNanoLaserPos = correctPos
                 techNanoLaser:GetData().techNanoParent = tear.SpawnerEntity
