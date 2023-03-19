@@ -79,8 +79,6 @@
     <entity Name="Innie (Turn left)" />
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
-    <entity Name="Drone" />
-    <entity Name="Unboxer" />
   </group>
 
   <group Name="BotB Dross Enemies" >
