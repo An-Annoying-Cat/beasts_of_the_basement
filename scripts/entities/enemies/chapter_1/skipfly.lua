@@ -16,8 +16,8 @@ function SKIP_FLY:NPCUpdate(npc)
     if npc.Type == BotB.Enums.Entities.SKIP_FLY.TYPE and npc.Variant == BotB.Enums.Entities.SKIP_FLY.VARIANT then
         if data.SkipFlyHopAngle == nil then
             --What angle is it hopping in?
-            data.SkipFlyIsMidair = false
-            data.SkipFlyHopAngle = 0
+            data.SkipFlyIsMidair = true
+            data.SkipFlyHopAngle = targetangle
             data.SkipFlyBigHopCooldownMax = 60
             data.SkipFlyBigHopCooldown = data.SkipFlyBigHopCooldownMax
             data.SkipFlyStunCooldownMax = 60
@@ -39,6 +39,7 @@ function SKIP_FLY:NPCUpdate(npc)
         --99: Small hop
         --100: Big hop
         if npc.State == 99 then
+            
             if sprite:IsEventTriggered("Jump") then
                 data.SkipFlyHopAngle = targetangle
                 data.SkipFlyIsMidair = true

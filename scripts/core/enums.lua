@@ -345,6 +345,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Solomon KP UI"),
         VARIANT = Isaac.GetEntityVariantByName("Solomon KP UI")
     },
+    BESTIARY_TARGETED_ICON = {
+        TYPE = Isaac.GetEntityTypeByName("Bestiary Targeted Icon"),
+        VARIANT = Isaac.GetEntityVariantByName("Bestiary Targeted Icon")
+    },
 
 
 }

@@ -438,7 +438,7 @@ local roomDialogueList = {
         },
         {
             "No matter how much time we all have,",
-            "I could never ready every single one of these books.",
+            "I could never read every single one of these books.",
             "It's kind of impressive."
         }
     },
@@ -451,8 +451,8 @@ local roomDialogueList = {
             "This is my penance."
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "God spat in my face today.",
+            "He'll spit in yours too, you filthy sinner."
         }
     },
     --14: Devil room
@@ -534,23 +534,23 @@ local roomDialogueList = {
     --18: Clean bedroom
     {
         {
-            "Test",
-            "Null placeholder here."
+            "Don't mind me.",
+            "Just gonna watch you sleep."
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "Get out of my room!",
+            "Can't you see I'm trying to enjoy the peace and quiet!"
         }
     },
     --19: Dirty bedroom
     {
         {
-            "Test",
-            "Null placeholder here."
+            "Hey uh--",
+            "I'm not the one who pissed in it, honest!"
         },
         {
-            "Test2",
-            "Null placeholder here too."
+            "Welcome to my crackhouse.",
+            "I'm trying to make it a crackhome."
         }
     },
     --20: Vault
@@ -578,8 +578,8 @@ local roomDialogueList = {
     --22: Black market
     {
         {
-            "Test",
-            "Null placeholder here."
+            "I'll give you a magic trick for a vase!",
+            "Those bullies won't bother me now..."
         },
         {
             "Test2",
@@ -660,7 +660,7 @@ local roomDialogueList = {
             "If I could grab everything you hold dear...",
             "...and slowly strangle it to death in front of your eyes...",
             "...I would.",
-            "If I could shatter your whole fuckking world with the sheer force of my hatred...",
+            "If I could shatter your whole fucking world with the sheer force of my hatred...",
             "...I would.",
             "If I could destroy the world in one fell swoop,",
             "send all the bats and bugs",

@@ -7,7 +7,7 @@ function PALESNIFFLE:NPCUpdate(npc)
     local sprite = npc:GetSprite()
     local target = npc:GetPlayerTarget()
     local targetpos = target.Position
-    data = npc:GetData()
+    local data = npc:GetData()
     --This breaks the code if you define it beforehand, idk why but it does
     --local warningTarget
     --[[
@@ -40,6 +40,7 @@ function PALESNIFFLE:NPCUpdate(npc)
             --Take aim...
             local aimTarget = target.Position
             local warningTarget = Isaac.Spawn(EntityType.ENTITY_EFFECT,Entities.WARNING_TARGET.VARIANT,0,aimTarget,Vector(0,0),npc)
+            data.targetPositionTest = warningTarget.Position
             --Spawn the kineti line
             data.warningLine = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.KINETI_BEAM,0,Vector(0,0),Vector(0,0),nil):ToEffect()
             data.warningLine.Parent = npc
@@ -50,7 +51,7 @@ function PALESNIFFLE:NPCUpdate(npc)
             local room = Game():GetRoom()
             npc:PlaySound(BotB.FF.Sounds.ShotgunBlast,3,0,false,math.random(8,12)/10)
             npc:PlaySound(Isaac.GetSoundIdByName("CartoonRicochet"),0.5,0,false,math.random(120, 150)/100)
-            local techAngleVector = -(npc.Position - warningTarget.Position)
+            local techAngleVector = -(npc.Position - data.targetPositionTest)
 			local laser = EntityLaser.ShootAngle(2, npc.Position, techAngleVector:GetAngleDegrees(), 4, Vector(0,0), npc)
             laser.GridHit = true
             local _, laserEndPoint = room:CheckLine(npc.Position, npc.Position+(90*techAngleVector), 2, 0, false, true)

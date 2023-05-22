@@ -21,6 +21,9 @@ end
 
 --180 760 1 for Loafer
 
+--TODO:
+--MAKE IT SO THAT ONLY FRIENDLIES THAT DIE GET ADDED TO THE FLOOR QUEUE
+
 
 function THE_BESTIARY:GetBestiaryTargets()
 	local bestiaryCompatibleRoomEntities = {}
@@ -177,8 +180,11 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------]]
+
+--Time to make this work
 function THE_BESTIARY:BestiaryCall(player)
 	sfx:Play(SoundEffect.SOUND_WHISTLE,1,0,false,1.5,0)
+	--Move all friendly enemies to player
 	for i, entity in ipairs(Isaac.GetRoomEntities()) do
 		--Is it vulnerable and not a boss?
 		local entityRef = EntityRef(entity)
@@ -186,7 +192,73 @@ function THE_BESTIARY:BestiaryCall(player)
 			entity.Position = player.Position
 		end
 	end
+	--This should make it target a single enemy I think
+
+	--Remove all targeted data from other entities
+	for i, entity in ipairs(Isaac.GetRoomEntities()) do
+		--Is it vulnerable and not a boss?
+		local entityRef = EntityRef(entity)
+		if entity:GetData().isTargetedByBestiary == true then
+			entity:GetData().isTargetedByBestiary = false
+		end
+	end
+
+	--Iterate through vulnerable, non-friendly enemies. If one is closer to the player than the last, set the target entity to that entity
+	local baseCallDistance = 999999
+	local targetEntity
+	for i, entity in ipairs(Isaac.GetRoomEntities()) do
+		--Is it vulnerable and not a boss?
+		local entityRef = EntityRef(entity)
+		if entity:IsVulnerableEnemy() and entityRef.IsFriendly ~= true then
+			local entityDistance = player.Position:Distance(entity.Position)
+			if entityDistance < baseCallDistance then
+				baseCallDistance = entityDistance
+				targetEntity = entity:ToNPC()
+			end
+		end
+	end
+	targetEntity:GetData().isTargetedByBestiary = true
 end
+
+--Targeted enemy update and stuff
+function THE_BESTIARY:BestiaryTargeting(npc)
+	--this goes per npc so I have to update it accordingly
+	--Get the targeted npc if there is one
+	local targetEntity
+	for i, entity in ipairs(Isaac.GetRoomEntities()) do
+		if entity:GetData().isTargetedByBestiary == true then
+			targetEntity = entity
+		end
+	end
+	--change those enemy targets to the targeted entity
+	local npcRef = EntityRef(npc)
+	if npc:IsVulnerableEnemy() and npcRef.IsFriendly == true then
+		if npc.Target ~= targetEntity then
+			npc.Target = targetEntity
+		end
+	end
+	--Spawn the indicator above the targeted enemy
+	if npc:GetData().isTargetedByBestiary == true then
+		if npc:GetData().hasTargetedBestiaryIcon ~= true then
+			local targetedIcon = Isaac.Spawn(EntityType.ENTITY_EFFECT,BotB.Enums.Entities.BESTIARY_TARGETED_ICON.VARIANT,0,npc.Position,Vector.Zero,npc):ToEffect()
+			targetedIcon.Parent = npc
+			npc:GetData().hasTargetedBestiaryIcon = true
+		end
+	end
+	
+end
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, THE_BESTIARY.BestiaryTargeting)
+
+--Targeted icon update
+function THE_BESTIARY:targetEffect(effect)
+    local pdata = effect.Parent:GetData()
+    effect.Position = effect.Parent.Position + Vector(0,-96)
+    if effect.Parent == nil or pdata.isTargetedByBestiary ~= true then
+		effect:Remove()
+	end
+end
+Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,THE_BESTIARY.targetEffect, Isaac.GetEntityVariantByName("Bestiary Targeted Icon"))
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 function THE_BESTIARY:BestiaryHeal(player)
 	sfx:Play(SoundEffect.SOUND_VAMP_DOUBLE,1,0,false,1.5,0)
@@ -340,9 +412,9 @@ function THE_BESTIARY:iconEffect(effect)
         if Input.IsActionPressed(ButtonAction.ACTION_SHOOTLEFT, 0) then
             --Call
             --pdata.BestiaryFunc = 4
-			if pdata.solomonKnowledgePoints >= 1 then
+			if pdata.solomonKnowledgePoints >= 0 then
 				THE_BESTIARY:BestiaryCall(effect.Parent:ToPlayer())
-				pdata.solomonKnowledgePoints = pdata.solomonKnowledgePoints - 1
+				--pdata.solomonKnowledgePoints = pdata.solomonKnowledgePoints - 1
 			end
 			
             sprite:Play("Left")

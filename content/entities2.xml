@@ -545,6 +545,10 @@
         id="1000" variant="806" anm2path="effects/solomon_KP_ui.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
     </entity>
+    <entity name="Bestiary Targeted Icon"
+        id="1000" variant="807" anm2path="effects/bestiary_target.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
 
 
     

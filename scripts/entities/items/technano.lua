@@ -53,8 +53,12 @@ Mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR,TECH_NANO.techNanoFireTear)
 
 function TECH_NANO:techNanoTearUpdate(tear)
     if tear:GetData().isATechNanoTear then
+        local data = tear:GetData()
         if tear:HasTearFlags(TearFlags.TEAR_HOMING) ~= true then
             tear:AddTearFlags(TearFlags.TEAR_HOMING)
+        end
+        if tear:HasTearFlags(TearFlags.TEAR_PIERCING) then
+            tear:ClearTearFlags(TearFlags.TEAR_PIERCING)
         end
         if tear:GetData().hasTechNanoAdjustments ~= true then
             tear.FallingAcceleration = -0.05
@@ -64,9 +68,9 @@ function TECH_NANO:techNanoTearUpdate(tear)
         end
         local correctPos = tear.Position
         if tear:IsDead() then
-            --print("do the lasers")   
             for i=0,270,90 do
-                local techNanoLaser = EntityLaser.ShootAngle(LaserVariant.THIN_RED, correctPos, i, 45, Vector.Zero, tear.SpawnerEntity)
+                
+                local techNanoLaser = EntityLaser.ShootAngle(2, correctPos, i, 45, Vector.Zero, tear.SpawnerEntity)
                 techNanoLaser.DisableFollowParent = true
                 techNanoLaser.Parent = tear.SpawnerEntity
                 techNanoLaser:GetData().isATechNanoLaser = true
@@ -90,7 +94,7 @@ function TECH_NANO:techNanoTearCollision(tear,_,_)
     if tear:GetData().isATechNanoTear then
         local correctPos = tear.Position
         for i=0,270,90 do
-            local techNanoLaser = EntityLaser.ShootAngle(LaserVariant.THIN_RED, correctPos, i, 45, Vector.Zero, tear.SpawnerEntity)
+            local techNanoLaser = EntityLaser.ShootAngle(2, correctPos, i, 45, Vector.Zero, tear.SpawnerEntity)
             techNanoLaser.DisableFollowParent = true
             techNanoLaser.Parent = tear.SpawnerEntity
             techNanoLaser:GetData().isATechNanoLaser = true
