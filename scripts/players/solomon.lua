@@ -28,6 +28,7 @@ function Solomon:playerUpdate(player)
     if player:GetPlayerType() == PLAYER_SOLOMON then
       if data.friendlySolomonEnemiesToSpawn == nil then
         data.friendlySolomonEnemiesToSpawn = {}
+        data.friendlySolomonEnemiesDeathQueue = {}
         data.solomonKnowledgePoints = 6
         data.solomonKnowledgePointsMax = 14
       end
@@ -51,7 +52,9 @@ function Solomon:GetPlayers()
 
 	return players
 end
+--Old friendly enemy revival. Time to fix
 
+--[[
 function Solomon:spawnNewFloorFrens()
   local players = Solomon:GetPlayers()
   for i=1,#players,1 do
@@ -66,7 +69,45 @@ function Solomon:spawnNewFloorFrens()
     end
   end
 end
+]]
+
+function Solomon:spawnNewFloorFrens()
+  local players = Solomon:GetPlayers()
+  for i=1,#players,1 do
+    if players[i]:GetPlayerType() == PLAYER_SOLOMON then
+      local friendlySolomonSpawnTable = players[i]:GetData().friendlySolomonEnemiesDeathQueue
+      if friendlySolomonSpawnTable ~= nil then
+        for j=1,#friendlySolomonSpawnTable,1 do
+          local friendo = Isaac.Spawn(friendlySolomonSpawnTable[j][1],friendlySolomonSpawnTable[j][2],friendlySolomonSpawnTable[j][3],players[i].Position,Vector.Zero,players[i]):ToNPC()
+					friendo:AddCharmed(EntityRef(players[i]),-1)
+          players[i]:GetData().friendlySolomonEnemiesDeathQueue[j] = nil
+        end
+      end
+    end
+  end
+end
+
 Mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, Solomon.spawnNewFloorFrens, 0)
+
+
+function Solomon:friendlyEnemyDeathCheck(entity)
+  --Is there a Solomon here?
+  local players = Solomon:GetPlayers()
+  local isSolomonHere = false
+  for i=1,#players,1 do
+    if players[i]:GetPlayerType() == PLAYER_SOLOMON and isSolomonHere == false then
+      --This is a bit buggy atm, but fuck it.
+      if EntityRef(entity).IsFriendly == true then
+        table.insert(players[i]:GetData().friendlySolomonEnemiesDeathQueue, {entity.Type , entity.Variant, entity.SubType})
+        print("friendly enemy died")
+      end
+      isSolomonHere = true
+    end
+  end
+end
+Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_KILL, Solomon.friendlyEnemyDeathCheck)
+
+
 
 function Solomon:unfuckTheUI()
   local players = Solomon:GetPlayers()
