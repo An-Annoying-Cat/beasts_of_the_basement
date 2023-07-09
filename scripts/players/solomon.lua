@@ -96,10 +96,25 @@ function Solomon:friendlyEnemyDeathCheck(entity)
   local isSolomonHere = false
   for i=1,#players,1 do
     if players[i]:GetPlayerType() == PLAYER_SOLOMON and isSolomonHere == false then
-      --This is a bit buggy atm, but fuck it.
       if EntityRef(entity).IsFriendly == true then
-        table.insert(players[i]:GetData().friendlySolomonEnemiesDeathQueue, {entity.Type , entity.Variant, entity.SubType})
-        print("friendly enemy died")
+        local isBlacklisted = false
+        local friendlyEnemyDeathBlacklist = {
+          {150,0,0}, --tar bubble
+          {150,0,1}, --spider egg
+          {150,450,0}, --blasted mine
+          {150,454,0}, --molar orbital (just in case...?)
+          {85,962,0} --baby spider
+        }
+        --enemy blacklist check
+        for j=1,#friendlyEnemyDeathBlacklist,1 do
+          if friendlyEnemyDeathBlacklist[j][1] == entity.Type and friendlyEnemyDeathBlacklist[j][2] == entity.Variant and friendlyEnemyDeathBlacklist[j][3] == entity.SubType and isBlacklisted == false then
+            isBlacklisted = true
+          end
+        end
+        if isBlacklisted == false then
+          table.insert(players[i]:GetData().friendlySolomonEnemiesDeathQueue, {entity.Type , entity.Variant, entity.SubType})
+          print("friendly enemy died (for real this time)")
+        end
       end
       isSolomonHere = true
     end
