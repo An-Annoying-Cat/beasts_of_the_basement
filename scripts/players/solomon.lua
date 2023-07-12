@@ -103,7 +103,8 @@ function Solomon:friendlyEnemyDeathCheck(entity)
           {150,0,1}, --spider egg
           {150,450,0}, --blasted mine
           {150,454,0}, --molar orbital (just in case...?)
-          {85,962,0} --baby spider
+          {85,962,0}, --baby spider
+          {170,40,0}, --blot
         }
         --enemy blacklist check
         for j=1,#friendlyEnemyDeathBlacklist,1 do
@@ -174,10 +175,15 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
   if isSolomonHere then
     if EntityRef(entity).IsFriendly == true then
       local actualDamage = amt
+      if entity:GetData().solomonFriendlyIFrames ~= 0 then
+        sfx:Play(SoundEffect.SOUND_BEEP,1,0,false,math.random(125,150)/100,0)
+        return false
+      end
       if flags & DamageFlag.DAMAGE_FIRE ~= 0 or flags & DamageFlag.DAMAGE_EXPLOSION ~= 0 or flags & DamageFlag.DAMAGE_SPIKES ~= 0 then
         return false
       else
         actualDamage = amt*0.25
+        entity:GetData().solomonFriendlyIFrames = 60
         return actualDamage
       end
     end
@@ -311,3 +317,40 @@ function Solomon:SpawnVisitKnowledgePoints()
   end
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, Solomon.SpawnVisitKnowledgePoints, 0)
+
+
+
+--Friendly enemy iframes
+
+function Solomon:friendlyIFrames(npc)
+
+  local sprite = npc:GetSprite()
+  local player = npc:GetPlayerTarget()
+  local data = npc:GetData()
+  local target = npc:GetPlayerTarget()
+local targetpos = target.Position
+local targetangle = (targetpos - npc.Position):GetAngleDegrees()
+local targetdistance = (targetpos - npc.Position):Length()
+local players = Solomon:GetPlayers()
+local isSolomonHere = false
+for i=1,#players,1 do
+  if players[i]:GetPlayerType() == PLAYER_SOLOMON then
+    isSolomonHere = true
+  end
+end
+
+if isSolomonHere then
+  if EntityRef(npc).IsFriendly == true then 
+    --print("frand")
+    if data.solomonFriendlyIFrames == nil then
+      data.solomonFriendlyIFrames = 0
+    end
+      if data.solomonFriendlyIFrames ~= 0 then
+        data.solomonFriendlyIFrames = data.solomonFriendlyIFrames - 1
+        --print(data.solomonFriendlyIFrames)
+      end
+    end
+end
+end
+
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, Solomon.friendlyIFrames)
