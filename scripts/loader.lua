@@ -62,6 +62,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_4.womb.giblet",
     "scripts.entities.enemies.chapter_4.womb.gibby",
     "scripts.entities.enemies.chapter_4.womb.cadre",
+    "scripts.entities.enemies.chapter_4.utero.trojan",
 
     "scripts.entities.enemies.ascent.batso",
 
@@ -111,10 +112,11 @@ Mod.LoadScripts({
     --"scripts.entities.consumables.basic",
     "scripts.entities.consumables.shotgunkingcards",
     "scripts.entities.consumables.ojcards",
+    "scripts.entities.consumables.ygocards",
     "scripts.entities.consumables.mahjongtiles",
 
     --Effects
-    "scripts.entities.effects.trippin",
+    --"scripts.entities.effects.trippin",
     "scripts.entities.effects.solomon_bestiary_ui",
 
     --PLAYERS

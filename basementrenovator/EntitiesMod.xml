@@ -82,6 +82,7 @@
   <entity Image="icons/tippytap.png" Name="Tippytap" ID="27" Variant="40" Subtype="0" />
   <entity Image="icons/croast.png" Name="Croast" ID="27" Variant="41" Subtype="0" />
   <entity Image="icons/funguy.png" Name="Fun Guy" ID="501" Variant="11" Subtype="0" />
+  <entity Image="icons/tape_worm_botb.png" Name="Tape Worm (BotB)" ID="825" Variant="100" Subtype="0" />
   <!-- Catacombs Enemies -->
   
   <!-- Mines Enemies-->
@@ -105,6 +106,8 @@
       </spinner>
     </bitfield>
   </entity>
+  <!-- Mausoleum Enemies -->
+  <entity Image="icons/kehehan.png" Name="Kehehan" ID="885" Variant="1" Subtype="10" />
   <!--Gehenna Enemies-->
   <entity Image="icons/mabel.png" Name="Mabel" ID="501" Variant="10" Subtype="0" />
   <!--Chapter 4 (Main Path) Enemies-->
@@ -137,6 +140,8 @@
             </dropdown>
     </bitfield>
   </entity>  
+  <!-- Utero -->
+  <entity Image="icons/trojan.png" Name="Trojan" ID="41" Variant="51" Subtype="0" />
   <!--Scarred Womb Enemies-->
   <entity Image="icons/frenulum.png" Name="Frenulum" ID="501" Variant="13" Subtype="4" />
 

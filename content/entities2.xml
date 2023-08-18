@@ -148,6 +148,13 @@
         <preload-snd id="115"/>
     </entity>
 
+    <!-- Fire Worms id="825" variants start at 100-->
+    <entity anm2path="monsters/chapter_2/tape_worm.anm2" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" gridCollision="none" id="825" variant="100" name="Tape Worm" numGridCollisionPoints="12" portrait="248" shadowSize="0" stageHP="0" >
+        <bestiary anim="Idle" transform="0,0,1"/>
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+    	<devolve id="25.3.0" weight="1" />
+	</entity>
+
     <!--ANIMATES-->
 
     <!--Ministros   id="305"    variants start at 30-->
@@ -211,6 +218,12 @@
     <!--KNIGHTS id="41"   variants start at 50-->
     <entity name="Hydro Knight" 
         id="41" variant="50" subtype="0" anm2path="monsters/chapter_2/flooded_caves/hydro_knight.anm2" baseHP="18" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="20" collisionRadius="20" friction="1"  numGridCollisionPoints="12" shadowSize="30"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Hori">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
+    <entity name="Trojan" 
+        id="41" variant="51" subtype="0" anm2path="monsters/chapter_4/utero/trojan.anm2" baseHP="18" stageHP="0" portrait="548"
         boss="0" champion="1" collisionDamage="1" collisionMass="20" collisionRadius="20" friction="1"  numGridCollisionPoints="12" shadowSize="30"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Hori">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
@@ -376,14 +389,14 @@
         boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="16" friction="0"  numGridCollisionPoints="12" shadowSize="8"   bestiary="false" bestiaryTransform="0,0,1" bestiaryAnim="Beastiary">
         <gibs amount="0" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
-
+    <!--
     <entity name="Tape Worm"
         id="501" variant="19" subtype="0" anm2path="monsters/chapter_2/tape_worm.anm2" baseHP="10" stageHP="0" portrait="3"
         collisionDamage="1" collisionMass="5" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
-
+    -->
     <entity name="Feral"
         id="501" variant="20" subtype="0" anm2path="monsters/chapter_1/feral.anm2" baseHP="10" stageHP="0" portrait="3"
         collisionDamage="1" collisionMass="5" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">

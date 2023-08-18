@@ -26,8 +26,8 @@ function KEHEHAN:NPCUpdate(npc)
             npc.State = 13
         end
         --]]
-        local roomRocks = TSIL.GridSpecific.GetRocks(0)
-        local length = #roomRocks
+        --local roomRocks = TSIL.GridSpecific.GetRocks(0)
+        --local length = #roomRocks
         if data.CastTimer == nil then
             data.CastTimer = 0
             data.CastTimerMax = 30
@@ -35,9 +35,9 @@ function KEHEHAN:NPCUpdate(npc)
             data.teleTimer = 120
             data.teleTimerMax = 120
             npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
-            data.MyRock = roomRocks[math.random(length)]
-            data.rockDist = (data.MyRock.Position - npc.Position):Length()
-            data.rockAngle = (data.MyRock.Position - npc.Position):GetAngleDegrees()
+            --data.MyRock = roomRocks[math.random(length)]
+            --data.rockDist = (data.MyRock.Position - npc.Position):Length()
+            --data.rockAngle = (data.MyRock.Position - npc.Position):GetAngleDegrees()
         end
 
         if npc.State == 8 then 
@@ -72,16 +72,24 @@ function KEHEHAN:NPCUpdate(npc)
                 --npc.StateFrame = 0
             end
             if sprite:IsEventTriggered("Shoot") then
+                --[[
                 roomRocks = TSIL.GridSpecific.GetRocks(0)
                 length = #roomRocks
                 local iterand = math.random(length)
                 data.MyRock = roomRocks[iterand]
                 data.rockDist = (data.MyRock.Position - npc.Position):Length()
                 data.rockAngle = (data.MyRock.Position - npc.Position):GetAngleDegrees()
+                ]]
                 local params = ProjectileParams()
                 params.HeightModifier = 15
-                local bullet = Isaac.Spawn(9, 0, 0, npc.Position, (Vector(math.floor(0.05 * data.rockDist * (math.random(8, 10) / 10), 6),0):Rotated(data.rockAngle)):Resized(15), npc):ToProjectile()
-                bullet.Parent = npc
+                params.FallingSpeedModifier = -1
+                params.FallingAccelModifier = -0.175
+                params.Scale = 2
+                params.HomingStrength = 1
+                params.BulletFlags = (ProjectileFlags.NO_WALL_COLLIDE | ProjectileFlags.CONTINUUM | ProjectileFlags.SMART)
+                params.Color = FiendFolio.ColorPsyGrape2
+                npc:FireProjectiles(npc.Position, Vector(0,-10):Rotated(targetangle), 0, params)
+                --bullet.Parent = npc
 
                 sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),0.4,0,false,math.random(80,90)/100)
                 data.CastTimer = data.CastTimerMax
@@ -148,6 +156,7 @@ function KEHEHAN.DamageCheck(npc, _, _, _, _)
     end
 end
 
+--[[
 function KEHEHAN:BulletCheck(bullet)
 
     --Did it come from a Kehehan?
@@ -177,7 +186,7 @@ function KEHEHAN:BulletCheck(bullet)
     
 
 end
-
+]]
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, KEHEHAN.NPCUpdate, Isaac.GetEntityTypeByName("Kehehan"))
 Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, KEHEHAN.DamageCheck, Isaac.GetEntityTypeByName("Kehehan"))
-Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, KEHEHAN.BulletCheck)
+--Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, KEHEHAN.BulletCheck)

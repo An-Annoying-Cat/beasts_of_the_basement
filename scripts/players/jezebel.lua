@@ -35,16 +35,22 @@ function Jezebel:playerUpdate(player)
 			if player:HasCollectible(CollectibleType.COLLECTIBLE_ROCK_BOTTOM) == false then
 				if player:HasCollectible(CollectibleType.COLLECTIBLE_BIRTHRIGHT) then
 					if level:GetCurrentRoomDesc().Clear then
-						if player.FrameCount % 4 == 0 then
-							data.jezOverhealTimer = data.jezOverhealTimer - 1
-						end
+						--Honestly it just flat out shouldn't drain
 					else
-						if player.FrameCount % 2 == 0 then
+						if player.FrameCount % 16 == 0 then
 							data.jezOverhealTimer = data.jezOverhealTimer - 1
 						end
 					end
 				else
-					data.jezOverhealTimer = data.jezOverhealTimer - 1
+					if level:GetCurrentRoomDesc().Clear then
+						if player.FrameCount % 16 == 0 then
+							data.jezOverhealTimer = data.jezOverhealTimer - 1
+						end
+					else
+						if player.FrameCount % 8 == 0 then
+							data.jezOverhealTimer = data.jezOverhealTimer - 1
+						end
+					end
 				end
 			end
 			--print("overheal: " .. data.jezOverhealTimer)

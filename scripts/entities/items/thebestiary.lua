@@ -80,6 +80,7 @@ end
 								table.insert(data.friendlySolomonEnemiesToSpawn, {trueCandidate.Type , trueCandidate.Variant, trueCandidate.SubType})
 								local friendo = Isaac.Spawn(trueCandidate.Type,trueCandidate.Variant,trueCandidate.SubType,player.Position,Vector.Zero,player):ToNPC()
 								friendo:AddCharmed(EntityRef(player),-1)
+								
 							end
 						else
 							table.insert(data.bestiaryQueue, {trueCandidate.Type , trueCandidate.Variant, 0})
@@ -87,6 +88,7 @@ end
 								table.insert(data.friendlySolomonEnemiesToSpawn, {trueCandidate.Type , trueCandidate.Variant, 0})
 								local friendo = Isaac.Spawn(trueCandidate.Type,trueCandidate.Variant,0,player.Position,Vector.Zero,player):ToNPC()
 								friendo:AddCharmed(EntityRef(player),-1)
+								
 							end
 						end
 						
@@ -338,6 +340,7 @@ function THE_BESTIARY:BestiaryTame(player)
 					table.insert(data.friendlySolomonEnemiesToSpawn, {trueCandidate.Type , trueCandidate.Variant, trueCandidate.SubType})
 					local friendo = Isaac.Spawn(trueCandidate.Type,trueCandidate.Variant,trueCandidate.SubType,player.Position,Vector.Zero,player):ToNPC()
 					friendo:AddCharmed(EntityRef(player),-1)
+					friendo:GetData().wasDirectlyBestiaried = true
 				end
 			else
 				table.insert(data.bestiaryQueue, {trueCandidate.Type , trueCandidate.Variant, 0})
@@ -345,6 +348,7 @@ function THE_BESTIARY:BestiaryTame(player)
 					table.insert(data.friendlySolomonEnemiesToSpawn, {trueCandidate.Type , trueCandidate.Variant, 0})
 					local friendo = Isaac.Spawn(trueCandidate.Type,trueCandidate.Variant,0,player.Position,Vector.Zero,player):ToNPC()
 					friendo:AddCharmed(EntityRef(player),-1)
+					friendo:GetData().wasDirectlyBestiaried = true
 				end
 			end
 			

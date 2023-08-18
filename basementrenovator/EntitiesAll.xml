@@ -55,6 +55,7 @@
     <entity Name="Croast" />
     <entity Name="Fun Guy" />
     <entity Name="Earth Worm" />
+    <entity Name="Tape Worm (BotB)" />
   </group>
 
   <group Name="BotB Catacombs Enemies" >  
@@ -113,6 +114,10 @@
     <entity Name="Pale Sniffle" />
   </group>
 
+  <group Name="BotB Mausoleum Enemies" >
+    <entity Name="Kehehan" />
+  </group>
+
   <group Name="BotB Gehenna Enemies" >
     <entity Name="Mabel" />
   </group>
@@ -126,6 +131,10 @@
     <entity Name="Giblet" />
     <entity Name="Gibby" />
     <entity Name="Cadre" />
+  </group>
+
+  <group Name="BotB Utero Enemies" >
+    <entity Name="Trojan" />
   </group>
 
   <group Name="BotB Scarred Womb Enemies" >

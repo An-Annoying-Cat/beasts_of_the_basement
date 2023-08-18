@@ -2,7 +2,7 @@ local Mod = BotB
 local TAPE_WORM = {}
 local Entities = BotB.Enums.Entities
 
-function TAPE_WORM:NPCUpdate(npc)
+function TAPE_WORM:OLDNPCUpdate(npc)
 
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
@@ -13,8 +13,6 @@ function TAPE_WORM:NPCUpdate(npc)
 	local targetdistance = (targetpos - npc.Position):Length()
     local room = Game():GetRoom()
     
-
-
     if npc.Type == BotB.Enums.Entities.TAPE_WORM.TYPE and npc.Variant == BotB.Enums.Entities.TAPE_WORM.VARIANT then 
         local inchWormPathfinder = npc.Pathfinder
         local roomPits = TSIL.GridSpecific.GetPits()
@@ -225,7 +223,33 @@ function TAPE_WORM:NPCUpdate(npc)
 
     end
 end
+--Old, deprecated bullshit above. Do not use!
 
+function TAPE_WORM:NPCUpdate(npc)
+    local sprite = npc:GetSprite()
+    local player = npc:GetPlayerTarget()
+    local data = npc:GetData()
+    local target = npc:GetPlayerTarget()
+	local targetpos = target.Position
+	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
+	local targetdistance = (targetpos - npc.Position):Length()
+    local room = Game():GetRoom()
+    if sprite:IsEventTriggered("PreShoot") then
+        data.fireAtPos = targetpos
+    end
+    if sprite:IsEventTriggered("ShootBullets") then
+        npc:PlaySound(SoundEffect.SOUND_WORM_SPIT,4,0,false,math.random(70,80)/100)
+        local projectile = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10,0):Rotated(targetangle), npc):ToProjectile();
+        projectile.Height = -50
+        projectile.Scale = 0.75
+        local projectile2 = Isaac.Spawn(9, 0, 0, npc.Position, Vector(8,0):Rotated(targetangle), npc):ToProjectile();
+        projectile2.Height = -50
+        projectile2.Scale = 1.5
+        local projectile3 = Isaac.Spawn(9, 0, 0, npc.Position, Vector(6,0):Rotated(targetangle), npc):ToProjectile();
+        projectile3.Height = -50
+        projectile3.Scale = 2.0
+    end
+end
 
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, TAPE_WORM.NPCUpdate, Isaac.GetEntityTypeByName("Tape Worm"))
 

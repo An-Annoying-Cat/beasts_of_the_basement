@@ -39,6 +39,9 @@ local LOCAL_TSIL = require(myFolder .. ".TSIL")
 LOCAL_TSIL.Init(myFolder)
 ]]
 
+--Hidden item manager
+local hiddenItemManager = require("scripts.core.hidden_item_manager")
+hiddenItemManager:Init(BotB)
 
 
 local function LoadScripts(scripts)

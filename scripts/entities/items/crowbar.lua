@@ -44,7 +44,8 @@ function CROWBAR:crowbarBonusDamage(entity,amt,flags,source,_)
     if source.Entity ~= nil and source.Entity.SpawnerType == EntityType.ENTITY_PLAYER then
         --print("weenis")
             local player = source.Entity.SpawnerEntity:ToPlayer()
-            if player:HasCollectible(Items.CROWBAR) then
+            if player ~= nil then
+              if player:HasCollectible(Items.CROWBAR) then
                 local Multiplier = player:GetCollectibleNum(Items.CROWBAR, false)
                 local healthPercentage = entity.HitPoints/entity.MaxHitPoints
                 --print(healthPercentage)
@@ -55,7 +56,8 @@ function CROWBAR:crowbarBonusDamage(entity,amt,flags,source,_)
                     entity:TakeDamage(newamt - amt, 0, EntityRef(entity), 0)
                     return true
                 end
-            end   
+            end  
+            end 
     end
   end
   Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, CROWBAR.crowbarBonusDamage)

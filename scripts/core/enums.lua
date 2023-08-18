@@ -192,6 +192,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Hydro Knight"),
         VARIANT = Isaac.GetEntityVariantByName("Hydro Knight")
     },
+    TROJAN = {
+        TYPE = Isaac.GetEntityTypeByName("Trojan"),
+        VARIANT = Isaac.GetEntityVariantByName("Trojan")
+    },
 
 
 
@@ -560,7 +564,7 @@ Enums.Consumables = {
         FLIP_OUT = Isaac.GetCardIdByName("Flip Out"),
         FLAMETHROWER = Isaac.GetCardIdByName("Flamethrower"),
 
-        TIME_WIZARD = Isaac.GetCardIdByName("Oh My Friend"),
+        TIME_WIZARD = Isaac.GetCardIdByName("Time Wizard"),
         TOON_WORLD = Isaac.GetCardIdByName("Mimyuu's Hammer"),
         SEAL_OF_ORICHALCOS = Isaac.GetCardIdByName("Seal of Orichalcos"),
         POLYMERIZATION = Isaac.GetCardIdByName("Polymerization"),
