@@ -21,7 +21,7 @@ function TIPPYTAP:NPCUpdate(npc)
             sprite:Play("Open")
             npc.State = 9
     end
-end
+    end
 --Opening
 if npc.State == 9 then
     if npc.Variant == Entities.TIPPYTAP.VARIANT then

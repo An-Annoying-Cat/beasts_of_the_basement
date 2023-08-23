@@ -112,8 +112,8 @@ function THAUMATURGE:NPCUpdate(npc)
         --Teleport (Basic)
         if npc.State == 100 then
             if sprite:IsEventTriggered("Move") then 
-                newPosition = game:GetRoom():GetRandomPosition(100)
-                npc.Position = newPosition
+                local newPosition2 = game:GetRoom():GetRandomPosition(100)
+                npc.Position = newPosition2
                 npc.State = 101
                 sfx:Play(SoundEffect.SOUND_HELL_PORTAL1,1,0,false,math.random(80,90)/100)
                 sprite:Play("TeleIn")
@@ -191,7 +191,7 @@ function THAUMATURGE:NPCUpdate(npc)
         --Multi teleport out
         if npc.State == 103 then
             if sprite:IsEventTriggered("Move") then 
-                newPosition = player.Position+Vector(200,0):Rotated(math.random(0,359))
+                local newPosition = player.Position+Vector(200,0):Rotated(math.random(0,359))
                 npc.Position = newPosition
                 npc.State = 104
                 sfx:Play(SoundEffect.SOUND_HELL_PORTAL1,1,0,false,math.random(80,90)/100)
@@ -208,7 +208,7 @@ function THAUMATURGE:NPCUpdate(npc)
             if sprite:IsEventTriggered("Off") then 
                 data.cantBeHurt = false
                 npc.Color = Color(1, 1, 1)
-                multiTeleProjParams = ProjectileParams()
+                local multiTeleProjParams = ProjectileParams()
                 multiTeleProjParams.BulletFlags = ProjectileFlags.SMART
                 multiTeleProjParams.Color = Color(1,0,1)
                 multiTeleProjParams.HomingStrength = 1

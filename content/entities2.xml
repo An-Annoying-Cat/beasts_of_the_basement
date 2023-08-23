@@ -485,6 +485,48 @@
         <gibs amount="0" blood="0" bone="0" eye="1" gut="1" large="1" />
     </entity>
 
+    <entity name="Paranoiac"
+        id="501" variant="32" subtype="0" anm2path="monsters/chapter_3/paranoiac.anm2" baseHP="30" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <bestiary anim="Appear" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Slight"
+        id="501" variant="33" subtype="0" anm2path="monsters/chapter_3/slight.anm2" baseHP="15" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <bestiary anim="Move" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Cursed Horf"
+        id="501" variant="34" subtype="0" anm2path="monsters/chapter_3.5/cursed_horf.anm2" baseHP="15" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <bestiary anim="Shake" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Cursed Mulligan"
+        id="501" variant="35" subtype="0" anm2path="monsters/chapter_5/cursed_mulligan.anm2" baseHP="40" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <bestiary anim="Shake" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Cursed Mulliboom"
+        id="501" variant="36" subtype="0" anm2path="monsters/chapter_5/cursed_mulligan.anm2" baseHP="40" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <bestiary anim="Shake" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Cursed Pooter"
+        id="501" variant="37" subtype="0" anm2path="monsters/chapter_5/cursed_pooter.anm2" baseHP="15" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <bestiary anim="Fly" transform="0,0,1"/>
+    </entity> 
+
     
 
 

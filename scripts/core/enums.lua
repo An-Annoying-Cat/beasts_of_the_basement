@@ -303,6 +303,30 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Spider Boi"),
         VARIANT = Isaac.GetEntityVariantByName("Spider Boi"),
     },
+    PARANOIAC = {
+        TYPE = Isaac.GetEntityTypeByName("Paranoiac"),
+        VARIANT = Isaac.GetEntityVariantByName("Paranoiac"),
+    },
+    SLIGHT = {
+        TYPE = Isaac.GetEntityTypeByName("Slight"),
+        VARIANT = Isaac.GetEntityVariantByName("Slight"),
+    },
+    CURSED_HORF = {
+        TYPE = Isaac.GetEntityTypeByName("Cursed Horf"),
+        VARIANT = Isaac.GetEntityVariantByName("Cursed Horf"),
+    },
+    CURSED_MULLIGAN = {
+        TYPE = Isaac.GetEntityTypeByName("Cursed Mulligan"),
+        VARIANT = Isaac.GetEntityVariantByName("Cursed Mulligan"),
+    },
+    CURSED_MULLIBOOM = {
+        TYPE = Isaac.GetEntityTypeByName("Cursed Mulliboom"),
+        VARIANT = Isaac.GetEntityVariantByName("Cursed Mulliboom"),
+    },
+    CURSED_POOTER = {
+        TYPE = Isaac.GetEntityTypeByName("Cursed Pooter"),
+        VARIANT = Isaac.GetEntityVariantByName("Cursed Pooter"),
+    },
     
 
 
@@ -418,6 +442,8 @@ Enums.SFX = {
     PUER_TELE = Isaac.GetSoundIdByName("PuerTele"),
     PUER_SHOOT = Isaac.GetSoundIdByName("PuerShoot"),
 
+    SLIGHT_PANIC = Isaac.GetSoundIdByName("SlightPanic"),
+
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
 
@@ -478,11 +504,14 @@ Enums.Items = {
     THE_BESTIARY = Isaac.GetItemIdByName("The Bestiary"),
     TECH_NANO = Isaac.GetItemIdByName("Tech Nano"),
     CROWBAR = Isaac.GetItemIdByName("Crowbar"),
+    THE_DSM = Isaac.GetItemIdByName("The DSM"),
+    SPOILED_MILK = Isaac.GetItemIdByName("Spoiled Milk"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
     LUCKY_FLOWER = Isaac.GetItemIdByName("Lucky Flower"),
     PALE_BOX = Isaac.GetItemIdByName("Pale Box"),
+    
 
 }
 

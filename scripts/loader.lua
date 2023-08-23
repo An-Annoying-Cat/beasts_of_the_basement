@@ -51,9 +51,12 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_3.desirer",
     "scripts.entities.enemies.chapter_3.palesniffle",
     "scripts.entities.enemies.chapter_3.puer_puella",
+    "scripts.entities.enemies.chapter_3.paranoiac",
+    "scripts.entities.enemies.chapter_3.slight",
 
     "scripts.entities.enemies.chapter_3_alt.kehehan",
     "scripts.entities.enemies.chapter_3_alt.shard",
+    "scripts.entities.enemies.chapter_3_alt.cursed_horf",
 
     "scripts.entities.bosses.thaumaturge",
 
@@ -63,6 +66,11 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_4.womb.gibby",
     "scripts.entities.enemies.chapter_4.womb.cadre",
     "scripts.entities.enemies.chapter_4.utero.trojan",
+
+    "scripts.entities.enemies.chapter_5.cursed_mulligan",
+    "scripts.entities.enemies.chapter_5.cursed_pooter",
+    "scripts.entities.enemies.chapter_5.cursed_mulliboom",
+
 
     "scripts.entities.enemies.ascent.batso",
 
@@ -90,6 +98,7 @@ Mod.LoadScripts({
     "scripts.entities.items.thebestiary",
     "scripts.entities.items.technano",
     "scripts.entities.items.crowbar",
+    "scripts.entities.items.spoiled_milk",
 
 
     --TRINKETS

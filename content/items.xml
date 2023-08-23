@@ -26,6 +26,8 @@
     <active id="22" quality="3" name="The Bestiary" description="Know thy enemy" gfx="the_bestiary.png" chargetype="normal" maxcharges="0" tags="book"/>
     <passive id="23" quality="3" name="Tech Nano" description="Nanobot tears" gfx="tech_nano.png"/>
     <passive id="24" quality="2" name="Crowbar" description="High enemy health = big bonus damage" gfx="crowbar.png" cache="damage"/>
+    <active id="25" quality="3" name="The DSM" description="Know your mind..." gfx="the_dsm.png" chargetype="normal" maxcharges="6" tags="book"/>
+    <passive id="26" quality="4" name="Spoiled Milk" description="Blech! It's all clumped up!" cache="firedelay damage" gfx="spoiled_milk.png"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
