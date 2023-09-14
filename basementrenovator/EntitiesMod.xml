@@ -5,7 +5,6 @@
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
-  <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
   <entity Image="icons/eternalfly.png" Name="Eternal Fly" ID="501" Variant="461" Subtype="0" />
   <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
   <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
@@ -95,6 +94,8 @@
     </bitfield>
   </entity>
   <entity Image="icons/spicy_bony.png" Name="Spicy Bony" ID="227" Variant="20" Subtype="0" />
+  <entity Image="icons/geo_horf.png" Name="Geo Horf" ID="501" Variant="41" Subtype="0" />
+  <entity Image="icons/geo_fatty.png" Name="Geo Fatty" ID="501" Variant="42" Subtype="0" />
   <!-- Depths Enemies -->
   <entity Image="icons/pale_sniffle.png" Name="Pale Sniffle" ID="153" Variant="20" Subtype="0" />
   <entity Image="icons/desirer.png" Name="Desirer" ID="86" Variant="10" Subtype="0" />
@@ -106,6 +107,8 @@
       </spinner>
     </bitfield>
   </entity>
+  <entity Image="icons/paranoiac.png" Name="Paranoiac" ID="501" Variant="32" Subtype="0" />
+  <entity Image="icons/paranoiac.png" Name="Slight" ID="501" Variant="33" Subtype="0" />
   <!-- Mausoleum Enemies -->
   <entity Image="icons/kehehan.png" Name="Kehehan" ID="885" Variant="1" Subtype="10" />
   <!--Gehenna Enemies-->
@@ -144,9 +147,13 @@
   <entity Image="icons/trojan.png" Name="Trojan" ID="41" Variant="51" Subtype="0" />
   <!--Scarred Womb Enemies-->
   <entity Image="icons/frenulum.png" Name="Frenulum" ID="501" Variant="13" Subtype="4" />
-
+  <!-- Sheol enemies -->
+  <entity Image="icons/cursed_horf.png" Name="Cursed Horf" ID="501" Variant="34" Subtype="0" />
+  <entity Image="icons/cursed_mulligan.png" Name="Cursed Mulligan" ID="501" Variant="35" Subtype="0" />
+  <entity Image="icons/cursed_mulliboom.png" Name="Cursed Mulliboom" ID="501" Variant="36" Subtype="0" />
   <!-- Ascent Enemies -->
-  
+  <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
+  <entity Image="icons/double_cherry.png" Name="Double Cherry" ID="501" Variant="43" Subtype="0" />
   
 
 </data>

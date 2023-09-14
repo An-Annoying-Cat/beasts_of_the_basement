@@ -26,6 +26,7 @@
     <entity Name="Flapstack (4)" />
     <entity Name="Flapstack (5)" />
     <entity Name="Cherry" />
+    <entity Name="Double Cherry" />
   </group>
 
   <group Name="BotB Basement Enemies" >  
@@ -105,6 +106,8 @@
     <entity Name="Grilled Flapstack (3)" />
     <entity Name="Grilled Flapstack (4)" />
     <entity Name="Grilled Flapstack (5)" />
+    <entity Name="Geo Horf" />
+    <entity Name="Geo Fatty" />
   </group>
 
   <group Name="BotB Depths Enemies" >
@@ -116,6 +119,9 @@
 
   <group Name="BotB Mausoleum Enemies" >
     <entity Name="Kehehan" />
+    <entity Name="Cursed Horf" />
+    <entity Name="Cursed Mulligan" />
+    <entity Name="Cursed Mulliboom" />
   </group>
 
   <group Name="BotB Gehenna Enemies" >

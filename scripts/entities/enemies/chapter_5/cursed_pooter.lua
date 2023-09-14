@@ -80,4 +80,4 @@ function CURSED_POOTER:DamageCheck(npc, amount, _, _, _)
 end
 
 
-Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, CURSED_POOTER.DamageCheck, Isaac.GetEntityTypeByName("Pong"))
+Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, CURSED_POOTER.DamageCheck, Isaac.GetEntityTypeByName("Cursed Pooter"))

@@ -115,7 +115,7 @@ function MS_HORF:MsHorfHeadAI(npc)
     if npc.Variant == Entities.MS_HORF_HEAD.VARIANT then
 		local sprite = npc:GetSprite()
 		local d = npc:GetData()
-
+		local room = Game():GetRoom()
 		local endresult = {Entities.HORF_GIRL.TYPE, Entities.HORF_GIRL.VARIANT}
 		--[[if variant == 773 then
 			endresult = {mod.FF.RedHorf.ID, mod.FF.RedHorf.Var}
@@ -133,6 +133,7 @@ function MS_HORF:MsHorfHeadAI(npc)
 		if d.BotB_thrown then
 			FF:spritePlay(sprite, "HeadSpin")
 			npc.SpriteOffset = Vector(0, -8)
+			npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_BULLET
 			if npc.Velocity.X > 0 then
 				sprite.FlipX = true
 			else
@@ -149,6 +150,9 @@ function MS_HORF:MsHorfHeadAI(npc)
 			sprite.FlipX = false
 			npc.Velocity = npc.Velocity * 0.1
 			if sprite:IsFinished("Land") then
+				if room:GetGridEntityFromPos(npc.Position):GetType() == GridEntityType.GRID_PIT then
+					npc:Kill()
+				end
 				npc:Morph(endresult[1], endresult[2], 0, -1)
 			else
 				FF:spritePlay(sprite, "Land")

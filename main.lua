@@ -41,7 +41,7 @@ LOCAL_TSIL.Init(myFolder)
 
 --Hidden item manager
 local hiddenItemManager = require("scripts.core.hidden_item_manager")
-hiddenItemManager:Init(BotB)
+--hiddenItemManager:Init(BotB)
 
 
 local function LoadScripts(scripts)
@@ -56,6 +56,7 @@ BotB.LoadScripts = LoadScripts
 Mod.CoreScripts = {
     "scripts.core.enums",
     "scripts.core.functions",
+    "scripts.core.table_functions",
     "scripts.core.fadeout",
     "scripts.core.stageapi",
     "scripts.core.ff_additions",
@@ -63,7 +64,7 @@ Mod.CoreScripts = {
     "scripts.loader",
 }
 LoadScripts(Mod.CoreScripts)
-
+hiddenItemManager:Init(BotB)
 
 
 --General enemy override. Guess we Ministro now
@@ -207,6 +208,7 @@ function BotB:TaintedCompat()
         BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_BBF,Isaac.GetItemIdByName("B.H.F."))
         BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_TWISTED_PAIR,Isaac.GetItemIdByName("Faithful Fleet"))
         BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_INFAMY,Isaac.GetItemIdByName("Champ's Mask"))
+        BotB.TT:AddTaintedTreasure(CollectibleType.COLLECTIBLE_RUBBER_CEMENT,Isaac.GetItemIdByName("Liquid Latex"))
     else
         print("[BotB] You're missing out on some pretty dope Tainted Treasures compatability, my dude")
     end

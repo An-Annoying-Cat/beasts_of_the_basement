@@ -7,6 +7,7 @@
         <!--<Item Name="B.H.F." Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>-->
         <Item Name="Crowbar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Tech Nano" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Wiggly Boy" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="shop">
         <Item Name="Toy Helicopter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -31,6 +32,7 @@
     <Pool Name="curse">
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="50 Shades Of Grey" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Wiggly Boy" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="devil">
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -42,6 +44,7 @@
     </Pool>
     <Pool Name="rottenBeggar">
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Wiggly Boy" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="babyShop">
         <Item Name="Robo-Baby Zero" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>

@@ -77,6 +77,23 @@
 		<sample weight="1" path="skipFlyBounce2.wav" />
 		<sample weight="1" path="skipFlyBounce3.wav" />
 	</sound>
+
+	<sound name="CrystalFire">
+		<sample weight="1" path="crystalFire1.wav" />
+		<sample weight="1" path="crystalFire2.wav" />
+	</sound>
+
+	<sound name="CrystalFireBig">
+		<sample weight="1" path="crystalFireBig1.wav" />
+		<sample weight="1" path="crystalFireBig2.wav" />
+		<sample weight="1" path="crystalFireBig3.wav" />
+	</sound>
+
+	<sound name="CrystalFireSmall">
+		<sample weight="1" path="crystalFireSmall1.wav" />
+		<sample weight="1" path="crystalFireSmall2.wav" />
+		<sample weight="1" path="crystalFireSmall3.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">
@@ -159,6 +176,10 @@
 	<sound name="BHFRespawn">
 		<sample weight="1" path="items/bhfRespawn.wav" />
 	</sound>
+	<!--Items-->
+	<sound name="EnlightenmentFire">
+		<sample weight="1" path="items/enlightenmentFire.wav" />
+	</sound>
 	<!--Consumables-->
 	<sound name="AmiiboCard">
 		<sample weight="1" path="cards/amiiboCard.wav" />
@@ -188,4 +209,5 @@
 	<sound name="MahjongSelect">
 		<sample weight="1" path="cards/mahjongSelect.wav" />
 	</sound>
+	
 </sounds>

@@ -77,7 +77,7 @@ function CURSED_MULLIBOOM:NPCUpdate(npc)
                 --game:BombExplosionEffects(npc.Position,1,TearFlags.TEAR_GOLDEN_BOMB,Color(0,1,1,1), npc, 1, true, false, DamageFlag.DAMAGE_EXPLOSION)
                 local cursedMulliboomLandingBomb = Isaac.Spawn(EntityType.ENTITY_BOMB,BombVariant.BOMB_SMALL,0,npc.Position,Vector.Zero,npc):ToBomb()
                 ---cursedMulliboomLandingBomb:AddTearFlags(TearFlags.TEAR_GOLDEN_BOMB) cursedMulliboomLandingBomb:GetSprite()
-                cursedMulliboomLandingBomb:GetSprite():ReplaceSpritesheet(0, "gfx/items/pick ups/bombs/costumes/bomb_gold.png")
+                cursedMulliboomLandingBomb:GetSprite():ReplaceSpritesheet(0, "gfx/effects/bomb_cursed_mulligan.png")
                 cursedMulliboomLandingBomb:GetSprite():LoadGraphics()
                 npc.Position = game:GetRoom():GetRandomPosition(10)
                 npc.State = 103
@@ -88,8 +88,8 @@ function CURSED_MULLIBOOM:NPCUpdate(npc)
 
         if npc.State == 103 then
             if sprite:IsEventTriggered("Land") then
-                local cursedMulliboomLandingBomb = Isaac.Spawn(EntityType.ENTITY_BOMB,BombVariant.BOMB_SMALL,0,npc.Position,Vector.Zero,npc):ToBomb()
-                
+                --local cursedMulliboomLandingBomb = Isaac.Spawn(EntityType.ENTITY_BOMB,BombVariant.BOMB_SMALL,0,npc.Position,Vector.Zero,npc):ToBomb()
+                --cursedMulliboomLandingBomb.Parent = npc
             end
             if sprite:IsEventTriggered("Back") then
                 sfx:Play(SoundEffect.SOUND_HELL_PORTAL2,1,0,false,math.random(120,130)/100)
@@ -104,13 +104,19 @@ function CURSED_MULLIBOOM:NPCUpdate(npc)
     end
 end
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, CURSED_MULLIBOOM.NPCUpdate, Isaac.GetEntityTypeByName("Cursed Mulliboom"))
+--[[
+function CURSED_MULLIBOOM:BombUpdate(bomb)
+    if bomb.Parent.Type == BotB.Enums.Entities.CURSED_MULLIBOOM.TYPE and bomb.Parent.Variant == BotB.Enums.Entities.CURSED_MULLIBOOM.VARIANT then
+        
+    end
 
-
-
+end
+Mod:AddCallback(ModCallbacks.MC_POST_BOMB_UPDATE, CURSED_MULLIBOOM.BombUpdate)
+]]
 function CURSED_MULLIBOOM:TeleportCheck(npc, _, flags, _, _)
     --print("sharb")
     if flags & DamageFlag.DAMAGE_EXPLOSION ~= 0 then return false end
-
+    --[[
     if npc.Type == BotB.Enums.Entities.CURSED_MULLIBOOM.TYPE and npc.Variant == BotB.Enums.Entities.CURSED_MULLIBOOM.VARIANT then 
         if npc:ToNPC().State ~= 102 and npc:ToNPC().State ~= 103 then
             npc:ToNPC().State = 102
@@ -118,6 +124,7 @@ function CURSED_MULLIBOOM:TeleportCheck(npc, _, flags, _, _)
             npc:GetSprite():Play("TeleOutBoom")
         end
     end
+    ]]
 end
 Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, CURSED_MULLIBOOM.TeleportCheck, Isaac.GetEntityTypeByName("Cursed Mulliboom"))
 

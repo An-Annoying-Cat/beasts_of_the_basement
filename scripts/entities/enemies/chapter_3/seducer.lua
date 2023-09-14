@@ -2,6 +2,8 @@ local Mod = BotB
 local SEDUCER = {}
 local Entities = BotB.Enums.Entities
 
+--Even though they're a Slacker, she's still a seducer in our hearts
+
 function SEDUCER:NPCUpdate(npc)
 
     local sprite = npc:GetSprite()
@@ -18,9 +20,9 @@ function SEDUCER:NPCUpdate(npc)
             if npc.State == 9 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
                 if sprite:IsEventTriggered("Shoot") then
-                    sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(110,130)/100)
+                    sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(70,90)/100)
                     --Creep spawning
-                    local creep = Isaac.Spawn(1000, 22, 0, npc.Position, Vector(0,0), npc)
+                    local creep = Isaac.Spawn(1000, 23, 0, npc.Position, Vector(0,0), npc)
 				    creep.SpriteScale = creep.SpriteScale * 3
                     creep:Update()
 				    for i = 1, 3 do
@@ -48,12 +50,12 @@ end
 function SEDUCER:BulletCheck(bullet)
 
     --Seducer projectiles spawn red creep when they splat
-    if bullet.Parent ~= nil and bullet.Parent.Variant == BotB.Enums.Entities.SEDUCER.VARIANT then
+    if bullet.Parent ~= nil and bullet.Parent.Type == BotB.Enums.Entities.SEDUCER.TYPE and bullet.Parent.Variant == BotB.Enums.Entities.SEDUCER.VARIANT then
         
         
         if bullet:IsDead() then
             sfx:Play(SoundEffect.SOUND_ANIMAL_SQUISH,1,0,false,math.random(120,150)/100)
-            local creep = Isaac.Spawn(1000, 22, 0, bullet.Position, Vector(0,0), bullet)
+            local creep = Isaac.Spawn(1000, EffectVariant.CREEP_GREEN, 0, bullet.Position, Vector(0,0), bullet)
             creep.SpriteScale = creep.SpriteScale * 1.5
         end
       end

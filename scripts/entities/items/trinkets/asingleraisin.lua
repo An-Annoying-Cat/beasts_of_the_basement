@@ -1,38 +1,32 @@
 local Mod = BotB
-local RAISIN = {}
+local A_SINGLE_RAISIN = {}
+local ff = FiendFolio
 
 if EID then
-	EID:addTrinket(Isaac.GetTrinketIdByName("A Single Raisin"), "Spawns a Half Immoral Heart on pickup. #Adds a chance for Red Hearts to be replaced with Immoral Hearts that scales based on player luck.")
+	EID:addTrinket(Isaac.GetTrinketIdByName("A Single Raisin"), "Picking up hearts has a 25% chance to spawn a half Immoral Heart.")
 end
 
-function RAISIN:raisinTryReplace(pickup)
-    --[[
-    local player = Isaac.GetPlayer()
-		if player:HasCollectible(Isaac.GetTrinketIdByName("A Single Raisin")) then
-			
-		end
-    --]]
-end
-
-function RAISIN:playerRaisinUpdate(player)
-    local data = player:GetData()
-    --Initialize on data for raisin being nil
-    if data.alreadyGotTheirFuckingRaisin == nil then
-        data.alreadyGotTheirFuckingRaisin = false
-    end
-    local queueItemData = player.QueuedItem
-    --Is the queued item for the player a trinket with an id matching A Single Raisin?
-    if queueItemData.Item ~= nil and  queueItemData.Item:IsTrinket() and queueItemData.Item.ID == BotB.Enums.Trinkets.A_SINGLE_RAISIN then
-        print("holy fucking shit they got the fucking raisin")
-        if data.alreadyGotTheirFuckingRaisin == false then
-            npc:PlaySound(SoundEffect.SOUND_FORESTBOSS_STOMPS,1,0,false,math.random(8,9)/10)
-            print("spawn the heart you fucking idiot")
-        end
-    end
-    
-end
-
+function A_SINGLE_RAISIN:getHeart(pickup,collider,_)
+    local pickupdata = pickup:GetData()
+    local sprite = pickup:GetSprite()
+    --print(pickup.Type .. "," .. pickup.Variant .. "," .. pickup.SubType)
 	
+    if collider.Type == Isaac.GetEntityTypeByName("Player") and collider:ToPlayer():HasTrinket(BotB.Enums.Trinkets.A_SINGLE_RAISIN, true) then
+		local player = collider:ToPlayer()
+		local data = player:GetData()
+		local singleRaisinCheck = false
+        if pickup.Variant == PickupVariant.PICKUP_HEART then
+            singleRaisinCheck = true
+		end
+		if singleRaisinCheck then
+			if player:HasTrinket(BotB.Enums.Trinkets.A_SINGLE_RAISIN) then
+                local rng = player:GetTrinketRNG(BotB.Enums.Trinkets.A_SINGLE_RAISIN)
+                if rng:RandomFloat() < 1 - 0.75 then
+                    Isaac.Spawn(5, ff.PICKUP.VARIANT.HALF_IMMORAL_HEART, 0, game:GetRoom():FindFreePickupSpawnPosition(pickup.Position, 40, false), Vector.Zero, nil)
+                end
+            end
+		end
+    end
+end
 
-Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT, RAISIN.raisinTryReplace, PickupVariant.PICKUP_HEART)
-Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, RAISIN.playerRaisinUpdate, 0)
+Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,A_SINGLE_RAISIN.getHeart,PickupVariant.PICKUP_HEART)

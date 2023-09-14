@@ -28,6 +28,10 @@
     <passive id="24" quality="2" name="Crowbar" description="High enemy health = big bonus damage" gfx="crowbar.png" cache="damage"/>
     <active id="25" quality="3" name="The DSM" description="Know your mind..." gfx="the_dsm.png" chargetype="normal" maxcharges="6" tags="book"/>
     <passive id="26" quality="4" name="Spoiled Milk" description="Blech! It's all clumped up!" cache="firedelay damage" gfx="spoiled_milk.png"/>
+    <passive id="27" quality="3" name="Liquid Latex" description="Adhesive tears" cache="damage" gfx="liquid_latex.png"/>
+    <passive id="28" quality="2" name="Wiggly Boy" description="Micro friends on kill" gfx="wiggly_boy.png"/>
+    <passive id="29" quality="2" name="Lucky Lighter" description="Luck up + chance to ignite" gfx="lucky_lighter.png" cache="luck"/>
+    <active id="30" quality="4" name="Enlightenment" description="Reusable attunement" gfx="enlightenment.png" chargetype="normal" maxcharges="5" cache="speed luck"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
@@ -41,4 +45,8 @@
     <trinket name="A Single Raisin" description="Just a bit fiendish" gfx="raisin.png" />
     <trinket name="Trinket" description="PLACEHOLDER_TRINKET" gfx="placeholder_trinket.png" />
     <trinket name="Cryptic Penny" description="Wealth of stupidity" gfx="cryptic_penny.png" />
+    <trinket name="Bootleg Cartridge" description="Not like what I remember..." gfx="bootleg_cart.png" />
+    <trinket name="Flashcart" description="Unlawful item copy" gfx="flashcart.png" />
+    <trinket name="Idol Of Molech" description="It's hot to the touch" gfx="idol_of_molech.png" />
+    <trinket name="Lithopedion" description="Is something in there...?" gfx="lithopedion.png" />
 </items>

@@ -42,12 +42,12 @@ Enums.Entities = {
 
     --Keeper Variants
     DESIRER = {
-        TYPE = Isaac.GetEntityTypeByName("Desirer"),
-        VARIANT = Isaac.GetEntityVariantByName("Desirer"),
+        TYPE = Isaac.GetEntityTypeByName("Devourer"),
+        VARIANT = Isaac.GetEntityVariantByName("Devourer"),
     },
     SEDUCER = {
-        TYPE = Isaac.GetEntityTypeByName("Seducer"),
-        VARIANT = Isaac.GetEntityVariantByName("Seducer"),
+        TYPE = Isaac.GetEntityTypeByName("Slacker"),
+        VARIANT = Isaac.GetEntityVariantByName("Slacker"),
     },
 
     --Ms Horf
@@ -327,6 +327,30 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Cursed Pooter"),
         VARIANT = Isaac.GetEntityVariantByName("Cursed Pooter"),
     },
+    BABBY_REAL = {
+        TYPE = Isaac.GetEntityTypeByName("Babby (Real)"),
+        VARIANT = Isaac.GetEntityVariantByName("Babby (Real)"),
+    },
+    BABBY_FAKE = {
+        TYPE = Isaac.GetEntityTypeByName("Babby (Fake)"),
+        VARIANT = Isaac.GetEntityVariantByName("Babby (Fake)"),
+    },
+    PURSUER = {
+        TYPE = Isaac.GetEntityTypeByName("Pursuer"),
+        VARIANT = Isaac.GetEntityVariantByName("Pursuer"),
+    },
+    GEO_HORF = {
+        TYPE = Isaac.GetEntityTypeByName("Geo Horf"),
+        VARIANT = Isaac.GetEntityVariantByName("Geo Horf"),
+    },
+    GEO_FATTY = {
+        TYPE = Isaac.GetEntityTypeByName("Geo Fatty"),
+        VARIANT = Isaac.GetEntityVariantByName("Geo Fatty"),
+    },
+    DOUBLE_CHERRY = {
+        TYPE = Isaac.GetEntityTypeByName("Double Cherry"),
+        VARIANT = Isaac.GetEntityVariantByName("Double Cherry"),
+    },
     
 
 
@@ -421,6 +445,10 @@ Enums.SFX = {
     CROASTLAND = Isaac.GetSoundIdByName("CroastLand"),
     SKIPFLY_BOUNCE = Isaac.GetSoundIdByName("SkipFlyBounce"),
 
+    CRYSTAL_FIRE = Isaac.GetSoundIdByName("CrystalFire"),
+    CRYSTAL_FIRE_BIG = Isaac.GetSoundIdByName("CrystalFireBig"),
+    CRYSTAL_FIRE_SMALL = Isaac.GetSoundIdByName("CrystalFireSmall"),
+
     THAUMATURGE_LAUGH = Isaac.GetSoundIdByName("ThaumLaugh"),
     THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),
     THAUMATURGE_TAUNT = Isaac.GetSoundIdByName("ThaumTaunt"),
@@ -506,11 +534,16 @@ Enums.Items = {
     CROWBAR = Isaac.GetItemIdByName("Crowbar"),
     THE_DSM = Isaac.GetItemIdByName("The DSM"),
     SPOILED_MILK = Isaac.GetItemIdByName("Spoiled Milk"),
+    LIQUID_LATEX = Isaac.GetItemIdByName("Liquid Latex"),
+    WIGGLY_BOY = Isaac.GetItemIdByName("Wiggly Boy"),
+    LUCKY_LIGHTER = Isaac.GetItemIdByName("Lucky Lighter"),
+    ENLIGHTENMENT = Isaac.GetItemIdByName("Enlightenment"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
     LUCKY_FLOWER = Isaac.GetItemIdByName("Lucky Flower"),
     PALE_BOX = Isaac.GetItemIdByName("Pale Box"),
+    
     
 
 }
@@ -522,7 +555,10 @@ Enums.Trinkets = {
     PLACEHOLDER_TRINKET = Isaac.GetTrinketIdByName("Trinket"),
     CANKER_SORE = Isaac.GetTrinketIdByName("Canker Sore"),
     CRYPTIC_PENNY = Isaac.GetTrinketIdByName("Cryptic Penny"),
-    --BOOTLEG_CARTRIDGE = Isaac.GetItemIdByName("Bootleg Cartridge")
+    BOOTLEG_CARTRIDGE = Isaac.GetTrinketIdByName("Bootleg Cartridge"),
+    FLASHCART = Isaac.GetTrinketIdByName("Flashcart"),
+    IDOL_OF_MOLECH = Isaac.GetTrinketIdByName("Idol Of Molech"),
+    LITHOPEDION = Isaac.GetTrinketIdByName("Lithopedion"),
 
 }
 

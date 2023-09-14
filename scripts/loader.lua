@@ -46,6 +46,8 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_2_alt.mines.kettle",
     "scripts.entities.enemies.chapter_2_alt.mines.crockpot",
     "scripts.entities.enemies.chapter_2_alt.mines.spicybony",
+    "scripts.entities.enemies.chapter_2_alt.mines.geohorf",
+    "scripts.entities.enemies.chapter_2_alt.mines.geo_fatty",
 
     "scripts.entities.enemies.chapter_3.seducer",
     "scripts.entities.enemies.chapter_3.desirer",
@@ -53,6 +55,9 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_3.puer_puella",
     "scripts.entities.enemies.chapter_3.paranoiac",
     "scripts.entities.enemies.chapter_3.slight",
+
+    "scripts.entities.minibosses.babby",
+    "scripts.entities.minibosses.babby_fake",
 
     "scripts.entities.enemies.chapter_3_alt.kehehan",
     "scripts.entities.enemies.chapter_3_alt.shard",
@@ -73,6 +78,9 @@ Mod.LoadScripts({
 
 
     "scripts.entities.enemies.ascent.batso",
+    "scripts.entities.enemies.ascent.double_cherry",
+
+    "scripts.entities.enemies.special.pursuer",
 
 
     --FAMILIARS
@@ -99,6 +107,10 @@ Mod.LoadScripts({
     "scripts.entities.items.technano",
     "scripts.entities.items.crowbar",
     "scripts.entities.items.spoiled_milk",
+    "scripts.entities.items.liquid_latex",
+    "scripts.entities.items.wiggly_boy",
+    "scripts.entities.items.lucky_lighter",
+    "scripts.entities.items.enlightenment",
 
 
     --TRINKETS
@@ -106,6 +118,9 @@ Mod.LoadScripts({
     "scripts.entities.items.trinkets.asingleraisin",
     "scripts.entities.items.trinkets.placeholder_trinket",
     "scripts.entities.items.trinkets.cankersore",
+    "scripts.entities.items.trinkets.bootlegcart",
+    "scripts.entities.items.trinkets.flashcart",
+    "scripts.entities.items.trinkets.idol_of_molech",
 
 
     --PICKUPS
@@ -123,6 +138,9 @@ Mod.LoadScripts({
     "scripts.entities.consumables.ojcards",
     "scripts.entities.consumables.ygocards",
     "scripts.entities.consumables.mahjongtiles",
+    
+    --STATUS EFFECTS
+    "scripts.status_effects.fire_rework",
 
     --Effects
     --"scripts.entities.effects.trippin",

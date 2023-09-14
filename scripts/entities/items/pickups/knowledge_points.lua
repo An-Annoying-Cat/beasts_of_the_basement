@@ -19,11 +19,12 @@ end
 
 function KP:onKPPickup(pickup,collider,_)
     local data = pickup:GetData()
-    local player = collider:ToPlayer()
-        local pdata = player:GetData()
+    
     --local sprite = pickup:GetSprite()
     --print(pickup.Type .. "," .. pickup.Variant .. "," .. pickup.SubType)
     if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.KP_SMALL.SUBTYPE and collider.Type == Isaac.GetEntityTypeByName("Player") then
+        local player = collider:ToPlayer()
+        local pdata = player:GetData()
         sfx:Play(SoundEffect.SOUND_BISHOP_HIT,0.75,0,false,math.random(20,25)/10)
         pickup.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         
@@ -37,6 +38,8 @@ function KP:onKPPickup(pickup,collider,_)
         return false
     end
     if pickup.SubType ~= nil and pickup.SubType == Mod.Enums.Pickups.KP_LARGE.SUBTYPE and collider.Type == Isaac.GetEntityTypeByName("Player") then
+        local player = collider:ToPlayer()
+        local pdata = player:GetData()
         sfx:Play(SoundEffect.SOUND_BISHOP_HIT,0.75,0,false,math.random(20,25)/10)
         pickup.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         local player = collider:ToPlayer()

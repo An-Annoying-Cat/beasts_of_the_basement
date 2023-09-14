@@ -51,13 +51,13 @@
     </entity>
     
     <!--Keepers     id="86" variants start at 10-->
-    <entity name="Desirer" 
+    <entity name="Devourer" 
         id="86" variant="10" anm2path="monsters/chapter_3/desirer.anm2" baseHP="25" stageHP="0"
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
 	</entity>
-    <entity name="Seducer" 
-        id="86" variant="11" anm2path="monsters/chapter_3/seducer.anm2" baseHP="65" stageHP="0"
+    <entity name="Slacker" 
+        id="86" variant="11" anm2path="monsters/chapter_3/seducer.anm2" baseHP="45" stageHP="0"
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
 	</entity>
@@ -196,7 +196,7 @@
 
     <!--Globins id="24"   variants start at 40-->
     <entity name="Giblet"
-        id="24" variant="40" subtype="0" anm2path="monsters/chapter_4/womb/giblet.anm2" baseHP="11" stageHP="0" portrait="548"
+        id="24" variant="40" subtype="0" anm2path="monsters/chapter_4/womb/giblet.anm2" baseHP="8" stageHP="0" portrait="548"
         boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1"  numGridCollisionPoints="12" shadowSize="8"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Beastiary">
         <gibs amount="3" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
@@ -406,14 +406,14 @@
 
     <entity name="Paf"
         id="501" variant="21" subtype="0" anm2path="monsters/chapter_1/paf.anm2" baseHP="10" stageHP="0" portrait="3"
-        collisionDamage="1" collisionMass="2" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="12"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="2" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="8"   friction="1" reroll="true" champion="1">
         <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
         <bestiary anim="Shake" transform="0,0,1"/>
     </entity> 
 
     <entity name="Sub Paf"
         id="501" variant="21" subtype="1" anm2path="monsters/chapter_1.5/sub_paf.anm2" baseHP="10" stageHP="0" portrait="3" hasFloorAlts="true"
-        collisionDamage="1" collisionMass="2" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="12"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="2" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="8"   friction="1" reroll="true" champion="1">
         <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" />
         <bestiary anim="Shake" transform="0,0,1"/>
     </entity> 
@@ -462,7 +462,7 @@
 
     <entity name="Cherry"
         id="501" variant="28" subtype="0" anm2path="monsters/chapter_1/cherry.anm2" baseHP="16" stageHP="0" portrait="3" hasFloorAlts="false"
-        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="11"   friction="1" reroll="true" champion="1">
         <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
         <bestiary anim="Slam" transform="0,0,1"/>
     </entity> 
@@ -481,7 +481,7 @@
 
     <entity name="Spider Boi"
         id="501" variant="31" subtype="0" anm2path="monsters/miniboss/spiderboi.anm2" baseHP="60" stageHP="0" portrait="3" hasFloorAlts="false"
-        collisionDamage="1" collisionMass="20" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="36"   friction="1" reroll="false" champion="0">
+        collisionDamage="1" collisionMass="20" collisionRadius="14"  numGridCollisionPoints="12" shadowSize="36"   friction="1" reroll="false" champion="0">
         <gibs amount="0" blood="0" bone="0" eye="1" gut="1" large="1" />
     </entity>
 
@@ -501,21 +501,21 @@
 
     <entity name="Cursed Horf"
         id="501" variant="34" subtype="0" anm2path="monsters/chapter_3.5/cursed_horf.anm2" baseHP="15" stageHP="0" portrait="3" hasFloorAlts="false"
-        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="11"   friction="1" reroll="true" champion="1">
         <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
         <bestiary anim="Shake" transform="0,0,1"/>
     </entity> 
 
     <entity name="Cursed Mulligan"
         id="501" variant="35" subtype="0" anm2path="monsters/chapter_5/cursed_mulligan.anm2" baseHP="40" stageHP="0" portrait="3" hasFloorAlts="false"
-        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="13"   friction="1" reroll="true" champion="1">
         <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
         <bestiary anim="Shake" transform="0,0,1"/>
     </entity> 
 
     <entity name="Cursed Mulliboom"
         id="501" variant="36" subtype="0" anm2path="monsters/chapter_5/cursed_mulligan.anm2" baseHP="40" stageHP="0" portrait="3" hasFloorAlts="false"
-        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="13"   friction="1" reroll="true" champion="1">
         <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
         <bestiary anim="Shake" transform="0,0,1"/>
     </entity> 
@@ -526,6 +526,49 @@
         <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
         <bestiary anim="Fly" transform="0,0,1"/>
     </entity> 
+
+    <entity name="Babby (Real)"
+        id="501" variant="38" subtype="0" anm2path="monsters/miniboss/babby.anm2" baseHP="150" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="0" boss="1">
+        <gibs amount="10" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <bestiary anim="RealTrueChase" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Babby (Fake)"
+        id="501" variant="39" subtype="0" anm2path="monsters/miniboss/babby.anm2" baseHP="15" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="0">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+        <bestiary anim="FakeIdle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Pursuer"
+        id="501" variant="40" subtype="0" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="false" champion="0" shutdoors="false">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Geo Horf"
+        id="501" variant="41" subtype="0" anm2path="monsters/chapter_2.5/mines/geo_horf.anm2" baseHP="20" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="13"   friction="1" reroll="false" champion="1" shutdoors="true">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+        <bestiary anim="Shake" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Geo Fatty"
+        id="501" variant="42" subtype="0" anm2path="monsters/chapter_2.5/mines/geo_fatty.anm2" baseHP="39" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
+        <bestiary anim="Attack" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Double Cherry"
+        id="501" variant="43" subtype="0" anm2path="monsters/ascent/double_cherry.anm2" baseHP="60" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="32"   friction="1" reroll="true" champion="1">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
 
     
 

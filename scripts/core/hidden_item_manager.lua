@@ -1,5 +1,5 @@
 -- Hidden Item Manager, by Connor (aka Ghostbroster)
--- Version 2.0
+-- Version 2.1
 -- 
 -- Manages a system of hidden Lemegeton Item Wisps to simulate the effects of passive items without actually granting the player those items (so they can't be removed or rerolled!).
 -- Good for giving the effect of an item temporarily, making an item effect "innate" to a character, and all sorts of other stuff, probably.
@@ -44,9 +44,8 @@ local function AddLateCallback(callbackID, func, param)
 	AddCallback(callbackID, func, param, kLateCallbackPriority)
 end
 
-local initialized = false
 function HiddenItemManager:Init(mod)
-	if not initialized then
+	if not mod.AddedHiddenItemManagerCallbacks then
 		HiddenItemManager.Mod = mod
 		
 		for _, tab in ipairs(Callbacks) do
@@ -55,7 +54,7 @@ function HiddenItemManager:Init(mod)
 		
 		HiddenItemManager.WispTag = "HiddenItemManager:" .. mod.Name
 		
-		initialized = true
+		mod.AddedHiddenItemManagerCallbacks = true
 	end
 	return HiddenItemManager
 end

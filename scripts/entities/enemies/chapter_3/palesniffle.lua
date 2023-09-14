@@ -54,7 +54,6 @@ function PALESNIFFLE:NPCUpdate(npc)
             local techAngleVector = -(npc.Position - data.targetPositionTest)
 			local laser = EntityLaser.ShootAngle(2, npc.Position, techAngleVector:GetAngleDegrees(), 4, Vector(0,0), npc)
             laser.GridHit = true
-            local _, laserEndPoint = room:CheckLine(npc.Position, npc.Position+(90*techAngleVector), 2, 0, false, true)
             --print(laserEndPoint:Normalized())
             --Position is so goddamned wonky idek what to do here
             --I GOT IT FUCKIN WORKING
@@ -70,9 +69,7 @@ function PALESNIFFLE:NPCUpdate(npc)
 			laser.Parent = npc
 			laser:GetData().offSetSpawn = Vector(0, -30)
             --None of these three work...
-            Mod.SFX:Stop(SoundEffect.SOUND_REDLIGHTNING_ZAP)
-            Mod.SFX:Stop(SoundEffect.SOUND_REDLIGHTNING_ZAP_WEAK)
-            Mod.SFX:Stop(SoundEffect.SOUND_REDLIGHTNING_ZAP_STRONG)
+            
             data.warningLine:Remove()
 			laser:Update()
 
@@ -84,3 +81,10 @@ end
 end
 
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, PALESNIFFLE.NPCUpdate, Isaac.GetEntityTypeByName("Pale Sniffle"))
+
+
+
+
+
+
+
