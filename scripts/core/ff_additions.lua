@@ -122,7 +122,7 @@ Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, FF_ADDITIONS.FFCompat)
 
 --Pinprick aint fixed so I'm doing it myself
 --ret.ENEMIES.PINPRICK.TYPE, ret.ENEMIES.PINPRICK.VARIANT
-
+--[[
 function FF_ADDITIONS:pinprickBulletCheck(bullet)
     local sprite = bullet:GetSprite()
     --Invisible intangible projectile that handles the slow laser
@@ -147,3 +147,4 @@ function FF_ADDITIONS:pinprickBulletCheck(bullet)
 end
 
 Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_INIT, FF_ADDITIONS.pinprickBulletCheck)
+]]
