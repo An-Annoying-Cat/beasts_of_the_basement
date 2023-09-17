@@ -594,6 +594,9 @@
     <entity anm2path="familiar/faithfulfleet.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Faithful Fleet" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2454">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <entity anm2path="familiar/familiar_keyghost_jail.anm2" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Jail Keyghost" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2455">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
 
 
     <!-- Technical -->
@@ -666,6 +669,8 @@
         id="5" variant="120" subtype="80" anm2path="items/pick ups/giga_key.anm2"
         collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
     </entity>
+
+    
     
     <!--Sacks id="5" variant="69" (nice) subtypes start at 30-->
     <entity anm2path="items/pick ups/kick_cube.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Kick Cube" numGridCollisionPoints="24" shadowSize="18" stageHP="0" subtype="30" variant="69">
@@ -676,6 +681,10 @@
     </entity>
     <entity anm2path="items/pick ups/knowledge/knowledge_point.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Knowledge Point (large)" numGridCollisionPoints="24" shadowSize="18" stageHP="0" subtype="32" variant="69">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+    </entity>
+    <entity name="Jail Key"
+        id="5" variant="69" subtype="33" anm2path="items/pick ups/key_jail.anm2"
+        collisionDamage="0" collisionMass="5" collisionRadius="12" numGridCollisionPoints="0" shadowSize="17" friction="1">
     </entity>
 
     <!--Cards   id="5"  variant="300"   subtypes start at 800-->

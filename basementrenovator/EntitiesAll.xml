@@ -6,6 +6,11 @@
 
   <group Name="BotB Global Enemies">
     <entity Name="Eternal Fly" />
+    <entity Name="Double Cherry" />
+    <entity Name="Batso" />
+    <entity Name="Bamf" />
+    <entity Name="Spider Boi" />
+    <entity Name="Babby" />
   </group>
 
   <group Name="BotB Crawlspace Events">
@@ -15,7 +20,6 @@
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  
     <entity Name="Ms. Horf" />
     <entity Name="Chaff" />
-    <entity Name="Batso" />
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
     <entity Name="Paf" />
@@ -26,7 +30,6 @@
     <entity Name="Flapstack (4)" />
     <entity Name="Flapstack (5)" />
     <entity Name="Cherry" />
-    <entity Name="Double Cherry" />
   </group>
 
   <group Name="BotB Basement Enemies" >  

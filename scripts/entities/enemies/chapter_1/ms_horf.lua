@@ -150,9 +150,6 @@ function MS_HORF:MsHorfHeadAI(npc)
 			sprite.FlipX = false
 			npc.Velocity = npc.Velocity * 0.1
 			if sprite:IsFinished("Land") then
-				if room:GetGridEntityFromPos(npc.Position):GetType() == GridEntityType.GRID_PIT then
-					npc:Kill()
-				end
 				npc:Morph(endresult[1], endresult[2], 0, -1)
 			else
 				FF:spritePlay(sprite, "Land")

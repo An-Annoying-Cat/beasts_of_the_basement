@@ -2,6 +2,10 @@
   <!-- Pickups -->
     <entity Image="icons/pickups/kickcube.png" Name="Kick Cube" ID="5" Variant="69" Subtype="30" />
     <entity Image="icons/pickups/jump_crystal.png" Name="Jump Crystal" ID="501" Variant="12" Subtype="0" />
+  <!-- Minibosses -->
+  <entity Image="icons/bamf.png" Name="Bamf" ID="501" Variant="29" Subtype="0" />
+  <entity Image="icons/spiderboi.png" Name="Spider Boi" ID="501" Variant="31" Subtype="0" />
+  <entity Image="icons/babby.png" Name="Babby" ID="501" Variant="38" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />

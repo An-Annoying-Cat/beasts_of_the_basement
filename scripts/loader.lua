@@ -60,7 +60,7 @@ Mod.LoadScripts({
     "scripts.entities.minibosses.babby_fake",
 
     "scripts.entities.enemies.chapter_3_alt.kehehan",
-    "scripts.entities.enemies.chapter_3_alt.shard",
+    --"scripts.entities.enemies.chapter_3_alt.shard",
     "scripts.entities.enemies.chapter_3_alt.cursed_horf",
 
     "scripts.entities.bosses.thaumaturge",
@@ -89,6 +89,7 @@ Mod.LoadScripts({
     "scripts.entities.familiars.atombombbaby",
     "scripts.entities.familiars.bhf",
     "scripts.entities.familiars.faithfulfleet",
+    --"scripts.entities.familiars.jail_keyghost",
 
 
     --ITEMS
@@ -111,6 +112,11 @@ Mod.LoadScripts({
     "scripts.entities.items.wiggly_boy",
     "scripts.entities.items.lucky_lighter",
     "scripts.entities.items.enlightenment",
+    "scripts.entities.items.odd_mushroom_round",
+    "scripts.entities.items.healthy_snack",
+    "scripts.entities.items.trigger_button",
+    "scripts.entities.items.e-meter",
+    "scripts.entities.items.deck_of_too_many_things",
 
 
     --TRINKETS
@@ -130,6 +136,7 @@ Mod.LoadScripts({
     "scripts.entities.items.pickups.gigakey",
     "scripts.entities.items.pickups.shitcoin",
     "scripts.entities.items.pickups.knowledge_points",
+    --"scripts.entities.items.pickups.jail_key",
 
 
     --CONSUMABLES
@@ -137,6 +144,7 @@ Mod.LoadScripts({
     "scripts.entities.consumables.shotgunkingcards",
     "scripts.entities.consumables.ojcards",
     "scripts.entities.consumables.ygocards",
+    "scripts.entities.consumables.voidraincards",
     "scripts.entities.consumables.mahjongtiles",
     
     --STATUS EFFECTS
@@ -149,5 +157,8 @@ Mod.LoadScripts({
     --PLAYERS
     "scripts.players.jezebel",
     "scripts.players.solomon",
+
+    --CHALLENGES
+    "scripts.challenges.back_pocket",
 
 })

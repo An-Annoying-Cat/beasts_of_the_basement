@@ -2,6 +2,20 @@ local Mod = BotB
 local CURSED_MULLIGAN = {}
 local Entities = BotB.Enums.Entities
 
+local function getPlayers()
+	local game = Game()
+	local numPlayers = game:GetNumPlayers()
+  
+	local players = {}
+	for i = 0, numPlayers - 1 do
+	  local player = Isaac.GetPlayer(i)
+	  table.insert(players, player)
+	end
+  
+	return players
+end
+
+
 function CURSED_MULLIGAN:NPCUpdate(npc)
 
     local sprite = npc:GetSprite()
@@ -22,6 +36,23 @@ function CURSED_MULLIGAN:NPCUpdate(npc)
         if data.cursedMulliganSelfTeleportCooldownMax == nil then
             data.cursedMulliganSelfTeleportCooldownMax = 360
             data.cursedMulliganSelfTeleportCooldown = data.cursedMulliganSelfTeleportCooldownMax + math.random(0,100)
+
+            -- *sigh*
+            local doTheyActuallyHaveThem = false
+            local players = getPlayers()
+            for i=1,#players,1 do
+                if players[i]:HasCollectible(CollectibleType.COLLECTIBLE_SOY_MILK) or players[i]:HasCollectible(CollectibleType.COLLECTIBLE_ALMOND_MILK) then
+                    doTheyActuallyHaveThem = true
+                end
+            end
+            if doTheyActuallyHaveThem then
+                data.cursedHorfTeleCooldownMax = 60
+            else
+                data.cursedHorfTeleCooldownMax = 10
+            end
+            
+            data.cursedHorfTeleCooldown = data.cursedHorfTeleCooldownMax
+
         end
 
         if npc.State == 102 or npc.State == 103 then
@@ -100,11 +131,18 @@ function CURSED_MULLIGAN:NPCUpdate(npc)
             end
             if sprite:IsEventTriggered("Back") then
                 sfx:Play(SoundEffect.SOUND_HELL_PORTAL2,1,0,false,math.random(120,130)/100)
-
+                data.cursedHorfTeleCooldown = data.cursedHorfTeleCooldownMax
                 
 
                 npc.State = 99
                 sprite:PlayOverlay("Walk")
+            end
+        end
+
+        if npc.State ~= 102 and npc.State ~= 103 then
+            print(data.cursedHorfTeleCooldown)
+            if data.cursedHorfTeleCooldown ~= 0 then
+                data.cursedHorfTeleCooldown = data.cursedHorfTeleCooldown - 1
             end
         end
 
@@ -115,12 +153,16 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, CURSED_MULLIGAN.NPCUpdate, Isaac.Get
 
 
 function CURSED_MULLIGAN:TeleportCheck(npc, _, _, _, _)
+    if npc.Variant ~= BotB.Enums.Entities.CURSED_MULLIGAN.VARIANT then return end
     --print("sharb")
     if npc.Type == BotB.Enums.Entities.CURSED_MULLIGAN.TYPE and npc.Variant == BotB.Enums.Entities.CURSED_MULLIGAN.VARIANT then 
+        
         if npc:ToNPC().State ~= 102 and npc:ToNPC().State ~= 103 then
-            npc:ToNPC().State = 102
-            --local data = npc:GetData()
-            npc:GetSprite():Play("TeleOut")
+            if npc:GetData().cursedHorfTeleCooldown == 0 then
+                npc:ToNPC().State = 102
+                local data = npc:GetData()
+                npc:GetSprite():Play("TeleOut")
+            end
         end
     end
 end

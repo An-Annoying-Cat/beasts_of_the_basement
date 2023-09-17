@@ -3,7 +3,7 @@ sfx = SFXManager()
 game = Game()
 local SHITCOIN = {}
 if EID then
-    EID:addEntity(5, 69, 33, "Shitcoin", "#Spans 3 randomly-selected friendly and totally unique Dips. #Worth nothing monetarily, just like real life.")
+    EID:addEntity(5, 20, 80, "Shitcoin", "#Spans 3 randomly-selected friendly and totally unique Dips. #Worth nothing monetarily, just like real life.")
     EID:addTrinket(Mod.Enums.Trinkets.CRYPTIC_PENNY, "Increases the chance for Pennies to be replaced with Shitcoins. #Shitcoins are worth nothing monetarily (just like real life), but spawn 3 random friendly Dips on pickup.")
 end
 local function getPlayers()

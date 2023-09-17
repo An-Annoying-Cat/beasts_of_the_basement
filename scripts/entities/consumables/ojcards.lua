@@ -2,7 +2,7 @@ local Mod = BotB
 local OJCARDS = {}
 
 if EID then
-	EID:addCard(Mod.Enums.Consumables.CARDS.OH_MY_FRIEND, "Has a 50/50 chance of either effect: #{{ArrowUp}} Uses {{Collectible".. CollectibleType.COLLECTIBLE_DELIRIOUS .."}} Delirious. #{{ArrowDown}} Spawns a random boss from the floor you're on, and grants Betrayal. #{{Warning}} Should the latter occur, the boss will start with its health at 75% of its normal maximum. Killing this boss will also spawn a pedestal item.")
+	EID:addCard(Mod.Enums.Consumables.CARDS.OH_MY_FRIEND, "Has a 50/50 chance of either effect: #Uses {{Collectible".. CollectibleType.COLLECTIBLE_DELIRIOUS .."}} Delirious. #Uses {{Collectible".. Isaac.GetItemIdByName("The Fiend Folio") .."}} The Fiend Folio.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.FLIP_OUT, "The next time the player gets hurt, negate the damage. All enemies and bosses in the room take 40 damage (ignoring boss armor!) and drop 3 pennies when this occurs.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.MIMYUUS_HAMMER, "When used, this card is placed on the ground where it idly spins. #The first enemy to step on this card takes 60 damage, and the card is consumed in the process.")
 	EID:addCard(Mod.Enums.Consumables.CARDS.FLAMETHROWER, "When used, this card is placed on the ground where it idly spins. #The first enemy to step on this card is instantly killed, and drops a number of cards proportional to its max health. #{{Warning}} Bosses are not instantly killed. However, they still drop cards (although at a decreased rate), and their health is lowered to one quarter of its maximum.")
@@ -173,16 +173,32 @@ local ohMyFriendBossTable = {
 
 
 function OJCARDS:ohMyFriendInit(cardID, player)
+	local randomChooser = math.random(0,1)
 	local data = player:GetData()
 	--print("AugPres = " .. Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
 	--table.insert(player:GetData().activeRoomCards,Mod.Enums.Consumables.CARDS.AUGUST_PRESENCE)
 	if player:HasCollectible(CollectibleType.COLLECTIBLE_TAROT_CLOTH, false) then
-		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
-		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+		randomChooser = math.random(0,1)
+		if randomChooser == 1 then
+			player:UseActiveItem(CollectibleType.COLLECTIBLE_DELIRIOUS, UseFlag.USE_NOANIM)
+		else
+			player:UseActiveItem(Isaac.GetItemIdByName("The Fiend Folio"), UseFlag.USE_NOANIM)
+		end
+		randomChooser = math.random(0,1)
+		if randomChooser == 1 then
+			player:UseActiveItem(CollectibleType.COLLECTIBLE_DELIRIOUS, UseFlag.USE_NOANIM)
+		else
+			player:UseActiveItem(Isaac.GetItemIdByName("The Fiend Folio"), UseFlag.USE_NOANIM)
+		end
 	else
-		Isaac.Spawn(BotB.Enums.Entities.OJ_TRAPCARD.TYPE,BotB.Enums.Entities.OJ_TRAPCARD.VARIANT,0,player.Position,Vector.Zero,player)
+		randomChooser = math.random(0,1)
+		if randomChooser == 1 then
+			player:UseActiveItem(CollectibleType.COLLECTIBLE_DELIRIOUS, UseFlag.USE_NOANIM)
+		else
+			player:UseActiveItem(Isaac.GetItemIdByName("The Fiend Folio"), UseFlag.USE_NOANIM)
+		end
+		
 	end
-	sfx:Play(BotB.Enums.SFX.OJ_CARD,1,0,false,1)
 end
 Mod:AddCallback(ModCallbacks.MC_USE_CARD, OJCARDS.ohMyFriendInit, Mod.Enums.Consumables.CARDS.OH_MY_FRIEND)
 

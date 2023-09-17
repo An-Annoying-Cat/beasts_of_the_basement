@@ -242,6 +242,7 @@ end
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, INCH_WORM.NPCUpdate, Isaac.GetEntityTypeByName("Inch Worm"))
 
 function INCH_WORM:DamageNull(npc, _, _, _, _)
+    if npc.Variant ~= BotB.Enums.Entities.INCH_WORM.VARIANT then return end
     --print("sharb")
     local data = npc:GetData()
     if npc.Type == BotB.Enums.Entities.INCH_WORM.TYPE and npc.Variant == BotB.Enums.Entities.INCH_WORM.VARIANT and data.isUnder == true then 

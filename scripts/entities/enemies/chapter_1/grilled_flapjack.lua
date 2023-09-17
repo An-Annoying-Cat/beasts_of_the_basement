@@ -68,6 +68,7 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, GRILLED_FLAPJACK.NPCUpdate, Isaac.Ge
 
 --Grilled Flapjacks don't take fire damage
 function GRILLED_FLAPJACK:DamageCheck(npc, amount, damageFlags, source, _)
+    if npc.Variant ~= BotB.Enums.Entities.GRILLED_FLAPJACK.VARIANT then return end
     if npc.Type == BotB.Enums.Entities.GRILLED_FLAPJACK.TYPE and npc.Variant == BotB.Enums.Entities.GRILLED_FLAPJACK.VARIANT and ff:HasDamageFlag(DamageFlag.DAMAGE_FIRE, damageFlags) then
         return false
     end

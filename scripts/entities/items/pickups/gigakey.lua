@@ -2,7 +2,8 @@ local Mod = BotB
 sfx = SFXManager()
 game = Game()
 local GIGA_KEY = {}
-print("wtf is going on")
+
+--print("wtf is going on")
 function GIGA_KEY:getGigaKey(pickup,collider,_)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()

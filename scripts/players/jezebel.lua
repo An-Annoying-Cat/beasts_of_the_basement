@@ -12,9 +12,11 @@ function Jezebel:playerGetCostume(player)
     end
 end
 Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, Jezebel.playerGetCostume, 0)
+if EID then
+	local myPlayerID = Isaac.GetPlayerTypeByName("Jezebel")
+	EID:addBirthright(myPlayerID, "Overheal stat bonus takes twice as long to completely deplete. #In cleared rooms, the rate of depletion is halved once more, totaling at a quarter of the normal drain speed.")
+end
 
-local myPlayerID = Isaac.GetPlayerTypeByName("Jezebel")
-EID:addBirthright(myPlayerID, "Overheal stat bonus takes twice as long to completely deplete. #In cleared rooms, the rate of depletion is halved once more, totaling at a quarter of the normal drain speed.")
 
 function Jezebel:playerUpdate(player)
 	local data = player:GetData()

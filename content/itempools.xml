@@ -8,15 +8,20 @@
         <Item Name="Crowbar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Tech Nano" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Wiggly Boy" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="E-Meter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Deck Of Too Many Things" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="shop">
         <Item Name="Toy Helicopter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="E-Meter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Deck Of Too Many Things" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     
     <Pool Name="boss">
         <Item Name="Grub" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Mud Pie" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Houseplant" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Healthy Snack" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     
     <Pool Name="goldenChest">
@@ -28,6 +33,8 @@
         <Item Name="Item" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="The Human Soul" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Tech Nano" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Trigger Button" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Deck Of Too Many Things" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="curse">
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>

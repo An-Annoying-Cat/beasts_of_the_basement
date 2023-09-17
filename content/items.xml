@@ -4,7 +4,7 @@
     <passive id="3" quality="3" name="Item" description="PLACEHOLDER_ITEM" gfx="placeholder_item.png" cache="all"/>
 
     <passive id="4" quality="0" name="Quicklove" description="Damage up!" gfx="card_passives/quicklove.png" cache="all"/>
-    <passive id="5" quality="0" name="Starlight" description="Health up!" gfx="card_passives/starlight.png" cache="all"/>
+    <passive id="5" quality="0" name="Starlight" description="Health up!" maxhearts="2" gfx="card_passives/starlight.png" cache="all"/>
     <passive id="6" quality="0" name="Lucky Flower" description="Luck up!" gfx="card_passives/lucky_flower.png" cache="all"/>
     <passive id="7" quality="0" name="Pale Box" description="Hold up!" gfx="card_passives/pale_box.png" cache="all"/>
 
@@ -26,12 +26,26 @@
     <active id="22" quality="3" name="The Bestiary" description="Know thy enemy" gfx="the_bestiary.png" chargetype="normal" maxcharges="0" tags="book"/>
     <passive id="23" quality="3" name="Tech Nano" description="Nanobot tears" gfx="tech_nano.png"/>
     <passive id="24" quality="2" name="Crowbar" description="High enemy health = big bonus damage" gfx="crowbar.png" cache="damage"/>
-    <active id="25" quality="3" name="The DSM" description="Know your mind..." gfx="the_dsm.png" chargetype="normal" maxcharges="6" tags="book"/>
-    <passive id="26" quality="4" name="Spoiled Milk" description="Blech! It's all clumped up!" cache="firedelay damage" gfx="spoiled_milk.png"/>
+    <active id="25" quality="3" name="The DSM" description="Know your mind..." gfx="the_dsm.png" chargetype="normal" hidden="true" maxcharges="6" tags="book"/>
+    <passive id="26" quality="4" name="Spoiled Milk" description="Blech! It's all clumped up!" cache="firedelay damage" hidden="true" gfx="spoiled_milk.png"/>
     <passive id="27" quality="3" name="Liquid Latex" description="Adhesive tears" cache="damage" gfx="liquid_latex.png"/>
     <passive id="28" quality="2" name="Wiggly Boy" description="Micro friends on kill" gfx="wiggly_boy.png"/>
     <passive id="29" quality="2" name="Lucky Lighter" description="Luck up + chance to ignite" gfx="lucky_lighter.png" cache="luck"/>
     <active id="30" quality="4" name="Enlightenment" description="Reusable attunement" gfx="enlightenment.png" chargetype="normal" maxcharges="5" cache="speed luck"/>
+    <passive id="31" quality="2" name="Odd Mushroom (Round)" description="Range + tears up...?" gfx="oddmushroomround.png" cache="range firedelay"/>
+
+    <familiar id="32" quality="0" name="Jail Keyghost" description="Opens up the jail" gfx="onyx_marble.png" tags="quest" hidden="true"/>
+
+    <passive id="33" quality="3" name="Healthy Snack" description="Delicious and nutritious!" maxhearts="1" hearts="1" gfx="healthy_snack.png" cache="range firedelay luck"/>
+    <active id="34" quality="2" name="Trigger Button" description="On-demand content removal!" gfx="trigger_button.png" chargetype="normal" maxcharges="0"/>
+
+    <active id="35" quality="3" name="E-Meter" description="Extra consumable room...?" gfx="e-meter_collectible.png" chargetype="normal" maxcharges="6"/>
+    <!--these two are the actual functional ones-->
+    <active id="36" quality="3" name="E-Meter (In)" description="Extra consumable room...?" gfx="e-meter_hud_in.png" hidden="true" chargetype="normal" maxcharges="0" />
+    <active id="37" quality="3" name="E-Meter (Out)" description="Extra consumable room...?" gfx="e-meter_hud_out.png" hidden="true" chargetype="normal" maxcharges="8" />
+
+    <passive id="38" quality="4" name="Fuck That Noise" description="I will be given what I am owed!" hidden="true" gfx="fuck_that_noise.png"/>
+    <active id="39" quality="3" name="Deck Of Too Many Things" description="Somehow also has non-card objects" gfx="deck_of_too_many_things.png" chargetype="normal" maxcharges="6"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

@@ -62,5 +62,5 @@ end
 
 
 
-Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, DESIRER.NPCUpdate, Isaac.GetEntityTypeByName("Desirer"))
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, DESIRER.NPCUpdate, Isaac.GetEntityTypeByName("Devourer"))
 Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, DESIRER.BulletCheck)

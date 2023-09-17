@@ -18,9 +18,11 @@ function Solomon:playerGetCostume(player)
     end
 end
 Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, Solomon.playerGetCostume, 0)
+if EID then
+  local myPlayerID = Isaac.GetPlayerTypeByName("Solomon")
+  EID:addBirthright(myPlayerID, "Friendly monsters have a chance to deal critical hits, dealing quadruple damage. #Friendly monsters have a chance to ignore damage. #Knowledge Point cap is increased to 18. #Extra Knowledge Points spawn more often.")
+end
 
-local myPlayerID = Isaac.GetPlayerTypeByName("Solomon")
-EID:addBirthright(myPlayerID, "Friendly monsters have a chance to deal critical hits, dealing quadruple damage. #Friendly monsters have a chance to ignore damage. #Knowledge Point cap is increased to 18. #Extra Knowledge Points spawn more often.")
 
 function Solomon:playerUpdate(player)
 	local data = player:GetData()
@@ -176,14 +178,15 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
       isSolomonHere = true
     end
   end
+  if not isSolomonHere then return end
   if isSolomonHere then
-    if EntityRef(entity).IsFriendly == true then
+    if entity:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) == true then
+      print("frand")
       local actualDamage = amt
       if entity:GetData().solomonFriendlyIFrames ~= 0 then
         sfx:Play(SoundEffect.SOUND_BEEP,1,0,false,math.random(125,150)/100,0)
         return false
-      end
-      if flags & DamageFlag.DAMAGE_FIRE ~= 0 or flags & DamageFlag.DAMAGE_EXPLOSION ~= 0 or flags & DamageFlag.DAMAGE_SPIKES ~= 0 then
+      elseif flags & DamageFlag.DAMAGE_FIRE ~= 0 or flags & DamageFlag.DAMAGE_EXPLOSION ~= 0 or flags & DamageFlag.DAMAGE_SPIKES ~= 0 then
         return false
       else
         actualDamage = amt*0.25
@@ -204,6 +207,7 @@ function Solomon:friendlyEnemyBirthrightStuff(entity,amt,_,source,_)
       isSolomonHere = true
     end
   end
+  if not isSolomonHere then return end
   if isSolomonHere then
     --Damage block
     if EntityRef(entity).IsFriendly == true then

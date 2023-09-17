@@ -10,7 +10,7 @@ function SLEAZEBAG:NPCUpdate(npc)
 	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
 	local targetdistance = (targetpos - npc.Position):Length()
     --Sleazebag (This just plays the wheeze sound)
-    if Entities.SLEAZEBAG.TYPE and npc.Variant == Entities.SLEAZEBAG.VARIANT and npc.SubType ~= nil then 
+    if Entities.SLEAZEBAG.TYPE and npc.Variant == Entities.SLEAZEBAG.VARIANT then 
         if npc.State == 8 then npc.State = 99 sprite:PlayOverlay("HeadAttack") end 
             if npc.State == 99 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end

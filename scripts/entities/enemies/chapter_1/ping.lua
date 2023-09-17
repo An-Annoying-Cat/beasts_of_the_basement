@@ -43,6 +43,7 @@ function PING:NPCUpdate(npc)
 end
 
 function PING:DamageCheck(npc, amount, _, _, _)
+    if npc.Variant ~= BotB.Enums.Entities.PING.VARIANT then return end
     --print("sharb")
     local npcConv = npc:ToNPC()
     local data = npc:GetData()

@@ -65,6 +65,7 @@ end
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, CURSED_POOTER.NPCUpdate, Isaac.GetEntityTypeByName("Cursed Pooter"))
 
 function CURSED_POOTER:DamageCheck(npc, amount, _, _, _)
+    if npc.Variant ~= BotB.Enums.Entities.CURSED_POOTER.VARIANT then return end
     --print("sharb")
     local npcConv = npc:ToNPC()
     local data = npc:GetData()

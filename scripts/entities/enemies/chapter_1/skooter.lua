@@ -13,7 +13,7 @@ function SKUZZ:NPCUpdate(npc)
 	local targetdistance = (targetpos - npc.Position):Length()
 
     --skooter, super skooter
-    if npc.Variant == Isaac.GetEntityVariantByName("Skuzz") and npc.SubType ~= nil then
+    if npc.Variant == Isaac.GetEntityVariantByName("Skuzz") and npc.SubType ~= nil and (npc.SubType == Entities.SUPER_SKOOTER.SUBTYPE or npc.SubType == Entities.SKOOTER.SUBTYPE) then
         if sprite:IsPlaying("hopstart") then
             if sprite:GetFrame() == 1 then
                 if npc.SubType == Entities.SUPER_SKOOTER.SUBTYPE then

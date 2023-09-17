@@ -6,7 +6,7 @@
 
 BotB = RegisterMod("Beasts of the Basement", 1)
 local Mod = BotB
-
+json = require("json")
 local myFolder = "scripts.core.LOI"
 local LOCAL_TSIL = require(myFolder .. ".TSIL")
 LOCAL_TSIL.Init(myFolder)
@@ -21,6 +21,25 @@ BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
 BotB.TT = TaintedTreasure
 BotB.StageAPI = StageAPI
+
+if Mod:HasData() then
+	Mod.savedata = json.decode(Mod:LoadData())
+else
+	Mod.savedata = {}
+end
+
+function Mod:GetSaveData()
+    if not Mod.savedata then
+        if Isaac.HasModData(saveDataMod) then
+            Mod.savedata = json.decode(Mod:LoadData())
+        else
+            Mod.savedata = {}
+        end
+    end
+
+    return Mod.savedata
+end
+
 
 
 if not BotB.FF then
@@ -60,7 +79,7 @@ Mod.CoreScripts = {
     "scripts.core.fadeout",
     "scripts.core.stageapi",
     "scripts.core.ff_additions",
-
+    --"scripts.core.jail_generator_v2",
     "scripts.loader",
 }
 LoadScripts(Mod.CoreScripts)

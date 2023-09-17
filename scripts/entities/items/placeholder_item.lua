@@ -76,7 +76,8 @@ function PLACEHOLDER_ITEM:replacePedestal(pickup)
 				sfx:Play(SoundEffect.SOUND_EDEN_GLITCH,0.5,0,false,math.random(20, 40)/100)
 				sfx:Play(SoundEffect.SOUND_DOGMA_BLACKHOLE_OPEN,0.5,0,false,math.random(60, 80)/100)
 				for i=0,15,1 do
-					local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.DOGMA_DEBRIS,0,pickup.Position,Vector((0.1*math.random(-10,10)),(0.1*math.random(-10,10))),pickup)
+					local rubble = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.DOGMA_DEBRIS,0,pickup.Position,Vector((0.1*math.random(-10,10)),(0.1*math.random(-10,10))),pickup):ToEffect()
+					rubble:SetTimeout(math.random(30,80))
 				end
 				pickup:Morph(5, 100, Items.PLACEHOLDER_ITEM, true)
 			end

@@ -20,28 +20,30 @@ function SEDUCER:NPCUpdate(npc)
             if npc.State == 9 then
                 if npc.StateFrame == 23 then npc.State = 3 npc.StateFrame = 0 end
                 if sprite:IsEventTriggered("Shoot") then
-                    sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(70,90)/100)
+                    --sfx:Play(Isaac.GetSoundIdByName("SeducerAttack"),1,0,false,math.random(70,90)/100)
+                    sfx:Play(SoundEffect.SOUND_BOSS_LITE_GURGLE,1,0,false,math.random(70,90)/100)
                     --Creep spawning
                     local creep = Isaac.Spawn(1000, 23, 0, npc.Position, Vector(0,0), npc)
 				    creep.SpriteScale = creep.SpriteScale * 3
                     creep:Update()
 				    for i = 1, 3 do
-				    	local creep = Isaac.Spawn(1000, 22, 0, npc.Position + 2*(Vector.FromAngle(i * (360 / 3)) * 22), Vector(0,0), npc)
+				    	local creep = Isaac.Spawn(1000, 23, 0, npc.Position + 2*(Vector.FromAngle(i * (360 / 3)) * 22), Vector(0,0), npc)
                         creep:Update()
 				    end
                     --Fire a projectile
-                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(8, 10) / 10), 6),0):Rotated(targetangle):Resized(15), npc):ToProjectile()
+                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(6, 10) / 10), 6),0):Rotated(targetangle):Resized(15), npc):ToProjectile()
                     bullet.FallingSpeed = -30;
 		            bullet.FallingAccel = 2
 		            bullet.Height = -10
                     bullet.Parent = npc
+                    bullet.Color = Color(0.5, 0.9, 0.4, 1, 0, 0, 0)
 				    	
 				    
                 end
             end
 
             if sprite:IsEventTriggered("Land") then
-                local creep = Isaac.Spawn(1000, 22, 0, npc.Position, Vector.Zero, npc)
+                local creep = Isaac.Spawn(1000, 23, 0, npc.Position, Vector.Zero, npc)
 				creep.SpriteScale = creep.SpriteScale * 2
             end
         end
@@ -56,7 +58,7 @@ function SEDUCER:BulletCheck(bullet)
         if bullet:IsDead() then
             sfx:Play(SoundEffect.SOUND_ANIMAL_SQUISH,1,0,false,math.random(120,150)/100)
             local creep = Isaac.Spawn(1000, EffectVariant.CREEP_GREEN, 0, bullet.Position, Vector(0,0), bullet)
-            creep.SpriteScale = creep.SpriteScale * 1.5
+            creep.SpriteScale = creep.SpriteScale * 3
         end
       end
     
@@ -65,5 +67,5 @@ end
 
 
 
-Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, SEDUCER.NPCUpdate, Isaac.GetEntityTypeByName("Seducer"))
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, SEDUCER.NPCUpdate, Isaac.GetEntityTypeByName("Slacker"))
 Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, SEDUCER.BulletCheck)

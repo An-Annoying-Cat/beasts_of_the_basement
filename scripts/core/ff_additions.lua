@@ -67,6 +67,9 @@ if FiendFolio.ReferenceItems then
         {ID = BotB.Enums.Items.CROWBAR, 			Reference = "Risk Of Rain 2"},
         {ID = BotB.Enums.Items.CHAMPS_MASK, 			Reference = "Brutal Orchestra"},
         {ID = BotB.Enums.Items.THE_HUMAN_SOUL, 			Reference = "Brutal Orchestra"},
+        {ID = BotB.Enums.Items.QUICKLOVE, 			Reference = "The Void Rains Upon Her Heart"},
+        {ID = BotB.Enums.Items.STARLIGHT, 			Reference = "The Void Rains Upon Her Heart"},
+        {ID = BotB.Enums.Items.PALE_BOX, 			Reference = "The Void Rains Upon Her Heart"},
     }
     local BotBTrinketReferences = {
         {ID = BotB.Enums.Trinkets.DEMON_CORE, 			Reference = "Brutal Orchestra"},

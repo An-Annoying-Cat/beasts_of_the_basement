@@ -16,6 +16,10 @@ function CURSED_MULLIBOOM:NPCUpdate(npc)
 
 
     if npc.Type == BotB.Enums.Entities.CURSED_MULLIBOOM.TYPE and npc.Variant == BotB.Enums.Entities.CURSED_MULLIBOOM.VARIANT then 
+
+        if npc.CollisionDamage ~= 0 then
+            npc.CollisionDamage = 0
+        end
         --States:
         --99: Flee
         --102: Teleport out
@@ -114,6 +118,7 @@ end
 Mod:AddCallback(ModCallbacks.MC_POST_BOMB_UPDATE, CURSED_MULLIBOOM.BombUpdate)
 ]]
 function CURSED_MULLIBOOM:TeleportCheck(npc, _, flags, _, _)
+    if npc.Variant ~= BotB.Enums.Entities.CURSED_MULLIBOOM.VARIANT then return end
     --print("sharb")
     if flags & DamageFlag.DAMAGE_EXPLOSION ~= 0 then return false end
     --[[

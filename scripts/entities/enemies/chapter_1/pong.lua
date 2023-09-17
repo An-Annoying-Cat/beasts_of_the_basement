@@ -65,6 +65,7 @@ function PONG:NPCUpdate(npc)
 end
 
 function PONG:DamageCheck(npc, amount, _, _, _)
+    if npc.Variant ~= BotB.Enums.Entities.PONG.VARIANT then return end
     --print("sharb")
     local npcConv = npc:ToNPC()
     local data = npc:GetData()

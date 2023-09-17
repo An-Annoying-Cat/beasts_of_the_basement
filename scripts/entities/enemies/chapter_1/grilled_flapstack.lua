@@ -67,6 +67,7 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, GRILLED_FLAPSTACK.NPCUpdate, Isaac.G
 
 
 function GRILLED_FLAPSTACK:DamageCheck(npc, amount, damageFlags, source, _)
+    if npc.Variant ~= BotB.Enums.Entities.GRILLED_FLAPSTACK.VARIANT then return end
     --print("sharb")
     local npcConv = npc:ToNPC()
     local data = npc:GetData()

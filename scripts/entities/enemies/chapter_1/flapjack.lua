@@ -64,9 +64,10 @@ end
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, FLAPJACK.NPCUpdate, Isaac.GetEntityTypeByName("Flapjack"))
 
 function FLAPJACK:DamageCheck(npc, amount, damageFlags, source, _)
+    if npc.Variant ~= BotB.Enums.Entities.FLAPJACK.VARIANT then return end
     if ff:HasDamageFlag(DamageFlag.DAMAGE_FIRE, damageFlags) and not game:GetRoom():HasWater() then
         if npc.Variant ~= BotB.Enums.Entities.GRILLED_FLAPJACK.VARIANT then
-            npc:Morph(BotB.Enums.Entities.GRILLED_FLAPJACK.TYPE, BotB.Enums.Entities.GRILLED_FLAPJACK.VARIANT, 0, npc:GetChampionColorIdx())
+            npc:Morph(BotB.Enums.Entities.GRILLED_FLAPJACK.TYPE, BotB.Enums.Entities.GRILLED_FLAPJACK.VARIANT, 0, 0)
         end
         if not ff:IsPlayerDamage(source) then
             return false

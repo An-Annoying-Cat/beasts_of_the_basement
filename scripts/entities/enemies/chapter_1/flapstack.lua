@@ -68,6 +68,7 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, FLAPSTACK.NPCUpdate, Isaac.GetEntity
 
 
 function FLAPSTACK:DamageCheck(npc, amount, damageFlags, source, _)
+    if npc.Variant ~= BotB.Enums.Entities.FLAPSTACK.VARIANT then return end
     --print("sharb")
     local npcConv = npc:ToNPC()
     local data = npc:GetData()
@@ -77,7 +78,8 @@ function FLAPSTACK:DamageCheck(npc, amount, damageFlags, source, _)
 	local targetdistance = (targetpos - npc.Position):Length()
     if ff:HasDamageFlag(DamageFlag.DAMAGE_FIRE, damageFlags) and not game:GetRoom():HasWater() then
         if npc.Variant ~= BotB.Enums.Entities.GRILLED_FLAPSTACK.VARIANT then
-            npc:Morph(BotB.Enums.Entities.GRILLED_FLAPSTACK.TYPE, BotB.Enums.Entities.GRILLED_FLAPSTACK.VARIANT, 0, npc:GetChampionColorIdx())
+            npc:Morph(BotB.Enums.Entities.GRILLED_FLAPSTACK.TYPE, BotB.Enums.Entities.GRILLED_FLAPSTACK.VARIANT, 0, 0)
+            return false
         end
         if not ff:IsPlayerDamage(source) then
             return false

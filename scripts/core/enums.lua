@@ -180,6 +180,7 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Batso"),
         VARIANT = Isaac.GetEntityVariantByName("Batso")
     },
+    
     FUN_GUY = {
         TYPE = Isaac.GetEntityTypeByName("Fun Guy"),
         VARIANT = Isaac.GetEntityVariantByName("Fun Guy")
@@ -432,6 +433,10 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("Faithful Fleet"),
         VARIANT = Isaac.GetEntityVariantByName("Faithful Fleet"),
     },
+    JAIL_KEYGHOST = {
+        TYPE = Isaac.GetEntityTypeByName("Jail Keyghost"),
+        VARIANT = Isaac.GetEntityVariantByName("Jail Keyghost"),
+    },
 }
 
 Enums.SFX = {
@@ -503,6 +508,8 @@ Enums.SFX = {
     BHF_RESPAWN = Isaac.GetSoundIdByName("BHFRespawn"),
 
     FUNNY_PIPE = Isaac.GetSoundIdByName("FunnyPipe"),
+
+    JAIL_KEY_GET = Isaac.GetSoundIdByName("JailKeyGet"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -538,11 +545,24 @@ Enums.Items = {
     WIGGLY_BOY = Isaac.GetItemIdByName("Wiggly Boy"),
     LUCKY_LIGHTER = Isaac.GetItemIdByName("Lucky Lighter"),
     ENLIGHTENMENT = Isaac.GetItemIdByName("Enlightenment"),
+    ODD_MUSHROOM_ROUND = Isaac.GetItemIdByName("Odd Mushroom (Round)"),
+
+    HEALTHY_SNACK = Isaac.GetItemIdByName("Healthy Snack"),
+    TRIGGER_BUTTON = Isaac.GetItemIdByName("Trigger Button"),
+
+    EMETER_COLLECTIBLE = Isaac.GetItemIdByName("E-Meter"),
+    EMETER_IN = Isaac.GetItemIdByName("E-Meter (In)"),
+    EMETER_OUT = Isaac.GetItemIdByName("E-Meter (Out)"),
+
+    FUCK_THAT_NOISE = Isaac.GetItemIdByName("Fuck That Noise"),
+    DECK_OF_TOO_MANY_THINGS = Isaac.GetItemIdByName("Deck Of Too Many Things"),
 
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
     LUCKY_FLOWER = Isaac.GetItemIdByName("Lucky Flower"),
     PALE_BOX = Isaac.GetItemIdByName("Pale Box"),
+
+    JAIL_KEYGHOST = Isaac.GetItemIdByName("Jail Keyghost"),
     
     
 
@@ -602,6 +622,11 @@ Enums.Pickups = {
         TYPE = Isaac.GetEntityTypeByName("Giga Key"),
         VARIANT = Isaac.GetEntityVariantByName("Giga Key"),
         SUBTYPE = 80
+    },
+    JAIL_KEY = {
+        TYPE = Isaac.GetEntityTypeByName("Jail Key"),
+        VARIANT = Isaac.GetEntityVariantByName("Jail Key"),
+        SUBTYPE = 33
     },
     KP_SMALL = {
         TYPE = Isaac.GetEntityTypeByName("Knowledge Point (small)"),
