@@ -18,6 +18,7 @@ function PING:NPCUpdate(npc)
             data.pingHasBeenHit = false
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         end
+        npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
         --States:
         --1: Init
         --99: Idle

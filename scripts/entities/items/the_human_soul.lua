@@ -56,8 +56,8 @@ function THE_HUMAN_SOUL:replacePedestal(pickup)
 	local config = Isaac.GetItemConfig()
 	local item = config:GetCollectible(pickup.SubType)
 	local room = game:GetRoom()
-
-	if pickup.SubType ~= 0 and not item:HasTags(ItemConfig.TAG_QUEST) and pickup.SubType ~= Items.THE_HUMAN_SOUL and pickup.FrameCount == 1 then
+	
+	if pickup.SubType ~= 0 and not item:HasTags(ItemConfig.TAG_QUEST) and pickup.SubType ~= Items.THE_HUMAN_SOUL and pickup.SubType ~= CollectibleType.COLLECTIBLE_BIRTHRIGHT and pickup.FrameCount == 1 then
 		local numPlaceholders = 0
 		local doTheyActuallyHaveThem = false
 		local players = getPlayers()

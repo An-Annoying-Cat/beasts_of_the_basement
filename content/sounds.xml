@@ -94,6 +94,17 @@
 		<sample weight="1" path="crystalFireSmall2.wav" />
 		<sample weight="1" path="crystalFireSmall3.wav" />
 	</sound>
+
+	<sound name="GlitchyBoom">
+		<sample weight="1" path="glitchyBoom1.wav" />
+		<sample weight="1" path="glitchyBoom2.wav" />
+		<sample weight="1" path="glitchyBoom3.wav" />
+		<sample weight="1" path="glitchyBoom4.wav" />
+	</sound>
+
+	<sound name="GeigerClick">
+		<sample weight="1" path="geigerClick.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">
@@ -179,6 +190,9 @@
 	<sound name="BHFRespawn">
 		<sample weight="1" path="items/bhfRespawn.wav" />
 	</sound>
+	<sound name="AriralScream">
+		<sample weight="1" path="items/ariralScream.wav" />
+	</sound>
 	<!--Items-->
 	<sound name="EnlightenmentFire">
 		<sample weight="1" path="items/enlightenmentFire.wav" />
@@ -212,5 +226,17 @@
 	<sound name="MahjongSelect">
 		<sample weight="1" path="cards/mahjongSelect.wav" />
 	</sound>
-	
+	<!-- Joke content -->
+	<sound name="PlusTen">
+		<sample weight="1" path="items/plusTen1.wav" />
+		<sample weight="1" path="items/plusTen2.wav" />
+		<sample weight="1" path="items/plusTen3.wav" />
+		<sample weight="1" path="items/plusTen4.wav" />
+		<sample weight="1" path="items/plusTen5.wav" />
+		<sample weight="1" path="items/plusTen6.wav" />
+		<sample weight="1" path="items/plusTen7.wav" />
+		<sample weight="1" path="items/plusTen8.wav" />
+		<sample weight="1" path="items/plusTen9.wav" />
+		<sample weight="1" path="items/plusTen10.wav" />
+	</sound>
 </sounds>

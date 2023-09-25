@@ -352,8 +352,31 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Double Cherry"),
         VARIANT = Isaac.GetEntityVariantByName("Double Cherry"),
     },
-    
+    DESPAIR = {
+        TYPE = Isaac.GetEntityTypeByName("Despair"),
+        VARIANT = Isaac.GetEntityVariantByName("Despair"),
+    },
+    DESPAIR_HORSE = {
+        TYPE = Isaac.GetEntityTypeByName("Despair Horse"),
+        VARIANT = Isaac.GetEntityVariantByName("Despair Horse"),
+    },
 
+
+
+    CROCKPOT_NEW = {
+        TYPE = Isaac.GetEntityTypeByName("Crockpot (New)"),
+        VARIANT = Isaac.GetEntityVariantByName("Crockpot (New)"),
+    },
+    
+    OOZER = {
+        TYPE = Isaac.GetEntityTypeByName("Oozer"),
+        VARIANT = Isaac.GetEntityVariantByName("Oozer"),
+    },
+
+    HIGH_CLOTTY = {
+        TYPE = Isaac.GetEntityTypeByName("High Clotty"),
+        VARIANT = Isaac.GetEntityVariantByName("High Clotty"),
+    },
 
     --Effects
     ACMES_ANVIL = {
@@ -402,8 +425,25 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Bestiary Targeted Icon"),
         VARIANT = Isaac.GetEntityVariantByName("Bestiary Targeted Icon")
     },
+    RADIATION_CIRCLE = {
+        TYPE = Isaac.GetEntityTypeByName("Radiation Circle"),
+        VARIANT = Isaac.GetEntityVariantByName("Radiation Circle")
+    },
+    RADIATION_CIRCLE_TEMPORARY = {
+        TYPE = Isaac.GetEntityTypeByName("Radiation Circle (Temporary)"),
+        VARIANT = Isaac.GetEntityVariantByName("Radiation Circle (Temporary)")
+    },
+    
 
+    BOTB_GRID = {
+        TYPE = Isaac.GetEntityTypeByName("BotB Grid Spawner"),
+        VARIANT = Isaac.GetEntityVariantByName("BotB Grid Spawner")
+    },
 
+}
+
+Enums.Grids = {
+    RADIOACTIVE_BARREL = 1,
 }
 
 Enums.Familiars = {
@@ -437,6 +477,10 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("Jail Keyghost"),
         VARIANT = Isaac.GetEntityVariantByName("Jail Keyghost"),
     },
+    LIL_ARI_PLUSH = {
+        TYPE = Isaac.GetEntityTypeByName("Lil Ari (Plush)"),
+        VARIANT = Isaac.GetEntityVariantByName("Lil Ari (Plush)"),
+    },
 }
 
 Enums.SFX = {
@@ -453,6 +497,10 @@ Enums.SFX = {
     CRYSTAL_FIRE = Isaac.GetSoundIdByName("CrystalFire"),
     CRYSTAL_FIRE_BIG = Isaac.GetSoundIdByName("CrystalFireBig"),
     CRYSTAL_FIRE_SMALL = Isaac.GetSoundIdByName("CrystalFireSmall"),
+
+    GLITCHY_BOOM = Isaac.GetSoundIdByName("GlitchyBoom"),
+
+    GEIGER_CLICK = Isaac.GetSoundIdByName("GeigerClick"),
 
     THAUMATURGE_LAUGH = Isaac.GetSoundIdByName("ThaumLaugh"),
     THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),
@@ -507,9 +555,13 @@ Enums.SFX = {
     BHF_EXPLODE = Isaac.GetSoundIdByName("BHFExplode"),
     BHF_RESPAWN = Isaac.GetSoundIdByName("BHFRespawn"),
 
+    ARIRAL_SCREAM = Isaac.GetSoundIdByName("AriralScream"),
+
     FUNNY_PIPE = Isaac.GetSoundIdByName("FunnyPipe"),
 
     JAIL_KEY_GET = Isaac.GetSoundIdByName("JailKeyGet"),
+
+    PLUS_TEN = Isaac.GetSoundIdByName("PlusTen"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -557,6 +609,17 @@ Enums.Items = {
     FUCK_THAT_NOISE = Isaac.GetItemIdByName("Fuck That Noise"),
     DECK_OF_TOO_MANY_THINGS = Isaac.GetItemIdByName("Deck Of Too Many Things"),
 
+    DUSTY_D6 = Isaac.GetItemIdByName("Dusty D6"),
+    DUSTY_D4 = Isaac.GetItemIdByName("Dusty D4"),
+    DUSTY_D100 = Isaac.GetItemIdByName("Dusty D100"),
+    D11 = Isaac.GetItemIdByName("D11"),
+
+    BLOOD_MERIDIAN = Isaac.GetItemIdByName("Blood Meridian"),
+    HOUSE_OF_LEAVES = Isaac.GetItemIdByName("House Of Leaves"),
+    BLOOD_MERIDIAN_DUMMY = Isaac.GetItemIdByName("Blood Meridian Dummy"),
+
+    LIL_ARI = Isaac.GetItemIdByName("Lil Ari"),
+
     QUICKLOVE = Isaac.GetItemIdByName("Quicklove"),
     STARLIGHT = Isaac.GetItemIdByName("Starlight"),
     LUCKY_FLOWER = Isaac.GetItemIdByName("Lucky Flower"),
@@ -564,8 +627,22 @@ Enums.Items = {
 
     JAIL_KEYGHOST = Isaac.GetItemIdByName("Jail Keyghost"),
     
-    
+    --x10 shitposts
+    TEN_SOULS = Isaac.GetItemIdByName("Haah!"),
+    TEN_TRINKETS = Isaac.GetItemIdByName("Fwoop!"),
+    TEN_ITEMS = Isaac.GetItemIdByName("Ahhh..."),
+    TEN_WISPS = Isaac.GetItemIdByName("Fwoosh!"),
+    TEN_CARDS = Isaac.GetItemIdByName("Ksshk!"),
+    TEN_PILLS = Isaac.GetItemIdByName("Gulp!"),
+    TEN_CLOTS = Isaac.GetItemIdByName("Shlop!"),
+    TEN_FLIES = Isaac.GetItemIdByName("Buzz Buzz!"),
+    TEN_SPIDERS = Isaac.GetItemIdByName("Skitter Skitter!"),
+    TEN_SKUZZES = Isaac.GetItemIdByName("Boing Boing!"),
+    TEN_DIPS = Isaac.GetItemIdByName("Plop!"),
+    TEN_POOPS = Isaac.GetItemIdByName("Ska Padaba!"),
+    TEN_TENS = Isaac.GetItemIdByName("Oh Sweet Merciful Christ!"),
 
+    FADED_NOTE = Isaac.GetItemIdByName("Faded Note"),
 }
 
 Enums.Trinkets = {
@@ -578,8 +655,12 @@ Enums.Trinkets = {
     BOOTLEG_CARTRIDGE = Isaac.GetTrinketIdByName("Bootleg Cartridge"),
     FLASHCART = Isaac.GetTrinketIdByName("Flashcart"),
     IDOL_OF_MOLECH = Isaac.GetTrinketIdByName("Idol Of Molech"),
-    LITHOPEDION = Isaac.GetTrinketIdByName("Lithopedion"),
-
+    --LITHOPEDION = Isaac.GetTrinketIdByName("Lithopedion"),
+    BLANK_WHITE_CARD = Isaac.GetTrinketIdByName("Blank White Card"),
+    YES = Isaac.GetTrinketIdByName("YES!"),
+    FLOPPY_DISK = Isaac.GetTrinketIdByName("Floppy Disk"),
+    PLASTIC_KEY = Isaac.GetTrinketIdByName("Plastic Key"),
+    THE_OTHER_HAND = Isaac.GetTrinketIdByName("The Other Hand"),
 }
 
 Enums.Pickups = {
@@ -637,6 +718,10 @@ Enums.Pickups = {
         TYPE = Isaac.GetEntityTypeByName("Knowledge Point (large)"),
         VARIANT = Isaac.GetEntityVariantByName("Knowledge Point (large)"),
         SUBTYPE = 32
+    },
+    TOY_CHEST = {
+        TYPE = Isaac.GetEntityTypeByName("Toy Chest"),
+        VARIANT = Isaac.GetEntityVariantByName("Toy Chest"),
     },
 
 }

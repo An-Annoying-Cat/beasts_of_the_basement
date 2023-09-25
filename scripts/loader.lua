@@ -5,6 +5,8 @@ Mod.LoadScripts({
     "scripts.entities.drifter",
     "scripts.entities.golfball",
 
+    --GRIDS
+    "scripts.entities.grids.radioactive_barrel",
 
     --ENEMIES
     "scripts.entities.enemies.eternalfly",
@@ -45,9 +47,11 @@ Mod.LoadScripts({
 
     "scripts.entities.enemies.chapter_2_alt.mines.kettle",
     "scripts.entities.enemies.chapter_2_alt.mines.crockpot",
+    "scripts.entities.enemies.chapter_2_alt.mines.crockpot_new",
     "scripts.entities.enemies.chapter_2_alt.mines.spicybony",
     "scripts.entities.enemies.chapter_2_alt.mines.geohorf",
     "scripts.entities.enemies.chapter_2_alt.mines.geo_fatty",
+    "scripts.entities.enemies.chapter_2_alt.ashpit.oozer",
 
     "scripts.entities.enemies.chapter_3.seducer",
     "scripts.entities.enemies.chapter_3.desirer",
@@ -82,6 +86,8 @@ Mod.LoadScripts({
 
     "scripts.entities.enemies.special.pursuer",
 
+    --BOSSES
+    "scripts.entities.bosses.despair",
 
     --FAMILIARS
     "scripts.entities.familiars.robobabyzero",
@@ -117,6 +123,16 @@ Mod.LoadScripts({
     "scripts.entities.items.trigger_button",
     "scripts.entities.items.e-meter",
     "scripts.entities.items.deck_of_too_many_things",
+    "scripts.entities.items.dusty_d6",
+    "scripts.entities.items.fuck_that_noise",
+    "scripts.entities.items.dusty_d100",
+    "scripts.entities.items.d11",
+    "scripts.entities.items.house_of_leaves",
+    "scripts.entities.items.blood_meridian",
+    "scripts.entities.items.lil_ari",
+    "scripts.entities.items.dusty_d4",
+    "scripts.entities.items.x10_shitposts",
+    "scripts.entities.items.faded_note",
 
 
     --TRINKETS
@@ -127,6 +143,10 @@ Mod.LoadScripts({
     "scripts.entities.items.trinkets.bootlegcart",
     "scripts.entities.items.trinkets.flashcart",
     "scripts.entities.items.trinkets.idol_of_molech",
+    -- 
+    "scripts.entities.items.trinkets.blank_white_card",
+    "scripts.entities.items.trinkets.yes",
+    "scripts.entities.items.trinkets.floppy_disk",
 
 
     --PICKUPS
@@ -137,15 +157,17 @@ Mod.LoadScripts({
     "scripts.entities.items.pickups.shitcoin",
     "scripts.entities.items.pickups.knowledge_points",
     --"scripts.entities.items.pickups.jail_key",
+    "scripts.entities.items.pickups.toy_chest",
 
 
     --CONSUMABLES
-    --"scripts.entities.consumables.basic",
+    "scripts.entities.consumables.pills",
     "scripts.entities.consumables.shotgunkingcards",
     "scripts.entities.consumables.ojcards",
     "scripts.entities.consumables.ygocards",
     "scripts.entities.consumables.voidraincards",
     "scripts.entities.consumables.mahjongtiles",
+    "scripts.entities.consumables.othercards",
     
     --STATUS EFFECTS
     "scripts.status_effects.fire_rework",
@@ -160,5 +182,6 @@ Mod.LoadScripts({
 
     --CHALLENGES
     "scripts.challenges.back_pocket",
+    --"scripts.challenges.mybasement",
 
 })

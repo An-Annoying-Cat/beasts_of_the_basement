@@ -17,6 +17,7 @@ local HiddenItemManager = require("scripts.core.hidden_item_manager")
 	function VOIDRAINCARDS:starlightInit(cardID, player)
 		sfx:Play(BotB.Enums.SFX.VOIDRAIN_CARD,2,0,false,1)
 		HiddenItemManager:AddForFloor(player,BotB.Enums.Items.STARLIGHT)
+		player:UseCard(Card.CARD_HOLY, UseFlag.USE_NOANIM | UseFlag.USE_NOANNOUNCER)
 	end
 
 	function VOIDRAINCARDS:quickloveInit(cardID, player)
@@ -28,8 +29,8 @@ local HiddenItemManager = require("scripts.core.hidden_item_manager")
 		--print("HomeCom = " .. Mod.Enums.Consumables.CARDS.HOMECOMING)
 		sfx:Play(BotB.Enums.SFX.VOIDRAIN_CARD,2,0,false,1)
 		HiddenItemManager:AddForFloor(player,CollectibleType.COLLECTIBLE_POLYDACTYLY)
-		print("spawn a toy chest i guess. for now we're spawning a wooden one until i code the toy chest")
-		Isaac.Spawn(EntityType.ENTITY_PICKUP,PickupVariant.PICKUP_WOODENCHEST,0,Game():GetRoom():FindFreePickupSpawnPosition(player.Position),Vector.Zero,player)
+		--print("spawn a toy chest i guess. for now we're spawning a wooden one until i code the toy chest")
+		Isaac.Spawn(EntityType.ENTITY_PICKUP,1229,0,Game():GetRoom():FindFreePickupSpawnPosition(player.Position),Vector.Zero,player)
 	end
 
 	function VOIDRAINCARDS:luckyFlowerInit(cardID, player)

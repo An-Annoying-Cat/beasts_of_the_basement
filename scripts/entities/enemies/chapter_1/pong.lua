@@ -22,6 +22,7 @@ function PONG:NPCUpdate(npc)
         --99: Idle
         --100: Zooming around from hurt anim
         --101: Fucking dying
+        npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
         if npc.State == 0 then
             --print("balls")
             sprite:Play("Idle")

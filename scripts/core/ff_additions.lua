@@ -53,28 +53,41 @@ end
 --
 if FiendFolio.ReferenceItems then
     local BotBActiveReferences = {
-        {ID = BotB.Enums.Items.FIFTY_SHADES, 			Reference = "Fifty Shades Of Grey"},
-        {ID = BotB.Enums.Items.THE_DSM, 			Reference = "Psychology, Four Voices Expansion"},
-        {ID = BotB.Enums.Items.ENLIGHTENMENT, 			Reference = "Rain World: Downpour"},
+        {ID = BotB.Enums.Items.FIFTY_SHADES, 		       	Reference = "Fifty Shades Of Grey"},
+        {ID = BotB.Enums.Items.THE_DSM, 			        Reference = "Psychology, Four Voices Expansion"},
+        {ID = BotB.Enums.Items.ENLIGHTENMENT, 		    	Reference = "Rain World: Downpour"},
+        {ID = BotB.Enums.Items.BLOOD_MERIDIAN, 		    	Reference = "Blood Meridian"},
+        {ID = BotB.Enums.Items.HOUSE_OF_LEAVES, 			Reference = "House Of Leaves"},
+        {ID = BotB.Enums.Items.TRIGGER_BUTTON, 		    	Reference = "Edmund McMillen's old blog"},
+        {ID = BotB.Enums.Items.EMETER_COLLECTIBLE, 			Reference = "Edmund McMillen's old blog"},
+        {ID = BotB.Enums.Items.EMETER_IN, 			        Reference = "Edmund McMillen's old blog"},
+        {ID = BotB.Enums.Items.EMETER_OUT, 		        	Reference = "Edmund McMillen's old blog"},
     }
     local BotBPassiveReferences = {
-        {ID = BotB.Enums.Items.ALPHA_ARMOR, 			Reference = "Minecraft Alphaver"},
-        {ID = BotB.Enums.Items.ONYXMARBLE, 			Reference = "Enigma, Oxyd"},
-        {ID = BotB.Enums.Items.TOY_HELICOPTER, 			Reference = "Henry Stickmin"},
-        {ID = BotB.Enums.Items.ATOMBOMBBABY, 			Reference = "The Five Stars"},
-        {ID = BotB.Enums.Items.BHF, 			Reference = "The Binding Of Isaac: Revelations"},
-        {ID = BotB.Enums.Items.LIQUID_LATEX, 			Reference = "Changed"},
-        {ID = BotB.Enums.Items.CROWBAR, 			Reference = "Risk Of Rain 2"},
-        {ID = BotB.Enums.Items.CHAMPS_MASK, 			Reference = "Brutal Orchestra"},
-        {ID = BotB.Enums.Items.THE_HUMAN_SOUL, 			Reference = "Brutal Orchestra"},
-        {ID = BotB.Enums.Items.QUICKLOVE, 			Reference = "The Void Rains Upon Her Heart"},
-        {ID = BotB.Enums.Items.STARLIGHT, 			Reference = "The Void Rains Upon Her Heart"},
-        {ID = BotB.Enums.Items.PALE_BOX, 			Reference = "The Void Rains Upon Her Heart"},
+        {ID = BotB.Enums.Items.ALPHA_ARMOR, 		    	Reference = "Minecraft Alphaver"},
+        {ID = BotB.Enums.Items.ONYXMARBLE, 		        	Reference = "Enigma, Oxyd"},
+        {ID = BotB.Enums.Items.TOY_HELICOPTER, 		    	Reference = "Henry Stickmin"},
+        {ID = BotB.Enums.Items.ATOMBOMBBABY, 		    	Reference = "The Five Stars, Fallout"},
+        {ID = BotB.Enums.Items.BHF, 			            Reference = "The Binding Of Isaac: Revelations"},
+        {ID = BotB.Enums.Items.LIQUID_LATEX, 		    	Reference = "Changed"},
+        {ID = BotB.Enums.Items.CROWBAR, 			        Reference = "Risk Of Rain 2"},
+        {ID = BotB.Enums.Items.CHAMPS_MASK, 		    	Reference = "Brutal Orchestra"},
+        {ID = BotB.Enums.Items.THE_HUMAN_SOUL, 		    	Reference = "Brutal Orchestra"},
+        {ID = BotB.Enums.Items.QUICKLOVE, 		        	Reference = "The Void Rains Upon Her Heart"},
+        {ID = BotB.Enums.Items.STARLIGHT, 		        	Reference = "The Void Rains Upon Her Heart"},
+        {ID = BotB.Enums.Items.PALE_BOX, 		        	Reference = "The Void Rains Upon Her Heart"},
+        {ID = BotB.Enums.Items.LUCKY_FLOWER, 		    	Reference = "The Void Rains Upon Her Heart"},
+        {ID = BotB.Enums.Items.FUCK_THAT_NOISE, 			Reference = "Newgrounds", Partial = true},
+        {ID = BotB.Enums.Items.HEALTHY_SNACK, 			    Reference = "Edmund McMillen's old blog"},
+        {ID = BotB.Enums.Items.LIL_ARI, 			        Reference = "Voices of the Void"},
+        {ID = BotB.Enums.Items.FADED_NOTE, 			        Reference = "hfjONE"},
     }
     local BotBTrinketReferences = {
-        {ID = BotB.Enums.Trinkets.DEMON_CORE, 			Reference = "Brutal Orchestra"},
-        {ID = BotB.Enums.Trinkets.FLASHCART, 			Reference = "Video Game Piracy"},
+        {ID = BotB.Enums.Trinkets.DEMON_CORE, 			    Reference = "Brutal Orchestra"},
+        {ID = BotB.Enums.Trinkets.FLASHCART, 		    	Reference = "Video Game Piracy"},
         {ID = BotB.Enums.Trinkets.IDOL_OF_MOLECH, 			Reference = "the Book of Leviticus"},
+        {ID = BotB.Enums.Trinkets.FLOPPY_DISK, 			    Reference = "MyHouse.wad"},
+        {ID = BotB.Enums.Trinkets.BLANK_WHITE_CARD, 		Reference = "1000 Blank White Cards"},
     }
     local BotBStackables = {
         BotB.Enums.Items.PLACEHOLDER_ITEM,
@@ -87,14 +100,15 @@ if FiendFolio.ReferenceItems then
         BotB.Enums.Items.LUCKY_LIGHTER,
         BotB.Enums.Items.CROWBAR,
     }
+    --[[
     local BotBRockTrinkets = {
         [BotB.Enums.Trinkets.LITHOPEDION]           = 0,
-    }
+    }]]
 
     Tables:AppendTable(FiendFolio.ReferenceItems.Actives, BotBActiveReferences)
     Tables:AppendTable(FiendFolio.ReferenceItems.Passives, BotBPassiveReferences)
     Tables:AppendTable(FiendFolio.ReferenceItems.Trinkets, BotBTrinketReferences)
-    Tables:AppendTable(FiendFolio.RockTrinkets, BotBRockTrinkets)
+    --Tables:AppendTable(FiendFolio.RockTrinkets, BotBRockTrinkets)
     FiendFolio:AddStackableItems({
         BotB.Enums.Items.PLACEHOLDER_ITEM,
         BotB.Enums.Items.ROBOBABYZERO,

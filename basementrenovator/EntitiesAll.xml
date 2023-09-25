@@ -11,6 +11,10 @@
     <entity Name="Bamf" />
     <entity Name="Spider Boi" />
     <entity Name="Babby" />
+    <entity Name="Despair" />
+    <entity Name="Crockpot" />
+    <entity Name="Oozer" />
+    <entity Name="Radioactive Barrel" />
   </group>
 
   <group Name="BotB Crawlspace Events">
@@ -103,7 +107,7 @@
 
   <group Name="BotB Mines Enemies" >
     <entity Name="Kettle" />
-    <entity Name="Crockpot" />
+    <entity Name="Crockpot (New)" />
     <entity Name="Grilled Flapjack" />
     <entity Name="Grilled Flapstack (2)" />
     <entity Name="Grilled Flapstack (3)" />

@@ -27,4 +27,17 @@ if StageAPI and StageAPI.Loaded then
 
 	--#endregion
 
+	--
+	Mod.StageAPIBosses = {
+		StageAPI.AddBossData("Despair", {
+			Name = "Despair",
+			Portrait = "gfx/bosses/despair/despair_portrait_placeholder.png",
+			Bossname = "gfx/bosses/despair/bossname_despair.png",
+			Rooms = StageAPI.RoomsList("DespairBossRooms", include("resources.luarooms.bosses.boss_despair"))
+		}),
+	
+	}
+	
+	StageAPI.AddBossToBaseFloorPool({BossID = "Despair", Weight = 1}, LevelStage.STAGE1_1, StageType.STAGETYPE_WOTL)
+
 end

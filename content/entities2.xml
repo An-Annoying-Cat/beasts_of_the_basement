@@ -7,7 +7,7 @@
     <!--Gapers  id="10" variants start at 40-->
     <entity name="Acme"
         id="10" variant="40" anm2path="monsters/chapter_1/acme.anm2" baseHP="10" stageHP="2" portrait="1"
-        collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"   friction="1" reroll="true" champion="0">
+        collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"    friction="1" reroll="true" champion="0">
             <bestiary anim="WalkVert" overlay="Walk" transform="0,0,1"/>
             <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" poop="0"/>
     </entity>
@@ -29,7 +29,7 @@
     <!--Skinnies  id="226" variants start at 30-->
     <entity name="Gibby"
         id="226" variant="30" anm2path="monsters/chapter_4/womb/gibby.anm2" baseHP="5" stageHP="0"
-        collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"   friction="1" reroll="true" champion="0">
+        collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="6"    friction="1" reroll="true" champion="0">
             <bestiary anim="Head" transform="0,0,1"/>
             <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" poop="0"/>
     </entity>
@@ -37,7 +37,7 @@
     <!--Hives   id="22" variants start at 50-->
     <entity name="Sleazebag"
         id="22" variant="50" anm2path="monsters/chapter_1/sleazebag.anm2" baseHP="20" stageHP="0" portrait="2"
-        collisionDamage="0" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="true" champion="0">
+        collisionDamage="0" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="true" champion="0">
             <bestiary anim="WalkVert" overlay="Walk" transform="0,0,1"/>
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
 	</entity>
@@ -228,6 +228,20 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
+    <!--GRIMACES id="42" variants start at 501-->
+    <entity anm2path="monsters/chapter_2.5/mines/crockpot.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="100" collisionRadius="13" friction="1" id="42" name="Crockpot (New)" numGridCollisionPoints="0" shadowSize="24" stageHP="0" variant="501" shutdoors="false" portrait="61" tags="noreroll">
+		<bestiary transform="0,0,1" anim="Opened" />
+        <gibs amount="6" blood="0" bone="0" eye="0" gut="0" large="0" rock="1" dust="1" />
+		<preload-snd id="212" /> <!-- heartin -->
+        <preload-snd id="262" /> <!-- SOUND_STONESHOOT -->
+    </entity>
+     <entity anm2path="monsters/chapter_2.5/mines/crockpot.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" subtype="1" collisionMass="100" collisionRadius="13" friction="1" id="42" name="Crockpot (New)" numGridCollisionPoints="0" shadowSize="24" stageHP="0" variant="501" shutdoors="false" portrait="61" tags="noreroll">
+		<bestiary transform="0,0,1" anim="Opened" />
+        <gibs amount="6" blood="0" bone="0" eye="0" gut="0" large="0" rock="1" dust="1" />
+		<preload-snd id="212" /> <!-- heartin -->
+        <preload-snd id="262" /> <!-- SOUND_STONESHOOT -->
+    </entity>
+
     
 
 
@@ -265,26 +279,26 @@
     </entity>
 
     <entity name="Innie (CW)"
-        id="501" variant="6" subtype="0" anm2path="monsters/chapter_1/innie_clockwise.anm2" baseHP="16" stageHP="0" portrait="1"
+        id="501" variant="6" subtype="0" anm2path="monsters/chapter_1/innie_clockwise.anm2"   baseHP="16" stageHP="0" portrait="1"
         boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24" >
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <bestiary anim="WalkDown" transform="0,0,1"/>
     </entity>
     <entity name="Innie (CCW)"
-        id="501" variant="7" subtype="0" anm2path="monsters/chapter_1/innie_counterclockwise.anm2" baseHP="16" stageHP="0" portrait="1"
+        id="501" variant="7" subtype="0" anm2path="monsters/chapter_1/innie_counter_clockwise.anm2"   baseHP="16" stageHP="0" portrait="1"
         boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="24" >
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
     <entity name="Ping"
-        id="501" variant="8" subtype="0" anm2path="monsters/chapter_1/ping.anm2" baseHP="2" stageHP="0.2" portrait="3"
+        id="501" variant="8" subtype="0" anm2path="monsters/chapter_1/ping.anm2" baseHP="2" gridCollision="walls" stageHP="0.2" portrait="3"
         boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="3" >
         <gibs amount="0" blood="1" bone="1" eye="1" gut="1" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity>
 
     <entity name="Pong"
-        id="501" variant="9" subtype="0" anm2path="monsters/chapter_1/pong.anm2" baseHP="15" stageHP="6" portrait="4"
+        id="501" variant="9" subtype="0" anm2path="monsters/chapter_1/pong.anm2" baseHP="15"  gridCollision="walls" stageHP="6" portrait="4"
         boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="18" >
         <gibs amount="0" blood="1" bone="1" eye="1" gut="1" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
@@ -297,7 +311,7 @@
     </entity>
 
     <entity name="Fun Guy"
-        id="501" variant="11" anm2path="monsters/chapter_2/funguy.anm2" baseHP="11" stageHP="0" portrait="3"
+        id="501" variant="11" anm2path="monsters/chapter_2/funguy.anm2" baseHP="11" stageHP="0" portrait="3"  
         collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="10"   friction="1" reroll="true" champion="1">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <bestiary anim="Bestiary" transform="0,0,1"/>
@@ -308,14 +322,14 @@
 	</entity>
 
     <entity name="Inch Worm"
-        id="501" variant="13" anm2path="monsters/chapter_1/inch_worm.anm2" baseHP="5" stageHP="0" portrait="3"
+        id="501" variant="13" anm2path="monsters/chapter_1/inch_worm.anm2" baseHP="5" stageHP="0" portrait="3"  
         collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity>
 
     <entity name="Chode"
-        id="501" variant="13" subtype="1" anm2path="monsters/chapter_1/chode.anm2" baseHP="5" stageHP="0" portrait="3"
+        id="501" variant="13" subtype="1" anm2path="monsters/chapter_1/chode.anm2" baseHP="5" stageHP="0" portrait="3"  
         collisionDamage="1" collisionMass="100" collisionRadius="8"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
@@ -329,14 +343,14 @@
     </entity> 
 
     <entity name="Meal Worm"
-        id="501" variant="13" subtype="3" anm2path="monsters/chapter_4/meal_worm.anm2" baseHP="17.5" stageHP="0" portrait="3"
+        id="501" variant="13" subtype="3" anm2path="monsters/chapter_4/meal_worm.anm2" baseHP="17.5" stageHP="0" portrait="3"  
         collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity>
 
     <entity name="Frenulum"
-        id="501" variant="13" subtype="4" anm2path="monsters/chapter_4/scarred_womb/frenulum.anm2" baseHP="17.5" stageHP="0" portrait="3"
+        id="501" variant="13" subtype="4" anm2path="monsters/chapter_4/scarred_womb/frenulum.anm2" baseHP="17.5" stageHP="0" portrait="3"  
         collisionDamage="1" collisionMass="5" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="true" champion="1">
         <gibs amount="2" blood="1" bone="1" eye="0" gut="0" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
@@ -373,19 +387,19 @@
 	</entity>
 
     <entity name="Puer" 
-        id="501" variant="17" anm2path="monsters/chapter_3/puer.anm2" baseHP="35" stageHP="0"
+        id="501" variant="17" anm2path="monsters/chapter_3/puer.anm2" baseHP="35" stageHP="0"  
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="false" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
 	</entity>
 
     <entity name="Puella" 
-        id="501" variant="17" subtype="1" anm2path="monsters/chapter_3/puella.anm2" baseHP="35" stageHP="0"
+        id="501" variant="17" subtype="1" anm2path="monsters/chapter_3/puella.anm2" baseHP="35" stageHP="0"  
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="false" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
 	</entity>
 
     <entity name="OJ Trap Card"
-        id="501" variant="18" subtype="0" anm2path="effects/oj_trapcard.anm2" baseHP="0" stageHP="0" portrait="548"
+        id="501" variant="18" subtype="0" anm2path="effects/oj_trapcard.anm2" baseHP="0" stageHP="0" portrait="548"  
         boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="16" friction="0"  numGridCollisionPoints="12" shadowSize="8"   bestiary="false" bestiaryTransform="0,0,1" bestiaryAnim="Beastiary">
         <gibs amount="0" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
@@ -569,7 +583,41 @@
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
 
+    <entity name="Despair"
+        id="501" variant="44" subtype="0" anm2path="bosses/despair/despair.anm2" baseHP="120" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="30" collisionRadius="25"  numGridCollisionPoints="12" shadowSize="19"   friction="1" reroll="false" champion="0" boss="1" tags="ghost">
+        <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
 
+    <entity name="Despair Horse"
+        id="501" variant="45" subtype="0" anm2path="bosses/despair/despair_horse.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="19"   friction="1" reroll="false" champion="0" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Oozer"
+        id="501" variant="46" subtype="0" anm2path="monsters/chapter_2.5/ashpit/oozer.anm2" baseHP="30" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="false" champion="0" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="High Clotty"
+        id="501" variant="47" subtype="0" anm2path="monsters/chapter_1/high_clotty.anm2" baseHP="16" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="15" numGridCollisionPoints="12" shadowSize="28"   friction="1" reroll="false" champion="0" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <!-- Custom Grids id="502" variants start at 0-->
+    <entity anm2path="no.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="502" name="BotB Grid Spawner" variant="0" numGridCollisionPoints="24" shadowSize="17" stageHP="0" shutdoors="false">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="no.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="502" name="BotB Grid Spawner (Rad Barrel)" variant="1" numGridCollisionPoints="24" shadowSize="17" stageHP="0" shutdoors="false">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
     
 
 
@@ -594,7 +642,11 @@
     <entity anm2path="familiar/faithfulfleet.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Faithful Fleet" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2454">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <!--
     <entity anm2path="familiar/familiar_keyghost_jail.anm2" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Jail Keyghost" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2455">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>-->
+    <entity anm2path="familiar/lil_ari_plush.anm2" tags="cansacrifice" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Lil Ari (Plush)" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="2456">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
@@ -650,6 +702,14 @@
         id="1000" variant="807" anm2path="effects/bestiary_target.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
     </entity>
+    <entity name="Radiation Circle"
+        id="1000" variant="808" anm2path="effects/radiation_circle.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
+    <entity name="Radiation Circle (Temporary)"
+        id="1000" variant="809" anm2path="effects/radiation_circle.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
 
 
     
@@ -662,6 +722,10 @@
     <entity name="Giga Penny"
         id="5" variant="20" subtype="81" anm2path="items/pick ups/giga_penny.anm2"
         collisionDamage="0" collisionMass="5" collisionRadius="32" numGridCollisionPoints="0" shadowSize="32" friction="1">
+    </entity>
+
+    <!--Toy chest id="5" variant="1229"-->
+    <entity anm2path="items/pick ups/toy_chest.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="6" collisionRadius="12" friction="0.8" id="5" name="Toy Chest" numGridCollisionPoints="24" shadowSize="24" stageHP="0" variant="1229">
     </entity>
 
     <!--Keys id="5" variant="30"    subtypes start at 80-->
@@ -682,10 +746,11 @@
     <entity anm2path="items/pick ups/knowledge/knowledge_point.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Knowledge Point (large)" numGridCollisionPoints="24" shadowSize="18" stageHP="0" subtype="32" variant="69">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
     </entity>
+    <!--
     <entity name="Jail Key"
         id="5" variant="69" subtype="33" anm2path="items/pick ups/key_jail.anm2"
         collisionDamage="0" collisionMass="5" collisionRadius="12" numGridCollisionPoints="0" shadowSize="17" friction="1">
-    </entity>
+    </entity>-->
 
     <!--Cards   id="5"  variant="300"   subtypes start at 800-->
     <entity name="Yu-Gi-Oh Card"

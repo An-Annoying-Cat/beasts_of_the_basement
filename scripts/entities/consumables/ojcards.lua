@@ -262,6 +262,9 @@ function OJCARDS:NPCUpdate(npc)
 			else
 				data.cardMode = 0
 			end
+			if npc.EntityCollisionClass ~= EntityCollisionClass.ENTCOLL_ENEMIES then
+				npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ENEMIES
+			end
 			sprite:Play("Spin")
 		end
     end

@@ -4,7 +4,7 @@
     <passive id="3" quality="3" name="Item" description="PLACEHOLDER_ITEM" gfx="placeholder_item.png" cache="all"/>
 
     <passive id="4" quality="0" name="Quicklove" description="Damage up!" gfx="card_passives/quicklove.png" cache="all"/>
-    <passive id="5" quality="0" name="Starlight" description="Health up!" maxhearts="2" gfx="card_passives/starlight.png" cache="all"/>
+    <passive id="5" quality="0" name="Starlight" description="Health up!" maxhearts="2" hearts="8" gfx="card_passives/starlight.png" cache="all"/>
     <passive id="6" quality="0" name="Lucky Flower" description="Luck up!" gfx="card_passives/lucky_flower.png" cache="all"/>
     <passive id="7" quality="0" name="Pale Box" description="Hold up!" gfx="card_passives/pale_box.png" cache="all"/>
 
@@ -45,7 +45,35 @@
     <active id="37" quality="3" name="E-Meter (Out)" description="Extra consumable room...?" gfx="e-meter_hud_out.png" hidden="true" chargetype="normal" maxcharges="8" />
 
     <passive id="38" quality="4" name="Fuck That Noise" description="I will be given what I am owed!" hidden="true" gfx="fuck_that_noise.png"/>
-    <active id="39" quality="3" name="Deck Of Too Many Things" description="Somehow also has non-card objects" gfx="deck_of_too_many_things.png" chargetype="normal" maxcharges="6"/>
+    <active id="39" quality="3" name="Deck Of Too Many Things" description="Also contains non-cards" gfx="deck_of_too_many_things.png" chargetype="normal" maxcharges="6"/>
+
+    <active id="40" quality="3" name="Dusty D6" description="Rollback your destiny" gfx="dusty_d6.png" chargetype="normal" maxcharges="6"/>
+    <active id="41" quality="3" name="Dusty D4" description="Reroll that into something else" gfx="dusty_d4.png" chargetype="normal" maxcharges="8"/>
+    <active id="42" quality="1" name="Dusty D100" description="Reerolllll..." gfx="dusty_d100.png" chargetype="normal" maxcharges="2"/>
+    <active id="44" quality="1" name="D11" description="Reroll consumables" gfx="d11.png" chargetype="normal" maxcharges="3"/>
+
+    <active id="45" quality="2" name="Blood Meridian" description="Overwhelming carnage" gfx="blood_meridian.png" tags="book" chargetype="normal" maxcharges="5"/>
+    <active id="46" quality="4" name="House Of Leaves" description="Labyrinthine narrative" gfx="house_of_leaves.png" tags="book" chargetype="normal" maxcharges="4"/>
+    <passive id="47" quality="2" name="Blood Meridian Dummy" description="Overwhelming carnage" gfx="blood_meridian.png" hidden="true"/>
+
+    <familiar id="48" quality="3" name="Lil Ari" description="Invisible friend!" gfx="lil_ari.png" tags="monstermanual"/>
+
+    <!-- x10 shitposts -->
+    <passive id="49" quality="3" name="Haah!" description="+10 souls" gfx="haah.png" />
+    <passive id="50" quality="3" name="Fwoop!" description="+10 trinkets" gfx="fwoop.png" />
+    <passive id="51" quality="4" name="Ahhh..." description="+10 items" gfx="ahhh.png" />
+    <passive id="52" quality="1" name="Fwoosh!" description="+10 wisps" gfx="fwoosh.png" />
+    <passive id="53" quality="2" name="Ksshk!" description="+10 consumables" gfx="ksshk.png" />
+    <passive id="54" quality="1" name="Gulp!" description="+10 pills" gfx="gulp.png" />
+    <passive id="55" quality="0" name="Shlop!" description="+10 clots" gfx="shlop.png" />
+    <passive id="56" quality="0" name="Buzz Buzz!" description="+10 flies" gfx="buzz buzz.png" />
+    <passive id="57" quality="0" name="Skitter Skitter!" description="+10 spiders" gfx="skitter skitter.png" />
+    <passive id="58" quality="0" name="Boing Boing!" description="+10 skuzzes" gfx="boing boing.png" />
+    <passive id="59" quality="0" name="Plop!" description="+10 dips" gfx="plop.png" />
+    <passive id="60" quality="0" name="Ska Padaba!" description="+10 shits" gfx="ska_padaba.png" />
+    <passive id="61" quality="4" name="Oh Sweet Merciful Christ!" description="+10 +10 +10 +10 +10 +10 +10 +10 +10 +10" gfx="oh_sweet_merciful_christ.png" />
+
+    <passive id="62" quality="4" name="Faded Note" description="La salle d'attente" gfx="faded_note.png" hidden="true" />
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
@@ -62,5 +90,14 @@
     <trinket name="Bootleg Cartridge" description="Not like what I remember..." gfx="bootleg_cart.png" />
     <trinket name="Flashcart" description="Unlawful item copy" gfx="flashcart.png" />
     <trinket name="Idol Of Molech" description="It's hot to the touch" gfx="idol_of_molech.png" />
+    <!--
     <trinket name="Lithopedion" description="Is something in there...?" gfx="lithopedion.png" />
+    -->
+    <trinket name="Blank White Card" description="One of thousands..." gfx="blank_white_card.png" />
+    <trinket name="YES!" description="Hell yeah!" gfx="yes.png" />
+    <trinket name="Floppy Disk" description="Lost memories..." gfx="floppy_disk.png" />
+    <trinket name="Plastic Key" description="Toyboxes!" gfx="plastic_key.png" />
+    <!--
+        <trinket name="The Other Hand" description="Reaps other rewards...?" gfx="the_other_hand.png" />
+    -->
 </items>

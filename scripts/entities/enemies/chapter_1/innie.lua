@@ -26,7 +26,10 @@ function INNIE_CW:NPCUpdate(npc)
             --Tracks whether they're pissed
             data.inniePissed = false
             --sprite:Play("Appear")
+            
         end
+        --print(npc.GridCollisionClass)
+        npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
         -- States:
         -- 1: Initialize
         -- 2: Walk
@@ -39,7 +42,7 @@ function INNIE_CW:NPCUpdate(npc)
             --
             --
             print("dir: " .. data.innieDirection)
-            --npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
+            
             npc.State = 99
 
             if data.innieDirection == 1 then
@@ -56,6 +59,7 @@ function INNIE_CW:NPCUpdate(npc)
         end
 
         if npc.State == 99 then
+            npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
             --print("bruh")
             if data.innieDirection == 1 then
                 --print("up you idiot")
@@ -99,6 +103,7 @@ function INNIE_CW:NPCUpdate(npc)
                 npc:FireProjectiles(npc.Position, Vector(8,0):Rotated(targetangle),0, params)
             end
             if sprite:IsEventTriggered("Back") then
+                npc.Position = Game():GetRoom():FindFreeTilePosition(npc.Position, 0)
                 if data.innieDirection == 1 then
                     data.innieDirection = 4
                 else

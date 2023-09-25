@@ -6,6 +6,8 @@
   <entity Image="icons/bamf.png" Name="Bamf" ID="501" Variant="29" Subtype="0" />
   <entity Image="icons/spiderboi.png" Name="Spider Boi" ID="501" Variant="31" Subtype="0" />
   <entity Image="icons/babby.png" Name="Babby" ID="501" Variant="38" Subtype="0" />
+  <!-- Bosses -->
+  <entity Image="icons/despair.png" Name="Despair" ID="501" Variant="44" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
@@ -90,7 +92,14 @@
   
   <!-- Mines Enemies-->
   <entity Image="icons/kettle.png" Name="Kettle" ID="501" Variant="1" Subtype="0" />
-  <entity Image="icons/crockpot.png" Name="Crockpot" ID="501" Variant="3" Subtype="0" >
+  <entity Image="icons/crockpot_old.png" Name="Crockpot" ID="501" Variant="3" Subtype="0" >
+    <bitfield Key="Subtype">
+      <checkbox Length="1" Name="Persist">
+        <tooltip>If set, the Crockpot will stay active even with a room labeled as cleared. This is meant for use in trap rooms only, generally speaking.</tooltip>
+      </checkbox>
+    </bitfield>
+  </entity>
+  <entity Image="icons/crockpot.png" Name="Crockpot (New)" ID="42" Variant="501" Subtype="0" >
     <bitfield Key="Subtype">
       <checkbox Length="1" Name="Persist">
         <tooltip>If set, the Crockpot will stay active even with a room labeled as cleared. This is meant for use in trap rooms only, generally speaking.</tooltip>
@@ -158,6 +167,11 @@
   <!-- Ascent Enemies -->
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
   <entity Image="icons/double_cherry.png" Name="Double Cherry" ID="501" Variant="43" Subtype="0" />
+
+
+
+  <entity Image="icons/oozer.png" Name="Oozer" ID="501" Variant="46" Subtype="0" />
+  <entity Image="icons/radioactive_barrel.png" Name="Radioactive Barrel" ID="502" Variant="1" Subtype="0" />
   
 
 </data>

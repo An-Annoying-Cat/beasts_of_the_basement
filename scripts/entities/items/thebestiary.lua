@@ -284,7 +284,7 @@ function THE_BESTIARY:BestiaryUpgrade(player)
 		for i, entity in ipairs(Isaac.GetRoomEntities()) do
 			--Is it vulnerable and not a boss?
 			local entityRef = EntityRef(entity)
-			if entity:IsEnemy() and entity:IsVulnerableEnemy() and entityRef.IsFriendly == true then
+			if entity:IsEnemy() and entity:IsVulnerableEnemy() and entityRef.IsFriendly == true  and (not entity:GetData().isLilAri) then
 				table.insert(friendlyTable,#friendlyTable + 1,entity)
 			end
 		end

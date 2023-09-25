@@ -15,7 +15,7 @@ LOCAL_TSIL.Init(myFolder)
 BotB.Game = Game()
 BotB.Config = Isaac.GetItemConfig()
 BotB.SFX = SFXManager()
-BotB.Music = MusicManager()
+--BotB.Music = MusicManager()
 BotB.JSON = require('json')
 BotB.HUD = Game():GetHUD()
 BotB.FF = FiendFolio --:pleading_face:
@@ -80,6 +80,7 @@ Mod.CoreScripts = {
     "scripts.core.stageapi",
     "scripts.core.ff_additions",
     --"scripts.core.jail_generator_v2",
+    --"scripts.core.savedata",
     "scripts.loader",
 }
 LoadScripts(Mod.CoreScripts)
@@ -188,9 +189,28 @@ function Mod.unbiasedFromSuit(suitName)
     end
 end
 
+
+function BotB:GetPlayers()
+	local players = {}
+
+	for i = 1, game:GetNumPlayers() do
+		table.insert(players, game:GetPlayer(i))
+	end
+
+	return players
+end
 --Thank you Danial for this 
---[[
+--
 function Mod:NPCAIChecker(npc,offset)
+    local doTheDataCheck = false
+    local playerTable = BotB:GetPlayers()
+    for i=1, #playerTable do
+        if playerTable[i]:ToPlayer():GetData().doBotBEntityData == true then
+            doTheDataCheck = true
+        end
+    end
+    if not doTheDataCheck then return end
+
     local data = npc:GetData()
     --local nameString = BotB.Functions:GetEntityNameString(npc)
         Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
@@ -208,12 +228,37 @@ function Mod:NPCAIChecker(npc,offset)
 
 end
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER,Mod.NPCAIChecker)
---]]
+--
 --Death checker
 Mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, BotB.NPCDeathCheck)
 
 
 
+
+function BotB:dataSwitchCMD(cmd, params)
+    if not cmd == "data" then return end
+    if cmd == "data" then
+        local playerTable = BotB:GetPlayers()
+    if params == "on" then
+        for i=1, #playerTable do
+            if playerTable[i]:ToPlayer():GetData().doBotBEntityData ~= true then
+                playerTable[i]:ToPlayer():GetData().doBotBEntityData = true
+            end
+        end
+    elseif params == "off" then
+        for i=1, #playerTable do
+            if playerTable[i]:ToPlayer():GetData().doBotBEntityData ~= false then
+                playerTable[i]:ToPlayer():GetData().doBotBEntityData = false
+            end
+        end
+    else
+        print("this function needs on or off to work")
+    end
+    end
+    
+    
+end
+Mod:AddCallback(ModCallbacks.MC_EXECUTE_CMD, BotB.dataSwitchCMD)
 
 local botbTaintedItems = {
     {CollectibleType.COLLECTIBLE_BBF, Isaac.GetItemIdByName("B.H.F.")},

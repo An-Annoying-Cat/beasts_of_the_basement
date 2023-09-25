@@ -3,7 +3,9 @@ local SKUZZ = {}
 local Entities = BotB.Enums.Entities
 
 function SKUZZ:NPCUpdate(npc)
-
+    if not (npc.Variant == Isaac.GetEntityVariantByName("Skuzz") and npc.SubType ~= nil and (npc.SubType == Entities.SUPER_SKOOTER.SUBTYPE or npc.SubType == Entities.SKOOTER.SUBTYPE)) then
+        return
+    end
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
 

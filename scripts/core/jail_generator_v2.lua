@@ -718,10 +718,10 @@ function mod:OnNewLevel()
 			if not game:IsGreedMode() then
 				if not mod.luarooms then
 					local newroomdesc = mod:GenerateRoomFromDataset(mod.roomdata, true)
-					print("we got a jail!!")
+					--print("we got a jail!!")
 				else
 					local newroomdesc = mod:GenerateRoomFromLuarooms(mod.luarooms.Jails, true)
-					print("we got a jail!!")
+					--print("we got a jail!!")
 					if newroomdesc then
 						mod.savedata.JailLuarooms = mod.savedata.JailLuarooms or {}
 						mod.savedata.JailLuarooms[newroomdesc.GridIndex] = true

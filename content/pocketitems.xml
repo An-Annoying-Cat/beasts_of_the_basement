@@ -12,7 +12,7 @@
 	<card type="object" name="9 Bam" description="Converge" hud="9 Bam" mimiccharge="3" pickup="811"/>
 	<card type="object" name="9 Crak" description="Converge" hud="9 Crak" mimiccharge="3" pickup="811"/>
 <!--New tarots-->
-	<card type="tarot" name="Misprinted Justice" description="nd move onMay your future beco" hud="Misprinted Justice" mimiccharge="4" pickup="806"/>
+	<card type="tarot" name="Misprinted Justice" description="nd move onMay your future beco" hud="Misprinted Justice" mimiccharge="8" pickup="806"/>
 <!--Shotgun King Cards-->
 	<card type="special" name="Cornered Despot" description="Hug the edges" hud="Cornered Despot" mimiccharge="3" pickup="801"/>
 	<card type="special" name="August Presence" description="None shall approach" hud="August Presence" mimiccharge="3" pickup="801"/>
@@ -34,9 +34,9 @@
 	<card type="special" name="Raymond" description="Everyone wants him" hud="Raymond" mimiccharge="4" pickup="804"/>
 	<card type="special" name="Stitches" description="Lives up to his name!" hud="Stitches" mimiccharge="6" pickup="804"/>
 <!--The Void Rains Upon Her Heart cards-->
-	<card type="special" name="Quicklove" description="Damage up!" hud="Quicklove" mimiccharge="3" pickup="807"/>
+	<card type="special" name="Quicklove" description="Damage up!" hud="Quicklove" mimiccharge="8" pickup="807"/>
 	<card type="special" name="Starlight" description="Health up!" hud="Starlight" mimiccharge="3" pickup="808"/>
-	<card type="special" name="Lucky Flower" description="Luck up!" hud="Lucky Flower" mimiccharge="4" pickup="809"/>
+	<card type="special" name="Lucky Flower" description="Luck up!" hud="Lucky Flower" mimiccharge="8" pickup="809"/>
 	<card type="special" name="Pale Box" description="Hold up!" hud="Pale Box" mimiccharge="6" pickup="810"/>
 <!--Slay The Spire cards-->
 	<card type="special" name="Zap" description="It seems defective..." hud="Zap" mimiccharge="4" pickup="805"/>
@@ -45,4 +45,10 @@
 	<card type="special" name="Bank Error In Your Favor" description="Huh, they withdrew a little extra!" hud="Bank Error In Your Favor" mimiccharge="6" pickup="12"/>
 
 
+<!--Pill effects-->
+	<pilleffect  id="0" name="Free Crack" class="1+" mimiccharge="3" />
+	<pilleffect  id="1" name="Uppers!" class="3+" mimiccharge="5" />
+	<pilleffect  id="2" name="Downers!" class="3-" mimiccharge="5" />
+	<!--<pilleffect  id="3" name="Ritalin" class="2+" mimiccharge="4" />-->
+	<pilleffect  id="3" name="Psychedelics" class="1+" mimiccharge="1" />
 </pocketitems>
