@@ -58,6 +58,9 @@ function OOZER:NPCUpdate(npc)
             if npc.EntityCollisionClass ~= EntityCollisionClass.ENTCOLL_ALL then
                 npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
             end
+            if npc.EntityGridCollisionClass ~= GridCollisionClass.COLLISION_SOLID then
+                npc.EntityGridCollisionClass = GridCollisionClass.COLLISION_SOLID
+            end
             npc:AnimWalkFrame("WalkHori", "WalkVert", 0.1)
             oozerPathfinder:FindGridPath(targetpos, 0.2, 0, false)
             --print(targetdistance)
