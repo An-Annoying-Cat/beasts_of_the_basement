@@ -1,7 +1,7 @@
 local Mod = BotB
 local Jezebel = {}
 
-local PLAYER_JEZEBEL = Isaac.GetPlayerTypeByName("Jezebel")
+local PLAYER_JEZEBEL = Isaac.GetPlayerTypeByName("Jezebel", false)
 BotB.JEZ_EXTRA = Isaac.GetCostumeIdByPath("gfx/characters/character_jez_extra.anm2")
 function Jezebel:playerGetCostume(player)
     --print("weebis")

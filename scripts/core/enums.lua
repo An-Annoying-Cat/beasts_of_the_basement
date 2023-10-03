@@ -378,6 +378,42 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("High Clotty"),
     },
 
+    ANT = {
+        TYPE = Isaac.GetEntityTypeByName("Ant"),
+        VARIANT = Isaac.GetEntityVariantByName("Ant"),
+    },
+
+    BULLET_ANT = {
+        TYPE = Isaac.GetEntityTypeByName("Bullet Ant"),
+        VARIANT = Isaac.GetEntityVariantByName("Bullet Ant"),
+    },
+
+    SUPER_BULLET_ANT = {
+        TYPE = Isaac.GetEntityTypeByName("Super Bullet Ant"),
+        VARIANT = Isaac.GetEntityVariantByName("Super Bullet Ant"),
+    },
+
+    STUNKY = {
+        TYPE = Isaac.GetEntityTypeByName("Stunky"),
+        VARIANT = Isaac.GetEntityVariantByName("Stunky"),
+    },
+
+    ATTACK_ANT_ENEMY = {
+        TYPE = Isaac.GetEntityTypeByName("Attack Ant (Enemy)"),
+        VARIANT = Isaac.GetEntityVariantByName("Attack Ant (Enemy)"),
+    },
+
+    CLAY_SOLDIER = {
+        TYPE = Isaac.GetEntityTypeByName("Clay Soldier"),
+        VARIANT = Isaac.GetEntityVariantByName("Clay Soldier"),
+    },
+
+
+
+
+
+
+
     --Effects
     ACMES_ANVIL = {
         TYPE = Isaac.GetEntityTypeByName("Acme's Anvil"),
@@ -481,6 +517,26 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("Lil Ari (Plush)"),
         VARIANT = Isaac.GetEntityVariantByName("Lil Ari (Plush)"),
     },
+    AMORPHOUS_GLOBOSA_FAMILIAR = {
+        TYPE = Isaac.GetEntityTypeByName("Amorphous Globosa (Familiar)"),
+        VARIANT = Isaac.GetEntityVariantByName("Amorphous Globosa (Familiar)"),
+    },
+    AMORPHOUS_GLOBOSA_MINI = {
+        TYPE = Isaac.GetEntityTypeByName("Amorphous Globosa (Mini)"),
+        VARIANT = Isaac.GetEntityVariantByName("Amorphous Globosa (Mini)"),
+    },
+    BUZZ_FLY = {
+        TYPE = Isaac.GetEntityTypeByName("Buzz Fly"),
+        VARIANT = Isaac.GetEntityVariantByName("Buzz Fly"),
+    },
+    ATTACK_ANT = {
+        TYPE = Isaac.GetEntityTypeByName("Attack Ant"),
+        VARIANT = Isaac.GetEntityVariantByName("Attack Ant"),
+    },
+    CLAY_SOLDIER_TRACKER = {
+        TYPE = Isaac.GetEntityTypeByName("Clay Soldier (Tracker)"),
+        VARIANT = Isaac.GetEntityVariantByName("Clay Soldier (Tracker)"),
+    },
 }
 
 Enums.SFX = {
@@ -562,6 +618,8 @@ Enums.SFX = {
     JAIL_KEY_GET = Isaac.GetSoundIdByName("JailKeyGet"),
 
     PLUS_TEN = Isaac.GetSoundIdByName("PlusTen"),
+
+    COW_MOO = Isaac.GetSoundIdByName("CowMoo"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -643,6 +701,10 @@ Enums.Items = {
     TEN_TENS = Isaac.GetItemIdByName("Oh Sweet Merciful Christ!"),
 
     FADED_NOTE = Isaac.GetItemIdByName("Faded Note"),
+    AMORPHOUS_GLOBOSA = Isaac.GetItemIdByName("Amorphous Globosa"),
+    BUZZ_FLY = Isaac.GetItemIdByName("Buzz Fly"),
+    MILAS_HEAD = Isaac.GetItemIdByName("Mila's Head"),
+    CLAY_SOLDIER = Isaac.GetItemIdByName("The Lesser Key"),
 }
 
 Enums.Trinkets = {
@@ -660,7 +722,8 @@ Enums.Trinkets = {
     YES = Isaac.GetTrinketIdByName("YES!"),
     FLOPPY_DISK = Isaac.GetTrinketIdByName("Floppy Disk"),
     PLASTIC_KEY = Isaac.GetTrinketIdByName("Plastic Key"),
-    THE_OTHER_HAND = Isaac.GetTrinketIdByName("The Other Hand"),
+    --THE_OTHER_HAND = Isaac.GetTrinketIdByName("The Other Hand"),
+    SCENTED_PENNY = Isaac.GetTrinketIdByName("Scented Penny"),
 }
 
 Enums.Pickups = {

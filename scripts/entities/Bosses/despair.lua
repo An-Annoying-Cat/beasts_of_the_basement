@@ -63,7 +63,7 @@ function DESPAIR:NPCUpdate(npc)
 
         if npc.State == 0 then
             local musManager = MusicManager()
-            musManager:Play(Isaac.GetMusicIdByName("FiendFolioHorseman"), 1)
+            --musManager:Play(Isaac.GetMusicIdByName("FiendFolioHorseman"), 1)
             npc.State = 99
             sprite:Play("FullFloat")
             
@@ -80,10 +80,10 @@ function DESPAIR:NPCUpdate(npc)
         end
 
         if npc.State == 99 then
-            local musManager = MusicManager()
-            if musManager:GetCurrentMusicID() ~= Isaac.GetMusicIdByName("FiendFolioHorseman") then
-                musManager:Play(Isaac.GetMusicIdByName("FiendFolioHorseman"), 1)
-            end
+            ---local musManager = MusicManager()
+            ---if musManager:GetCurrentMusicID() ~= Isaac.GetMusicIdByName("FiendFolioHorseman") then
+            ---    musManager:Play(Isaac.GetMusicIdByName("FiendFolioHorseman"), 1)
+            ---end
             npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
             --npc.Color = Color(1,1,1,1)
             if math.random(0,1) == 1 then

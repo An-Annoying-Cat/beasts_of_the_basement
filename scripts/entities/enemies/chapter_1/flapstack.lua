@@ -81,9 +81,10 @@ function FLAPSTACK:DamageCheck(npc, amount, damageFlags, source, _)
             npc:Morph(BotB.Enums.Entities.GRILLED_FLAPSTACK.TYPE, BotB.Enums.Entities.GRILLED_FLAPSTACK.VARIANT, 0, 0)
             return false
         end
+        --[[
         if not ff:IsPlayerDamage(source) then
             return false
-        end
+        end]]
     end
     if npc.Type == BotB.Enums.Entities.FLAPSTACK.TYPE and npc.Variant == BotB.Enums.Entities.FLAPSTACK.VARIANT then 
         npc.HitPoints = npc.MaxHitPoints

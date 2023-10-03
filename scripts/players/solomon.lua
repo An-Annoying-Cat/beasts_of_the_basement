@@ -2,7 +2,7 @@ local Mod = BotB
 local Solomon = {}
 BotB.FF = FiendFolio
 
-local PLAYER_SOLOMON = Isaac.GetPlayerTypeByName("Solomon")
+local PLAYER_SOLOMON = Isaac.GetPlayerTypeByName("Solomon", false)
 BotB.SOLOMON_EXTRA1 = Isaac.GetCostumeIdByPath("gfx/characters/character_solomon_extra1.anm2")
 BotB.SOLOMON_EXTRA2 = Isaac.GetCostumeIdByPath("gfx/characters/character_solomon_extra2.anm2")
 function Solomon:playerGetCostume(player)

@@ -22,6 +22,11 @@ function PUER:NPCUpdate(npc)
 
 
     if npc.Type == BotB.Enums.Entities.PUER.TYPE and npc.Variant == BotB.Enums.Entities.PUER.VARIANT then 
+
+        if npc.GridCollisionClass ~= EntityGridCollisionClass.GRIDCOLL_GROUND then
+            npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
+        end
+
         if data.teleDistance== nil then
             if npc.SubType == 1 then
                 data.teleDistance = 100
@@ -52,7 +57,7 @@ function PUER:NPCUpdate(npc)
         end
 
         if npc.State == 99 then
-            if npc.FrameCount == data.teleBaseFrameCount + 19 then
+            if npc.FrameCount == data.teleBaseFrameCount + 19 and data.afterimage ~= nil then
                 if npc.SubType == 1 then
                     sfx:Play(BotB.Enums.SFX.PUER_SHOOT,1,0,false,math.random(100,120)/100)
                   else
@@ -104,6 +109,7 @@ function PUER:NPCUpdate(npc)
         end
 
         if npc.State == 100 then
+            --[[
             repeat
                 if npc.SubType == 1 then
                     data.telePos = targetpos + Vector(100,0):Rotated(math.random(360))
@@ -113,7 +119,9 @@ function PUER:NPCUpdate(npc)
                     data.gotValidTelePos = true
                 end
                 
-            until data.gotValidTelePos
+            until data.gotValidTelePos]]
+            --data.telePos = room:FindFreeTilePosition(room:GetRandomPosition(100), 100)
+            data.telePos = room:FindFreePickupSpawnPosition(room:FindFreeTilePosition(room:GetRandomPosition(100), 100), 1, true, false)
             --after teleport is done...
             game:ShakeScreen(8)
             data.afterimage = Isaac.Spawn(EntityType.ENTITY_EFFECT,BotB.Enums.Entities.PP_AFTERIMAGE.VARIANT,0,npc.Position,Vector(0,0),npc)

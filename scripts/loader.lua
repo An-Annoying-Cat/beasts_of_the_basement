@@ -29,6 +29,14 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.grilled_flapjack",
     "scripts.entities.enemies.chapter_1.grilled_flapstack",
     "scripts.entities.enemies.chapter_1.cherry",
+    "scripts.entities.enemies.chapter_1.high_clotty",
+    "scripts.entities.enemies.chapter_1.ant",
+    "scripts.entities.enemies.chapter_1.bullet_ant",
+    "scripts.entities.enemies.chapter_1.super_bullet_ant",
+    "scripts.entities.enemies.chapter_1.stunky",
+
+
+
     "scripts.entities.enemies.chapter_1.drone",
     "scripts.entities.enemies.chapter_1.unboxer",
 
@@ -96,6 +104,10 @@ Mod.LoadScripts({
     "scripts.entities.familiars.bhf",
     "scripts.entities.familiars.faithfulfleet",
     --"scripts.entities.familiars.jail_keyghost",
+    "scripts.entities.familiars.amorphous_globosa",
+    "scripts.entities.familiars.buzz_fly",
+    "scripts.entities.familiars.attack_ant",
+    "scripts.entities.familiars.clay_soldier",
 
 
     --ITEMS
@@ -133,6 +145,7 @@ Mod.LoadScripts({
     "scripts.entities.items.dusty_d4",
     "scripts.entities.items.x10_shitposts",
     "scripts.entities.items.faded_note",
+    "scripts.entities.items.milas_head",
 
 
     --TRINKETS
@@ -147,6 +160,8 @@ Mod.LoadScripts({
     "scripts.entities.items.trinkets.blank_white_card",
     "scripts.entities.items.trinkets.yes",
     "scripts.entities.items.trinkets.floppy_disk",
+    --
+    "scripts.entities.items.trinkets.scented_penny",
 
 
     --PICKUPS
@@ -179,6 +194,8 @@ Mod.LoadScripts({
     --PLAYERS
     "scripts.players.jezebel",
     "scripts.players.solomon",
+    "scripts.players.tezebel",
+    "scripts.players.tolomon",
 
     --CHALLENGES
     "scripts.challenges.back_pocket",

@@ -73,7 +73,7 @@ function Mod.radioactiveBarrelUpdate(customGrid)
                 if entity.Type == EntityType.ENTITY_PLAYER then
                     local entdistance = (entity.Position - grid.Position):Length()
                     --print("is " .. entdistance .. " <= " .. 200 * effect.SpriteScale.X .. " ?" )
-                    if entdistance <= 100 then
+                    if entdistance <= 80 then
                         if entity:GetData().radDuration <= 60 then
                             entity:GetData().addRads = true
                         end
@@ -123,7 +123,7 @@ function Mod.radioactiveBarrelSpawn(customGrid)
                 customGrid.Data.radCirle.Parent = npc
                 customGrid.Data.radCirle.SpriteScale = Vector(0.01,0.01)
                 customGrid.Data.radCirle.SortingLayer = SortingLayer.SORTING_BACKGROUND
-                customGrid.Data.radCirle:GetData().radCircleMaxScale = 0.5
+                customGrid.Data.radCirle:GetData().radCircleMaxScale = 0.4
     end
 
     local hdata = customGrid.Data.Hitbox:GetData()

@@ -58,6 +58,7 @@ local LOCAL_TSIL = require(myFolder .. ".TSIL")
 LOCAL_TSIL.Init(myFolder)
 ]]
 
+
 --Hidden item manager
 local hiddenItemManager = require("scripts.core.hidden_item_manager")
 --hiddenItemManager:Init(BotB)
@@ -283,5 +284,14 @@ Mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, BotB.TaintedCompat)
 --
 if EID then
     EID:setModIndicatorName("Beasts Of The Basement")
+
+		local sprite = Sprite()
+		sprite:Load("gfx/misc/eidMarkup.anm2", true)
+		EID:addIcon("BotBIndicator", "Beasts Of The Basement",0,16,16,0,0,sprite)
+
+		EID:setModIndicatorIcon("BotBIndicator")
 end
 --
+
+
+

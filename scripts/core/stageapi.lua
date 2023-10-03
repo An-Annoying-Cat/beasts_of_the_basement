@@ -33,6 +33,7 @@ if StageAPI and StageAPI.Loaded then
 			Name = "Despair",
 			Portrait = "gfx/bosses/despair/despair_portrait_placeholder.png",
 			Bossname = "gfx/bosses/despair/bossname_despair.png",
+			Horseman = true,
 			Rooms = StageAPI.RoomsList("DespairBossRooms", include("resources.luarooms.bosses.boss_despair"))
 		}),
 	

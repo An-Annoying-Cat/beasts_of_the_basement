@@ -193,6 +193,12 @@
 	<sound name="AriralScream">
 		<sample weight="1" path="items/ariralScream.wav" />
 	</sound>
+	<sound name="CowMoo">
+		<sample weight="1" path="cowMoo1.wav" />
+		<sample weight="1" path="cowMoo2.wav" />
+		<sample weight="1" path="cowMoo3.wav" />
+		<sample weight="1" path="cowMoo4.wav" />
+	</sound>
 	<!--Items-->
 	<sound name="EnlightenmentFire">
 		<sample weight="1" path="items/enlightenmentFire.wav" />

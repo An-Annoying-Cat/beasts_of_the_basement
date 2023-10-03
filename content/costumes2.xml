@@ -3,6 +3,7 @@
     <costume anm2path="character_jez_extra.anm2"        type="none"     priority="99" />
     <costume anm2path="character_solomon_extra1.anm2"   type="none"     priority="98" />
     <costume anm2path="character_solomon_extra2.anm2"   type="none"     priority="99" />
+    <costume anm2path="character_tolomon_extra2.anm2"   type="none"     priority="99" />
     <!-- Item costumes-->
     <costume id="1" anm2path="alphaArmor.anm2"                 type="passive"  priority="99" hasSkinAlt="true"/>
     <costume id="2" anm2path="treemanSyndrome.anm2"            type="passive"  priority="10" hasSkinAlt="false"/>

@@ -14,5 +14,19 @@
           portrait="PlayerPortrait_Jezebel.png" 
           bigportrait="PlayerPortraitBig_Jezebel.png" skinColor="-1" 
 		  birthright="Slower metabolism" />
+
+    <player name="Tolomon" skin="player_tolomon.png" hp="4"
+          nameimage="PlayerName_Solomon.png" costumeSuffix="solomon"
+          portrait="PlayerPortrait_Solomon.png" 
+          bigportrait="PlayerPortraitBig_Solomon.png" skinColor="-1" 
+		  birthright="More materials" 
+          bSkinParent="Solomon"/>
+
+    <player name="Tezebel" skin="player_jezebel.png" hp="1"
+          nameimage="PlayerName_Jezebel.png" costumeSuffix="jezebel"
+          portrait="PlayerPortrait_Jezebel.png" 
+          bigportrait="PlayerPortraitBig_Jezebel.png" skinColor="-1" 
+		  birthright="Predatory instincts" 
+          bSkinParent="Jezebel"/>
           
 </players>

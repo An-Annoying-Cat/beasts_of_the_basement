@@ -75,6 +75,12 @@
 
     <passive id="62" quality="4" name="Faded Note" description="La salle d'attente" gfx="faded_note.png" hidden="true" />
 
+    <familiar id="63" quality="2" name="Amorphous Globosa" description="Benign buddies!" gfx="amorphous_globosa.png" tags="monstermanual"/>
+    <familiar id="64" quality="3" name="Buzz Fly" description="He's out for blood!" gfx="buzz_fly.png" tags="monstermanual"/>
+    <active id="66" quality="1" name="Mila's Head" description="Reusable ant colony" gfx="milas_head.png" chargetype="normal" maxcharges="2"/>
+    <active id="67" quality="4" name="The Lesser Key" description="Bound in stone" gfx="the_lesser_key.png" chargetype="normal" hidden="true" tags="book" maxcharges="8"/>
+    <familiar id="68" quality="0" name="Clay Soldier Dummy" description="Why do you have this bruh" gfx="clay_soldier.png" hidden="true" />
+
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
     <passive id="9" quality="1" name="B.H.F." description="Big Hesitant Fly" gfx="item_bhf.png" cache="familiars"/>
@@ -97,6 +103,7 @@
     <trinket name="YES!" description="Hell yeah!" gfx="yes.png" />
     <trinket name="Floppy Disk" description="Lost memories..." gfx="floppy_disk.png" />
     <trinket name="Plastic Key" description="Toyboxes!" gfx="plastic_key.png" />
+    <trinket name="Scented Penny" description="Wealth of pheremones" gfx="scented_penny.png" />
     <!--
         <trinket name="The Other Hand" description="Reaps other rewards...?" gfx="the_other_hand.png" />
     -->
