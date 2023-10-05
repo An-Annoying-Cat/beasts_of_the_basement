@@ -703,7 +703,10 @@
     <entity anm2path="familiar/attack_ant.anm2" tags="" variant="2460" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Attack Ant" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
-    <entity anm2path="no.anm2" tags="" variant="2461" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Clay Soldier (Tracker)" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
+    <entity anm2path="no.anm2" tags="" variant="2461" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Clay Soldier (Tracker)" numGridCollisionPoints="12" shadowSize="0" stageHP="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="familiar/lesser_key_chargebar.anm2" tags="" variant="2462" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Clay Soldier (Chargebar)" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 

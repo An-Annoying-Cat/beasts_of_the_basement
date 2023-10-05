@@ -373,6 +373,7 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
             data.doRecoveryTime = false
             data.homunculusRecoveryTimeMax = 240 --just a baseline
             data.homunculusRecoveryTime = data.homunculusRecoveryTimeMax
+            data.isRespawning = false
         end
 
         if npc.State ~= 99 then
@@ -470,8 +471,8 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
 
 
         if data.pickupTable.soulHearts ~= 0 then
-            if data.homunculusRecoveryTimeMax ~= math.ceil((240 + (20*amtPickups)) * (0.8 ^ (data.pickupTable.soulHearts * 0.5))) then
-                data.homunculusRecoveryTimeMax = math.ceil((240 + (20*amtPickups)) * (0.8 ^ (data.pickupTable.soulHearts * 0.5)))
+            if data.homunculusRecoveryTimeMax ~= math.ceil((240 + (20*amtPickups)) * (0.8 ^ (data.pickupTable.soulHearts * 0.75))) then
+                data.homunculusRecoveryTimeMax = math.ceil((240 + (20*amtPickups)) * (0.8 ^ (data.pickupTable.soulHearts * 0.75)))
             end
         else
             data.homunculusRecoveryTimeMax = math.ceil((240 + (20*amtPickups)))
@@ -514,10 +515,11 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
 
 
 
-
+        
         --handles respawning
         if data.familiarEnemy == nil or data.familiarEnemy:IsDead() then
             if data.isFirstTimeSpawning == true then
+                data.isRespawning = false
                 data.familiarEnemy = Isaac.Spawn(BotB.Enums.Entities.CLAY_SOLDIER.TYPE,BotB.Enums.Entities.CLAY_SOLDIER.VARIANT,0,npc.Position, Vector.Zero,npc):ToNPC()
                 data.familiarEnemy.Parent = npc
                 data.familiarEnemy:AddEntityFlags(EntityFlag.FLAG_FRIENDLY | EntityFlag.FLAG_PERSISTENT)
@@ -537,13 +539,22 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
     
                 end
             else
+                if data.chargeBar == nil then
+                    data.chargeBar = Isaac.Spawn(EntityType.ENTITY_FAMILIAR, BotB.Enums.Familiars.CLAY_SOLDIER_CHARGEBAR.VARIANT, 0, npc.Player.Position,Vector.Zero,npc.Player):ToFamiliar()
+                end
                 if data.homunculusRecoveryTime == nil then
                     data.homunculusRecoveryTime = data.homunculusRecoveryTimeMax
                 end
                 if data.homunculusRecoveryTime ~= 0 then
-                    print(data.homunculusRecoveryTime)
+                    --print(data.homunculusRecoveryTime)
                     data.homunculusRecoveryTime = data.homunculusRecoveryTime - 1
+                    --npc:GetSprite():Play("Charging")
+                    --print(math.floor((1-(data.homunculusRecoveryTime/data.homunculusRecoveryTimeMax))*100))
+                    data.chargeBar:GetSprite():SetFrame("Charging", (math.floor((1-(data.homunculusRecoveryTime/data.homunculusRecoveryTimeMax))*100)))
                 else
+                    data.chargeBar:GetSprite():Play("Finished")
+                    data.chargeBar = nil
+                    data.isRespawning = false
                     data.familiarEnemy = Isaac.Spawn(BotB.Enums.Entities.CLAY_SOLDIER.TYPE,BotB.Enums.Entities.CLAY_SOLDIER.VARIANT,0,npc.Position, Vector.Zero,npc):ToNPC()
                     data.familiarEnemy.Parent = npc
                     data.familiarEnemy:AddEntityFlags(EntityFlag.FLAG_FRIENDLY | EntityFlag.FLAG_PERSISTENT)
@@ -565,9 +576,26 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
                     data.homunculusRecoveryTime = data.homunculusRecoveryTimeMax
                 end
             end
+        else
+            if data.familiarEnemy.State == 100 then
+                if npc.Player:HasCollectible(CollectibleType.COLLECTIBLE_SPIRIT_SWORD, true) then
+                    if data.invisibleFetus == nil or data.invisibleFetus:IsDead() then
+                        data.invisibleFetus = Isaac.Spawn(EntityType.ENTITY_TEAR, TearVariant.FETUS,0,data.familiarEnemy.Position,Vector.Zero,npc.Player):ToTear()
+                        data.invisibleFetus:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_SWORD)
+                        data.invisibleFetus.HomingFriction = 0
+                        data.invisibleFetus:GetData().isInvisibleFetus = true
+                        data.invisibleFetus.Color = Color(1,1,1,1)
+                        data.invisibleFetus.Visible = false
+                        data.invisibleFetus.FallingSpeed = -1
+                        data.invisibleFetus.FallingAcceleration = -0.2
+                        data.invisibleFetus.Scale = 1.5
+                        data.invisibleFetus:GetData().followThisDude = data.familiarEnemy
+                    end
+                end
+            end
         end
 
-
+        
 
 
         --[[
@@ -588,14 +616,26 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
                 else
                     npc:FollowParent()
                 end  
-                npc.Position = npc.Player.Position
             end
            
-            if room:IsClear() == false or doesRoomHaveEnemies() then
-                data.followingTarget = CLAY_SOLDIER:findNearestEnemy(npc.Player)
-                npc.Position = data.followingTarget.Position
+            if (room:IsClear() == false or doesRoomHaveEnemies()) then
+                if data.isRespawning ~= true then
+                    data.followingTarget = CLAY_SOLDIER:findNearestEnemy(npc.Player)
+                    npc.Position = data.followingTarget.Position
+                end
+                
             else
-                npc.Position = npc.Player.Position
+                if data.isRespawning == true or npc:GetSprite():IsPlaying("Finished") then
+                    if not npc.IsFollower then
+                        npc:AddToFollowers()
+                    else
+                        npc:FollowParent()
+                    end  
+                else
+                    
+                    --npc.Position = npc.Player.Position
+                end
+                
             end
             
 
@@ -672,6 +712,7 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
                     end
                 end
             end
+
             data.fireDelayIncrement = 1
             if npc.Player:HasWeaponType(WeaponType.WEAPON_TECH_X) or npc.Player:HasWeaponType(WeaponType.WEAPON_FETUS) then
                 data.fireDelayIncrement = 8
@@ -682,6 +723,8 @@ function CLAY_SOLDIER:FamiliarUpdate(npc)
             if data.fireDelay < 0 then
                 data.fireDelay = data.inheritedPlayerStats.MaxFireDelay
             end
+            data.fireDelay = math.floor(data.fireDelay)
+            --print(data.fireDelay)
         end
 
     end
@@ -984,8 +1027,22 @@ function CLAY_SOLDIER:FireInheritedWeapon(familiar, angleOffset)
                 
                 local dudedistance = (data.familiarEnemy.Position - npc.Position):Length()
                 if dudedistance < 100 then
-                    data.myKnife:Shoot(0, 99)
+                    --data.myKnife:Shoot(0, 99)
+                    data.myKnife.Visible = false
+                    if data.invisibleFetus == nil or data.invisibleFetus:IsDead() then
+                        data.invisibleFetus = Isaac.Spawn(EntityType.ENTITY_TEAR, TearVariant.FETUS,0,data.familiarEnemy.Position,Vector.Zero,npc.Player):ToTear()
+                        data.invisibleFetus:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_BONE | TearFlags.TEAR_FETUS_KNIFE )
+                        data.invisibleFetus.HomingFriction = 0
+                        data.invisibleFetus:GetData().isInvisibleFetus = true
+                        data.invisibleFetus.Color = Color(1,1,1,1)
+                        data.invisibleFetus.Visible = false
+                        data.invisibleFetus.FallingSpeed = -1
+                        data.invisibleFetus.FallingAcceleration = -0.2
+                        data.invisibleFetus.Scale = 1.5
+                        data.invisibleFetus:GetData().followThisDude = data.familiarEnemy
+                    end
                 else
+                    data.myKnife.Visible = true
                     data.myKnife:Shoot(1, 99)
                 end
             else
@@ -994,7 +1051,26 @@ function CLAY_SOLDIER:FireInheritedWeapon(familiar, angleOffset)
                 end
                 if data.myKnife:IsFlying() == false then
                     data.myKnife.Rotation = data.fireAngle + offset
-                    data.myKnife:Shoot(1, 99)
+                    local dudedistance = (data.familiarEnemy.Position - npc.Position):Length()
+                    if dudedistance < 100 then
+                        data.myKnife.Visible = false
+                        --data.myKnife:Shoot(0, 99)
+                        if data.invisibleFetus == nil or data.invisibleFetus:IsDead() then
+                            data.invisibleFetus = Isaac.Spawn(EntityType.ENTITY_TEAR, TearVariant.FETUS,0,data.familiarEnemy.Position,Vector.Zero,npc.Player):ToTear()
+                            data.invisibleFetus:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_BONE | TearFlags.TEAR_FETUS_KNIFE )
+                            data.invisibleFetus.HomingFriction = 0
+                            data.invisibleFetus:GetData().isInvisibleFetus = true
+                            data.invisibleFetus.Color = Color(1,1,1,1)
+                            data.invisibleFetus.Visible = false
+                            data.invisibleFetus.FallingSpeed = -1
+                            data.invisibleFetus.FallingAcceleration = -0.2
+                            data.invisibleFetus.Scale = 1.5
+                            data.invisibleFetus:GetData().followThisDude = data.familiarEnemy
+                        end
+                    else
+                        data.myKnife.Visible = true
+                        data.myKnife:Shoot(1, 99)
+                    end
                 end
                 
             end
@@ -1007,20 +1083,46 @@ function CLAY_SOLDIER:FireInheritedWeapon(familiar, angleOffset)
                 if data.doAdditionalTearEffects == true then
                     data.myKnife:AddTearFlags(data.additionalTearFlags)
                     end
-                local dudedistance = (data.familiarEnemy.Position - npc.Position):Length()
-                if dudedistance < 100 then
-                    data.myKnife:Shoot(0.325, 99)
-                else
-                    data.myKnife:Shoot(1, 99)
-                end
+                    local dudedistance = (data.familiarEnemy.Position - npc.Position):Length()
+                    if dudedistance < 100 then
+                        data.myKnife.Visible = false
+                        if data.invisibleFetus == nil or data.invisibleFetus:IsDead() then
+                            data.invisibleFetus = Isaac.Spawn(EntityType.ENTITY_TEAR, TearVariant.FETUS,0,data.familiarEnemy.Position,Vector.Zero,npc.Player):ToTear()
+                            data.invisibleFetus:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_BONE)
+                            data.invisibleFetus.HomingFriction = 0
+                            data.invisibleFetus:GetData().isInvisibleFetus = true
+                            data.invisibleFetus.Color = Color(1,1,1,1)
+                            data.invisibleFetus.Visible = false
+                            data.invisibleFetus.FallingSpeed = -1
+                            data.invisibleFetus.FallingAcceleration = -0.2
+                            data.invisibleFetus.Scale = 1.5
+                            data.invisibleFetus:GetData().followThisDude = data.familiarEnemy
+                        end
+                    else
+                        data.myKnife.Visible = true
+                        data.myKnife:Shoot(1, 99)
+                    end
                 
             else
                 if data.myKnife:IsFlying() == false then
                     data.myKnife.Rotation = data.fireAngle + offset
                     local dudedistance = (data.familiarEnemy.Position - npc.Position):Length()
                     if dudedistance < 100 then
-                        data.myKnife:Shoot(0.325, 99)
+                        data.myKnife.Visible = false
+                        if data.invisibleFetus == nil or data.invisibleFetus:IsDead() then
+                            data.invisibleFetus = Isaac.Spawn(EntityType.ENTITY_TEAR, TearVariant.FETUS,0,data.familiarEnemy.Position,Vector.Zero,npc.Player):ToTear()
+                            data.invisibleFetus:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_BONE)
+                            data.invisibleFetus.HomingFriction = 0
+                            data.invisibleFetus:GetData().isInvisibleFetus = true
+                            data.invisibleFetus.Color = Color(1,1,1,1)
+                            data.invisibleFetus.Visible = false
+                            data.invisibleFetus.FallingSpeed = -1
+                            data.invisibleFetus.FallingAcceleration = -0.2
+                            data.invisibleFetus.Scale = 1.5
+                            data.invisibleFetus:GetData().followThisDude = data.familiarEnemy
+                        end
                     else
+                        data.myKnife.Visible = true
                         data.myKnife:Shoot(1, 99)
                     end
                 end
@@ -1054,6 +1156,7 @@ function CLAY_SOLDIER:NPCUpdate(npc)
     if npc.Type == BotB.Enums.Entities.CLAY_SOLDIER.TYPE and npc.Variant == BotB.Enums.Entities.CLAY_SOLDIER.VARIANT then 
 
         --print("nutsack")
+        local data = npc:GetData()
         local pdata = npc.Parent:GetData()
         local sprite = npc:GetSprite()
         local player = npc:GetPlayerTarget()
@@ -1176,6 +1279,8 @@ function CLAY_SOLDIER:NPCUpdate(npc)
                 print("gunt")
                 claySoldierPathfinder:FindGridPath(room:FindFreePickupSpawnPosition(npc.Parent.Position, 1, true, false), (pdata.inheritedPlayerStats.MoveSpeed)*0.5, 0, true)
             end]]
+            --claySoldierPathfinder:FindGridPath(room:FindFreePickupSpawnPosition(npc.Parent.Position, 1, true, false), (pdata.inheritedPlayerStats.MoveSpeed)*0.5, 0, true)
+            --
             if data.noMove == false then
                 claySoldierPathfinder:FindGridPath(room:FindFreePickupSpawnPosition(npc.Parent.Position, 1, true, false), (pdata.inheritedPlayerStats.MoveSpeed)*0.5, 0, true)
             else
@@ -1218,7 +1323,7 @@ function CLAY_SOLDIER:NPCUpdate(npc)
         --print(sprite:GetOverlayFrame())
             if npc.State == 100 then
                 if sprite:GetOverlayFrame() == 1 then
-                    SFXManager():Play(SoundEffect.SOUND_TEARS_FIRE,8,0,false,math.random(800,900)/1000)
+                    SFXManager():Play(SoundEffect.SOUND_TEARS_FIRE,1,0,false,math.random(800,900)/1000)
                     npc.State = 99
                 end
 
@@ -1281,8 +1386,11 @@ function CLAY_SOLDIER:NPCUpdate(npc)
             --Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
         --print(sprite:GetOverlayAnimation())
             if npc:HasMortalDamage() then
+                
                 pdata.isFirstTimeSpawning = false
                 pdata.homunculusRecoveryTime = pdata.homunculusRecoveryTimeMax
+                
+                --data.chargeBar = recoveryChargeBar
             end
 
             if data.doEID == true then
@@ -1314,7 +1422,7 @@ function CLAY_SOLDIER:NPCRender(npc)
                 local f = Font() -- init font object
                 f:Load("font/pftempestasevencondensed.fnt") -- load a font into the font object
                 -- In a render function on every frame:
-                local healthMeter = "" .. npc.HitPoints .. "/" .. npc.MaxHitPoints .. ""
+                local healthMeter = "" .. math.floor((1000*(npc.HitPoints)))/1000 .. "/" .. npc.MaxHitPoints .. ""
                 local widthOffset = f:GetStringWidth(healthMeter)/2
                 f:DrawString(healthMeter,Isaac.WorldToScreen(npc.Position).X - widthOffset,Isaac.WorldToScreen(npc.Position).Y-60,KColor(1,1,1,1),0,true) -- render string with loaded font on position (60, 50)
                 --Isaac.RenderText(npc.Type .. "." .. npc.Variant .. "." .. npc.SubType, Isaac.WorldToScreen(npc.Position).X - 20,Isaac.WorldToScreen(npc.Position).Y-40,1,1,1,1)
@@ -1897,7 +2005,10 @@ local tolFamiliarNames = {
     "Gurt", "Skluntt", "Gorky", "Crungle", "Fuck", "Shit", "Piss", "Boner", --I am very mature
     "Chunt", "Bungleton", "Fugorp", "Fenchalor", "Beebis", "Chongo", "Scrunt", "Shanaenae", "Lakakos", "Foog",
     "Fergus", "Brempel", "Scrumble", "Wimphort", "Kevin", "Kebin", "FlingyDeengee", "Waoflumt", "Queamples",  "Gaben At Valve Software Dot Com",
-    "[The entirety of Pulse Demon by Merzbow]", "Moist", "Brungtt",
+    "[The entirety of Pulse Demon by Merzbow]", "Moist", "Brungtt", "Jungus", "Flobing", "Bitorong", "Bolainas", "Pilgor", "Buckley","Buttnick", "Wanka", "Ol Chap","Fred Fuchs", "Xavier", "Smokey","Luchetti", "DICKTONG", "ASSPLITS", "TILLBIRTH", "Friendlyvilleson",
+    "Filbit", "Quartet", "Snarled", "Flossing", "Dingdong", "BABING", "ticktok", "Generic", "Placeholder", "Namenotfound", "Isaac", "David Streaks from The Popular Webcomic Full House", "E", "Dude", "The Cooler Dude",
+    "The", "Postal", "I  I I  I I  L", "Ricardo", "Elver Galarga", "Sapee", "Rosamelano", 
+    "Bolainas", "Pilgor", "Buckley", "Buttnick", "Wanka", "Ol Chap", "Fred Fuchs", "Xavier", "Smokey", "Flimflam", "Joe", "Cacarion", "Meaty", "SilSSSLLLLAMMER!",
 }
 local tolFamiliarLinks = {
     " ", "", "-", " and ", " with ", " or ", " without ", " when ", " at ", "...", " of ", " of the ", " for ", ": ", "_",  " because ", " for ", "/", " the "
@@ -1914,7 +2025,7 @@ local tolFamiliarPrefixes = {
     "His Holiness ", "Her Holiness ", "Their Holiness, ", "Xir Holiness ", "His Eminence ", "Her Eminence ", "Their Eminence, ", "Xir Eminence ", "The Ultimate ", "The Final ", "The Real ", "The Last ", "The First ", "The Second ", "The First Coming of ", "The Second Coming of ",
     "Principal ", "Dean ", "Warden ", "Rector ", "Director ", "Provost ", "Chief Executive ", "Father ", "Mother ", "Sister ", "Brother ", "Elder ", "Reverend ", "Priest ", "Priestess ", "High ", "Low ", "Venerable ",
     "Judicio-", "Supreme Court Justice ", "Good Friend ", "Best Friend ", "Worst Friend ", "President ", "Prime Minister ", "Dictator ", "Senator ", "Congress Representative ", "Real ", "Psycho-", "Vino-", "Mega-", "Nano-", "Sykoh-", "Mc",
-    "The ", "Super ", "Ultra ", "Mega ", "Mini ", "Tera ", "It's ", "That's ", "It's a ", "A ", "This ", "That ", "Fat ", "Big ", "Huge "
+    "The ", "Super ", "Ultra ", "Mega ", "Mini ", "Tera ", "It's ", "That's ", "It's a ", "A ", "This ", "That ", "Fat ", "Big ", "Huge ", "Cream of ",
 }
 local tolFamiliarSuffixes = {
     "son", "erson", "kin", "daughter", "dottir", "kind", "kid", "pup", "kit", "star", "leaf", "stripe", "claw", "butt", "snoot", ", Esq.", ", M.D.", ", PhD", ", E.D.", "-san", "-tan", "-kun", "-chan", "-sama", "-sensei",
@@ -2233,3 +2344,42 @@ function CLAY_SOLDIER:spawnVirtuousBatteryWisp(player, data)
         sfx:Play(SoundEffect.SOUND_CANDLE_LIGHT, 1, 0, false, 1)
     end
 end
+
+
+
+function CLAY_SOLDIER:onUpdTear(tear)
+	
+	--this basically exists to make doing forgotten club and spirit sword much easier
+    if tear:GetData().isInvisibleFetus ~= true then return end
+    local data = tear:GetData()
+    if data.followThisDude == nil or data.followThisDude:IsDead() or tear.FrameCount > 40 then
+        tear:Remove()
+    else
+        
+        local sprite = tear:GetSprite()
+        print(sprite:GetFrame())
+        --tear:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_SWORD)
+        tear.Scale = 1.5
+        tear.Position = data.followThisDude.Position
+    end
+    
+end
+Mod:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, CLAY_SOLDIER.onUpdTear)
+
+
+
+function CLAY_SOLDIER:onUpdChargeBar(npc)
+
+    if not npc.IsFollower then
+        npc:AddToFollowers()
+    else
+        npc:FollowParent()
+    end  
+
+    if npc:GetSprite():IsFinished("Finished") then
+        npc:Remove()
+    end
+
+end
+
+Mod:AddCallback(ModCallbacks.MC_FAMILIAR_UPDATE, CLAY_SOLDIER.onUpdChargeBar, Isaac.GetEntityVariantByName("Clay Soldier (Chargebar)"))

@@ -88,6 +88,7 @@ local ToyItemPool = {
     BotB.Enums.Items.LIQUID_LATEX,
     BotB.Enums.Items.CHAMPS_MASK,
     BotB.Enums.Items.CROWBAR,
+    BotB.Enums.Items.FLIPPED_NOTE,
 }
 
 if FiendFolio then

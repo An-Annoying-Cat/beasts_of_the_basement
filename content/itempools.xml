@@ -4,6 +4,7 @@
         <Item Name="Robo-Baby Zero" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Onyx Marble" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Atom Bomb Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Atom Bomb Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <!--<Item Name="B.H.F." Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>-->
         <Item Name="Crowbar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Tech Nano" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -15,6 +16,9 @@
         <Item Name="Dusty D100" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="D11" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buzz Fly" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Flipped Note" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Ahhh..." Weight="0.0001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Oh Sweet Merciful Christ!" Weight="0.00001" DecreaseBy="0.5" RemoveOn="0"/>
     </Pool>
@@ -53,6 +57,7 @@
         <Item Name="Dusty D100" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="D11" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Flipped Note" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="secret">
         <Item Name="Alpha Armor" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -69,6 +74,7 @@
         <Item Name="D11" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Faded Note" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Flipped Note" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         
 
         <Item Name="Ahhh..." Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -85,6 +91,7 @@
         <Item Name="Blood Meridian" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buzz Fly" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -109,6 +116,7 @@
         <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Wiggly Boy" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Plop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Buzz Buzz!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -130,6 +138,7 @@
         <Item Name="50 Shades Of Grey" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Blood Meridian" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="House Of Leaves" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="The Lesser Key" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
 
     <Pool Name="ultraSecret">

@@ -287,7 +287,7 @@ if EID then
 
 		local sprite = Sprite()
 		sprite:Load("gfx/misc/eidMarkup.anm2", true)
-		EID:addIcon("BotBIndicator", "Beasts Of The Basement",0,16,16,0,0,sprite)
+		EID:addIcon("BotBIndicator", "BotB",0,16,18,0,0,sprite)
 
 		EID:setModIndicatorIcon("BotBIndicator")
 end

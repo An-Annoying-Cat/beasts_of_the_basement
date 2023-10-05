@@ -537,6 +537,10 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("Clay Soldier (Tracker)"),
         VARIANT = Isaac.GetEntityVariantByName("Clay Soldier (Tracker)"),
     },
+    CLAY_SOLDIER_CHARGEBAR = {
+        TYPE = Isaac.GetEntityTypeByName("Clay Soldier (Chargebar)"),
+        VARIANT = Isaac.GetEntityVariantByName("Clay Soldier (Chargebar)"),
+    },
 }
 
 Enums.SFX = {
@@ -705,6 +709,12 @@ Enums.Items = {
     BUZZ_FLY = Isaac.GetItemIdByName("Buzz Fly"),
     MILAS_HEAD = Isaac.GetItemIdByName("Mila's Head"),
     CLAY_SOLDIER = Isaac.GetItemIdByName("The Lesser Key"),
+    BUPRINORPHINE = Isaac.GetItemIdByName("Buprinorphine"),
+    KROKODIL = Isaac.GetItemIdByName("Krokodil"),
+    FLIPPED_NOTE = Isaac.GetItemIdByName("Flipped Note"),
+    PANDEMONIUM = Isaac.GetItemIdByName("Pandemonium"),
+    TOY_PHONE = Isaac.GetItemIdByName("Toy Phone"),
+    TOY_PHONE_ALT = Isaac.GetItemIdByName("Toy Phone?"),
 }
 
 Enums.Trinkets = {

@@ -146,6 +146,8 @@ Mod.LoadScripts({
     "scripts.entities.items.x10_shitposts",
     "scripts.entities.items.faded_note",
     "scripts.entities.items.milas_head",
+    "scripts.entities.items.buprinorphine",
+    "scripts.entities.items.flipped_note",
 
 
     --TRINKETS
