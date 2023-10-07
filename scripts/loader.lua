@@ -87,6 +87,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_5.cursed_mulligan",
     "scripts.entities.enemies.chapter_5.cursed_pooter",
     "scripts.entities.enemies.chapter_5.cursed_mulliboom",
+    "scripts.entities.enemies.chapter_5.choir",
 
 
     "scripts.entities.enemies.ascent.batso",
@@ -96,6 +97,7 @@ Mod.LoadScripts({
 
     --BOSSES
     "scripts.entities.bosses.despair",
+    "scripts.entities.bosses.doortrap",
 
     --FAMILIARS
     "scripts.entities.familiars.robobabyzero",
@@ -148,6 +150,8 @@ Mod.LoadScripts({
     "scripts.entities.items.milas_head",
     "scripts.entities.items.buprinorphine",
     "scripts.entities.items.flipped_note",
+    "scripts.entities.items.krokodil",
+    "scripts.entities.items.toy_phone",
 
 
     --TRINKETS

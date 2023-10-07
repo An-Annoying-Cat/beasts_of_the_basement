@@ -408,6 +408,40 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Clay Soldier"),
     },
 
+    DOORTRAP_EYE = {
+        TYPE = Isaac.GetEntityTypeByName("Doortrap (Eye)"),
+        VARIANT = Isaac.GetEntityVariantByName("Doortrap (Eye)"),
+    },
+    DOORTRAP_MOUTH = {
+        TYPE = Isaac.GetEntityTypeByName("Doortrap (Mouth)"),
+        VARIANT = Isaac.GetEntityVariantByName("Doortrap (Mouth)"),
+    },
+    DOORTRAP_BUTT = {
+        TYPE = Isaac.GetEntityTypeByName("Doortrap (Butt)"),
+        VARIANT = Isaac.GetEntityVariantByName("Doortrap (Butt)"),
+    },
+    DOORTRAP_HIVE = {
+        TYPE = Isaac.GetEntityTypeByName("Doortrap (Hive)"),
+        VARIANT = Isaac.GetEntityVariantByName("Doortrap (Hive)"),
+    },
+    DOORTRAP_CUBE = {
+        TYPE = Isaac.GetEntityTypeByName("Doortrap (Cube)"),
+        VARIANT = Isaac.GetEntityVariantByName("Doortrap (Cube)"),
+    },
+
+    SOPRANO = {
+        TYPE = Isaac.GetEntityTypeByName("Soprano"),
+        VARIANT = Isaac.GetEntityVariantByName("Soprano"),
+    },
+    ALTO = {
+        TYPE = Isaac.GetEntityTypeByName("Alto"),
+        VARIANT = Isaac.GetEntityVariantByName("Alto"),
+    },
+    TENOR = {
+        TYPE = Isaac.GetEntityTypeByName("Tenor"),
+        VARIANT = Isaac.GetEntityVariantByName("Tenor"),
+    },
+
 
 
 
@@ -585,6 +619,9 @@ Enums.SFX = {
 
     SLIGHT_PANIC = Isaac.GetSoundIdByName("SlightPanic"),
 
+    CHOIR_HURT = Isaac.GetSoundIdByName("ChoirHurt"),
+    CHOIR_HURT_FUNNY = Isaac.GetSoundIdByName("ChoirHurtFunny"),
+
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
 
@@ -715,6 +752,7 @@ Enums.Items = {
     PANDEMONIUM = Isaac.GetItemIdByName("Pandemonium"),
     TOY_PHONE = Isaac.GetItemIdByName("Toy Phone"),
     TOY_PHONE_ALT = Isaac.GetItemIdByName("Toy Phone?"),
+    TOY_PHONE_DUMMY = Isaac.GetItemIdByName("Toy Phone Dummy"),
 }
 
 Enums.Trinkets = {

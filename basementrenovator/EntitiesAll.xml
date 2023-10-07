@@ -15,10 +15,18 @@
     <entity Name="Crockpot" />
     <entity Name="Oozer" />
     <entity Name="Radioactive Barrel" />
+    <entity Name="Soprano" />
+    <entity Name="Alto" />
+    <entity Name="Tenor" />
   </group>
 
   <group Name="BotB Crawlspace Events">
     <entity Name="Jump Crystal" />
+    <entity Name="Doortrap (Cube)" />
+    <entity Name="Doortrap (Eye)" />
+    <entity Name="Doortrap (Mouth)" />
+    <entity Name="Doortrap (Butt)" />
+    <entity Name="Doortrap (Hive)" />
   </group>
 
   <group Name="BotB Chapter 1 (Main Path) Enemies" >  

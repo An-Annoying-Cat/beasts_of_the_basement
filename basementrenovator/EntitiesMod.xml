@@ -8,6 +8,11 @@
   <entity Image="icons/babby.png" Name="Babby" ID="501" Variant="38" Subtype="0" />
   <!-- Bosses -->
   <entity Image="icons/despair.png" Name="Despair" ID="501" Variant="44" Subtype="0" />
+  <entity Image="icons/doortrap_eye.png" Name="Doortrap (Eye)" ID="501" Variant="54" Subtype="0" />
+  <entity Image="icons/doortrap_mouth.png" Name="Doortrap (Mouth)" ID="501" Variant="55" Subtype="0" />
+  <entity Image="icons/doortrap_butt.png" Name="Doortrap (Butt)" ID="501" Variant="56" Subtype="0" />
+  <entity Image="icons/doortrap_hive.png" Name="Doortrap (Hive)" ID="501" Variant="57" Subtype="0" />
+    <entity Image="icons/doortrap_cube.png" Name="Doortrap (Cube)" ID="501" Variant="58" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
@@ -164,6 +169,10 @@
   <entity Image="icons/cursed_horf.png" Name="Cursed Horf" ID="501" Variant="34" Subtype="0" />
   <entity Image="icons/cursed_mulligan.png" Name="Cursed Mulligan" ID="501" Variant="35" Subtype="0" />
   <entity Image="icons/cursed_mulliboom.png" Name="Cursed Mulliboom" ID="501" Variant="36" Subtype="0" />
+  <!--Cathedral enemies-->
+  <entity Image="icons/soprano.png" Name="Soprano" ID="501" Variant="59" Subtype="0" />
+  <entity Image="icons/alto.png" Name="Alto" ID="501" Variant="60" Subtype="0" />
+  <entity Image="icons/tenor.png" Name="Tenor" ID="501" Variant="61" Subtype="0" />
   <!-- Ascent Enemies -->
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
   <entity Image="icons/double_cherry.png" Name="Double Cherry" ID="501" Variant="43" Subtype="0" />

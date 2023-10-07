@@ -105,6 +105,18 @@
 	<sound name="GeigerClick">
 		<sample weight="1" path="geigerClick.wav" />
 	</sound>
+
+	<sound name="ChoirHurt">
+		<sample weight="1" path="choirHurt1.wav" />
+		<sample weight="1" path="choirHurt2.wav" />
+		<sample weight="1" path="choirHurt3.wav" />
+		<sample weight="1" path="choirHurt4.wav" />
+		<sample weight="1" path="choirHurt5.wav" />
+	</sound>
+
+	<sound name="ChoirHurtFunny">
+		<sample weight="1" path="choirHurtFunny.wav" />
+	</sound>
 	<!--Bosses-->
 		<!--Thaumaturge-->
 		<sound name="ThaumLaugh">

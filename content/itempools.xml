@@ -4,7 +4,9 @@
         <Item Name="Robo-Baby Zero" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Onyx Marble" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Atom Bomb Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
-        <Item Name="Atom Bomb Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <!--<Item Name="B.H.F." Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>-->
         <Item Name="Crowbar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Tech Nano" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -45,6 +47,7 @@
         <Item Name="Dusty D100" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="D11" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Ksshk!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
     </Pool>
@@ -58,6 +61,7 @@
         <Item Name="D11" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Flipped Note" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="secret">
         <Item Name="Alpha Armor" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -75,7 +79,7 @@
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Faded Note" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Flipped Note" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
-        
+        <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Ahhh..." Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Fwoop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -92,6 +96,7 @@
         <Item Name="Buzz Fly" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -104,6 +109,8 @@
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buzz Fly" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="angel">
         <!--<Item Name="Faithful Fleet" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>-->
@@ -117,6 +124,7 @@
         <Item Name="Wiggly Boy" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Plop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Buzz Buzz!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -147,6 +155,7 @@
         <Item Name="Dusty D6" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Fuck That Noise" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
 	</Pool>

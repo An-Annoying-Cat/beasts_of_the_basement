@@ -79,15 +79,15 @@
     <familiar id="64" quality="3" name="Buzz Fly" description="He's out for blood!" gfx="buzz_fly.png" tags="monstermanual"/>
     <active id="66" quality="1" name="Mila's Head" description="Reusable ant colony" gfx="milas_head.png" chargetype="normal" maxcharges="2"/>
     <active id="67" quality="4" name="The Lesser Key" description="Bound in stone" gfx="the_lesser_key.png" chargetype="normal" hidden="true" tags="book" maxcharges="8"/>
-    <familiar id="68" quality="0" name="Clay Soldier Dummy" description="Why do you have this bruh" gfx="clay_soldier.png" hidden="true" />
+    <passive id="68" quality="0" name="Toy Phone Dummy" description="Put the knife in your eye." gfx="placeholder.png" cache="all" hidden="true" />
 
     <passive id="69" quality="1" name="Buprinorphine" description="Withdrawal up" gfx="buprinorphine.png" tags="syringe" cache="firedelay range shotspeed" />
-    <passive id="69" quality="2" name="Krokodil" description="Degredation of the skin, flesh, and bone" gfx="krokodil.png" tags="syringe" hidden="true" />
-    <passive id="70" quality="4" name="Flipped Note" description="Low-frame tears" gfx="flipped_note.png" />
-    <passive id="71" quality="4" name="Pandemonium" description="%%%" gfx="pandemonium.png" hidden="true" />
+    <passive id="70" quality="3" name="Krokodil" description="Degredation of the skin, flesh, and bone" gfx="krokodil.png" tags="syringe" />
+    <passive id="71" quality="4" name="Flipped Note" description="Low-frame tears" gfx="flipped_note.png" />
+    <passive id="72" quality="4" name="Pandemonium" description="%%%" gfx="pandemonium.png" hidden="true" />
 
-    <active id="72" quality="0" name="Toy Phone" description="Call for help" gfx="toy_phone.png" chargetype="normal" hidden="true" maxcharges="1"/>
-    <active id="72" quality="0" name="Toy Phone?" description="Call for help." gfx="toy_phone_alt.png" chargetype="normal" hidden="true"  maxcharges="1"/>
+    <active id="73" quality="2" name="Toy Phone" description="Call for help" gfx="toy_phone.png" chargetype="normal" maxcharges="1"/>
+    <active id="74" quality="2" name="Toy Phone?" description="Call for help." gfx="toy_phone_alt.png" chargetype="normal" hidden="true"  maxcharges="1"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
