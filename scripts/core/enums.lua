@@ -709,8 +709,8 @@ Enums.Items = {
     DECK_OF_TOO_MANY_THINGS = Isaac.GetItemIdByName("Deck Of Too Many Things"),
 
     DUSTY_D6 = Isaac.GetItemIdByName("Dusty D6"),
-    DUSTY_D4 = Isaac.GetItemIdByName("Dusty D4"),
-    DUSTY_D100 = Isaac.GetItemIdByName("Dusty D100"),
+    DUSTY_D4 = Isaac.GetItemIdByName("Skew D4"),
+    DUSTY_D100 = Isaac.GetItemIdByName("Dusty D Infinity"),
     D11 = Isaac.GetItemIdByName("D11"),
 
     BLOOD_MERIDIAN = Isaac.GetItemIdByName("Blood Meridian"),

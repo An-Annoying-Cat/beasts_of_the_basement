@@ -48,8 +48,8 @@
     <active id="39" quality="3" name="Deck Of Too Many Things" description="Also contains non-cards" gfx="deck_of_too_many_things.png" chargetype="normal" maxcharges="6"/>
 
     <active id="40" quality="3" name="Dusty D6" description="Rollback your destiny" gfx="dusty_d6.png" chargetype="normal" maxcharges="6"/>
-    <active id="41" quality="3" name="Dusty D4" description="Reroll that into something else" gfx="dusty_d4.png" chargetype="normal" maxcharges="8"/>
-    <active id="42" quality="1" name="Dusty D100" description="Reerolllll..." gfx="dusty_d100.png" chargetype="normal" maxcharges="2"/>
+    <active id="41" quality="4" name="Skew D4" description="Reroll that into something else" gfx="dusty_d4.png" chargetype="normal" maxcharges="8"/>
+    <active id="42" quality="1" name="Dusty D Infinity" description="Reroll forever..." gfx="dusty_d100.png" chargetype="normal" maxcharges="2"/>
     <active id="44" quality="1" name="D11" description="Reroll consumables" gfx="d11.png" chargetype="normal" maxcharges="3"/>
 
     <active id="45" quality="2" name="Blood Meridian" description="Overwhelming carnage" gfx="blood_meridian.png" tags="book" chargetype="normal" maxcharges="5"/>

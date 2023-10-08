@@ -5,12 +5,12 @@ local pickups = BotB.Enums.Pickups
 local sfx = SFXManager()
 
 if EID then
-	EID:addCollectible(Isaac.GetItemIdByName("Dusty D100"), "Uses a random dice effect. #If the dice is passive, i.e. D3 from Fiend Folio, it simply grants the effect for the rest of the floor. #{{Warning}} Includes modded dice! #Compatible mods include: Fiend Folio, Epiphany, Deliverance, and Revelations.")
+	EID:addCollectible(Isaac.GetItemIdByName("Dusty D Infinity"), "Uses a random dice effect. #If the dice is passive, i.e. D3 from Fiend Folio, it simply grants the effect for the rest of the floor. #{{Warning}} Includes modded dice! #Compatible mods include: Fiend Folio, Epiphany, Deliverance, and Revelations.")
 end
 
 local HiddenItemManager = require("scripts.core.hidden_item_manager")
 function DUSTY_D100:dustyD6ActiveItem(_, _, player, _, _, _)
-	--player:AnimateCollectible(Isaac.GetItemIdByName("Dusty D100"))
+	--player:AnimateCollectible(Isaac.GetItemIdByName("Dusty D Infinity"))
 	--print("lol how do i card")
 	--print(#Isaac.GetItemConfig():GetCards())
 	--At least I can get how many cards there are!
@@ -30,10 +30,10 @@ function DUSTY_D100:dustyD6ActiveItem(_, _, player, _, _, _)
 		{"active", CollectibleType.COLLECTIBLE_SPINDOWN_DICE,},
 		--ours
 		{"active", Isaac.GetItemIdByName("Dusty D6"),},
-		{"active", Isaac.GetItemIdByName("Dusty D4"),},
+		{"active", Isaac.GetItemIdByName("Skew D4"),},
 		{"active", Isaac.GetItemIdByName("D11"),},
 		--lmao recursion
-		{"active", Isaac.GetItemIdByName("Dusty D100"),},
+		{"active", Isaac.GetItemIdByName("Dusty D Infinity"),},
 	}
 	if FiendFolio then
 		local ffDiceItems = {
@@ -90,7 +90,7 @@ function DUSTY_D100:dustyD6ActiveItem(_, _, player, _, _, _)
             
 
 end
-Mod:AddCallback(ModCallbacks.MC_USE_ITEM,DUSTY_D100.dustyD6ActiveItem,Isaac.GetItemIdByName("Dusty D100"))
+Mod:AddCallback(ModCallbacks.MC_USE_ITEM,DUSTY_D100.dustyD6ActiveItem,Isaac.GetItemIdByName("Dusty D Infinity"))
 
 
 

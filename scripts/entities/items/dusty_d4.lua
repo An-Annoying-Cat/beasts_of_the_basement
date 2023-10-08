@@ -5,7 +5,7 @@ local pickups = BotB.Enums.Pickups
 local sfx = SFXManager()
 
 if EID then
-	EID:addCollectible(Isaac.GetItemIdByName("Dusty D4"), "Rerolls a single passive item the player possesses. #This reroll is weighted toward items of lower quality.")
+	EID:addCollectible(Isaac.GetItemIdByName("Skew D4"), "Rerolls a single passive item the player possesses. #This reroll is weighted toward items of lower quality.")
 end
 
 --returns a table of tables accessible by the quality number
@@ -91,7 +91,7 @@ function DUSTY_D4:dustyD4ActiveItem(_, _, player, _, _, _)
             
 
 end
-Mod:AddCallback(ModCallbacks.MC_USE_ITEM,DUSTY_D4.dustyD4ActiveItem,Isaac.GetItemIdByName("Dusty D4"))
+Mod:AddCallback(ModCallbacks.MC_USE_ITEM,DUSTY_D4.dustyD4ActiveItem,Isaac.GetItemIdByName("Skew D4"))
 
 
 

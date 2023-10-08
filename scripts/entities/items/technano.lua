@@ -92,6 +92,7 @@ Mod:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE,TECH_NANO.techNanoTearUpdate)
 
 function TECH_NANO:techNanoTearCollision(tear,_,_)
     if tear:GetData().isATechNanoTear then
+        if tear.Parent:ToPlayer() ~= nil and tear.Parent:ToPlayer():HasWeaponType(WeaponType.WEAPON_FETUS) then return end
         local correctPos = tear.Position
         for i=0,270,90 do
             local techNanoLaser = EntityLaser.ShootAngle(2, correctPos, i, 45, Vector.Zero, tear.SpawnerEntity)
@@ -119,6 +120,99 @@ end
 Mod:AddCallback(ModCallbacks.MC_POST_LASER_UPDATE,TECH_NANO.techNanoLaserUpdate)
 
 
+--now to give it a synergy with dr fetus and epic fetus...
+function TECH_NANO:techNanoBombUpdate(bomb)
+    --print(bomb.FrameCount)
+    if bomb.FrameCount ~= 1 then return end
+    if bomb.IsFetus ~= true then return end
+    if bomb.Parent:ToPlayer() ~= nil then
+        local player = bomb.Parent:ToPlayer()
+        if not player:HasCollectible(Items.TECH_NANO) then return end
+        local tearPlayerRNG = player:GetCollectibleRNG(Items.TECH_NANO)
+        local luckThreshold = 0.125 + (player.Luck/24)
+        if luckThreshold <= 0 then
+            luckThreshold = 0.125
+        end
+        local techNanoRand = tearPlayerRNG:RandomFloat()
+        if techNanoRand <= luckThreshold then
+            --tech nano time!
+            bomb:AddTearFlags(TearFlags.TEAR_HOMING)
+            bomb:GetData().isTechNanoFetusBomb = true
+            bomb:GetData().techNanoFetusBombPlayer = player
+        end
+    end
+
+end
+Mod:AddCallback(ModCallbacks.MC_POST_BOMB_UPDATE,TECH_NANO.techNanoBombUpdate)
+--[[
+function TECH_NANO:techNanoBombUpdate2(bomb)
+    print(bomb.FrameCount)
+    if bomb.FrameCount ~= 1 then return end
+    if bomb.IsFetus ~= true then return end
+    if bomb.Parent:ToPlayer() ~= nil then
+        local player = bomb.Parent:ToPlayer()
+        if not player:HasCollectible(Items.TECH_NANO) then return end
+        local tearPlayerRNG = player:GetCollectibleRNG(Items.TECH_NANO)
+        local luckThreshold = 0.125 + (player.Luck/24)
+        if luckThreshold <= 0 then
+            luckThreshold = 0.125
+        end
+        local techNanoRand = tearPlayerRNG:RandomFloat()
+        if techNanoRand <= luckThreshold then
+            --tech nano time!
+            bomb:GetData().isTechNanoFetusBomb = true
+        end
+    end
+
+end
+Mod:AddCallback(ModCallbacks.MC_POST_BOMB_UPDATE,TECH_NANO.techNanoBombUpdate2)]]
+
+
+
+function TECH_NANO:techNanoBombCheck(entity) 
+    --print(entity.Type, entity.Variant, entity.SubType)
+    if entity.Type ~= 4 then 
+        --epic fetus checking
+        if entity.Type == EntityType.ENTITY_EFFECT and entity.Variant == EffectVariant.ROCKET then
+            if entity.SpawnerEntity ~= nil and entity.SpawnerEntity:ToPlayer() ~= nil then
+                local player = entity.SpawnerEntity:ToPlayer()
+                if not player:HasCollectible(Items.TECH_NANO) then return end
+                for i=0,270,90 do
+                    local techNanoLaser = EntityLaser.ShootAngle(2, entity.Position, i, 45, Vector.Zero, player)
+                    techNanoLaser.DisableFollowParent = true
+                    techNanoLaser.Parent = player
+                    techNanoLaser:GetData().isATechNanoLaser = true
+                    techNanoLaser:GetData().techNanoLaserPos = entity.Position
+                    techNanoLaser:GetData().techNanoParent = player
+                    techNanoLaser:SetActiveRotation(0, i+1440, 16, false)
+                    techNanoLaser.Timeout = 60
+                    techNanoLaser:SetMaxDistance(65)
+                    techNanoLaser:AddTearFlags(player.TearFlags | TearFlags.TEAR_SPECTRAL | TearFlags.TEAR_BOOMERANG)
+                    techNanoLaser.CollisionDamage = player.Damage/5
+                end
+            end
+        end
+    else
+        if entity:GetData().isTechNanoFetusBomb ~= true then return end
+        local player = entity:GetData().techNanoFetusBombPlayer
+        for i=0,270,90 do
+            local techNanoLaser = EntityLaser.ShootAngle(2, entity.Position, i, 45, Vector.Zero, player)
+            techNanoLaser.DisableFollowParent = true
+            techNanoLaser.Parent = player
+            techNanoLaser:GetData().isATechNanoLaser = true
+            techNanoLaser:GetData().techNanoLaserPos = entity.Position
+            techNanoLaser:GetData().techNanoParent = player
+            techNanoLaser:SetActiveRotation(0, i+1440, 16, false)
+            techNanoLaser.Timeout = 60
+            techNanoLaser:SetMaxDistance(32.5)
+            techNanoLaser:AddTearFlags(player.TearFlags | TearFlags.TEAR_SPECTRAL | TearFlags.TEAR_BOOMERANG)
+            techNanoLaser.CollisionDamage = player.Damage/5
+        end
+    end
+    
+end
+Mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, TECH_NANO.techNanoBombCheck)
+
 
 function TECH_NANO:techNanoDamageNull(entity,amt,flags,source,_)
     local src = source.Entity
@@ -127,11 +221,64 @@ function TECH_NANO:techNanoDamageNull(entity,amt,flags,source,_)
     --print(source.Type)
     --print(flags & DamageFlag.DAMAGE_TIMER)
     --local sdata = source.Entity:GetData()
-    if source.Entity ~= nil and source.Type == EntityType.ENTITY_LASER and src:GetData().isATechNanoLaser then
-        if EntityRef(entity).IsFriendly or entity.Type == EntityType.ENTITY_PLAYER or entity.Type == EntityType.ENTITY_FAMILIAR then
-            return false
+
+    --mom's knife, ludo, dr. fetus have parent
+    --technology, brimstone is direct to player
+    --epic fetus and also ludo for some reason use spawner
+    --spirit sword is direct to player
+    --c section is parent and spawner
+    --fetus whip is nil source for some reason?
+    if src ~= nil and src:GetData().isATechNanoLaser == false then
+        --print(src.Type, src.Variant, src.SubType)
+        local player
+        if src:ToPlayer() ~= nil then
+            player = src:ToPlayer()
+        elseif src.Parent:ToPlayer() ~= nil then
+            player = src.Parent:ToPlayer()
+        elseif src.SpawnerEntity:ToPlayer() ~= nil then
+            player = src.SpawnerEntity:ToPlayer()
+        end
+        --only if player is not using tears
+        if player ~= nil then
+            if not player:HasCollectible(Items.TECH_NANO) then return end
+            if player:HasWeaponType(WeaponType.WEAPON_TEARS) then return end
+            if player:HasWeaponType(WeaponType.WEAPON_FETUS) then return end
+            
+            --use the same luck formula
+            local tearPlayerRNG = player:GetCollectibleRNG(Items.TECH_NANO)
+            local luckThreshold = 0.125 + (player.Luck/24)
+            if luckThreshold <= 0 then
+                luckThreshold = 0.125
+            end
+            local techNanoRand = tearPlayerRNG:RandomFloat()
+            if techNanoRand <= luckThreshold then
+                --tech nano time!
+                for i=0,270,90 do
+                    local techNanoLaser = EntityLaser.ShootAngle(2, entity.Position, i, 45, Vector.Zero, player)
+                    techNanoLaser.DisableFollowParent = true
+                    techNanoLaser.Parent = player
+                    techNanoLaser:GetData().isATechNanoLaser = true
+                    techNanoLaser:GetData().techNanoLaserPos = entity.Position
+                    techNanoLaser:GetData().techNanoParent = player
+                    techNanoLaser:SetActiveRotation(0, i+1440, 16, false)
+                    techNanoLaser.Timeout = 60
+                    techNanoLaser:SetMaxDistance(32.5)
+                    techNanoLaser:AddTearFlags(player.TearFlags | TearFlags.TEAR_SPECTRAL)
+                    techNanoLaser.CollisionDamage = player.Damage/5
+                end
+            end
         end
     end
+    
+    if src ~= nil then
+        if source.Entity ~= nil and source.Type == EntityType.ENTITY_LASER and src:GetData().isATechNanoLaser then
+            if EntityRef(entity).IsFriendly or entity.Type == EntityType.ENTITY_PLAYER or entity.Type == EntityType.ENTITY_FAMILIAR then
+                return false
+            end
+        end
+    end
+    
+    
         
 end
   Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, TECH_NANO.techNanoDamageNull)
