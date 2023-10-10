@@ -107,7 +107,7 @@ function IMMORTAL_BABY:FamiliarUpdate(npc)
                         for i = 1, #roomEntities do
                             local entity = roomEntities[i]
                             if (entity.Position - npc.Position):Length() <= 20 then
-                                if entity:IsVulnerableEnemy() and EntityRef(entity):IsFriendly() == false then
+                                if entity:IsVulnerableEnemy() and EntityRef(entity).IsFriendly() == false then
                                     entity:TakeDamage(0.5 * npc.Player.Damage, DamageFlag.DAMAGE_IGNORE_ARMOR, npc, 0)
                                     if didProc ~= true then
                                         didProc = true
