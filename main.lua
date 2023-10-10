@@ -292,6 +292,7 @@ if EID then
         EID:addIcon("StatusDisease", "Disease",0,16,16,0,0,sprite)
         EID:addIcon("StatusDivine", "Divine",0,16,16,0,0,sprite)
         EID:addIcon("StatusIrradiated", "Irradiated",0,16,16,0,0,sprite)
+        EID:addIcon("StatusGlitched", "Glitched",0,16,16,0,0,sprite)
 end
 --
 

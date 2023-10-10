@@ -85,7 +85,7 @@ Mod:AddCallback(ModCallbacks.MC_PRE_TEAR_COLLISION,RABIES.rabiesTearCollision)
 
 function RABIES:rabiesLaserUpdate(laser)
     --print(laser.Parent.Type,laser.SpawnerEntity.Type)
-    if laser.Parent:ToPlayer() ~= nil and laser.Parent:ToPlayer():HasCollectible(Items.RABIES) then
+    if laser.Parent ~= nil and laser.Parent:ToPlayer() ~= nil and laser.Parent:ToPlayer():HasCollectible(Items.RABIES) then
         laser.Color = Color(1,1,1,1,0.5,1,0)
     end
 end

@@ -89,6 +89,10 @@ if FiendFolio.ReferenceItems then
         {ID = BotB.Enums.Items.BUZZ_FLY, 			        Reference = "Chainsaw Man", Partial = true},
         {ID = BotB.Enums.Items.FLIPPED_NOTE, 			    Reference = "Flipnote Studio"},
         {ID = BotB.Enums.Items.PANDEMONIUM, 			    Reference = "The Myriad", Partial = true},
+        {ID = BotB.Enums.Items.IMMORTAL_BABY, 			    Reference = "Brutal Orchestra"},
+        {ID = BotB.Enums.Items.DIVINE_MUD, 			        Reference = "Brutal Orchestra"},
+        {ID = BotB.Enums.Items.RABIES, 			            Reference = "BUGGERWORLD"},
+        {ID = BotB.Enums.Items.STRANGE_STARS, 			    Reference = "Copy Kitty"},
     }
     local BotBTrinketReferences = {
         {ID = BotB.Enums.Trinkets.DEMON_CORE, 			    Reference = "Brutal Orchestra"},

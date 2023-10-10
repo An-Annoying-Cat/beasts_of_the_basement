@@ -157,6 +157,7 @@ Mod.LoadScripts({
     "scripts.entities.items.fursuit",
     "scripts.entities.items.name_tag",
     "scripts.entities.items.rabies",
+    "scripts.entities.items.strange_stars",
 
 
     --TRINKETS

@@ -774,6 +774,8 @@ Enums.Items = {
     NAME_TAG = Isaac.GetItemIdByName("Name Tag"),
     IMMORTAL_BABY = Isaac.GetItemIdByName("Immortal Baby"),
     RABIES = Isaac.GetItemIdByName("Rabies"),
+    DIVINE_MUD = Isaac.GetItemIdByName("Divine Mud"),
+    STRANGE_STARS = Isaac.GetItemIdByName("Strange Stars"),
 }
 
 Enums.Trinkets = {
