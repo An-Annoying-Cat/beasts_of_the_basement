@@ -288,8 +288,10 @@ if EID then
 		local sprite = Sprite()
 		sprite:Load("gfx/misc/eidMarkup.anm2", true)
 		EID:addIcon("BotBIndicator", "BotB",0,16,18,0,0,sprite)
-
 		EID:setModIndicatorIcon("BotBIndicator")
+        EID:addIcon("StatusDisease", "Disease",0,16,16,0,0,sprite)
+        EID:addIcon("StatusDivine", "Divine",0,16,16,0,0,sprite)
+        EID:addIcon("StatusIrradiated", "Irradiated",0,16,16,0,0,sprite)
 end
 --
 

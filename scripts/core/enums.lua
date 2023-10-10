@@ -636,6 +636,7 @@ Enums.SFX = {
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
     FURSUIT_MEOW = Isaac.GetSoundIdByName("FursuitMeow"),
     DISEASE_PROC = Isaac.GetSoundIdByName("DiseaseProc"),
+    DISEASE_STACK = Isaac.GetSoundIdByName("DiseaseStack"),
     DIVINE_PROC = Isaac.GetSoundIdByName("DivineProc"),
 
     ANKHA_LOOP = Isaac.GetSoundIdByName("AnkhaLoop"),

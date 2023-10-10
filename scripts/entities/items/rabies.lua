@@ -19,7 +19,7 @@ end
 
 
 if EID then
-	EID:addCollectible(Isaac.GetItemIdByName("Rabies"), "Your tears have a chance to inflict {{ColorYellow}}Disease{{ColorReset}} on hit. #{{ColorYellow}}Disease{{ColorReset}} inflicts no damage over time, but the more stacks of it an enemy possesses when it runs out, the more damage it is dealt in one large hit. #Enemies killed while having Disease that has not yet triggered spread it to other nearby enemies.")
+	EID:addCollectible(Isaac.GetItemIdByName("Rabies"), "Your tears have a chance to apply {{StatusDisease}} Disease on hit. #{{StatusDisease}} Disease deals damage in one large hit when it runs out, which increases in strength with the amount of times it is stacked. #On enemy death, Disease spreads to nearby enemies. #If the damage from Disease running out would kill an enemy, it triggers immediately.")
 end
 
 
@@ -152,6 +152,7 @@ function RABIES:rabiesBombCheck(bomb)
                 --rabies
                 bomb:GetData().rabiesFartVisual = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF02,1,bomb.Position,Vector.Zero,bomb):ToEffect()
                 bomb:GetData().rabiesFartVisual.Color = Color(1.75,1.5,1,1)
+                bomb:GetData().rabiesFartVisual.Scale = 0.5
                 local roomEntities = Isaac.GetRoomEntities()
                 for i = 1, #roomEntities do
                     local entity = roomEntities[i]
@@ -161,13 +162,13 @@ function RABIES:rabiesBombCheck(bomb)
                             if edata.botbHasDisease ~= true then
                                 edata.botbDiseaseBaseColor = entity.Color
                                 edata.botbHasDisease = true
-                                edata.botbDiseaseDuration = 90
+                                edata.botbDiseaseDuration = 75
                                 edata.botbDiseaseStacks = 1
                                 edata.botbDiseaseSourcePlayer = player:ToPlayer()
-                                SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                                SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * edata.botbDiseaseStacks), 0)
                                 
                             else
-                                edata.botbDiseaseDuration = 90
+                                edata.botbDiseaseDuration = 75
                                 edata.botbDiseaseStacks = edata.botbDiseaseStacks + 1
                                 local str = "" .. edata.botbDiseaseStacks
                                 local AbacusFont = Font()
@@ -184,7 +185,7 @@ function RABIES:rabiesBombCheck(bomb)
                                         AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
                                     end, i, ModCallbacks.MC_POST_RENDER)
                                 end
-                                SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                                SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * edata.botbDiseaseStacks), 0)
                             end
                         end
                     end
@@ -199,6 +200,7 @@ function RABIES:rabiesBombCheck(bomb)
         --rabies
         bomb:GetData().rabiesFartVisual = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF02,1,bomb.Position,Vector.Zero,bomb):ToEffect()
         bomb:GetData().rabiesFartVisual.Color = Color(1.75,1.5,1,1)
+        bomb:GetData().rabiesFartVisual.Scale = 0.5
         local roomEntities = Isaac.GetRoomEntities()
         for i = 1, #roomEntities do
             local entity = roomEntities[i]
@@ -208,13 +210,13 @@ function RABIES:rabiesBombCheck(bomb)
                     if edata.botbHasDisease ~= true then
                         edata.botbDiseaseBaseColor = entity.Color
                         edata.botbHasDisease = true
-                        edata.botbDiseaseDuration = 90
+                        edata.botbDiseaseDuration = 75
                         edata.botbDiseaseStacks = 1
                         edata.botbDiseaseSourcePlayer = bomb:GetData().rabiesFetusBombPlayer:ToPlayer()
-                        SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                        SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * edata.botbDiseaseStacks), 0)
                         
                     else
-                        edata.botbDiseaseDuration = 90
+                        edata.botbDiseaseDuration = 75
                         edata.botbDiseaseStacks = edata.botbDiseaseStacks + 1
                         local str = "" .. edata.botbDiseaseStacks
                         local AbacusFont = Font()
@@ -231,7 +233,7 @@ function RABIES:rabiesBombCheck(bomb)
                                 AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
                             end, i, ModCallbacks.MC_POST_RENDER)
                         end
-                        SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                        SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * edata.botbDiseaseStacks), 0)
                     end
                 end
             end
@@ -285,12 +287,12 @@ function RABIES:rabiesDamageNull(entity,amt,flags,source,_)
                 if data.botbHasDisease ~= true then
                     data.botbDiseaseBaseColor = entity.Color
                     data.botbHasDisease = true
-                    data.botbDiseaseDuration = 90
+                    data.botbDiseaseDuration = 75
                     data.botbDiseaseStacks = 1
                     data.botbDiseaseSourcePlayer = player:ToPlayer()
-                    SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * data.botbDiseaseStacks), 0)
+                    SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * data.botbDiseaseStacks), 0)
                 else
-                    data.botbDiseaseDuration = 90
+                    data.botbDiseaseDuration = 75
                     data.botbDiseaseStacks = data.botbDiseaseStacks + 1
                     local str = "" .. data.botbDiseaseStacks
                     local AbacusFont = Font()
@@ -307,7 +309,7 @@ function RABIES:rabiesDamageNull(entity,amt,flags,source,_)
                             AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
                         end, i, ModCallbacks.MC_POST_RENDER)
                     end
-                    SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * data.botbDiseaseStacks), 0)
+                    SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * data.botbDiseaseStacks), 0)
                 end
 
             end
@@ -358,12 +360,12 @@ function RABIES:rabiesAddStatus(entity,amt,flags,source,_)
         if data.botbHasDisease ~= true then
             data.botbDiseaseBaseColor = entity.Color
             data.botbHasDisease = true
-            data.botbDiseaseDuration = 90
+            data.botbDiseaseDuration = 75
             data.botbDiseaseStacks = 1
             data.botbDiseaseSourcePlayer = player:ToPlayer()
-            SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * data.botbDiseaseStacks), 0)
+            SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * data.botbDiseaseStacks), 0)
         else
-            data.botbDiseaseDuration = 90
+            data.botbDiseaseDuration = 75
             data.botbDiseaseStacks = data.botbDiseaseStacks + 1
             local str = "" .. data.botbDiseaseStacks
             local AbacusFont = Font()
@@ -380,7 +382,7 @@ function RABIES:rabiesAddStatus(entity,amt,flags,source,_)
                     AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
                 end, i, ModCallbacks.MC_POST_RENDER)
             end
-            SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * data.botbDiseaseStacks), 0)
+            SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * data.botbDiseaseStacks), 0)
         end
     end
         
@@ -403,15 +405,16 @@ function RABIES:rabiesNPCUpdate(npc)
         end
         if data.botbDiseaseDuration ~= 0 then
             local color = npc.Color
-            local lerpValue = (data.botbDiseaseDuration/90)
+            local lerpValue = (data.botbDiseaseDuration/75)
             npc.Color = Color.Lerp(Color(1,1,1,1,0.5,0.5,0),Color(1,1,1), lerpValue)
             ----print(data.botbDiseaseDuration, data.botbDiseaseStacks)
             data.botbDiseaseDuration = data.botbDiseaseDuration - 1
-        else
+            
+        else 
             ----print((data.botbDiseaseStacks) .. "'s worth of damage")
             npc.Color = data.botbDiseaseBaseColor
             Game():ShakeScreen(data.botbDiseaseStacks)
-            npc:TakeDamage((2 * data.botbDiseaseSourcePlayer.Damage)*data.botbDiseaseStacks, DamageFlag.DAMAGE_IGNORE_ARMOR, EntityRef(data.botbDiseaseSourcePlayer), 0)
+            npc:TakeDamage((data.botbDiseaseSourcePlayer.Damage)*(1.5 ^ data.botbDiseaseStacks), DamageFlag.DAMAGE_IGNORE_ARMOR, EntityRef(data.botbDiseaseSourcePlayer), 0)
             local str = "" .. data.botbDiseaseStacks
             local AbacusFont = Font()
             AbacusFont:Load("font/terminus.fnt")
@@ -427,17 +430,47 @@ function RABIES:rabiesNPCUpdate(npc)
                     AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
                 end, i, ModCallbacks.MC_POST_RENDER)
             end
-
+            SFXManager():Stop(BotB.Enums.SFX.DISEASE_STACK)
             SFXManager():Play(SoundEffect.SOUND_HAND_LASERS,0.5,0, false, 3, 0)
-            SFXManager():Play(BotB.Enums.SFX.DISEASE_PROC,4,0, false, 1, 0)
+            SFXManager():Play(BotB.Enums.SFX.DISEASE_PROC,8,0, false, 1, 0)
             data.botbHasDisease = false
             data.botbDiseaseStacks = 1
+        end
+
+        if npc.HitPoints - ((data.botbDiseaseSourcePlayer.Damage)*(1.5 ^ data.botbDiseaseStacks)) <= 0 then
+            
+            SFXManager():Play(SoundEffect.SOUND_HAND_LASERS,0.5,0, false, 3, 0)
+        SFXManager():Play(BotB.Enums.SFX.DISEASE_PROC,8,0, false, 1, 0)
+        SFXManager():Stop(BotB.Enums.SFX.DISEASE_STACK)
+        data.botbHasDisease = false
+        --data.botbDiseaseStacks = 1
+                npc.Color = data.botbDiseaseBaseColor
+        Game():ShakeScreen(data.botbDiseaseStacks)
+        npc:TakeDamage((data.botbDiseaseSourcePlayer.Damage)*(1.5 ^ data.botbDiseaseStacks), DamageFlag.DAMAGE_IGNORE_ARMOR, EntityRef(data.botbDiseaseSourcePlayer), 0)
+        local str = "" .. data.botbDiseaseStacks
+        local AbacusFont = Font()
+        AbacusFont:Load("font/terminus.fnt")
+        for i = 1, 40 do
+            BotB.FF.scheduleForUpdate(function()
+                local pos = game:GetRoom():WorldToScreenPosition(npc.Position) + Vector(AbacusFont:GetStringWidth(str) * -0.5, -(npc.SpriteScale.Y * 35) - 2*i)
+                local opacity
+                if i >= 20 then
+                    opacity = 1 - ((i-20)/20)
+                else
+                    opacity = i/10
+                end
+                AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
+            end, i, ModCallbacks.MC_POST_RENDER)
+        end
+
+        
         end
 
         if npc:HasMortalDamage() then
             if data.rabiesFartVisual == nil then
                 data.rabiesFartVisual = Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF02,1,npc.Position,Vector.Zero,npc):ToEffect()
                 data.rabiesFartVisual.Color = Color(1.75,1.5,1,1)
+                data.rabiesFartVisual.Scale = 0.5
             end
             local roomEntities = Isaac.GetRoomEntities()
             for i = 1, #roomEntities do
@@ -448,13 +481,14 @@ function RABIES:rabiesNPCUpdate(npc)
                         if edata.botbHasDisease ~= true then
                             edata.botbDiseaseBaseColor = entity.Color
                             edata.botbHasDisease = true
-                            edata.botbDiseaseDuration = 90
+                            edata.botbDiseaseDuration = 75
                             edata.botbDiseaseStacks = 1
                             edata.botbDiseaseSourcePlayer = data.botbDiseaseSourcePlayer:ToPlayer()
-                            SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                            SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * edata.botbDiseaseStacks), 0)
                             
                         else
-                            edata.botbDiseaseDuration = 90
+                            --[[
+                            edata.botbDiseaseDuration = 75
                             edata.botbDiseaseStacks = edata.botbDiseaseStacks + 1
                             local str = "" .. edata.botbDiseaseStacks
                             local AbacusFont = Font()
@@ -471,7 +505,7 @@ function RABIES:rabiesNPCUpdate(npc)
                                     AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
                                 end, i, ModCallbacks.MC_POST_RENDER)
                             end
-                            SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                            SFXManager():Play(BotB.Enums.SFX.DISEASE_STACK,1,0, false, 1 + (0.1 * edata.botbDiseaseStacks), 0)]]
                         end
                     end
                 end
