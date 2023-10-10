@@ -79,7 +79,7 @@ function IMMORTAL_BABY:FamiliarUpdate(npc)
             if sprite:GetFrame() == 1 then
                 if data.immortalBabyInvisibleFetus == nil or data.immortalBabyInvisibleFetus:IsDead() then
                     data.immortalBabyInvisibleFetus = Isaac.Spawn(EntityType.ENTITY_TEAR, TearVariant.FETUS,0,npc.Position,Vector.Zero,npc.Player):ToTear()
-                    data.immortalBabyInvisibleFetus:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_SWORD)
+                    data.immortalBabyInvisibleFetus:AddTearFlags(TearFlags.TEAR_FETUS | TearFlags.TEAR_FETUS_SWORD | TearFlags.TEAR_SPECTRAL)
                     data.immortalBabyInvisibleFetus.HomingFriction = 0
                     data.immortalBabyInvisibleFetus:GetData().isImmortalBabyInvisibleFetus = true
                     data.immortalBabyInvisibleFetus.Color = Color(1,1,1,1)
