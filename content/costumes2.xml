@@ -11,4 +11,7 @@
     <costume id="16" anm2path="mudPie.anm2"                    type="passive"  priority="99" hasSkinAlt="false"/>
     <costume id="20" anm2path="champsMask.anm2"                type="passive"  priority="99" hasSkinAlt="false"/>
     <costume id="70" anm2path="costumes/flipped_note.anm2"     type="passive"  priority="99" hasSkinAlt="true"/>
+    
+    <costume id="80" anm2path="203_humblingbundle.anm2"        type="passive"  priority="98" hasSkinAlt="true" />
+    <costume id="80" anm2path="costumes/rabies.anm2"           type="passive"  priority="99" hasSkinAlt="false"/>
 </costumes>

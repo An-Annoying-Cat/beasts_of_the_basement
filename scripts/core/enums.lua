@@ -503,6 +503,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Radiation Circle (Temporary)"),
         VARIANT = Isaac.GetEntityVariantByName("Radiation Circle (Temporary)")
     },
+    BOTB_STATUS_EFFECT = {
+        TYPE = Isaac.GetEntityTypeByName("BotB Status Effect"),
+        VARIANT = Isaac.GetEntityVariantByName("BotB Status Effect")
+    },
     
 
     BOTB_GRID = {
@@ -575,6 +579,10 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("Clay Soldier (Chargebar)"),
         VARIANT = Isaac.GetEntityVariantByName("Clay Soldier (Chargebar)"),
     },
+    IMMORTAL_BABY = {
+        TYPE = Isaac.GetEntityTypeByName("Immortal Baby"),
+        VARIANT = Isaac.GetEntityVariantByName("Immortal Baby"),
+    },
 }
 
 Enums.SFX = {
@@ -595,6 +603,8 @@ Enums.SFX = {
     GLITCHY_BOOM = Isaac.GetSoundIdByName("GlitchyBoom"),
 
     GEIGER_CLICK = Isaac.GetSoundIdByName("GeigerClick"),
+
+    
 
     THAUMATURGE_LAUGH = Isaac.GetSoundIdByName("ThaumLaugh"),
     THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),
@@ -624,6 +634,9 @@ Enums.SFX = {
 
     ARMOR_BLOCK = Isaac.GetSoundIdByName("ArmorBlock"),
     BLOONS_POP = Isaac.GetSoundIdByName("BloonsPop"),
+    FURSUIT_MEOW = Isaac.GetSoundIdByName("FursuitMeow"),
+    DISEASE_PROC = Isaac.GetSoundIdByName("DiseaseProc"),
+    DIVINE_PROC = Isaac.GetSoundIdByName("DivineProc"),
 
     ANKHA_LOOP = Isaac.GetSoundIdByName("AnkhaLoop"),
 
@@ -753,6 +766,13 @@ Enums.Items = {
     TOY_PHONE = Isaac.GetItemIdByName("Toy Phone"),
     TOY_PHONE_ALT = Isaac.GetItemIdByName("Toy Phone?"),
     TOY_PHONE_DUMMY = Isaac.GetItemIdByName("Toy Phone Dummy"),
+
+    FURSUIT = Isaac.GetItemIdByName("Fursuit"),
+    MILAS_COLLAR = Isaac.GetItemIdByName("Mila's Collar"),
+    DEAD_DAISY = Isaac.GetItemIdByName("Dead Daisy"),
+    NAME_TAG = Isaac.GetItemIdByName("Name Tag"),
+    IMMORTAL_BABY = Isaac.GetItemIdByName("Immortal Baby"),
+    RABIES = Isaac.GetItemIdByName("Rabies"),
 }
 
 Enums.Trinkets = {

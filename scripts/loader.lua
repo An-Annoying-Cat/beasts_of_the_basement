@@ -110,6 +110,7 @@ Mod.LoadScripts({
     "scripts.entities.familiars.buzz_fly",
     "scripts.entities.familiars.attack_ant",
     "scripts.entities.familiars.clay_soldier",
+    "scripts.entities.familiars.immortal_baby",
 
 
     --ITEMS
@@ -152,6 +153,10 @@ Mod.LoadScripts({
     "scripts.entities.items.flipped_note",
     "scripts.entities.items.krokodil",
     "scripts.entities.items.toy_phone",
+    "scripts.entities.items.milas_collar",
+    "scripts.entities.items.fursuit",
+    "scripts.entities.items.name_tag",
+    "scripts.entities.items.rabies",
 
 
     --TRINKETS

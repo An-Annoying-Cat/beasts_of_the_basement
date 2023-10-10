@@ -21,7 +21,7 @@ end
 function TOY_PHONE:toyPhoneActiveItem(_, _, player, _, slot, _)
 	player:AnimateCollectible(Isaac.GetItemIdByName("Toy Phone"))
     local doSpook = math.random(1,100)
-    print(doSpook)
+    --print(doSpook)
     if math.random(doSpook) == 1 then
         MusicManager():Fadeout(0.08)
         player:RemoveCollectible(Items.TOY_PHONE)

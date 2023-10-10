@@ -21,6 +21,11 @@
         <Item Name="Buzz Fly" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Flipped Note" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Name Tag" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Immortal Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
+
         <Item Name="Ahhh..." Weight="0.0001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Oh Sweet Merciful Christ!" Weight="0.00001" DecreaseBy="0.5" RemoveOn="0"/>
     </Pool>
@@ -28,6 +33,7 @@
         <Item Name="Toy Helicopter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="E-Meter" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Deck Of Too Many Things" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Name Tag" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Ksshk!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
     </Pool>
@@ -48,6 +54,9 @@
         <Item Name="D11" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Name Tag" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Ksshk!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
     </Pool>
@@ -80,6 +89,9 @@
         <Item Name="Faded Note" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Flipped Note" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Name Tag" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Rabies" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Ahhh..." Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Fwoop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -97,6 +109,8 @@
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Rabies" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -111,10 +125,14 @@
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="angel">
         <!--<Item Name="Faithful Fleet" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>-->
         <Item Name="The Human Soul" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Rabies" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Immortal Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Haah!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Fwoosh!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -140,6 +158,7 @@
         <Item Name="Buzz Fly" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="B.H.F." Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Faithful Fleet" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Immortal Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
 
     <Pool Name="library">
@@ -156,6 +175,7 @@
         <Item Name="Fuck That Noise" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Lil Ari" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Toy Phone" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Name Tag" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
 	</Pool>

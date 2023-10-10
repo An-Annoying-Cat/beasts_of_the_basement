@@ -62,6 +62,11 @@ if FiendFolio.ReferenceItems then
         {ID = BotB.Enums.Items.EMETER_COLLECTIBLE, 			Reference = "Edmund McMillen's old blog"},
         {ID = BotB.Enums.Items.EMETER_IN, 			        Reference = "Edmund McMillen's old blog"},
         {ID = BotB.Enums.Items.EMETER_OUT, 		        	Reference = "Edmund McMillen's old blog"},
+        {ID = BotB.Enums.Items.TOY_PHONE, 		        	Reference = "Skinimarink"},
+        {ID = BotB.Enums.Items.TOY_PHONE_ALT, 		        Reference = "Skinimarink"},
+        {ID = BotB.Enums.Items.DUSTY_D6, 		            Reference = "Flash Isaac", Partial = true},
+        {ID = BotB.Enums.Items.DUSTY_D100, 		            Reference = "The Binding Of Isaac: Rebirth"},
+        {ID = BotB.Enums.Items.DEAD_DAISY, 		            Reference = "Petscop"},
     }
     local BotBPassiveReferences = {
         {ID = BotB.Enums.Items.ALPHA_ARMOR, 		    	Reference = "Minecraft Alphaver"},

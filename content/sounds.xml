@@ -106,6 +106,14 @@
 		<sample weight="1" path="geigerClick.wav" />
 	</sound>
 
+	<sound name="FursuitMeow">
+		<sample weight="1" path="items/fursuitMeow1.wav" />
+		<sample weight="1" path="items/fursuitMeow2.wav" />
+		<sample weight="1" path="items/fursuitMeow3.wav" />
+		<sample weight="1" path="items/fursuitMeow4.wav" />
+		<sample weight="1" path="items/fursuitMeow5.wav" />
+	</sound>
+
 	<sound name="ChoirHurt">
 		<sample weight="1" path="choirHurt1.wav" />
 		<sample weight="1" path="choirHurt2.wav" />
@@ -152,6 +160,12 @@
 	<!--Items-->
 	<sound name="ArmorBlock">
 		<sample weight="1" path="items/armorBreak.wav" />
+	</sound>
+	<sound name="DiseaseProc">
+		<sample weight="1" path="items/diseaseProc.wav" />
+	</sound>
+	<sound name="DivineProc">
+		<sample weight="1" path="items/divineProc.wav" />
 	</sound>
 	<!--Trinkets-->
 	<sound name="DemonCoreEffect">

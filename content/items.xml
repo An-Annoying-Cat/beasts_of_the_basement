@@ -89,6 +89,14 @@
     <active id="73" quality="2" name="Toy Phone" description="Call for help" gfx="toy_phone.png" chargetype="normal" maxcharges="1"/>
     <active id="74" quality="2" name="Toy Phone?" description="Call for help." gfx="toy_phone_alt.png" chargetype="normal" hidden="true"  maxcharges="1"/>
 
+    <active id="75" quality="4" name="Fursuit" description="It's not a phase, mom!" gfx="fursuit.png" chargetype="normal" maxcharges="0" />
+    <passive id="76" quality="2" name="Mila's Collar" description="Corrective shock" gfx="shock_collar.png" />
+    <active id="77" quality="4" name="Dead Daisy" description="Nobody loves me..." gfx="dead_daisy.png" chargetype="normal" maxcharges="0" hidden="true"/>
+    <passive id="78" quality="2" name="Name Tag" description="Hello, my name is..." gfx="name_tag.png" cache="damage luck"/>
+    <familiar id="79" quality="3" name="Immortal Baby" description="Accomplished swordswoman" gfx="immortal_baby.png" tags="monstermanual baby"/>
+    <passive id="80" quality="3" name="Rabies" description="Filled with religious fervor, and also disease!" gfx="rabies.png"/>
+    <passive id="81" quality="2" name="Divine Mud" description="Their 'protection' shall be their downfall" gfx="divine_mud.png"/>
+
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
     <passive id="9" quality="1" name="B.H.F." description="Big Hesitant Fly" gfx="item_bhf.png" cache="familiars"/>

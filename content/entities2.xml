@@ -765,6 +765,9 @@
     <entity anm2path="familiar/lesser_key_chargebar.anm2" tags="" variant="2462" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Clay Soldier (Chargebar)" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <entity anm2path="familiar/immortal_baby.anm2" tags="cansacrifice" variant="2463" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Immortal Baby" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
 
 
     <!-- Technical -->
@@ -824,6 +827,10 @@
     </entity>
     <entity name="Radiation Circle (Temporary)"
         id="1000" variant="809" anm2path="effects/radiation_circle.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
+    <entity name="BotB Status Effect"
+        id="1000" variant="810" anm2path="effects/botb_statuseffects.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
     </entity>
 

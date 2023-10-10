@@ -164,6 +164,7 @@ function FLIPPED_NOTE:onUpdTear(tear)
 			if tear.TearFlags & TearFlags.TEAR_BURSTSPLIT ~= TearFlags.TEAR_BURSTSPLIT then
 				doRemove = false
 			end
+			
 
 
 			if doRemove == true then
@@ -202,6 +203,9 @@ function FLIPPED_NOTE:onUpdTear(tear)
 				tear:Remove()
 			end
 		end
+		if tear:GetData().flippedNoteFollowerTarget:GetData().isARabiesTear == true then
+			tear.Color = Color(1,1,0.25)
+		end
 		if tear.FrameCount % 4 == 0 and tear:GetData().flippedNoteFollowerTarget ~= nil then
 			local roomEntities = Isaac.GetRoomEntities() -- table
 			if tear:GetData().flippedNoteDoRipples == true then
@@ -229,6 +233,46 @@ function FLIPPED_NOTE:onUpdTear(tear)
 
 			tear.Position = tear:GetData().flippedNoteFollowerTarget.Position
 			tear.Velocity = Vector.Zero
+
+			if tear:GetData().flippedNoteFollowerTarget:GetData().isARabiesTear == true then
+				tear.Color = Color(1,1,0.25)
+				for i = 1, #roomEntities do
+					local entity = roomEntities[i]
+					if (entity.Position - tear.Position):Length() <= 40*tear.Scale then
+						if entity:IsVulnerableEnemy() and EntityRef(entity).IsFriendly == false then
+                            local edata = entity:GetData()
+                            if edata.botbHasDisease ~= true then
+                                edata.botbDiseaseBaseColor = entity.Color
+                                edata.botbHasDisease = true
+                                edata.botbDiseaseDuration = 90
+                                edata.botbDiseaseStacks = 1
+                                edata.botbDiseaseSourcePlayer = tear.Parent:ToPlayer()
+                                SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                                
+                            else
+                                edata.botbDiseaseDuration = 90
+                                edata.botbDiseaseStacks = edata.botbDiseaseStacks + 1
+                                local str = "" .. edata.botbDiseaseStacks
+                                local AbacusFont = Font()
+                                AbacusFont:Load("font/pftempestasevencondensed.fnt")
+                                for i = 1, 40 do
+                                    BotB.FF.scheduleForUpdate(function()
+                                        local pos = game:GetRoom():WorldToScreenPosition(entity.Position) + Vector(AbacusFont:GetStringWidth(str) * -0.5, -(entity.SpriteScale.Y * 35) - 2*i)
+                                        local opacity
+                                        if i >= 20 then
+                                            opacity = 1 - ((i-20)/20)
+                                        else
+                                            opacity = i/10
+                                        end
+                                        AbacusFont:DrawString(str .. "!", pos.X, pos.Y, KColor(1,1,0,opacity), 0, false)
+                                    end, i, ModCallbacks.MC_POST_RENDER)
+                                end
+                                SFXManager():Play(SoundEffect.SOUND_WEIRD_WORM_SPIT,1,0, false, 2 + (0.1 * edata.botbDiseaseStacks), 0)
+                            end
+                        end
+					end
+				end
+			end
 
 			if tear.TearFlags & TearFlags.TEAR_EXPLOSIVE == TearFlags.TEAR_EXPLOSIVE then
 				Game():BombExplosionEffects(tear.Position, tear.CollisionDamage, tear.TearFlags, tear.Color, tear.Parent, 0.25*tear.Scale)
