@@ -323,9 +323,14 @@ function STRANGE_STARS:strangeStarsDamageNull(entity,amt,flags,source,_)
                 luckThreshold = 0.25
             end
             local techNanoRand = tearPlayerRNG:RandomFloat()
+            --print("it's " .. techNanoRand .. " versus " .. luckThreshold)
             if techNanoRand <= luckThreshold then
                 --rabies
-                
+                local data = entity:GetData()
+                if data.botbHasGlitched ~= true then
+                    data.botbHasGlitched = true
+                    data.botbGlitchedSource = player
+                end
 
             end
         end
@@ -495,8 +500,8 @@ function STRANGE_STARS:rabiesNPCUpdate(npc)
             end
         end
 
-        if math.random(1,128) == 1 then
-            local effect = Isaac.Spawn(EntityType.ENTITY_EFFECT,math.random(1,199),0,npc.Position,Vector(math.random(1,30),0):Rotated(math.random(0,359)),npc):ToEffect()
+        if math.random(1,256) == 1 then
+            local effect = Isaac.Spawn(EntityType.ENTITY_EFFECT,math.random(1,99),0,npc.Position,Vector(math.random(1,30),0):Rotated(math.random(0,359)),npc):ToEffect()
             if math.random(1,8) == 1 then
                 effect.Velocity = Vector.Zero
             end

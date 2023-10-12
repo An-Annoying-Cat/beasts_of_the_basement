@@ -705,6 +705,15 @@
         <bestiary anim="Hop" transform="0,0,1"/>
     </entity> 
 
+
+
+    <entity name="Pursuer V2"
+        id="866" variant="0" subtype="20" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="false" champion="0" shutdoors="false">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
     
 
     <!-- Custom Grids id="502" variants start at 0-->

@@ -30,7 +30,7 @@ function PURSUER:NPCUpdate(npc)
             npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         end
         if not npc:HasEntityFlags(EntityFlag.FLAG_PERSISTENT) then
-            npc:AddEntityFlags(EntityFlag.FLAG_PERSISTENT)
+            npc:AddEntityFlags(EntityFlag.FLAG_PERSISTENT | EntityFlag.FLAG_TRANSITION_UPDATE)
         end
 
         if npc.State == 99 then

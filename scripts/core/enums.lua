@@ -443,6 +443,13 @@ Enums.Entities = {
     },
 
 
+    PURSUER_V2 = {
+        TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
+        VARIANT = Isaac.GetEntityVariantByName("Pursuer V2"),
+        SUBTYPE = 20,
+    },
+
+
 
 
 
@@ -910,6 +917,10 @@ Enums.Consumables = {
         NINE_CRAK = Isaac.GetCardIdByName("9 Crak"),
     },
 
+}
+
+Enums.Curses = {
+    STALKED = Isaac.GetCurseIdByName("Curse of the Stalked"),
 }
 
 

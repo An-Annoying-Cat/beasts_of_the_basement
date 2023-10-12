@@ -94,6 +94,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.ascent.double_cherry",
 
     "scripts.entities.enemies.special.pursuer",
+    "scripts.entities.enemies.special.pursuer_v2",
 
     --BOSSES
     "scripts.entities.bosses.despair",
@@ -158,6 +159,7 @@ Mod.LoadScripts({
     "scripts.entities.items.name_tag",
     "scripts.entities.items.rabies",
     "scripts.entities.items.strange_stars",
+    "scripts.entities.items.divine_mud",
 
 
     --TRINKETS
@@ -211,6 +213,9 @@ Mod.LoadScripts({
 
     --CHALLENGES
     "scripts.challenges.back_pocket",
-    --"scripts.challenges.mybasement",
+    "scripts.challenges.mybasement",
+
+    --CURSES
+    "scripts.curses.curses",
 
 })

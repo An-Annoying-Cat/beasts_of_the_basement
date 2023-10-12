@@ -1,4 +1,5 @@
 <curses>
 	<!--have to do this because the first custom curse seems to be hardcoded to display the curse of the giant icon or something-->
-	<curse name="Curse of the Followed" />
+	<curse name="Buffer" />
+	<curse name="Curse of the Stalked" />
 </curses>
