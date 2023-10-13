@@ -442,6 +442,35 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Tenor"),
     },
 
+    GENERIC_NPC = {
+        TYPE = Isaac.GetEntityTypeByName("Generic NPC"),
+        VARIANT = Isaac.GetEntityVariantByName("Generic NPC"),
+    },
+
+    BILLY = {
+        TYPE = Isaac.GetEntityTypeByName("I.L.L."),
+        VARIANT = Isaac.GetEntityVariantByName("I.L.L."),
+    },
+
+    BILLY_CORD_DUMMY = {
+        TYPE = Isaac.GetEntityTypeByName("I.L.L. Cord Dummy"),
+        VARIANT = Isaac.GetEntityVariantByName("I.L.L. Cord Dummy"),
+    },
+
+    TRIACHNOID = {
+        TYPE = Isaac.GetEntityTypeByName("Triachnoid"),
+        VARIANT = Isaac.GetEntityVariantByName("Triachnoid"),
+    },
+
+    TRIACHNOID_CORD_DUMMY = {
+        TYPE = Isaac.GetEntityTypeByName("Triachnoid Cord Dummy"),
+        VARIANT = Isaac.GetEntityVariantByName("Triachnoid Cord Dummy"),
+    },
+
+    TRIACHNOID_LEG_CORD_DUMMY = {
+        TYPE = Isaac.GetEntityTypeByName("Triachnoid Leg Cord Dummy"),
+        VARIANT = Isaac.GetEntityVariantByName("Triachnoid Leg Cord Dummy"),
+    },
 
     PURSUER_V2 = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
@@ -513,6 +542,10 @@ Enums.Entities = {
     BOTB_STATUS_EFFECT = {
         TYPE = Isaac.GetEntityTypeByName("BotB Status Effect"),
         VARIANT = Isaac.GetEntityVariantByName("BotB Status Effect")
+    },
+    TRIACHNOID_LEG = {
+        TYPE = Isaac.GetEntityTypeByName("Triachnoid Leg"),
+        VARIANT = Isaac.GetEntityVariantByName("Triachnoid Leg")
     },
     
 

@@ -18,6 +18,7 @@
     <entity Name="Soprano" />
     <entity Name="Alto" />
     <entity Name="Tenor" />
+    <entity Name="Generic NPC" />
   </group>
 
   <group Name="BotB Crawlspace Events">
@@ -96,6 +97,9 @@
     <entity Name="Innie (Turn left)" />
     <entity Name="Inch Worm" />
     <entity Name="Chode" />
+    <entity Name="Ant" />
+    <entity Name="Bullet Ant" />
+    <entity Name="Super Bullet Ant" />
   </group>
 
   <group Name="BotB Dross Enemies" >
@@ -156,6 +160,7 @@
 
   <group Name="BotB Utero Enemies" >
     <entity Name="Trojan" />
+    <entity Name="Triachnoid" />
   </group>
 
   <group Name="BotB Scarred Womb Enemies" >

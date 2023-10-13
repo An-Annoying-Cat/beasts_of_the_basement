@@ -113,12 +113,12 @@ end
 
 
 local level = Game():GetLevel()
-print(level:GetCurses(), (1 << Isaac.GetCurseIdByName("Curse of the Stalked") - 1))
+--print(level:GetCurses(), (1 << Isaac.GetCurseIdByName("Curse of the Stalked") - 1))
 function BOTB_CURSES:GiveMeStalkedPls()
     local level = Game():GetLevel()
     
     if level:GetCurses() == 0 and math.random(0,7) == 0 then
-        print("entry time: " .. Game():GetFrameCount() .. " expected arrival: " .. (Game():GetFrameCount() + 1800))
+        --print("entry time: " .. Game():GetFrameCount() .. " expected arrival: " .. (Game():GetFrameCount() + 1800))
         local player = Isaac.GetPlayer(0)
         player:GetData().botbStalkedExpectedArrival = Game():GetFrameCount() + 1800
         --fix the lost curse when going to a new floor
@@ -138,7 +138,7 @@ end
 Mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, BOTB_CURSES.GiveMeStalkedPls)
 
 if MinimapAPI then
-    print("scrunt")
+    --print("scrunt")
     local icons = Sprite()
 	icons:Load("gfx/icons.anm2", true)
     
@@ -150,7 +150,7 @@ if MinimapAPI then
         return levelHasCurse(level, Isaac.GetCurseIdByName("Curse of the Stalked"))
     end
     
-    print(StalkedCurse())
+    --print(StalkedCurse())
     MinimapAPI:AddMapFlag("CurseStalked", StalkedCurse, icons, "Stalked", 0)
 end
 
@@ -169,7 +169,7 @@ Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, BOTB_CURSES.spawnPursuerWhen
 
 --
 if MinimapAPI then
-    print("scrunt")
+    --print("scrunt")
     local icons = Sprite()
 	icons:Load("gfx/icons.anm2", true)
     
@@ -181,7 +181,7 @@ if MinimapAPI then
         return levelHasCurse(level, Isaac.GetCurseIdByName("Curse of the Stalked"))
     end
     
-    print(StalkedCurse())
+    --print(StalkedCurse())
     MinimapAPI:AddMapFlag("CurseStalked", StalkedCurse, icons, "Stalked", 0)
 end
 --MinimapAPI.Debug.RandomMap()
@@ -193,13 +193,13 @@ Mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
         if (StageAPI and StageAPI.Loaded and StageAPI.IsHUDAnimationPlaying()) or game:GetSeeds():HasSeedEffect(SeedEffect.SEED_NO_HUD) then
             return
         end
-        --print("Shitfuck2!(tm)")
+        ----print("Shitfuck2!(tm)")
         local player = Isaac.GetPlayer(0)
         local level = game:GetLevel()
 
         --if mod.anyPlayerHas(CollectibleType.COLLECTIBLE_BLACK_LANTERN) then --dumb shitty safeguard
             if levelHasAnyBotBCurse(level) then
-                --print("bengis")
+                ----print("bengis")
                 local hud_offset = Options.HUDOffset
 
                 local s = Sprite()
@@ -207,7 +207,7 @@ Mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                 s:Load("gfx/ui/curseicons.anm2", true)
 
                 if levelHasCurse(level, Isaac.GetCurseIdByName("Curse of the Stalked")) then
-                    --print("galunga")
+                    ----print("galunga")
                     s:Play("stalked", true)
                 end
                 

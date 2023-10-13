@@ -83,6 +83,9 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_4.womb.gibby",
     "scripts.entities.enemies.chapter_4.womb.cadre",
     "scripts.entities.enemies.chapter_4.utero.trojan",
+    "scripts.entities.enemies.chapter_4.triachnoid",
+
+    "scripts.entities.enemies.chapter_4_alt.billy",
 
     "scripts.entities.enemies.chapter_5.cursed_mulligan",
     "scripts.entities.enemies.chapter_5.cursed_pooter",
@@ -95,6 +98,8 @@ Mod.LoadScripts({
 
     "scripts.entities.enemies.special.pursuer",
     "scripts.entities.enemies.special.pursuer_v2",
+
+    "scripts.entities.enemies.special.generic_npc",
 
     --BOSSES
     "scripts.entities.bosses.despair",
@@ -214,6 +219,7 @@ Mod.LoadScripts({
     --CHALLENGES
     "scripts.challenges.back_pocket",
     "scripts.challenges.mybasement",
+    --"scripts.challenges.basement_crossing",
 
     --CURSES
     "scripts.curses.curses",

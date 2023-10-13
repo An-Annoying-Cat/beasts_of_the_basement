@@ -78,6 +78,10 @@
   <entity Image="icons/drone.png" Name="Drone" ID="214" Variant="20" Subtype="0" />
   <entity Image="icons/unboxer.png" Name="Drone" ID="215" Variant="20" Subtype="0" />
 
+  <entity Image="icons/ant.png" Name="Ant" ID="501" Variant="48" Subtype="0" />
+  <entity Image="icons/bullet_ant.png" Name="Bullet Ant" ID="501" Variant="49" Subtype="0" />
+  <entity Image="icons/super_bullet_ant.png" Name="Super Bullet Ant" ID="501" Variant="50" Subtype="0" />
+
   <!-- Downpour Enemies -->
   <entity Image="icons/hydro_knight.png" Name="Hydro Knight" ID="41" Variant="50" Subtype="0" />
   <entity Image="icons/sub_paf.png" Name="Sub Paf" ID="501" Variant="21" Subtype="1" />
@@ -163,6 +167,7 @@
   </entity>  
   <!-- Utero -->
   <entity Image="icons/trojan.png" Name="Trojan" ID="41" Variant="51" Subtype="0" />
+  <entity Image="icons/triachnoid.png" Name="Triachnoid" ID="501" Variant="65" Subtype="0" />
   <!--Scarred Womb Enemies-->
   <entity Image="icons/frenulum.png" Name="Frenulum" ID="501" Variant="13" Subtype="4" />
   <!-- Sheol enemies -->
@@ -181,6 +186,7 @@
 
   <entity Image="icons/oozer.png" Name="Oozer" ID="501" Variant="46" Subtype="0" />
   <entity Image="icons/radioactive_barrel.png" Name="Radioactive Barrel" ID="502" Variant="1" Subtype="0" />
+  <entity Image="icons/generic_npc.png" Name="Generic NPC" ID="501" Variant="62" Subtype="0" />
   
 
 </data>

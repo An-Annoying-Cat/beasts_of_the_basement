@@ -118,6 +118,31 @@ Mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, player)
 end)
 
 
+local function getPlayers()
+	local game = Game()
+	local numPlayers = game:GetNumPlayers()
+  
+	local players = {}
+	for i = 0, numPlayers - 1 do
+	  local player = Isaac.GetPlayer(i)
+	  table.insert(players, player)
+	end
+  
+	return players
+end
+
+function PURSUER_V2:undoCurseOnNewLevel()
+    local players = getPlayers()
+    for i=1, #getPlayers() do
+        local player = players[i]:ToPlayer()
+        if player:GetData().gotPursued == true then
+            player:GetData().gotPursued = false
+        end
+    end
+end
+Mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, PURSUER_V2.undoCurseOnNewLevel)
+
+
 
 
 

@@ -599,7 +599,7 @@
 
     <entity name="Oozer"
         id="501" variant="46" subtype="0" anm2path="monsters/chapter_2.5/ashpit/oozer.anm2" baseHP="30" stageHP="0" portrait="3" hasFloorAlts="false"
-        collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="false" champion="1" >
+        collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" reroll="false" champion="1" >
         <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="0"/>
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
@@ -705,7 +705,43 @@
         <bestiary anim="Hop" transform="0,0,1"/>
     </entity> 
 
+    <entity name="Generic NPC"
+        id="501" variant="62" subtype="0" anm2path="monsters/special/bc/generic_npc.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="false" champion="0" shutdoors="false">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+    </entity> 
 
+    <entity name="I.L.L."
+        id="501" variant="63" subtype="0" anm2path="monsters/chapter_4.5/billy.anm2" baseHP="100" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="15" friction="1"  numGridCollisionPoints="12" shadowSize="20"   friction="1" champion="1" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="0"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="I.L.L. Cord Dummy"
+        id="501" variant="64" subtype="0" anm2path="no.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="15" friction="1"  numGridCollisionPoints="12" shadowSize="20"   friction="1" champion="1" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="0"/>
+    </entity> 
+
+    <entity name="Triachnoid"
+        id="501" variant="65" subtype="0" anm2path="monsters/chapter_4/triachnoid.anm2" baseHP="100" stageHP="0" portrait="3" hasFloorAlts="false" collisionRadiusYMulti="1.125"
+        collisionDamage="1" collisionMass="10" collisionRadius="18" friction="1"  numGridCollisionPoints="12" shadowSize="20"   friction="1" champion="1" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="0"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Triachnoid Cord Dummy"
+        id="501" variant="66" subtype="0" anm2path="monsters/chapter_4/triachnoid_cord_dummy.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1"  numGridCollisionPoints="12" shadowSize="20"   friction="1" champion="1" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="0"/>
+    </entity> 
+
+    <entity name="Triachnoid Leg Cord Dummy"
+        id="501" variant="67" subtype="0" anm2path="monsters/chapter_4/triachnoid_leg_cord_dummy.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="15" friction="1"  numGridCollisionPoints="12" shadowSize="20"   friction="1" champion="1" >
+        <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="0"/>
+    </entity> 
 
     <entity name="Pursuer V2"
         id="866" variant="0" subtype="20" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
@@ -713,6 +749,8 @@
         <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
+
+    
 
     
 
@@ -841,6 +879,10 @@
     <entity name="BotB Status Effect"
         id="1000" variant="810" anm2path="effects/botb_statuseffects.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="1" friction="1">
+    </entity>
+    <entity name="Triachnoid Leg"
+        id="1000" variant="811" anm2path="monsters/chapter_4/triachnoid_head_effect.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
     </entity>
 
 
