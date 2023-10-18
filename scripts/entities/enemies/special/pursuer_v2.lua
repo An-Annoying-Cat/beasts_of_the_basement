@@ -99,21 +99,29 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, PURSUER_V2.NPCUpdate, Isaac.GetEntit
 Mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, player)
 	if player:GetData().gotPursued == true then
 		local effects = player:GetEffects()
-        effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+        if player:HasCollectible(CollectibleType.COLLECTIBLE_HOLY_MANTLE) ~= true then
+            effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+        end
 		if not effects:HasNullEffect(NullItemID.ID_LOST_CURSE) then
 			effects:AddNullEffect(NullItemID.ID_LOST_CURSE)
-            effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+            if player:HasCollectible(CollectibleType.COLLECTIBLE_HOLY_MANTLE) ~= true then
+                effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+            end
             
 			if game:GetRoom():GetFrameCount() > 0 then
 				sfx:Play(SoundEffect.SOUND_FIREDEATH_HISS)
 			elseif effects:HasCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE) then
-				effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+				if player:HasCollectible(CollectibleType.COLLECTIBLE_HOLY_MANTLE) ~= true then
+                    effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+                end
 			end
 		end
     else
         local effects = player:GetEffects()
         effects:RemoveNullEffect(NullItemID.ID_LOST_CURSE)
-        effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+        if player:HasCollectible(CollectibleType.COLLECTIBLE_HOLY_MANTLE) ~= true then
+            effects:RemoveCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE, 1)
+        end
 	end
 end)
 

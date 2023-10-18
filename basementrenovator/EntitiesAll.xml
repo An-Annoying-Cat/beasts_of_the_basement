@@ -15,10 +15,21 @@
     <entity Name="Crockpot" />
     <entity Name="Oozer" />
     <entity Name="Radioactive Barrel" />
+    <entity Name="Generic NPC" />
+    <entity Name="Slot Room Panel" />
+  </group>
+
+  <group Name="BotB Cathedral Enemies" >  
+    <entity Name="Pope" />
+    <entity Name="Holy Dip" />
+    <entity Name="Holy Squirt" />
     <entity Name="Soprano" />
     <entity Name="Alto" />
     <entity Name="Tenor" />
-    <entity Name="Generic NPC" />
+  </group>
+
+  <group Name="BotB Cathedral Events" >  
+    <entity Name="Pope Spawnpoint" />
   </group>
 
   <group Name="BotB Crawlspace Events">
@@ -85,6 +96,8 @@
 
   <group Name="BotB Hoard Events" >
     <entity Name="Hoarder Basement Backdrop" />
+    <entity Name="Slot Room Backdrop" />
+    <entity Name="Crystal Mines Backdrop" />
   </group>
 
   <group Name="BotB Hoard Enemies" >
@@ -129,6 +142,11 @@
     <entity Name="Geo Fatty" />
   </group>
 
+  <group Name="BotB Ashpit Enemies" >
+    <entity Name="Oozer" />
+    <entity Name="Prickhead" />
+  </group>
+
   <group Name="BotB Depths Enemies" >
     <entity Name="Desirer" />
     <entity Name="Humbled" />
@@ -165,6 +183,9 @@
 
   <group Name="BotB Scarred Womb Enemies" >
     <entity Name="Frenulum" />
+    <entity Name="Halftop" />
+    <entity Name="Halftop (Faceless)" />
+    <entity Name="Puck" />
   </group>
 
 
@@ -348,7 +369,7 @@
         <group Name="BotB Scarred Womb" Label="4.3 - Scarred Womb">
           <group Name="BotB Scarred Womb Events" Label="Events" />
           <group Name="BotB Scarred Womb Obstacles" Label="Obstacles" />
-          <group Name="BotB Scarrd Womb Enemies" Label="Enemies" />
+          <group Name="BotB Scarred Womb Enemies" Label="Enemies" />
         </group>
       </group>
 
@@ -502,6 +523,10 @@
 
   <group Name="Scarred Womb Enemies" >
     <group Name="BotB Scarred Womb Enemies" />
+  </group>
+
+  <group Name="Cathedral Enemies" >
+    <group Name="BotB Cathedral Enemies" />
   </group>
   
 </data>

@@ -27,6 +27,8 @@ Mod.Functions.Tables:AddToDictionary(Mod.FF.PocketObjects,
 Mod.Functions.Tables:AddToDictionary(Mod.FF.roomBackdropTable,
 {
     [13] = Mod.HoarderBasementBackdrop,
+    [14] = Mod.SlotRoomBackdrop,
+    [15] = Mod.CrystalMinesBackdrop,
 })
 
 --this is so they get added to void
@@ -34,6 +36,8 @@ Mod.Functions.Tables:AddToDictionary(Mod.FF.roomBackdropTable,
 Mod.Functions.Tables:AddToDictionary(Mod.FF.FloorGrids,
 {
     [30] = Mod.HoarderBasementGrid,
+    [31] = Mod.SlotRoomGrid,
+    [32] = Mod.CrystalMinesGrid,
 })
 
 --#endregion

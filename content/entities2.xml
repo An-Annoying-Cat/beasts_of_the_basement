@@ -584,7 +584,7 @@
     </entity> 
 
     <entity name="Despair"
-        id="501" variant="44" subtype="0" anm2path="bosses/despair/despair.anm2" baseHP="120" stageHP="0" portrait="3" hasFloorAlts="false"
+        id="501" variant="44" subtype="0" anm2path="bosses/despair/despair.anm2" baseHP="180" stageHP="0" portrait="3" hasFloorAlts="false"
         collisionDamage="1" collisionMass="30" collisionRadius="25"  numGridCollisionPoints="12" shadowSize="19"   friction="1" reroll="false" champion="0" boss="1" tags="ghost">
         <gibs amount="3" blood="1" bone="1" eye="1" gut="0" large="0" poop="1"/>
         <bestiary anim="Idle" transform="0,0,1"/>
@@ -743,6 +743,46 @@
         <gibs amount="-" blood="1" bone="1" eye="1" gut="0" large="0" poop="0"/>
     </entity> 
 
+    <entity name="Prickhead" 
+    id="501" variant="68" subtype="0" anm2path="monsters/chapter_2.5/ashpit/prick.anm2" reroll="true" baseHP="26" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="28" stageHP="0" portrait="856" tags="spider" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Hop">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="814.0.0" weight="1"/>
+    </entity>
+
+    <!--nice-->
+    <entity name="Halftop"
+        id="501" variant="69"  subtype="0" anm2path="monsters/chapter_4/scarred_womb/halftop.anm2" baseHP="40" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="false" champion="1" shutdoors="true">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+    </entity> 
+
+    <entity name="Puck"
+        id="501" variant="70"  subtype="0" anm2path="monsters/chapter_4/scarred_womb/puck.anm2" baseHP="30" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="false" champion="1" shutdoors="true">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+    </entity> 
+
+    <entity name="Holy Dip"
+        id="501" variant="71" subtype="0" anm2path="monsters/chapter_5/holy_dip.anm2" baseHP="10" stageHP="2" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="6" collisionRadius="9" friction="1"  numGridCollisionPoints="12" shadowSize="12"   friction="1" champion="1" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="1"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Holy Squirt"
+        id="501" variant="72" subtype="0" anm2path="monsters/chapter_5/holy_squirt.anm2" baseHP="30" stageHP="6" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="21"   friction="1" champion="1" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="1"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Pope"
+        id="501" variant="73" subtype="0" anm2path="monsters/chapter_5/pope.anm2" baseHP="300" stageHP="0" portrait="3" hasFloorAlts="false" collisionRadiusXMulti="2" collisionRadiusYMulti="1"
+        collisionDamage="1" collisionMass="30" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="21" boss="1" friction="1" champion="1" >
+        <gibs amount="16" blood="1" bone="0" eye="0" gut="1" large="1" poop="0"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
     <entity name="Pursuer V2"
         id="866" variant="0" subtype="20" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
         collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="false" champion="0" shutdoors="false">
@@ -751,8 +791,18 @@
     </entity> 
 
     
+    <!--Props id="960" vairants start at 3000-->
+    <entity name="Slot Room Panel"
+        id="960" variant="3000" subtype="0" anm2path="grid/slot_room_panel.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="0"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
+        <entity name="Pope Spawnpoint"
+        id="960" variant="3001" subtype="0" anm2path="no.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="0"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
 
-    
 
     <!-- Custom Grids id="502" variants start at 0-->
     <entity anm2path="no.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="502" name="BotB Grid Spawner" variant="0" numGridCollisionPoints="24" shadowSize="17" stageHP="0" shutdoors="false">
@@ -815,6 +865,16 @@
     <entity anm2path="familiar/immortal_baby.anm2" tags="cansacrifice" variant="2463" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Immortal Baby" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <entity anm2path="familiar/robobabyzero.anm2" tags="cansacrifice" variant="2464" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Yeet-a-baby" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="no.anm2" tags="" variant="2465" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Tezebel Knife Holder" numGridCollisionPoints="12" shadowSize="0" stageHP="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="familiar/buggy_baby.anm2" tags="cansacrifice" variant="2466" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Buggy Baby" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    
 
 
     <!-- Technical -->

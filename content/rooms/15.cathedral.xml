@@ -2136,7 +2136,7 @@
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="20019" name="MillieAmp - Alto, Soprano - Préludes (Op. 28: No. 15)" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="10.0">
+	<room variant="20019" name="MillieAmp - Alto, Soprano - Préludes (Op. 28: No." type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="10.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3347,6 +3347,3440 @@
 		</spawn>
 		<spawn x="11" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20030" name="MillieAmp - Pope - Wow, it's Made!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="160" variant="870" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20031" name="MillieAmp - Pope - Churches when you put the fake dollar bills they use to advertise in the collection bowl" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="86" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="86" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="90" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="610" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="50" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="86" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="86" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20032" name="MillieAmp - Pope - Fisted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="3" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="73" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="72" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="73" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="73" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20033" name="MillieAmp - Pope - With Apologies To Giovanni Batista Pamphilli" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="19" y="-1"/>
+		<door exists="True" x="19" y="14"/>
+		<door exists="True" x="26" y="3"/>
+		<door exists="True" x="26" y="10"/>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="501" variant="60" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="501" variant="60" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="6">
+			<entity type="501" variant="59" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="501" variant="61" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="7">
+			<entity type="501" variant="59" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="501" variant="59" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="8">
+			<entity type="501" variant="59" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="10">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="10">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20034" name="MillieAmp - Pope - Lost In Bonerland" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="227" variant="667" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="227" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="227" variant="667" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20035" name="MillieAmp - Pope - Lost In Bonerland" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="10.0">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="227" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="227" variant="667" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="227" variant="667" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20036" name="MillieAmp - Pope - Actual torment (My apologies)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="260" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="114" variant="48" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="260" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="260" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="114" variant="48" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="260" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20037" name="MillieAmp - Pope - Eye will always be around" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="160" variant="451" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="60" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="61" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20038" name="MillieAmp - Pope - Eye will always be around" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="10.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="61" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="73" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="160" variant="451" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="60" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="960" variant="3001" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20039" name="MillieAmp - Holy Dip - Holy shit!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="450" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20040" name="MillieAmp - Holy Dip - Holy shit!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="450" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20041" name="MillieAmp - Holy Dip - Slime rancher" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="666" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20042" name="MillieAmp - Holy Dip - No, I will not bless your mayonaisse" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="33" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="114" variant="16" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="33" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="666" variant="20" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20043" name="MillieAmp - Holy Dip - No, I will not bless your mayonaisse" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="666" variant="20" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="33" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="114" variant="16" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="33" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20044" name="MillieAmp - Holy Dip - Penned in" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="160" variant="720" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="160" variant="270" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="160" variant="270" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20045" name="MillieAmp - Holy Dip - Penned in" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="160" variant="270" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="160" variant="270" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="160" variant="720" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20046" name="MillieAmp - Holy Dip - &quot;It's faster if you drive!&quot;" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="183" variant="1028" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="969" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="805" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="183" variant="1028" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20047" name="MillieAmp - Holy Dip - &quot;It's faster if you drive!&quot;" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="183" variant="1028" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="805" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="969" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="183" variant="1028" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20048" name="MillieAmp - Holy Dip - Please clean up after your pets" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="120" variant="224" subtype="40" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="450" variant="37" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20049" name="MillieAmp - Holy Dip - Please clean up after your pets" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="450" variant="37" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="120" variant="224" subtype="40" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="227" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20050" name="MillieAmp - Holy Dip - The runabout" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="19" y="-1"/>
+		<door exists="True" x="19" y="7"/>
+		<door exists="True" x="26" y="3"/>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="2">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="3">
+			<entity type="108" variant="113" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="4">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20051" name="MillieAmp - Holy Dip - The runabout" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="19" y="-1"/>
+		<door exists="True" x="19" y="7"/>
+		<door exists="True" x="26" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="2">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="108" variant="113" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="4">
+			<entity type="451" variant="90" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20052" name="MillieAmp - The church bathroom during service" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="227" variant="666" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20053" name="MillieAmp - The church bathroom during service" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="227" variant="666" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20054" name="MillieAmp - Holy Dip - The sacred noodle" type="1" subtype="0" shape="3" width="13" height="7" difficulty="15" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<spawn x="4" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="55" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20055" name="MillieAmp - Holy Dip - Some privacy, please?" type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="60" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20056" name="MillieAmp - Holy Dip - Some privacy, please?" type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="60" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20057" name="MillieAmp - Holy Squirt - Even holier shit!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="114" variant="48" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="114" variant="48" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20058" name="MillieAmp - Holy Squirt - Even holier shit!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="3" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="114" variant="48" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="501" variant="71" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="114" variant="48" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20059" name="MillieAmp - Holy Squirt - Holy Dips and Squirts smell like mayo for some reason, nobody knows why" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T16:58+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="3" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="160" variant="420" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20060" name="MillieAmp - Holy Squirt - The sperm dog from Xavier: Renegade Angel" type="1" subtype="0" shape="2" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="3">
+			<entity type="90" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="610" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20061" name="MillieAmp - Holy Squirt - The sperm dog from Xavier: Renegade Angel" type="1" subtype="0" shape="2" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="3">
+			<entity type="610" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="90" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20062" name="MillieAmp - Holy Squirt - https://www.youtube.com/watch?v=cXmWDxp52ok" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="666" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20063" name="MillieAmp - Holy Squirt - https://www.youtube.com/watch?v=cXmWDxp52ok" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="666" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="130" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20064" name="MillieAmp - Holy Squirt - These Woerms are guaranted Cleane and Free Of Sin" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="19" y="-1"/>
+		<door exists="True" x="19" y="7"/>
+		<door exists="True" x="26" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="0">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="0">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="212" variant="450" subtype="5" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="3">
+			<entity type="212" variant="450" subtype="5" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="5">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="6">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20065" name="MillieAmp - Holy Squirt - These Woerms are guaranted Cleane and Free Of Sin (flipped X)" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="19" y="-1"/>
+		<door exists="True" x="19" y="7"/>
+		<door exists="True" x="26" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="0">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="0">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="1">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="1">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="212" variant="450" subtype="5" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="3">
+			<entity type="212" variant="450" subtype="5" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="5">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="6">
+			<entity type="23" variant="960" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20066" name="MillieAmp - Taco Bell at Sunday School" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="160" variant="870" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="108" variant="111" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="160" variant="870" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="8">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="9">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20067" name="MillieAmp - Taco Bell at Sunday School" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="160" variant="870" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="108" variant="111" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="8">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="8">
+			<entity type="160" variant="870" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="33" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="20068" name="MillieAmp - Holy Squirt - Not more snakes!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="10.0" lastTestTime="2023-10-18T17:09+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="55" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="55" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1500" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1500" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="501" variant="72" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1500" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1500" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="55" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="55" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
 </rooms>

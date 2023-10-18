@@ -95,9 +95,12 @@
     <passive id="78" quality="2" name="Name Tag" description="Hello, my name is..." gfx="name_tag.png" cache="damage luck"/>
     <familiar id="79" quality="3" name="Immortal Baby" description="Accomplished swordswoman" gfx="immortal_baby.png" tags="monstermanual baby"/>
     <passive id="80" quality="3" name="Rabies" description="Filled with religious fervor, and also disease!" gfx="rabies.png"/>
-    <passive id="81" quality="2" name="Divine Mud" description="Their 'protection' shall be their downfall" hidden="true" gfx="divine_mud.png"/>
+    <passive id="81" quality="2" name="Divine Mud" description="Their 'protection' shall be their downfall"  gfx="divine_mud.png"/>
     <passive id="82" quality="3" name="Strange Stars" description="G1I7chY 7eaR5" gfx="strange_stars.png"/>
-    <passive id="83" quality="2" name="Phossy Jaw" description="Radioactive Tears" gfx="phossy_jaw.png"/>
+    <passive id="83" quality="2" name="Phossy Jaw" description="Radioactive Tears" hidden="true" gfx="phossy_jaw.png"/>
+    <passive id="84" quality="2" name="Dad's Pants" description="You feel antsy..." hearts="2" gfx="dads_pants.png"/>
+    <familiar id="85" quality="3" name="Yeet-a-baby" description="Throwable buddy" gfx="placeholder.png" tags="monstermanual baby"/>
+    <familiar id="86" quality="1" name="Buggy Baby" description="Broken buddy" gfx="buggy_baby.png" tags="monstermanual baby"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

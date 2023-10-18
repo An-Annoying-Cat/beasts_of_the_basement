@@ -14,4 +14,5 @@
     
     <costume id="80" anm2path="203_humblingbundle.anm2"        type="passive"  priority="98" hasSkinAlt="true" />
     <costume id="80" anm2path="costumes/rabies.anm2"           type="passive"  priority="99" hasSkinAlt="false"/>
+    <costume id="84" anm2path="costumes/dads_pants.anm2"       type="passive"  priority="99" hasSkinAlt="false"/>
 </costumes>

@@ -42,6 +42,12 @@
   <entity Image="icons/grids/hoarderbasement.png" Name="Hoarder Basement Backdrop" ID="150" Variant="1000" Subtype="13" Metadata="1">
     <Gfx RoomGfx="Hoarder Basement Backdrop" />
   </entity>
+  <entity Image="icons/grids/slotroom.png" Name="Slot Room Backdrop" ID="150" Variant="1000" Subtype="14" Metadata="1">
+    <Gfx RoomGfx="Slot Room Backdrop" />
+  </entity>
+  <entity Image="icons/grids/crystalmines.png" Name="Crystal Mines Backdrop" ID="150" Variant="1000" Subtype="15" Metadata="1">
+    <Gfx RoomGfx="Crystal Mines Backdrop" />
+  </entity>
 
   <!-- Hoard Enemies -->
   <entity Image="icons/acme.png" Name="Acme" ID="10" Variant="40" Subtype="0" />
@@ -170,6 +176,9 @@
   <entity Image="icons/triachnoid.png" Name="Triachnoid" ID="501" Variant="65" Subtype="0" />
   <!--Scarred Womb Enemies-->
   <entity Image="icons/frenulum.png" Name="Frenulum" ID="501" Variant="13" Subtype="4" />
+  <entity Image="icons/halftop.png" Name="Halftop" ID="501" Variant="69" Subtype="0" />
+  <entity Image="icons/halftop_faceless.png" Name="Halftop (Faceless)" ID="501" Variant="69" Subtype="1" />
+  <entity Image="icons/puck.png" Name="Puck" ID="501" Variant="70" Subtype="0" />
   <!-- Sheol enemies -->
   <entity Image="icons/cursed_horf.png" Name="Cursed Horf" ID="501" Variant="34" Subtype="0" />
   <entity Image="icons/cursed_mulligan.png" Name="Cursed Mulligan" ID="501" Variant="35" Subtype="0" />
@@ -178,6 +187,10 @@
   <entity Image="icons/soprano.png" Name="Soprano" ID="501" Variant="59" Subtype="0" />
   <entity Image="icons/alto.png" Name="Alto" ID="501" Variant="60" Subtype="0" />
   <entity Image="icons/tenor.png" Name="Tenor" ID="501" Variant="61" Subtype="0" />
+  <entity Image="icons/pope.png" Name="Pope" ID="501" Variant="73" Subtype="0" />
+  <entity Image="icons/pope_spawnpoint.png" Name="Pope Spawnpoint" ID="960" Variant="3001" Subtype="0" />
+  <entity Image="icons/holy_dip.png" Name="Holy Dip" ID="501" Variant="71" Subtype="0" />
+  <entity Image="icons/holy_squirt.png" Name="Holy Squirt" ID="501" Variant="72" Subtype="0" />
   <!-- Ascent Enemies -->
   <entity Image="icons/batso.png" Name="Batso" ID="258" Variant="10" Subtype="0" />
   <entity Image="icons/double_cherry.png" Name="Double Cherry" ID="501" Variant="43" Subtype="0" />
@@ -186,6 +199,11 @@
 
   <entity Image="icons/oozer.png" Name="Oozer" ID="501" Variant="46" Subtype="0" />
   <entity Image="icons/radioactive_barrel.png" Name="Radioactive Barrel" ID="502" Variant="1" Subtype="0" />
+  <entity Image="icons/prickhead.png" Name="Prickhead" ID="501" Variant="68" Subtype="0" />
+
+
+
+  <entity Image="icons/slot_room_panel.png" Name="Slot Room Panel" ID="960" Variant="3000" Subtype="0" />
   <entity Image="icons/generic_npc.png" Name="Generic NPC" ID="501" Variant="62" Subtype="0" />
   
 

@@ -7,6 +7,7 @@ Mod.LoadScripts({
 
     --GRIDS
     "scripts.entities.grids.radioactive_barrel",
+    "scripts.entities.grids.slot_room_panel",
 
     --ENEMIES
     "scripts.entities.enemies.eternalfly",
@@ -60,6 +61,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_2_alt.mines.geohorf",
     "scripts.entities.enemies.chapter_2_alt.mines.geo_fatty",
     "scripts.entities.enemies.chapter_2_alt.ashpit.oozer",
+    "scripts.entities.enemies.chapter_2_alt.ashpit.prick",
 
     "scripts.entities.enemies.chapter_3.seducer",
     "scripts.entities.enemies.chapter_3.desirer",
@@ -84,6 +86,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_4.womb.cadre",
     "scripts.entities.enemies.chapter_4.utero.trojan",
     "scripts.entities.enemies.chapter_4.triachnoid",
+    "scripts.entities.enemies.chapter_4.halftop",
 
     "scripts.entities.enemies.chapter_4_alt.billy",
 
@@ -91,6 +94,9 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_5.cursed_pooter",
     "scripts.entities.enemies.chapter_5.cursed_mulliboom",
     "scripts.entities.enemies.chapter_5.choir",
+    "scripts.entities.enemies.chapter_5.holy_dip",
+    "scripts.entities.enemies.chapter_5.holy_squirt",
+    "scripts.entities.enemies.chapter_5.pope",
 
 
     "scripts.entities.enemies.ascent.batso",
@@ -117,7 +123,8 @@ Mod.LoadScripts({
     "scripts.entities.familiars.attack_ant",
     "scripts.entities.familiars.clay_soldier",
     "scripts.entities.familiars.immortal_baby",
-
+    "scripts.entities.familiars.yeet_a_baby",
+    "scripts.entities.familiars.buggy_baby",
 
     --ITEMS
     "scripts.entities.items.alphaarmor",
@@ -165,7 +172,8 @@ Mod.LoadScripts({
     "scripts.entities.items.rabies",
     "scripts.entities.items.strange_stars",
     "scripts.entities.items.divine_mud",
-
+    "scripts.entities.items.dads_pants",
+    "scripts.entities.items.pandemonium",
 
     --TRINKETS
     "scripts.entities.items.trinkets.demoncore",

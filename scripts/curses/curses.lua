@@ -116,8 +116,17 @@ local level = Game():GetLevel()
 --print(level:GetCurses(), (1 << Isaac.GetCurseIdByName("Curse of the Stalked") - 1))
 function BOTB_CURSES:GiveMeStalkedPls()
     local level = Game():GetLevel()
+    local chance = math.random(0,7)
+    local players = getPlayers()
+        for i=1,#players do
+            local dude = players[i]
+            if dude:HasCollectible(BotB.Enums.Items.TOY_PHONE_DUMMY) then
+                chance = 0
+                level:AddCurse(((1 << Isaac.GetCurseIdByName("Curse of the Stalked") - 1)), false)
+            end
+        end
     
-    if level:GetCurses() == 0 and math.random(0,7) == 0 then
+    if level:GetCurses() == 0 and chance == 0 then
         --print("entry time: " .. Game():GetFrameCount() .. " expected arrival: " .. (Game():GetFrameCount() + 1800))
         local player = Isaac.GetPlayer(0)
         player:GetData().botbStalkedExpectedArrival = Game():GetFrameCount() + 1800

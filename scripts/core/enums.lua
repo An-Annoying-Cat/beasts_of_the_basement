@@ -472,6 +472,36 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Triachnoid Leg Cord Dummy"),
     },
 
+    PRICKHEAD = {
+        TYPE = Isaac.GetEntityTypeByName("Prickhead"),
+        VARIANT = Isaac.GetEntityVariantByName("Prickhead"),
+    },
+
+    HALFTOP = {
+        TYPE = Isaac.GetEntityTypeByName("Halftop"),
+        VARIANT = Isaac.GetEntityVariantByName("Halftop"),
+    },
+
+    PUCK = {
+        TYPE = Isaac.GetEntityTypeByName("Puck"),
+        VARIANT = Isaac.GetEntityVariantByName("Puck"),
+    },
+
+    HOLY_DIP = {
+        TYPE = Isaac.GetEntityTypeByName("Holy Dip"),
+        VARIANT = Isaac.GetEntityVariantByName("Holy Dip"),
+    },
+
+    HOLY_SQUIRT = {
+        TYPE = Isaac.GetEntityTypeByName("Holy Squirt"),
+        VARIANT = Isaac.GetEntityVariantByName("Holy Squirt"),
+    },
+
+    POPE = {
+        TYPE = Isaac.GetEntityTypeByName("Pope"),
+        VARIANT = Isaac.GetEntityVariantByName("Pope"),
+    },
+
     PURSUER_V2 = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
         VARIANT = Isaac.GetEntityVariantByName("Pursuer V2"),
@@ -556,6 +586,17 @@ Enums.Entities = {
 
 }
 
+Enums.Props = {
+    SLOT_ROOM_PANEL = {
+        TYPE = Isaac.GetEntityTypeByName("Slot Room Panel"),
+        VARIANT = Isaac.GetEntityVariantByName("Slot Room Panel")
+    },
+    POPE_SPAWNPOINT = {
+        TYPE = Isaac.GetEntityTypeByName("Pope Spawnpoint"),
+        VARIANT = Isaac.GetEntityVariantByName("Pope Spawnpoint")
+    },
+}
+
 Enums.Grids = {
     RADIOACTIVE_BARREL = 1,
 }
@@ -623,6 +664,18 @@ Enums.Familiars = {
         TYPE = Isaac.GetEntityTypeByName("Immortal Baby"),
         VARIANT = Isaac.GetEntityVariantByName("Immortal Baby"),
     },
+    YEET_A_BABY = {
+        TYPE = Isaac.GetEntityTypeByName("Yeet-a-baby"),
+        VARIANT = Isaac.GetEntityVariantByName("Yeet-a-baby"),
+    },
+    TEZEBEL_KNIFE_HOLDER = {
+        TYPE = Isaac.GetEntityTypeByName("Tezebel Knife Holder"),
+        VARIANT = Isaac.GetEntityVariantByName("Tezebel Knife Holder"),
+    },
+    BUGGY_BABY = {
+        TYPE = Isaac.GetEntityTypeByName("Buggy Baby"),
+        VARIANT = Isaac.GetEntityVariantByName("Buggy Baby"),
+    },
 }
 
 Enums.SFX = {
@@ -662,6 +715,8 @@ Enums.SFX = {
     MABELVROOM = Isaac.GetSoundIdByName("MabelVroom"),
 
     PONGPOP = Isaac.GetSoundIdByName("PongPop"),
+
+    GLITCH_NOISE = Isaac.GetSoundIdByName("GlitchNoise"),
 
     PUER_IDLE = Isaac.GetSoundIdByName("PuerIdle"),
     PUER_TELE = Isaac.GetSoundIdByName("PuerTele"),
@@ -816,6 +871,10 @@ Enums.Items = {
     RABIES = Isaac.GetItemIdByName("Rabies"),
     DIVINE_MUD = Isaac.GetItemIdByName("Divine Mud"),
     STRANGE_STARS = Isaac.GetItemIdByName("Strange Stars"),
+    PHOSSY_JAW = Isaac.GetItemIdByName("Phossy Jaw"),
+    DADS_PANTS = Isaac.GetItemIdByName("Dad's Pants"),
+    YEET_A_BABY = Isaac.GetItemIdByName("Yeet-a-baby"),
+    BUGGY_BABY = Isaac.GetItemIdByName("Buggy Baby"),
 }
 
 Enums.Trinkets = {

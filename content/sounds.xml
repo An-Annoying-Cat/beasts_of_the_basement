@@ -114,6 +114,13 @@
 		<sample weight="1" path="items/fursuitMeow5.wav" />
 	</sound>
 
+	<sound name="GlitchNoise">
+		<sample weight="1" path="items/glitchNoise1.wav" />
+		<sample weight="1" path="items/glitchNoise2.wav" />
+		<sample weight="1" path="items/glitchNoise3.wav" />
+		<sample weight="1" path="items/glitchNoise4.wav" />
+	</sound>
+
 	<sound name="ChoirHurt">
 		<sample weight="1" path="choirHurt1.wav" />
 		<sample weight="1" path="choirHurt2.wav" />

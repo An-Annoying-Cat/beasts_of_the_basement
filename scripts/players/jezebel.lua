@@ -256,7 +256,7 @@ local jezOverhealBonus={
 function Jezebel:onJezCache(player, cacheFlag)
 	if player:GetPlayerType() == PLAYER_JEZEBEL then
 		local data = player:GetData()
-		if data.jezOverhealTimer ~= 0 then
+		if data.jezOverhealTimer ~= nil and data.jezOverhealTimer ~= 0 then
 			local Multiplier = data.jezOverhealTimer / 240
 			if (cacheFlag&CacheFlag.CACHE_DAMAGE)==CacheFlag.CACHE_DAMAGE then
 			  player.Damage=player.Damage+Multiplier*jezOverhealBonus.DAMAGE

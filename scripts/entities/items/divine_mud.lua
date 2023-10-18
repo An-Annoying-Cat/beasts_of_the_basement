@@ -92,13 +92,20 @@ Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, DIVINE_MUD.divineMudNewRoom)
 function DIVINE_MUD:rabiesDamageNull(entity,amt,flags,source,_)
     if entity:GetData().botbHasDivine == true then
         local divineDamageTargets = getNonDivineEnemies()
-        local amountToHurt = (1.5*amt)/#divineDamageTargets
-        SFXManager():Play(BotB.Enums.SFX.DIVINE_PROC,2,16, false, 1, 0)
-        
+        local divineDamageFactor = 1.5
+        if (entity.Type == Entities.HOLY_DIP.TYPE and entity.Variant == Entities.HOLY_DIP.VARIANT) or (entity.Type == Entities.HOLY_SQUIRT.TYPE and entity.Variant == Entities.HOLY_SQUIRT.VARIANT) or (entity.Type == Entities.POPE.TYPE and entity.Variant == Entities.POPE.VARIANT) then
+            divineDamageFactor = 0.75
+        end
+        local amountToHurt = (divineDamageFactor*amt)/#divineDamageTargets
+        if amt > 0 then
+            SFXManager():Play(BotB.Enums.SFX.DIVINE_PROC,2,16, false, 1, 0)
+        end
         for i=1,#divineDamageTargets do
             local dudeToHurt = divineDamageTargets[i]:ToNPC()
             dudeToHurt:TakeDamage(amountToHurt, DamageFlag.DAMAGE_IGNORE_ARMOR, source, 0)
-            dudeToHurt:PlaySound(SoundEffect.SOUND_MEATY_DEATHS,0.5,0,false,2)
+            if amt > 0 then
+                dudeToHurt:PlaySound(SoundEffect.SOUND_MEATY_DEATHS,0.5,0,false,2)
+            end
         end
         return false
     end
@@ -115,8 +122,8 @@ function DIVINE_MUD:rabiesNPCUpdate(npc)
             --data.botbDivineIndicator.ParentOffset = Vector(0,-(npc.SpriteScale.Y * 70))
             data.botbDivineIndicator:GetSprite():Play("Divine", true)
         end
-        
-        if #getNonDivineEnemies() <= 0 then
+        --print(#getNonDivineEnemies())
+        if #getNonDivineEnemies() < 1 then
             data.botbHasDivine = false
             SFXManager():Play(SoundEffect.SOUND_GLASS_BREAK,0.5,0, false, 1.5, 0)
         end
@@ -132,7 +139,7 @@ function DIVINE_MUD:divineMudEffectUpdate(npc)
     if npc.Parent ~= nil then
         if sprite:IsPlaying("Divine") then
             if npc.Parent:GetData().botbHasDivine == true then
-                npc.Position = Vector(npc.Parent.Position.X, npc.Parent.Position.Y-(npc.SpriteScale.Y * 70))
+                npc.Position = Vector(npc.Parent.Position.X, npc.Parent.Position.Y-(npc.SpriteScale.Y * 80))
             else
                 npc:Remove()
             end
