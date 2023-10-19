@@ -150,6 +150,9 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, PUER.NPCUpdate, Isaac.GetEntityTypeB
 
 
 function BotB:ppEffect(effect)
+    if effect.Parent == nil then
+		effect:Remove()
+	end
     local data = effect:GetData()
     if effect.Parent.SubType == 1 then
         effect:GetSprite():Play("Puella")

@@ -204,6 +204,11 @@
 
 
   <entity Image="icons/slot_room_panel.png" Name="Slot Room Panel" ID="960" Variant="3000" Subtype="0" />
+
+  <entity Image="icons/onpillar.png" Name="On Totem" ID="960" Variant="3002" Subtype="0" />
+  <entity Image="icons/offpillar.png" Name="Off Totem" ID="960" Variant="3003" Subtype="0" />
+  <entity Image="icons/totem_switch.png" Name="Totem Switch" ID="960" Variant="3004" Subtype="0" />
+
   <entity Image="icons/generic_npc.png" Name="Generic NPC" ID="501" Variant="62" Subtype="0" />
   
 

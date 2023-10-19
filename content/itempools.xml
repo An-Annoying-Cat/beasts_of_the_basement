@@ -24,6 +24,7 @@
         <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Name Tag" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Immortal Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Strange Stars" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Dad's Pants" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
@@ -37,8 +38,11 @@
         <Item Name="Deck Of Too Many Things" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Name Tag" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Pandemonium" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Ksshk!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
+        
     </Pool>
     
     <Pool Name="boss">
@@ -98,6 +102,7 @@
         <Item Name="Strange Stars" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Pandemonium" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Ahhh..." Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Fwoop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -118,6 +123,7 @@
         <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Rabies" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Strange Stars" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -142,6 +148,7 @@
         <Item Name="Rabies" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Immortal Baby" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Pandemonium" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Haah!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Fwoosh!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>

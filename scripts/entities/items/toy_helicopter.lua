@@ -49,6 +49,9 @@ function TOY_HELICOPTER:charlesHeliEffect(effect)
         --Isaac.Spawn(EntityType.ENTITY_EFFECT,Entities.WARNING_TARGET.VARIANT,0,effect.Parent.Position,Vector(0,0),npc)
     end
     if effect.FrameCount < 600 then
+        if effect.Parent == nil then
+            effect:Remove()
+        end
         effect.Position = effect.Parent.Position
     end
     if effect:GetSprite():IsEventTriggered("Blast") then
@@ -87,6 +90,9 @@ function TOY_HELICOPTER:charlesHeliFunnyEffect(effect)
         --Isaac.Spawn(EntityType.ENTITY_EFFECT,Entities.WARNING_TARGET.VARIANT,0,effect.Parent.Position,Vector(0,0),npc)
     end
     if effect.FrameCount < 600 then
+        if effect.Parent == nil then
+            effect:Remove()
+        end
         effect.Position = effect.Parent.Position
     end
     if effect:GetSprite():IsEventTriggered("Blast") then

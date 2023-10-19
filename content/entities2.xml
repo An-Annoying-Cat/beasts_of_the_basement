@@ -802,7 +802,23 @@
         collisionDamage="0" collisionMass="30" collisionRadius="0"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
     </entity>
+    <entity name="On Totem"
+        id="960" variant="3002" subtype="0" anm2path="grid/on_totem.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
+    <entity name="Off Totem"
+        id="960" variant="3003" subtype="0" anm2path="grid/off_totem.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
+    <entity name="Totem Switch"
+        id="960" variant="3004" subtype="0" anm2path="grid/totem_switch.anm2" baseHP="1" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
 
+   
 
     <!-- Custom Grids id="502" variants start at 0-->
     <entity anm2path="no.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="502" name="BotB Grid Spawner" variant="0" numGridCollisionPoints="24" shadowSize="17" stageHP="0" shutdoors="false">
@@ -942,6 +958,10 @@
     </entity>
     <entity name="Triachnoid Leg"
         id="1000" variant="811" anm2path="monsters/chapter_4/triachnoid_head_effect.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
+    </entity>
+    <entity name="Coin Of Judgement"
+        id="1000" variant="812" anm2path="effects/coin_of_judgement.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
     </entity>
 

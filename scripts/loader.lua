@@ -8,7 +8,7 @@ Mod.LoadScripts({
     --GRIDS
     "scripts.entities.grids.radioactive_barrel",
     "scripts.entities.grids.slot_room_panel",
-
+    "scripts.entities.grids.totems",
     --ENEMIES
     "scripts.entities.enemies.eternalfly",
 
@@ -174,6 +174,7 @@ Mod.LoadScripts({
     "scripts.entities.items.divine_mud",
     "scripts.entities.items.dads_pants",
     "scripts.entities.items.pandemonium",
+    "scripts.entities.items.coin_of_judgement",
 
     --TRINKETS
     "scripts.entities.items.trinkets.demoncore",
@@ -187,7 +188,7 @@ Mod.LoadScripts({
     "scripts.entities.items.trinkets.blank_white_card",
     "scripts.entities.items.trinkets.yes",
     "scripts.entities.items.trinkets.floppy_disk",
-    --
+    "scripts.entities.items.trinkets.the_other_hand",
     "scripts.entities.items.trinkets.scented_penny",
 
 

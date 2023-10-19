@@ -17,6 +17,9 @@
     <entity Name="Radioactive Barrel" />
     <entity Name="Generic NPC" />
     <entity Name="Slot Room Panel" />
+    <entity Name="On Totem" />
+    <entity Name="Off Totem" />
+    <entity Name="Totem Switch" />
   </group>
 
   <group Name="BotB Cathedral Enemies" >  

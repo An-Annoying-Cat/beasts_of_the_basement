@@ -99,8 +99,9 @@
     <passive id="82" quality="3" name="Strange Stars" description="G1I7chY 7eaR5" gfx="strange_stars.png"/>
     <passive id="83" quality="2" name="Phossy Jaw" description="Radioactive Tears" hidden="true" gfx="phossy_jaw.png"/>
     <passive id="84" quality="2" name="Dad's Pants" description="You feel antsy..." hearts="2" gfx="dads_pants.png"/>
-    <familiar id="85" quality="3" name="Yeet-a-baby" description="Throwable buddy" gfx="placeholder.png" tags="monstermanual baby"/>
+    <familiar id="85" quality="3" name="Yeet-a-baby" description="Throwable buddy" gfx="placeholder.png" hidden="true" tags="monstermanual baby"/>
     <familiar id="86" quality="1" name="Buggy Baby" description="Broken buddy" gfx="buggy_baby.png" tags="monstermanual baby"/>
+    <passive id="87" quality="3" name="Coin of Judgement" description="HEADS or TAILS?" gfx="coin_of_judgement.png"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>
@@ -125,7 +126,5 @@
     <trinket name="Floppy Disk" description="Lost memories..." gfx="floppy_disk.png" />
     <trinket name="Plastic Key" description="Toyboxes!" gfx="plastic_key.png" />
     <trinket name="Scented Penny" description="Wealth of pheremones" gfx="scented_penny.png" />
-    <!--
-        <trinket name="The Other Hand" description="Reaps other rewards...?" gfx="the_other_hand.png" />
-    -->
+    <trinket name="The Other Hand" description="Reaps other rewards...?" gfx="the_other_hand.png" />
 </items>

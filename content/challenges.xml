@@ -3,4 +3,5 @@
     <challenge playertype="2" name="[BOTB] Back Pocket" endstage="6" cursefilter="1" />
     <challenge playertype="21" name="[BOTB] MyBasement.lua" endstage="2" getcurse="36" cursefilter="72" secretpath="true" difficulty="1" />
     <!--<challenge playertype="0" name="[BOTB] Basement Crossing" endstage="2"/>-->
+    <!--<challenge playertype="0" name="[BOTB] Totem Tower Temple" endstage="2"/>-->
 </challenges>

@@ -106,6 +106,13 @@
 		<sample weight="1" path="geigerClick.wav" />
 	</sound>
 
+	<sound name="FAHCoinFlip">
+		<sample weight="1" path="items/FAHCoinFlip.wav" />
+	</sound>
+	<sound name="FAHCoinLand">
+		<sample weight="1" path="items/FAHCoinLand.wav" />
+	</sound>
+
 	<sound name="FursuitMeow">
 		<sample weight="1" path="items/fursuitMeow1.wav" />
 		<sample weight="1" path="items/fursuitMeow2.wav" />

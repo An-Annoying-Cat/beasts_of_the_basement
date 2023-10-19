@@ -577,6 +577,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Triachnoid Leg"),
         VARIANT = Isaac.GetEntityVariantByName("Triachnoid Leg")
     },
+    COIN_OF_JUDGEMENT = {
+        TYPE = Isaac.GetEntityTypeByName("Coin Of Judgement"),
+        VARIANT = Isaac.GetEntityVariantByName("Coin Of Judgement")
+    },
     
 
     BOTB_GRID = {
@@ -594,6 +598,22 @@ Enums.Props = {
     POPE_SPAWNPOINT = {
         TYPE = Isaac.GetEntityTypeByName("Pope Spawnpoint"),
         VARIANT = Isaac.GetEntityVariantByName("Pope Spawnpoint")
+    },
+    ON_TOTEM = {
+        TYPE = Isaac.GetEntityTypeByName("On Totem"),
+        VARIANT = Isaac.GetEntityVariantByName("On Totem")
+    },
+    OFF_TOTEM = {
+        TYPE = Isaac.GetEntityTypeByName("Off Totem"),
+        VARIANT = Isaac.GetEntityVariantByName("Off Totem")
+    },
+    TOTEM_SWITCH = {
+        TYPE = Isaac.GetEntityTypeByName("Totem Switch"),
+        VARIANT = Isaac.GetEntityVariantByName("Totem Switch")
+    },
+    TOTEM_LEVER = {
+        TYPE = Isaac.GetEntityTypeByName("Totem Lever"),
+        VARIANT = Isaac.GetEntityVariantByName("Totem Lever")
     },
 }
 
@@ -770,6 +790,10 @@ Enums.SFX = {
     PLUS_TEN = Isaac.GetSoundIdByName("PlusTen"),
 
     COW_MOO = Isaac.GetSoundIdByName("CowMoo"),
+
+    FAH_COIN_FLIP = Isaac.GetSoundIdByName("FAHCoinFlip"),
+
+    FAH_COIN_LAND = Isaac.GetSoundIdByName("FAHCoinLand"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -875,6 +899,7 @@ Enums.Items = {
     DADS_PANTS = Isaac.GetItemIdByName("Dad's Pants"),
     YEET_A_BABY = Isaac.GetItemIdByName("Yeet-a-baby"),
     BUGGY_BABY = Isaac.GetItemIdByName("Buggy Baby"),
+    COIN_OF_JUDGEMENT = Isaac.GetItemIdByName("Coin Of Judgement"),
 }
 
 Enums.Trinkets = {
@@ -892,7 +917,7 @@ Enums.Trinkets = {
     YES = Isaac.GetTrinketIdByName("YES!"),
     FLOPPY_DISK = Isaac.GetTrinketIdByName("Floppy Disk"),
     PLASTIC_KEY = Isaac.GetTrinketIdByName("Plastic Key"),
-    --THE_OTHER_HAND = Isaac.GetTrinketIdByName("The Other Hand"),
+    THE_OTHER_HAND = Isaac.GetTrinketIdByName("The Other Hand"),
     SCENTED_PENNY = Isaac.GetTrinketIdByName("Scented Penny"),
 }
 
