@@ -6,6 +6,7 @@
   <entity Image="icons/bamf.png" Name="Bamf" ID="501" Variant="29" Subtype="0" />
   <entity Image="icons/spiderboi.png" Name="Spider Boi" ID="501" Variant="31" Subtype="0" />
   <entity Image="icons/babby.png" Name="Babby" ID="501" Variant="38" Subtype="0" />
+  <entity Image="icons/hushed_grimace.png" Name="Hushed Grimace" ID="42" Variant="502" Subtype="0" />
   <!-- Bosses -->
   <entity Image="icons/despair.png" Name="Despair" ID="501" Variant="44" Subtype="0" />
   <entity Image="icons/doortrap_eye.png" Name="Doortrap (Eye)" ID="501" Variant="54" Subtype="0" />
@@ -13,6 +14,7 @@
   <entity Image="icons/doortrap_butt.png" Name="Doortrap (Butt)" ID="501" Variant="56" Subtype="0" />
   <entity Image="icons/doortrap_hive.png" Name="Doortrap (Hive)" ID="501" Variant="57" Subtype="0" />
     <entity Image="icons/doortrap_cube.png" Name="Doortrap (Cube)" ID="501" Variant="58" Subtype="0" />
+    <entity Image="icons/queenie.png" Name="Queenie" ID="501" Variant="85" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
@@ -30,6 +32,18 @@
   <entity Image="icons/flapstack_3.png" Name="Flapstack (3)" ID="501" Variant="24" Subtype="2" />
   <entity Image="icons/flapstack_4.png" Name="Flapstack (4)" ID="501" Variant="24" Subtype="3" />
   <entity Image="icons/flapstack_5.png" Name="Flapstack (5)" ID="501" Variant="24" Subtype="4" />
+
+  <entity Image="icons/lars.png" Name="Lars" ID="501" Variant="93" Subtype="0" >
+    <bitfield Key="Subtype">
+      <spinner Length="5" ValueOffset="0" Name="Body Segments">
+        <tooltip>How many segments are between the head and the tail segment of the Lars</tooltip>
+      </spinner>
+    </bitfield>
+  </entity>
+
+  <entity Image="icons/jem.png" Name="Jem" ID="501" Variant="96" Subtype="0" />
+
+
   <!-- Burning Basement Enemies -->
   <entity Image="icons/grilled_flapjack.png" Name="Grilled Flapjack" ID="501" Variant="25" Subtype="0" />
   <entity Image="icons/grilled_flapstack_2.png" Name="Grilled Flapstack (2)" ID="501" Variant="26" Subtype="1" />
@@ -51,7 +65,8 @@
 
   <!-- Hoard Enemies -->
   <entity Image="icons/acme.png" Name="Acme" ID="10" Variant="40" Subtype="0" />
-  <entity Image="icons/sleazebag.png" Name="Sleazebag" ID="22" Variant="50" Subtype="0" />
+  <entity Image="icons/sleazebag.png" Name="Sleazebag (OLD, DO NOT USE)" ID="22" Variant="50" Subtype="0" />
+  <entity Image="icons/sleazebag.png" Name="Sleazebag" ID="501" Variant="81" Subtype="0" />
   <entity Image="icons/skooter.png" Name="Skooter" ID="666" Variant="60" Subtype="10" />
   <entity Image="icons/superskooter.png" Name="Super Skooter" ID="666" Variant="60" Subtype="11" />
   <entity Image="icons/plane_creep.png" Name="Plane Creep" ID="240" Variant="40" PlaceVisual="WallSnap" />
@@ -81,6 +96,18 @@
   <entity Image="icons/pong.png" Name="Pong" ID="501" Variant="9" Subtype="0" />
   <entity Image="icons/inch_worm.png" Name="Inch Worm" ID="501" Variant="13" Subtype="0" />
   <entity Image="icons/chode.png" Name="Chode" ID="501" Variant="13" Subtype="1" />
+  <entity Image="icons/moldy_horf.png" Name="Moldy Horf" ID="501" Variant="80" Subtype="0" />
+  <entity Image="icons/high_clotty.png" Name="High Clotty" ID="501" Variant="47" Subtype="0" />
+  <entity Image="icons/stunky.png" Name="Stunky" ID="501" Variant="51" Subtype="0" />
+  <entity Image="icons/moldy_horf.png" Name="Moldy Horf" ID="501" Variant="80" Subtype="0" />
+  <entity Image="icons/kaufmann.png" Name="Kaufmann" ID="501" Variant="82" Subtype="0" />
+  <entity Image="icons/peekabox_left.png" Name="Peekabox (Left)" ID="501" Variant="83" Subtype="0" />
+  <entity Image="icons/peekabox_up.png" Name="Peekabox (Up)" ID="501" Variant="83" Subtype="1" />
+  <entity Image="icons/peekabox_right.png" Name="Peekabox (Right)" ID="501" Variant="83" Subtype="2" />
+  <entity Image="icons/peekabox_down.png" Name="Peekabox (Down)" ID="501" Variant="83" Subtype="3" />
+  <entity Image="icons/mr.mucus.png" Name="Mr. Mucus" ID="501" Variant="98" Subtype="0" />
+  <entity Image="icons/flemmer.png" Name="Flemmer" ID="501" Variant="99" Subtype="0" />
+
   <entity Image="icons/drone.png" Name="Drone" ID="214" Variant="20" Subtype="0" />
   <entity Image="icons/unboxer.png" Name="Drone" ID="215" Variant="20" Subtype="0" />
 
@@ -136,7 +163,20 @@
     </bitfield>
   </entity>
   <entity Image="icons/paranoiac.png" Name="Paranoiac" ID="501" Variant="32" Subtype="0" />
-  <entity Image="icons/paranoiac.png" Name="Slight" ID="501" Variant="33" Subtype="0" />
+  <entity Image="icons/slight.png" Name="Slight" ID="501" Variant="33" Subtype="0" />
+  <!--****** Enemies-->
+  <entity Image="icons/telepath.png" Name="Telepath" ID="501" Variant="89" Subtype="0" >
+    <bitfield Key="Subtype">
+      <checkbox Length="1" Name="No bullet">
+        <tooltip>If set, the Telepath will not make a bullet when the room starts.</tooltip>
+      </checkbox>
+    </bitfield>
+  </entity>
+  <entity Image="icons/vantage.png" Name="Vantage" ID="501" Variant="90" Subtype="0" />
+  <entity Image="icons/nycto.png" Name="Nycto" ID="501" Variant="91" Subtype="0" />
+  <entity Image="icons/helio.png" Name="Helio" ID="501" Variant="92" Subtype="0" />
+  <entity Image="icons/somebody.png" Name="Somebody" ID="501" Variant="78" Subtype="0" />
+  <entity Image="icons/gloom_fly.png" Name="Gloom Fly" ID="501" Variant="86" Subtype="0" />
   <!-- Mausoleum Enemies -->
   <entity Image="icons/kehehan.png" Name="Kehehan" ID="885" Variant="1" Subtype="10" />
   <!--Gehenna Enemies-->
@@ -201,7 +241,16 @@
   <entity Image="icons/radioactive_barrel.png" Name="Radioactive Barrel" ID="502" Variant="1" Subtype="0" />
   <entity Image="icons/prickhead.png" Name="Prickhead" ID="501" Variant="68" Subtype="0" />
 
-
+  <entity Image="icons/light_switch.png" Name="Light Switch" ID="960" Variant="3005" Subtype="0" />
+  <entity Image="icons/power_on_button.png" Name="Power On Button" ID="960" Variant="3006" Subtype="0" />
+  <entity Image="icons/power_off_button.png" Name="Power Off Button" ID="960" Variant="3007" Subtype="0" />
+  <entity Image="icons/light_handler.png" Name="Room Light State Tracker" ID="960" Variant="3008" Subtype="0" >
+    <bitfield Key="Subtype">
+      <checkbox Length="1" Name="Room starts with lights out">
+        <tooltip>Pretty self explanatory, room initializes with lights in the off state</tooltip>
+      </checkbox>
+    </bitfield>
+  </entity>
 
   <entity Image="icons/slot_room_panel.png" Name="Slot Room Panel" ID="960" Variant="3000" Subtype="0" />
 

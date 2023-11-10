@@ -102,6 +102,8 @@
     <familiar id="85" quality="3" name="Yeet-a-baby" description="Throwable buddy" gfx="placeholder.png" hidden="true" tags="monstermanual baby"/>
     <familiar id="86" quality="1" name="Buggy Baby" description="Broken buddy" gfx="buggy_baby.png" tags="monstermanual baby"/>
     <passive id="87" quality="3" name="Coin of Judgement" description="HEADS or TAILS?" gfx="coin_of_judgement.png"/>
+    <passive id="88" quality="2" name="Coloboma" description="TtEeAaRrSs" gfx="coloboma.png"/>
+    <passive id="89" quality="2" name="Curse of Justice" description="Printed in gold" gfx="curse_of_justice.png"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

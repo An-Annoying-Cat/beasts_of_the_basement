@@ -502,6 +502,132 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Pope"),
     },
 
+    MACK = {
+        TYPE = Isaac.GetEntityTypeByName("Mack"),
+        VARIANT = Isaac.GetEntityVariantByName("Mack"),
+    },
+
+    SEGMENTED_ENEMY_TEST = {
+        TYPE = Isaac.GetEntityTypeByName("Segmented Enemy Test"),
+        VARIANT = Isaac.GetEntityVariantByName("Segmented Enemy Test"),
+    },
+
+    SEGMENTED_ENEMY_TEST_BODY = {
+        TYPE = Isaac.GetEntityTypeByName("Segmented Enemy Test Body"),
+        VARIANT = Isaac.GetEntityVariantByName("Segmented Enemy Test Body"),
+    },
+
+    SEGMENTED_ENEMY_TEST_TAIL = {
+        TYPE = Isaac.GetEntityTypeByName("Segmented Enemy Test Tail"),
+        VARIANT = Isaac.GetEntityVariantByName("Segmented Enemy Test Tail"),
+    },
+
+    SOMEBODY = {
+        TYPE = Isaac.GetEntityTypeByName("Somebody"),
+        VARIANT = Isaac.GetEntityVariantByName("Somebody"),
+    },
+
+    SPEECH_BUBBLE = {
+        TYPE = Isaac.GetEntityTypeByName("Speech Bubble"),
+        VARIANT = Isaac.GetEntityVariantByName("Speech Bubble"),
+    },
+
+    HUSHED_GRIMACE = {
+        TYPE = Isaac.GetEntityTypeByName("Hushed Grimace"),
+        VARIANT = Isaac.GetEntityVariantByName("Hushed Grimace"),
+    },
+
+    MOLDY_HORF = {
+        TYPE = Isaac.GetEntityTypeByName("Moldy Horf"),
+        VARIANT = Isaac.GetEntityVariantByName("Moldy Horf"),
+    },
+
+    SLEAZEBAG_REAL = {
+        TYPE = Isaac.GetEntityTypeByName("Sleazebag (Real)"),
+        VARIANT = Isaac.GetEntityVariantByName("Sleazebag (Real)"),
+    },
+
+    KAUFMANN = {
+        TYPE = Isaac.GetEntityTypeByName("Kaufmann"),
+        VARIANT = Isaac.GetEntityVariantByName("Kaufmann"),
+    },
+
+    PEEKABOX = {
+        TYPE = Isaac.GetEntityTypeByName("Peekabox"),
+        VARIANT = Isaac.GetEntityVariantByName("Peekabox"),
+    },
+
+    QUEENIE = {
+        TYPE = Isaac.GetEntityTypeByName("Queenie"),
+        VARIANT = Isaac.GetEntityVariantByName("Queenie"),
+    },
+
+    GLOOM_FLY = {
+        TYPE = Isaac.GetEntityTypeByName("Gloom Fly"),
+        VARIANT = Isaac.GetEntityVariantByName("Gloom Fly"),
+    },
+
+    GLOOM_FLY_TRAIL = {
+        TYPE = Isaac.GetEntityTypeByName("Gloom Fly Trail"),
+        VARIANT = Isaac.GetEntityVariantByName("Gloom Fly Trail"),
+    },
+
+    TELEPATH = {
+        TYPE = Isaac.GetEntityTypeByName("Telepath"),
+        VARIANT = Isaac.GetEntityVariantByName("Telepath"),
+    },
+
+    VANTAGE = {
+        TYPE = Isaac.GetEntityTypeByName("Vantage"),
+        VARIANT = Isaac.GetEntityVariantByName("Vantage"),
+    },
+
+    NYCTO = {
+        TYPE = Isaac.GetEntityTypeByName("Nycto"),
+        VARIANT = Isaac.GetEntityVariantByName("Nycto"),
+    },
+
+    HELIO = {
+        TYPE = Isaac.GetEntityTypeByName("Helio"),
+        VARIANT = Isaac.GetEntityVariantByName("Helio"),
+    },
+
+    LARS = {
+        TYPE = Isaac.GetEntityTypeByName("Lars"),
+        VARIANT = Isaac.GetEntityVariantByName("Lars"),
+    },
+
+    LARS_BODY = {
+        TYPE = Isaac.GetEntityTypeByName("Lars Body"),
+        VARIANT = Isaac.GetEntityVariantByName("Lars Body"),
+    },
+
+    LARS_TAIL = {
+        TYPE = Isaac.GetEntityTypeByName("Lars Tail"),
+        VARIANT = Isaac.GetEntityVariantByName("Lars Tail"),
+    },
+
+    JEM = {
+        TYPE = Isaac.GetEntityTypeByName("Jem"),
+        VARIANT = Isaac.GetEntityVariantByName("Jem"),
+    },
+
+    MINI = {
+        TYPE = Isaac.GetEntityTypeByName("Mini"),
+        VARIANT = Isaac.GetEntityVariantByName("Mini"),
+    },
+
+    MR_MUCUS = {
+        TYPE = Isaac.GetEntityTypeByName("Mr. Mucus"),
+        VARIANT = Isaac.GetEntityVariantByName("Mr. Mucus"),
+    },
+
+    FLEMMER = {
+        TYPE = Isaac.GetEntityTypeByName("Flemmer"),
+        VARIANT = Isaac.GetEntityVariantByName("Flemmer"),
+    },
+
+
     PURSUER_V2 = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
         VARIANT = Isaac.GetEntityVariantByName("Pursuer V2"),
@@ -581,6 +707,15 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Coin Of Judgement"),
         VARIANT = Isaac.GetEntityVariantByName("Coin Of Judgement")
     },
+    CURSE_OF_JUSTICE_EFFECT = {
+        TYPE = Isaac.GetEntityTypeByName("Curse of Justice Effect"),
+        VARIANT = Isaac.GetEntityVariantByName("Curse of Justice Effect")
+    },
+    JEM_CHAIN = {
+        TYPE = Isaac.GetEntityTypeByName("Jem Chain"),
+        VARIANT = Isaac.GetEntityVariantByName("Jem Chain")
+    },
+
     
 
     BOTB_GRID = {
@@ -614,6 +749,22 @@ Enums.Props = {
     TOTEM_LEVER = {
         TYPE = Isaac.GetEntityTypeByName("Totem Lever"),
         VARIANT = Isaac.GetEntityVariantByName("Totem Lever")
+    },
+    LIGHT_SWITCH = {
+        TYPE = Isaac.GetEntityTypeByName("Light Switch"),
+        VARIANT = Isaac.GetEntityVariantByName("Light Switch")
+    },
+    POWER_ON_BUTTON = {
+        TYPE = Isaac.GetEntityTypeByName("Power On Button"),
+        VARIANT = Isaac.GetEntityVariantByName("Power On Button")
+    },
+    POWER_OFF_BUTTON = {
+        TYPE = Isaac.GetEntityTypeByName("Power Off Button"),
+        VARIANT = Isaac.GetEntityVariantByName("Power Off Button")
+    },
+    ROOM_LIGHT_STATE_TRACKER = {
+        TYPE = Isaac.GetEntityTypeByName("Room Light State Tracker"),
+        VARIANT = Isaac.GetEntityVariantByName("Room Light State Tracker")
     },
 }
 
@@ -717,7 +868,7 @@ Enums.SFX = {
 
     GEIGER_CLICK = Isaac.GetSoundIdByName("GeigerClick"),
 
-    
+    VANTAGE_SCREECH_LOOP = Isaac.GetSoundIdByName("VantageScreechLoop"),
 
     THAUMATURGE_LAUGH = Isaac.GetSoundIdByName("ThaumLaugh"),
     THAUMATURGE_SHOOT = Isaac.GetSoundIdByName("ThaumShoot"),
@@ -735,6 +886,19 @@ Enums.SFX = {
     MABELVROOM = Isaac.GetSoundIdByName("MabelVroom"),
 
     PONGPOP = Isaac.GetSoundIdByName("PongPop"),
+
+    TELEPATH_PING = Isaac.GetSoundIdByName("TelepathPing"),
+
+    SICK_COUGH = Isaac.GetSoundIdByName("SickCough"),
+
+    PEEKABOX_ALERT = Isaac.GetSoundIdByName("PeekABoxAlert"),
+
+    GRENADE_LAUNCHER_POP = Isaac.GetSoundIdByName("GrenadeLauncherPop"),
+
+    QUEENIE_FALL = Isaac.GetSoundIdByName("QueenieFall"),
+
+    QUEENIE_HI = Isaac.GetSoundIdByName("QueenieHi"),
+    QUEENIE_GRUNT = Isaac.GetSoundIdByName("QueenieGrunt"),
 
     GLITCH_NOISE = Isaac.GetSoundIdByName("GlitchNoise"),
 
@@ -794,6 +958,10 @@ Enums.SFX = {
     FAH_COIN_FLIP = Isaac.GetSoundIdByName("FAHCoinFlip"),
 
     FAH_COIN_LAND = Isaac.GetSoundIdByName("FAHCoinLand"),
+
+    CURSE_OF_JUSTICE = Isaac.GetSoundIdByName("CurseOfJustice"),
+
+    ASYLUM_LIGHT_LOOP = Isaac.GetSoundIdByName("AsylumLightLoop"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -900,6 +1068,8 @@ Enums.Items = {
     YEET_A_BABY = Isaac.GetItemIdByName("Yeet-a-baby"),
     BUGGY_BABY = Isaac.GetItemIdByName("Buggy Baby"),
     COIN_OF_JUDGEMENT = Isaac.GetItemIdByName("Coin Of Judgement"),
+    COLOBOMA = Isaac.GetItemIdByName("Coloboma"),
+    CURSE_OF_JUSTICE = Isaac.GetItemIdByName("Curse of Justice"),
 }
 
 Enums.Trinkets = {

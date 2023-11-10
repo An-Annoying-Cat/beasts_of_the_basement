@@ -101,7 +101,7 @@ function INNIE_CCW:NPCUpdate(npc)
                 params.Spread = 14
                 npc:FireProjectiles(npc.Position, Vector(8,0):Rotated(targetangle),0, params)
             end
-            if sprite:IsEventTriggered("Back") then
+            if sprite:IsEventTriggered("Back") or sprite:IsFinished() then
                 npc.Position = Game():GetRoom():FindFreeTilePosition(npc.Position, 0)
                 if data.innieDirection == 4 then
                     data.innieDirection = 1
@@ -120,6 +120,8 @@ function INNIE_CCW:NPCUpdate(npc)
                 npc.State = 99
             end
         end
+
+        --print(data.innieDirection)
 
         --print(sprite:GetAnimation())
         sprite.FlipX = true

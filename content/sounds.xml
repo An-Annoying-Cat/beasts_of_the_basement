@@ -95,6 +95,38 @@
 		<sample weight="1" path="crystalFireSmall3.wav" />
 	</sound>
 
+	<sound name="SickCough">
+		<sample weight="1" path="sickCough1.wav" />
+		<sample weight="1" path="sickCough2.wav" />
+		<sample weight="1" path="sickCough3.wav" />
+	</sound>
+
+	<sound name="PeekABoxAlert">
+		<sample weight="1" path="peekABoxAlertLow.wav" />
+	</sound>
+
+	<sound name="GrenadeLauncherPop">
+		<sample weight="1" path="grenadeLauncherPop.wav" />
+	</sound>
+
+	<sound name="TelepathPing">
+		<sample weight="1" path="telepathPing.wav" />
+	</sound>
+
+	<sound name="QueenieFall">
+		<sample weight="1" path="bosses/queenie/queenieFall.wav" />
+	</sound>
+
+	<sound name="QueenieHi">
+		<sample weight="1" path="bosses/queenie/queenieHi.wav" />
+	</sound>
+
+	<sound name="QueenieGrunt">
+		<sample weight="1" path="bosses/queenie/queenieGrunt1.wav" />
+		<sample weight="1" path="bosses/queenie/queenieGrunt2.wav" />
+		<sample weight="1" path="bosses/queenie/queenieGrunt3.wav" />
+	</sound>
+
 	<sound name="GlitchyBoom">
 		<sample weight="1" path="glitchyBoom1.wav" />
 		<sample weight="1" path="glitchyBoom2.wav" />
@@ -111,6 +143,10 @@
 	</sound>
 	<sound name="FAHCoinLand">
 		<sample weight="1" path="items/FAHCoinLand.wav" />
+	</sound>
+
+	<sound name="CurseOfJustice">
+		<sample weight="1" path="items/curseOfJustice.wav" />
 	</sound>
 
 	<sound name="FursuitMeow">
@@ -134,6 +170,10 @@
 		<sample weight="1" path="choirHurt3.wav" />
 		<sample weight="1" path="choirHurt4.wav" />
 		<sample weight="1" path="choirHurt5.wav" />
+	</sound>
+
+	<sound name="VantageScreechLoop">
+		<sample weight="1" path="vantageScreechLoop.wav" />
 	</sound>
 
 	<sound name="ChoirHurtFunny">
@@ -274,6 +314,11 @@
 	</sound>
 	<sound name="MahjongSelect">
 		<sample weight="1" path="cards/mahjongSelect.wav" />
+	</sound>
+	<!--Other-->
+	<!--This sound is modified from "Factory Fluorescent light buzz" from Pixabay-->
+	<sound name="AsylumLightLoop">
+		<sample weight="1" path="asylumLightLoop.wav" />
 	</sound>
 	<!-- Joke content -->
 	<sound name="PlusTen">

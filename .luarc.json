@@ -4,7 +4,8 @@
     "workspace.library": [
         "c:\\Users\\olive\\.vscode\\extensions\\thiccocatto.library-of-isaac-extension-0.0.3\\out\\emmylua",
         "c:\\Users\\MJ\\.vscode\\extensions\\thiccocatto.library-of-isaac-extension-0.1.0\\out\\emmylua",
-        "c:\\Users\\MJ\\.vscode\\extensions\\filloax.isaac-lua-api-vscode-1.5.0\\out\\emmylua"
+        "c:\\Users\\MJ\\.vscode\\extensions\\filloax.isaac-lua-api-vscode-1.5.0\\out\\emmylua",
+        "c:\\Users\\MJ\\.vscode\\extensions\\thiccocatto.library-of-isaac-extension-1.0.0\\out\\library_of_isaac\\docs.lua"
     ],
     "diagnostics.globals": [
         "ActionTriggers",
@@ -147,6 +148,10 @@
         "DetailedRespawn",
         "MinimapAPI",
         "TSIL",
+        "TSIL",
         "TSIL"
+    ],
+    "workspace.ignoreDir": [
+        "scripts/core/LOI"
     ]
 }

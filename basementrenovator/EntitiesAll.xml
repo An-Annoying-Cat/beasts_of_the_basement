@@ -17,9 +17,22 @@
     <entity Name="Radioactive Barrel" />
     <entity Name="Generic NPC" />
     <entity Name="Slot Room Panel" />
+    <!--
     <entity Name="On Totem" />
     <entity Name="Off Totem" />
-    <entity Name="Totem Switch" />
+    <entity Name="Totem Switch" />-->
+    <entity Name="Telepath" />
+    <entity Name="Light Switch" />
+    <entity Name="Power On Button" />
+    <entity Name="Power Off Button" />
+    <entity Name="Room Light State Tracker" />
+    <entity Name="Vantage" />
+    <entity Name="Nycto" />
+    <entity Name="Helio" />
+    <entity Name="Somebody" />
+    <entity Name="Gloom Fly" />
+    <entity Name="Queenie" />
+    <entity Name="Hushed Grimace" />
   </group>
 
   <group Name="BotB Cathedral Enemies" >  
@@ -67,6 +80,8 @@
     <entity Name="Paf" />
     <entity Name="Skip Fly" />
     <entity Name="Cherry" />
+    <entity Name="Jem" />
+    <entity Name="Lars" />
   </group>
 
   <group Name="BotB Burning Basement Enemies" >  
@@ -116,6 +131,18 @@
     <entity Name="Ant" />
     <entity Name="Bullet Ant" />
     <entity Name="Super Bullet Ant" />
+    <entity Name="Moldy Horf" />
+    <entity Name="High Clotty" />
+    <entity Name="Stunky" />
+    <entity Name="Ping" />
+    <entity Name="Pong" />
+    <entity Name="Kaufmann" />
+    <entity Name="Peekabox (Left)" />
+    <entity Name="Peekabox (Up)" />
+    <entity Name="Peekabox (Right)" />
+    <entity Name="Peekabox (Down)" />
+    <entity Name="Mr. Mucus" />
+    <entity Name="Flemmer" />
   </group>
 
   <group Name="BotB Dross Enemies" >

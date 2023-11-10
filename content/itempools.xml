@@ -27,7 +27,9 @@
         <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Strange Stars" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Dad's Pants" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Curse of Justice" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coloboma" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Ahhh..." Weight="0.0001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Oh Sweet Merciful Christ!" Weight="0.00001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -103,6 +105,7 @@
         <Item Name="Pandemonium" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coloboma" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Ahhh..." Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Fwoop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -124,6 +127,30 @@
         <Item Name="Rabies" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Strange Stars" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Curse of Justice" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coloboma" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+
+        <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
+        <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
+    </Pool>
+    <Pool Name="redChest">
+        <Item Name="Treeman Syndrome" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="50 Shades Of Grey" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Wiggly Boy" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Dusty D6" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Skew D4" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Dusty D Infinity" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Blood Meridian" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buzz Fly" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Rabies" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Strange Stars" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coin Of Judgement" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Curse of Justice" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coloboma" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Gulp!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
@@ -141,6 +168,7 @@
         <Item Name="Mila's Collar" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Fursuit" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Pandemonium" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Curse of Justice" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
     <Pool Name="angel">
         <!--<Item Name="Faithful Fleet" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>-->
@@ -159,6 +187,7 @@
         <Item Name="Mila's Head" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Buprinorphine" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
         <Item Name="Krokodil" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Coloboma" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
 
         <Item Name="Plop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
         <Item Name="Buzz Buzz!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>

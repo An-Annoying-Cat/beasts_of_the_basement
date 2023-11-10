@@ -9,6 +9,7 @@ Mod.LoadScripts({
     "scripts.entities.grids.radioactive_barrel",
     "scripts.entities.grids.slot_room_panel",
     "scripts.entities.grids.totems",
+    "scripts.entities.grids.lights_mechanic",
     --ENEMIES
     "scripts.entities.enemies.eternalfly",
 
@@ -35,7 +36,13 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.bullet_ant",
     "scripts.entities.enemies.chapter_1.super_bullet_ant",
     "scripts.entities.enemies.chapter_1.stunky",
-
+    "scripts.entities.enemies.chapter_1.moldy_horf",
+    "scripts.entities.enemies.chapter_1.kaufmann",
+    "scripts.entities.enemies.chapter_1.peekabox",
+    "scripts.entities.enemies.chapter_1.lars",
+    "scripts.entities.enemies.chapter_1.jem",
+    "scripts.entities.enemies.chapter_1.mr_mucus",
+    "scripts.entities.enemies.chapter_1.flemmer",
 
 
     "scripts.entities.enemies.chapter_1.drone",
@@ -69,6 +76,12 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_3.puer_puella",
     "scripts.entities.enemies.chapter_3.paranoiac",
     "scripts.entities.enemies.chapter_3.slight",
+    "scripts.entities.enemies.chapter_3.somebody",
+    "scripts.entities.enemies.chapter_3.gloom_fly",
+    "scripts.entities.enemies.chapter_3.telepath",
+    "scripts.entities.enemies.chapter_3.vantage",
+    "scripts.entities.enemies.chapter_3.nycto",
+    "scripts.entities.enemies.chapter_3.helio",
 
     "scripts.entities.minibosses.babby",
     "scripts.entities.minibosses.babby_fake",
@@ -76,8 +89,6 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_3_alt.kehehan",
     --"scripts.entities.enemies.chapter_3_alt.shard",
     "scripts.entities.enemies.chapter_3_alt.cursed_horf",
-
-    "scripts.entities.bosses.thaumaturge",
 
     "scripts.entities.enemies.chapter_3_alt.gehenna.mabel",
 
@@ -104,12 +115,18 @@ Mod.LoadScripts({
 
     "scripts.entities.enemies.special.pursuer",
     "scripts.entities.enemies.special.pursuer_v2",
+    "scripts.entities.enemies.special.mack",
+    "scripts.entities.enemies.special.segmented_enemy_test",
+    "scripts.entities.enemies.special.hushed_grimace",
 
     "scripts.entities.enemies.special.generic_npc",
+    "scripts.entities.enemies.special.generic_npc_old",
 
     --BOSSES
     "scripts.entities.bosses.despair",
     "scripts.entities.bosses.doortrap",
+    "scripts.entities.bosses.thaumaturge",
+    "scripts.entities.bosses.queenie",
 
     --FAMILIARS
     "scripts.entities.familiars.robobabyzero",
@@ -175,6 +192,8 @@ Mod.LoadScripts({
     "scripts.entities.items.dads_pants",
     "scripts.entities.items.pandemonium",
     "scripts.entities.items.coin_of_judgement",
+    "scripts.entities.items.coloboma",
+    "scripts.entities.items.curse_of_justice",
 
     --TRINKETS
     "scripts.entities.items.trinkets.demoncore",

@@ -89,7 +89,7 @@ hiddenItemManager:Init(BotB)
 
 
 --General enemy override. Guess we Ministro now
-
+--
 function BotB:MinistroOverrideTest(npc)
     local sprite = npc:GetSprite()
     local player = npc:GetPlayerTarget()
@@ -100,23 +100,26 @@ function BotB:MinistroOverrideTest(npc)
     --Sleazebag 
     --Idk why this isnt working if I put these into its own lua file. Fuck it
     --Convert flies spawned by Sleazebags into Skuzzes
+    --[[
     if npc.Type == Isaac.GetEntityTypeByName("Fly") or Isaac.GetEntityTypeByName("Attack Fly") or npc.Type == Isaac.GetEntityTypeByName("Pooter") then 
         if npc.SpawnerVariant == BotB.Enums.Entities.SLEAZEBAG.VARIANT and npc.SpawnerType == BotB.Enums.Entities.SLEAZEBAG.TYPE then
             if npc.Type == Isaac.GetEntityTypeByName("Pooter") then
                 --Convert Pooters into Skooters
-                npc:Morph(Isaac.GetEntityTypeByName("Skooter"), Isaac.GetEntityVariantByName("Skooter"), 1, 0)
+                npc:Morph(Isaac.GetEntityTypeByName("Bullet Ant"), Isaac.GetEntityVariantByName("Bullet Ant"), 0, 0)
+                npc.State = 0
                 --npc.StateFrame = 0
-                sprite:Play("idle")
+                --sprite:Play("idle")
             elseif npc.Type == Isaac.GetEntityTypeByName("Fly") or Isaac.GetEntityTypeByName("Attack Fly") then
                 
                 --Convert Flies and Attack Flies into normal Skuzzes
-                npc:Morph(Isaac.GetEntityTypeByName("Skuzz"), Isaac.GetEntityVariantByName("Skuzz"), 0, 0)
-                sprite:Play("idle")
+                npc:Morph(Isaac.GetEntityTypeByName("Ant"), Isaac.GetEntityVariantByName("Ant"), 0, 0)
+                npc.State = 0
+                --sprite:Play("idle")
                 --npc.StateFrame = 0
             end
         end
         
-    end
+    end]]
 
 end
 
@@ -181,7 +184,7 @@ end, EntityType.ENTITY_PROJECTILE)
 function Mod.unbiasedFromSuit(suitName)
     if BotB.FF.UnbiasedPickups[suitName] then
         local dynamicPool = {}
-        for _, data in pairs(mod.UnbiasedPickups[suitName]) do
+        for _, data in pairs(FiendFolio.UnbiasedPickups[suitName]) do
             if data.Unlocked() then
                 table.insert(dynamicPool, data.ID)
             end

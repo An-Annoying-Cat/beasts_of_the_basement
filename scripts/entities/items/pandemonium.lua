@@ -315,7 +315,7 @@ function PANDEMONIUM:pickupUpdate(pickup)
                     didThePandemonium = true
                     entityPickup:Remove()
                     --entityPickup:Morph(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_PILL, 0, true, true, true)
-                    local pillToGiant = entityPickup.SubType + PillColor.PILL_GIANT_FLAG
+                    local pillToGiant = entityPickup.SubType + (PillColor.PILL_GIANT_FLAG + 1)
                     pill:Morph(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_PILL, pillToGiant, true, true, true)
                     pill:GetData().noPandemoniumMorph = true
                 end

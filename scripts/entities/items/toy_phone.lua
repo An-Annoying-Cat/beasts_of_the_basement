@@ -6,16 +6,16 @@ local sfx = SFXManager()
 local Items = BotB.Enums.Items
 
 local PhoneBonus = {
-	TEAR=0.6,
-	SPEED=0.3,
-	LUCK=4,
+	TEAR=0.4,
+	SPEED=0.2,
+	LUCK=2,
 	RANGE=30,
-	DAMAGE=2,
+	DAMAGE=1.25,
 }
 local HiddenItemManager = require("scripts.core.hidden_item_manager")
 if EID then
 	EID:addCollectible(Isaac.GetItemIdByName("Toy Phone"), "Simulates the press of a Reward Plate. #Has a 0.25% chance to change to a special version on use. #Might cause a strange illusion to appear... #(It will dissappear upon reentering a room and is entirely harmless.)")
-    EID:addCollectible(Isaac.GetItemIdByName("Toy Phone?"), "Major all stats up. #Permanent Curse of Darkness. #Turns back into Toy Phone.")
+    EID:addCollectible(Isaac.GetItemIdByName("Toy Phone?"), "Major all stats up. #Permanent Curse of Darkness and Curse of the Stalked. #Turns back into Toy Phone.")
 end
 
 function TOY_PHONE:toyPhoneActiveItem(_, _, player, _, slot, _)

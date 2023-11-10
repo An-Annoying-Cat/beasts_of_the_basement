@@ -241,6 +241,12 @@
 		<preload-snd id="212" /> <!-- heartin -->
         <preload-snd id="262" /> <!-- SOUND_STONESHOOT -->
     </entity>
+    <entity anm2path="monsters/special/hushed_grimace.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="100" collisionRadius="13" friction="1" id="42" name="Hushed Grimace" numGridCollisionPoints="0" shadowSize="24" stageHP="0" variant="502" shutdoors="false" portrait="61" tags="noreroll">
+		<bestiary transform="0,0,1" anim="Loop" />
+        <gibs amount="6" blood="0" bone="0" eye="0" gut="0" large="0" rock="1" dust="1" />
+		<preload-snd id="212" /> <!-- heartin -->
+        <preload-snd id="262" /> <!-- SOUND_STONESHOOT -->
+    </entity>
 
     
 
@@ -783,6 +789,166 @@
         <bestiary anim="Idle" transform="0,0,1"/>
     </entity> 
 
+    <entity name="Mack"
+        id="501" variant="74" subtype="0" anm2path="monsters/tests/mack.anm2" baseHP="24" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="30" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="21" boss="0" friction="1" champion="1" >
+        <gibs amount="16" blood="0" bone="1" eye="0" gut="1" large="1" poop="0"/>
+    </entity> 
+
+    <entity name="Segmented Enemy Test" 
+        id="501" variant="75" anm2path="monsters/tests/segmented_enemy_test.anm2" baseHP="45" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
+	</entity>
+
+    <entity name="Segmented Enemy Test Body" 
+        id="501" variant="76" anm2path="monsters/tests/segmented_enemy_test.anm2" baseHP="45" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
+	</entity>
+
+    <entity name="Segmented Enemy Test Tail" 
+        id="501" variant="77" anm2path="monsters/tests/segmented_enemy_test.anm2" baseHP="45" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
+	</entity>
+
+    <entity name="Somebody"
+        id="501" variant="78"  subtype="0" anm2path="monsters/chapter_3/somebody.anm2" baseHP="40" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="false" champion="1" shutdoors="true">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+    </entity> 
+
+    <entity name="Speech Bubble"
+        id="501" variant="79"  subtype="0" anm2path="monsters/chapter_3/bubble_obstacle.anm2" baseHP="120" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="14"   friction="1" reroll="false" champion="1" shutdoors="true">
+        <gibs amount="1" blood="1" bone="0" eye="1" gut="1" large="0" />
+    </entity> 
+
+    <entity id="501" variant="80"  subtype="0" anm2path="monsters/chapter_1/moldy_horf.anm2" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" name="Moldy Horf" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="Shake" overlay="Head" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
+    </entity>
+
+    <entity name="Sleazebag (Real)"
+        id="501" variant="81" anm2path="monsters/chapter_1/sleazebag.anm2" baseHP="20" stageHP="0" portrait="2"
+        collisionDamage="0" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="true" champion="0">
+            <bestiary anim="WalkVert" overlay="Walk" transform="0,0,1"/>
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Kaufmann"
+        id="501" variant="82" anm2path="monsters/chapter_1/kaufmann.anm2" baseHP="20" stageHP="0" portrait="2"
+        collisionDamage="1" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="true" champion="0">
+            <bestiary anim="WalkVert" overlay="Attack" transform="0,0,1"/>
+            <gibs amount="6" blood="0" bone="1" eye="1" gut="1" large="0"/>
+	</entity>
+
+    <entity id="501" variant="83"  subtype="0" anm2path="monsters/chapter_1/peekabox.anm2" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" name="Peekabox" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="Shake" overlay="Head" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
+    </entity>
+
+    <entity id="501" variant="84"  subtype="0" anm2path="monsters/chapter_1/quaddabox.anm2" reroll="true" baseHP="18" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" name="Quaddabox" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="Shake" overlay="Head" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
+    </entity>
+
+    <entity name="Queenie"
+        id="501" variant="85" subtype="0" anm2path="bosses/queenie/queenie.anm2" baseHP="240" stageHP="0" portrait="3" hasFloorAlts="false"
+        collisionDamage="1" collisionMass="300" collisionRadius="24" collisionRadiusYMulti="2" numGridCollisionPoints="12" shadowSize="0"   friction="1" reroll="false" champion="0" boss="1">
+        <gibs amount="24" blood="1" bone="1" eye="1" gut="1" large="1" huge="1" poop="0"/>
+        <bestiary anim="Idle" transform="0,0,1"/>
+    </entity> 
+
+    <entity name="Gloom Fly"
+        id="501" variant="86" subtype="0" anm2path="monsters/chapter_3/gloom_fly.anm2" reroll="false" baseHP="25" boss="0" champion="0" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="20" stageHP="0"  portrait="19" gridCollision="walls" tags="fly ghost">
+		<bestiary transform="0,0,1" anim="Fly" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <entity name="Gloom Fly Trail"
+        id="501" variant="87" subtype="0" anm2path="monsters/chapter_3/gloom_fly_trail.anm2" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1"  numGridCollisionPoints="4" shadowSize="11" stageHP="0" portrait="5" gridCollision="walls" tags="fly ghost">
+		<bestiary transform="0,0,1" anim="Fly" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <entity id="501" variant="89"  subtype="0" anm2path="monsters/chapter_3/telepath.anm2" reroll="true" baseHP="24" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" name="Telepath" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="Attack" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
+    </entity>
+
+    <entity name="Vantage"
+        id="501" variant="90" anm2path="monsters/chapter_3/vantage.anm2" baseHP="30" stageHP="0" portrait="2"
+        collisionDamage="0" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="true" champion="0">
+            <bestiary transform="0,0,1" anim="WalkVert" overlay="HeadActive" />
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Nycto"
+        id="501" variant="91" anm2path="monsters/chapter_3/nycto.anm2" baseHP="0" stageHP="0" portrait="2"
+        collisionDamage="0" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="false" champion="0">
+            <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Helio"
+        id="501" variant="92" anm2path="monsters/chapter_3/helio.anm2" baseHP="0" stageHP="0" portrait="2"
+        collisionDamage="0" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="false" champion="0">
+            <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Lars"
+        id="501" variant="93" anm2path="monsters/chapter_1/lars_head.anm2" baseHP="11" boss="0" champion="1" collisionDamage="1" collisionMass="25" collisionRadius="10" friction="1" numGridCollisionPoints="8" shadowSize="13" stageHP="0" portrait="0">
+		<bestiary transform="0,0,1" anim="WalkHeadHori" />
+        <gibs amount="4" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="115" /> <!-- SOUND_MONSTER_ROAR_0 -->
+    </entity>
+
+    <entity name="Lars Body"
+        id="501" variant="94" anm2path="monsters/chapter_1/lars_body.anm2" baseHP="11" boss="0" champion="1" collisionDamage="1" collisionMass="25" collisionRadius="10" friction="1" numGridCollisionPoints="8" shadowSize="13" stageHP="0" portrait="0">
+		<bestiary transform="0,0,1" anim="WalkHori" />
+        <gibs amount="4" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="115" /> <!-- SOUND_MONSTER_ROAR_0 -->
+    </entity>
+
+    <entity name="Lars Tail"
+        id="501" variant="95" anm2path="monsters/chapter_1/lars_tail.anm2" baseHP="11" boss="0" champion="1" collisionDamage="1" collisionMass="25" collisionRadius="10" friction="1" numGridCollisionPoints="8" shadowSize="13" stageHP="0" portrait="0">
+		<bestiary transform="0,0,1" anim="WalkHori" />
+        <gibs amount="4" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="115" /> <!-- SOUND_MONSTER_ROAR_0 -->
+    </entity>
+
+    <entity name="Jem"
+        id="501" variant="96" anm2path="monsters/chapter_1/jem.anm2" baseHP="18" stageHP="0" portrait="2"
+        collisionDamage="1" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="true" champion="1">
+            <bestiary anim="WalkVert" overlay="HeadCharge" transform="0,0,1"/>
+            <gibs amount="6" blood="0" bone="1" eye="1" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Mini"
+        id="501" variant="97" subtype="0" anm2path="monsters/chapter_1/mini.anm2" baseHP="18" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1"  numGridCollisionPoints="12" shadowSize="8"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Idle">
+        <gibs amount="3" blood="1" bone="0" eye="0" gut="1" large="0" />
+    </entity>
+
+    <entity name="Mr. Mucus" 
+        id="501" variant="98" anm2path="monsters/chapter_1/mrmucus/mr_mucus.anm2" baseHP="25" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+	</entity>
+
+    <entity name="Flemmer" 
+        id="501" variant="99" anm2path="monsters/chapter_1/flemmer.anm2" baseHP="10" stageHP="0"
+        collisionDamage="1" collisionMass="3" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="13"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+	</entity>    
+
     <entity name="Pursuer V2"
         id="866" variant="0" subtype="20" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
         collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="false" champion="0" shutdoors="false">
@@ -813,7 +979,27 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
     </entity>
     <entity name="Totem Switch"
-        id="960" variant="3004" subtype="0" anm2path="grid/totem_switch.anm2" baseHP="1" stageHP="0" portrait="0" hasFloorAlts="false"
+        id="960" variant="3004" subtype="0" anm2path="grid/totem_switch.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
+    <entity name="Light Switch"
+        id="960" variant="3005" subtype="0" anm2path="grid/light_switch.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
+    <entity name="Power On Button"
+        id="960" variant="3006" subtype="0" anm2path="grid/power_on_button.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
+    <entity name="Power Off Button"
+        id="960" variant="3007" subtype="0" anm2path="grid/power_off_button.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
+    <entity name="Room Light State Tracker"
+        id="960" variant="3008" subtype="0" anm2path="no.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
         collisionDamage="0" collisionMass="30" collisionRadius="20"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
     </entity>
@@ -962,6 +1148,18 @@
     </entity>
     <entity name="Coin Of Judgement"
         id="1000" variant="812" anm2path="effects/coin_of_judgement.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
+    </entity>
+    <entity name="Curse of Justice Effect"
+        id="1000" variant="812" anm2path="effects/curse_of_justice_effect.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
+    </entity>
+    <!--
+    <entity anm2path="effects/hushed_laser.anm2" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="0" collisionRadius="30" friction="1" id="1000" name="Hushed Grimace Laser" numGridCollisionPoints="1" shadowSize="0" stageHP="0" variant="817">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>-->
+    <entity name="Jem Chain"
+        id="1000" variant="813" anm2path="effects/jem_chain.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
     </entity>
 

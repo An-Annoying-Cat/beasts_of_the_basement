@@ -119,7 +119,7 @@ local HiddenItemManager = require("scripts.core.hidden_item_manager")
 						--doTheyActuallyHaveThem = true
 						if players[i]:GetData().botbLuckyFlowerBonusCount ~= nil then
 							players[i]:GetData().botbLuckyFlowerBonusCount = players[i]:GetData().botbLuckyFlowerBonusCount + 1
-							players[i]:AddCacheFlags(wCacheFlag.CACHE_LUCK )
+							players[i]:AddCacheFlags(CacheFlag.CACHE_LUCK )
 							players[i]:EvaluateItems()
 						end
 					end
