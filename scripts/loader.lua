@@ -194,6 +194,7 @@ Mod.LoadScripts({
     "scripts.entities.items.coin_of_judgement",
     "scripts.entities.items.coloboma",
     "scripts.entities.items.curse_of_justice",
+    "scripts.entities.items.mypad",
 
     --TRINKETS
     "scripts.entities.items.trinkets.demoncore",

@@ -1162,6 +1162,11 @@
         id="1000" variant="813" anm2path="effects/jem_chain.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
     </entity>
+    <!-- Subtype 0: Nycto doing Caramelldansen Subtype 1: Helio doing Caramelldansen Subtype 2: Politely waiting Vantage-->
+    <entity name="Asylum Enemy Easter Egg"
+        id="1000" variant="814" anm2path="monsters/chapter_3/easter_eggs.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
+    </entity>
 
 
     

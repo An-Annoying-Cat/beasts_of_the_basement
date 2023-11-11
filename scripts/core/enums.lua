@@ -715,6 +715,11 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Jem Chain"),
         VARIANT = Isaac.GetEntityVariantByName("Jem Chain")
     },
+    ASYLUM_ENEMY_EASTER_EGG = {
+        TYPE = Isaac.GetEntityTypeByName("Asylum Enemy Easter Egg"),
+        VARIANT = Isaac.GetEntityVariantByName("Asylum Enemy Easter Egg")
+    },
+
 
     
 
@@ -947,6 +952,8 @@ Enums.SFX = {
 
     ARIRAL_SCREAM = Isaac.GetSoundIdByName("AriralScream"),
 
+    MYPAD_USED = Isaac.GetSoundIdByName("MyPadUsed"),
+
     FUNNY_PIPE = Isaac.GetSoundIdByName("FunnyPipe"),
 
     JAIL_KEY_GET = Isaac.GetSoundIdByName("JailKeyGet"),
@@ -962,6 +969,8 @@ Enums.SFX = {
     CURSE_OF_JUSTICE = Isaac.GetSoundIdByName("CurseOfJustice"),
 
     ASYLUM_LIGHT_LOOP = Isaac.GetSoundIdByName("AsylumLightLoop"),
+
+    NOELLE_POP = Isaac.GetSoundIdByName("NoellePop"),
     --Rest added :)
 }
 Enums.Projectiles = {
@@ -1070,6 +1079,7 @@ Enums.Items = {
     COIN_OF_JUDGEMENT = Isaac.GetItemIdByName("Coin Of Judgement"),
     COLOBOMA = Isaac.GetItemIdByName("Coloboma"),
     CURSE_OF_JUSTICE = Isaac.GetItemIdByName("Curse of Justice"),
+    MYPAD = Isaac.GetItemIdByName("MyPad"),
 }
 
 Enums.Trinkets = {

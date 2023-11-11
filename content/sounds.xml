@@ -276,6 +276,9 @@
 	<sound name="AriralScream">
 		<sample weight="1" path="items/ariralScream.wav" />
 	</sound>
+	<sound name="MyPadUsed">
+		<sample weight="1" path="items/myPadUsed.wav" />
+	</sound>
 	<sound name="CowMoo">
 		<sample weight="1" path="cowMoo1.wav" />
 		<sample weight="1" path="cowMoo2.wav" />
@@ -332,5 +335,9 @@
 		<sample weight="1" path="items/plusTen8.wav" />
 		<sample weight="1" path="items/plusTen9.wav" />
 		<sample weight="1" path="items/plusTen10.wav" />
+	</sound>
+	<!--a remix of noelle's theme by a friend of mine, used for the easter egg for an incorrectly configured Asylum light room. will replace if they want to-->
+	<sound name="NoellePop">
+		<sample weight="1" path="noellePopByMaple.wav" />
 	</sound>
 </sounds>
