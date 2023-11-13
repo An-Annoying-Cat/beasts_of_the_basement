@@ -43,6 +43,8 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.jem",
     "scripts.entities.enemies.chapter_1.mr_mucus",
     "scripts.entities.enemies.chapter_1.flemmer",
+    "scripts.entities.enemies.chapter_1.catarrh",
+    "scripts.entities.enemies.chapter_1.sinustro",
 
 
     "scripts.entities.enemies.chapter_1.drone",

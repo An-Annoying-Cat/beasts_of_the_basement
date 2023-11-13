@@ -947,7 +947,19 @@
         id="501" variant="99" anm2path="monsters/chapter_1/flemmer.anm2" baseHP="10" stageHP="0"
         collisionDamage="1" collisionMass="3" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="13"   friction="1" reroll="true" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
-	</entity>    
+	</entity>   
+
+    <entity name="Catarrh" 
+        id="501" variant="100" anm2path="monsters/chapter_1/catarrh.anm2" baseHP="22" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+	</entity> 
+
+    <entity name="Sinustro" 
+        id="501" variant="101" anm2path="monsters/chapter_1/sinustro.anm2" baseHP="12" stageHP="2" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="20" portrait="154">
+		<bestiary transform="0,0,1" anim="Hop" />
+		<gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+	</entity>
 
     <entity name="Pursuer V2"
         id="866" variant="0" subtype="20" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"

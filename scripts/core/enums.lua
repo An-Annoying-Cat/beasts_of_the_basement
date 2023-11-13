@@ -627,6 +627,16 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Flemmer"),
     },
 
+    CATARRH = {
+        TYPE = Isaac.GetEntityTypeByName("Catarrh"),
+        VARIANT = Isaac.GetEntityVariantByName("Catarrh"),
+    },
+
+    SINUSTRO = {
+        TYPE = Isaac.GetEntityTypeByName("Sinustro"),
+        VARIANT = Isaac.GetEntityVariantByName("Sinustro"),
+    },
+
 
     PURSUER_V2 = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),

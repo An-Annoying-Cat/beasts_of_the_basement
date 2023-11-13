@@ -1,3 +1,5 @@
 <music root="music/">
 	<track name="myBasement Post Awareness" path="Moriah.ogg" intro="Moriah intro.ogg" loop="true" />
+	<!--Current track for Hoard is placeholder. Uses Weathered Stone by Aphex Twin-->
+	<track name="Hoard" path="hoard_light.ogg" layer="hoard_heavy.ogg" loop="true" layermode="2" layerfadespeed="0.005" />
 </music>

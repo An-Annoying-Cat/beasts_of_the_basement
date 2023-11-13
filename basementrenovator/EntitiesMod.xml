@@ -15,6 +15,7 @@
   <entity Image="icons/doortrap_hive.png" Name="Doortrap (Hive)" ID="501" Variant="57" Subtype="0" />
     <entity Image="icons/doortrap_cube.png" Name="Doortrap (Cube)" ID="501" Variant="58" Subtype="0" />
     <entity Image="icons/queenie.png" Name="Queenie" ID="501" Variant="85" Subtype="0" />
+    <entity Image="icons/mucus_monstro.png" Name="Mucus Monstro" ID="20" Variant="0" Subtype="3" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
@@ -107,6 +108,8 @@
   <entity Image="icons/peekabox_down.png" Name="Peekabox (Down)" ID="501" Variant="83" Subtype="3" />
   <entity Image="icons/mr.mucus.png" Name="Mr. Mucus" ID="501" Variant="98" Subtype="0" />
   <entity Image="icons/flemmer.png" Name="Flemmer" ID="501" Variant="99" Subtype="0" />
+  <entity Image="icons/catarrh.png" Name="Catarrh" ID="501" Variant="100" Subtype="0" />
+  <entity Image="icons/sinustro.png" Name="Sinustro" ID="501" Variant="101" Subtype="0" />
 
   <entity Image="icons/drone.png" Name="Drone" ID="214" Variant="20" Subtype="0" />
   <entity Image="icons/unboxer.png" Name="Drone" ID="215" Variant="20" Subtype="0" />

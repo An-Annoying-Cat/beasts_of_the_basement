@@ -33,6 +33,7 @@
     <entity Name="Gloom Fly" />
     <entity Name="Queenie" />
     <entity Name="Hushed Grimace" />
+    <entity Name="Mucus Monstro" />
   </group>
 
   <group Name="BotB Cathedral Enemies" >  
@@ -116,6 +117,7 @@
     <entity Name="Hoarder Basement Backdrop" />
     <entity Name="Slot Room Backdrop" />
     <entity Name="Crystal Mines Backdrop" />
+    <entity Name="Trashbag" />
   </group>
 
   <group Name="BotB Hoard Enemies" >
@@ -143,6 +145,10 @@
     <entity Name="Peekabox (Down)" />
     <entity Name="Mr. Mucus" />
     <entity Name="Flemmer" />
+    <entity Name="Catarrh" />
+    <entity Name="Spitum" />
+    <entity Name="Sinustro" />
+    <entity Name="Trashbagger" />
   </group>
 
   <group Name="BotB Dross Enemies" >

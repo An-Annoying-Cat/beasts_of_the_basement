@@ -26,7 +26,7 @@ function FLEMMER:NPCUpdate(npc)
         if npc.GridCollisionClass ~= EntityGridCollisionClass.GRIDCOLL_GROUND then
             npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
         end
-        npc.SplatColor = FF.ColorSpittyGreen
+        npc.SplatColor = FiendFolio.ColorSpittyGreen
         if npc.State == 99 then
             --npc:ClearEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
             npc:AnimWalkFrame("WalkHori", "WalkVert", 0.25)
