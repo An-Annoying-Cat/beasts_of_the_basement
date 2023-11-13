@@ -54,7 +54,7 @@ function SINUSTRO:NPCUpdate(npc)
                 else
                     data.sinustroHopToPos = Game():GetRoom():FindFreeTilePosition(npc.Position + Vector(120,0):Rotated(math.random(360)), 0)
                 end
-                local warningTarget = Isaac.Spawn(EntityType.ENTITY_EFFECT,BotB.Enums.Entities.WARNING_TARGET.VARIANT,0,data.sinustroHopToPos,Vector(0,0),npc):ToEffect()
+                --local warningTarget = Isaac.Spawn(EntityType.ENTITY_EFFECT,BotB.Enums.Entities.WARNING_TARGET.VARIANT,0,data.sinustroHopToPos,Vector(0,0),npc):ToEffect()
                 npc.State = 100
                 sprite:Play("Hop")
                 
