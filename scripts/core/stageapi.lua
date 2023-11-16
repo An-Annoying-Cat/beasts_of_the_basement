@@ -7,10 +7,10 @@ if StageAPI and StageAPI.Loaded then
 	Mod.Backdrop = {
 
 		HoarderBasement = StageAPI.BackdropHelper({
-			Walls = {"1", "2_mold"},
-			--NFloors = {"nfloor"},
-			--LFloors = {"lfloor"},
-			--Corners = {"corner"}
+			Walls = {"0", "1", "2_mold"},
+			NFloors = {"nfloors"},
+			LFloors = {"lfloor"},
+			Corners = {"innercorner"}
 		}, "gfx/backdrop/hoarderbasement_", ".png"),
 
 		SlotRoom = StageAPI.BackdropHelper({
@@ -34,12 +34,14 @@ if StageAPI and StageAPI.Loaded then
 	--#region Grids
 	Mod.HoarderBasementGrid = StageAPI.GridGfx()
 		Mod.HoarderBasementGrid:SetRocks("gfx/grid/rocks_hoarderbasement.png")
-		--Mod.HoarderBasementGrid:SetPits("gfx/grid/pit_hoarderbasement.png")
+		Mod.HoarderBasementGrid:SetPits("gfx/grid/pit_hoarderbasement.png")
+		Mod.HoarderBasementGrid:SetDecorations("gfx/grid/hoard_props.png", "gfx/grid/hoard_props.anm2", 37)
 
 	--#endregion
+	--[[
 	Mod.HoarderBasementGrid = StageAPI.GridGfx()
 		Mod.HoarderBasementGrid:SetRocks("gfx/grid/rocks_hoarderbasement.png")
-		--Mod.HoarderBasementGrid:SetPits("gfx/grid/pit_hoarderbasement.png")
+		--Mod.HoarderBasementGrid:SetPits("gfx/grid/pit_hoarderbasement.png")]]
 	--#region Backdrop
 	Mod.HoarderBasementBackdrop = StageAPI.RoomGfx(Mod.Backdrop.HoarderBasement, Mod.HoarderBasementGrid, nil, nil)
 
@@ -98,7 +100,7 @@ if StageAPI and StageAPI.Loaded then
 
 	BotB.HoardRooms = {
 		RoomFiles = {
-			"hoard_test"
+			"hoard"
 		}
 	}
 

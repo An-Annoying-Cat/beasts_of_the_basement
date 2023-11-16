@@ -29,7 +29,9 @@ function MR_MUCUS:MrMucusAI(npc)
 		if sprite:IsOverlayFinished("Head") then
 			FF:spriteOverlayPlay(sprite, "HeadIdle")
 		end
-
+		if npc.GridCollisionClass ~= EntityGridCollisionClass.GRIDCOLL_GROUND then
+            npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
+        end
 		if d.BotB_state == "idle" then
 			if npc.Velocity:Length() > 0.1 then
 				npc:AnimWalkFrame("WalkHori","WalkVert",0)

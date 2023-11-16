@@ -56,7 +56,7 @@ function QUEENIE:NPCUpdate(npc)
             
             --
             if sprite:GetFrame() == 94 then
-                SFXManager():Play(BotB.Enums.SFX.QUEENIE_HI,1,0,false,math.random(80,90)/100,0)
+                SFXManager():Play(BotB.Enums.SFX.QUEENIE_HI,2,0,false,math.random(80,90)/100,0)
                 npc.State = 99
                 sprite:Play("Idle")
             end
@@ -74,7 +74,7 @@ function QUEENIE:NPCUpdate(npc)
                 if math.random(0,3) <= 2 then
                     --poot
                     if Isaac.CountEntities(npc, BotB.Enums.Entities.ANT.TYPE, BotB.Enums.Entities.ANT.VARIANT) < 4 then
-                        SFXManager():Play(BotB.Enums.SFX.QUEENIE_GRUNT,1,0,false,math.random(80,90)/100,0)
+                        SFXManager():Play(BotB.Enums.SFX.QUEENIE_GRUNT,2,0,false,math.random(80,90)/100,0)
                         --print("Poot")
                         npc.State = 100
                         sprite:Play("Poot")
@@ -92,7 +92,7 @@ function QUEENIE:NPCUpdate(npc)
         if npc.State == 100 then
             --poot
             if sprite:IsEventTriggered("Spawn") then
-                sfx:Play(Isaac.GetSoundIdByName("FunnyFart"),10,0,false,math.random(90,110)/100)
+                sfx:Play(Isaac.GetSoundIdByName("FunnyFart"),1,0,false,math.random(90,110)/100)
                 if Isaac.CountEntities(npc, BotB.Enums.Entities.BULLET_ANT.TYPE, BotB.Enums.Entities.BULLET_ANT.VARIANT) < 1 then
                     Isaac.Spawn(BotB.Enums.Entities.BULLET_ANT.TYPE, BotB.Enums.Entities.BULLET_ANT.VARIANT, 0, npc.Position, Vector(0,-12), npc):ToNPC()
                 else
@@ -158,7 +158,7 @@ function QUEENIE:NPCUpdate(npc)
                         npc:FireProjectiles(Game():GetRoom():GetRandomPosition(20), RandomVector() * 0.5, 0, params2)
                     end
                     npc:FireProjectiles(targetpos+Vector(math.random(-40,40),math.random(-40,40)), RandomVector() * 0.5, 0, params2)
-                    SFXManager():Play(BotB.Enums.SFX.QUEENIE_GRUNT,1,0,false,math.random(80,90)/100,0)
+                    SFXManager():Play(BotB.Enums.SFX.QUEENIE_GRUNT,2,0,false,math.random(80,90)/100,0)
                 elseif npc.Position.X >= xHighThreshold then 
                     SFXManager():Play(SoundEffect.SOUND_FORESTBOSS_STOMPS,5,0,false,0.75,0)
                     Game():ShakeScreen(30)
@@ -173,7 +173,7 @@ function QUEENIE:NPCUpdate(npc)
                         npc:FireProjectiles(Game():GetRoom():GetRandomPosition(20), RandomVector() * 0.5, 0, params2)
                     end
                     npc:FireProjectiles(targetpos+Vector(math.random(-40,40),math.random(-40,40)), RandomVector() * 0.5, 0, params2)
-                    SFXManager():Play(BotB.Enums.SFX.QUEENIE_GRUNT,1,0,false,math.random(80,90)/100,0)
+                    SFXManager():Play(BotB.Enums.SFX.QUEENIE_GRUNT,2,0,false,math.random(80,90)/100,0)
                 end                
             end
             if data.botbQueenieRollDuration ~= 0 then

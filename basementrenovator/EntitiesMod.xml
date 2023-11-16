@@ -27,6 +27,7 @@
   <entity Image="icons/feral_asleep.png" Name="Feral (asleep)" ID="501" Variant="20" Subtype="128" />
   <entity Image="icons/skipfly.png" Name="Skip Fly" ID="501" Variant="22" Subtype="0" />
   <entity Image="icons/cherry.png" Name="Cherry" ID="501" Variant="28" Subtype="0" />
+  <entity Image="icons/fat_gusher.png" Name="Fat Gusher" ID="501" Variant="105" Subtype="0" />
   
   <entity Image="icons/flapjack.png" Name="Flapjack" ID="501" Variant="23" Subtype="0" />
   <entity Image="icons/flapstack_2.png" Name="Flapstack (2)" ID="501" Variant="24" Subtype="1" />
@@ -165,8 +166,9 @@
       </spinner>
     </bitfield>
   </entity>
-  <entity Image="icons/paranoiac.png" Name="Paranoiac" ID="501" Variant="32" Subtype="0" />
-  <entity Image="icons/slight.png" Name="Slight" ID="501" Variant="33" Subtype="0" />
+  
+  <entity Image="icons/gullet.png" Name="Gullet" ID="501" Variant="102" Subtype="0" />
+  <entity Image="icons/mr_gullet.png" Name="Mr. Gullet" ID="501" Variant="103" Subtype="0" />
   <!--****** Enemies-->
   <entity Image="icons/telepath.png" Name="Telepath" ID="501" Variant="89" Subtype="0" >
     <bitfield Key="Subtype">
@@ -180,6 +182,8 @@
   <entity Image="icons/helio.png" Name="Helio" ID="501" Variant="92" Subtype="0" />
   <entity Image="icons/somebody.png" Name="Somebody" ID="501" Variant="78" Subtype="0" />
   <entity Image="icons/gloom_fly.png" Name="Gloom Fly" ID="501" Variant="86" Subtype="0" />
+  <entity Image="icons/paranoiac.png" Name="Paranoiac" ID="501" Variant="32" Subtype="0" />
+  <entity Image="icons/slight.png" Name="Slight" ID="501" Variant="33" Subtype="0" />
   <!-- Mausoleum Enemies -->
   <entity Image="icons/kehehan.png" Name="Kehehan" ID="885" Variant="1" Subtype="10" />
   <!--Gehenna Enemies-->

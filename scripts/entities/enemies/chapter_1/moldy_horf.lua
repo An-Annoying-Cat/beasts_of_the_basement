@@ -22,7 +22,7 @@ function MOLDY_HORF:NPCUpdate(npc)
         if data.moldyHorfAttackCooldownMax == nil then
             data.moldyHorfAttackCooldownMax = 45
             data.moldyHorfAttackCooldown = 90
-            data.moldyHorfTriggerDistance = 200
+            data.moldyHorfTriggerDistance = 280
         end
 
         if npc.GridCollisionClass ~= EntityGridCollisionClass.GRIDCOLL_GROUND then

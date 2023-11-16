@@ -637,6 +637,21 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Sinustro"),
     },
 
+    GULLET = {
+        TYPE = Isaac.GetEntityTypeByName("Gullet"),
+        VARIANT = Isaac.GetEntityVariantByName("Gullet"),
+    },
+
+    MR_GULLET = {
+        TYPE = Isaac.GetEntityTypeByName("Mr. Gullet"),
+        VARIANT = Isaac.GetEntityVariantByName("Mr. Gullet"),
+    },
+
+    FAT_GUSHER = {
+        TYPE = Isaac.GetEntityTypeByName("Fat Gusher"),
+        VARIANT = Isaac.GetEntityVariantByName("Fat Gusher"),
+    },
+
 
     PURSUER_V2 = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
@@ -729,7 +744,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Asylum Enemy Easter Egg"),
         VARIANT = Isaac.GetEntityVariantByName("Asylum Enemy Easter Egg")
     },
-
+    MR_GULLET_CHAIN = {
+        TYPE = Isaac.GetEntityTypeByName("Mr. Gullet Chain"),
+        VARIANT = Isaac.GetEntityVariantByName("Mr. Gullet Chain")
+    },
 
     
 
@@ -1090,6 +1108,9 @@ Enums.Items = {
     COLOBOMA = Isaac.GetItemIdByName("Coloboma"),
     CURSE_OF_JUSTICE = Isaac.GetItemIdByName("Curse of Justice"),
     MYPAD = Isaac.GetItemIdByName("MyPad"),
+    VOYAGER = Isaac.GetItemIdByName("Voyager"),
+    SOLIDARITY = Isaac.GetItemIdByName("Solidarity"),
+    VENERA = Isaac.GetItemIdByName("Venera"),
 }
 
 Enums.Trinkets = {

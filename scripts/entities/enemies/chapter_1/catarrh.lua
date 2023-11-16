@@ -30,11 +30,11 @@ function CATARRH:NPCUpdate(npc)
         if npc.State == 99 then
             --npc:ClearEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
             npc:AnimWalkFrame("WalkHori", "WalkVert", 0.25)
-            somebodyPathfinder:FindGridPath(targetpos, 0.325, 0, false)
+            somebodyPathfinder:FindGridPath(targetpos, 0.45, 0, false)
             npc.Velocity = 0.8 * npc.Velocity
             if npc.FrameCount % 8 == 0 then
                 local creep = Isaac.Spawn(1000, EffectVariant.CREEP_GREEN, 0, npc.Position, Vector(0,0), npc):ToEffect();
-			    creep.SpriteScale = Vector(2.5, 1)
+			    creep.SpriteScale = Vector(2, 1)
 			    creep:SetTimeout(math.floor(creep.Timeout * 0.75))
 			    creep:SetColor(Color(0, 0, 0, 1, 99 / 255, 56 / 255, 74 / 255), 60, 99999, true, false)
 			    creep:Update()

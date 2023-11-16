@@ -34,6 +34,7 @@
     <entity Name="Queenie" />
     <entity Name="Hushed Grimace" />
     <entity Name="Mucus Monstro" />
+    
   </group>
 
   <group Name="BotB Cathedral Enemies" >  
@@ -71,6 +72,7 @@
     <entity Name="Flapstack (4)" />
     <entity Name="Flapstack (5)" />
     <entity Name="Cherry" />
+    <entity Name="Fat Gusher" />
   </group>
 
   <group Name="BotB Basement Enemies" >  
@@ -188,6 +190,8 @@
     <entity Name="Humbled" />
     <entity Name="Seducer" />
     <entity Name="Pale Sniffle" />
+    <entity Name="Gullet" />
+    <entity Name="Mr. Gullet" />
   </group>
 
   <group Name="BotB Mausoleum Enemies" >

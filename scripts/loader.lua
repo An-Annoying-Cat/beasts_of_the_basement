@@ -45,6 +45,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.flemmer",
     "scripts.entities.enemies.chapter_1.catarrh",
     "scripts.entities.enemies.chapter_1.sinustro",
+    "scripts.entities.enemies.chapter_1.fat_gusher",
 
 
     "scripts.entities.enemies.chapter_1.drone",
@@ -84,6 +85,8 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_3.vantage",
     "scripts.entities.enemies.chapter_3.nycto",
     "scripts.entities.enemies.chapter_3.helio",
+    "scripts.entities.enemies.chapter_3.gullet",
+    "scripts.entities.enemies.chapter_3.mr_gullet",
 
     "scripts.entities.minibosses.babby",
     "scripts.entities.minibosses.babby_fake",
@@ -197,6 +200,7 @@ Mod.LoadScripts({
     "scripts.entities.items.coloboma",
     "scripts.entities.items.curse_of_justice",
     "scripts.entities.items.mypad",
+    "scripts.entities.items.voyager",
 
     --TRINKETS
     "scripts.entities.items.trinkets.demoncore",
