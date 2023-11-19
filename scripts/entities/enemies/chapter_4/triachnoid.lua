@@ -199,7 +199,7 @@ function TRIACHNOID:FirstCordUpdate(npc)
             
 
             if npc.Parent == nil or npc.Parent:IsDead() == true then
-                Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector.Zero,npc)
+                --Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector.Zero,npc)
                 npc:Remove()
             end
 
@@ -236,7 +236,7 @@ function TRIACHNOID:LegCordDummyUpdate(npc)
         end
 
         if npc.Parent == nil or npc.Parent:IsDead() == true then
-            Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector.Zero,effect)
+            --Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector.Zero,effect)
             npc:Remove()
         end
 
@@ -319,7 +319,7 @@ function TRIACHNOID:triachnoidLegEffect(effect)
     local sprite = effect:GetSprite()
     local data = effect:GetData()
     if data.botbFirstPoint == nil or data.botbSecondPoint == nil or data.botbFirstPoint:IsDead() or data.botbSecondPoint:IsDead() then
-        Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,effect.Position,Vector.Zero,effect)
+        --Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,effect.Position,Vector.Zero,effect)
         effect:Remove()
     else
         effect.DepthOffset = -25

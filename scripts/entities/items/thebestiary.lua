@@ -253,14 +253,17 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, THE_BESTIARY.BestiaryTargeting)
 
 --Targeted icon update
 function THE_BESTIARY:targetEffect(effect)
+	
 	if effect.Parent == nil then
 		effect:Remove()
+	else
+		local pdata = effect.Parent:GetData()
+		effect.Position = effect.Parent.Position + Vector(0,-96)
+		if effect.Parent == nil or pdata.isTargetedByBestiary ~= true then
+			effect:Remove()
+		end
 	end
-    local pdata = effect.Parent:GetData()
-    effect.Position = effect.Parent.Position + Vector(0,-96)
-    if effect.Parent == nil or pdata.isTargetedByBestiary ~= true then
-		effect:Remove()
-	end
+    
 end
 Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,THE_BESTIARY.targetEffect, Isaac.GetEntityVariantByName("Bestiary Targeted Icon"))
 
@@ -370,6 +373,7 @@ end
 
 
 function THE_BESTIARY:iconEffect(effect)
+	if effect.Parent == nil then return end
     local pdata = effect.Parent:GetData()
     effect.Position = effect.Parent.Position + Vector(0,-96)
     local sprite = effect:GetSprite()

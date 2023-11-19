@@ -10,6 +10,7 @@ Mod.LoadScripts({
     "scripts.entities.grids.slot_room_panel",
     "scripts.entities.grids.totems",
     "scripts.entities.grids.lights_mechanic",
+    "scripts.entities.grids.ehehe",
     --ENEMIES
     "scripts.entities.enemies.eternalfly",
 

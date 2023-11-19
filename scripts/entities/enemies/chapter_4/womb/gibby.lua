@@ -48,7 +48,7 @@ function GIBBY:DamageCheck(npc, amount, _, _, _)
             for i=1,boisToSpawn,1 do
                 local randoAngle = math.random(360)
                 local smolBoi = Isaac.Spawn(Entities.GIBLET.TYPE, Entities.GIBLET.VARIANT, 0, npc.Position+Vector(25,0):Rotated(randoAngle), Vector(10,0):Rotated(randoAngle),npc)
-                Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector(0,0),npc):ToEffect()
+                --Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector(0,0),npc):ToEffect()
                 smolBoi:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
                 smolBoi.Parent = npc
                 --[[

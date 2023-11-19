@@ -53,7 +53,7 @@ function CADRE:NPCDeathCheck(entity)
 
     if npc.Type == BotB.Enums.Entities.CADRE.TYPE and npc.Variant == BotB.Enums.Entities.CADRE.VARIANT and (npc.SubType == BotB.Enums.Entities.CADRE.SUBTYPE or npc.SubType == BotB.Enums.Entities.CADRE.SUBTYPE + 1 or npc.SubType == BotB.Enums.Entities.CADRE.SUBTYPE + 2 or npc.SubType == BotB.Enums.Entities.CADRE.SUBTYPE + 3 or npc.SubType == BotB.Enums.Entities.CADRE.SUBTYPE + 4) then 
         sfx:Play(SoundEffect.SOUND_MEAT_JUMPS,1,0,false,math.random(40,60)/100)
-        Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector(0,0),npc):ToEffect()
+        --Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,npc.Position,Vector(0,0),npc):ToEffect()
         --print("fuck")
         if data.containedEnemy == 1 then
             --Globin

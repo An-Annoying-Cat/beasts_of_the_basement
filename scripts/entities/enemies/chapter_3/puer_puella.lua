@@ -153,6 +153,7 @@ function BotB:ppEffect(effect)
     if effect.Parent == nil then
 		effect:Remove()
 	end
+    if effect.Parent == nil then return end
     local data = effect:GetData()
     if effect.Parent.SubType == 1 then
         effect:GetSprite():Play("Puella")

@@ -4,6 +4,7 @@ game = Game()
 local GIGA_KEY = {}
 
 --print("wtf is going on")
+--
 function GIGA_KEY:getGigaKey(pickup,collider,_)
     local data = pickup:GetData()
     local sprite = pickup:GetSprite()
@@ -31,8 +32,8 @@ function GIGA_KEY:gigaKeyUpdate(pickup)
 
         if sprite:IsEventTriggered("DropSound") then
             Game():ShakeScreen(15)
-            sfx:Play(SoundEffect.SOUND_KEY_DROP0,2,0,false,math.random(50, 60)/100)
-            sfx:Play(BotB.Enums.SFX.FUNNY_PIPE,1,0,false,math.random(80, 90)/100)
+            SFXManager():Play(SoundEffect.SOUND_KEY_DROP0,2,0,false,math.random(50, 60)/100)
+            SFXManager():Play(BotB.Enums.SFX.FUNNY_PIPE,1,0,false,math.random(80, 90)/100)
         end
         if sprite:IsEventTriggered("Remove") then
             pickup:Remove()
@@ -43,3 +44,50 @@ end
 
 Mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION,GIGA_KEY.getGigaKey,PickupVariant.PICKUP_KEY)
 Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE,GIGA_KEY.gigaKeyUpdate,PickupVariant.PICKUP_KEY)
+
+function BotB:searchCMD(cmd, params)
+    if not cmd == "searchtest" then return end
+    if cmd == "searchtest" then
+        --local playerTable = BotB:GetPlayers()
+        print("this better have been worth the effort")
+
+        local rooms = Game():GetLevel():GetRooms()
+        for i = 0, rooms.Size-1 do
+                print("---------------------")
+                local room = rooms:Get(i)
+                
+                local everythingInRoomString = "("
+                local roomConfigRoom = room.Data
+                local spawnList = roomConfigRoom.Spawns
+                for j=0, spawnList.Size-1 do
+                    local roomConfigSpawn = spawnList:Get(j)
+                    local roomConfigEntry = roomConfigSpawn:PickEntry(0)
+                    
+                    local config = StageAPI.GetEntityConfig(roomConfigEntry.Type, roomConfigEntry.Variant, roomConfigEntry.SubType)
+                        if config and config.Name and roomConfigEntry.Type ~= EntityType.ENTITY_EFFECT then
+                            everythingInRoomString = everythingInRoomString .. config.Name .. ", "
+                        end
+                    --[[
+                    if roomConfigEntry.Type == EntityType.ENTITY_PICKUP and roomConfigEntry.Variant == PickupVariant.PICKUP_COLLECTIBLE then
+                        print("Found pedestal of subtype " .. roomConfigEntry.Subtype .. " in " .. roomConfigRoom.Name .. " of type " .. roomConfigRoom.Type)
+                    else
+                        local config = StageAPI.GetEntityConfig(roomConfigEntry.Type, roomConfigEntry.Variant, roomConfigEntry.SubType)
+                        if config and config.Name and roomConfigEntry.Type ~= EntityType.ENTITY_EFFECT then
+                            print(config.Name)
+                        end
+                    end]]
+
+                    
+                end
+                everythingInRoomString = everythingInRoomString .. ")"
+                print(everythingInRoomString)
+            
+
+        end
+
+
+    end
+    
+    
+end
+Mod:AddCallback(ModCallbacks.MC_EXECUTE_CMD, BotB.searchCMD)

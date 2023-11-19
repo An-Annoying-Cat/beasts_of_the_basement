@@ -192,7 +192,7 @@ function QUEENIE:NPCUpdate(npc)
                 sprite:Play("Idle")
             end
         end
-
+        --[[
         if npc:HasMortalDamage() then
             for i=0,9 do
                 BotB.FF.scheduleForUpdate(function()
@@ -210,7 +210,7 @@ function QUEENIE:NPCUpdate(npc)
 
                 end, i*4, ModCallbacks.MC_POST_RENDER)
             end
-        end
+        end]]
     end
 end
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, QUEENIE.NPCUpdate, Isaac.GetEntityTypeByName("Queenie"))

@@ -18,6 +18,7 @@ local function getPlayers()
 end
 
 function TOY_HELICOPTER:charlesHeliEffect(effect)
+    if effect.Parent == nil then return end
     local room = Game():GetRoom()
     local sprite = effect:GetSprite()
     if room:IsClear() then
@@ -65,6 +66,7 @@ end
 Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE,TOY_HELICOPTER.charlesHeliEffect, Isaac.GetEntityVariantByName("Charles Heli"))
 
 function TOY_HELICOPTER:charlesHeliFunnyEffect(effect)
+    if effect.Parent == nil then return end
     local room = Game():GetRoom()
     local sprite = effect:GetSprite()
     if room:IsClear() then

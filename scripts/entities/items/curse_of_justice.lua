@@ -314,6 +314,7 @@ Mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, CURSE_OF_JUSTICE.pickupUpdat
 
 
 function CURSE_OF_JUSTICE:crossEffect(effect)
+    if effect.Variant ~= BotB.Enums.Entities.CURSE_OF_JUSTICE_EFFECT.VARIANT then return end
     if effect.FrameCount == 1 then
         if effect:GetSprite().Rotation == 180 then
             SFXManager():Play(BotB.Enums.SFX.CURSE_OF_JUSTICE,1,0,false,0.75,0)

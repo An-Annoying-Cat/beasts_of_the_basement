@@ -999,6 +999,10 @@ Enums.SFX = {
     ASYLUM_LIGHT_LOOP = Isaac.GetSoundIdByName("AsylumLightLoop"),
 
     NOELLE_POP = Isaac.GetSoundIdByName("NoellePop"),
+
+    GTFO = Isaac.GetSoundIdByName("GTFO"),
+
+    GTFO_INTRO = Isaac.GetSoundIdByName("GTFO_INTRO"),
     --Rest added :)
 }
 Enums.Projectiles = {

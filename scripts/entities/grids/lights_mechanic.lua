@@ -437,6 +437,7 @@ end
 
 
 function BotB:AsylumEnemyEasterEgg(effect)
+    if effect.Variant ~= Isaac.GetEntityVariantByName("Asylum Enemy Easter Egg") then return end
     if effect.SubType == 0 then
         effect:GetSprite():Play("Nycto Dansen")
     end

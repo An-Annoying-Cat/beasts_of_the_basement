@@ -308,7 +308,7 @@ function OJCARDS:executeTrapCard(card, collider)
 					end
 				end
 			end
-			Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,card.Position,Vector.Zero,card)
+			--Isaac.Spawn(EntityType.ENTITY_EFFECT,EffectVariant.POOF04,0,card.Position,Vector.Zero,card)
 			card:Remove()
 		else
 			if collider.Type == EntityType.ENTITY_PLAYER or collider.Type == EntityType.ENTITY_PICKUP or collider.Type == EntityType.ENTITY_FAMILIAR then

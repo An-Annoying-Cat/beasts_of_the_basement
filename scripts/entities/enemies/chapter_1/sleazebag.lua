@@ -124,8 +124,10 @@ Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, SLEAZEBAG.NPCUpdate, Isaac.GetEntity
 
 
 function SLEAZEBAG:morphTheThing(npc)
-    local spawnedSkuzz = Isaac.Spawn(Isaac.GetEntityTypeByName("Sleazebag (Real)"), Isaac.GetEntityVariantByName("Sleazebag (Real)"), 0, npc.Position, Vector.Zero, npc):ToNPC()
-    npc:Remove()
+    if npc.Variant == 50 then
+        local spawnedSkuzz = Isaac.Spawn(Isaac.GetEntityTypeByName("Sleazebag (Real)"), Isaac.GetEntityVariantByName("Sleazebag (Real)"), 0, npc.Position, Vector.Zero, npc):ToNPC()
+        npc:Remove() 
+    end
 end
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, SLEAZEBAG.morphTheThing, Isaac.GetEntityTypeByName("Sleazebag"))
 
