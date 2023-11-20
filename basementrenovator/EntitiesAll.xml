@@ -85,6 +85,7 @@
     <entity Name="Cherry" />
     <entity Name="Jem" />
     <entity Name="Lars" />
+    <entity Name="Cyan Moter" />
   </group>
 
   <group Name="BotB Burning Basement Enemies" >  
@@ -219,6 +220,7 @@
   <group Name="BotB Utero Enemies" >
     <entity Name="Trojan" />
     <entity Name="Triachnoid" />
+    <entity Name="Peepclopia" />
   </group>
 
   <group Name="BotB Scarred Womb Enemies" >

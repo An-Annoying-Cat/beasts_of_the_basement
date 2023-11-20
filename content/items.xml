@@ -106,8 +106,9 @@
     <passive id="89" quality="2" name="Curse of Justice" description="Printed in gold" gfx="curse_of_justice.png"/>
     <active id="90" quality="2" name="MyPad" description="Blease..." gfx="mypad.png" chargetype="timed" maxcharges="120" hidden="false"/>
     <passive id="91" quality="4" name="Voyager" description="Explorer of the cosmos" gfx="voyager.png"/>
-    <passive id="92" quality="4" name="Solidarity" description="Go beyond the impossible...!" gfx="solidarity.png"/>
-    <passive id="93" quality="2" name="Venera" description="Survivor of the inhospitable" gfx="venera.png"/>
+    <passive id="92" quality="4" name="Solidarity" description="Go beyond the impossible...!" gfx="solidarity.png" hidden="true" />
+    <passive id="93" quality="2" name="Venera" description="Survivor of the inhospitable" gfx="venera.png" hidden="true" />
+    <familiar id="94" quality="3" name="Throne" description="Cosmic horror" gfx="throne.png" tags="monstermanual"/>
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

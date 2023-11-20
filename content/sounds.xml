@@ -40,7 +40,12 @@
 	<sound name="CroastLand">
 		<sample weight="1" path="croastHorridSplortch.wav" />
 	</sound>
-
+	<sound name="GTFO">
+		<sample weight="1" path="gtfo.wav" />
+	</sound>
+	<sound name="GTFOIntro">
+		<sample weight="1" path="gtfo_intro.wav" />
+	</sound>
 	<sound name="MabelAlert">
 		<sample weight="1" path="mabelAlert.wav" />
 	</sound>

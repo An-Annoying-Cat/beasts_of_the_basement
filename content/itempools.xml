@@ -228,10 +228,13 @@
         
         <Item Name="Shlop!" Weight="0.001" DecreaseBy="0.5" RemoveOn="0"/>
 	</Pool>
-    <!--
-    <Pool Name="treasure">
-        <Item Name="Popped Balloon" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+    
+    
+    <Pool Name="planetarium">
+        <Item Name="Voyager" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Throne" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>
+    <!--
     <Pool Name="secret">
         <Item Name="Popped Balloon" Weight="1" DecreaseBy="0.5" RemoveOn="0.05"/>
     </Pool>

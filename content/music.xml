@@ -2,4 +2,6 @@
 	<track name="myBasement Post Awareness" path="Moriah.ogg" intro="Moriah intro.ogg" loop="true" />
 	<!--Current track for Hoard is placeholder. Uses Weathered Stone by Aphex Twin-->
 	<track name="Hoard" path="hoard_light.ogg" layer="hoard_heavy.ogg" loop="true" layermode="2" layerfadespeed="0.005" />
+	<!--Current track for [REDACTED] is placeholder. Uses Sweet Release Of Death-->
+	<track name="GTFO!" intro="gtfo_intro.ogg" path="gtfo.ogg" layerintro="gtfo_intro_heavy.ogg" layer="gtfo_heavy.ogg" loop="true" layermode="2" layerfadespeed="0.01" />
 </music>

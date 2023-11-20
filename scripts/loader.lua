@@ -47,6 +47,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.catarrh",
     "scripts.entities.enemies.chapter_1.sinustro",
     "scripts.entities.enemies.chapter_1.fat_gusher",
+    "scripts.entities.enemies.chapter_1.cyan_moter",
 
 
     "scripts.entities.enemies.chapter_1.drone",
@@ -104,6 +105,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_4.utero.trojan",
     "scripts.entities.enemies.chapter_4.triachnoid",
     "scripts.entities.enemies.chapter_4.halftop",
+    "scripts.entities.enemies.chapter_4.utero.peeclopia",
 
     "scripts.entities.enemies.chapter_4_alt.billy",
 
@@ -148,6 +150,7 @@ Mod.LoadScripts({
     "scripts.entities.familiars.immortal_baby",
     "scripts.entities.familiars.yeet_a_baby",
     "scripts.entities.familiars.buggy_baby",
+    "scripts.entities.familiars.throne",
 
     --ITEMS
     "scripts.entities.items.alphaarmor",

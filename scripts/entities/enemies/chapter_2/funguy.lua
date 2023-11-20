@@ -25,6 +25,9 @@ function FUN_GUY:NPCUpdate(npc)
         -- 100: Opening
         -- 101: Opened, running away
         -- 102: Closing
+        if npc.GridCollisionClass ~= EntityGridCollisionClass.GRIDCOLL_GROUND then
+            npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
+        end
         if npc.State == 0 then
             sprite:Play("Blocking")
             npc.State = 99

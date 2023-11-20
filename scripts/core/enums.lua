@@ -652,6 +652,17 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Fat Gusher"),
     },
 
+    PEECLOPIA = {
+        TYPE = Isaac.GetEntityTypeByName("Peeclopia"),
+        VARIANT = Isaac.GetEntityVariantByName("Peeclopia"),
+    },
+
+    CYAN_MOTER = {
+        TYPE = Isaac.GetEntityTypeByName("Cyan Moter"),
+        VARIANT = Isaac.GetEntityVariantByName("Cyan Moter"),
+    },
+
+
 
     PURSUER_V2 = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
@@ -747,6 +758,11 @@ Enums.Entities = {
     MR_GULLET_CHAIN = {
         TYPE = Isaac.GetEntityTypeByName("Mr. Gullet Chain"),
         VARIANT = Isaac.GetEntityVariantByName("Mr. Gullet Chain")
+    },
+
+    PEECLOPIA_CORD_DUMMY = {
+        TYPE = Isaac.GetEntityTypeByName("Peeclopia Cord Dummy"),
+        VARIANT = Isaac.GetEntityVariantByName("Peeclopia Cord Dummy")
     },
 
     
@@ -879,6 +895,10 @@ Enums.Familiars = {
     BUGGY_BABY = {
         TYPE = Isaac.GetEntityTypeByName("Buggy Baby"),
         VARIANT = Isaac.GetEntityVariantByName("Buggy Baby"),
+    },
+    THRONE = {
+        TYPE = Isaac.GetEntityTypeByName("Throne"),
+        VARIANT = Isaac.GetEntityVariantByName("Throne"),
     },
 }
 
@@ -1115,6 +1135,7 @@ Enums.Items = {
     VOYAGER = Isaac.GetItemIdByName("Voyager"),
     SOLIDARITY = Isaac.GetItemIdByName("Solidarity"),
     VENERA = Isaac.GetItemIdByName("Venera"),
+    THRONE = Isaac.GetItemIdByName("Throne"),
 }
 
 Enums.Trinkets = {

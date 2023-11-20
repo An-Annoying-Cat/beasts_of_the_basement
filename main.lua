@@ -296,6 +296,7 @@ if EID then
         EID:addIcon("StatusDivine", "Divine",0,16,16,0,0,sprite)
         EID:addIcon("StatusIrradiated", "Irradiated",0,16,16,0,0,sprite)
         EID:addIcon("StatusGlitched", "Glitched",0,16,16,0,0,sprite)
+        EID:addIcon("StatusLunacy", "Lunacy",0,16,16,0,0,sprite)
 end
 --
 

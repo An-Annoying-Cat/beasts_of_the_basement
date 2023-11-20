@@ -15,7 +15,7 @@
   <entity Image="icons/doortrap_hive.png" Name="Doortrap (Hive)" ID="501" Variant="57" Subtype="0" />
     <entity Image="icons/doortrap_cube.png" Name="Doortrap (Cube)" ID="501" Variant="58" Subtype="0" />
     <entity Image="icons/queenie.png" Name="Queenie" ID="501" Variant="85" Subtype="0" />
-    <entity Image="icons/mucus_monstro.png" Name="Mucus Monstro" ID="20" Variant="0" Subtype="3" />
+    <entity Image="icons/mucus_monstro.png" Name="Mucus Monstro" ID="501" Variant="106" Subtype="0" />
   <!-- Chapter 1 (Main Path) Enemies -->
   <entity Image="icons/ms_horf.png" Name="Ms. Horf" ID="501" Variant="15" Subtype="0" />
   <entity Image="icons/chaff.png" Name="Chaff" ID="26" Variant="31" Subtype="0" />
@@ -27,7 +27,8 @@
   <entity Image="icons/feral_asleep.png" Name="Feral (asleep)" ID="501" Variant="20" Subtype="128" />
   <entity Image="icons/skipfly.png" Name="Skip Fly" ID="501" Variant="22" Subtype="0" />
   <entity Image="icons/cherry.png" Name="Cherry" ID="501" Variant="28" Subtype="0" />
-  <entity Image="icons/fat_gusher.png" Name="Fat Gusher" ID="501" Variant="105" Subtype="0" />
+  <entity Image="icons/fat_gusher.png" Name="Fat Gusher" ID="501" Variant="104" Subtype="0" />
+  <entity Image="icons/cyan_moter.png" Name="Cyan Moter" ID="501" Variant="107" Subtype="0" />
   
   <entity Image="icons/flapjack.png" Name="Flapjack" ID="501" Variant="23" Subtype="0" />
   <entity Image="icons/flapstack_2.png" Name="Flapstack (2)" ID="501" Variant="24" Subtype="1" />
@@ -221,6 +222,7 @@
   <!-- Utero -->
   <entity Image="icons/trojan.png" Name="Trojan" ID="41" Variant="51" Subtype="0" />
   <entity Image="icons/triachnoid.png" Name="Triachnoid" ID="501" Variant="65" Subtype="0" />
+  <entity Image="icons/peeclopia.png" Name="Peepclopia" ID="501" Variant="105" Subtype="0" />
   <!--Scarred Womb Enemies-->
   <entity Image="icons/frenulum.png" Name="Frenulum" ID="501" Variant="13" Subtype="4" />
   <entity Image="icons/halftop.png" Name="Halftop" ID="501" Variant="69" Subtype="0" />

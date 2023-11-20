@@ -982,6 +982,24 @@
         <bestiary anim="WalkVert" transform="0,0,1"/>
     </entity> 
 
+    <entity name="Peeclopia"
+        id="501" variant="105" anm2path="monsters/chapter_4/utero/peeclopia.anm2" baseHP="30" stageHP="0" portrait="2"
+        collisionDamage="1" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="true" champion="0">
+            <bestiary anim="WalkVert" overlay="Head" transform="0,0,1"/>
+            <gibs amount="8" blood="0" bone="1" eye="1" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Mucus Monstro Spawner"
+        id="501" variant="106" anm2path="no.anm2" baseHP="0" stageHP="0" portrait="2"
+        collisionDamage="0" collisionMass="7" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0"    friction="1" reroll="false" champion="0">
+	</entity>
+
+    <entity name="Cyan Moter"
+        id="501" variant="107" subtype="0" anm2path="monsters/chapter_1/cyan_moter.anm2" reroll="false" baseHP="12" boss="0" champion="0" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="1"  numGridCollisionPoints="12" shadowSize="20" stageHP="0"  portrait="19" gridCollision="walls" tags="fly">
+		<bestiary transform="0,0,1" anim="Fly" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
     <entity name="Pursuer V2"
         id="866" variant="0" subtype="20" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
         collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="false" champion="0" shutdoors="false">
@@ -1109,6 +1127,9 @@
     <entity anm2path="familiar/buggy_baby.anm2" tags="cansacrifice" variant="2466" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Buggy Baby" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <entity anm2path="familiar/throne.anm2" tags="cansacrifice" variant="2467" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Throne" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
     
 
 
@@ -1203,6 +1224,11 @@
 
     <entity name="Mr. Gullet Chain"
         id="1000" variant="813" anm2path="effects/mr_gullet_chain.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
+    </entity>
+
+    <entity name="Peeclopia Cord Dummy"
+        id="1000" variant="814" anm2path="no.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
     </entity>
 

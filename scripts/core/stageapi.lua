@@ -126,3 +126,11 @@ if StageAPI and StageAPI.Loaded then
 
 
 end
+
+function BotB:makeMucusMonstro(npc)
+    if npc.Variant == 106 then
+        local spawnedSkuzz = Isaac.Spawn(20, 0, 3, npc.Position, Vector.Zero, npc):ToNPC()
+        npc:Remove() 
+    end
+end
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, BotB.makeMucusMonstro, 501)
