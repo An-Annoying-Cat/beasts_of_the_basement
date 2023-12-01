@@ -51,12 +51,12 @@
     </entity>
     
     <!--Keepers     id="86" variants start at 10-->
-    <entity name="Devourer" 
+    <entity name="Starver" 
         id="86" variant="10" anm2path="monsters/chapter_3/desirer.anm2" baseHP="25" stageHP="0"
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
 	</entity>
-    <entity name="Slacker" 
+    <entity name="Fester" 
         id="86" variant="11" anm2path="monsters/chapter_3/seducer.anm2" baseHP="45" stageHP="0"
         collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
             <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
@@ -78,7 +78,7 @@
     <!--INSECTS-->
 
     <!--Swarm Spiders     id="884"  variants start at 10-->
-    <entity name="Humbled"
+    <entity name="Snack"
         id="884" variant="10" anm2path="monsters/chapter_3/humbled.anm2" baseHP="4" stageHP="0.2" shieldStrength="0.05" portrait="318"
         collisionDamage="1" collisionMass="5" collisionRadius="13" numGridCollisionPoints="12" shadowSize="11"   friction="1"  reroll="true" champion="0">
             <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
@@ -1000,6 +1000,36 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
+
+    <entity name="Spinny Boi Test" 
+        id="501" variant="108" anm2path="monsters/special/noname_v2.anm2" baseHP="0" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
+	</entity>
+
+    <entity name="Spinny Boi Child Test" 
+        id="501" variant="109" anm2path="monsters/special/noname_v2.anm2" baseHP="0" stageHP="0"
+        collisionDamage="1" collisionMass="30" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="17"   friction="1" reroll="true" champion="0">
+            <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" worm="1"/>
+	</entity>
+
+    <entity name="Conqueror" 
+        id="501" variant="110"  subtype="0" anm2path="monsters/chapter_5/conqueror.anm2" reroll="true" baseHP="60" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
+    </entity>
+
+    <entity name="Warrior" 
+        id="501" variant="111"  subtype="0" anm2path="monsters/chapter_2.5/warrior.anm2" reroll="true" baseHP="30" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+        <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
+    </entity>
+
+
+
+
     <entity name="Pursuer V2"
         id="866" variant="0" subtype="20" anm2path="monsters/special/pursuer.anm2" baseHP="0" stageHP="0" portrait="3" hasFloorAlts="false"
         collisionDamage="1" collisionMass="10" collisionRadius="13"  numGridCollisionPoints="12" shadowSize="16"   friction="1" reroll="false" champion="0" shutdoors="false">
@@ -1130,6 +1160,10 @@
     <entity anm2path="familiar/throne.anm2" tags="cansacrifice" variant="2467" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Throne" numGridCollisionPoints="12" shadowSize="11" stageHP="0" >
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <entity id="3" variant="2468" name="Voice Of Yen" 
+        anm2path="familiar/voice_of_yen.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="20" friction="1" numGridCollisionPoints="0" shadowSize="0" stageHP="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+    </entity>
     
 
 
@@ -1229,6 +1263,11 @@
 
     <entity name="Peeclopia Cord Dummy"
         id="1000" variant="814" anm2path="no.anm2"
+        collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
+    </entity>
+
+    <entity name="Spinny Boi Intro"
+        id="1000" variant="815" anm2path="effects/noname_fakeout_effect.anm2"
         collisionDamage="0" collisionMass="0" collisionRadius="0" numGridCollisionPoints="0" shadowSize="0" friction="0">
     </entity>
 

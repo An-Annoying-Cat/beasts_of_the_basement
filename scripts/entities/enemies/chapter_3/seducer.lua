@@ -3,6 +3,7 @@ local SEDUCER = {}
 local Entities = BotB.Enums.Entities
 
 --Even though they're a Slacker, she's still a seducer in our hearts
+--Even though they're a *Fester
 
 function SEDUCER:NPCUpdate(npc)
 
@@ -31,7 +32,7 @@ function SEDUCER:NPCUpdate(npc)
                         creep:Update()
 				    end
                     --Fire a projectile
-                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(6, 10) / 10), 6),0):Rotated(targetangle):Resized(15), npc):ToProjectile()
+                    local bullet = Isaac.Spawn(9, 0, 0, npc.Position, Vector(math.floor(0.05 * targetdistance * (math.random(4, 6) / 10), 4),0):Rotated(targetangle):Resized(15), npc):ToProjectile()
                     bullet.FallingSpeed = -30;
 		            bullet.FallingAccel = 2
 		            bullet.Height = -10
@@ -67,5 +68,5 @@ end
 
 
 
-Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, SEDUCER.NPCUpdate, Isaac.GetEntityTypeByName("Slacker"))
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, SEDUCER.NPCUpdate, Isaac.GetEntityTypeByName("Fester"))
 Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, SEDUCER.BulletCheck)

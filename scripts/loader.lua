@@ -74,6 +74,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_2_alt.mines.geo_fatty",
     "scripts.entities.enemies.chapter_2_alt.ashpit.oozer",
     "scripts.entities.enemies.chapter_2_alt.ashpit.prick",
+    "scripts.entities.enemies.chapter_2_alt.warrior",
 
     "scripts.entities.enemies.chapter_3.seducer",
     "scripts.entities.enemies.chapter_3.desirer",
@@ -116,6 +117,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_5.holy_dip",
     "scripts.entities.enemies.chapter_5.holy_squirt",
     "scripts.entities.enemies.chapter_5.pope",
+    "scripts.entities.enemies.chapter_5.conqueror",
 
 
     "scripts.entities.enemies.ascent.batso",
@@ -126,6 +128,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.special.mack",
     "scripts.entities.enemies.special.segmented_enemy_test",
     "scripts.entities.enemies.special.hushed_grimace",
+    "scripts.entities.enemies.special.spinny_boi_test",
 
     "scripts.entities.enemies.special.generic_npc",
     "scripts.entities.enemies.special.generic_npc_old",
@@ -151,6 +154,7 @@ Mod.LoadScripts({
     "scripts.entities.familiars.yeet_a_baby",
     "scripts.entities.familiars.buggy_baby",
     "scripts.entities.familiars.throne",
+    "scripts.entities.familiars.voice_of_yen",
 
     --ITEMS
     "scripts.entities.items.alphaarmor",
@@ -205,6 +209,8 @@ Mod.LoadScripts({
     "scripts.entities.items.curse_of_justice",
     "scripts.entities.items.mypad",
     "scripts.entities.items.voyager",
+    "scripts.entities.items.brain_bean",
+    "scripts.entities.items.chicken_noodle_soup",
 
     --TRINKETS
     "scripts.entities.items.trinkets.demoncore",

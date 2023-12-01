@@ -81,7 +81,7 @@ Mod.CoreScripts = {
     "scripts.core.stageapi",
     "scripts.core.ff_additions",
     --"scripts.core.jail_generator_v2",
-    --"scripts.core.savedata",
+    "scripts.core.savedata",
     "scripts.loader",
 }
 LoadScripts(Mod.CoreScripts)
@@ -299,6 +299,6 @@ if EID then
         EID:addIcon("StatusLunacy", "Lunacy",0,16,16,0,0,sprite)
 end
 --
-
+print("Type botbhelp in the console for a list of helpful commands! also, as per tradition, COCK")
 
 

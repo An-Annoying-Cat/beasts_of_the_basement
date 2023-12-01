@@ -42,12 +42,12 @@ Enums.Entities = {
 
     --Keeper Variants
     DESIRER = {
-        TYPE = Isaac.GetEntityTypeByName("Devourer"),
-        VARIANT = Isaac.GetEntityVariantByName("Devourer"),
+        TYPE = Isaac.GetEntityTypeByName("Starver"),
+        VARIANT = Isaac.GetEntityVariantByName("Starver"),
     },
     SEDUCER = {
-        TYPE = Isaac.GetEntityTypeByName("Slacker"),
-        VARIANT = Isaac.GetEntityVariantByName("Slacker"),
+        TYPE = Isaac.GetEntityTypeByName("Fester"),
+        VARIANT = Isaac.GetEntityVariantByName("Fester"),
     },
 
     --Ms Horf
@@ -89,8 +89,8 @@ Enums.Entities = {
 
     --Swarm Spider Variants
     HUMBLED = {
-        TYPE = Isaac.GetEntityTypeByName("Humbled"),
-        VARIANT = Isaac.GetEntityVariantByName("Humbled"),
+        TYPE = Isaac.GetEntityTypeByName("Snack"),
+        VARIANT = Isaac.GetEntityVariantByName("Snack"),
     },
 
     --Wall Creep Variants
@@ -662,13 +662,33 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Cyan Moter"),
     },
 
+    SPINNY_BOI_TEST = {
+        TYPE = Isaac.GetEntityTypeByName("Spinny Boi Test"),
+        VARIANT = Isaac.GetEntityVariantByName("Spinny Boi Test"),
+    },
 
+    SPINNY_BOI_CHILD_TEST = {
+        TYPE = Isaac.GetEntityTypeByName("Spinny Boi Child Test"),
+        VARIANT = Isaac.GetEntityVariantByName("Spinny Boi Child Test"),
+    },
+
+    CONQUEROR = {
+        TYPE = Isaac.GetEntityTypeByName("Conqueror"),
+        VARIANT = Isaac.GetEntityVariantByName("Conqueror"),
+    },
+
+    WARRIOR = {
+        TYPE = Isaac.GetEntityTypeByName("Warrior"),
+        VARIANT = Isaac.GetEntityVariantByName("Warrior"),
+    },
 
     PURSUER_V2 = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
         VARIANT = Isaac.GetEntityVariantByName("Pursuer V2"),
         SUBTYPE = 20,
     },
+
+    
 
 
 
@@ -763,6 +783,11 @@ Enums.Entities = {
     PEECLOPIA_CORD_DUMMY = {
         TYPE = Isaac.GetEntityTypeByName("Peeclopia Cord Dummy"),
         VARIANT = Isaac.GetEntityVariantByName("Peeclopia Cord Dummy")
+    },
+
+    SPINNY_BOI_INTRO = {
+        TYPE = Isaac.GetEntityTypeByName("Spinny Boi Intro"),
+        VARIANT = Isaac.GetEntityVariantByName("Spinny Boi Intro")
     },
 
     
@@ -899,6 +924,10 @@ Enums.Familiars = {
     THRONE = {
         TYPE = Isaac.GetEntityTypeByName("Throne"),
         VARIANT = Isaac.GetEntityVariantByName("Throne"),
+    },
+    VOICE_OF_YEN = {
+        TYPE = Isaac.GetEntityTypeByName("Voice Of Yen"),
+        VARIANT = Isaac.GetEntityVariantByName("Voice Of Yen"),
     },
 }
 
@@ -1136,6 +1165,11 @@ Enums.Items = {
     SOLIDARITY = Isaac.GetItemIdByName("Solidarity"),
     VENERA = Isaac.GetItemIdByName("Venera"),
     THRONE = Isaac.GetItemIdByName("Throne"),
+    VOICE_OF_YEN = Isaac.GetItemIdByName("Voice of Yen"),
+    BRAIN_BEAN = Isaac.GetItemIdByName("Brain Bean"),
+    CHICKEN_NOODLE_SOUP = Isaac.GetItemIdByName("Chicken Noodle Soup"),
+    OXYGEN = Isaac.GetItemIdByName("Oxygen"),
+    QUICKSILVER = Isaac.GetItemIdByName("Quicksilver"),
 }
 
 Enums.Trinkets = {

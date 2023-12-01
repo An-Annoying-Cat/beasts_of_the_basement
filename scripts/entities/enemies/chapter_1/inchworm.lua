@@ -4,18 +4,22 @@ local Entities = BotB.Enums.Entities
 
 function INCH_WORM:NPCUpdate(npc)
 
-    local sprite = npc:GetSprite()
-    local player = npc:GetPlayerTarget()
-    local data = npc:GetData()
-    local target = npc:GetPlayerTarget()
-	local targetpos = target.Position
-	local targetangle = (targetpos - npc.Position):GetAngleDegrees()
-	local targetdistance = (targetpos - npc.Position):Length()
-    local room = Game():GetRoom()
+    
     
 
 
     if npc.Type == BotB.Enums.Entities.INCH_WORM.TYPE and npc.Variant == BotB.Enums.Entities.INCH_WORM.VARIANT then 
+
+
+        local sprite = npc:GetSprite()
+        local player = npc:GetPlayerTarget()
+        local data = npc:GetData()
+        local target = npc:GetPlayerTarget()
+        local targetpos = target.Position
+        local targetangle = (targetpos - npc.Position):GetAngleDegrees()
+        local targetdistance = (targetpos - npc.Position):Length()
+        local room = Game():GetRoom()
+
         local inchWormPathfinder = npc.Pathfinder
         if npc.State == 0 then
             if data.isUnder == nil then
@@ -45,7 +49,21 @@ function INCH_WORM:NPCUpdate(npc)
                     --data.mealWormRandomPatrolPos = room:GetRandomPosition(0)
                     npc.Friction = 1
                     npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
-                    data.digDistance = 25
+                    data.digDistance = 100
+                end
+                if TSIL.SaveManager.GetPersistentVariable(BotB, "useNewWormSprites") ~= nil then
+                    if TSIL.SaveManager.GetPersistentVariable(BotB, "useNewWormSprites") == false then
+                        if npc.SubType == 0 then
+                            sprite:ReplaceSpritesheet(0, "gfx/monsters/chapter_1/inch_worm_old.png")
+                            sprite:ReplaceSpritesheet(1, "gfx/monsters/chapter_1/inch_worm_old.png")
+                            sprite:LoadGraphics()
+                        end
+                        if npc.SubType == 3 then
+                            sprite:ReplaceSpritesheet(0, "gfx/monsters/chapter_4/meal_worm_old.png")
+                            sprite:ReplaceSpritesheet(1, "gfx/monsters/chapter_4/meal_worm_old.png")
+                            sprite:LoadGraphics()
+                        end
+                    end
                 end
             end
             npc.State = 99
@@ -103,11 +121,13 @@ function INCH_WORM:NPCUpdate(npc)
         --Searching for valid position to surface from underground
         if npc.State == 101 then
             if data.underTimer == 0 then
+                --[[
                 if data.gotValidDigPos == true then
                     npc.Position = data.digPos
                 else
                     npc.Position = data.oldPos
-                end
+                end]]
+                npc.Position = INCH_WORM:FindValidDigPos(npc)
                 data.isUnder = false
                 npc.CollisionDamage = 1
                 npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
@@ -116,6 +136,7 @@ function INCH_WORM:NPCUpdate(npc)
                 data.underTimer = data.underTimerMax
             else
                 --Get random position then check validity
+                --[[
                     if data.gotValidDigPos == false then
                         data.digPos = targetpos + Vector(data.digDistance,0):Rotated(math.random(360))
                     end
@@ -123,7 +144,7 @@ function INCH_WORM:NPCUpdate(npc)
                         data.gotValidDigPos = false
                     else
                         data.gotValidDigPos = true
-                    end
+                    end]]
                 data.underTimer = data.underTimer - 1
             end
         end
@@ -138,13 +159,16 @@ function INCH_WORM:NPCUpdate(npc)
                     npc:FireProjectiles(npc.Position, (data.fireAtPos - npc.Position):Normalized()*5, 0, ProjectileParams())
                 end
                 if npc.SubType == 1 then
+                    --Chode
                     npc:PlaySound(SoundEffect.SOUND_WORM_SPIT,0.75,0,false,math.random(110,140)/100)
                     local projectile = Isaac.Spawn(9, 0, 0, npc.Position, (data.fireAtPos - npc.Position):Normalized()*7, npc):ToProjectile();
                     projectile.FallingSpeed = -30;
                     projectile.FallingAccel = 2
                     projectile.Height = -10
                     projectile.Color = Color(0, 0.9, 0.4, 1, 0, 0, 0)
-                    projectile:AddProjectileFlags(ProjectileFlags.BURST)
+                    projectile:GetData().isChodeProjectile = true
+                    projectile.Parent = npc
+                    --projectile:AddProjectileFlags(ProjectileFlags.BURST)
                 end
                 if npc.SubType == 2 then
                     npc:PlaySound(SoundEffect.SOUND_WORM_SPIT,0.75,0,false,math.random(110,140)/100)
@@ -202,13 +226,8 @@ function INCH_WORM:NPCUpdate(npc)
                 inchWormPathfinder:FindGridPath(data.mealWormRandomPatrolPos, 6, 99, false)
             end
             ]]
-            if game:GetRoom():CheckLine(npc.Position,targetpos,0,1,false,false) then
-                local targetvelocity = (targetpos - npc.Position):Resized(5)
-                --npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
-                npc.Velocity = (0.75 * npc.Velocity) + (0.25 * targetvelocity)
-            else
-                inchWormPathfinder:FindGridPath(targetpos, 2, 1, true)
-            end
+            inchWormPathfinder:FindGridPath(targetpos, 0.6, 1, true)
+            --FiendFolio.FollowPath(npc, 4, FiendFolio.GenericChaserPathMap, true, 1)
             if npc.SubType == 4 and npc.FrameCount % 3 == 0 then
                 npc:PlaySound(SoundEffect.SOUND_BLOODSHOOT,0.5,0,false,math.random(110,140)/100)
                 local projectile = Isaac.Spawn(9, 0, 0, npc.Position, npc.Velocity+Vector(4,0):Rotated(math.random(360)), npc):ToProjectile()
@@ -232,6 +251,10 @@ function INCH_WORM:NPCUpdate(npc)
 
         --inchWormPathfinder:FindGridPath(targetpos, 0.7, 99, true)
         
+        --103: new location finding attempt
+        if npc.State == 103 then
+            
+        end
 
 
 
@@ -253,3 +276,36 @@ end
 
 
 Mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, INCH_WORM.DamageNull, Isaac.GetEntityTypeByName("Inch Worm"))
+
+
+function INCH_WORM:FindValidDigPos(npc)
+    local data = npc:GetData()
+    local target = npc:GetPlayerTarget()
+    local targetpos = target.Position    
+    local returnedPos = Vector.Zero
+    local targetdistance = (targetpos - returnedPos):Length()
+    for i=0, 1000 do
+        returnedPos =  Game():GetRoom():FindFreePickupSpawnPosition(targetpos + Vector(data.digDistance,0):Rotated(math.random(360)), 1, true, false)
+        if targetdistance >= 60 then
+            break
+        end
+    end
+    return returnedPos
+end
+
+
+
+
+function INCH_WORM:ChodeBulletCheck(bullet)
+    --mold projectile spawnstuff
+    if bullet:GetData().isChodeProjectile == true then
+      if bullet:IsDead() then
+        Game():BombExplosionEffects(bullet.Position, 25, TearFlags.TEAR_NORMAL, Color(0, 0.9, 0.4, 1, 0, 0, 0), bullet.Parent, 0.5, true, bullet.Parent)
+        bullet:Remove()
+      end
+    end
+    
+
+end
+
+Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, INCH_WORM.ChodeBulletCheck)

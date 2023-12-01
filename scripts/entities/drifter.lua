@@ -1,7 +1,7 @@
 Mod = BotB
 DRIFTER = {}
 local Entities = BotB.Enums.Entities
-print("COCK")
+
 
 --When player is within a few grids of them they should get a dialogue prompt
 --From there, choose dialogue from either floor pool, or room pool

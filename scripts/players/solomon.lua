@@ -82,6 +82,7 @@ function Solomon:spawnNewFloorFrens()
         for j=1,#friendlySolomonSpawnTable,1 do
           local friendo = Isaac.Spawn(friendlySolomonSpawnTable[j][1],friendlySolomonSpawnTable[j][2],friendlySolomonSpawnTable[j][3],players[i].Position,Vector.Zero,players[i]):ToNPC()
 					friendo:AddCharmed(EntityRef(players[i]),-1)
+          friendo:GetData().wasDirectlyBestiaried = true
           players[i]:GetData().friendlySolomonEnemiesDeathQueue[j] = nil
         end
       end
@@ -120,7 +121,8 @@ function Solomon:friendlyEnemyDeathCheck(entity)
           print("friendly enemy died (for real this time)")
         end
         else
-          print("something spawned by friendly enemy died") 
+          print("something spawned by friendly enemy died BUT JUST IN CASE") 
+          table.insert(players[i]:GetData().friendlySolomonEnemiesDeathQueue, {entity.Type , entity.Variant, entity.SubType})
         end
       end
       isSolomonHere = true
@@ -190,7 +192,7 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
         return false
       else
         actualDamage = amt*0.25
-        entity:GetData().solomonFriendlyIFrames = 60
+        entity:GetData().solomonFriendlyIFrames = 80
         return actualDamage
       end
     end

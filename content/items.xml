@@ -27,7 +27,7 @@
     <passive id="23" quality="3" name="Tech Nano" description="Nanobot tears" gfx="tech_nano.png"/>
     <passive id="24" quality="2" name="Crowbar" description="High enemy health = big bonus damage" gfx="crowbar.png" cache="damage"/>
     <active id="25" quality="3" name="The DSM" description="Know your mind..." gfx="the_dsm.png" chargetype="normal" hidden="true" maxcharges="6" tags="book"/>
-    <passive id="26" quality="4" name="Spoiled Milk" description="Blech! It's all clumped up!" cache="firedelay damage" hidden="true" gfx="spoiled_milk.png"/>
+    <passive id="26" quality="4" name="Spoiled Milk" description="Blech! It's all clumped up!" cache="firedelay damage" gfx="spoiled_milk.png"/>
     <passive id="27" quality="3" name="Liquid Latex" description="Adhesive tears" cache="damage" gfx="liquid_latex.png"/>
     <passive id="28" quality="2" name="Wiggly Boy" description="Micro friends on kill" gfx="wiggly_boy.png"/>
     <passive id="29" quality="2" name="Lucky Lighter" description="Luck up + chance to ignite" gfx="lucky_lighter.png" cache="luck"/>
@@ -44,7 +44,7 @@
     <active id="36" quality="3" name="E-Meter (In)" description="Extra consumable room...?" gfx="e-meter_hud_in.png" hidden="true" chargetype="normal" maxcharges="0" />
     <active id="37" quality="3" name="E-Meter (Out)" description="Extra consumable room...?" gfx="e-meter_hud_out.png" hidden="true" chargetype="normal" maxcharges="8" />
 
-    <passive id="38" quality="4" name="Fuck That Noise" description="I will be given what I am owed!" hidden="true" gfx="fuck_that_noise.png"/>
+    <passive id="38" quality="4" name="Fuck That Noise" description="I will be given what I am owed!" gfx="fuck_that_noise.png"/>
     <active id="39" quality="3" name="Deck Of Too Many Things" description="Also contains non-cards" gfx="deck_of_too_many_things.png" chargetype="normal" maxcharges="6"/>
 
     <active id="40" quality="3" name="Dusty D6" description="Rollback your destiny" gfx="dusty_d6.png" chargetype="normal" maxcharges="6"/>
@@ -78,13 +78,13 @@
     <familiar id="63" quality="2" name="Amorphous Globosa" description="Benign buddies!" gfx="amorphous_globosa.png" tags="monstermanual"/>
     <familiar id="64" quality="3" name="Buzz Fly" description="He's out for blood!" gfx="buzz_fly.png" tags="monstermanual"/>
     <active id="66" quality="1" name="Mila's Head" description="Reusable ant colony" gfx="milas_head.png" chargetype="normal" maxcharges="2"/>
-    <active id="67" quality="4" name="The Lesser Key" description="Bound in stone" gfx="the_lesser_key.png" chargetype="normal" hidden="true" tags="book" maxcharges="8"/>
+    <active id="67" quality="4" name="The Lesser Key" description="Bound in stone" gfx="the_lesser_key.png" chargetype="normal" tags="book" maxcharges="8"/>
     <passive id="68" quality="0" name="Toy Phone Dummy" description="Put the knife in your eye." gfx="placeholder.png" cache="all" hidden="true" />
 
     <passive id="69" quality="1" name="Buprinorphine" description="Withdrawal up" gfx="buprinorphine.png" tags="syringe" cache="firedelay range shotspeed" />
     <passive id="70" quality="3" name="Krokodil" description="Degredation of the skin, flesh, and bone" gfx="krokodil.png" tags="syringe" />
     <passive id="71" quality="4" name="Flipped Note" description="Low-frame tears" gfx="flipped_note.png" />
-    <passive id="72" quality="4" name="Pandemonium" description="%%%" gfx="pandemonium.png" hidden="true" />
+    <passive id="72" quality="4" name="Pandemonium" description="%%%" gfx="pandemonium.png" />
 
     <active id="73" quality="2" name="Toy Phone" description="Call for help" gfx="toy_phone.png" chargetype="normal" maxcharges="1"/>
     <active id="74" quality="2" name="Toy Phone?" description="Call for help." gfx="toy_phone_alt.png" chargetype="normal" hidden="true"  maxcharges="1"/>
@@ -104,11 +104,16 @@
     <passive id="87" quality="3" name="Coin of Judgement" description="HEADS or TAILS?" gfx="coin_of_judgement.png"/>
     <passive id="88" quality="2" name="Coloboma" description="TtEeAaRrSs" gfx="coloboma.png"/>
     <passive id="89" quality="2" name="Curse of Justice" description="Printed in gold" gfx="curse_of_justice.png"/>
-    <active id="90" quality="2" name="MyPad" description="Blease..." gfx="mypad.png" chargetype="timed" maxcharges="120" hidden="false"/>
+    <active id="90" quality="2" name="MyPad" description="Blease..." gfx="mypad.png" chargetype="timed" maxcharges="120"/>
     <passive id="91" quality="4" name="Voyager" description="Explorer of the cosmos" gfx="voyager.png"/>
     <passive id="92" quality="4" name="Solidarity" description="Go beyond the impossible...!" gfx="solidarity.png" hidden="true" />
     <passive id="93" quality="2" name="Venera" description="Survivor of the inhospitable" gfx="venera.png" hidden="true" />
     <familiar id="94" quality="3" name="Throne" description="Cosmic horror" gfx="throne.png" tags="monstermanual"/>
+    <passive id="95" quality="3" name="Voice of Yen" description="Money talks" gfx="voice_of_yen.png" />
+    <active id="96" quality="2" name="Brain Bean" description="Brain farts!" gfx="brain_bean.png" chargetype="timed" maxcharges="120"/>
+    <passive id="97" quality="2" name="Chicken Noodle Soup" description="Careful, it's hot!" gfx="chicken_noodle_soup.png" />
+    <passive id="98" quality="1" name="Oxygen" description="Breathe in the air..." gfx="oxygen.png" />
+    <passive id="99" quality="1" name="Quicksilver" description="No dimes, better nickels" gfx="quicksilver.png" />
 
     <!--
     <passive id="9" quality="1" name="Ivory Marble" description="Guided meditation" gfx="onyx_marble.png" cache="familiars"/>

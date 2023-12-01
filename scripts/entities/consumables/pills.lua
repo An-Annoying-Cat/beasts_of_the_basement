@@ -106,7 +106,7 @@ end
 	--Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, Mod.corneredPlayerUpdate, 0)
 
 
-
+	--[[
 	function PILLS:newRoomCheck()
 		--print("stop the fucking presses")
 		local seeds = Game():GetSeeds()
@@ -125,7 +125,7 @@ end
 			end
 		end
 	end
-	Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, PILLS.newRoomCheck)
+	Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, PILLS.newRoomCheck)]]
 
 	function PILLS:playerUpdate()
 		--print("stop the fucking presses")

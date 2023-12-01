@@ -99,7 +99,7 @@ if FiendFolio.ReferenceItems then
         {ID = BotB.Enums.Items.STRANGE_STARS, 			    Reference = "Copy Kitty"},
         {ID = BotB.Enums.Items.COIN_OF_JUDGEMENT, 			Reference = "Fear & Hunger"},
         {ID = BotB.Enums.Items.CURSE_OF_JUSTICE, 			Reference = "Justice (the band)"},
-        {ID = BotB.Enums.Items.THRONE, 			            Reference = "Local58"},
+        {ID = BotB.Enums.Items.THRONE, 			            Reference = "Local58, H.P. Lovecraft"},
     }
     local BotBTrinketReferences = {
         {ID = BotB.Enums.Trinkets.DEMON_CORE, 			    Reference = "Brutal Orchestra"},

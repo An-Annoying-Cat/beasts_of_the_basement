@@ -565,3 +565,33 @@ function STRANGE_STARS:strangeStarsEffectUpdate(npc)
     end
 end
 Mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, STRANGE_STARS.strangeStarsEffectUpdate, Entities.BOTB_STATUS_EFFECT.VARIANT)
+
+
+
+function BotB:glitchedTestCMD(cmd, params)
+    if not cmd == "glitched" then return end
+    if cmd == "glitched" then
+        --local playerTable = BotB:GetPlayers()
+        --print("this better have been worth the effort")
+        local roomEntities = Isaac.GetRoomEntities() -- table
+            for i = 1, #roomEntities do
+                local entity = roomEntities[i]
+                if entity:IsVulnerableEnemy() and EntityRef(entity).IsFriendly ~= true then
+                    local data = entity:GetData()
+                    if data.botbGlitchedImmune ~= true then
+                        if data.botbHasGlitched ~= true then
+                            data.botbHasGlitched = true
+                        end
+                    end
+                end
+            end
+            
+
+        
+
+
+    end
+    
+    
+end
+Mod:AddCallback(ModCallbacks.MC_EXECUTE_CMD, BotB.glitchedTestCMD)

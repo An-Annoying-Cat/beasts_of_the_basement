@@ -49,7 +49,7 @@ function DESIRER:BulletCheck(bullet)
         
       --effect:PlaySound(Isaac.GetSoundIdByName("AcmeDeath"),1,0,false,math.random(120,150)/100)
       if bullet:IsDead() then
-        local dumbass = Isaac.GetEntityVariantByName("Humbled")
+        local dumbass = Isaac.GetEntityVariantByName("Snack")
         sfx:Play(SoundEffect.SOUND_CLAP,1,0,false,math.random(120,150)/100)
         local idiot = Isaac.Spawn(EntityType.ENTITY_SWARM_SPIDER, dumbass, 0, bullet.Position, Vector.Zero, bullet.Parent)
         idiot:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
@@ -62,5 +62,5 @@ end
 
 
 
-Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, DESIRER.NPCUpdate, Isaac.GetEntityTypeByName("Devourer"))
+Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, DESIRER.NPCUpdate, Isaac.GetEntityTypeByName("Starver"))
 Mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, DESIRER.BulletCheck)
