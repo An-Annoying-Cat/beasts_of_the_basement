@@ -6,7 +6,7 @@ local sfx = SFXManager()
 local fiftyShadesBaseDuration = 480
 
 if EID then
-	EID:addCollectible(Isaac.GetItemIdByName("House Of Leaves"), "On use: Spawns a random Card Reading portal leading somewhere on the {{ColorBlue}}floor{{ColorReset}}. #{{Warning}} Passively: {{ColorBlue}}Floors{{ColorReset}} generate much larger, but extra special rooms of random types can generate.")
+	EID:addCollectible(Isaac.GetItemIdByName("House Of Leaves"), "On use: Spawns a portal leading somewhere on the floor, and occasionally a {{Collectible".. CollectibleType.COLLECTIBLE_CARD_READING .."}} Card Reading portal in its stead. #{{Warning}} Passively: Floors generate much larger, but these much larger floors can {{ColorBlue}}house{{ColorReset}} additional special rooms. #This makes {{TreasureRoom}} Treasure Rooms and {{Shop}} Shops able to spawn after Womb, but some room types are rarer than others. #{{Warning}} While holding this item, the chance of future floors having Curse Of The Lost or {{ColorRed}}Curse of the Stalked{{ColorReset}} is greatly increased!")
 end
 
 function HOUSE_OF_LEAVES:GetPlayers()
@@ -273,3 +273,46 @@ end
 	end
 	Mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, HOUSE_OF_LEAVES.botbHOLFloorLogic, 0)
 	
+
+
+
+	--Repentogon now makes making these new rooms hella easy :)
+	function HOUSE_OF_LEAVES:testRoomProperties(slot, config, seed)
+
+		local players = HOUSE_OF_LEAVES:GetPlayers()
+		local doHouseOfLeaves =  false
+		for i=1,#players,1 do
+			if players[i]:ToPlayer():HasCollectible(Isaac.GetItemIdByName("House Of Leaves")) then
+				--print("someone has house of leaves!")
+				doHouseOfLeaves = true
+			end
+		end
+		if doHouseOfLeaves == true then
+			if #slot:Neighbors() == 1 then
+				print("hey we got a dead end and it's a " .. config.Type)
+				--
+				if config.Type == 1 then
+					--It's a plain room. Time to randomly select a room type
+					local picker = WeightedOutcomePicker()
+
+					picker:AddOutcomeWeight(RoomType.ROOM_TREASURE, 10) 
+					picker:AddOutcomeWeight(RoomType.ROOM_SHOP, 10)
+					picker:AddOutcomeWeight(RoomType.ROOM_CURSE, 10)
+					picker:AddOutcomeWeight(RoomType.ROOM_ARCADE, 10)
+					picker:AddOutcomeWeight(RoomType.ROOM_SACRIFICE, 5)
+					picker:AddOutcomeWeight(RoomType.ROOM_CHALLENGE, 5)
+					picker:AddOutcomeWeight(RoomType.ROOM_MINIBOSS, 5)
+					picker:AddOutcomeWeight(RoomType.ROOM_LIBRARY, 5)
+					picker:AddOutcomeWeight(RoomType.ROOM_ISAACS, 2.5)
+					picker:AddOutcomeWeight(RoomType.ROOM_BARREN, 2.5)
+					picker:AddOutcomeWeight(RoomType.ROOM_DEVIL, 2.5)
+					picker:AddOutcomeWeight(RoomType.ROOM_ANGEL, 2.5)
+					local pickerRNG = RNG()
+					pickerRNG:SetSeed(Random(), 1)
+					return RoomConfigHolder.GetRoomByStageTypeAndVariant (StbType.SPECIAL_ROOMS,picker:PickOutcome(pickerRNG),1,0)
+				end
+			end
+		end
+		
+	end
+	Mod:AddCallback(ModCallbacks.MC_PRE_LEVEL_PLACE_ROOM,HOUSE_OF_LEAVES.testRoomProperties)

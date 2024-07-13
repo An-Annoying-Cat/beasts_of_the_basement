@@ -48,6 +48,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_1.sinustro",
     "scripts.entities.enemies.chapter_1.fat_gusher",
     "scripts.entities.enemies.chapter_1.cyan_moter",
+    "scripts.entities.enemies.chapter_1.blighton",
 
 
     "scripts.entities.enemies.chapter_1.drone",
@@ -107,6 +108,7 @@ Mod.LoadScripts({
     "scripts.entities.enemies.chapter_4.triachnoid",
     "scripts.entities.enemies.chapter_4.halftop",
     "scripts.entities.enemies.chapter_4.utero.peeclopia",
+    "scripts.entities.enemies.chapter_4.rostellum",
 
     "scripts.entities.enemies.chapter_4_alt.billy",
 
@@ -247,6 +249,9 @@ Mod.LoadScripts({
     "scripts.entities.consumables.voidraincards",
     "scripts.entities.consumables.mahjongtiles",
     "scripts.entities.consumables.othercards",
+
+    --Slots
+    "scripts.entities.slots.challenge_computer",
     
     --STATUS EFFECTS
     "scripts.status_effects.fire_rework",
@@ -268,5 +273,9 @@ Mod.LoadScripts({
 
     --CURSES
     "scripts.curses.curses",
+
+    --SPECIAL
+    "scripts.core.roomgen_repentogon",
+    "scripts.core.menu_changes",
 
 })

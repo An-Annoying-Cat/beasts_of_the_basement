@@ -682,9 +682,24 @@ Enums.Entities = {
         VARIANT = Isaac.GetEntityVariantByName("Warrior"),
     },
 
-    PURSUER_V2 = {
-        TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
-        VARIANT = Isaac.GetEntityVariantByName("Pursuer V2"),
+    BLIGHTON = {
+        TYPE = Isaac.GetEntityTypeByName("Blighton"),
+        VARIANT = Isaac.GetEntityVariantByName("Blighton"),
+    },
+
+    OVIE = {
+        TYPE = Isaac.GetEntityTypeByName("Ovie"),
+        VARIANT = Isaac.GetEntityVariantByName("Ovie"),
+    },
+
+    ROSTELLUM = {
+        TYPE = Isaac.GetEntityTypeByName("Rostellum"),
+        VARIANT = Isaac.GetEntityVariantByName("Rostellum"),
+    },
+
+    ROSTELLUM_HEAD = {
+        TYPE = Isaac.GetEntityTypeByName("Rostellum Head"),
+        VARIANT = Isaac.GetEntityVariantByName("Rostellum Head"),
         SUBTYPE = 20,
     },
 
@@ -839,6 +854,13 @@ Enums.Props = {
     ROOM_LIGHT_STATE_TRACKER = {
         TYPE = Isaac.GetEntityTypeByName("Room Light State Tracker"),
         VARIANT = Isaac.GetEntityVariantByName("Room Light State Tracker")
+    },
+}
+
+Enums.Slots = {
+    CHALLENGE_COMPUTER = {
+        TYPE = Isaac.GetEntityTypeByName("Challenge Computer"),
+        VARIANT = Isaac.GetEntityVariantByName("Challenge Computer")
     },
 }
 

@@ -1027,6 +1027,33 @@
         <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
     </entity>
 
+    <entity name="Blighton"
+        id="501" variant="112" anm2path="monsters/chapter_1/blighton.anm2" baseHP="24" stageHP="0" portrait="2"
+        collisionDamage="1" collisionMass="7" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14"    friction="1" reroll="true" champion="1">
+            <bestiary anim="WalkVert" overlay="HeadCharge" transform="0,0,1"/>
+            <gibs amount="6" blood="0" bone="1" eye="1" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Ovie"
+        id="501" variant="113" subtype="0" anm2path="monsters/chapter_1/ovie.anm2" baseHP="0" stageHP="0" portrait="548"
+        boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1"  numGridCollisionPoints="12" shadowSize="8"   bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Idle">
+        <gibs amount="3" blood="1" bone="0" eye="0" gut="1" large="0" />
+    </entity>
+
+    <entity name="Rostellum"
+        id="501" variant="114" anm2path="monsters/chapter_4/rostellum_butt.anm2" baseHP="24" stageHP="0" portrait="26"
+        collisionDamage="1" collisionMass="100" collisionRadius="13" numGridCollisionPoints="12" shadowSize="0"    friction="1" reroll="true" champion="1">
+            <bestiary anim="Bestiary" transform="0,0,1"/>
+            <gibs amount="6" blood="0" bone="1" eye="1" gut="1" large="0"/>
+	</entity>
+
+    <entity name="Rostellum Head"
+        id="501" variant="115" anm2path="monsters/chapter_4/rostellum_head.anm2" baseHP="0" stageHP="0" portrait="26"
+        collisionDamage="1" collisionMass="100" collisionRadius="13" numGridCollisionPoints="12" shadowSize="0"    friction="1" reroll="true" champion="1">
+            <bestiary anim="Bestiary" transform="0,0,1"/>
+            <gibs amount="6" blood="0" bone="1" eye="1" gut="1" large="0"/>
+	</entity>
+
 
 
 
@@ -1085,6 +1112,12 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
     </entity>
 
+    <!--Custom slots-->
+    <entity name="Challenge Computer"
+        id="6" variant="1200" subtype="0" anm2path="items/slots/challenge_computer.anm2" baseHP="0" stageHP="0" portrait="0" hasFloorAlts="false"
+        collisionDamage="0" collisionMass="3" collisionRadius="12"  numGridCollisionPoints="12" shadowSize="0"   friction="0" reroll="false" champion="0" boss="0" >
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" poop="0"/>
+    </entity>
    
 
     <!-- Custom Grids id="502" variants start at 0-->
