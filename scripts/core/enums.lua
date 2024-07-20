@@ -340,6 +340,10 @@ Enums.Entities = {
         TYPE = Isaac.GetEntityTypeByName("Pursuer"),
         VARIANT = Isaac.GetEntityVariantByName("Pursuer"),
     },
+    PURSUER_V2 = {
+        TYPE = Isaac.GetEntityTypeByName("Pursuer V2"),
+        VARIANT = Isaac.GetEntityVariantByName("Pursuer V2"),
+    },
     GEO_HORF = {
         TYPE = Isaac.GetEntityTypeByName("Geo Horf"),
         VARIANT = Isaac.GetEntityVariantByName("Geo Horf"),
