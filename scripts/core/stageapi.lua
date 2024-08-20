@@ -1,5 +1,6 @@
 local Mod = BotB
 local StageAPI = Mod.StageAPI
+local game = Game()
 
 if StageAPI and StageAPI.Loaded then
 
@@ -7,7 +8,35 @@ if StageAPI and StageAPI.Loaded then
 	Mod.Backdrop = {
 
 		HoarderBasement = StageAPI.BackdropHelper({
-			Walls = {"0", "1", "2_mold"},
+			Walls = {"0"},
+			NFloors = {"nfloors"},
+			LFloors = {"lfloor"},
+			Corners = {"innercorner"}
+		}, "gfx/backdrop/hoarderbasement_", ".png"),
+
+		HoarderBasement_v1 = StageAPI.BackdropHelper({
+			Walls = {"0"},
+			NFloors = {"nfloors"},
+			LFloors = {"lfloor"},
+			Corners = {"innercorner"}
+		}, "gfx/backdrop/hoarderbasement_", ".png"),
+
+		HoarderBasement_v2 = StageAPI.BackdropHelper({
+			Walls = {"1"},
+			NFloors = {"nfloors"},
+			LFloors = {"lfloor"},
+			Corners = {"innercorner"}
+		}, "gfx/backdrop/hoarderbasement_", ".png"),
+
+		HoarderBasement_v3 = StageAPI.BackdropHelper({
+			Walls = {"2"},
+			NFloors = {"nfloors"},
+			LFloors = {"lfloor"},
+			Corners = {"innercorner"}
+		}, "gfx/backdrop/hoarderbasement_", ".png"),
+
+		HoarderBasement_v4 = StageAPI.BackdropHelper({
+			Walls = {"3"},
 			NFloors = {"nfloors"},
 			LFloors = {"lfloor"},
 			Corners = {"innercorner"}
@@ -29,13 +58,16 @@ if StageAPI and StageAPI.Loaded then
 	}
 	--#endregion
 
+	
+
 
 
 	--#region Grids
 	Mod.HoarderBasementGrid = StageAPI.GridGfx()
 		Mod.HoarderBasementGrid:SetRocks("gfx/grid/rocks_hoarderbasement.png")
-		Mod.HoarderBasementGrid:SetPits("gfx/grid/pit_hoarderbasement.png")
+		Mod.HoarderBasementGrid:SetPits("gfx/grid/pit_hoarderbasement.png", "gfx/grid/pit_hoarderbasement.png", true)
 		Mod.HoarderBasementGrid:SetDecorations("gfx/grid/hoard_props.png", "gfx/grid/hoard_props.anm2", 37)
+		Mod.HoarderBasementGrid:AddDoors("gfx/grid/door_01_hoard.png", StageAPI.DefaultDoorSpawn)
 
 	--#endregion
 	--[[
@@ -123,6 +155,20 @@ if StageAPI and StageAPI.Loaded then
 	BotB.Hoard:SetMusic(Isaac.GetMusicIdByName("Hoard"), {RoomType.ROOM_DEFAULT})
 	BotB.Hoard:SetRooms(HoardRoomsReal)
 	BotB.Hoard:SetBosses(HoardBosses)
+
+	--print("lord help us all")
+
+	StageAPI.AddCallback("Beasts of the Basement", "PRE_CHANGE_ROOM_GFX", 1, function(currentRoom, usingGfx, onRoomLoad, currentDimension)
+		--print("Checking the thing")
+		if StageAPI.GetCurrentStage().Name == "Hoard" then
+			if game:GetRoom():IsFirstVisit() then
+				--print("stage is right. randomize the bg")
+				local hoardRoomRandomBackdrops = { Mod.Backdrop.HoarderBasement_v1, Mod.Backdrop.HoarderBasement_v2, Mod.Backdrop.HoarderBasement_v3, Mod.Backdrop.HoarderBasement_v4,}
+				local chosenHoardBackdrop = hoardRoomRandomBackdrops[math.random(1,#hoardRoomRandomBackdrops)]
+				return StageAPI.RoomGfx(chosenHoardBackdrop, Mod.HoarderBasementGrid)
+			end
+		end
+	end)
 
 
 end

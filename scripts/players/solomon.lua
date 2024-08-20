@@ -171,7 +171,7 @@ function Solomon:npcUpdate(npc)
 end
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, Solomon.npcUpdate)
 ]]
-function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
+function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,src,_)
   --Is there a Solomon here?
   local players = Solomon:GetPlayers()
   local isSolomonHere = false
@@ -182,7 +182,7 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
   end
   if not isSolomonHere then return end
   if isSolomonHere then
-    if entity:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) == true then
+    if entity:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) == true and src.Entity ~= EntityRef(entity) then
       print("frand")
       local actualDamage = amt
       if entity:GetData().solomonFriendlyIFrames ~= 0 then
@@ -193,7 +193,8 @@ function Solomon:friendlyEnemyDefenseBuff(entity,amt,flags,_,_)
       else
         actualDamage = amt*0.25
         entity:GetData().solomonFriendlyIFrames = 80
-        return actualDamage
+        local friendDefBuffReturn = {Damage = actualDamage,DamageFlags = 0,Countdown = 0}
+        return friendDefBuffReturn
       end
     end
   end

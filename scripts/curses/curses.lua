@@ -167,7 +167,7 @@ function BOTB_CURSES:spawnPursuerWhenStalked(player)
     if levelHasCurse(level, Isaac.GetCurseIdByName("Curse of the Stalked")) then
         if player:GetData().botbStalkedExpectedArrival ~= nil and Game():GetFrameCount() == player:GetData().botbStalkedExpectedArrival and player:GetData().botbSpawnedStalkedPursuer ~= true then
             Game():GetHUD():ShowItemText("...", "...You feel watched.", false)
-                local pursuer = Isaac.Spawn(BotB.Enums.Entities.PURSUER.TYPE, BotB.Enums.Entities.PURSUER.VARIANT, BotB.Enums.Entities.PURSUER.SUBTYPE, player.Position+Vector(1000,0):Rotated(math.random(0,360)),Vector.Zero,player):ToNPC()
+                local pursuer = Isaac.Spawn(BotB.Enums.Entities.PURSUER_V2.TYPE, BotB.Enums.Entities.PURSUER_V2.VARIANT, BotB.Enums.Entities.PURSUER_V2.SUBTYPE, player.Position+Vector(1000,0):Rotated(math.random(0,360)),Vector.Zero,player):ToNPC()
                 pursuer.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
                 Game():Darken(0.95, 80)
                 player:GetData().botbSpawnedStalkedPursuer = true

@@ -4,8 +4,8 @@
     "workspace.library": [
         "c:\\Users\\olive\\.vscode\\extensions\\thiccocatto.library-of-isaac-extension-0.0.3\\out\\emmylua",
         "c:\\Users\\MJ\\.vscode\\extensions\\thiccocatto.library-of-isaac-extension-0.1.0\\out\\emmylua",
-        "c:\\Users\\MJ\\.vscode\\extensions\\filloax.isaac-lua-api-vscode-1.5.0\\out\\emmylua",
-        "c:\\Users\\MJ\\.vscode\\extensions\\thiccocatto.library-of-isaac-extension-1.0.1\\out\\library_of_isaac\\docs.lua"
+        "c:\\Users\\MJ\\.vscode\\extensions\\thiccocatto.library-of-isaac-extension-1.0.1\\out\\library_of_isaac\\docs.lua",
+        "c:\\Users\\MJ\\.vscode\\extensions\\filloax.isaac-lua-api-vscode-1.10.0\\out\\emmylua\\repentogon"
     ],
     "diagnostics.globals": [
         "ActionTriggers",
@@ -149,7 +149,209 @@
         "MinimapAPI",
         "TSIL",
         "TSIL",
-        "TSIL"
+        "TSIL",
+
+        "Achievement",
+
+        "Ambush",
+
+        "AnimRenderFlags",
+
+        "AnnouncerVoiceMode",
+
+        "AutocompleteType",
+
+        "BagOfCraftingPickup",
+
+        "BestiaryMenu",
+
+        "BitwiseDebugFlag",
+
+        "BombCostumeLayer",
+
+        "BossType",
+
+        "CameraStype",
+
+        "ChallengeMenu",
+
+        "ChallengeParam",
+
+        "CharacterMenu",
+
+        "ChromaticFireVariant",
+
+        "ClearIcons",
+
+        "CompletionType",
+
+        "Console",
+
+        "ConsoleFont",
+
+        "ControllerSelectMenu",
+
+        "CutscenesMenu",
+
+        "Debug",
+
+        "DebugFlag",
+
+        "DebugRenderer",
+
+        "DialogButtons",
+
+        "DialogIcons",
+
+        "DialogReturn",
+
+        "Dimension",
+
+        "DipSubType",
+
+        "Ending",
+
+        "EntityConfig",
+
+        "EntityPoopVariant",
+
+        "EntityTag",
+
+        "EventCounter",
+
+        "ExtraHudStyle",
+
+        "FadeoutTarget",
+
+        "FollowerPriority",
+
+        "Giantbook",
+
+        "GibFlag",
+
+        "GLSLType",
+
+        "GridPoopVariant",
+
+        "GUI",
+
+        "HealthType",
+
+        "ImGuiCallback",
+
+        "ImGuiColor",
+
+        "ImGuiData",
+
+        "ImGuiElement",
+
+        "ImGuiNotificationType",
+
+        "ItemAnim",
+
+        "KeyConfigMenu",
+
+        "KnifeSubType",
+
+        "KnifeVariant",
+
+        "Language",
+
+        "LineCheckMode",
+
+        "MainMenu",
+
+        "MainMenuType",
+
+        "MenuManager",
+
+        "ModsMenu",
+
+        "MouseButton",
+
+        "NightmareScene",
+
+        "PCTypes",
+
+        "PauseMenu",
+
+        "PauseMenuStates",
+
+        "PedestalType",
+
+        "PillCardSlot",
+
+        "PocketItemType",
+
+        "PressurePlateVariant",
+
+        "ProceduralEffectActionType",
+
+        "ProceduralEffectConditionType",
+
+        "ProceduralItemManager",
+
+        "ProjectileMode",
+
+        "PurityState",
+
+        "RetractingSpikesVariant",
+
+        "RoomConfigHolder",
+
+        "RoomSubType",
+
+        "SaveMenu",
+
+        "ShaderType",
+
+        "SlotVariant",
+
+        "SpecialSeedsMenu",
+
+        "Stagetransition",
+
+        "StbGridType",
+
+        "StbPoopSubType",
+
+        "StbRailVariant",
+
+        "StbRockSubType",
+
+        "StbTeleporterSubType",
+
+        "StbType",
+
+        "StatsMenu",
+
+        "StatsScreen",
+
+        "StatsType",
+
+        "StatsWatcher",
+
+        "StatsWatcherFlags",
+
+        "StatsWatcherType",
+
+        "StatsWatcherVariant",
+
+        "TaintedMarksGroup",
+
+        "TeleporterVariant",
+
+        "TitleMenu",
+
+        "VanityPCTypes",
+
+        "WispSubType",
+
+        "XMLData",
+
+        "XMLNode",
+
+        "REPENTOGON"
     ],
     "workspace.ignoreDir": [
         "scripts/core/LOI"
